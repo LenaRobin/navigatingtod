@@ -1,0 +1,65 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    overflow-x: hidden;
+    margin: 50px;
+}
+
+
+
+
+/* CONTENT OF PUBLICATION */
+
+h1 {
+    font-family: "Georgia";
+    font-size: 41px;
+}
+
+.maintext, p {
+    font-size: 17px;
+    line-height: 26px;
+    width: 620px;
+    hyphens: none;
+    /*white-space: nowrap;*/
+}
+
+.footnoteRef{
+    font-size: 12px;
+    color: #ff0000;
+    text-decoration: none;
+}
+
+.footnotes, li{
+    width: 200px;
+    float: right;
+    font-size: 7px;
+    line-height: 10px;
+    padding-top: 10px;
+    color:dimgrey;
+        margin-right: -200px;
+    margin-top:-80px;
+
+}
+
+.footnotes p{
+    width: 200px;
+    float: right;
+    font-size: 7px;
+    line-height: 10px;
+    padding-top: 10px;
+    color:dimgrey;
+    margin-right: -200px;
+
+}
+
+
+/* Media Queries */
+@media screen and (max-width: 480px) {
+    
+    .maintext{
+        width: 90%;
+    }
+    
+}
+
+
+
