@@ -1,7 +1,6 @@
 body {
     font-family: 'Open Sans', sans-serif;
     overflow-x: hidden;
-    margin: 50px;
 }
 
 
@@ -14,6 +13,19 @@ h1 {
     font-size: 41px;
 }
 
+h2{
+    font-size: 20px;
+}
+
+h3{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.maintext{
+    margin:10% auto;
+}
 .maintext, p {
     font-size: 17px;
     line-height: 26px;
@@ -23,13 +35,13 @@ h1 {
 }
 
 .footnoteRef{
-    font-size: 12px;
+    font-size: 16px;
     color: #ff0000;
     text-decoration: none;
 }
 
 .footnotes, li{
-    width: 200px;
+    width: 0px;
     float: right;
     font-size: 7px;
     line-height: 10px;
@@ -43,14 +55,24 @@ h1 {
 .footnotes p{
     width: 200px;
     float: right;
-    font-size: 7px;
-    line-height: 10px;
+    font-size: 10px;
+    line-height: 14px;
     padding-top: 10px;
     color:dimgrey;
-    margin-right: -200px;
+    margin-right: -10px;
+  top: auto; /* default */
 
 }
 
+.reference{
+    margin:10% auto;
+    width: 70%;
+}
+
+.reference p{
+    font-size: 14px;
+    line-height: 17px;
+}
 
 /* Media Queries */
 @media screen and (max-width: 480px) {
@@ -62,4 +84,9 @@ h1 {
 }
 
 
-
+/* Printing */
+@media print {
+    body{
+        width: 20cm;
+    }
+}
