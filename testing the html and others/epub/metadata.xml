@@ -1,0 +1,40 @@
+<dc:identifier id="epub-id-1">urn:isbn:978-94-92171-03-0</dc:identifier>
+<meta refines="#epub-id-1" property="identifier-type" scheme="onix:codelist5">01</meta>
+<dc:title id="epub-title-1">The Fashion Retailscape: Innovations in Shopping</dc:title>
+<meta refines="#epub-title-1" property="title-type">main</meta>
+<!-- Note: the series-information doesn't make it into the final EPUB -->
+<meta content="ACIN" name="calibre:series"/>
+<dc:publisher>Amsterdam Creative Industries Publishing</dc:publisher>    
+<dc:date id="epub-date">2015-06</dc:date>
+<dc:language>en-US</dc:language>
+<dc:creator opf:file-as="van Vliet, Harry &amp; Moes, Anne &amp; Schrandt, Bernadette" opf:role="aut">Harry van Vliet</dc:creator>
+<dc:creator opf:file-as="van Vliet, Harry &amp; Moes, Anne &amp; Schrandt, Bernadette" opf:role="aut">Anne Moes</dc:creator>
+<dc:creator opf:file-as="van Vliet, Harry &amp; Moes, Anne &amp; Schrandt, Bernadette" opf:role="aut">Bernadette Schrandt</dc:creator>
+<dc:contributor id="epub-contributor-0">Rose Leighton</dc:contributor>
+<meta refines="#epub-contributor-0" property="role" scheme="marc:relators">edt</meta>
+<dc:contributor id="epub-contributor-1">UNDOG</dc:contributor>
+<meta refines="#epub-contributor-1" property="role" scheme="marc:relators">dsr</meta>
+<dc:contributor id="epub-contributor-1">Gottfried Haider (PublishingLab)</dc:contributor>
+<meta refines="#epub-contributor-1" property="role" scheme="marc:relators">dsr</meta>
+<dc:rights>WTFPDL – Do What the Fuck You Want to Public Digital License</dc:rights>
+<!-- <dc:subject></dc:subject> -->
+<dc:description>
+An interactive full-length mirror that allows your customers to browse
+through an endless collection of clothing that you offer and see
+immediately whether something fits them, including when they turn
+around, and which also allows them to send a picture quickly to their
+family and friends to hear what they think. This mirror is a
+technological development that is already possible and which is being
+introduced in fashion stores here and there.
+
+But how probable is it that this technological innovation will become a
+permanent feature of our shopping experience? How probable is it that
+you as a retailer will invest in such a mirror? And does such an
+innovation will save the physical store from becoming obsolete while
+more and more consumers are buying online? And who is that consumer
+anyway and what does he or she need?
+
+In <i>The Fashion Retailscape</i> developments in (fashion) retail are
+critically analysed and enriched with insights from retailers in
+Amsterdam.
+</dc:description>
