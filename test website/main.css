@@ -1,0 +1,100 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+/*#scroll {
+    width : 800px;
+    height : 600px;
+    border: 1px solid black;
+}
+*/
+
+/* CONTENT OF PUBLICATION */
+
+h1, h2, h3, h4 {
+    width: 620px;
+}
+
+h1 {
+    font-family: "Georgia";
+    font-size: 41px;
+}
+
+h2{
+    font-size: 20px;
+}
+
+h3{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.maintext{
+    margin:10% auto;
+}
+.maintext, p {
+    font-size: 17px;
+    line-height: 26px;
+    width: 620px;
+    hyphens: none;
+    /*white-space: nowrap;*/
+}
+
+.footnoteRef{
+    font-size: 16px;
+    color: #ff0000;
+    text-decoration: none;
+}
+
+.footnotes, li{
+    width: 0px;
+    float: right;
+    font-size: 7px;
+    line-height: 10px;
+    padding-top: 10px;
+    color:dimgrey;
+        margin-right: -200px;
+    margin-top:-80px;
+
+}
+
+.footnotes p{
+    width: 200px;
+    float: right;
+    font-size: 10px;
+    line-height: 14px;
+    padding-top: 10px;
+    color:dimgrey;
+    margin-right: -10px;
+  top: auto; /* default */
+
+}
+
+.reference{
+    margin:10% auto;
+    width: 70%;
+}
+
+.reference p{
+    font-size: 14px;
+    line-height: 17px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 480px) {
+    
+    .maintext{
+        width: 90%;
+    }
+    
+}
+
+
+/* Printing */
+@media print {
+    body{
+        width: 20cm;
+    }
+}
