@@ -48,15 +48,15 @@ h3{
     text-decoration: none;
 }
 
-.footnotes, li{
-    width: 0px;
+.footnotes li{
+    /*width: 0px;*/
     float: right;
-    font-size: 7px;
+    font-size: 8px;
     line-height: 10px;
     padding-top: 10px;
     color:dimgrey;
-        margin-right: -200px;
-    margin-top:-80px;
+    /*margin-right: -200px;
+    margin-top:-80px;*/
 
 }
 
@@ -67,8 +67,8 @@ h3{
     line-height: 14px;
     padding-top: 10px;
     color:dimgrey;
-    margin-right: -10px;
-  top: auto; /* default */
+    /*margin-right: -10px;*/
+    top: auto; /* default */
 
 }
 
