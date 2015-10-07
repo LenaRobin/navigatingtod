@@ -1,0 +1,19 @@
+#main {
+	width: 100%;
+}
+nav {
+	display: inline-block;
+	position: fixed;
+	/*float: left;
+	/*right: 75%;
+	left: auto;*/
+	width: 20%;
+}
+
+#content {
+	display: inline-block;
+	margin-left: 23%;
+	/*position: relative;
+	float: right;*/
+	width: 40%;
+}
