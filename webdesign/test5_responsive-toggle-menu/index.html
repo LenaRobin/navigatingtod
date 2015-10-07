@@ -8,33 +8,56 @@
 	<style type="text/css">code{white-space: pre;}</style>
 	<link rel="stylesheet" type="text/css" href="main.css">
 	<!--<script src="intence.js"></script> SCRIPT FOR THE SCROLLING THING-->
+	
+	<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js'></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="jquery.sidenotes.min.js"></script> <!-- SIDENOTES SCRIPT -->
 	<script src="jquery.sidenotes.js"></script>
-	<script>
-
-	$(document).ready(function(){
-		$('.section').sidenotes();
-	});
-        
-        
-	</script>
 	
+		
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+
+<script type="text/javascript" src="http://static.tumblr.com/lthqlys/Jpjnlgpb1/jquery.localscroll.js"></script>
+<script type="text/javascript" src="http://static.tumblr.com/lthqlys/QL2nlgpbm/jquery.scrollto.js"></script>
+<script type="text/javascript" src="http://static.tumblr.com/lthqlys/slCnlgpc9/lancement.js"></script>
+ 
 	
 
 </head>
 <body>
-	<!--<div id="scroll" class="intence" scrollimg="dark_embroidery.png"> BEGIN SCROLL-->
-	
-	
-	
-	
-	
-	
-	
-<div id="wrapper" class="active">
-      
-      <!-- Sidebar -->
+
+<script type='text/javascript'>
+/* <![CDATA[ */ 
+/*
+|-----------------------------------------------------------------------
+|  jQuery Toggle Script by Matt - skyminds.net
+|-----------------------------------------------------------------------
+|
+| Affiche/cache le contenu d'un bloc une fois qu'un lien est cliqué.
+|
+*/
+ 
+// On attend que la page soit chargée 
+jQuery(document).ready(function()
+{
+   // On cache la zone de texte
+   jQuery('#toggle').hide();
+   // toggle() lorsque le lien avec l'ID #toggler est cliqué
+   jQuery('a#toggler').click(function()
+  {
+      jQuery('#toggle').toggle(400);
+      return false;
+   });
+});
+/* ]]> */ 
+</script>
+    
+    <div id="wrapper" class="active">
+     
+                 
+                                         
+                 
+<!-- Sidebar -->
             <!-- Sidebar -->
       <div id="sidebar-wrapper">
       <ul id="sidebar_menu" class="sidebar-nav">
@@ -44,17 +67,42 @@
           <li><a>Link1<span class="sub_icon glyphicon glyphicon-link"></span></a></li>
           <li><a>link2<span class="sub_icon glyphicon glyphicon-link"></span></a></li>
         </ul>
-      </div>
+        
+        
+        </div>
           
-      <!-- Page content -->
+<!-- Menu (550px) -->
+       
+  <div id="menu550">
+<a href="#" id="toggler">Cliquez sur ce lien</a>.
+<div id="toggle" style="display:none;">Ce texte apparaît grâce à un script javascript écrit pour JQuery et utilise la fonction <code>toggle()</code>. 
+</div>
+
+
+
+	
+</div> 
+         
+                       
+                                                   
+          
+          
+<!-- Page content -->
       <div id="page-content-wrapper">
         <!-- Keep all page content within the page-content inset div! -->
-        <div class="page-content inset">
+       
+        
+         
+           <div class="page-content inset">
 
     <div class="row">
               <div class="col-md-12">
               
+    
                   
+                                                                                  
+                                                            
+                                                                                        
  <p><em>Introduction</em>
 		<h2 id="the-gray-zones-of-creativity-and-capital">THE GRAY ZONES OF CREATIVITY AND CAPITAL</h2>
 		<p>The initial idea that led to the preparation of this publication was not a reflection of the editors’ wish to merely add another publication focusing on a critique of the relationship between creative industries and capital to the huge corpus of similar publications taking a critical stance towards the process of co-optation of creativity, creative industries, art or the domain of abstraction in general by capital. Even though, precisely through the logic of the mass production of critical texts dealing with the above-mentioned context, this publication as well will ultimately exist in such a register, the distinctive feature of this publication is its aspiration to place the relationship between creativity and capital in the context of an analysis wherein capitalism is treated as the framework of a broader relationship of domination, which to a great degree goes beyond the currently popular critical niche focused on analyzing the relationship between creativity, abstraction or representation in general and capital.</p>
@@ -1077,13 +1125,6 @@
       
     </div>
       
-
-	
-	<div class="section">
-		
-	
-	
-	</div>
 
 	
 		<script>
