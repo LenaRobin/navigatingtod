@@ -17,41 +17,27 @@ body{
     margin-right:10%;
 }
 
-#wrapper {
+.wrapper {
     padding-left: 70px;
     transition: all .4s ease 0s;
     height: 100%
 }
 
-
-/* sidenote*/
-
-.sidenote {
-	display: block;
-	float: right;
-	width: 200px;
-	border: 1px solid #000;
-	margin: 2px;
-	padding: 3px;
+.footnotes{
+    
+}
+.sidenote{
+    background-color:#D0CABF;
+    color:#4B4D5E;
+    padding:1em;
+    /*color:#D0CABF;*/
+    font-size: 0.85rem;
+    margin:1rem 0 1rem 1rem;
 }
 
-
-/* sidenote2 for the Javascript */
-.sidenote2 {
-	float:none;
-	position: absolute;
-	right: 0;
-	width: 200px;
-	border: 1px solid #000;
-	margin: 0;
-	margin-right: -208px;
+.sidenote p{
+  margin-bottom:0.6em;
 }
-
-
-
-
-
-
 
 
 /* sidebar */
@@ -162,6 +148,29 @@ body{
    padding-right: 65px;
    padding-top:10px;
 }
+
+
+#sidebar-wrapper-550{
+    display: none;    
+    } 
+#menu-toggle-550{
+    display: none;
+    }
+
+
+#menu550-toggle:checked + #menu550 {
+    display: none;  
+}
+
+label{
+      display: none;
+    }
+
+#wrapper550{
+    display: none;
+}
+
+/* content */
 .content-header {
   height: 65px;
   line-height: 65px;
@@ -174,37 +183,87 @@ body{
   display: inline-block;
 }
 
+.wrapper {
+    padding-left: 170px;
+    transition: all .4s ease 0s;
+}
+
 @media (max-width:767px) {
-    #wrapper {
+.wrapper {
     padding-left: 70px;
     transition: all .4s ease 0s;
 }
 #sidebar-wrapper {
     left: 70px;
 }
-#wrapper.active {
+.wrapper.active {
     padding-left: 150px;
 }
-#wrapper.active #sidebar-wrapper {
+.wrapper.active #sidebar-wrapper {
     left: 150px;
     width: 150px;
     transition: all .4s ease 0s;
 }
 }
 
+@media (max-width:550px){
+body{
+    overflow-x:hidden;
+    }
+    
+#sidebar-wrapper{
+    display: none;
+    }
+    
+.wrapper.active{
+    padding-left:0;
+    }
+#sidebar-wrapper-550{
+    display: block; 
+    margin: 0;
+    } 
+#menu-toggle-550{
+    display:block;
+    }
+    
+.wrapper{
+    padding-left: 0;   
+    }    
 
-@media screen and (min-width: 900px), projection and (min-width: 900px), tv and (min-width: 900px) {
-#container{margin-left:10px}
-.sidenote {
-	float:none;
-	position: absolute;
-	right: 0;
-	width: 200px;
-	border: 1px solid #000;
-	margin: 0;
-	margin-right: -208px;
+    
+
+#menu550-toggle {
+    display: none; /* hide the checkbox */
+    z-index: 9999999;
+    position: fixed;
 }
+    
+#menu550 {
+    display: none;
+    z-index: 9999999;
+    position: fixed;
+    text-align: center;
+    width: 90%;
+    margin:5%;
+    margin-left:2%;
+    align: center;
+    padding-top:5px;
+    padding-bottom: 5px;
 }
-@media screen and (min-width: 1070px), projection and (min-width: 1070px), tv and (min-width: 1070px) {
-#container{margin-left:auto}
+    
+#menu550-toggle:checked + #menu550 {
+    display: block;
+    z-index: 9999999;
+    position: fixed;
+    margin-top:30px;   
+}
+
+label{
+        position: fixed;
+    }
+
+#wrapper550{
+    display: block;
+    }
+    
 }
