@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+   
+   <head>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="http://code.jquery.com/jquery-1.7.2.js"></script>
+
+</head>
+ 
+ <body class="pushmenu-push">
+  <nav class="pushmenu pushmenu-left">
+    <h3>Menu</h3>
+    <a href="#">Home</a>
+    <a href="#">Nav2</a>
+    <a href="#">Nav3</a>
+    <a href="#">Nav4</a>
+    <a href="#">Nav5</a>
+    <a href="#">Nav6</a>
+    <a href="#">Nav7</a>
+  </nav>
+  
+<div class="container">
+        <div class="main">
+        <section class="buttonset">
+            <div id="nav_list">Menu</div>
+        </section>
+      
+    <section class="content">
+      <h1>Slideout Navigation</h1>
+      <p>
+        
+      </p>
+      
+    </section><!-- End Content -->
+  </div><!-- End Main -->
+</div><!-- End Container --> 
+
+
+<script>
+    	$(document).ready(function() {
+		$menuLeft = $('.pushmenu-left');
+		$nav_list = $('#nav_list');
+		
+		$nav_list.click(function() {
+			$(this).toggleClass('active');
+			$('.pushmenu-push').toggleClass('pushmenu-push-toright');
+			$menuLeft.toggleClass('pushmenu-open');
+		});
+	});</script>
+</body>
+</html>

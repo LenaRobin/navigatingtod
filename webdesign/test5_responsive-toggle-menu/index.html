@@ -43,14 +43,22 @@ jQuery(document).ready(function()
    // On cache la zone de texte
    jQuery('#toggle').hide();
    // toggle() lorsque le lien avec l'ID #toggler est cliqué
-   jQuery('a#toggler').click(function()
+   jQuery('#toggler').click(function()
   {
       jQuery('#toggle').toggle(400);
       return false;
    });
 });
-/* ]]> */ 
+
 </script>
+    
+ <!-- Menu -->
+       
+  <div id="menu">
+<a href="#" id="toggler">Clic</a>.
+<div id="toggle" style="display:none;">Ce texte apparaît grâce à un script javascript écrit pour JQuery et utilise la fonction <code>toggle()</code>. 
+</div> 
+        </div>    
     
     <div id="wrapper" class="active">
      
@@ -58,7 +66,7 @@ jQuery(document).ready(function()
                                          
                  
 <!-- Sidebar -->
-            <!-- Sidebar -->
+            <!-- Sidebar  -->
       <div id="sidebar-wrapper">
       <ul id="sidebar_menu" class="sidebar-nav">
            <li class="sidebar-brand"><a id="menu-toggle" href="menu-icon-550x256.png">Menu<span id="main_icon" class="glyphicon glyphicon-align-justify"></span></a></li>
@@ -70,13 +78,15 @@ jQuery(document).ready(function()
         
         
         </div>
-          
+
+        
+                              
 <!-- Menu (550px) -->
        
   <div id="menu550">
 <a href="#" id="toggler">Cliquez sur ce lien</a>.
 <div id="toggle" style="display:none;">Ce texte apparaît grâce à un script javascript écrit pour JQuery et utilise la fonction <code>toggle()</code>. 
-</div>
+      </div></div>
 
 
 
