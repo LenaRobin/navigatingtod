@@ -1,6 +1,33 @@
 body {
-  margin: 0;
+    margin: 0;
+    overflow-y: scroll;
+      overflow-x: hidden;
 }
+.pushmenu pushmenu-left pushmenu-open .content{
+    width: 20%;
+}
+.pushmenu-open .main{
+    width: 20%;
+}
+
+.container{
+    margin: 10% auto;
+    margin-left:10%;
+    margin-right: 10%;
+}
+.content{
+    overflow-x: hidden;
+    margin: 10% auto;
+    width: auto;
+}
+.content-pushed{
+    width: 70%;
+    margin: 0%;
+}
+
+
+
+
 
 .pushmenu { /*this is the nav*/
   background: #3c3933;
@@ -8,7 +35,7 @@ body {
   width: 240px;
   height: 100%;
   top: 0;
-  z-index: 1000;
+/*  z-index: 1000; */
   position:fixed;
 }
 
@@ -81,9 +108,11 @@ nav-list.active {
 }
 
  .buttonset {
-      background: #00A287;
       height: 16px;
-      padding: 10px 20px 20px;
+     position: fixed;
+     top:0;
+     left:0;
+     background-color: red;
  }
  
  section.content {
