@@ -10,6 +10,7 @@ body {
     overflow-y: scroll;
       overflow-x: hidden;
     font-family: "OpenSans";
+    width: 100%;
 }
 .pushmenu pushmenu-left pushmenu-open .content{
     width: 20%;
@@ -19,7 +20,7 @@ body {
 }
 
 .container{
-    
+    width: 100%;
 }
 
 /************* READER ***************/
@@ -45,20 +46,27 @@ a{
 /************* MENU ***************/
 
 
-.pushmenu { /*this is the nav*/
-  background: #3c3933;
+.pushmenu { /* this is the nav */
+  background: #ffffff;
   width: 240px;
   height: 100%;
   top: 0;
   position:fixed;
+    color:#ff3300;
 }
 
-.pushmenu h3 {
-  font-size: 14px;
-  padding: 15px 20px;
+.pushmenu h2 { /* big part */
+  font-size: 17px;
+  padding: 0px 5px 0px 0px;
   margin: 0;
-  background: #282522;    
-  height: 16px;
+  height: auto;
+}
+
+.pushmenu h3 { /* sub-part */
+  font-size: 13px;
+  padding: 0px 5px 0px 25px;
+  margin: 0;
+  height: auto;
 }
 
 .pushmenu a {
@@ -66,9 +74,10 @@ a{
   font-size: 16px;
   font-weight: bold;
   text-decoration: none;
-  border-top: 1px solid #56544e;
-  border-bottom: 1px solid #312e2a;
-  padding: 14px;
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 4px;
+    color:black;
 }
 
 .pushmenu a:hover {
@@ -117,22 +126,37 @@ a{
 
 nav-list.active {
   background-position: -33px top;
+    display: none;
 }
+
+
 
  .buttonset {
       height: 16px;
      position: fixed;
      top:0;
      left:0;
-     background-color: red;
  }
- 
+
+
+
+.section{
+}
+
  section.content {
    padding: 10px 20px;
  }
 
 
-
+.text{
+    z-index: 9999999;
+    margin-top: 500px;
+    background-color: white;
+-webkit-box-shadow: 0px 0px 69px 30px rgba(0, 36, 59, 0.64);
+-moz-box-shadow: 0px 0px 69px 30px rgba(0, 36, 59, 0.64);
+box-shadow: 0px 0px 69px 30px rgba(0, 36, 59, 0.64); 
+    padding: 0px 35px 0px 35px;
+}
 
 
 
@@ -143,9 +167,12 @@ nav-list.active {
 ************ PARALLAX *************
 
 */
+.parallax{
+    width: auto;
+}
 
 [class*="bg__"] {
-  height: 400px;
+  height: 800px;
   text-indent: -9999px;
 
   /* fix background */
@@ -165,9 +192,19 @@ nav-list.active {
 
 .bg__foo {
 background-image: url('image/cover.jpg');
-        width: 800px;
-
+    background-size: contain;
+    background-position:left top;
+    position: relative;
 }
+
+
+.cover {
+background-image: url('image/cover.jpg');
+    width: inherit;
+  /*  position: relative;*/
+    background-repeat: no-repeat;
+}
+
 
 .bg__bar {
   background-image: url(
@@ -189,6 +226,18 @@ background-image: url('image/cover.jpg');
   );
 }
 
+/*
+
+************ COVER *************
+
+*/
+
+.cover{
+    z-index: -999999;
+    width: 100%;
+    min-height: 500px;
+    position: absolute;
+}
 
 
 /*
