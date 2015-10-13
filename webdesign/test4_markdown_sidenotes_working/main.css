@@ -12,6 +12,10 @@ body{
     font-family: "opensans";
 }
 
+.section > p {
+  width: 70%;
+}
+
 .row{
     margin-left:10%;
     margin-right:10%;
@@ -27,6 +31,9 @@ body{
     
 }
 .sidenote{
+    clear: right;
+    width: 20%;
+    float: right;
     background-color:#D0CABF;
     color:#4B4D5E;
     padding:1em;

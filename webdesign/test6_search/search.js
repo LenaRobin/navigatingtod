@@ -9,11 +9,12 @@ $(document).ready(function(){
         var count = 0;
 
         // Loop through the comment list
-        $("h1, h2, h2, h4, h5, h6, div, p, span, nav, ul, li, ol").each(function(){
+        $("h1, h2, h3, h4, p, div, span, ol, li").each(function(){
+           // console.log($(this));
  
             // If the list item does not contain the text phrase fade it out
             if ($(this).text().search(new RegExp(filter, "i")) < 0) {
-                $(this).fadeOut();
+                $(this).css("color", "red");
 
                 // if section 
  
@@ -27,6 +28,7 @@ $(document).ready(function(){
         // Update the count
         var numberItems = count;
         $("#filter-count").text("Number of Hits = "+count);
+      //  console.log("Number of Hits = " + count);
     });
 });
 
