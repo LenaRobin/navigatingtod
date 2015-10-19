@@ -22,7 +22,6 @@ body {
 }
 
 .main{
-    width: 100%;
 }
 .pushmenu pushmenu-left pushmenu-open .content{
     width: 20%;
@@ -32,7 +31,6 @@ body {
 }
 
 .container{
-    width: 100%;
 }
 /*
 ************ COVER *************
@@ -46,15 +44,25 @@ body {
 
 #cover-shadow{
     z-index: -990;
-    background-color: #f7f7f7;
+background: rgba(245,245,245,1);
+
+    /*
+background: rgba(245,245,245,1);
+background: -moz-linear-gradient(top, rgba(245,245,245,1) 0%, rgba(242,242,242,1) 7%, rgba(125,125,125,1) 17%, rgba(163,163,163,1) 24%, rgba(122,122,122,1) 32%, rgba(156,156,156,1) 40%, rgba(122,122,122,1) 47%, rgba(156,156,156,1) 55%, rgba(143,143,143,1) 61%, rgba(173,173,173,1) 69%, rgba(143,143,143,1) 76%, rgba(166,166,166,1) 83%, rgba(163,163,163,1) 91%, rgba(247,247,247,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(245,245,245,1)), color-stop(7%, rgba(242,242,242,1)), color-stop(17%, rgba(125,125,125,1)), color-stop(24%, rgba(163,163,163,1)), color-stop(32%, rgba(122,122,122,1)), color-stop(40%, rgba(156,156,156,1)), color-stop(47%, rgba(122,122,122,1)), color-stop(55%, rgba(156,156,156,1)), color-stop(61%, rgba(143,143,143,1)), color-stop(69%, rgba(173,173,173,1)), color-stop(76%, rgba(143,143,143,1)), color-stop(83%, rgba(166,166,166,1)), color-stop(91%, rgba(163,163,163,1)), color-stop(100%, rgba(247,247,247,1)));
+background: -webkit-linear-gradient(top, rgba(245,245,245,1) 0%, rgba(242,242,242,1) 7%, rgba(125,125,125,1) 17%, rgba(163,163,163,1) 24%, rgba(122,122,122,1) 32%, rgba(156,156,156,1) 40%, rgba(122,122,122,1) 47%, rgba(156,156,156,1) 55%, rgba(143,143,143,1) 61%, rgba(173,173,173,1) 69%, rgba(143,143,143,1) 76%, rgba(166,166,166,1) 83%, rgba(163,163,163,1) 91%, rgba(247,247,247,1) 100%);
+background: -o-linear-gradient(top, rgba(245,245,245,1) 0%, rgba(242,242,242,1) 7%, rgba(125,125,125,1) 17%, rgba(163,163,163,1) 24%, rgba(122,122,122,1) 32%, rgba(156,156,156,1) 40%, rgba(122,122,122,1) 47%, rgba(156,156,156,1) 55%, rgba(143,143,143,1) 61%, rgba(173,173,173,1) 69%, rgba(143,143,143,1) 76%, rgba(166,166,166,1) 83%, rgba(163,163,163,1) 91%, rgba(247,247,247,1) 100%);
+background: -ms-linear-gradient(top, rgba(245,245,245,1) 0%, rgba(242,242,242,1) 7%, rgba(125,125,125,1) 17%, rgba(163,163,163,1) 24%, rgba(122,122,122,1) 32%, rgba(156,156,156,1) 40%, rgba(122,122,122,1) 47%, rgba(156,156,156,1) 55%, rgba(143,143,143,1) 61%, rgba(173,173,173,1) 69%, rgba(143,143,143,1) 76%, rgba(166,166,166,1) 83%, rgba(163,163,163,1) 91%, rgba(247,247,247,1) 100%);
+background: linear-gradient(to bottom, rgba(245,245,245,1) 0%, rgba(242,242,242,1) 7%, rgba(125,125,125,1) 17%, rgba(163,163,163,1) 24%, rgba(122,122,122,1) 32%, rgba(156,156,156,1) 40%, rgba(122,122,122,1) 47%, rgba(156,156,156,1) 55%, rgba(143,143,143,1) 61%, rgba(173,173,173,1) 69%, rgba(143,143,143,1) 76%, rgba(166,166,166,1) 83%, rgba(163,163,163,1) 91%, rgba(247,247,247,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f5f5', endColorstr='#f7f7f7', GradientType=0 );*/
     position: absolute;
     margin-top:900px;
     left:-500px;top:0;width:160%;height:100%;
-    -moz-box-shadow: 0px -190px 100px 0px #f7f7f7;
--webkit-box-shadow: 0px -190px 100px 0px #f7f7f7;
--o-box-shadow: 0px -190px 100px 0px #f7f7f7;
-box-shadow: 0px -190px 100px 0px #f7f7f7;
-filter:progid:DXImageTransform.Microsoft.Shadow(color=#f7f7f7, Direction=90, Strength=40);
+    -moz-box-shadow: 0px -190px 100px 0px #b0aab2;
+-webkit-box-shadow: 0px -190px 100px 0px #b0aab2;
+-o-box-shadow: 0px -190px 100px 0px #b0aab2;
+box-shadow: 0px -190px 100px 0px #b0aab2;
+filter:progid:DXImageTransform.Microsoft.Shadow(color=#b0aab2, Direction=90, Strength=40);
 }
 /*
 
@@ -64,12 +72,26 @@ filter:progid:DXImageTransform.Microsoft.Shadow(color=#f7f7f7, Direction=90, Str
 /************* test ***************/
 
 .section {
+    background: rgba(245,245,245,1);
+background: -moz-linear-gradient(top, rgba(245,245,245,1) 0%, rgba(242,242,242,1) 4%, rgba(171,171,171,1) 13%, rgba(143,143,143,1) 49%, rgba(181,181,181,1) 88%, rgba(247,247,247,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(245,245,245,1)), color-stop(4%, rgba(242,242,242,1)), color-stop(13%, rgba(171,171,171,1)), color-stop(49%, rgba(143,143,143,1)), color-stop(88%, rgba(181,181,181,1)), color-stop(100%, rgba(247,247,247,1)));
+background: -webkit-linear-gradient(top, rgba(245,245,245,1) 0%, rgba(242,242,242,1) 4%, rgba(171,171,171,1) 13%, rgba(143,143,143,1) 49%, rgba(181,181,181,1) 88%, rgba(247,247,247,1) 100%);
+background: -o-linear-gradient(top, rgba(245,245,245,1) 0%, rgba(242,242,242,1) 4%, rgba(171,171,171,1) 13%, rgba(143,143,143,1) 49%, rgba(181,181,181,1) 88%, rgba(247,247,247,1) 100%);
+background: -ms-linear-gradient(top, rgba(245,245,245,1) 0%, rgba(242,242,242,1) 4%, rgba(171,171,171,1) 13%, rgba(143,143,143,1) 49%, rgba(181,181,181,1) 88%, rgba(247,247,247,1) 100%);
+background: linear-gradient(to bottom, rgba(245,245,245,1) 0%, rgba(242,242,242,1) 4%, rgba(171,171,171,1) 13%, rgba(143,143,143,1) 49%, rgba(181,181,181,1) 88%, rgba(247,247,247,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f5f5', endColorstr='#f7f7f7', GradientType=0 );
+    width: 100%;
+    margin:0;
 }
+
 .section current{
-    
+        width: 100%;
+    margin:0;
+
 }
 .current {
 }
+
 .navigation {
     position:fixed;
     right:50px;
@@ -96,15 +118,15 @@ filter:progid:DXImageTransform.Microsoft.Shadow(color=#f7f7f7, Direction=90, Str
 
 .content{
     overflow-x: hidden;
-    margin-left: 15%;
-    margin-right: 15%;
+   /* margin-left: 15%;
+    margin-right: 15%;*/
     font-size: 18px;
     line-height: 32px;
 }
 .content-pushed{
-    width: 60%;
+   /* width: 60%; 
     margin-left: 10%;
-    margin-right: 5%;
+    margin-right: 5%;*/
         line-height: 32px;
 }
 
@@ -112,25 +134,41 @@ a{
     color: inherit;
 }
 .section h2{
+    width: auto;
+    padding-right: -40px;
     font-family: "Umemincho";
     font-weight: normal;
     font-size: 49px;
     line-height: 50px;
     color: black;
+background-color: #d0d0d0;
+border-radius:100px;
+-moz-box-shadow: 5px 5px 70px 60px #d0d0d0;
+-webkit-box-shadow: 5px 5px 70px 60px #d0d0d0;
+-o-box-shadow: 5px 5px 70px 60px #d0d0d0;
+box-shadow: 5px 5px 70px 60px #d0d0d0;
+filter:progid:DXImageTransform.Microsoft.Shadow(color=#d0d0d0, Direction=134, Strength=50s);
 }
+
 .section h3{
     font-family: "Umemincho";
     font-size: 28px;
 }
+
+.section p, h2, h3, h1{
+    margin-left: 20%;
+    margin-right: 25%;
+    font-weight: normal;
+}
  section.content {
-   padding: 10px 20px;
+  /* padding: 10px 20px;*/
  }
 
 
 .text{
     z-index: 999;
     margin-top: 900px;
-    padding: 0px 35px 0px 35px;
+   /* padding: 0px 35px 0px 35px;*/
 }
 
 /************* NOTE ***************/
@@ -391,8 +429,8 @@ background-image: url('image/cover.jpg');
 
 */
 
-
-@media (min-width:200px) { /* smartphones, iPhone, portrait 480x320 phones */
+/* smartphones, iPhone, portrait 480x320 phones 
+@media (min-width:200px) {  
 .content{
     overflow-x: hidden;
     margin-left: 1%;
@@ -404,10 +442,12 @@ background-image: url('image/cover.jpg');
     margin-left: 105%;
     margin-right: 5%;
 }
-}
+}*/
 
+
+/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide.
 @media (min-width:481px) {
-    /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ 
+     
 .content{
     overflow-x: hidden;
     margin-left: 2%;
@@ -420,9 +460,11 @@ background-image: url('image/cover.jpg');
     margin-right: 5%;
 }
 }
+*/
 
+/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones
 @media (min-width:641px) {
-    /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ 
+      
 .content{
     overflow-x: hidden;
     margin-left: auto;
@@ -435,7 +477,8 @@ background-image: url('image/cover.jpg');
     margin-right: 5%;
 }
 }
-
+*/
+/*
 @media (min-width:800px){
     .content{
     overflow-x: hidden;
@@ -449,9 +492,10 @@ background-image: url('image/cover.jpg');
     margin-right: 5%;
 }
 }
-
+*/
+/* tablet, landscape iPad, lo-res laptops ands desktops
 @media (min-width:961px) {
-    /* tablet, landscape iPad, lo-res laptops ands desktops */ 
+      
 .content{
     overflow-x: hidden;
     margin-left: auto;
@@ -464,9 +508,11 @@ background-image: url('image/cover.jpg');
     margin-right: 5%;
 }
 }
+*/
 
+/* big landscape tablets, laptops, and desktops 
 @media (min-width:1025px) {
-    /* big landscape tablets, laptops, and desktops */
+    
 .content{
     overflow-x: hidden;
     margin-left: auto;
@@ -478,10 +524,11 @@ background-image: url('image/cover.jpg');
     margin-left: 5%;
     margin-right: 5%;
 }
-} 
+} */
+
+/* hi-res laptops and desktops 
 
 @media (min-width:1281px) {
-    /* hi-res laptops and desktops */
 .content{
     overflow-x: hidden;
     margin-left: auto;
