@@ -1,3 +1,8 @@
+// TO ADD: function that highlights the h2, h3, h4 in the pushmenu on the left (table of content) to see where are located the matching results
+
+// TO ADD: possibility to exit the "search mode" by clicking somewhere on the page or something like this
+
+
 $(document).ready(function(){
     $("#filter").keyup(function(){
 
@@ -11,7 +16,7 @@ $(document).ready(function(){
 
         // Loop through the comment list
        // $("h1, h2, h3, h4, p, div, span, ol, li, section, sup").each(function(){
-        $("h2, h3, h4, p, div, span, ol, li, section").not("#reference-list, .pushmenu pushmenu-left").each(function(){
+        $("h2, h3, h4, p, div, span, ol, li, section, #social, #book-downloads").not("#reference-list, .pushmenu pushmenu-left").each(function(){
             
             // If the list item does not contain the text phrase fade it out
             if ($(this).text().search(new RegExp(filter, "i")) < 0) {
@@ -26,6 +31,7 @@ $(document).ready(function(){
             } else {
                 $(this).show();
                 $(this).css("border-bottom", "solid 1px #ffff00");
+                $(this).css("color", "black");
                 count++;
             }
         });
@@ -36,5 +42,18 @@ $(document).ready(function(){
         $("#filter-count").css("font-size", "12px");
 
       //  console.log("Number of Hits = " + count);
+  
+    
+if(onclick){ 
+     alert("message") 
+    return false; } 
+    
+    
+    
+    
+    
     });
+    
+    
+    
 });

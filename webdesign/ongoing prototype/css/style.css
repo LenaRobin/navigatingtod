@@ -60,6 +60,40 @@ filter:progid:DXImageTransform.Microsoft.Shadow(color=#f7f7f7, Direction=90, Str
 
 /************* READER ***************/
 
+
+/************* test ***************/
+
+.section {
+}
+.section current{
+    
+}
+.current {
+}
+.navigation {
+    position:fixed;
+    right:50px;
+    top:10px;
+    z-index: 99999999;
+}
+/*******
+.arrow_top{
+    margin-left:3%;
+    height: 30px;
+    position: fixed;
+    float: left;
+    margin-top:3%;
+}
+
+.arrow_bottom{
+    margin-left:3%;
+    height: 30px;
+    position: fixed;
+    float: left;
+    bottom:10%;
+}
+********************/
+
 .content{
     overflow-x: hidden;
     margin-left: 15%;
@@ -77,10 +111,6 @@ filter:progid:DXImageTransform.Microsoft.Shadow(color=#f7f7f7, Direction=90, Str
 a{
     color: inherit;
 }
-
-.section{
-}
-
 .section h2{
     font-family: "Umemincho";
     font-weight: normal;
@@ -102,21 +132,7 @@ a{
     margin-top: 900px;
     padding: 0px 35px 0px 35px;
 }
-.arrow_top{
-    margin-left:3%;
-    height: 30px;
-    position: fixed;
-    float: left;
-    margin-top:3%;
-}
 
-.arrow_bottom{
-    margin-left:3%;
-    height: 30px;
-    position: fixed;
-    float: left;
-    bottom:10%;
-}
 /************* NOTE ***************/
 .footnoteRef{
     font-size: 0.7em;    
@@ -204,7 +220,9 @@ fieldset{
     -webkit-margin-before:0;
     -webkit-margin-after: 2px;
     -webkit-margin-start: 0px;
-    -webkit-margin-end: 0px;    
+    -webkit-margin-end: 0px;  
+        text-decoration: underline;
+
 /* border-width:1px;
  border-style:solid;
  border-color:black;

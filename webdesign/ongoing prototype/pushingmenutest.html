@@ -7,7 +7,7 @@
 	<link href="css/style.css" rel="stylesheet">
 	<script src="http://code.jquery.com/jquery-1.7.2.js">
 	</script>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript">
 	</script>
 	<script src="http://static.tumblr.com/lthqlys/Jpjnlgpb1/jquery.localscroll.js" type="text/javascript">
 	</script>
@@ -15,21 +15,15 @@
 	</script>
 	<script src="http://static.tumblr.com/lthqlys/slCnlgpc9/lancement.js" type="text/javascript">
 	</script>
-	<script src="js/search.js">
-	</script>
+	
+
 	<title></title>
 </head>
 <body>
 	<div class="pushmenu-push"> <!-- do not delete, it's what makes the content move to the right-->
 		<div id="main">
            
-<!-- ARROWS FOR SCROLL -->
-			<div class="arrow_top">
-				&#8593;
-			</div>
-			<div class="arrow_bottom">
-				&#8595;
-			</div>
+
 			
 <!-- MENU ON THE LEFT -->
 			<nav class="pushmenu pushmenu-left">
@@ -39,6 +33,10 @@
 						<input class="text-input" id="filter" type="text" value=""> <span id="filter-count"></span>
 					</fieldset>
 				</form>
+				
+				
+            
+            
 				<!-- Book Informations -->
 				<div id="book-info">
 					<span class="title"><a href="#cover">Gray Zones</a></span><br>
@@ -46,9 +44,9 @@
 					<span class="date">2015</span>
 				</div>
 				<!-- Files for download -->
-				PDF | Epub | Md | .doc<br>
+				<div id="book-downloads">PDF | Epub | Md | .doc</div>
 				<!-- Social media -->
-                Facebook | Twitter
+                <div id="social">Facebook | Twitter</div>
 				<!-- Table of Content -->
 				<div id="book-toc">
 					<h2><a href="#the-gray-zones-of-creativity-and-capital">The Gray Zones of Creativity and Capital</a></h2>
@@ -72,6 +70,7 @@
 					<h3><a href="#in-the-white-cube-a-simulacrum-of-the-creative-industries-roglab-centre-pilot-project">In the White Cube, a Simulacrum of the Creative Industries: RogLab Centre Pilot Project</a></h3>
 					<h3><a href="#gentrification-goes-public">Gentrification Goes Public</a></h3>
 					<h3><a href="#gentrification-is-class-war">"Gentrification is class war"</a></h3><a href="#neoliberalism-and-the-autonomy-of-art-the-culture-of-power-the-power-of-culture1"></a>
+					<h2><a href="#neoliberalism-and-the-autonomy-of-art-the-culture-of-power-the-power-of-culture1">Neoliberalism and the autonomy of Art: the culture of power, the power of culture</a></h2>
 				</div>
 				<!-- Website Credits -->
 				<div id="credit">
@@ -100,13 +99,21 @@
   
 	-->
 					<section class="content">
-						<!-- 
-<div class="parallax">
-	<div class="bg__foo">foo</div>
-</div>     
-	   -->
-						<div class="text">
-							<div class="section">
+						
+<div class="text">
+ <div class="main">
+ 
+ <!-- ARROWS FOR SCROLL -->
+<div class="navigation">
+    <a href="#" id="display1" class="display">prev</a><br>
+    <a href="#" id="display" class="display">next</a>
+</div>
+
+			
+			
+</div>                       
+                        
+	<div class="section current">
 								<p><em>Introduction</em></p>
 								<h2 id="the-gray-zones-of-creativity-and-capital">The Gray Zones of Creativity and Capital</h2>
 								<p>The initial idea that led to the preparation of this publication was not a reflection of the editors’ wish to merely add another publication focusing on a critique of the relationship between creative industries and capital to the huge corpus of similar publications taking a critical stance towards the process of co-optation of creativity, creative industries, art or the domain of abstraction in general by capital. Even though, precisely through the logic of the mass production of critical texts dealing with the above-mentioned context, this publication as well will ultimately exist in such a register, the distinctive feature of this publication is its aspiration to place the relationship between creativity and capital in the context of an analysis wherein capitalism is treated as the framework of a broader relationship of domination, which to a great degree goes beyond the currently popular critical niche focused on analyzing the relationship between creativity, abstraction or representation in general and capital.</p>
@@ -2282,7 +2289,14 @@
 				</div><!-- End Main -->
 			</div><!-- End Container -->
 		</div><!-- End Pushmenu: has to stay here to get the whole page pushed -->
-		<script>
+
+	</div>
+
+<!----- script: nav ----->
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="js/nav.js" type="text/javascript"></script>	
+<!----- script: pushmenu on the left ----->		
+<script>
 							   $(document).ready(function() {
 							   $menuLeft = $('.pushmenu-left');
 							   $nav_list = $('#nav_list');
@@ -2294,10 +2308,13 @@
 							   $menuLeft.toggleClass('pushmenu-open');
 							   });
 							   });
-		</script> 
-		<script src="js/md-sidenotes.js" type="text/javascript">
-		</script> 
-		<script>
+</script> 
+
+
+<!----- script: sidenote ----->
+<script src="js/md-sidenotes.js" type="text/javascript">
+</script> 
+<script>
 							   console.log("hi");
 
 							   initialize({
@@ -2311,7 +2328,11 @@
 							   mediumMediaQuery:'(max-width: 600px)', //Media query to trigger the behavior for ‘medium’ screens
 							   smallMediaQuery:'' //Media query to trigger the behavior for ‘small’ screens
 							   });
-		</script>
-	</div>
+</script>
+
+<script src="js/search.js">
+	</script>
+	
+			
 </body>
 </html>
