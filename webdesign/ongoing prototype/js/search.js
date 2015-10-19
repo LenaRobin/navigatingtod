@@ -21,7 +21,7 @@ $(document).ready(function(){
             // If the list item does not contain the text phrase fade it out
             if ($(this).text().search(new RegExp(filter, "i")) < 0) {
              //   $(this).css("color", "red");
-                $(this).css("color", "#e5e5e5");
+                $(this).css("color", "rgba(203, 203, 203, 0.22)");
                 $(this).css("text-decoration", "none");
                 $(this).css("border-bottom", "0px");
                // $("h2").css("color", "inherit");
@@ -44,6 +44,12 @@ $(document).ready(function(){
       //  console.log("Number of Hits = " + count);
   
     
+        
+
+        
+        
+        
+        
 if(onclick){ 
      alert("message") 
     return false; } 
