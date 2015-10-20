@@ -1,11 +1,14 @@
 $(document).ready(function(){
-    $("#filter").keyup(function(){
+    var elem = $('<div id="search_ui" style="position: fixed; right: 10px; top: 10px; display: none;"><button id="cancel">Cancel</button></div>');
+    
+    $('body').append(elem);
+
+    $("#filter").keyup(function(e){
 
        // alert( "Handler for .keyup() called." );
-
  
         // Retrieve the input field text and reset the count to zero
-        var filter = $(this).val()
+        var filter = $(this).val();
         var count = 0;
 
         // Loop through the comment list
@@ -28,8 +31,29 @@ $(document).ready(function(){
         // Update the count
         var numberItems = count;
         $("#filter-count").text("Number of Hits = "+count);
-      //  console.log("Number of Hits = " + count);
-    });
+        //  console.log("Number of Hits = " + count);
+       
+          
+          if (0 < filter.length) {
+
+            if ($('#search_ui').css('display') == 'none' ) {
+                $('#search_ui').css('display', 'block');
+            }
+            /*$("h1, h2, h3, h4, p, div, span, ol, li").each(function(){
+                $(this).css("color", "green");
+            });*/
+
+          } else {
+             $('#search_ui').css('display', 'none');
+            //elem.css("display", "none");
+          }
+
+       elem.click(function() {
+                $(this).css("display", "none");
+                // add more code here
+        }); 
+
+        });
 
     
 
