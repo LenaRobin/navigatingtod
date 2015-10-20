@@ -18,13 +18,17 @@
     font-family: Texgyre;
     src: url('fonts/texgyreheros-regular.otf');
 }
+@font-face {
+    font-family: Cmunss;
+    src: url('fonts/cmunss.ttf');
+}
 
 
 body {
     margin: 0;
     overflow-y: scroll;
       overflow-x: hidden;
-    font-family: "Texgyre";
+    font-family: "Verdana";
     width: 100%;
     text-rendering: optimizeSpeed;
 }
@@ -44,6 +48,28 @@ body {
 a:hover{
 color:#ff521e;
 }
+
+
+
+/*
+************ FIXED BAR *************
+
+*/
+.fixedbar{
+    height:40px;
+    width: 100%;
+    background-color: white;
+    position: fixed;
+}
+
+.fixedbar .logo{
+    width: 100px;
+    height: auto;
+    background-color: none;
+    margin: 0;
+    box-shadow: none;
+}
+
 /*
 ************ COVER *************
 
@@ -52,16 +78,31 @@ color:#ff521e;
 .cover-container{
 }
 #cover{
+margin:0;
 }
 
 #cover-shadow{
     z-index: -990;
-
     position: absolute;
     margin-top:900px;
     left:-500px;top:0;width:160%;height:100%;
 background-color: white;
 }
+
+/*
+************ SUMMARY *************
+*/
+.summary{
+    z-index: 99999;
+    position: absolute;
+    font-size: 10px;
+    background-color: white;
+    width: 400px;
+    right:10px;
+    top:70px;
+    padding: 10px;
+}
+
 /*
 
 /************* READER ***************/
@@ -70,13 +111,13 @@ background-color: white;
 /************* test ***************/
 
 .section {
-   background: rgba(255,255,255,1);
-background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(242,242,242,1) 4%, rgba(171,171,171,1) 22%, rgba(143,143,143,1) 54%, rgba(181,181,181,1) 77%, rgba(194,194,194,1) 84%, rgba(255,255,255,1) 100%);
-background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(4%, rgba(242,242,242,1)), color-stop(22%, rgba(171,171,171,1)), color-stop(54%, rgba(143,143,143,1)), color-stop(77%, rgba(181,181,181,1)), color-stop(84%, rgba(194,194,194,1)), color-stop(100%, rgba(255,255,255,1)));
-background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(242,242,242,1) 4%, rgba(171,171,171,1) 22%, rgba(143,143,143,1) 54%, rgba(181,181,181,1) 77%, rgba(194,194,194,1) 84%, rgba(255,255,255,1) 100%);
-background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(242,242,242,1) 4%, rgba(171,171,171,1) 22%, rgba(143,143,143,1) 54%, rgba(181,181,181,1) 77%, rgba(194,194,194,1) 84%, rgba(255,255,255,1) 100%);
-background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(242,242,242,1) 4%, rgba(171,171,171,1) 22%, rgba(143,143,143,1) 54%, rgba(181,181,181,1) 77%, rgba(194,194,194,1) 84%, rgba(255,255,255,1) 100%);
-background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(242,242,242,1) 4%, rgba(171,171,171,1) 22%, rgba(143,143,143,1) 54%, rgba(181,181,181,1) 77%, rgba(194,194,194,1) 84%, rgba(255,255,255,1) 100%);
+background: rgba(255,255,255,1);
+background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 10%, rgba(199,199,199,1) 40%, rgba(173,173,173,1) 50%, rgba(199,199,199,1) 60%, rgba(255,255,255,1) 90%, rgba(255,255,255,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(10%, rgba(255,255,255,1)), color-stop(40%, rgba(199,199,199,1)), color-stop(50%, rgba(173,173,173,1)), color-stop(60%, rgba(199,199,199,1)), color-stop(90%, rgba(255,255,255,1)), color-stop(100%, rgba(255,255,255,1)));
+background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 10%, rgba(199,199,199,1) 40%, rgba(173,173,173,1) 50%, rgba(199,199,199,1) 60%, rgba(255,255,255,1) 90%, rgba(255,255,255,1) 100%);
+background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 10%, rgba(199,199,199,1) 40%, rgba(173,173,173,1) 50%, rgba(199,199,199,1) 60%, rgba(255,255,255,1) 90%, rgba(255,255,255,1) 100%);
+background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 10%, rgba(199,199,199,1) 40%, rgba(173,173,173,1) 50%, rgba(199,199,199,1) 60%, rgba(255,255,255,1) 90%, rgba(255,255,255,1) 100%);
+background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 10%, rgba(199,199,199,1) 40%, rgba(173,173,173,1) 50%, rgba(199,199,199,1) 60%, rgba(255,255,255,1) 90%, rgba(255,255,255,1) 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0 );
     width: 100%;
     margin:0;
@@ -93,8 +134,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 .navigation {
     position:fixed;
     right:50px;
-    top:10px;
-    z-index: 99999999;
+    top:50%;
+    z-index: 999999999999;
 }
 /*******
 .arrow_top{
@@ -118,8 +159,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
     overflow-x: hidden;
    /* margin-left: 15%;
     margin-right: 15%;*/
-    font-size: 1em;
-    line-height: 30px;
+    font-size: 1.1em;
+    line-height: 1.6em;
 }
 .content-pushed{
    /* width: 60%; 
@@ -133,36 +174,38 @@ a{
 }
 .section h2{
     margin-top: 160px;
-    margin-bottom: 70px;
-    max-width: 600px;
-    margin-left: 9%;
+    margin-left: 5%;
+    margin-bottom: 50px;
     padding-right: -40px;
+    max-width: 600px;
     font-family: "Umemincho";
-    font-weight: normal;
-    font-size: 55px;
-    line-height: 50px;
+    font-size: 3em;
+    line-height: 1em;
     color: black;
+/*
 background-color: #c6c6c6;
-border-radius:100px;
+border-radius:5px;
 -moz-box-shadow: 5px 5px 70px 60px #c6c6c6;
 -webkit-box-shadow: 5px 5px 70px 60px #c6c6c6;
 -o-box-shadow: 5px 5px 70px 60px #c6c6c6;
 box-shadow: 5px 5px 70px 60px #c6c6c6;
-filter:progid:DXImageTransform.Microsoft.Shadow(color=#c6c6c6, Direction=134, Strength=50s);
+filter:progid:DXImageTransform.Microsoft.Shadow(color=#c6c6c6, Direction=134, Strength=50s);*/
 }
 
 .section h3{
     font-family: "Caslon";
     font-size: 24px;
-    margin-left: 12%;
-
 }
 
 .section p, h2, h3, h1, img, .author, .words{
-    margin-left: 10%;
+    margin-left: 3%;
     margin-right: 40%;
     font-weight: normal;
     z-index: 9999;
+}
+
+.section p{
+    margin-left: 5%;
 }
 
 .author{
@@ -185,14 +228,14 @@ filter:progid:DXImageTransform.Microsoft.Shadow(color=#c6c6c6, Direction=134, St
 
 img{
     z-index: -9999999999999999;
-    width: 80%;
+    width: 65%;
     text-align: center;
     margin-top:40px;
     margin-bottom: 40px;
--moz-box-shadow: 5px 5px 70px 60px #e6e6e6;
--webkit-box-shadow: 5px 5px 70px 60px #e6e6e6;
--o-box-shadow: 5px 5px 70px 60px #e6e6e6;
-box-shadow: 5px 5px 70px 60px #e6e6e6;
+-moz-box-shadow: 5px 5px 40px 30px #e6e6e6;
+-webkit-box-shadow: 5px 5px 40px 30px #e6e6e6;
+-o-box-shadow: 5px 5px 40px 30px #e6e6e6;
+box-shadow: 5px 5px 40px 30px #e6e6e6;
 filter:progid:DXImageTransform.Microsoft.Shadow(color=#e6e6e6, Direction=134, Strength=50s);
 }
  section.content {
@@ -206,6 +249,18 @@ filter:progid:DXImageTransform.Microsoft.Shadow(color=#e6e6e6, Direction=134, St
    /* padding: 0px 35px 0px 35px;*/
 }
 
+/************* REFERENCE LISTS ***************/
+#reference-list, #reference-list-1, #reference-list-2, #reference-list-3, #reference-list-4, #reference-list-5, #reference-list-6, #reference-list-7, #reference-list-8, #reference-list-9, #reference-list-10{
+    font-family: "Verdana";
+    font-size: 0.8em;
+    text-decoration: underline;
+}
+.references{
+    font-size: 0.7em;
+    line-height: 1.4em;
+text-indent: 20px;
+}
+
 /************* NOTE ***************/
 .footnoteRef{
     font-size: 0.7em;    
@@ -217,9 +272,10 @@ filter:progid:DXImageTransform.Microsoft.Shadow(color=#e6e6e6, Direction=134, St
 .sidenote{
     clear: right;
     width: 20%;
+    margin-right: 10%;
     float: right;
-    color:#646464;
     padding:0;
+    padding-right: 0%;
     font-size: 10px;
     line-height: 14px;
   overflow-wrap: break-word;
@@ -231,7 +287,6 @@ filter:progid:DXImageTransform.Microsoft.Shadow(color=#e6e6e6, Direction=134, St
   -webkit-hyphens: auto;
   hyphens: auto;
     font-family: "Verdana";
-
 }
 
 /************* SEARCH BOX ***************/
@@ -249,12 +304,12 @@ fieldset{
 }
 
 /************* MENU ***************/
-.pushmenu { /* this is the nav but doesnt appear */
+.pushmenu { /* this is the nav that is hidden */
   width: 270px;
   height: 100%;
   top: 0;
   position:fixed;
-    background-color: rgba(247,247,247,1);
+    background-color: white;
     overflow-x: hidden;
 
 }
@@ -280,7 +335,7 @@ fieldset{
 .pushmenu .title, .pushmenu .title a{
     position: relative;
     font-style: italic;
-    font-family: "Texgyre";
+    font-family: "Verdana";
     padding-bottom: 0;
     margin-bottom: 0;
 }
@@ -289,7 +344,7 @@ fieldset{
 }
 
 .pushmenu h2 { /* big part */
-  font-size: 14px;
+  font-size: 1.2em;
   padding: 5px 5px 0px 5px;
     margin: 0;
   height: auto;
@@ -298,8 +353,8 @@ fieldset{
     -webkit-margin-after: 2px;
     -webkit-margin-start: 0px;
     -webkit-margin-end: 0px;  
-        text-decoration: underline;
-
+        text-decoration: none;
+font-weight: normal;
 /* border-width:1px;
  border-style:solid;
  border-color:black;
@@ -307,26 +362,25 @@ fieldset{
 }
 
 .pushmenu h3 { /* sub-part */
-  font-size: 13px;
+  font-size: 0.7em;
   padding: 0px 5px 5px 5px;
   margin-bottom: 0px;
     margin-left:20px;
-  height: auto;
-  font-family: "Umemincho";
+    min-width: 200px;
+  font-family: "Caslon";
  /* border-width:1px;
     border-style:solid;
  border-color:black;
     border-radius: 8px;*/
+font-weight: normal;
+
 }
 
 .pushmenu a {
   display: block; /* drops the nav vertically*/
-  font-size: 16px;
-  font-weight: bold;
-  text-decoration: none;
  /* border-top: 1px solid #ffffff;
   border-bottom: 1px solid #e5e5e5;*/
-    font-family: "Texgyre";
+  text-decoration:none;
 }
 .pushmenu h2:hover{
   background:#ededed;
@@ -369,15 +423,40 @@ box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
   -moz-transition: all 0.3s ease;
   transition: all 0.3s ease;  
 }
-
-#nav_list {
-  background: url(http://www.onlywebpro.com/demo/jquery/icon_nav.png) no-repeat left top;
+ .buttonset {
+  height:100%;
+  line-height:500px;
+     position: fixed;
+     top:0;
+     left:0;
+     vertical-align: middle;
+ }
+#nav_list /* button to active the pushmenu */ {
+/* background: url(http://www.onlywebpro.com/demo/jquery/icon_nav.png) no-repeat;*/
   cursor: pointer;
-  height: 27px;
-  width: 33px;
+  height:100%;
+  width: 13px;
   text-indent: -99999em;
+vertical-align:middle;
+  display:inline-block;
+  line-height:normal;
+  text-align:left;
+    background-color:#f7ff95;
+   /* box-shadow: 0px -3px 15px 8px white;
+    -webkit-box-shadow: 0px -3px 15px 8px white;
+    -moz-box-shadow: 0px -3px 15px 8px white;*/
 }
-
+.close{
+cursor: pointer;
+    height: 30px;
+  width: 27px;
+vertical-align:middle;
+  display:inline-block;
+  line-height:normal;
+  text-align:left;
+    background-color: mediumblue; 
+    position: fixed;
+}
 nav-list.active {
   background-position: -33px top;
     display: none;
@@ -385,12 +464,7 @@ nav-list.active {
 
 
 
- .buttonset {
-      height: 16px;
-     position: fixed;
-     top:0;
-     left:0;
- }
+
 
 .pushmenu-left.pushmenu-open #nav-list{
     display: none;
