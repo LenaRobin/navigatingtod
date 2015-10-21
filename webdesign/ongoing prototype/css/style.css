@@ -555,7 +555,7 @@ nav-list.active {
 }
 #footer{
     width: 100%;
-    height: auto;
+    height: 800px;
     position: relative;
     background-color:#414141;
         z-index: -99999999;
@@ -564,6 +564,8 @@ nav-list.active {
     margin-left: 5%;
     width: 200px;
     float: left;
+    margin-bottom: 0px;
+    vertical-align:baseline;
 }
 
 
