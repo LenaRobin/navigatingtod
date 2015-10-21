@@ -10,7 +10,7 @@
       storyElem: '.story',
       barsContainer: 'barsContainer',
       barClass: 'toc-storybar',
-      headlineSelector: 'h2, h3',
+      headlineSelector: 'h3',
       topText: 'Back to top'
     }
 
@@ -41,7 +41,8 @@
 
     $(window).load(function() {      
 
-      $this.prepend('<div class="toc-title">' + $('h1').first().text() + '</div>');
+     /// $this.prepend('<div class="toc-title">' + $('h1').first().text() + '</div>');
+      $this.prepend('<div class="toc-title">' + $('h2').children().text() + '</div>');
       $this.append('<div id="' + settings.barsContainer + '"></div>');
 
       setupHTML( settings.storyElem );

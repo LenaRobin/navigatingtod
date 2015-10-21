@@ -4,7 +4,6 @@ $('a.display').on('click', function (e) {
 
     var t = $(this).text(),
         that = $(this);
-        console.log('hey');
 
     if (t === 'next' && $('.current').next('div.section').length > 0) {
         var $next = $('.current').next('.section');
@@ -16,7 +15,8 @@ $('a.display').on('click', function (e) {
             $('html, body').animate({
                 scrollTop: $('.current').offset().top
             });
-            
+            console.log('hey');
+        
         //$(function () {
         //    $next.addClass('current');
         //    $('html, body').animate({

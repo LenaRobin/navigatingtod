@@ -22,13 +22,17 @@
     font-family: Cmunss;
     src: url('fonts/cmunss.ttf');
 }
+@font-face {
+    font-family: Hkgrotesk;
+    src: url('fonts/HKGrotesk-Regular.otf');
+}
 
 
 body {
     margin: 0;
     overflow-y: scroll;
       overflow-x: hidden;
-    font-family: "Verdana";
+    font-family: "Hkgrotesk";
     width: 100%;
     text-rendering: optimizeSpeed;
 }
@@ -56,10 +60,12 @@ color:#ff521e;
 
 */
 .fixedbar{
-    height:40px;
+    height:20px;
     width: 100%;
-    background-color: white;
     position: fixed;
+    font-size:40px;
+    font-family: "Times";
+z-index: 9999999999;
 }
 
 .fixedbar .logo{
@@ -68,6 +74,11 @@ color:#ff521e;
     background-color: none;
     margin: 0;
     box-shadow: none;
+}
+
+.fixedbar .title{
+    float: right;
+    position: relative;
 }
 
 /*
@@ -101,6 +112,7 @@ background-color: white;
     right:10px;
     top:70px;
     padding: 10px;
+    border:1px solid black;
 }
 
 /*
@@ -159,8 +171,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
     overflow-x: hidden;
    /* margin-left: 15%;
     margin-right: 15%;*/
-    font-size: 1.1em;
+    font-size: 1.2em;
     line-height: 1.6em;
+color:#1a1a1a;
 }
 .content-pushed{
    /* width: 60%; 
@@ -175,10 +188,12 @@ a{
 .section h2{
     margin-top: 160px;
     margin-left: 5%;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     padding-right: -40px;
+    padding-top: 10px;
     max-width: 600px;
-    font-family: "Umemincho";
+  /*  font-family: "Umemincho"; */
+    font-family: "Times";
     font-size: 3em;
     line-height: 1em;
     color: black;
@@ -193,11 +208,12 @@ filter:progid:DXImageTransform.Microsoft.Shadow(color=#c6c6c6, Direction=134, St
 }
 
 .section h3{
-    font-family: "Caslon";
     font-size: 24px;
+    margin-left: 5%;
+    font-family: "Times";
 }
 
-.section p, h2, h3, h1, img, .author, .words{
+.section p, h2, h3, h1, img, .author{
     margin-left: 3%;
     margin-right: 40%;
     font-weight: normal;
@@ -209,10 +225,11 @@ filter:progid:DXImageTransform.Microsoft.Shadow(color=#c6c6c6, Direction=134, St
 }
 
 .author{
+        margin-left: 5%;
+    margin-right: 0;
     font-size: 0.7em;
     text-transform: uppercase;
     text-decoration: underline;
-    margin-right: 0%;
  /*  border-bottom: 10px;
     border-bottom-style: solid;
     border-bottom-color: rgba(0, 255, 255, 0.33); */
@@ -222,8 +239,6 @@ filter:progid:DXImageTransform.Microsoft.Shadow(color=#c6c6c6, Direction=134, St
     font-size: 0.7em;
     text-transform: uppercase;
     text-decoration: none;
-    margin: 0%;
-
 }
 
 img{
@@ -245,7 +260,7 @@ filter:progid:DXImageTransform.Microsoft.Shadow(color=#e6e6e6, Direction=134, St
 
 .text{
     z-index: 999;
-    margin-top: 900px;
+   margin-top: 600px;
    /* padding: 0px 35px 0px 35px;*/
 }
 
@@ -294,15 +309,31 @@ text-indent: 20px;
 #live-search{
     position: relative;
     border-style: none;
+    display: inline-block;
+    float: right;
+    right: 3%;
 }
 
 fieldset{
+    margin: 0;
+    padding: 0;
     border-style: none;
 }
 #filter{
-
 }
-
+#filter-count{
+    color: black;
+}
+#filter.text-input{
+}
+input#filter{   
+}
+input{
+    border:1px solid black;
+}
+input:hover{
+    border:1px solid blue;
+}
 /************* MENU ***************/
 .pushmenu { /* this is the nav that is hidden */
   width: 270px;
@@ -348,7 +379,6 @@ fieldset{
   padding: 5px 5px 0px 5px;
     margin: 0;
   height: auto;
-    font-family: "Umemincho";
     -webkit-margin-before:0;
     -webkit-margin-after: 2px;
     -webkit-margin-start: 0px;
@@ -367,7 +397,6 @@ font-weight: normal;
   margin-bottom: 0px;
     margin-left:20px;
     min-width: 200px;
-  font-family: "Caslon";
  /* border-width:1px;
     border-style:solid;
  border-color:black;
@@ -399,9 +428,8 @@ color:#ff3300;
 }
 
 .pushmenu-left.pushmenu-open {
-  left: 0;
-    
-    
+  left: 15px;  
+    border-right: solid 1px black;
 -webkit-box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
 -moz-box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
 box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
@@ -435,17 +463,27 @@ box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
 /* background: url(http://www.onlywebpro.com/demo/jquery/icon_nav.png) no-repeat;*/
   cursor: pointer;
   height:100%;
-  width: 13px;
-  text-indent: -99999em;
+  width: 20px;
+ /* text-indent: -99999em; */
 vertical-align:middle;
   display:inline-block;
   line-height:normal;
   text-align:left;
-    background-color:#f7ff95;
-   /* box-shadow: 0px -3px 15px 8px white;
+    background-color:white;
+    color: black;
+    border: solid 0px black;
+    border-top: none;
+    padding: 5Px;
+    /* box-shadow: 0px -3px 15px 8px white;
     -webkit-box-shadow: 0px -3px 15px 8px white;
     -moz-box-shadow: 0px -3px 15px 8px white;*/
 }
+
+#nav_list:hover{
+    color: #0031ff;
+    border: 1px solid #0031ff;
+}
+
 .close{
 cursor: pointer;
     height: 30px;
