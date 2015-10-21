@@ -35,6 +35,7 @@ body {
     font-family: "Hkgrotesk";
     width: 100%;
     text-rendering: optimizeSpeed;
+    position: relative;
 }
 
 .main{
@@ -96,10 +97,17 @@ margin:0;
     z-index: -990;
     position: absolute;
     margin-top:900px;
-    left:-500px;top:0;width:160%;height:100%;
+    left:-500px;top:0;width:160%;
 background-color: white;
 }
 
+/*
+************ BOOTSTRAP *************
+*/
+
+.nav nav-tabs{
+    color: red;
+}
 /*
 ************ SUMMARY *************
 */
@@ -134,7 +142,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
     width: 100%;
     margin:0;
 }
-
+.section ul{
+    color:black;
+}
 .section current{
         width: 100%;
     margin:0;
@@ -196,7 +206,6 @@ a{
     font-family: "Times";
     font-size: 3em;
     line-height: 1em;
-    color: black;
 /*
 background-color: #c6c6c6;
 border-radius:5px;
@@ -321,6 +330,11 @@ fieldset{
 }
 #filter{
 }
+#filter > *{
+    
+}
+
+
 #filter-count{
     color: black;
 }
@@ -334,6 +348,27 @@ input{
 input:hover{
     border:1px solid blue;
 }
+
+.search-found {
+
+}
+
+.search-notfound {
+    color:rgba(203, 203, 203, 0.22);
+}
+
+.allWords{
+    font-size: 13px;
+    background-color: white;
+    width: auto;
+    position: fixed;
+    padding-left: 2px;
+    list-style-type : none;
+    cursor: pointer;
+    padding:2px;
+    margin-top: 2px;
+}
+
 /************* MENU ***************/
 .pushmenu { /* this is the nav that is hidden */
   width: 270px;
@@ -471,7 +506,7 @@ vertical-align:middle;
   text-align:left;
     background-color:white;
     color: black;
-    border: solid 0px black;
+    border: solid 1px black;
     border-top: none;
     padding: 5Px;
     /* box-shadow: 0px -3px 15px 8px white;
@@ -510,8 +545,26 @@ nav-list.active {
 }
 
 
-
-
+/************* FOOTER ***************/
+#pre-footer{
+    width: 100%;
+    height: 400px;
+    position: relative;
+    background-color: white;
+    z-index: -99999999;
+}
+#footer{
+    width: 100%;
+    height: auto;
+    position: relative;
+    background-color:#414141;
+        z-index: -99999999;
+}
+.footer-column{
+    margin-left: 5%;
+    width: 200px;
+    float: left;
+}
 
 
 /*
