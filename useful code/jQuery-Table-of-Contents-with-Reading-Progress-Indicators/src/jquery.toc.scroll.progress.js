@@ -41,8 +41,8 @@
 
     $(window).load(function() {      
 
-     /// $this.prepend('<div class="toc-title">' + $('h1').first().text() + '</div>');
-      $this.prepend('<div class="toc-title">' + $('h2').children().text() + '</div>');
+     $this.prepend('<div class="toc-title">' + $('h3').first().text() + '</div>');
+   //   $this.prepend('<div class="toc-title">' + $('h2').children().text() + '</div>');
       $this.append('<div id="' + settings.barsContainer + '"></div>');
 
       setupHTML( settings.storyElem );
