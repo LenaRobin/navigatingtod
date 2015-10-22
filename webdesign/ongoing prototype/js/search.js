@@ -67,7 +67,7 @@ $(document).ready(function(){
 
 		var numberItems = count;
 
-		$("#filter-count").text("Number of Hits = "+count);
+		$("#filter-count").text(count + " results");
 
 		//  console.log("Number of Hits = " + count);
 		  
