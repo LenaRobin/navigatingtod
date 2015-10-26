@@ -1,0 +1,197 @@
+@font-face {
+    font-family: Hkgrotesk;
+    src: url('fonts/HKGrotesk-Regular.otf');
+}
+@font-face {
+    font-family: HkgroteskBold;
+    src: url('fonts/HKGrotesk-Bold.otf');
+}
+html{
+	height: 100%;
+    margin: 0;
+    margin-top: 0;
+}
+body {
+    font-family: "Hkgrotesk";
+    text-rendering: optimizeSpeed;
+    height: 100%;    background-color:#f4f4f4;
+    margin: 0;
+    margin-top: 0;
+
+}
+
+#wrap{
+  min-height:100%;
+  position: relative;
+    margin: 0;
+    margin-top: 0;
+
+}
+
+
+
+
+/*********************
+06. MENU BUTTONS/SELECTORS
+*********************/
+
+/* Tags */
+.button{
+    background-color: #cecece;
+    border-radius: 5px;
+    padding:2px; 
+    cursor: pointer;
+        line-height: 2em;
+}
+
+.button:hover{
+    margin-left:1px;
+    margin-top: 3px;
+}
+
+.menu-tags{
+    margin-top: 100px;
+    width: 250px;
+}
+
+/* Date */
+section.range-slider {
+    position: relative;
+    width: 150px;
+    height: 35px;
+    text-align: center;
+}
+
+section.range-slider input {
+    pointer-events: none;
+    position: absolute;
+    overflow: hidden;
+    left: 0;
+    top: 15px;
+    width: 150px;
+    outline: none;
+    height: 18px;
+    margin: 0;
+    padding: 0;
+}
+
+section.range-slider input::-webkit-slider-thumb {
+    pointer-events: all;
+    position: relative;
+    z-index: 1;
+    outline: 0;
+    cursor: pointer;
+}
+
+section.range-slider input::-moz-range-thumb {
+    pointer-events: all;
+    position: relative;
+    z-index: 10;
+    -moz-appearance: none;
+    width: 9px;
+}
+
+section.range-slider input::-moz-range-track {
+    position: relative;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 0;
+}
+section.range-slider input:last-of-type::-moz-range-track {
+    -moz-appearance: none;
+    background: none transparent;
+    border: 0;
+}
+  section.range-slider input[type=range]::-moz-focus-outer {
+  border: 0;
+}
+
+/* Forms (Author, Title, Editor) */
+
+.form{
+    margin-top: 50px;
+}
+
+input{
+    width: 230px;
+    margin-bottom: 10px;
+    font-size: 50px;
+    font-family: "Hkgrotesk";
+}
+
+/*********************
+06. HEADER STYLES
+*********************/
+.header {
+  position: relative;
+  width: 100%;
+  background-color: #ffffff;
+  border-bottom: 1px solid #f4f4f4;
+height: 200px;
+    margin: 0;
+}
+
+#container{
+    height: 100%;
+    margin-left: 10%;
+  position: relative;
+    margin-top: 200px;
+    background-color:#f4f4f4;
+    
+}
+#menu{
+    width: 300px;
+    float: left;
+}
+#content{
+height: 100%;
+    max-width: 1000px;
+    background-color:#f4f4f4;
+    margin-left: 300px;
+position: relative;
+}
+
+/*********************
+06. BOOKS SELECTION
+*********************/
+
+.publication{
+    width: 240px;
+    height: 400px;
+    float: left;
+    position: relative;
+}
+.publication:hover{
+    background-color: white;
+}
+
+/************* FOOTER ***************/
+
+#footer{
+    width: 100%;    
+  background-color: #444444;
+  color: #ffffff;
+  height: 120px;
+    position: absolute;
+bottom: 0; left: 0; right: 0;
+}
+.footer-column{
+    margin-left: 5%;
+    width: 200px;
+    float: left;
+    margin-bottom: 0px;
+    vertical-align:baseline;
+}
+
+.hva{
+    width: 250px;
+    height: 50px;
+    background-size: 100%;
+        background-image: url(image/hva-logo.png);
+    background-repeat: no-repeat;
+    float: left;
+    margin-left: 10%;
+}
+
+
+
