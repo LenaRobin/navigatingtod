@@ -1,0 +1,831 @@
+// DOCUMENTATION JQUERY
+<!DOCTYPE html>
+<html>
+<body>
+
+//REFERENCE DOWNLOADED AND SELF-HOSTED
+<head>
+<script src="jquery-1.11.3.min.js"></script>
+</head>
+
+
+//REFERENCE FROM GOOGLE & MICROSOFT
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</head>
+
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</head>
+
+
+
+// PLACING IN DA HEAD
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+</script>
+<script src="my_jquery_functions.js"></script>
+</head>
+
+
+
+$(this).hide() // hides the current element.
+
+$("p").hide() // hides all <p> elements.
+
+$(".test").hide() // hides all elements with class="test".
+
+$("#test").hide() // hides the element with id="test".
+
+
+
+
+
+
+
+
+// PREVENT CODE FROM RUNNING BEFORE DOCUMENT IS FINISHED LOADING
+$(document).ready(function(){
+
+   // jQuery methods go here...
+
+});
+
+
+
+
+
+
+
+// SELECTING ID
+
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $("p").hide();
+    });
+});
+</script>
+</head>
+<body>
+
+<h2>This is a heading</h2>
+
+<p>This is a paragraph.</p>
+<p>This is another paragraph.</p>
+
+<button>Click me</button>
+
+
+
+
+
+
+
+
+
+
+
+
+// SELECTING CLASS
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $(".test").hide();
+    });
+});
+</script>
+</head>
+<body>
+
+<h2 class="test">This is a heading</h2>
+
+<p class="test">This is a paragraph.</p>
+<p>This is another paragraph.</p>
+
+<button>Click me</button>
+
+
+
+
+
+
+
+
+
+
+
+
+// DOUBLE-CLICK TO DISAPPEAR
+
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("p").dblclick(function(){
+        $(this).hide();
+    });
+});
+</script>
+</head>
+<body>
+
+<p>If you double-click on me, I will disappear.</p>
+<p>Click me away!</p>
+<p>Click me too!</p>
+
+
+
+
+
+
+
+
+
+
+
+
+// WHEN MOUSE POINTER IN THE AREA OF THE SELECTED HTML
+
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#p1").mouseenter(function(){
+        alert("You entered p1!");
+    });
+});
+</script>
+</head>
+<body>
+
+<p id="p1">Enter this paragraph.</p>
+
+
+
+
+
+
+
+
+
+// WHEN MOUSE POINTER LEAVES HTML FIELD
+
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#p1").mouseleave(function(){
+        alert("Bye! You now leave p1!");
+    });
+});
+</script>
+</head>
+<body>
+
+<p id="p1">This is a paragraph.</p>
+
+
+
+
+
+
+
+
+
+
+// WHEN MOUSE IS PRESSE DOWN ON HTML ELEMENT
+
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#p1").mousedown(function(){
+        alert("Mouse down over p1!");
+    });
+});
+</script>
+</head>
+<body>
+
+<p id="p1">This is a paragraph.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+// WHEN MOUSE BUTTON IS RELEASED WHILE ON HTML ELEMENT
+
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#p1").mouseup(function(){
+        alert("Mouse up over p1!");
+    });
+});
+</script>
+</head>
+<body>
+
+<p id="p1">This is a paragraph.</p>
+
+
+
+
+
+
+
+
+
+// WHEN MOUSE POINTER HOVERS OVER HTML ELEMENT (COMBINATION OF -ENTER AND -LEAVE)
+
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#p1").hover(function(){
+        alert("You entered p1!");
+    },
+    function(){
+        alert("Bye! You now leave p1!");
+    }); 
+});
+</script>
+</head>
+<body>
+
+<p id="p1">This is a paragraph.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+// WHEN FORM FIELD GETS FOCUS
+
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("input").focus(function(){
+        $(this).css("background-color", "#cccccc");
+    });
+    $("input").blur(function(){
+        $(this).css("background-color", "#ffffff");
+    });
+});
+</script>
+</head>
+<body>
+
+Name: <input type="text" name="fullname"><br>
+Email: <input type="text" name="email">
+
+
+
+
+
+
+
+
+
+
+// WHEN FORM FIELD LOOSES FOCUS
+
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("input").focus(function(){
+        $(this).css("background-color", "#cccccc");
+    });
+    $("input").blur(function(){
+        $(this).css("background-color", "#ffffff");
+    });
+});
+</script>
+</head>
+<body>
+
+Name: <input type="text" name="fullname"><br>
+Email: <input type="text" name="email">
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ATTACHES MULTIPLE EVENT HANDLERS
+
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("p").on({
+        mouseenter: function(){
+            $(this).css("background-color", "lightgray");
+        },  
+        mouseleave: function(){
+            $(this).css("background-color", "lightblue");
+        }, 
+        click: function(){
+            $(this).css("background-color", "yellow");
+        }  
+    });
+});
+</script>
+</head>
+<body>
+
+<p>Click or move the mouse pointer over this paragraph.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// KEYPRESS INSIDE INPUT FIELD TO DISAPPEAR
+
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("input").keypress(function(){
+        $(this).hide();
+    });
+});
+</script>
+</head>
+<body>
+
+<input type="text" value="Press any key inside me to hide me" size="40">
+
+
+
+
+
+
+
+
+
+
+
+// HIDE-SHOW BUTTONS
+
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#hide").click(function(){
+        $("p").hide();
+    });
+    $("#show").click(function(){
+        $("p").show();
+    });
+});
+</script>
+</head>
+<body>
+
+<p>If you click on the "Hide" button, I will disappear.</p>
+
+<button id="hide">Hide</button>
+<button id="show">Show</button>
+
+
+
+
+
+
+
+
+
+
+
+
+// TOGGLE BUTTON
+
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $("p").toggle();
+    });
+});
+</script>
+</head>
+<body>
+
+<button>Toggle</button>
+
+<p>This is a paragraph with little content.</p>
+<p>This is another small paragraph.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+// FADE-IN EFFECT
+
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $("#div1").fadeIn();
+        $("#div2").fadeIn("slow");
+        $("#div3").fadeIn(3000);
+    });
+});
+</script>
+</head>
+<body>
+
+<p>Demonstrate fadeIn() with different parameters.</p>
+
+<button>Click to fade in boxes</button><br><br>
+
+<div id="div1" style="width:80px;height:80px;display:none;background-color:red;"></div><br>
+<div id="div2" style="width:80px;height:80px;display:none;background-color:green;"></div><br>
+<div id="div3" style="width:80px;height:80px;display:none;background-color:blue;"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// FADE-OUT EFFECT
+
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $("#div1").fadeOut();
+        $("#div2").fadeOut("slow");
+        $("#div3").fadeOut(3000);
+    });
+});
+</script>
+</head>
+<body>
+
+<p>Demonstrate fadeOut() with different parameters.</p>
+
+<button>Click to fade out boxes</button><br><br>
+
+<div id="div1" style="width:80px;height:80px;background-color:red;"></div><br>
+<div id="div2" style="width:80px;height:80px;background-color:green;"></div><br>
+<div id="div3" style="width:80px;height:80px;background-color:blue;"></div>
+
+
+
+
+
+
+
+
+
+// FADE IN/OUT TOGGLE
+
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $("#div1").fadeToggle();
+        $("#div2").fadeToggle("slow");
+        $("#div3").fadeToggle(3000);
+    });
+});
+</script>
+</head>
+<body>
+
+<p>Demonstrate fadeToggle() with different speed parameters.</p>
+
+<button>Click to fade in/out boxes</button><br><br>
+
+<div id="div1" style="width:80px;height:80px;background-color:red;"></div>
+<br>
+<div id="div2" style="width:80px;height:80px;background-color:green;"></div>
+<br>
+<div id="div3" style="width:80px;height:80px;background-color:blue;"></div>
+
+</body>
+
+
+
+
+
+
+
+
+
+// SLIDE DOWN
+
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+    $("#flip").click(function(){
+        $("#panel").slideDown("slow");
+    });
+});
+</script>
+ 
+<style> 
+#panel, #flip {
+    padding: 5px;
+    text-align: center;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;
+}
+
+#panel {
+    padding: 50px;
+    display: none;
+}
+</style>
+</head>
+<body>
+ 
+<div id="flip">Click to slide down panel</div>
+<div id="panel">Hello world!</div>
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+// SLIDE UP
+
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+    $("#flip").click(function(){
+        $("#panel").slideUp("slow");
+    });
+});
+</script>
+ 
+<style> 
+#panel, #flip {
+    padding: 5px;
+    text-align: center;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;
+}
+
+#panel {
+    padding: 50px;
+}
+</style>
+</head>
+<body>
+ 
+<div id="flip">Click to slide up panel</div>
+<div id="panel">Hello world!</div>
+
+</body>
+
+
+
+
+
+
+
+
+
+// TOGGLE SLIDE
+
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+    $("#flip").click(function(){
+        $("#panel").slideToggle("slow");
+    });
+});
+</script>
+
+<style> 
+#panel, #flip {
+    padding: 5px;
+    text-align: center;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;
+}
+
+#panel {
+    padding: 50px;
+    display: none;
+}
+</style>
+</head>
+<body>
+ 
+<div id="flip">Click to slide the panel down or up</div>
+<div id="panel">Hello world!</div>
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+// ANIMATION (LEFT TO RIGHT)
+
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+    $("button").click(function(){
+        $("div").animate({left: '250px'});
+    });
+});
+</script> 
+</head>
+<body>
+
+<button>Start Animation</button>
+
+<p>By default, all HTML elements have a static position, and cannot be moved. To manipulate the position, remember to first set the CSS position property of the element to relative, fixed, or absolute!</p>
+
+<div style="background:#98bf21;height:100px;width:100px;position:absolute;"></div>
+
+</body>
+
+
+
+
+
+
+
+
+
+// ANIMATE (MULTIPLE PROPERTIES)
+
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+    $("button").click(function(){
+        $("div").animate({
+            left: '250px',
+            opacity: '0.5',
+            height: '150px',
+            width: '150px'
+        });
+    });
+});
+</script> 
+</head>
+<body>
+
+<button>Start Animation</button>
+
+<p>By default, all HTML elements have a static position, and cannot be moved. To manipulate the position, remember to first set the CSS position property of the element to relative, fixed, or absolute!</p>
+
+<div style="background:#98bf21;height:100px;width:100px;position:absolute;"></div>
+
+</body>
+
+
+
+
+
+
+
+
+
+
+// ANIMATE WITH RELATIVE VALUES
+
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+    $("button").click(function(){
+        $("div").animate({
+            left: '250px',
+            height: '+=150px',
+            width: '+=150px'
+        });
+    });
+});
+</script> 
+</head>
+<body>
+
+<button>Start Animation</button>
+
+<p>By default, all HTML elements have a static position, and cannot be moved. To manipulate the position, remember to first set the CSS position property of the element to relative, fixed, or absolute!</p>
+
+<div style="background:#98bf21;height:100px;width:100px;position:absolute;"></div>
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+// ANIMATION QUEUE
+
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+    $("button").click(function(){
+        var div = $("div");
+        div.animate({height: '300px', opacity: '0.4'}, "slow");
+        div.animate({width: '300px', opacity: '0.8'}, "slow");
+        div.animate({height: '100px', opacity: '0.4'}, "slow");
+        div.animate({width: '100px', opacity: '0.8'}, "slow");
+    });
+});
+</script> 
+</head>
+<body>
+
+<button>Start Animation</button>
+
+<p>By default, all HTML elements have a static position, and cannot be moved. To manipulate the position, remember to first set the CSS position property of the element to relative, fixed, or absolute!</p>
+
+<div style="background:#98bf21;height:100px;width:100px;position:absolute;"></div>
+
+</body>
