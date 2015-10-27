@@ -6,22 +6,18 @@
     font-family: HkgroteskBold;
     src: url('fonts/HKGrotesk-Bold.otf');
 }
-html{
-	height: 100%;
-    margin: 0;
-    margin-top: 0;
-}
 body {
     font-family: "Hkgrotesk";
     text-rendering: optimizeSpeed;
-    height: 100%;    background-color:#f4f4f4;
+     background-color:#f4f4f4;
     margin: 0;
     margin-top: 0;
     font-size: 14px;
+    height: 100%;
+
 }
 
 #wrap{
-  min-height:100%;
     margin: 0;
     margin-top: 0;
         overflow-y: hidden;
@@ -41,7 +37,8 @@ body {
     padding:2px; 
     cursor: pointer;
         line-height: 2em;
-    background-color: white;
+    background-color: #00ffa7;
+    box-shadow: 4px 4px 2px rgba(128, 128, 128, 0.5);
 
 }
 .button:hover{
@@ -50,11 +47,14 @@ body {
 }
 
 .off {
-    background-color: white; 
+    background-color:#00ffa7; 
+
 }
 .on {
     background-color: #dddddd;  
-
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
 }
 
 .menu-tags{
@@ -119,51 +119,135 @@ section.range-slider input:last-of-type::-moz-range-track {
   border: 0;
 }
 
-/* Forms (Author, Title, Editor) */
+/* Forms (Author, Title, Keyword, Editor) */
 
 .menu-form{
     margin-top: 0px;
+     background-color:#f4f4f4;
+}
+
+.menu-form input{
+    width: 230px;
+    margin-bottom: 8px;
+    font-size: 15px;
+    font-family: "Hkgrotesk";
+    border-style: none;
+    border-bottom: 1px dashed black;
+    color: black;
+    padding: 0;
+    background-color:#f4f4f4;
 }
 
 input{
+    width: auto;
+    border:0px;
+}
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    padding: 0;
+    margin: 0;
     width: 230px;
-    margin-bottom: 10px;
-    font-size: 50px;
-    font-family: "Hkgrotesk";
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    padding: 0;
+    margin: 0;
+    width: 230px;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    padding: 0;
+    margin: 0;
+    width: 230px;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    padding: 0;
+    margin: 0;
+        width: 230px;
 }
 
-/*********************
-06. HEADER STYLES
+input[type="search" i] {
+    -webkit-appearance: searchfield;
+    box-sizing: border-box;
+}
+user agent stylesheetinput {
+    -webkit-appearance: textfield;
+    padding: 0px;
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    -webkit-rtl-ordering: logical;
+    -webkit-user-select: text;
+    cursor: auto;
+}
+user agent stylesheetinput, textarea, keygen, select, button {
+    margin: 0em;
+    font: 51px BlinkMacSystemFont;
+    text-rendering: auto;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+
+}
+user agent stylesheetinput, textarea, keygen, select, button, meter, progress {
+    -webkit-writing-mode: horizontal-tb;
+}
+  /*********************
+HEADER STYLES
 *********************/
-.header {
-  position:fixed;
-  width: 100%;
-  background-color: #ffffff;
-  border-bottom: 1px solid #f4f4f4;
-height: 80px;
-    margin: 0;
+  .header #inner-header {
+    height: 60px;
+background: rgba(255,255,255,1);
+background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 74%, rgba(246,246,246,1) 95%, rgba(244,244,244,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(74%, rgba(255,255,255,1)), color-stop(95%, rgba(246,246,246,1)), color-stop(100%, rgba(244,244,244,1)));
+background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 74%, rgba(246,246,246,1) 95%, rgba(244,244,244,1) 100%);
+background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 74%, rgba(246,246,246,1) 95%, rgba(244,244,244,1) 100%);
+background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 74%, rgba(246,246,246,1) 95%, rgba(244,244,244,1) 100%);
+background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 74%, rgba(246,246,246,1) 95%, rgba(244,244,244,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f4f4f4', GradientType=0 );      width: 100%;
+  }
+  .header #inner-header #logo a img {
+    height: 50px;
+    margin-bottom: 10px;
+  }
+  .header #inner-header #search input {
+    width: 240px;
+    height: 33px;
+    margin-top: 18px;
+    background-position: 95% center;
+    background-size: 18px;
+  }
+p {
+    display: block;
+    -webkit-margin-before: 0px;
+    -webkit-margin-after: 0px;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
 }
 
 #container{
-    height: 100%;
     margin-left: 4%;
     margin-right: 4%;
     margin-top: 0px;
         overflow-x:hidden;
     position: absolute;
-
 }
 #menu{
     width: 300px;
     float: left;
     position:fixed;
-    margin-top:100px;
+    margin-top:0px;
 }
 #content{
-height: 100%;
     width: 80%;
 margin: 0;
     margin-left: 300px;
+    clear:left;
+
 }
 
 /*********************
@@ -177,20 +261,23 @@ div.publication div.cover {
 }
 .publication{
     width: 24%;
-    max-height: 800px;
+    height: 400px;
+    margin: 20px;
     float: left;
-    margin: 1.5%;
-    position: relative;
     font-size: 0.9em;
-    word-break: break-word;
     padding: 1em 1em 0.5em 1em;
+    overflow: scroll;
+}
+.publication .entry{
 }
 .publication:hover{
-    background-color: white;
-    border: 1px solid #ff3300;
+    background-color: #fcfcfc;
+    box-shadow: 4px 4px 2px rgba(128, 128, 128, 0.5);
+    border-radius: 10px;
+
 }
 .publication:hover img{
-        border:2px solid white;
+    border: 1px solid #d1d1d1;
 }
 
 .cover{
@@ -200,7 +287,14 @@ div.publication div.cover {
     width: auto;
     height: 220px;
 }
-
+.pub-title{
+    font-size: 15px;
+    line-height: 1.3em;
+}
+.publication a{
+        color: black;
+    text-decoration: none;
+}
 /************* FOOTER ***************/
 
 #footer{

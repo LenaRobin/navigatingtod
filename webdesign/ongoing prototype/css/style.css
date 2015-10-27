@@ -150,6 +150,8 @@ b{
 /************* test ***************/
 
 .section {
+    color: black;
+    
 background: rgba(255,255,255,1);
 background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 10%, rgba(199,199,199,1) 40%, rgba(173,173,173,1) 50%, rgba(199,199,199,1) 60%, rgba(255,255,255,1) 90%, rgba(255,255,255,1) 100%);
 background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(10%, rgba(255,255,255,1)), color-stop(40%, rgba(199,199,199,1)), color-stop(50%, rgba(173,173,173,1)), color-stop(60%, rgba(199,199,199,1)), color-stop(90%, rgba(255,255,255,1)), color-stop(100%, rgba(255,255,255,1)));
@@ -411,21 +413,57 @@ input:hover{
 }
 
 /************* MENU ***************/
+
+
+/* test */
+.menu-below hr{
+        margin-top: 10px;
+}
+.menu-below:hover hr{
+        margin-top: 60px;
+}
+.button-menu-below{
+    margin-right: 100px;
+    position: relative;
+    float: left;
+}
+.text-share{
+    display: block;
+    margin: 0;
+}             
+#hover-button{
+   display: none;
+    position: absolute;
+}
+.menu-below:hover #hover-button{
+    display:block; 
+    margin: 0;
+}
+.menu-below:hover .button-menu-below{
+    margin-right: 100px;
+}
+.hover-button{
+    text-decoration: none;
+}
+
+
+
 .pushmenu { /* this is the nav that is hidden */
-  width: 700px;
+  width: 45%;
   height: 100%;
   top: 0;
   position:fixed;
-    background-color: white;
+     background-color:#f4f4f4;
     overflow-x: hidden;
-
 }
+
 #book-info{
     margin-bottom: 20px;
 }
 #book-toc{
     margin-left: 10px;
     margin-right: 5px;
+    margin-top: 0px;
   /*  height: 400px;
     border-bottom: 1px solid black;
     overflow-y: scroll;*/
@@ -438,16 +476,32 @@ input:hover{
     font-size: 14px;
     margin-left: 10px;
 }
-.button{
-    background-color: #cecece;
+.button, .hover-button{
     border-radius: 5px;
     padding:2px; 
     cursor: pointer;
+        line-height: 2em;
+    background-color: #dddddd;  
 }
-.button:hover{
+.button a, .hover-button{
+    text-decoration: none;
+}
+.button:hover, .button a:hover, .hover-button:hover, .hover-button a:hover{
     margin-left:1px;
-    margin-top: 3px;
+    margin-top:1px;
+    color: black;
+
 }
+.button a:active{
+    box-shadow: 4px 4px 2px rgba(128, 128, 128, 0.5);
+    color: black;
+
+    border-radius: 5px;
+    padding:2px; 
+}
+
+
+
 #credit{
     margin-top: 40px;
     margin-bottom: 0px;
@@ -486,7 +540,6 @@ input:hover{
   height: auto;
     text-decoration: none;
 font-weight: normal;
-    border:1px solid black;
 /* border-width:1px;
  border-style:solid;
  border-color:black;
@@ -508,44 +561,39 @@ font-weight: normal;
 
 }
 
-.pushmenu a {
-  display: block; /* drops the nav vertically*/
- /* border-top: 1px solid #ffffff;
-  border-bottom: 1px solid #e5e5e5;*/
-  text-decoration:none;
-}
 .pushmenu h2:hover{
   background:#ededed;
+}
+.pushmenu h3 a{
+      text-decoration:none;
+
 }
 .pushmenu h3:hover{
   background:#ededed;
 }
 
-.pushmenu a:active {
-color:#ff3300;
-}
 
-.pushmenu-left {
-  left: -700px;
+.pushmenu-left, .pushmenu-left2 {
+  left: -45%;
     overflow-y:scroll;
 }
 
-.pushmenu-left.pushmenu-open {
-  left: 32px;  
+.pushmenu-left.pushmenu-open, .pushmenu-left2.pushmenu-open {
+  left: 22px;  
     border-right: solid 1px black;
 -webkit-box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
 -moz-box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
 box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
 }
 
-.pushmenu-push {
+.pushmenu-push, .pushmenu-push2 {
   overflow-x: hidden;
   position: relative;
   left: 0;
 }
 
 .pushmenu-push-toright {
-  left: 700px;
+  left: 45%;
 }
 
 /*Transition*/
