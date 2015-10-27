@@ -17,14 +17,14 @@ body {
     height: 100%;    background-color:#f4f4f4;
     margin: 0;
     margin-top: 0;
-
+    font-size: 14px;
 }
 
 #wrap{
   min-height:100%;
-  position: relative;
     margin: 0;
     margin-top: 0;
+        overflow-y: hidden;
 
 }
 
@@ -37,34 +37,45 @@ body {
 
 /* Tags */
 .button{
-    background-color: #cecece;
     border-radius: 5px;
     padding:2px; 
     cursor: pointer;
         line-height: 2em;
-}
+    background-color: white;
 
+}
 .button:hover{
     margin-left:1px;
-    margin-top: 3px;
+    margin-top:1px;
+}
+
+.off {
+    background-color: white; 
+}
+.on {
+    background-color: #dddddd;  
+
 }
 
 .menu-tags{
-    margin-top: 100px;
+    margin-top: 20px;
     width: 250px;
 }
 
 /* Date */
+.menu-date{
+    margin-top:20px;
+}
 section.range-slider {
-    position: relative;
     width: 150px;
     height: 35px;
     text-align: center;
+        position: relative;
+
 }
 
 section.range-slider input {
     pointer-events: none;
-    position: absolute;
     overflow: hidden;
     left: 0;
     top: 15px;
@@ -73,6 +84,8 @@ section.range-slider input {
     height: 18px;
     margin: 0;
     padding: 0;
+        position: absolute;
+
 }
 
 section.range-slider input::-webkit-slider-thumb {
@@ -108,8 +121,8 @@ section.range-slider input:last-of-type::-moz-range-track {
 
 /* Forms (Author, Title, Editor) */
 
-.form{
-    margin-top: 50px;
+.menu-form{
+    margin-top: 0px;
 }
 
 input{
@@ -123,46 +136,69 @@ input{
 06. HEADER STYLES
 *********************/
 .header {
-  position: relative;
+  position:fixed;
   width: 100%;
   background-color: #ffffff;
   border-bottom: 1px solid #f4f4f4;
-height: 200px;
+height: 80px;
     margin: 0;
 }
 
 #container{
     height: 100%;
-    margin-left: 10%;
-  position: relative;
-    margin-top: 200px;
-    background-color:#f4f4f4;
-    
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-top: 0px;
+        overflow-x:hidden;
+    position: absolute;
+
 }
 #menu{
     width: 300px;
     float: left;
+    position:fixed;
+    margin-top:100px;
 }
 #content{
 height: 100%;
-    max-width: 1000px;
-    background-color:#f4f4f4;
+    width: 80%;
+margin: 0;
     margin-left: 300px;
-position: relative;
 }
 
 /*********************
 06. BOOKS SELECTION
 *********************/
-
-.publication{
-    width: 240px;
-    height: 400px;
-    float: left;
+div.publication div.cover {
+    height: 270px;
+    text-align: center;
+    padding-top: 10px;
     position: relative;
+}
+.publication{
+    width: 24%;
+    max-height: 800px;
+    float: left;
+    margin: 1.5%;
+    position: relative;
+    font-size: 0.9em;
+    word-break: break-word;
+    padding: 1em 1em 0.5em 1em;
 }
 .publication:hover{
     background-color: white;
+    border: 1px solid #ff3300;
+}
+.publication:hover img{
+        border:2px solid white;
+}
+
+.cover{
+    text-align: center;
+}
+.publication img{
+    width: auto;
+    height: 220px;
 }
 
 /************* FOOTER ***************/

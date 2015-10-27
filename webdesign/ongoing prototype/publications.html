@@ -7,15 +7,16 @@
 	<link href="css/style-publications.css" rel="stylesheet">
 	<script src="http://code.jquery.com/jquery-1.7.2.js">
 	</script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript">
-	</script>
+        
 	<script src="http://static.tumblr.com/lthqlys/Jpjnlgpb1/jquery.localscroll.js" type="text/javascript">
 	</script>
 	<script src="http://static.tumblr.com/lthqlys/QL2nlgpbm/jquery.scrollto.js" type="text/javascript">
 	</script>
-	
-	
-	
+	<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+
+	<script src="https://code.jquery.com/ui/1.8.18/jquery-ui.min.js"></script>
+<!-----
+------- DATE RANGE ----->
 	
 <script>
  function getVals(){
@@ -46,10 +47,31 @@ window.onload = function(){
       }
 }
   </script>
-<!--	<script src="http://static.tumblr.com/lthqlys/slCnlgpc9/lancement.js" type="text/javascript">
-	</script> -->
-
-<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+ 
+                 
+ <!-----
+------- BUTTONS/TAGS ----->   
+<script type="text/javascript">
+    $(function() {
+    $(".button").attr('checked', true)
+      .addClass('off')
+      .button('widget')
+      .addClass('on');        
+  
+      $('.button').on('click', function(){                
+                if($(this).is(':checked')){
+                    $(this).button();
+                } else {
+                    $(this).button();
+                }
+                $(this).button('widget').toggleClass('on off');
+        });
+        
+});                            
+</script>  
+ 
+ 
+ 
 
 	<title>INC Publications</title>
 </head>
@@ -58,7 +80,7 @@ window.onload = function(){
 
 <div id="wrap">
 
-<!----- HEADER ----->
+<!----- HEADER 
 <div class="header">
 					<p id="logo">
 						<a href="http://networkcultures.org" rel="nofollow">
@@ -67,63 +89,256 @@ window.onload = function(){
 				
 			</div>
 			
-			
+	----->		
 
 <div id="container">
 <div id="menu">
+<div class="menu-form">
+    <input type="search" placeholder="Author" name="the_search">
+    <input type="search" placeholder="Title" name="the_search">
+    <input type="search" placeholder="Editor" name="the_search">
+</div>
+<div class="menu-date">
 <section class="range-slider">
   <span class="rangeValues"></span>
   <input value="1980" min="1970" max="2015" step="1" type="range">
   <input value="2010" min="1970" max="2015" step="1" type="range">
 </section>
+</div>
 <div class="menu-tags">
-<span class="button">Capital</span> <span class="button">Economics</span> <span class="button">Gray</span> <span class="button">Net</span> <span class="button">Game</span> <span class="button">Internet</span> <span class="button">Design</span> <span class="button">Reading</span> <span class="button">Creativity</span> <span class="button">Critical</span> <span class="button">20th</span> <span class="button">Web</span> <span class="button">Culture</span> <span class="button">Networks</span> <span class="button">Social</span> <span class="button">Media</span>
+Tags<br>
+<span class="button">Capital</span> <span class="button">Economics</span> <span class="button">Gray</span> <span class="button">Net</span> <span class="button">Game</span> <span class="button">Internet</span> <span class="button">Design</span> <span class="button">Reading</span> <span class="button">Creativity</span> <span class="button">Critical</span> <span class="button">20th</span> <span class="button">Web</span> <span class="button">Culture</span> <span class="button">Networks</span> <span class="button">Social</span> <span class="button">Media</span><br><br>
+Collection<br>
+<span class="button">INC Readers</span> <span class="button">Network Notebooks</span> <span class="button">Theory on Demand</span> <span class="button">EPUB</span> <span class="button">INC Longforms</span> <span class="button">Geert Lovink's books</span> <span class="button">Studies in Network Cultures</span> <span class="button">Conference Reports</span>
+
+
 </div>
-<div class="form">
-    <input type="search" placeholder="Author" name="the_search">
-    <input type="search" placeholder="Title" name="the_search">
-    <input type="search" placeholder="Editor" name="the_search">
-</div>
+
+
 </div>
 
 
 
 <div id="content">
-    choix 1<br>
-    choix 2<br>    choix 1<br>
-    choix 2<br>    choix 1<br>
-    choix 2<br>    choix 1<br>
-    choix 2<br>    choix 1<br>
-    choix 2<br>    choix 1<br>
-    choix 2<br>    choix 1<br>
-    choix 2<br>    choix 1<br>
-    choix 2<br>     choix 1<br>
-    choix 2<br>    choix 1<br>
-    choix 2<br>    choix 1<br>
-    choix 2<br>    choix 1<br>
-    choix 2<br>    choix 1<br>
-    choix 2<br>    choix 1<br>
-    choix 2<br>    choix 1<br>
-    choix 2<br>    choix 1<br>
-    choix 2<br>     choix 1<br>
-    choix 2<br>    choix 1<br>
-    choix 2<br>    choix 1<br>
-    choix 2<br>    choix 1<br>
-    choix 2<br>    choix 1<br>
-    choix 2<br>    choix 1<br>
-    choix 2<br>    choix 1<br>
-    choix 2<br>    choix 1<br>
-    choix 2<br>
     
-<div class="publication">Title 1</div>      
-<div class="publication">Title 2</div>      
-<div class="publication">Title 3</div>      
-<div class="publication">Title 4</div>      
+<div class="publication">
+        <a href="http://networkcultures.org/blog/publication/no-10-the-internet-revolution-from-dot-com-capitalism-to-cybernetica-communism-by-richard-barbrook-with-andy-cameron/">
+        <div class="cover"><img src="http://networkcultures.org/wp-content/uploads/2015/10/0585-INC_NN10-OS-04-def-copy-front-page-copy.jpg" /></div>
+        </a>
+<div class="entry">
+<p class="categories">EPUB, Network Notebooks</p>
+<p class="pub-title"><a href="http://networkcultures.org/blog/publication/no-10-the-internet-revolution-from-dot-com-capitalism-to-cybernetica-communism-by-richard-barbrook-with-andy-cameron/">No. 10: The Internet Revolution: From Dot-com Capitalism to Cybernetica Communism by Richard Barbrook, with Andy Cameron</a>
+</p>
+Author: Richard Barbrook with Andy Cameron. Network Notebook editors: Geert Lovink and Miriam Rasch. Design: Medamo, Rotterdam. EPUB development: André Castro. Printer: Printvisie. Publisher: Institute of Network Cultures, Amsterdam 2015. ISBN: 978-94-92302-02-1. |
+<a href="http://issuu.com/instituteofnetworkcultures/docs/0585_inc_nn_10_totaal_rgb/1">Download PDF</a>
+</p>
+</div>
+</div> 
+
+<div  id="publication-6431" class="publication">
+        <a href="http://networkcultures.org/blog/publication/no-16-online-courtship-interpersonal-interactions-across-borders/">
+        <div class="cover"><img src="http://networkcultures.org/wp-content/uploads/2015/07/cover.png" />
+			                </div>
+			            </a>
+						<div class="entry">
+							<p class="categories">
+			                Theory on Demand, Theory on Demand			                </p>
+							<p class="pub-title">
+							     <a href="http://networkcultures.org/blog/publication/no-16-online-courtship-interpersonal-interactions-across-borders/">No. 16: Online Courtship &#8211; Interpersonal Interactions Across Borders</a>
+							</p>
+				                Editors: I. Alev Degim, James Johnson & Tao Fu. Copy-editing and design: Jess van Zyl. Printer: ‘Print on Demand’. Publisher: Institute of Network Cultures, Amsterdam 2015. ISBN: 978-90-822345-7-2. |
+				                							</p>
+						</div>
+<!--
+						<div class="info">
+			                <p>
+			                    <span>Info: </span>Editors: I. Alev Degim, James Johnson & Tao Fu. Copy-editing and design: Jess van Zyl. Printer: ‘Print on Demand’. Publisher: Institute of Network Cultures, Amsterdam 2015. ISBN: 978-90-822345-7-2.			                </p>
+						</div>
+						<div class="download">
+						     						</div>
+-->
+					</div>
+								        			        <div  id="publication-6338" class="publication">
+			            <a href="http://networkcultures.org/blog/publication/no-15-in-the-facebook-aquarium-the-resistible-rise-of-anarcho-capitalism-ippolita/">
+			                <div class="cover">
+			                    <img src="http://networkcultures.org/wp-content/uploads/2015/06/TOD15_cover.png" />
+			                </div>
+			            </a>
+						<div class="entry">
+							<p class="categories">
+			                EPUB, Theory on Demand, Theory on Demand			                </p>
+							<p class="pub-title">
+							     <a href="http://networkcultures.org/blog/publication/no-15-in-the-facebook-aquarium-the-resistible-rise-of-anarcho-capitalism-ippolita/">No. 15: In the Facebook Aquarium: The Resistible Rise of Anarcho-Capitalism, Ippolita</a>
+							</p>
+				                Author: Ippolita. Design: Katja van Stiphout. Copy-editing: Matt Beros. Printer: ‘Print on Demand’. Publisher: Institute of Network Cultures, Amsterdam 2015. ISBN: 978-94-92302-00-7 |
+				                							</p>
+						</div>
+<!--
+						<div class="info">
+			                <p>
+			                    <span>Info: </span>Author: Ippolita. Design: Katja van Stiphout. Copy-editing: Matt Beros. Printer: ‘Print on Demand’. Publisher: Institute of Network Cultures, Amsterdam 2015. ISBN: 978-94-92302-00-7			                </p>
+						</div>
+						<div class="download">
+						     						</div>
+-->
+					</div>
+								        			        <div  id="publication-6198" class="publication">
+			            <a href="http://networkcultures.org/blog/publication/moneylab-reader-an-intervention-in-digital-economy/">
+			                <div class="cover">
+			                    <img src="http://networkcultures.org/wp-content/uploads/2015/04/Screen-Shot-2015-02-19-at-09.54.03.png" />
+			                </div>
+			            </a>
+						<div class="entry">
+							<p class="categories">
+			                EPUB, INC Reader			                </p>
+							<p class="pub-title">
+							     <a href="http://networkcultures.org/blog/publication/moneylab-reader-an-intervention-in-digital-economy/">MoneyLab Reader: An Intervention in Digital Economy</a>
+							</p>
+				                Geert Lovink, Nathaniel Tkacz, and Patricia de Vries (eds), MoneyLab Reader: An Intervention in Digital Economy, Amsterdam: Institute of Network Cultures, 2015. ISBN: 978-90-822345-5-8. |
+				                							</p>
+						</div>
+<!--
+						<div class="info">
+			                <p>
+			                    <span>Info: </span>Geert Lovink, Nathaniel Tkacz, and Patricia de Vries (eds), MoneyLab Reader: An Intervention in Digital Economy, Amsterdam: Institute of Network Cultures, 2015. ISBN: 978-90-822345-5-8.			                </p>
+						</div>
+						<div class="download">
+						     						</div>
+-->
+					</div>
+								        			        <div  id="publication-6070" class="publication">
+			            <a href="http://networkcultures.org/blog/publication/no-09-digital-tailspin-ten-rules-for-the-internet-after-snowden-michael-seemann/">
+			                <div class="cover">
+			                    <img src="http://networkcultures.org/wp-content/uploads/2015/03/NN09_klein.png" />
+			                </div>
+			            </a>
+						<div class="entry">
+							<p class="categories">
+			                EPUB, Network Notebooks			                </p>
+							<p class="pub-title">
+							     <a href="http://networkcultures.org/blog/publication/no-09-digital-tailspin-ten-rules-for-the-internet-after-snowden-michael-seemann/">No. 09: Digital Tailspin: Ten Rules for the Internet After Snowden, Michael Seemann</a>
+							</p>
+				                Michael Seemann, Digital Tailspin: Ten Rules for the Internet After Snowden. Network Notebooks 09, Institute of Network Cultures, Amsterdam, 2015. ISBN 978-90-822345-8-9. |
+				                							</p>
+						</div>
+<!--
+						<div class="info">
+			                <p>
+			                    <span>Info: </span>Michael Seemann, Digital Tailspin: Ten Rules for the Internet After Snowden. Network Notebooks 09, Institute of Network Cultures, Amsterdam, 2015. ISBN 978-90-822345-8-9.			                </p>
+						</div>
+						<div class="download">
+						     						</div>
+-->
+					</div>
+								        			        <div  id="publication-6075" class="publication">
+			            <a href="http://networkcultures.org/blog/publication/digital-publishing-toolkit-the-blog-posts/">
+			                <div class="cover">
+			                    <img src="http://networkcultures.org/wp-content/uploads/2015/02/0419-HVA_DPT_from_print_to_ebooks_OS_blog_aanp.jpg" />
+			                </div>
+			            </a>
+						<div class="entry">
+							<p class="categories">
+			                EPUB, Miscellanea			                </p>
+							<p class="pub-title">
+							     <a href="http://networkcultures.org/blog/publication/digital-publishing-toolkit-the-blog-posts/">Digital Publishing Toolkit: The Blog Posts</a>
+							</p>
+				                Digital Publishing Toolkit: the Blog Posts is a collection of all the blog posts of the Digital Publishing Toolkit blog. This EPUB consists of texts, images and links to video files. It includes reflections, reports and tools. The blog posts are arranged in reverse chronological order, with the exception of the earliest post, as we thought it would be most appropriate to begin the collection with the original first post |
+				                							</p>
+						</div>
+<!--
+						<div class="info">
+			                <p>
+			                    <span>Info: </span>Digital Publishing Toolkit: the Blog Posts is a collection of all the blog posts of the Digital Publishing Toolkit blog. This EPUB consists of texts, images and links to video files. It includes reflections, reports and tools. The blog posts are arranged in reverse chronological order, with the exception of the earliest post, as we thought it would be most appropriate to begin the collection with the original first post			                </p>
+						</div>
+						<div class="download">
+						     						</div>
+-->
+					</div>
+								        			        <div  id="publication-5932" class="publication">
+			            <a href="http://networkcultures.org/blog/publication/from-print-to-ebooks-a-hybrid-publishing-toolkit-for-the-arts/">
+			                <div class="cover">
+			                    <img src="http://networkcultures.org/wp-content/uploads/2014/12/0419-HVA_DPT_from_print_to_ebooks_OS_epub.png" />
+			                </div>
+			            </a>
+						<div class="entry">
+							<p class="categories">
+			                EPUB, Miscellanea			                </p>
+							<p class="pub-title">
+							     <a href="http://networkcultures.org/blog/publication/from-print-to-ebooks-a-hybrid-publishing-toolkit-for-the-arts/">From Print to Ebooks: a Hybrid Publishing Toolkit for the Arts</a>
+							</p>
+				                This Toolkit is meant for everyone working in art and design publishing. No specific expertise of digital technology, or indeed traditional publishing technology, is required. The Toolkit provides hands-on practical advice and tools, focusing on working solutions for low-budget, small-edition publishing. |
+				                							</p>
+						</div>
+<!--
+						<div class="info">
+			                <p>
+			                    <span>Info: </span>This Toolkit is meant for everyone working in art and design publishing. No specific expertise of digital technology, or indeed traditional publishing technology, is required. The Toolkit provides hands-on practical advice and tools, focusing on working solutions for low-budget, small-edition publishing.			                </p>
+						</div>
+						<div class="download">
+						     						</div>
+-->
+					</div>
+								        			        <div  id="publication-5766" class="publication">
+			            <a href="http://networkcultures.org/blog/publication/the-volkskrant-building-manufacturing-difference-in-amsterdams-creative-city-boukje-cnossen-and-sebastian-olma/">
+			                <div class="cover">
+			                    <img src="http://networkcultures.org/wp-content/uploads/2014/11/Cover_Volkskrantgebouw.jpg" />
+			                </div>
+			            </a>
+						<div class="entry">
+							<p class="categories">
+			                EPUB, Miscellanea			                </p>
+							<p class="pub-title">
+							     <a href="http://networkcultures.org/blog/publication/the-volkskrant-building-manufacturing-difference-in-amsterdams-creative-city-boukje-cnossen-and-sebastian-olma/">The Volkskrant Building: Manufacturing Difference in Amsterdam&#8217;s Creative City, Boukje Cnossen and Sebastian Olma</a>
+							</p>
+				                Boukje Cnossen and Sebastian Olma, The Volkskrant Building: Manufacturing Difference in Amsterdam's Creative City. ISBN 978-94-92171-00-9 (print), ISBN 978-94-92171-01-6 (epub). Publisher: Amsterdam Creative Industries Publishing. |
+				                							</p>
+						</div>
+<!--
+						<div class="info">
+			                <p>
+			                    <span>Info: </span>Boukje Cnossen and Sebastian Olma, The Volkskrant Building: Manufacturing Difference in Amsterdam's Creative City. ISBN 978-94-92171-00-9 (print), ISBN 978-94-92171-01-6 (epub). Publisher: Amsterdam Creative Industries Publishing.			                </p>
+						</div>
+						<div class="download">
+						     						</div>
+-->
+					</div>
+								        			        <div  id="publication-5660" class="publication">
+			            <a href="http://networkcultures.org/blog/publication/no-08-the-allure-of-the-selfie-instagram-and-the-new-self-portrait-brooke-wendt/">
+			                <div class="cover">
+			                    <img src="http://networkcultures.org/wp-content/uploads/2014/10/Allure_vk.jpg" />
+			                </div>
+			            </a>
+						<div class="entry">
+							<p class="categories">
+			                EPUB, Network Notebooks			                </p>
+							<p class="pub-title">
+							     <a href="http://networkcultures.org/blog/publication/no-08-the-allure-of-the-selfie-instagram-and-the-new-self-portrait-brooke-wendt/">No. 08: The Allure of the Selfie: Instagram and the New Self Portrait, Brooke Wendt</a>
+							</p>
+				                Brooke Wendt, The Allure of the Selfie: Instagram and the New Self Portrait. Network Notebooks 08, Institute of Network Cultures, Amsterdam, 2014. ISBN 978-90-822345-1-0. |
+				                							</p>
+						</div>
+<!--
+						<div class="info">
+			                <p>
+			                    <span>Info: </span>Brooke Wendt, The Allure of the Selfie: Instagram and the New Self Portrait. Network Notebooks 08, Institute of Network Cultures, Amsterdam, 2014. ISBN 978-90-822345-1-0.			                </p>
+						</div>
+						<div class="download">
+						     						</div>
+-->
+					</div>    
+        
+            
+                
+                    
+                        
+                            
+                                
+                                        
 </div>
 
 </div>
 
-<!----- FOOTER ----->
+<!----- FOOTER 
 <div id="pre-footer"></div>
 <div id="footer">
     <div class="hva"></div>
@@ -132,10 +347,16 @@ window.onload = function(){
 					2015</div>
     <div class="footer-column"></div>
     </div>	
-   
+   ----->
     
      
-</div>       
+</div> 
+
+      
+            
+                  
+                                         
+                                                
 </body>
 
 </html>
