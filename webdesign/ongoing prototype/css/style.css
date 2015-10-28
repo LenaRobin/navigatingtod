@@ -415,12 +415,15 @@ input:hover{
 /************* MENU ***************/
 
 
-/* test */
+/* PRINT / SHARE / FILES */
+.menu-below{
+    padding-left: 20px;
+}
 .menu-below hr{
-        margin-top: 10px;
+        margin-top: 5px;
 }
 .menu-below:hover hr{
-        margin-top: 60px;
+        margin-top: 160px;
 }
 .button-menu-below{
     margin-right: 100px;
@@ -438,15 +441,23 @@ input:hover{
 .menu-below:hover #hover-button{
     display:block; 
     margin: 0;
+        text-decoration: none;
+
 }
 .menu-below:hover .button-menu-below{
     margin-right: 100px;
+        text-decoration: none;
+
 }
 .hover-button{
     text-decoration: none;
 }
+.menu-below .button-menu-below a{
+        text-decoration: none;
+    font-size: 14px;
+}
 
-
+/* structure */
 
 .pushmenu { /* this is the nav that is hidden */
   width: 45%;
@@ -476,30 +487,6 @@ input:hover{
     font-size: 14px;
     margin-left: 10px;
 }
-.button, .hover-button{
-    border-radius: 5px;
-    padding:2px; 
-    cursor: pointer;
-        line-height: 2em;
-    background-color: #dddddd;  
-}
-.button a, .hover-button{
-    text-decoration: none;
-}
-.button:hover, .button a:hover, .hover-button:hover, .hover-button a:hover{
-    margin-left:1px;
-    margin-top:1px;
-    color: black;
-
-}
-.button a:active{
-    box-shadow: 4px 4px 2px rgba(128, 128, 128, 0.5);
-    color: black;
-
-    border-radius: 5px;
-    padding:2px; 
-}
-
 
 
 #credit{
@@ -521,13 +508,32 @@ input:hover{
     height: auto;
     background-color: none;
 }
-.pushmenu .title, .pushmenu .title a{
-    position: relative;
-    font-style: italic;
-    font-family: "Verdana";
-    padding-bottom: 0;
-    margin-bottom: 0;
+
+/* links style */
+
+.button, .hover-button{
+    border-radius: 5px;
+    padding:2px; 
+    cursor: pointer;
+        line-height: 2em;
+    background-color: #dddddd;  
 }
+.button a, .hover-button{
+    text-decoration: none;
+}
+.button:hover, .button a:hover, .hover-button:hover, .hover-button a:hover{
+    margin-left:1px;
+    margin-top:1px;
+    color: black;
+
+}
+.button a:active{
+    box-shadow: 4px 4px 2px rgba(128, 128, 128, 0.5);
+    color: black;
+    border-radius: 5px;
+    padding:2px; 
+}
+
 .pushmenu .date{
     font-size: 12px;
 }
@@ -538,6 +544,7 @@ input:hover{
     margin-top:10px;
     margin-right: 10px;
   height: auto;
+    width: auto;
     text-decoration: none;
 font-weight: normal;
 /* border-width:1px;
@@ -560,18 +567,17 @@ font-weight: normal;
     width: auto;
 
 }
-
-.pushmenu h2:hover{
-  background:#ededed;
-}
 .pushmenu h3 a{
-      text-decoration:none;
-
-}
-.pushmenu h3:hover{
-  background:#ededed;
+        text-decoration: none;
 }
 
+.pushmenu h2 a:hover, .pushmenu h3 a:hover{
+    border-radius: 5px;
+    padding:2px; 
+    background-color: #c1c1c1;
+    color: black;
+    text-decoration: none;
+}
 
 .pushmenu-left, .pushmenu-left2 {
   left: -45%;
@@ -630,7 +636,6 @@ vertical-align:middle;
 }
 
 #nav_list:hover{
-    color: yellow;
     border: 1px solid yellow;
 }
 
