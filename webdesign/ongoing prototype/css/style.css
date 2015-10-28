@@ -63,7 +63,6 @@ color:yellow;
 }
 
 
-
 /*
 ************ FIXED BAR *************
 
@@ -118,13 +117,6 @@ background-color: white;
     height: 400px; */
 }
 
-/*
-************ BOOTSTRAP *************
-*/
-
-.nav nav-tabs{
-    color: red;
-}
 /*
 ************ SUMMARY *************
 */
@@ -418,6 +410,9 @@ input:hover{
 /* PRINT / SHARE / FILES */
 .menu-below{
     padding-left: 20px;
+      -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 .menu-below hr{
         margin-top: 5px;
@@ -441,13 +436,13 @@ input:hover{
 .menu-below:hover #hover-button{
     display:block; 
     margin: 0;
-        text-decoration: none;
-
 }
 .menu-below:hover .button-menu-below{
     margin-right: 100px;
         text-decoration: none;
-
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 .hover-button{
     text-decoration: none;
@@ -460,11 +455,12 @@ input:hover{
 /* structure */
 
 .pushmenu { /* this is the nav that is hidden */
-  width: 45%;
+  width: 49%;
   height: 100%;
   top: 0;
   position:fixed;
      background-color:#f4f4f4;
+     /*background-color:#ffffff;*/
     overflow-x: hidden;
 }
 
@@ -472,7 +468,7 @@ input:hover{
     margin-bottom: 20px;
 }
 #book-toc{
-    margin-left: 10px;
+    margin-left: 20px;
     margin-right: 5px;
     margin-top: 0px;
   /*  height: 400px;
@@ -574,19 +570,25 @@ font-weight: normal;
 .pushmenu h2 a:hover, .pushmenu h3 a:hover{
     border-radius: 5px;
     padding:2px; 
-    background-color: #c1c1c1;
+    cursor: pointer;
     color: black;
-    text-decoration: none;
+        text-decoration: none;
 }
-
+.pushmenu h2 a:hover{
+    background-color: #ff9797;
+}
+.pushmenu h3 a:hover{
+    background-color: #dddddd;
+}
 .pushmenu-left, .pushmenu-left2 {
-  left: -45%;
+  left: -49%;
     overflow-y:scroll;
 }
 
 .pushmenu-left.pushmenu-open, .pushmenu-left2.pushmenu-open {
   left: 22px;  
-    border-right: solid 1px black;
+  /*  border-right: solid 1px black;*/
+    border-right: solid 0px black;
 -webkit-box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
 -moz-box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
 box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
@@ -599,9 +601,13 @@ box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
 }
 
 .pushmenu-push-toright {
-  left: 45%;
+  left: 49%;
 }
 
+.pushmenu a{
+        text-decoration: none;
+
+}
 /*Transition*/
 .pushmenu, .pushmenu-push {
   -webkit-transition: all 0.3s ease;
@@ -627,16 +633,18 @@ vertical-align:middle;
   line-height:normal;
   text-align:left;
     background-color:rgba(255, 255, 255, 0.2);
+        background: linear-gradient(rgba(0, 0, 0, 0.32) 50%, rgba(255, 255, 255, 0.12) 50%);
     color: black;
     border: solid 1px black;
     border-top: none;
     /* box-shadow: 0px -3px 15px 8px white;
     -webkit-box-shadow: 0px -3px 15px 8px white;
     -moz-box-shadow: 0px -3px 15px 8px white;*/
+    
 }
 
 #nav_list:hover{
-    border: 1px solid yellow;
+    border: 1px solid;
 }
 
 .close{

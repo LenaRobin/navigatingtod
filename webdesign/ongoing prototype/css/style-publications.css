@@ -37,7 +37,7 @@ body {
     padding:2px; 
     cursor: pointer;
         line-height: 2em;
-    background-color: #00ffa7;
+    background-color: #f7ff2c;
     box-shadow: 4px 4px 2px rgba(128, 128, 128, 0.5);
 
 }
@@ -47,8 +47,7 @@ body {
 }
 
 .off {
-    background-color:#00ffa7; 
-
+    background-color:#dddddd;
 }
 .on {
     background-color: #dddddd;  
