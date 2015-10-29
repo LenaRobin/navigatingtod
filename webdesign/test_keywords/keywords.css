@@ -1,0 +1,11 @@
+.keyword {
+	font-weight: bold !important;
+	font-family: "Baskerville";
+	border-radius: 20%;
+    background-color: #DEDEDE;
+    box-shadow:
+        0 0 80px 6px #BEBEBE, 
+        0 0 60px 9px #DEDEDE;
+}
+
+/*0 0 60px 30px #fff,  /* inner white */
