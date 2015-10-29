@@ -123,11 +123,11 @@ background-color: white;
 .summary{
     z-index: 99999;
     position: absolute;
-    font-size: 10px;
+    font-size: 14px;
     background-color: white;
-    width: 400px;
-    right:10px;
-    top:70px;
+    width: 30%;
+    top:20px;
+    left: 5%;
     padding: 10px;
     border:1px solid black;
 }
@@ -211,14 +211,31 @@ a{
 
 .keyword{
  /*   text-shadow: 2px 3px 20px black; */
-    background-color: yellow;
+    background-color: #b9b9b9;
     cursor: pointer;
     font-style: normal;
+        border-radius: 5px;
+    padding:2px; 
+    cursor: pointer;
+        line-height: 2em;
 }
 .keyword:hover{
     color: black;
     margin-left:1px;
-    margin-top: 3px;
+    font-style: italic;
+}
+.keyword-searched{
+ /*   text-shadow: 2px 3px 20px black; */
+    background-color: yellow;
+    cursor: pointer;
+    font-style: normal;
+        border-radius: 5px;
+    padding:2px; 
+    cursor: pointer;
+}
+.keyword-searched:hover{
+    color: black;
+    margin-left:1px;
     font-style: italic;
 }
 .section h2{
