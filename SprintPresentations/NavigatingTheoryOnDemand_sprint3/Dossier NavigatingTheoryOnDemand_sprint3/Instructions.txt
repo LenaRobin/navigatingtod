@@ -1,0 +1,96 @@
+INSTRUCTIONS D'IMPRESSION ADOBE INDESIGN POUR LE RAPPORT DU PRESTATAIRE DE SERVICES
+
+NOM DE LA COMPOSITION : NavigatingTheoryOnDemand_sprint3.indd
+
+DATE D'ASSEMBLAGE : 2/11/15 18:08
+Date de création : 2/11/15
+Date de modification : 2/11/15
+
+INFORMATIONS DE CONTACT
+
+Nom de la société : 
+Contact : 
+Adresse : 
+
+
+
+
+
+Téléphone : 
+Télécopie : 
+Adresse électronique : 
+
+INSTRUCTIONS SPECIALES ET AUTRES REMARQUES
+
+
+
+
+
+
+Modules externes 0
+Objets non opaques :Page6, 7, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 54, 55, 56, 57, 58, 59
+
+POLICES
+6 Police(s) utilisée(s); 0 Manquant(e)(s), 0 Incorporé(e)(s), 0 Incomplète(s), 0 Protégée(s)
+
+Polices non assemblées
+- Nom : Limousine; Type : TrueType, Etat : OK
+Polices assemblées
+- Nom : MinionPro-Regular; Type : OpenType Type 1, Etat : OK
+- Nom : OpenSans; Type : OpenType TrueType, Etat : OK
+- Nom : OpenSans-Italic; Type : OpenType TrueType, Etat : OK
+- Nom : OpenSans-Semibold; Type : OpenType TrueType, Etat : OK
+- Nom : UbuntuMono-Bold; Type : OpenType TrueType, Etat : OK
+
+
+COULEURS ET ENCRES
+4 Encre(s) quadri; 3 Encre(s) de tons directs, 3 Tons directs en double
+
+- Nom et type : Cyan quadri; Angle : 0,000; Lignes/pouce : 0,000
+- Nom et type : Magenta quadri; Angle : 0,000; Lignes/pouce : 0,000
+- Nom et type : Jaune quadri; Angle : 0,000; Lignes/pouce : 0,000
+- Nom et type : Noir quadri; Angle : 0,000; Lignes/pouce : 0,000
+- Nom et type : Nouvelle couleur; Angle : 0,000; Lignes/pouce : 0,000
+- Nom et type : Nouvelle couleur copie 10; Angle : 0,000; Lignes/pouce : 0,000
+- Nom et type : Nouvelle couleur copie 7; Angle : 0,000; Lignes/pouce : 0,000
+
+
+LIENS ET IMAGES
+(Liens manquants et incorporés uniquement)
+Liens et images : 53 Lien(s) détecté(s); 9 Modifié(s), 0 Manquant(e)(s) 0 Inaccessible
+Images : 0 Incorporé(e)(s), 46 utilisant l'espace colorimétrique RVB
+
+
+PARAMETRES D'IMPRESSION
+PPD : N/A, (HP Photosmart C4100 series)
+Impression sur : Imprimante
+Nombre de copies : 1
+Planches : Non
+Pages paires/impaires : Les deux
+Pages : Toutes
+Epreuve : Non
+Mosaïque : Sans
+Echelle : 100 %, 100 %
+Position de la page : En haut, à gauche
+Imprimer les calques : Calques visibles et imprimables
+Marques d'imprimeur : Sans
+Fond perdu : 0 mm, 0 mm, 0 mm, 0 mm
+Couleur : RVB composite
+Mode de recouvrement : Sans
+Envoi des données d'images : Echantillonnage optimisé
+Substitution d'image OPI/DCS : Non
+Format de page : A4
+Dimensions du papier : 210,005 mm x 297 mm
+Orientation : Portrait
+Négatif : Non
+Symétrie : Désactivée
+
+
+LISTE DES FICHIERS DE L'ENVOI
+
+1. NavigatingTheoryOnDemand_sprint3.indd; type : Composition Adobe InDesign; taille : 9656K
+2. MinionPro-Regular.otf; type : Fichier de polices; taille : 225K
+3. OpenSans-Regular.ttf; type : Fichier de polices; taille : 212K
+4. OpenSans-Italic.ttf; type : Fichier de polices; taille : 207K
+5. OpenSans-Semibold.ttf; type : Fichier de polices; taille : 216K
+6. UbuntuMono-B.ttf; type : Fichier de polices; taille : 186K
