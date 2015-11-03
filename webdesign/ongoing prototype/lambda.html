@@ -127,7 +127,7 @@
                 </div>
 				<!-- Table of Content -->
 				<div id="book-toc">Contents<nav class="nav nav-tabs" role="tablist">
-					<h2><a href="#the-gray-zones-of-creativity-and-capital">The Gray Zones of Creativity and Capital</a></h2>
+					<div id="book-toc-link"><h2><a href="#the-gray-zones-of-creativity-and-capital">The Gray Zones of Creativity and Capital</a></h2></div>
 					<h2><a href="#the-missing-chapter-of-empire">The Missing Chapter of Empire</a></h2>
 					<h3><a href="#the-era-of-empire">The era of empire</a></h3>
 					<h3><a href="#the-darker-side-of-the-force">The darker side of the force</a></h3>
@@ -144,7 +144,7 @@
 					<h3><a href="#conclusion">Conclusion</a></h3>
 					<h2><a href="#the-creative-factory-collective-creativity-and-autonomy-in-the-neoliberal-machine-of-creative-industries">The Creative Factory</a></h2><a href="#the-creative-factory-collective-creativity-and-autonomy-in-the-neoliberal-machine-of-creative-industries"></a>
 					<h3><a href="#introduction-genteel-capital-courtship">Introduction: Genteel Capital Courtship</a></h3>
-					<h3><a href="#the-public-private-partnership-model-as-a-pan-european-paradigm-of-gentrification-second-chance">The Public-Private Partnership Model as a Pan-European Paradigm of Gentrification: Second Chance</a></h3>
+                    <div id="book-toc-link"><h3><a href="#the-public-private-partnership-model-as-a-pan-european-paradigm-of-gentrification-second-chance">The Public-Private Partnership Model as a Pan-European Paradigm of Gentrification: Second Chance</a></h3></div>
 					<h3><a href="#in-the-white-cube-a-simulacrum-of-the-creative-industries-roglab-centre-pilot-project">In the White Cube, a Simulacrum of the Creative Industries: RogLab Centre Pilot Project</a></h3>
 					<h3><a href="#gentrification-goes-public">Gentrification Goes Public</a></h3>
 					<h3><a href="#gentrification-is-class-war">"Gentrification is class war"</a></h3><a href="#neoliberalism-and-the-autonomy-of-art-the-culture-of-power-the-power-of-culture1"></a>
@@ -166,11 +166,14 @@
 					
 					
 					
-<!-- BOOK'S PART -->
 
 <div class="container">
 <div class="main">
 
+
+<!-- INFO BOX -->
+
+<div class="info-box">
 <!-- BOOK TITLE -->
 
 <div id="book-title">
@@ -178,8 +181,8 @@ The Gray Zones of Creativity and Capital
 </div>
 
 <!-- SUMMARY BOX -->
-
 <div id="summary">
+
 <table class="info">
 <tr class="author">
 <td class="author">Author(s):</td>
@@ -211,33 +214,24 @@ The initial idea that led to the preparation of this publication was not a refle
 
 </table>
 
- </div>
+ </div></div>
 <section class="buttonset">
 						<div id="nav_list"><span></span></div>
 						
                 
                 
 					</section>
-<div class="cover-container">
-<!--<img id="cover" src='css/image/cover-lambda.jpg'>-->
-
-</div>
-                
-               
-                
-					<div id="cover-shadow"></div>         
-  
 <section class="content">						
 <div class="text">
 
 <!-- BOOK DATA -->
 
- <div class="main">
+ <div class="main" style="height: 100%;">
 
  
  <!-- ARROWS FOR SCROLL -->
 <div class="navigation">
-    <a href="#" id="display1" class="display">prev</a><br>
+    <a href="#" id="display1" class="display"><img src="http://122.255.111.187/livechat/images/up_arrow.png"></a><br>
     <a href="#" id="display" class="display">next</a>
     	<div id="progress-bar"></div>
 
@@ -2444,6 +2438,11 @@ The initial idea that led to the preparation of this publication was not a refle
 	</div>
     </div>			
 
+	<script>
+		$(window).bind('scroll', function(e) {
+			$('.info-box').css({"padding-top": window.scrollY+"px", "height": (700-window.scrollY)+"px" });
+		});
+	</script>
 <!----- script: nav ----->
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <script src="js/nav.js" type="text/javascript"></script>	
@@ -2521,5 +2520,7 @@ The initial idea that led to the preparation of this publication was not a refle
 
 </script>-->
 				
+								
+																
 </body>
 </html>

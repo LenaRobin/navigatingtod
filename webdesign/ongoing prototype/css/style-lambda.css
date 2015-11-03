@@ -105,7 +105,7 @@ color: #ff3300;
 /*
 ************ COVER *************
 
-*/
+
 
 .cover-container{
     position:absolute;left:0;top:0;width:100%;height:auto;z-index:-999;
@@ -116,48 +116,50 @@ margin:0;width:100%;
 }
 
 #cover-shadow{
-  /*  z-index: 99999999999990;
+    z-index: 99999999999990;
     position: absolute;
     margin-top:400px;
     left:-500px;top:0;width:160%;
 background-color: white;
-    height: 400px; */
+    height: 400px;
 }
-
-/*
-************ BOOK TITLE *************
 */
-#book-title{
-    z-index: 99999;
-    position: absolute;
-    font-size: 30px;
-    top:20px;
-    left: 5%;
-    padding: 10px;
-    line-height: 1em;
-    max-width: 60%;
-    color: gray;
-}
+
 
 /*
 ************ SUMMARY BOX *************
 */
-#summary{
-    z-index: 99999;
-    position: absolute;
-    font-size: 14px;
-    width: 50%;
-    margin-top:80px;
+
+.info-box{
+        height: 800px;
+    overflow: hidden; 
+        width: 50%;
+    margin-top:10px;
+    left: 5%;
+}
+
+#book-title{
+    font-size: 60px;
     left: 5%;
     padding: 10px;
-    border:0px solid #808080;
+    line-height: 1em;
+    color: rgb(255, 51, 00);
+    font-family: "Times";
+}
+#summary{
+    font-size: 14px;
+
     border-radius: 10px;
-    padding: 15px 30px 20px 20px;/*
+    padding-left:10px;
+    padding-right:10px;
+   /* padding: 15px 30px 20px 20px;/*
     background-color: rgba(255, 255, 255, 0.53);*/
-    background-color: #f4f4f4;
+   /* background-color: #f4f4f4; */
 }
 
 .info{
+        margin-top:10px;
+    height: auto;
 }
 #summary .summary, #summary .author, #summary .editor, #summary .date, #summary .series, #summary .subjects{
     color: #a7a7a7;
@@ -195,6 +197,9 @@ b{
 
 }
 .current {
+    margin-top:90px;
+        border-top: 1px solid black;
+
 }
 
 .navigation {
@@ -269,13 +274,13 @@ a{
 .importantword{
   /*   text-shadow: 2px 3px 20px black; */
     font-style: normal;
-    cursor: pointer;
+    cursor:text;
     color: black; /*text-shadow: 0 0 .4em rgba(0,0,0,1);*/
     border-bottom: 1px dotted black;
         
 }
 .section h2{
-    margin-top: 160px;
+    margin-top: 60px;
     margin-left: 5%;
     margin-bottom: 30px;
     padding-right: -40px;
@@ -304,7 +309,6 @@ filter:progid:DXImageTransform.Microsoft.Shadow(color=#c6c6c6, Direction=134, St
     margin-left: 3%;
     margin-right: 40%;
     font-weight: normal;
-    z-index: 9999;
 }
 
 .section p{
@@ -346,7 +350,6 @@ filter:progid:DXImageTransform.Microsoft.Shadow(color=#e6e6e6, Direction=134, St
 
 
 .text{
-    z-index: 999;
    margin-top: 600px;
    /* padding: 0px 35px 0px 35px;*/
 }
@@ -434,7 +437,15 @@ fieldset{
 input#filter{   
 }
 input{
-    border:1px solid black;
+    width: 230px;
+    margin-bottom: 8px;
+    font-size: 15px;
+    font-family: "Hkgrotesk";
+    border-style: none;
+    border-bottom: 1px dashed black;
+    color: black;
+    padding: 0;
+    background-color:#f4f4f4;
 }
 input:hover{
     border:1px solid;
@@ -654,7 +665,7 @@ font-weight: normal;
     color: black;
     text-decoration: none;
 }
-.pushmenu h2 a:hover{
+.pushmenu h2 a:hover, #book-toc-link:hover{
     border-radius: 5px;
     background-color:rgb(255, 51, 0);
     color: white;
