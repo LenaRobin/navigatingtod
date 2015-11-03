@@ -721,7 +721,7 @@ vertical-align:middle;
 -webkit-box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.4);
 -moz-box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.4);
 box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.4);
-        background: linear-gradient(rgba(144, 144, 144, 0.4) 50%, rgba(255, 255, 255, 1) 50%);
+        background: linear-gradient(rgba(255, 51, 0, 0.4) 50%, rgba(255, 255, 255, 1) 50%);
     color: black;
     border-top: none;
     /* box-shadow: 0px -3px 15px 8px white;
