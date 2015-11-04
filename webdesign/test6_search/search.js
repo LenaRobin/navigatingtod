@@ -1,5 +1,5 @@
 $(document).ready(function(){
-
+/*//COPY-PASTE WITH APPENDED REFERENCE vvv
     function addLink() {
         //Get the selected text and append the extra info
         var selection = window.getSelection(),
@@ -22,12 +22,13 @@ $(document).ready(function(){
     }
 
     document.addEventListener('copy', addLink);
+//COPY-PASTE WITH APPENDED REFERENCE ^^^
+*/
 
+//SEARCH FUNCTION vvv
+	var elem = $('<div id="search_ui" style="position: fixed; float: right; right: 0px; top: 0px; display: none;"><button id="cancel" style="margin: 5px 0px 5px 0px;">Cancel</button></div>');
 
-
-	var elem = $('<div id="search_ui" style="position: fixed; right: 10px; top: 10px; display: none;"><button id="cancel">Cancel</button></div>');
-
-	$('body').append(elem);
+	$('#live-search').append(elem);
 
 	// this remove the classes in the text relating to search-highlighting
 	var cancelSearch = function() {
@@ -41,63 +42,43 @@ $(document).ready(function(){
 	};
 
 
-	$("#filter").keyup(function(e){
-
-
-
-	   // alert( "Handler for .keyup() called." );
-
- 
-
+/*	$("#filter").keyup(function(e){*/
+	$('#filter').on('keyup', function(){
 		// Retrieve the input field text and reset the count to zero
-
 		var filter = $(this).val();
-
 		var count = 0;
-
-
-
-		// Loop through the comment list
-
-		$("h1, h2, h3, h4, p, div, ol, li").each(function(){
-
-		   // console.log($(this));
-
- 
-
-			// If the list item does not contain the text phrase fade it out
-
+		// Loop through the text
+		$("h1, h2, h3, h4, p, div, ol, li, a").each(function(){
+			// If the element does not contain the text phrase fade it out
 			if ($(this).text().search(new RegExp(filter, "i")) < 0) {
-
 				// add classes to the block elements
 				$(this).addClass('search-notfound');
 				$(this).removeClass('search-found');
                 $("#filter-count").show().text("Number of Hits = "+count);
-
 			} else {
-
 				$(this).removeClass('search-notfound');
 				$(this).addClass('search-found');
-
 				count++;
-
                 $("#filter-count").show().text("Number of Hits = "+count);
-
 			}
-
 		});
 
- 
+		$('#main').unhighlight();
+        $('#main').highlight($(this).val());
+
+        $('.highlight').each(function() {
+        	var span_top = $(this).offset().top;
+        	var span_left = $(this).offset().left;
+        	console.log(span_top + " + " + span_left);
+        	$(this).css({
+        		'background': '-webkit-radial-gradient(span_top,span_left,circle,rgb(27,186,135),transparent)'
+			});
+        });
 
 		// Update the count
-
 		var numberItems = count;
-
-
-
-		//  console.log("Number of Hits = " + count);
 		  
-
+		// HIDE CANCEL BUTTON WHEN NO INPUT
 		if (0 < filter.length) {
 			// filter active
 			$('#search_ui').css('display', 'block');
@@ -106,6 +87,7 @@ $(document).ready(function(){
 			cancelSearch();
 		}
 
+		// HIDE CANCEL BUTTON WHEN CLICKED
 		$(elem).click(function() {
 			$(this).css("display", "none");
 			$("#filter").val('');
@@ -113,8 +95,7 @@ $(document).ready(function(){
 		});
 
 
-		});
-
+	});
 
 
 	
@@ -122,7 +103,6 @@ $(document).ready(function(){
 
 
 	$(function() {
-
 	var allWords = [
 
 		"20th",

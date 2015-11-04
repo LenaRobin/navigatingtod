@@ -1,48 +1,43 @@
 #main {
-
 	width: 100%;
-
 }
-
 nav {
-
 	display: inline-block;
-
 	position: fixed;
-
 	/*float: left;
-
 	/*right: 75%;
-
 	left: auto;*/
-
 	width: 20%;
-
 	margin-top: 13%;
-
 }
-
-
 
 #content {
-
 	display: inline-block;
-
 	margin-left: 23%;
-
 	/*position: relative;
-
 	float: right;*/
-
 	width: 40%;
-
 }
 
 
-.search-found {
-
+.highlight {
+	background-color: yellow;
 }
+
+/*.search-found {
+	background: -webkit-radial-gradient(10px, white, white, #BFBFBF); /* Safari 5.1 to 6.0 
+    background: -o-radial-gradient(10px, white, white, #BFBFBF); /* For Opera 11.6 to 12.0 
+    background: -moz-radial-gradient(10px, white, white, #BFBFBF); /* For Firefox 3.6 to 15 
+    background: radial-gradient(10px, white, white, #BFBFBF); /* Standard syntax (must be last) */	
+}*/
 
 .search-notfound {
-	color: #eee;
+	color: #BFBFBF;
+}
+
+#live-search {
+	padding-right: 50px;
+	background-color: gray;
+	right: 0px;
+	position: fixed;
 }

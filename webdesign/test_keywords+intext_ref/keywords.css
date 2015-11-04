@@ -1,34 +1,37 @@
-body, button, ins {
+body {
 	font-family: Georgia;
 	font-size: 1em;
 	/*background-color: white;*/ /*#EBE7E6*/
 }
 
 
+
+/*
 #a a{
   text-decoration: none;
   border: none;
   color: red;
- 
 }
+*/
+
+
+/*
 #a a:hover{
   color: green;
   background-color: transparent;
 }
+*/
 
-
+/*
 #myPopup p{
    color: blue;
-  -webkit-user-select: all  !important;  /* Chrome all / Safari all */
-  -moz-user-select: all !important;     /* Firefox all */
-  -ms-user-select: all !important;      /* IE 10+ */
-  user-select: all !important;
+  -webkit-user-select: all  !important;  /* Chrome all / Safari all 
+  -moz-user-select: all !important;     /* Firefox all 
+  -ms-user-select: all !important;      /* IE 10+ 
+   user-select: all !important;
 }
+*/
 
-
-ins {
-	text-decoration: none;
-}
 
 /*button {
     align-items: flex-start;
@@ -48,16 +51,50 @@ ins {
 
 
 .in-text {
+	background-color: #C7C7BB;
+}
+
+.tip {
+	background-color: yellow;
+	/*opacity: 0.9;*/
+	-webkit-filter: drop-shadow(2px 2px 10px rgba(0,0,0,0.9));
+  	filter: drop-shadow(2px 2px 10px rgba(0,0,0,0.9));
+  	/*-webkit-filter: blur(5px);
+  	filter: blur(5px);*/
+	font-size: 14px;
+	max-width: 25%;
+	/*overflow: scroll;*/
+	padding: 2px 7px;
+	border: 1px solid black;
+	position: absolute;
+	right: 0;
+}
+
+
+#x {
+	position: inherit;
+	right: -3px;
+	top: -7px;
+	border-radius: 9px;
+	border: 1px solid red;
 	background-color: orange;
+	padding: 0 4px;
+	text-align: center;
 }
 
-/*.tip {
-	/*display: none;
-	width: 50px;
-	height: 20px;
+
+
+#x a {
+	text-decoration: none;
+	color: black;
 }
 
-*/
+
+
+.tip p {
+	margin: 0;
+}
+
 .keyword {
 	color: #454545;
     /*text-shadow: 1px 1px #292929;
