@@ -1,50 +1,76 @@
+var toppyDiv = 0;
+var sValues = [];
 
-$('a.display').on('click', function (e) {
+$('.section').each(function () {
+    var scrValue = $(this).offset().top;
+    sValues.push(scrValue);
+    $(this).attr("data-scroll", scrValue);
+    console.log(scrValue);
+});
+
+$("#display").on('click', function (e){
     e.preventDefault();
+      if($('.current').next('div.section').length > 0) {
+            console.log('here '+$('.current').next('div.section').length);
+            var $next = $('.current').next('.section');
+            var top = $next.offset().top ;
 
-    var t = $(this).text(),
-        that = $(this);
-
-    if (t === 'next' && $('.current').next('div.section').length > 0) {
-        var $next = $('.current').next('.section');
-        var top = $next.offset().top;
-
-        $('.current').removeClass('current');
-        $(function () {
-            $next.addClass('current');
-            $('html, body').animate({
-                scrollTop: $('.current').offset().top
+            $('.current').removeClass('current toppy');
+            $(function () {
+                $next.addClass('current toppy');
+                $('html, body').animate({
+                    scrollTop: top
+                });
+                console.log('hey');
             });
-            console.log('hey');
-        
-        //$(function () {
-        //    $next.addClass('current');
-        //    $('html, body').animate({
-        //        scrollTop: $('.current').offset().top
-        //    }, 'slow');    
+        }else{
+         //console.log("nothing");  
+            var $next = $('.section:first');
+            var top = $next.offset().top ;
+            console.log($('#info-box').height());
 
-        });
-    } else if (t === 'prev' && $('.current').prev('div.section').length > 0) {
+            //$('.current').removeClass('current');
+            $(function () {
+                $next.addClass('current toppy');
+                $('html, body').animate({
+                    scrollTop: top
+                });
+                //console.log();
+            });
+        }
+});
+
+$("#display1").on('click', function (e){
+    e.preventDefault();
+    if( $('.current').prev('.section').length){
         var $prev = $('.current').prev('.section');
         var top = $prev.offset().top;
 
-        $('.current').removeClass('current');
+        $('.current').removeClass('current toppy');
 
         $(function () {
-          $prev.addClass('current');
+          $prev.addClass('current toppy');
             $('html, body').animate({
-                scrollTop: $('.current').offset().top
+                scrollTop: top
             }, 'slow');
          });
+    }else{
+         $('.current').removeClass('current');
+        $('html, body').animate({
+                scrollTop: 0
+            }, 'slow');
     }
+    
 });
 
 
 function hideShowLinks() {
     $('.section').each(function (k, v) {
         var self = $(this);
-        if (self.hasClass('current')) {
-            if (k == 0) {
+        if (self.hasClass('toppy')) {
+            toppyDiv = k;
+            console.log(toppyDiv);
+            /*if (k == 0) {
                 console.log('hide prev');
                 $('#display1').show();
                 $('#display').show();
@@ -53,13 +79,15 @@ function hideShowLinks() {
                 $('#display1').show();
             } else {
                 $('#display, #display1').show();
-            }
+            }*/
         }
     });
 }
 
-hideShowLinks();
+//hideShowLinks();
 
 $(window).scroll(function () {
+    console.log("hi from scroll = " +  $(window).scrollTop());
+    //if($(window).scrollTop() > sValues[toppyDiv])
     hideShowLinks();
 });

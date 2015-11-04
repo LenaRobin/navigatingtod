@@ -46,11 +46,11 @@ body {
     text-rendering: optimizeSpeed;
 /*    position: relative; */
     background-color: white;
-;
 
 }
 
 .main{
+    
 }
 .pushmenu pushmenu-left pushmenu-open .content{
     width: 20%;
@@ -60,6 +60,7 @@ body {
 }
 
 .container{
+
 }
 a{
     color:inherit;
@@ -130,38 +131,35 @@ background-color: white;
 ************ SUMMARY BOX *************
 */
 
-.info-box{
-        height: 800px;
+#info-box{
+        height: auto;
     overflow: hidden; 
         width: 100%;
    /*     background-color: #efefef; */
 color: black;
-
+    padding-left: 40px;
+background-color:rgba(255, 51, 0, 0.1);
+padding-bottom: 20px;
 }
 
+
 #book-title{
-    font-size: 30px;
-    margin-left:2%;
+    font-size: 40px;
     margin-top:10px;
     line-height: 1em;
-    color: rgb(255, 51, 00);
         max-width: 50%;
-
 }
 #summary{
     font-size: 14px;
     max-width: 50%;
     border-radius: 10px;
-    padding-left:10px;
     padding-right:10px;
    /* padding: 15px 30px 20px 20px;/*
     background-color: rgba(255, 255, 255, 0.53);*/
    /* background-color: #f4f4f4; */
-        margin-left: 2%;
 }
 
 .info{
-        margin-top:10px;
     height: auto;
     
 }
@@ -179,14 +177,19 @@ color: black;
     color: black;
 }*/
 .author_tofill{
-    color: green;
-    font-size: 30px;     line-height: 1.2em;
+            color: rgb(255, 51, 00);
+    font-size: 40px;     line-height: 1.2em;
 
 }
 .editor_tofill{
-    color: darkblue;
-    font-size: 30px;     line-height: 1.2em;
+        color: green;
+    font-size: 40px;     line-height: 1.2em;
 
+}
+.date_tofill{
+        color: darkblue;
+
+    font-size: 40px; line-height: 1.2em;
 }
 /************* READER ***************/
 
@@ -200,14 +203,14 @@ b{
   /*  background-color: #f4f4f4; */
     background-color: white;
     width: 100%;
-    margin:0;
+
 }
 .section ul{
     color:black;
 }
 .section current{
         width: 100%;
-    margin:0;
+    padding-top:0px;
 
 }
 .current {
@@ -246,12 +249,17 @@ b{
     font-size: 1.2em;
     line-height: 1.6em;
 color:#1a1a1a;
+    margin:0;
+    
 }
 .content-pushed{
    /* width: 60%; 
     margin-left: 10%;
     margin-right: 5%;*/
         line-height: 32px;
+    margin-right: 0%;
+            margin-left:0px;
+
 }
 
 a{
@@ -277,7 +285,7 @@ a{
 }
 .keyword-searched{
     margin-bottom: 14px;
-    background-color:yellow;
+    background-color:rgba(255, 51, 0, 0.54);
     cursor: text;
 }
 .keyword-searched:hover{
@@ -293,8 +301,8 @@ a{
         
 }
 .section h2{
-    margin-top: 60px;
-    margin-left: 5%;
+    margin-top: 20px;
+    margin-left: 0%;
     margin-bottom: 30px;
     padding-right: -40px;
     padding-top: 10px;
@@ -315,21 +323,18 @@ filter:progid:DXImageTransform.Microsoft.Shadow(color=#c6c6c6, Direction=134, St
 
 .section h3{
     font-size: 24px;
-    margin-left: 5%;
 }
 
 .section p, h2, h3, h1, img, .author{
-    margin-left: 3%;
     margin-right: 40%;
     font-weight: normal;
 }
 
 .section p{
-    margin-left: 5%;
 }
 
 .author{
-        margin-left: 5%;
+        margin-left: 0%;
     margin-right: 0;
     font-size: 0.7em;
     text-transform: uppercase;
@@ -347,9 +352,10 @@ filter:progid:DXImageTransform.Microsoft.Shadow(color=#c6c6c6, Direction=134, St
 
 img{
     z-index: -9999999999999999;
-    width: 65%;
+    width: 55%;
     text-align: center;
     margin-top:40px;
+    margin-left:40px;
     margin-bottom: 40px;
 -moz-box-shadow: 5px 5px 40px 30px #e6e6e6;
 -webkit-box-shadow: 5px 5px 40px 30px #e6e6e6;
@@ -364,6 +370,8 @@ filter:progid:DXImageTransform.Microsoft.Shadow(color=#e6e6e6, Direction=134, St
 
 .text{
    margin-top: 0px;
+    margin-left:0;
+    padding-left:40px;
    /* padding: 0px 35px 0px 35px;*/
     border-top: 1px solid black;
 }
@@ -456,24 +464,50 @@ input{
     font-size: 15px;
     font-family: "Hkgrotesk";
     border-style: none;
-    border-bottom: 1px dashed black;
     color: black;
     padding: 0;
     background-color:#f4f4f4;
+    border-radius: 5px;
 }
 input:hover{
-    border:1px solid;
-    border-color:yellow;
+    border-radius: 5px;
 }
 
 .search-found {
-
+    color: black;
+}
+.search-found .importantword{
+  /*   text-shadow: 2px 3px 20px black; */
+    font-style: normal;
+    cursor:text;
+    color:black;
+    border-bottom: 0px dotted black;
+}
+.search-found .keyword-searched{
+  /*   text-shadow: 2px 3px 20px black; */
+    margin-bottom: 0px;
+    background-color:yellow;
+    cursor: text;
+    border-radius: 5px;
+    color: black;
 }
 
 .search-notfound {
     color:rgba(203, 203, 203, 0.22);
 }
-
+.search-notfound .importantword{
+  /*   text-shadow: 2px 3px 20px black; */
+    font-style: normal;
+    cursor:text;
+    color:rgba(203, 203, 203, 0.22);
+    border-bottom: 0px dotted black;
+}
+.search-notfound .keyword-searched{
+    margin-bottom: 0px;
+    background-color:rgba(255, 255, 255, 0);
+    cursor: text;
+        color:rgba(203, 203, 203, 0.22);
+}
 .allWords{
     font-size: 13px;
     background-color: white;
@@ -637,7 +671,6 @@ background-color:rgba(255, 51, 0, 0.33);}
 
 .pushmenu h2 { /* big part */
     font-size: 1.1em;
-    margin: 0;
     margin-top:10px;
     margin-right: 10px;
   height: auto;
@@ -654,10 +687,8 @@ font-weight: normal;
 
 .pushmenu h3 { /* sub-part */
   font-size: 0.9em;
-    margin:0;
     margin-bottom: 2px;
     padding:0;
-    margin-left:30px;
  /* border-width:1px;
     border-style:solid;
  border-color:black;
@@ -697,7 +728,7 @@ font-weight: normal;
 }
 
 .pushmenu-left.pushmenu-open, .pushmenu-left2.pushmenu-open {
-  left: 22px;  
+  left: 0px;  
   /*  border-right: solid 1px black;*/
     border-right: solid 0px black;
 -webkit-box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
@@ -725,13 +756,14 @@ box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
   -moz-transition: all 0.3s ease;
   transition: all 0.3s ease;  
 }
+.pushmenu-left .pushmenu-open .buttonset{
+    position: fixed;
+    left:400px;
+}
  .buttonset {
-  height:100%;
-  line-height:500px;
      position: fixed;
      top:0;
      left:0;
-     vertical-align: middle;
  }
 #nav_list /* button to active the pushmenu */ {
 /* background: url(http://www.onlywebpro.com/demo/jquery/icon_nav.png) no-repeat;*/
@@ -740,9 +772,6 @@ box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
  /* text-indent: -99999em; */
   line-height:normal;
   text-align:left;
--webkit-box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.4);
--moz-box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.4);
-box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.4);
        /* background: linear-gradient(rgba(255, 51, 0, 0.4) 50%, rgba(255, 255, 255, 1) 50%); 
        background: linear-gradient(rgba(0, 0, 0, 0.78) 50%, rgba(255, 255, 255, 1) 50%);*/
     
@@ -756,8 +785,10 @@ box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.4);
   -moz-transition: all 0.3s ease;
   transition: all 0.3s ease;  
 }
-
-#nav_list:hover{
+.nav_list{
+     border: 1px solid black; padding: 2px 4px 2px 4px;  margin-left:2px; background-color:white;
+}
+.nav_list:hover{
     background-color:rgb(255, 51,0);
 }
 
@@ -866,9 +897,13 @@ background-image: url('image/cover.jpg');
 ************* DEVICES ***************
 
 */
+/*
 
-/* smartphones, iPhone, portrait 480x320 phones 
-@media (min-width:200px) {  
+smartphones, iPhone, portrait 480x320 phones */
+@media (max-width:350px) {  
+#book-title{
+    font-size: 20px;        
+    }
 .content{
     overflow-x: hidden;
     margin-left: 1%;
@@ -880,10 +915,71 @@ background-image: url('image/cover.jpg');
     margin-left: 105%;
     margin-right: 5%;
 }
-}*/
+.pushmenu{
+    width: 100%;
+    }    
+.main{
+    
+}
+.pushmenu pushmenu-left pushmenu-open .content{
+    width: 100%;
+}
+.pushmenu-open .main{
+    width: 100%;
+}
 
 
-/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide.
+.section p, h2, h3, h1, img, .author{
+    margin-left: 1%;
+    margin-right: 0;
+    font-weight: normal;
+}
+
+
+.pushmenu-left, .pushmenu-left2 {
+  left: -100%;
+    overflow-y:scroll;
+}
+
+.pushmenu-left.pushmenu-open, .pushmenu-left2.pushmenu-open {
+  left: 0px;  
+  /*  border-right: solid 1px black;*/
+    border-right: solid 0px black;
+-webkit-box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+-moz-box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.pushmenu-push, .pushmenu-push2 {
+  overflow-x: hidden;
+  position: relative;
+  left: 0;
+}
+
+.pushmenu-push-toright {
+  left: 100%;
+}
+
+
+.pushmenu-left .pushmenu-open #nav-list{
+    display: none;
+    margin-left:70px;
+}
+
+.text{
+    font-size: 16px;  
+    line-height: 1.3em;
+    }
+
+
+
+
+}
+
+
+
+
+/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. 
 @media (min-width:481px) {
      
 .content{

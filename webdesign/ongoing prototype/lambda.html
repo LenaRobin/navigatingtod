@@ -55,7 +55,7 @@
 				<form action="" class="styled" id="live-search" method="post" name="live-search" onsubmit="return false;">
 					<fieldset>
 						<input class="text-input" id="filter" type="text" value="">
-                        <span id="filter-count"></span>
+                        <span id="filter-count">Search inside</span>
 					</fieldset>
 				</form></div>
 	     	<div id="main">
@@ -99,6 +99,7 @@
                 </div>
                 
                 <!-- Test -->
+                
                 <div class="menu-below">
                 <div class="button-menu-below">
                 <div class="text-share">Print
@@ -158,7 +159,13 @@
 					<br>
 
 				</div>
-			
+<section class="buttonset">
+						<div id="nav_list"><span class="nav_list">info</span></div>
+						
+                
+                
+					</section>
+               			
                 </nav>
                 
                 
@@ -173,7 +180,7 @@
 
 <!-- INFO BOX -->
 
-<div class="info-box">
+<div id="info-box">
 <!-- BOOK TITLE -->
 
 <div id="book-title">
@@ -215,34 +222,27 @@ The initial idea that led to the preparation of this publication was not a refle
 </table>
 
  </div></div>
-<section class="buttonset">
-						<div id="nav_list"><span>></span></div>
-						
-                
-                
-					</section>
 <section class="content">						
 <div class="text">
 
 <!-- BOOK DATA -->
 
- <div class="main" style="height: 100%">
+ <div class="main" style="height:100%;">
 
  
  <!-- ARROWS FOR SCROLL -->
 <div class="navigation">
-    <a href="#" id="display1" class="display"><img src="http://122.255.111.187/livechat/images/up_arrow.png"></a><br>
-    <a href="#" id="display" class="display">next</a>
-    	<div id="progress-bar"></div>
-
+    <a href="#" id="display1" class="display" style="text-decoration: none;">&#8593;
+</a><br>
+    <a href="#" id="display" class="display"  style="text-decoration: none;">&#8595;
+</a>
 </div>
 
 			
                   
 <!-- CONTENT OF THE BOOK -->
                         
-	<div class="section current">
-
+	<div class="section toppy"  >
 	<!--
   <div class="about_authors"></div>   -->
                            
@@ -2438,15 +2438,16 @@ The initial idea that led to the preparation of this publication was not a refle
 	</div>
     </div>			
 <script>
-		$(window).bind('scroll', function(e) {
+		/*$(window).bind('scroll', function(e) {
 			if (600-window.scrollY > 0) {
-				$('.info-box').css("padding-top", window.scrollY+"px");
+				$('#info-box').css("padding-top", window.scrollY+"px");
 			} else {
-				$('.info-box').css("padding-top", '0px');
+				$('#info-box').css("padding-top", '0px');
 			}
-			$('.info-box').css("height", 600-window.scrollY+"px");
-		});
-	</script>
+			$('#info-box').css("height", 600-window.scrollY+"px");
+		});*/
+</script>
+
 <!----- script: nav ----->
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <script src="js/nav.js" type="text/javascript"></script>	
