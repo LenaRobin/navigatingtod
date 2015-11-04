@@ -139,7 +139,7 @@ background-color: white;
 color: black;
     padding-left: 40px;
 background-color:rgba(255, 51, 0, 0.1);
-padding-bottom: 20px;
+padding-bottom: 30px;
 }
 
 
@@ -218,10 +218,16 @@ b{
 
 }
 
-.navigation {
+#display1 {
     position:fixed;
-    right:50px;
-    top:50%;
+    right:35%;
+    top:4%;
+    z-index: 999999999999;
+}
+#display{
+    position:fixed;
+    right:35%;
+    bottom:4%;
     z-index: 999999999999;
 }
 /*******
