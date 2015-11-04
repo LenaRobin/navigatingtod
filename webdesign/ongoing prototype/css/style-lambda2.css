@@ -134,7 +134,7 @@ background-color: white;
         height: 800px;
     overflow: hidden; 
         width: 100%;
-  background-color: #efefef;
+   /*     background-color: #efefef; */
 color: black;
 
 }
@@ -166,7 +166,7 @@ color: black;
     
 }
 #summary .summary, #summary .author, #summary .editor, #summary .date, #summary .series, #summary .subjects{
-  color: #a7a7a7; 
+   /* color: #a7a7a7; */
     color: black;
 
     font-size: 14px;
@@ -175,10 +175,19 @@ color: black;
     text-transform: none;
     width: 80px;
 }
-.author_tofill, .editor_tofill, .date_tofill, .series_tofill, .subjects_tofill{
+/*.author_tofill, .editor_tofill, .date_tofill, .series_tofill, .subjects_tofill{
     color: black;
-}
+}*/
+.author_tofill{
+    color: green;
+    font-size: 30px;     line-height: 1.2em;
 
+}
+.editor_tofill{
+    color: darkblue;
+    font-size: 30px;     line-height: 1.2em;
+
+}
 /************* READER ***************/
 
 b{
@@ -727,18 +736,15 @@ box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
 #nav_list /* button to active the pushmenu */ {
 /* background: url(http://www.onlywebpro.com/demo/jquery/icon_nav.png) no-repeat;*/
   cursor: pointer;
-  height:100%;
   width: 20px;
  /* text-indent: -99999em; */
-vertical-align:middle;
-  display:inline-block;
   line-height:normal;
   text-align:left;
 -webkit-box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.4);
 -moz-box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.4);
 box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.4);
-       /* background: linear-gradient(rgba(255, 51, 0, 0.4) 50%, rgba(255, 255, 255, 1) 50%); */
-       background: linear-gradient(rgba(0, 0, 0, 0.78) 50%, rgba(255, 255, 255, 1) 50%);
+       /* background: linear-gradient(rgba(255, 51, 0, 0.4) 50%, rgba(255, 255, 255, 1) 50%); 
+       background: linear-gradient(rgba(0, 0, 0, 0.78) 50%, rgba(255, 255, 255, 1) 50%);*/
     
     color: black;
     border-top: none;
@@ -752,7 +758,7 @@ box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.4);
 }
 
 #nav_list:hover{
-    background: linear-gradient(rgb(255, 51,0) 50%, rgba(255, 255, 255, 1) 50%);
+    background-color:rgb(255, 51,0);
 }
 
 .pushmenu-left .pushmenu-open #nav-list{

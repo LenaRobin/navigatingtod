@@ -5,7 +5,7 @@
 	<meta content="text/css" http-equiv="Content-Style-Type">
 	<meta content="pandoc" name="generator">
 			<link rel="icon" href="http://networkcultures.org/wp-content/themes/inc-home/favicon.png">
-	<link href="css/style-lambda.css" rel="stylesheet">
+	<link href="css/style-lambda2.css" rel="stylesheet">
 	<script src="http://code.jquery.com/jquery-1.7.2.js">
 	</script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript">
@@ -216,7 +216,7 @@ The initial idea that led to the preparation of this publication was not a refle
 
  </div></div>
 <section class="buttonset">
-						<div id="nav_list"><span></span></div>
+						<div id="nav_list"><span>></span></div>
 						
                 
                 
@@ -226,7 +226,7 @@ The initial idea that led to the preparation of this publication was not a refle
 
 <!-- BOOK DATA -->
 
- <div class="main" style="height: 100%;">
+ <div class="main" style="height: 100%">
 
  
  <!-- ARROWS FOR SCROLL -->
@@ -2437,10 +2437,14 @@ The initial idea that led to the preparation of this publication was not a refle
 
 	</div>
     </div>			
-
-	<script>
+<script>
 		$(window).bind('scroll', function(e) {
-			$('.info-box').css({"padding-top": window.scrollY+"px", "height": (700-window.scrollY)+"px" });
+			if (600-window.scrollY > 0) {
+				$('.info-box').css("padding-top", window.scrollY+"px");
+			} else {
+				$('.info-box').css("padding-top", '0px');
+			}
+			$('.info-box').css("height", 600-window.scrollY+"px");
 		});
 	</script>
 <!----- script: nav ----->
