@@ -21,14 +21,22 @@ nav {
 
 
 .highlight {
-	background-color: yellow;
+	/*display: inline-block; 
+	width: 50%;
+	height: 50%;
+	text-align: center;*/
+	background-color: #BFBFBF;
+	/*background: -webkit-radial-gradient(10px, white, white, #BFBFBF); /* Safari 5.1 to 6.0 */
+    /*background: -o-radial-gradient(10px, white, white, #BFBFBF); /* For Opera 11.6 to 12.0 */
+    /*background: -moz-radial-gradient(10px, white, white, #BFBFBF); /* For Firefox 3.6 to 15 */
+    /*background: radial-gradient(10px, white, white, #BFBFBF); /* Standard syntax (must be last)*/
 }
 
 /*.search-found {
 	background: -webkit-radial-gradient(10px, white, white, #BFBFBF); /* Safari 5.1 to 6.0 
     background: -o-radial-gradient(10px, white, white, #BFBFBF); /* For Opera 11.6 to 12.0 
     background: -moz-radial-gradient(10px, white, white, #BFBFBF); /* For Firefox 3.6 to 15 
-    background: radial-gradient(10px, white, white, #BFBFBF); /* Standard syntax (must be last) */	
+    background: radial-gradient(10px, white, white, #BFBFBF); /* Standard syntax (must be last) *
 }*/
 
 .search-notfound {

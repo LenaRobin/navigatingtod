@@ -66,14 +66,14 @@ $(document).ready(function(){
 		$('#main').unhighlight();
         $('#main').highlight($(this).val());
 
-        $('.highlight').each(function() {
+        /*$('.highlight').each(function() {
         	var span_top = $(this).offset().top;
         	var span_left = $(this).offset().left;
         	console.log(span_top + " + " + span_left);
         	$(this).css({
         		'background': '-webkit-radial-gradient(span_top,span_left,circle,rgb(27,186,135),transparent)'
 			});
-        });
+        });*/
 
 		// Update the count
 		var numberItems = count;

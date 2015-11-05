@@ -48,7 +48,7 @@ jQuery.extend({
         if (node.nodeType === 3) {
             var match = node.data.match(re);
             if (match) {
-                var highlight = document.createElement(nodeName || 'span');
+                var highlight = document.createElement(nodeName || 'span'); //was span instead of div
                 highlight.className = className || 'highlight';
                 var wordNode = node.splitText(match.index);
                 wordNode.splitText(match[0].length);
