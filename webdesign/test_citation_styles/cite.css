@@ -1,6 +1,7 @@
 body {
 	font-family: Georgia;
 	font-size: 1em;
+  width: 60%;
 	/*background-color: white;*/ /*#EBE7E6*/
 }
 
@@ -58,7 +59,7 @@ body {
 	background-color: yellow;
 	/*opacity: 0.9;*/
 	-webkit-filter: drop-shadow(2px 2px 10px rgba(0,0,0,0.9));
-  	filter: drop-shadow(2px 2px 10px rgba(0,0,0,0.9));
+  filter: drop-shadow(2px 2px 10px rgba(0,0,0,0.9));
   	/*-webkit-filter: blur(5px);
   	filter: blur(5px);*/
 	font-size: 14px;
@@ -114,8 +115,39 @@ body {
 	-webkit-text-fill-color: transparent;
 }
 
-/*ff3300 */
 
-/*.keyword:hover {
-    text-shadow: 0px 0px 10px #ff3300;
-}*/
+#tools {
+  top: 2%;
+  right: 1%;
+  position: fixed;
+}
+
+#citation-box {
+  top: 10%;
+  right: 1%;
+  position: fixed;
+  /*
+  position: absolute;
+  right: 2%;
+  */
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: #C7C7BB;
+  width: 32em;
+  height: 20em;
+}
+
+textarea {
+  height: 4em;
+  width: 30em;
+  display: block;
+  margin-top: 1%;
+  margin-left: 1%;
+  margin-bottom: 1%
+
+}
+
+
+
+
+

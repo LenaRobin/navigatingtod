@@ -1,5 +1,8 @@
 $(document).ready(function(){
 
+///////////////////////
+// POP-UP REFERENCE BOX
+///////////////////////
 	$(".in-text").each(function(){
 		var n = $(this).data("dref");
 		var t = $("p#ref"+n).text();
@@ -30,10 +33,39 @@ $(document).ready(function(){
 		$('.tip').css('display', 'none');
 	});
 
+///////////////
+// TOGGLE TOOLS
+///////////////
+	$('#tools').click( function() {
+		$('#citation-box').fadeToggle();
+	});
+
+
+
+///////////////////
+//GENERATE CITATION
+///////////////////
+	$('#cite').click( function() {
+//	    alert("bla");
+	  	var ref_article = $('#cite-this').closest('.section').attr('data-article');
+	    var ref_author = $('#cite-this').closest('.section').attr('data-author');
+	    var ref_title = $('meta[name="title"]').attr('content');
+	    var ref_eds = $('meta[name="editors"]').attr('content');
+	    var ref_year = $('meta[name="year"]').attr('content');
+	    var ref_place = $('meta[name="place"]').attr('content');
+	    var ref_pub = $('meta[name="publisher"]').attr('content');
+	    $('#mla').text(ref_author + ". " + ref_article + ". " +  ref_title + ", eds. " + ref_eds + ". " + ref_place + ": " + ref_pub + ". " + ref_year + "."); 
+	});
+
+
+
+
+
+
 /////////////////////////
 // CONTEXT MENU
 ////////////////////////
-	$('p').mouseup(function() {
+/*	$('p').mouseup(function() {
         //$('p').html(getSelectedText());
 
            $(function() {
@@ -58,15 +90,16 @@ $(document).ready(function(){
 
 		        /*$('.section').on('click', function(e){
 		        **   console.log('clicked', this);
-		        });*/    
+		        }); 
 			});
 
 		        
     });
-/////////////////////////
-// CONTEXT MENU
-////////////////////////
+*/
 
+///////////////////////
+//GET SELECTED TEXT 
+//////////////////////
 /*    function getSelectedText() {;
  *       if (window.getSelection().toString().length > 1) {
  *           return window.getSelection().toString();
