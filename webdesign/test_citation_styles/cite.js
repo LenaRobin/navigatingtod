@@ -33,6 +33,15 @@ $(document).ready(function(){
 		$('.tip').css('display', 'none');
 	});
 
+
+/////////////
+// GENERATE ID TO p
+///////////////
+	$('.section p').each(function(number){
+		//console.log(number);
+		$(this).attr("id", "p"+number);
+	});
+
 ///////////////
 // TOGGLE TOOLS
 ///////////////
@@ -45,8 +54,23 @@ $(document).ready(function(){
 ///////////////////
 //GENERATE CITATION
 ///////////////////
+var selected_text;
+
+    function getSelectedText() {
+        if (window.getSelection().toString().length > 0) {
+            var selObj = window.getSelection().toString().substr(0, 1);
+            var span = "<span id='s'>" + selObj + "</span>";
+            var text = $('.section').html();
+            $('.section').html(text.replace(selObj, span));
+        }};
+
+  $('.section').mouseup(function() {
+        getSelectedText();
+
+    });
 	$('#cite').click( function() {
 //	    alert("bla");
+		console.log(selected_text);
 	  	var ref_article = $('#cite-this').closest('.section').attr('data-article');
 	    var ref_author = $('#cite-this').closest('.section').attr('data-author');
 	    var ref_title = $('meta[name="title"]').attr('content');
@@ -54,6 +78,7 @@ $(document).ready(function(){
 	    var ref_year = $('meta[name="year"]').attr('content');
 	    var ref_place = $('meta[name="place"]').attr('content');
 	    var ref_pub = $('meta[name="publisher"]').attr('content');
+//	    var ref_par = $('')
 	    $('#mla').text(ref_author + ". " + ref_article + ". " +  ref_title + ", eds. " + ref_eds + ". " + ref_place + ": " + ref_pub + ". " + ref_year + "."); 
 	});
 
