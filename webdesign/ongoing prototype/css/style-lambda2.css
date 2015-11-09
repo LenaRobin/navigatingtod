@@ -35,7 +35,18 @@
     src: url('fonts/LeagueGothic-Regular.otf');
 }
 
+    /* Mozilla based browsers */
+::-moz-selection {
+       background-color: #FFA;
+       color: #000;
+}
 
+/* Works in Safari */
+::selection {
+       background-color: #FFA;
+       color: #000;
+}
+    
 body {
     margin: 0;
     overflow-y: scroll;
@@ -47,6 +58,8 @@ body {
 /*    position: relative; */
     background-color: white;
 
+
+    
 }
 
 .main{
@@ -220,14 +233,14 @@ b{
 
 #display1 {
     position:fixed;
-    right:35%;
-    top:4%;
+    right:2%;
+    top:45%;
     z-index: 999999999999;
 }
 #display{
     position:fixed;
-    right:35%;
-    bottom:4%;
+    right:2%;
+    bottom:45%;
     z-index: 999999999999;
 }
 /*******
@@ -334,6 +347,7 @@ filter:progid:DXImageTransform.Microsoft.Shadow(color=#c6c6c6, Direction=134, St
 .section p, h2, h3, h1, img, .author{
     margin-right: 40%;
     font-weight: normal;
+    width: auto;
 }
 
 .section p{
@@ -409,7 +423,7 @@ text-indent: 20px;
 
 .sidenote{
     clear: right;
-    margin-right: 13%;
+    margin-right: 17%;
     margin-bottom: 2px;
     width: 15%;
     float: right;
@@ -430,16 +444,106 @@ text-indent: 20px;
 }
 .sidenote p{
     margin-right: 0%;
+    padding:0px 5px 0px 5px;
+}
+/************* TOOL BOX (right) ***************/
+
+h1 {
+  font-size:40px;
+  font-weight:bold;
+  color:#191919;
+  -webkit-font-smoothing: antialiased;
 }
 
-/************* SEARCH BOX ***************/
+h2 {
+  font-weight:normal;
+  font-size:20px;
+  color:#888;
+  padding:5px 0;
+}
 
+.message {
+background:#181818;
+color:#FFF;
+position: fixed;
+top: -250px;
+right: 0;
+width: 300px;
+height: 250px;
+padding: 20px;
+transition: top 300ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
+overflow: hidden;
+box-sizing: border-box;
+  
+}
+
+.message h1 {
+  color:#FFF;
+}
+
+#toggle {
+  position:absolute;
+  appearance:none;
+  cursor:pointer;
+  left:-100%;
+  top:-100%;
+}
+
+#toggle + label {
+  position:absolute;
+  cursor:pointer;
+  padding:10px;
+  background: white;
+width: 30px;
+border-radius: 3px;
+padding: 8px 10px;
+line-height:20px;
+font-size:12px;
+text-align:center;
+-webkit-font-smoothing: antialiased;
+cursor: pointer;
+  right:0;
+  margin:20px 50px;
+  transition:all 500ms ease;
+  border:1px solid black;
+}
+#toggle + label:after {
+  content:"Tools"
+}
+
+
+#toggle:checked ~ .message {
+  top: 0;
+}
+
+#toggle:checked ~ .container {
+  margin-top: 0px;
+}
+
+#toggle:checked + label {
+  background:#dd6149;
+}
+
+#toggle:checked + label:after {
+  content:"Close";
+  position:fixed;
+  top:0px;
+  z-index:999;
+  color:white;
+}
+
+
+
+/************* SEARCH BOX ***************/
+#live-search-container{
+border: 1px solid black; padding: 2px 4px 2px 4px;  margin-left:0px; background-color:white; border-radius: 5px;
+}
 #live-search{
     position: relative;
     border-style: none;
     display: inline-block;
     float: right;
-    right: 3%;
+    right: 2%;
 }
 
 fieldset{
@@ -474,6 +578,8 @@ input{
     padding: 0;
     background-color:#f4f4f4;
     border-radius: 5px;
+        box-shadow: 4px 4px 2px rgba(128, 128, 128, 0.5);
+
 }
 input:hover{
     border-radius: 5px;
@@ -597,7 +703,7 @@ background-color:rgba(255, 51, 0, 0.33);}
 /* structure */
 
 .pushmenu { /* this is the nav that is hidden */
-  width:35%;
+  width:27%;
   height: 100%;
   top: 0;
   position:fixed;
@@ -610,8 +716,8 @@ background-color:rgba(255, 51, 0, 0.33);}
     margin-bottom: 20px;
 }
 #book-toc{
-    margin-left: 20px;
-    margin-right: 5px;
+    margin-left: 10px;
+    margin-right: 0px;
     margin-top: 0px;
   /*  height: 400px;
     border-bottom: 1px solid black;
@@ -729,7 +835,7 @@ font-weight: normal;
     border-radius: 5px;
 }
 .pushmenu-left, .pushmenu-left2 {
-  left: -35%;
+  left: -27%;
     overflow-y:scroll;
 }
 
@@ -749,7 +855,7 @@ box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
 }
 
 .pushmenu-push-toright {
-  left: 35%;
+  left: 27%;
 }
 
 .pushmenu a{
@@ -792,7 +898,7 @@ box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;  
 }
 .nav_list{
-     border: 1px solid black; padding: 2px 4px 2px 4px;  margin-left:2px; background-color:white;
+     border: 1px solid black; padding: 2px 4px 2px 4px;  margin-left:0px; background-color:white; border-radius: 5px;
 }
 .nav_list:hover{
     background-color:rgb(255, 51,0);
