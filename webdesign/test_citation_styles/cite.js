@@ -34,9 +34,9 @@ $(document).ready(function(){
 	});
 
 
-/////////////
+///////////////////
 // GENERATE ID TO p
-///////////////
+///////////////////
 	$('.section p').each(function(number){
 		//console.log(number);
 		$(this).attr("id", "p"+number);
@@ -50,27 +50,53 @@ $(document).ready(function(){
 	});
 
 
-
 ///////////////////
 //GENERATE CITATION
 ///////////////////
-var selected_text;
+	
 
-    function getSelectedText() {
-        if (window.getSelection().toString().length > 0) {
-            var selObj = window.getSelection().toString().substr(0, 1);
-            var span = "<span id='s'>" + selObj + "</span>";
-            var text = $('.section').html();
-            $('.section').html(text.replace(selObj, span));
-        }};
 
-  $('.section').mouseup(function() {
-        getSelectedText();
+	function getSelectedText() {
+  	t = (document.all) ? document.selection.createRange().text : document.getSelection();
+	  return t;
+	}
+	
+	var span = document.createElement('SPAN');
 
-    });
+	$('.section').mouseup(function(){
+	    var selection = getSelectedText();
+	    var selection_text = selection.toString();
+//	    console.log(selection_text);
+	    
+
+	    //SPAN AROUND SELECTED TEXT
+	    selection_text = span.textContent.substr(0, 1);
+	    
+	    var range = selection.getRangeAt(0);
+//	    range.deleteContents();
+	    range.insertNode(span);
+	});
+
+
+//    function getSelectedText() {
+//       if (window.getSelection().toString().length > 0) {
+//            var selObj = window.getSelection().toString().substr(0, 1);
+
+//
+//            console.log(selObj);
+//            var span = "<span id='s'>" + selObj + "</span>";
+//            var text = $('.section').html();
+//           $('.section').html(text.replace(selObj, span));
+//        }};
+
+//  $('.section').mouseup(function() {
+//        getSelectedText();
+//
+//    });
+
 	$('#cite').click( function() {
-//	    alert("bla");
-		console.log(selected_text);
+		span.className = "qwertz";		//ADD CLASS TO SPAN ON CLICK
+		var par = $('.qwertz').closest('p').attr('id');		//GET ID OF PARENT p
 	  	var ref_article = $('#cite-this').closest('.section').attr('data-article');
 	    var ref_author = $('#cite-this').closest('.section').attr('data-author');
 	    var ref_title = $('meta[name="title"]').attr('content');
@@ -78,8 +104,9 @@ var selected_text;
 	    var ref_year = $('meta[name="year"]').attr('content');
 	    var ref_place = $('meta[name="place"]').attr('content');
 	    var ref_pub = $('meta[name="publisher"]').attr('content');
-//	    var ref_par = $('')
-	    $('#mla').text(ref_author + ". " + ref_article + ". " +  ref_title + ", eds. " + ref_eds + ". " + ref_place + ": " + ref_pub + ". " + ref_year + "."); 
+	    $('#mla').text(ref_author + ". " + ref_article + ". " +  ref_title + ", eds. "
+	    + ref_eds + ". " + ref_place + ": " + ref_pub + ". " + ref_year + ". "
+	    + "file:///Users/exjosipbatinic/GitHub/navigatingtod/webdesign/test_citation_styles/cite.html" + "#" + par); 
 	});
 
 
@@ -121,22 +148,5 @@ var selected_text;
 		        
     });
 */
-
-///////////////////////
-//GET SELECTED TEXT 
-//////////////////////
-/*    function getSelectedText() {;
- *       if (window.getSelection().toString().length > 1) {
- *           return window.getSelection().toString();
- *    //   } else if (document.selection) {
- *      //     console.log("NADA");
- *          // return document.selection.createRange().text;
- *       } else {
- *           return; //'QWER';
- *   	};
-*	};
-*/
-
-
 
 });
