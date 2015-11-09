@@ -887,9 +887,9 @@ input:hover {
 	font-size: 10px;
 	font-family: "Hkgrotesk";
 }
-
+/*
 #citation-box1 {
-	position: fixed;
+	position: absolute;
 	width: 320px;
 	height: auto;
 	top: 0;
@@ -905,7 +905,7 @@ input:hover {
 	z-index: 99999;
 	font-family: "HKgrotesk";
 }
-
+*/
 button {
 	margin: 0;
 	font: 11px HKgrotesk;
@@ -1083,7 +1083,7 @@ textarea {
 	margin: 0;
 }
 
-.pushmenu h2 {
+.pushmenu h2{
 	font-size: 16px;
 	line-height: 17px;
 	width: 90%;
@@ -1097,7 +1097,7 @@ textarea {
 	margin-right: 10px;
 }
 
-.pushmenu h3 {
+.pushmenu h3{
 	font-size: 12px;
 	width: 80%;
 	border-radius: 5px;
@@ -1105,7 +1105,7 @@ textarea {
 	-webkit-margin-after: 0;
 	-webkit-margin-start: 0;
 	-webkit-margin-end: 0;
-	margin-left: 14px;
+	margin-left: 20px;
 	margin-bottom: 4px;
 	line-height: 14px;
 	padding-right: 10px;
@@ -1634,7 +1634,11 @@ img {
 .section p {
 	font-size: 1.4em;
 	line-height: 1.55em;
-	width: 75%;
+	width: 85%;
+}
+
+.section h2{
+    width: 85%;            
 }
 
 .sidenote {
@@ -1657,11 +1661,27 @@ img {
 	line-height: 14px;
     width: 100%;
 }
-
+.content-pushed .section p {
+	font-size: 1.4em;
+	line-height: 1.55em;
+	width: 75%;
+}
 .content-pushed .sidenote {
 	width: 150px;
 	margin-right: 0%;
 	padding-right: 2px;
+	font-size: 10px;
+	line-height: 14px;
+}
+.content-pushed .sidenote p{
+	font-size: 10px;
+	line-height: 14px;
+    width: 100%;
+}
+
+
+.content-pushed .section h2{
+    width: 75%;            
 }
 
 img {
