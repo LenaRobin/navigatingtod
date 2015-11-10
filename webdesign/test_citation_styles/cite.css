@@ -133,13 +133,14 @@ body {
   border: 1px solid black;
   border-radius: 5px;
   background-color: #C7C7BB;
-  width: 32em;
-  height: 20em;
+  width: 30%;
+  height: 65%;
 }
 
 textarea {
-  height: 4em;
-  width: 30em;
+  height: 15%;
+  width: 95%;
+  max-width: 95%;
   display: block;
   margin-top: 1%;
   margin-left: 1%;

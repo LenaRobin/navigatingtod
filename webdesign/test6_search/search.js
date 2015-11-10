@@ -1,31 +1,8 @@
-$(document).ready(function(){
-/*//COPY-PASTE WITH APPENDED REFERENCE vvv
-    function addLink() {
-        //Get the selected text and append the extra info
-        var selection = window.getSelection(),
-            pagelink = '<br /><br /> Read more at: ' + document.location.href,
-            copytext = selection + pagelink,
-            newdiv = document.createElement('div');
+$(document).ready(function() {
 
-        //hide the newly created container
-        newdiv.style.position = 'absolute';
-        newdiv.style.left = '-99999px';
-
-        //insert the container, fill it with the extended text, and define the new selection
-        document.body.appendChild(newdiv);
-        newdiv.innerHTML = copytext;
-        selection.selectAllChildren(newdiv);
-
-        window.setTimeout(function () {
-            document.body.removeChild(newdiv);
-        }, 100);
-    }
-
-    document.addEventListener('copy', addLink);
-//COPY-PASTE WITH APPENDED REFERENCE ^^^
-*/
-
-//SEARCH FUNCTION vvv
+/////////////////
+//SEARCH FUNCTION
+/////////////////
 	var elem = $('<div id="search_ui" style="position: fixed; float: right; right: 0px; top: 0px; display: none;"><button id="cancel" style="margin: 5px 0px 5px 0px;">Cancel</button></div>');
 
 	$('#live-search').append(elem);
@@ -41,14 +18,13 @@ $(document).ready(function(){
         $('#filter-count').hide();
 	};
 
-
-/*	$("#filter").keyup(function(e){*/
+//	$("#filter").keyup(function(e){
 	$('#filter').on('keyup', function(){
 		// Retrieve the input field text and reset the count to zero
 		var filter = $(this).val();
 		var count = 0;
 		// Loop through the text
-		$("h1, h2, h3, h4, p, div, ol, li, a").each(function(){
+		$('h1, h2, h3, h4, p, div, ol, a').each(function(){
 			// If the element does not contain the text phrase fade it out
 			if ($(this).text().search(new RegExp(filter, "i")) < 0) {
 				// add classes to the block elements
@@ -64,21 +40,75 @@ $(document).ready(function(){
 		});
 
 		$('#main').unhighlight();
-        $('#main').highlight($(this).val());
+        $('#main').highlight(filter);
 
-        /*$('.highlight').each(function() {
-        	var span_top = $(this).offset().top;
-        	var span_left = $(this).offset().left;
-        	console.log(span_top + " + " + span_left);
-        	$(this).css({
-        		'background': '-webkit-radial-gradient(span_top,span_left,circle,rgb(27,186,135),transparent)'
-			});
-        });*/
+        // GENERATE IDs FOR ALL HIGHLIGHTED HITS
+        $('.highlight').each(function(number) {
+//       	console.log(number);
+        	$(this).attr('id', 'hit'+number);
+        });
 
-		// Update the count
+
+        // ON CLICK GO TO THE NEXT INSTANCE
+        var number = 0;
+        var nextInstance = function() {
+        	alert("kuh");
+		    $('#next').click(function() {
+	        	$(this).attr('href', '#hit'+number);
+	        	number++;
+	        	$('#hit'+number).css('background-color', 'yellow');
+	        	$('#hit'+(number-1)).css('background-color', '#BFBFBF');
+	        });
+		}
+
+        // ON CLICK GO TO THE PREVIOUS INSTANCE
+        var prevInstance = function() {
+	        $('#prev').click(function() {
+	        	$(this).attr('href', '#hit'+(number-1));
+	        	number--;
+	        	$('#hit'+number).css('background-color', 'yellow');
+	        	$('#hit'+(number+1)).css('background-color', '#BFBFBF');
+	        });
+	    }
+
+//	    $(document).keypress(function(event) {
+//		    if (event.keyCode == 13) {
+//		        $('#next').trigger("click");
+//		    }
+//		});
+
+
+/*
+	    $(document).keypress(function(e) {
+		    if(e.which == 13) {
+	    		console.log('pressed enter');
+	    	    nextInstance();
+		    }
+		});       
+*/
+        // WRAP ALL SUGGESTED MENU ITEMS IN A HREFs
+/*        $('.ui-menu-item').each(function(number) {
+*        	var link = document.createElement('A');
+*        	console.log(link);
+*        	$(link).attr('href', '#hit'+number);
+*        	$(this).insertNode(link);
+*        });
+*/
+        /* gradient highlight
+        *$('.highlight').each(function() {
+        *	var span_top = $(this).offset().top;
+        *	var span_left = $(this).offset().left;
+        *	console.log(span_top + " + " + span_left);
+        *	$(this).css({
+        *		'background': '-webkit-radial-gradient(span_top,span_left,circle,rgb(27,186,135),transparent)'
+		*	});
+        *});
+		*/
+
+		//////// Update the count ////////
 		var numberItems = count;
 		  
-		// HIDE CANCEL BUTTON WHEN NO INPUT
+		///////// HIDE CANCEL BUTTON WHEN NO INPUT
 		if (0 < filter.length) {
 			// filter active
 			$('#search_ui').css('display', 'block');
@@ -87,14 +117,12 @@ $(document).ready(function(){
 			cancelSearch();
 		}
 
-		// HIDE CANCEL BUTTON WHEN CLICKED
+		////////// HIDE CANCEL BUTTON WHEN CLICKED
 		$(elem).click(function() {
 			$(this).css("display", "none");
 			$("#filter").val('');
 			cancelSearch();
 		});
-
-
 	});
 
 
@@ -104,23 +132,14 @@ $(document).ready(function(){
 
 	$(function() {
 	var allWords = [
-
 		"20th",
-
 		"21st",
-
 		"a",
-
 		"ability",
-
 		"about",
-
 		"above",
-
 		"Abram",
-
 		"abstraction",
-
 		"actions",
 
 		"actors",
@@ -1114,13 +1133,9 @@ $(document).ready(function(){
 	];
 
 	$("#filter").autocomplete({
-
 			source: allWords
-
 		});
-
   });
-
 });
 
 

@@ -38,6 +38,18 @@ nav {
     background: -moz-radial-gradient(10px, white, white, #BFBFBF); /* For Firefox 3.6 to 15 
     background: radial-gradient(10px, white, white, #BFBFBF); /* Standard syntax (must be last) *
 }*/
+.search_nav {
+	position: fixed;
+}
+
+#prev {
+	left: 0;
+}
+
+#next {
+	left: 50px;
+}
+
 
 .search-notfound {
 	color: #BFBFBF;
@@ -49,3 +61,20 @@ nav {
 	right: 0px;
 	position: fixed;
 }
+
+.ui-autocomplete {
+	list-style: none;
+	position: fixed;
+	padding-top: 2px;
+	-webkit-padding-start: 0px;
+}
+
+.ui-menu-item {
+	background-color: red;
+}
+
+.ui-menu-item:focus {
+	background-color: yellow;
+}
+
+
