@@ -30,6 +30,12 @@
 	<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>-->
 	<script src="cite.js"></script>
 	<script src="moment.js"></script>
+	<script src="clipboard.js-master/dist/clipboard.min.js"></script>
+<!--
+	<script src="clipboard-action.js"></script>
+-->
+
+
 
 
 <!--CONTEXT-MENU COPY PASTE-->
@@ -164,11 +170,11 @@
 	<div id="citation-box" style="display: none">Cite your selection with the following conventions:
 		<button id="cite" style="display:block">PRESS TO CITE</button>
 		<p><abbr title="Modern Language Association">MLA</abbr></p>
-	    <textarea id="mla" placeholder="MLA" disabled></textarea>
+	    <button data-clipboard-target="#mla" class="full-citation" id="mla"></button>
 	    <p>Chicago</p>
-	    <textarea id="chicago" placeholder="Chicago" disabled></textarea>
+	    <button data-clipboard-target="#chicago" class="full-citation" id="chicago"></button>
 	    <p><abbr title="American Psychological Association">APA</abbr></p>
-	    <textarea id="apa" placeholder="APA" disabled></textarea>
+	    <button data-clipboard-target="#apa" class="full-citation" id="apa"></button>
 	</div>
 <!-- END CITATION BUTTON AND BOX -->
 

@@ -1,3 +1,5 @@
+
+
 $(document).ready(function(){
 
 ///////////////////////
@@ -7,7 +9,7 @@ $(document).ready(function(){
 		var n = $(this).data("dref");
 		var t = $("p#ref"+n).text();
 		$(this).data("ref", t)
-		//console.log(t);
+//		console.log(t);
 	});
 
 	$(".in-text").click(function(ev) {		// for all events
@@ -34,6 +36,11 @@ $(document).ready(function(){
 	});
 
 
+
+
+
+
+
 ///////////////////
 // GENERATE ID TO p
 ///////////////////
@@ -49,49 +56,27 @@ $(document).ready(function(){
 		$('#citation-box').fadeToggle();
 	});
 
-
 ///////////////////
 //GENERATE CITATION
 ///////////////////
 	
-
-
 	function getSelectedText() {
-  	t = (document.all) ? document.selection.createRange().text : document.getSelection();
-	  return t;
+	  	t = (document.all) ? document.selection.createRange().text : document.getSelection();
+		  return t;
 	}
 	
 	var span = document.createElement('SPAN');
-
 	$('.section').mouseup(function(){
 	    var selection = getSelectedText();
 	    var selection_text = selection.toString();
-//	    console.log(selection_text);
-	    
 
 	    //SPAN AROUND SELECTED TEXT
 	    selection_text = span.textContent.substr(0, 1);
-	    
 	    var range = selection.getRangeAt(0);
 //	    range.deleteContents();
 	    range.insertNode(span);
 	});
 
-//    function getSelectedText() {
-//       if (window.getSelection().toString().length > 0) {
-//            var selObj = window.getSelection().toString().substr(0, 1);
-
-//
-//            console.log(selObj);
-//            var span = "<span id='s'>" + selObj + "</span>";
-//            var text = $('.section').html();
-//           $('.section').html(text.replace(selObj, span));
-//        }};
-
-//  $('.section').mouseup(function() {
-//        getSelectedText();
-//
-//    });
 
 	$('#cite').click( function() {
 		span.className = "qwertz";		//ADD CLASS TO SPAN ON CLICK
@@ -113,56 +98,67 @@ $(document).ready(function(){
 	    var MLA_date_of_access = moment().format('D MMMM YYYY');
 	    var chicago_date_of_access = moment().format('MMMM D, YYYY');
 		var url = $(location).attr('pathname');
-	    $('#mla').text(ref_authorLastName + ", " + ref_authorName + ". '" + ref_article + ".' " + ref_title
-	    + " (" + ref_year + "): n. page. <" + url + "#" + par + ">. " + MLA_date_of_access + ".");
+	    $('#mla').html(ref_authorLastName + ", " + ref_authorName + ". '" + ref_article + ".' " + "<i>" + ref_title + "</i>" 
+	    + " (" + ref_year + "): n. page. &lt;" + url + "#" + par + "&gt;. " + MLA_date_of_access + ".");
 
-	    $('#chicago').text(ref_authorLastName + ", " + ref_authorName + ". '" + ref_article + ".' " + ref_title
+	    $('#chicago').html(ref_authorLastName + ", " + ref_authorName + ". '" + ref_article + ".' " + "<i>" + ref_title + "</i>"
 	    + " (" + ref_year + "): n. page. Accessed " + chicago_date_of_access + ". " + url + "#" + par + ".");
 
-	    $('#apa').text(ref_authorLastName + ", " + ref_apaAuthorName + ". (" + ref_year + "). " + ref_article + ". " + ref_title
+	    $('#apa').html(ref_authorLastName + ", " + ref_apaAuthorName + ". (" + ref_year + "). " + ref_article + ". " + ref_title
 	    + ". Retrieved from " + url + "#" + par);
 
 
 	});
 
+	var clipboard = new Clipboard('.full-citation');
+
+///////////////////////////////
+// DISPLAY CONFIRMATION AT COPY
+///////////////////////////////
+	$('.full-citation').click(function() {
+		$(this).prev().append('<div class="confirmation"><br/>Copied!</div>');
+	    $('.confirmation').fadeOut(3000);
+	});
+
+	// clipboard.on('success', function(e) {
+	//     $('.full-citation').append('<div class="confirmation">YXCVBN</div>');
+	//     $('.confirmation').fadeOut(3000);
+	//     //e.clearSelection();
+	// });
+
+	clipboard.on('error', function(e) {
+	    $('.full-citation').prev().append('<div class="confirmation"><br/>Error!</div>');
+	});
 
 
+});
 
+$(window).resize(function() {
+	//////////////////////////////////
+	//SIDENOTES = BOX WHEN WIDTH SMALL
+	//////////////////////////////////
+	console.log($(window).width());
+	if ($(window).width() <= "400") {
 
-
-/////////////////////////
-// CONTEXT MENU
-////////////////////////
-/*	$('p').mouseup(function() {
-        //$('p').html(getSelectedText());
-
-           $(function() {
-		        $.contextMenu( {
-		            selector: '.section', 
-		            callback: function(key, options) {
-		                var m = "clicked: " + key;
-		                window.console && console.log(m) || alert(m); 
-		            },
-		            items: {
-		                "edit": {name: "Edit", icon: "edit"},
-		                "cut": {name: "Cut", icon: "cut"},
-		                copy: {name: "Copy", icon: "copy"},
-		                "paste": {name: "Paste", icon: "paste"},
-		                "delete": {name: "Delete", icon: "delete"},
-		                "sep1": "---------",
-		                "quit": {name: "Quit", icon: function(){
-		                    return 'context-menu-icon context-menu-icon-quit';
-		                }}
-		            }
-		        });
-
-		        /*$('.section').on('click', function(e){
-		        **   console.log('clicked', this);
-		        }); 
-			});
-
-		        
-    });
-*/
-
+	$('.footnoteRef').click(function(ev) {
+		ev.stopPropagation();
+		ev.preventDefault();
+		var n = $(this).attr('href').substr(3, 4);
+		var t = $('li#fn'+n).text();
+	//	var info = $(this).attr('id');
+		console.log(t);
+		var top = $(this).offset().top;
+		var left = $(this).offset().left;
+		$('.tip p').text(t);
+		$('.tip').css('display','block').offset({top: top - 30, left: left });
+		//$('.tip')
+		/*
+		and make the link bring up a box (same as the one used for in-text);
+		print the respective contents of the footnote in the box;
+		put the direct link to the footnote reference on the bottom;
+		*/
+	});
+	}else{
+		$('.footnoteRef').unbind("click");
+	}
 });

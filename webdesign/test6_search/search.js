@@ -50,32 +50,37 @@ $(document).ready(function() {
 
 
         // ON CLICK GO TO THE NEXT INSTANCE
-        var number = 0;
-        var nextInstance = function() {
-        	alert("kuh");
-		    $('#next').click(function() {
-	        	$(this).attr('href', '#hit'+number);
-	        	number++;
-	        	$('#hit'+number).css('background-color', 'yellow');
-	        	$('#hit'+(number-1)).css('background-color', '#BFBFBF');
+        var counter = 0;
+        function toNext(n){
+        	counter++;
+	        $('#hit'+counter).css('background-color', 'yellow');
+	       	$('#hit'+(counter-1)).css('background-color', '#BFBFBF');
+        }
+
+        $('#next').click(function() {
+	        	toNext(counter);
+	        	$(this).attr('href', '#hit'+counter);
 	        });
-		}
 
         // ON CLICK GO TO THE PREVIOUS INSTANCE
-        var prevInstance = function() {
-	        $('#prev').click(function() {
-	        	$(this).attr('href', '#hit'+(number-1));
-	        	number--;
-	        	$('#hit'+number).css('background-color', 'yellow');
-	        	$('#hit'+(number+1)).css('background-color', '#BFBFBF');
-	        });
-	    }
+        function toPrev(n) {
+        	counter--;
+        	$('#hit'+counter).css('background-color', 'yellow');
+        	$('#hit'+(counter+1)).css('background-color', '#BFBFBF');
+        }
 
-//	    $(document).keypress(function(event) {
-//		    if (event.keyCode == 13) {
-//		        $('#next').trigger("click");
-//		    }
-//		});
+        $('#prev').click(function() {
+        	toPrev(counter);
+        	$(this).attr('href', '#hit'+(counter-1));
+        	
+        });
+
+
+	    $(document).keypress(function(event) {
+		    if (event.keyCode == 13) {
+				toNext(counter);
+		    }
+		});
 
 
 /*
@@ -106,7 +111,7 @@ $(document).ready(function() {
 		*/
 
 		//////// Update the count ////////
-		var numberItems = count;
+//		var numberItems = count;
 		  
 		///////// HIDE CANCEL BUTTON WHEN NO INPUT
 		if (0 < filter.length) {

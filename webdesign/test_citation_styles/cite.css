@@ -67,15 +67,21 @@ body {
 	/*overflow: scroll;*/
 	padding: 2px 7px;
 	border: 1px solid black;
+  border-radius: 5px;
 	position: absolute;
 	right: 0;
 }
 
 
+.tip p {
+  margin: 0;
+}
+
+
 #x {
 	position: inherit;
-	right: -3px;
-	top: -7px;
+	right: -6px;
+	top: -6px;
 	border-radius: 9px;
 	border: 1px solid red;
 	background-color: orange;
@@ -90,11 +96,6 @@ body {
 	color: black;
 }
 
-
-
-.tip p {
-	margin: 0;
-}
 
 .keyword {
 	color: #454545;
@@ -122,32 +123,40 @@ body {
   position: fixed;
 }
 
-#citation-box {
-  top: 10%;
-  right: 1%;
-  position: fixed;
-  /*
-  position: absolute;
-  right: 2%;
-  */
-  border: 1px solid black;
-  border-radius: 5px;
-  background-color: #C7C7BB;
-  width: 30%;
-  height: 65%;
-}
-
-textarea {
-  height: 15%;
+.full-citation {
+  text-align: left;
+  word-wrap: break-word;
+  background-color: yellow;
+  min-height: 6em;
   width: 95%;
   max-width: 95%;
-  display: block;
   margin-top: 1%;
   margin-left: 1%;
   margin-bottom: 1%
 
 }
 
+
+#citation-box {
+  top: 10%;
+  right: 1%;
+  position: fixed;
+/*
+  position: absolute;
+  right: 2%;
+*/
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: #C7C7BB;
+  width: 30%;
+  min-height: 65%;
+}
+
+.confirmation {
+  background-color: green;
+  display: inline;
+  margin: auto;
+}
 
 
 
