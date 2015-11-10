@@ -343,7 +343,9 @@ section.content {
 	font-size: 8pt;
 	line-height: 10pt;
 }
-
+.references p a{
+    text-decoration: none;
+}
 /************* NOTE ***************/
 .footnoteRef {
 	font-size: .7em;
