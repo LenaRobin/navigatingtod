@@ -346,12 +346,11 @@ a {
 }
 
 .importantword {
-/*   text-shadow: 2px 3px 20px black; */
-	font-style: normal;
-	cursor: text;
-	color: #000;
-/*text-shadow: 0 0 .4em rgba(0,0,0,1);*/
-	border-bottom: 1px dotted #000;
+    background-color:transparent;
+}
+
+.importantword_shown{
+    background-color:#ff9f9f;
 }
 
 .section h2 {
