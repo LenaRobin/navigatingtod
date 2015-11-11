@@ -1,9 +1,30 @@
 $(document).ready(function() {
 
+	// $('.section').each(function(nr){
+	// 	$(this).attr('id', 'section'+nr);
+	// });
+
+	// // use document.body if the whole page is scrollable
+	// var myViewport = document.getElementById('myViewport');
+	// var firstSection = document.getElementById('section0');
+
+	// myViewport.addEventListener(
+	//     'scroll',
+	//     function() {
+	//         var location = firstSection.viewportTopLocation;
+	//         console.log(
+	//             'The viewport is at ' + location +
+	//             ' relatively to the first section'
+	//         );
+	//     },
+	//     false
+	// );
+
 /////////////////
 //SEARCH FUNCTION
 /////////////////
 	var elem = $('<div id="search_ui" style="position: fixed; float: right; right: 0px; top: 0px; display: none;"><button id="cancel" style="margin: 5px 0px 5px 0px;">Cancel</button></div>');
+	var maxCount;
 
 	$('#live-search').append(elem);
 
@@ -18,11 +39,25 @@ $(document).ready(function() {
         $('#filter-count').hide();
 	};
 
-//	$("#filter").keyup(function(e){
-	$('#filter').on('keyup', function(){
+	
+
+
+	$('#filter').on('keyup', function(e){
+		if(e.keyCode == 13){
+			// $('#next').tabs({
+			// 	activate: function(event, ui) {                   
+			// 		var scrollTop = $(window).scrollTop(); // save current scroll position
+			// 		window.location.hash = ui.newPanel.attr('id');
+			// 		$(window).scrollTop(scrollTop); // keep scroll at current position
+			// 	}    
+			// });
+		
+			location.href="#hit0";
+			return false;
+		}
+		
 		// Retrieve the input field text and reset the count to zero
 		var filter = $(this).val();
-		var count = 0;
 		// Loop through the text
 		$('h1, h2, h3, h4, p, div, ol, a').each(function(){
 			// If the element does not contain the text phrase fade it out
@@ -30,12 +65,9 @@ $(document).ready(function() {
 				// add classes to the block elements
 				$(this).addClass('search-notfound');
 				$(this).removeClass('search-found');
-                $("#filter-count").show().text("Number of Hits = "+count);
 			} else {
 				$(this).removeClass('search-notfound');
 				$(this).addClass('search-found');
-				count++;
-                $("#filter-count").show().text("Number of Hits = "+count);
 			}
 		});
 
@@ -44,43 +76,78 @@ $(document).ready(function() {
 
         // GENERATE IDs FOR ALL HIGHLIGHTED HITS
         $('.highlight').each(function(number) {
-//       	console.log(number);
+        	maxCount = number;
+       		console.log("highlight " +number);
+       		$("#filter-count").show().text("Number of Hits = "+maxCount);
         	$(this).attr('id', 'hit'+number);
         });
 
-
         // ON CLICK GO TO THE NEXT INSTANCE
-        var counter = 0;
+        var counter = -1;
+
+        function getHitCount() {
+	    	var i=0;
+    		while ($('#hit'+i).length) {
+    			i++;
+    		} 
+	    	return i;
+        }
+
         function toNext(n){
-        	counter++;
+        	counter = n;
+        	//console.log(count+ " ,"+ counter)
+        	// var next_nr = $('#next').attr('href').match(/\d+/);
+        	//  if (next_nr > count) {
+        	// 	counter = 0;
+        	//  }
+        	if(counter < maxCount){
+        		counter++;
+        	}else{
+        		counter = 0;
+        	}
+        	//console.log("again " +count+ " ,"+ counter)
 	        $('#hit'+counter).css('background-color', 'yellow');
 	       	$('#hit'+(counter-1)).css('background-color', '#BFBFBF');
         }
 
         $('#next').click(function() {
-	        	toNext(counter);
-	        	$(this).attr('href', '#hit'+counter);
-	        });
+        	// if (0 == counter) {
+        	// 	counter = getHitCount();
+        	// }
+        	toNext(counter);
+        	$(this).attr('href', '#hit'+counter);
+        	$('#prev').attr('href', '#hit'+(counter-2));
+        });
 
         // ON CLICK GO TO THE PREVIOUS INSTANCE
         function toPrev(n) {
-        	counter--;
+        	counter = n;
+        	if(counter > 0){
+        		counter--;
+        	}else{
+        		counter = maxCount;
+        	}
+        	
         	$('#hit'+counter).css('background-color', 'yellow');
         	$('#hit'+(counter+1)).css('background-color', '#BFBFBF');
         }
 
         $('#prev').click(function() {
+        	console.log("prev : "+counter);
+        	// if (0 == counter) {
+        	// 	counter = getHitCount();
+        	// }
         	toPrev(counter);
-        	$(this).attr('href', '#hit'+(counter-1));
-        	
+        	$(this).attr('href', '#hit'+(counter));
+	        $('#next').attr('href', '#hit'+(counter+2));
         });
 
 
-	    $(document).keypress(function(event) {
+	    /*$(document).keypress(function(event) {
 		    if (event.keyCode == 13) {
 				toNext(counter);
 		    }
-		});
+		});*/
 
 
 /*

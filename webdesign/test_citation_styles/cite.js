@@ -1,6 +1,22 @@
-
+// $(document).scroll(function() {
+// 	var b = $('#a').position();
+// 	console.log(b);	
+// });
 
 $(document).ready(function(){
+
+	console.log($('#a').css('height').replace(/[^0-9]/g, '') - $('#a').offset().top);
+
+// $(window).on('scroll', function () {
+//     var scrollTop     = $(window).scrollTop(),
+//         elementOffset = $('#a').offset().top,
+//         distance      = (elementOffset - scrollTop);
+//        console.log(scrollTop);
+//     });
+
+
+
+
 
 ///////////////////////
 // POP-UP REFERENCE BOX
@@ -92,6 +108,7 @@ $(document).ready(function(){
 	    var ref_authorLastName = $('.qwertz').closest('.section').attr('data-authorLastName');
 	    var ref_title = $('meta[name="title"]').attr('content');
 	    var ref_eds = $('meta[name="editors"]').attr('content');
+	    var ref_apaEds = $('meta[name="apa-editors"]').attr('content');
 	    var ref_year = $('meta[name="year"]').attr('content');
 	    var ref_place = $('meta[name="place"]').attr('content');
 	    var ref_pub = $('meta[name="publisher"]').attr('content');
@@ -99,13 +116,13 @@ $(document).ready(function(){
 	    var chicago_date_of_access = moment().format('MMMM D, YYYY');
 		var url = $(location).attr('pathname');
 	    $('#mla').html(ref_authorLastName + ", " + ref_authorName + ". '" + ref_article + ".' " + "<i>" + ref_title + "</i>" 
-	    + " (" + ref_year + "): n. page. &lt;" + url + "#" + par + "&gt;. " + MLA_date_of_access + ".");
+	    + ". Eds. " + ref_eds + ". " + ref_place + ": " + ref_pub + ", " + ref_year + ". &lt;" + url + "#" + par + "&gt;. " + MLA_date_of_access + ".");
 
-	    $('#chicago').html(ref_authorLastName + ", " + ref_authorName + ". '" + ref_article + ".' " + "<i>" + ref_title + "</i>"
-	    + " (" + ref_year + "): n. page. Accessed " + chicago_date_of_access + ". " + url + "#" + par + ".");
+	    $('#chicago').html(ref_authorLastName + ", " + ref_authorName + ". '" + ref_article + ".' In " + "<i>" + ref_title + "</i>"
+	    + ", edited by "+ref_eds+". "+ref_place+": "+ref_pub+", "+ref_year+". "+ url + "#" + par + ". Accessed "+chicago_date_of_access + ".");
 
-	    $('#apa').html(ref_authorLastName + ", " + ref_apaAuthorName + ". (" + ref_year + "). " + ref_article + ". " + ref_title
-	    + ". Retrieved from " + url + "#" + par);
+	    $('#apa').html(ref_authorLastName + ", " + ref_apaAuthorName + ". (" + ref_year + "). " + ref_article + ". In "+ref_apaEds+" (Eds.), "+"<i>"+ref_title+"</i>"
+	    +". "+ref_place+": "+ref_pub+". Available from "+url+"#"+par+".");
 
 
 	});
@@ -116,7 +133,7 @@ $(document).ready(function(){
 // DISPLAY CONFIRMATION AT COPY
 ///////////////////////////////
 	$('.full-citation').click(function() {
-		$(this).prev().append('<div class="confirmation"><br/>Copied!</div>');
+		$(this).prev().append('<div class="confirmation">Copied!</div>');
 	    $('.confirmation').fadeOut(3000);
 	});
 
