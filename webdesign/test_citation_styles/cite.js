@@ -157,7 +157,7 @@ $(window).resize(function() {
 	console.log($(window).width());
 	if ($(window).width() <= "400") {
 
-		$('#footnotes, #notes').hide();
+	$('#footnotes, #notes').hide();
 
 	$('.footnoteRef').click(function(ev) {
 		ev.stopPropagation();
@@ -179,5 +179,6 @@ $(window).resize(function() {
 	});
 	}else{
 		$('.footnoteRef').unbind("click");
+		$('#footnotes, #notes').show();
 	}
 });
