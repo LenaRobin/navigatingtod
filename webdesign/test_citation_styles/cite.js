@@ -19,7 +19,7 @@ $(document).ready(function(){
 
 
 ///////////////////////
-// POP-UP REFERENCE BOX
+//POP-UP REFERENCE BOX
 ///////////////////////
 	$(".in-text").each(function(){
 		var n = $(this).data("dref");
@@ -156,6 +156,8 @@ $(window).resize(function() {
 	//////////////////////////////////
 	console.log($(window).width());
 	if ($(window).width() <= "400") {
+
+		$('#footnotes, #notes').hide();
 
 	$('.footnoteRef').click(function(ev) {
 		ev.stopPropagation();

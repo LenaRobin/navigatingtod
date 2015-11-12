@@ -28,7 +28,7 @@ $(document).ready(function() {
 
 	$('#live-search').append(elem);
 
-	// this remove the classes in the text relating to search-highlighting
+////this remove the classes in the text relating to search-highlighting
 	var cancelSearch = function() {
 		$('.search-found').each(function() {
 			$(this).removeClass('search-found');
@@ -39,10 +39,8 @@ $(document).ready(function() {
         $('#filter-count').hide();
 	};
 
-	
-
-
 	$('#filter').on('keyup', function(e){
+////////ON ENTER GO TO THE FIRST INSTENCE
 		if(e.keyCode == 13){
 			// $('#next').tabs({
 			// 	activate: function(event, ui) {                   
@@ -74,7 +72,7 @@ $(document).ready(function() {
 		$('#main').unhighlight();
         $('#main').highlight(filter);
 
-        // GENERATE IDs FOR ALL HIGHLIGHTED HITS
+////////GENERATE IDs FOR ALL HIGHLIGHTED HITS
         $('.highlight').each(function(number) {
         	maxCount = number;
        		console.log("highlight " +number);
@@ -82,7 +80,7 @@ $(document).ready(function() {
         	$(this).attr('id', 'hit'+number);
         });
 
-        // ON CLICK GO TO THE NEXT INSTANCE
+////////ON CLICK GO TO THE NEXT INSTANCE
         var counter = -1;
 
         function getHitCount() {
@@ -119,7 +117,7 @@ $(document).ready(function() {
         	$('#prev').attr('href', '#hit'+(counter-2));
         });
 
-        // ON CLICK GO TO THE PREVIOUS INSTANCE
+////////ON CLICK GO TO THE PREVIOUS INSTANCE
         function toPrev(n) {
         	counter = n;
         	if(counter > 0){
@@ -180,7 +178,7 @@ $(document).ready(function() {
 		//////// Update the count ////////
 //		var numberItems = count;
 		  
-		///////// HIDE CANCEL BUTTON WHEN NO INPUT
+/////// HIDE CANCEL BUTTON WHEN NO INPUT
 		if (0 < filter.length) {
 			// filter active
 			$('#search_ui').css('display', 'block');
@@ -189,7 +187,7 @@ $(document).ready(function() {
 			cancelSearch();
 		}
 
-		////////// HIDE CANCEL BUTTON WHEN CLICKED
+////////HIDE CANCEL BUTTON WHEN CLICKED
 		$(elem).click(function() {
 			$(this).css("display", "none");
 			$("#filter").val('');
@@ -201,7 +199,7 @@ $(document).ready(function() {
 	
 
 
-
+////ARRAY OF ALL THE UNIQUE WORDS FOR AUTOCOMPLETE
 	$(function() {
 	var allWords = [
 		"20th",
