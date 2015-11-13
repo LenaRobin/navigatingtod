@@ -20,6 +20,125 @@ $(document).ready(function() {
 	//     false
 	// );
 
+
+/////////////////////////////////////////
+//PUSH MENU ON THE LEFT
+/////////////////////////////////////////
+
+	$menuLeft = $('.pushmenu-left');
+	$nav_list = $('#nav_list');
+	
+	$nav_list.click(function() {
+		$(this).toggleClass('active');
+		$('.pushmenu-push').toggleClass('pushmenu-push-toright');
+		$menuLeft.toggleClass('pushmenu-open');
+	});
+
+///////////////////////
+//SCROLL PROGRESSION
+//////////////////////
+
+	var nr = 1;
+	$('.horizScroll').each(function() {
+		$(this).attr('id', 'title'+nr);
+		nr++;
+	});
+
+////VERTICAL SCROLL BAR 
+	$(window).scroll(function () {
+        var windowHeight = $(window).height();
+        var scrollTop = $(document).scrollTop();					// height of scroll on top (=0)
+        var bottom = $(document).height() - windowHeight;	// heigth from top at the end of doc
+        var verticalBar = (scrollTop / bottom)*windowHeight;
+        $("#menu_bar_scroll").css('height', verticalBar);
+
+        
+     //    var e = $('#e').offset().top;	// height at which width=0
+     //    var zero = s - e;
+     //    var f = $('#f').offset().top;	//heigth at which width/heigth=1
+     //    var one = f - e;
+
+     //    $('p').text(e);
+     //    var q = (zero / one)*200;		// substitute the number with desired 
+     //    $('#d').css('width', q);		// height/width
+     
+
+
+////HORIZONTAL SCROLL BARS
+
+
+	
+
+
+		// var topChapter = $('.section').offset().top;
+		// var bottomChapter = $('.section').next().offset().top;
+		// var bottomChapter = $('#chapter'+(n+1)).offset().top;
+
+
+
+///with sections
+		 $('.section').each(function() {
+		 	var top = $(this).offset().top;	// 1
+		 	var a = $(this).attr('data-top', top);
+		// 	var b = a.next().attr('data-top');	// 2
+		// 	console.log('top: '+top);
+		// 	console.log('b: '+a.next().attr('data-top'));
+
+
+
+		// 	var n = 1;
+		// 	$('#title'+n).each(function() {
+		// 		var c = scrollTop - top;
+		// 		var d = b - top;
+		// 		var e = $(this).css('max-width');
+		// 		var f = (c/d)*e;
+		// 		n++;
+		// 	});
+		 });
+
+///with ids
+		var n = 1;
+		$('.section').each(function(){
+			$('#title'+n).each(function(){
+				var a = $('#chapter'+n).offset().top;
+				var b = $('#chapter'+(n+1)).offset().top; // try with different selectors for *NEXT*
+				
+				// console.log('a: '+a);
+				// console.log('b: '+b);
+
+				var c = scrollTop - a;
+				var d = b - a;
+				var ee = $(window).width();
+				var e = 28/100*ee;
+
+				var f = (c / d) * e;
+				$(this).css('width', f);
+
+				console.log('c: '+c);
+				console.log('d: '+d);
+				console.log('e: '+e);
+				n++;
+			});
+
+		});
+
+
+
+
+
+		// var n = 1;
+		// $('#title'+n).each(function(){
+
+		// 	var horizontalBars = ((scrollTop - topChapter) /
+		// (bottomChapter - topChapter)) * $('#title'+(n+1)).css('max-width');
+
+		// 	$(this).css('width', horizontalBars);
+		// 	n++;
+		// });
+
+        
+     });
+
 /////////////////
 //SEARCH FUNCTION
 /////////////////
@@ -54,11 +173,11 @@ $(document).ready(function() {
 			return false;
 		}
 		
-		// Retrieve the input field text and reset the count to zero
+////////Retrieve the input field text and reset the count to zero
 		var filter = $(this).val();
 		// Loop through the text
 		$('h1, h2, h3, h4, p, div, ol, a').each(function(){
-			// If the element does not contain the text phrase fade it out
+////////////If the element does not contain the text phrase fade it out
 			if ($(this).text().search(new RegExp(filter, "i")) < 0) {
 				// add classes to the block elements
 				$(this).addClass('search-notfound');
@@ -178,7 +297,7 @@ $(document).ready(function() {
 		//////// Update the count ////////
 //		var numberItems = count;
 		  
-/////// HIDE CANCEL BUTTON WHEN NO INPUT
+////////HIDE CANCEL BUTTON WHEN NO INPUT
 		if (0 < filter.length) {
 			// filter active
 			$('#search_ui').css('display', 'block');
