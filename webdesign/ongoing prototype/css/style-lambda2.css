@@ -1,41 +1,65 @@
-@font-face {
-	font-family: Hkgrotesk;
-	src: url(fonts/HKGrotesk-Regular.otf);
-}
+/* *********************************************************************************
+ *************************** STYLE FOR LAMBDA PAGES ********************************
+************************************************************************************
 
-@font-face {
-	font-family: HkgroteskBold;
-	src: url(fonts/HKGrotesk-Bold.otf);
-}
+I.------- GENERAL STRUCTURE !! do not change !! ------------------------------------
+        1.
+        2.
+        3.
+
+II.------ COLORS - easy changes - ---------------------------------------------------
+        1.
+        2.
+        3.
+
+III.----- TYPOGRAPGY - easy changes - -----------------------------------------------
+        1. Keyword
+        2. Important word
+        3. Keyword-searched
+
+IV.------ INFO BOX (top) ------------------------------------------------------------
+        
+V.------- MENU (left) ---------------------------------------------------------------
+
+VI.------ NAVIGATION ----------------------------------------------------------------
+
+VII.----- READER --------------------------------------------------------------------
+
+VIII.---- TOOLS ---------------------------------------------------------------------
+
+IX.------ DEVICES -------------------------------------------------------------------
 
 
-/* Background-color on selection */
-::-moz-selection {
-	background-color: #FFA;
-	color: #000;
-}
+3-
 
-::selection {
-	background-color: #FFA;
-	color: #000;
-}
 
+
+*/
+
+
+
+
+/* ******************************************* I. GENERAL STRUCTURE !! do not change !! ********* */
+
+/*******************
+     I-1. GENERAL
+********************
+General website structure */
+
+/* Body */
 body {
 	margin: 0;
 	overflow-y: scroll;
 	overflow-x: hidden;
-/* font-family: "Opensans";*/
-	font-family: "Hkgrotesk";
 	width: 100%;
 	text-rendering: optimizeSpeed;
-/*    position: relative; */
 	background-color: #fff;
 }
 
 .main {
 }
 
-.pushmenu pushmenu-left pushmenu-open .content {
+/* text: The content of the book */.pushmenu pushmenu-left pushmenu-open .content {
 	width: 20%;
 }
 
@@ -46,91 +70,282 @@ body {
 .container {
 }
 
+/* Menu, Table of content on left */
+.section {
+	width: 100%;
+	font-size: 62.5%;
+}
+/* All of the content of the reader has margins on right to let place for sidenotes */
+.section p,h2,h3,h1,img,.author {
+	margin-right: 40%;
+	width: auto;
+}
+/* text: The content of the book */
+.text {
+	margin-top: 0;
+	margin-left: 0;
+	padding-left: 30px;
+}
+/* text: The content of the book when pushmenu is open */
+.content-pushed .text {
+	padding-left: 30px;
+}
+/* text: The content of the book when pushmenu is open */
+.content-pushed {
+	line-height: 32px;
+	margin-right: 0;
+	margin-left: 0;
+	width: 90%;
+	padding-left: 0;
+}
+
+/***********************
+     I-2. MENU (left)
+************************
+The menu on left (called pushmenu) gives the table of content but also pushes the whole content (reader) to the right */
+
+/* pushmenu: This is the way the menu displays when it is shown */
+.pushmenu {
+	width: 20%;
+	height: 100%;
+	top: 0;
+	position: fixed;
+	background-color: rgba(255,69,0,0.28);
+	overflow-x: hidden;
+	z-index: 999999;
+}
+.pushmenu-left,.pushmenu-left2 {
+	left: -20%;
+	overflow-y: scroll;
+}
+.pushmenu-left.pushmenu-open,.pushmenu-left2.pushmenu-open {
+	left: 0;
+/*  border-right: solid 1px black;*/
+	border-right: solid 0 #000;
+	-webkit-box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+	box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+}
+.pushmenu-push,.pushmenu-push2 {
+	overflow-x: hidden;
+	position: relative;
+	left: 0;
+}
+.pushmenu-push-toright {
+	left: 20%;
+}
+
+.pushmenu a {
+	text-decoration: none;
+	margin: 0;
+}
+
+/* The speed of pushmenu appearing */
+.pushmenu,.pushmenu-push {
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	transition: all .3s ease;
+}
+
+.pushmenu-left .pushmenu-open /*.buttonset*/ {
+	position: fixed;
+	left: 400px;
+}
+
+.buttonset {
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+/* Bloc containing the table of content in the pushmenu */
+#book-toc {
+	margin-left: 5px;
+	width: 100%;
+}
+
+/* Table of contents: title for big part */
+.pushmenu h2 {
+	font-size: 16px;
+	line-height: 17px;
+	width: 90%;
+	border-radius: 5px;
+	-webkit-margin-before: 0;
+	-webkit-margin-after: 0;
+	-webkit-margin-start: 0;
+	-webkit-margin-end: 0;
+	margin-bottom: 4px;
+	margin-top: 10px;
+	margin-right: 10px;
+}
+
+/* Table of contents: title for sub-parts (subtitles) */
+.pushmenu h3 {
+	font-size: 12px;
+	width: 80%;
+	border-radius: 5px;
+	-webkit-margin-before: 0;
+	-webkit-margin-after: 0;
+	-webkit-margin-start: 0;
+	-webkit-margin-end: 0;
+	margin-left: 20px;
+	margin-bottom: 4px;
+	line-height: 14px;
+	padding-right: 10px;
+}
+.pushmenu h3:before {
+	content: '● ';
+	position: relative;
+	bottom: .1em;
+}
+
+/* Table of contents: when the user goes over a part of the book */
+.pushmenu a:hover {
+	background-color: #ff3700;
+	color: #fff;
+	border-radius: 5px;
+	padding: 2px;
+}
+
+
+/* ******************************************************* II. COLORS ********************** */
+
+/* Background-color of text on selection */
+::-moz-selection {
+	background-color: #FFA;
+	color: #000;
+}
+::selection {
+	background-color: #FFA;
+	color: #000;
+}
 a {
 	color: inherit;
 }
-
 a:hover {
 	color: #f30;
 }
 
-/*
-************ FIXED BAR *************
 
-*/
 
-/*
-.fixedbar {
-	height: 20px;
-	width: 100%;
-	position: fixed;
-	font-size: 40px;
-	font-family: "Times";
+/* ******************************************************* III. TYPOGRAPHY ******************** */
+
+/* Font-faces used in styles */
+@font-face {
+	font-family: Hkgrotesk;
+	src: url(fonts/HKGrotesk-Regular.otf);
+}
+@font-face {
+	font-family: HkgroteskBold;
+	src: url(fonts/HKGrotesk-Bold.otf);
+}
+body{
+    font-family: "Hkgrotesk";
 }
 
-.fixedbar .logo {
-	width: 100px;
-	height: auto;
-	background-color: none;
-	margin: 0;
-	box-shadow: none;
+/*********************
+     III-1. KEYWORD
+**********************
+Tags linking the book to other books that have similar topics /
+
+/* Keyword: regular style */
+.keyword {
+	background-color: rgba(132,132,132,0.38);
+	cursor: pointer;
+	font-style: normal;
+	border-radius: 5px;
+	padding: 2px;
+	cursor: pointer;
+	line-height: 2em;
+	text-decoration: none;
 }
 
-.fixedbar .title {
-	float: right;
-	position: relative;
-/*font-family: "LeagueGothic";
-    text-transform: uppercase;
-	font-size: 17px;
-	line-height: .9em;
-	max-width: 20%;
+/* Keyword: when is hovered with the mouse */
+.keyword:hover {
 	color: #000;
-	z-index: -99999;
-	font-family: "Hkgrotesk";
+	margin-left: 1px;
+	font-style: italic;
+	background-color: #f8f8f8;
+	text-decoration: none;
 }
 
-*/
+/****************************
+     III-2. IMPORTANT WORD
+*****************************
+Important notion in the text of the book */
 
-
-
-
-
-/*
-************ COVER *************
-
-
-
-.cover-container{
-    position:absolute;left:0;top:0;width:100%;height:auto;z-index:-999;
-}
-#cover{
-margin:0;width:100%;
-    
+/* Importantword: how it displays when the user choses not the make it appear in text */
+.importantword {
+	background-color: transparent;
 }
 
-#cover-shadow{
-    z-index: 99999999999990;
-    position: absolute;
-    margin-top:400px;
-    left:-500px;top:0;width:160%;
-background-color: white;
-    height: 400px;
+/* Importantword: how it displays when the user choses to make it appear in text */
+.importantword_shown {
+	background-color: #ff9f9f;
 }
-*/
-/*
-************ SUMMARY BOX *************
-*/
+
+/*******************************
+     III-3. KEYWORD-SEARCHED
+********************************
+What the user looks for (from the home page where he enters words in the search bar) /
+
+/* Keyword-searched: regular style */
+.keyword-searched {
+	margin-bottom: 14px;
+	background-color: rgba(255,51,0,0.54);
+	cursor: text;
+}
+
+/*********************
+     III-4. BUTTON
+**********************
+Buttons are the way the links to the different downloads & different tools… look like*/
+
+/* Button */
+.button,.hover-button {
+	border-radius: 5px;
+	padding: 2px;
+	cursor: pointer;
+	line-height: 2em;
+}
+
+.button a,.hover-button {
+	text-decoration: none;
+}
+
+.button:hover,.button a:hover,.hover-button:hover,.hover-button a:hover {
+	margin-left: 1px;
+	margin-top: 1px;
+	color: #000;
+}
+
+.button a:active {
+	box-shadow: 4px 4px 2px rgba(128,128,128,0.5);
+	color: #000;
+	border-radius: 5px;
+	padding: 2px;
+}
+
+/* ******************************************************* IV. INFO BOX (TOP) ******************** */
+
+/**********************
+     IV-1. INFO BOX
+***********************
+/* Box containing informations related to book ID */
 #info-box {
 	height: auto;
 	overflow: hidden;
 	width: 100%;
-/*     background-color: #efefef; */
 	color: #000;
 	padding-left: 40px;
-	background-color: rgba(255, 69, 0, 0.1);
+	background-color: rgba(255,69,0,0.1);
 	padding-bottom: 30px;
 }
+.info {
+	height: auto;
+}
 
+/* How is written the book's title */
 #book-title {
 	font-size: 40px;
 	margin-top: 10px;
@@ -138,22 +353,20 @@ background-color: white;
 	max-width: 50%;
 }
 
+/* How is written the book's summary */
 #summary {
 	font-size: 14px;
 	max-width: 50%;
 	border-radius: 10px;
 	padding-right: 10px;
-/* padding: 15px 30px 20px 20px;/*
-    background-color: rgba(255, 255, 255, 0.53);*/
-/* background-color: #f4f4f4; */
 }
 
-.info {
-	height: auto;
-}
+/***********************************
+     IV-2. TABLE OF INFORMATIONS
+************************************
 
+/* Table: left column of the table */
 #summary .summary,#summary .author,#summary .editor,#summary .date,#summary .series,#summary .subjects {
-/* color: #a7a7a7; */
 	color: #000;
 	font-size: 14px;
 	text-decoration: none;
@@ -162,143 +375,150 @@ background-color: white;
 	width: 80px;
 }
 
-/*.author_tofill, .editor_tofill, .date_tofill, .series_tofill, .subjects_tofill{
-    color: black;
-}*/
+/* Table: right column of the table: how the author's name is written */
 .author_tofill {
 	color: #f30;
 	font-size: 40px;
 	line-height: 1.2em;
 }
 
+/* Table: right column of the table: how the editor's name is written */
 .editor_tofill {
 	color: green;
 	font-size: 40px;
 	line-height: 1.2em;
 }
 
+/* Table: right column of the table: how the date is written */
 .date_tofill {
 	color: #00008b;
 	font-size: 40px;
 	line-height: 1.2em;
 }
-/************* Bookcover ***************/
 
+/***********************
+     IV-3. BOOKCOVER
+************************
+The bookcover is an overview of the bookcover of the book */
+
+/* Bookcover container */
 .bookcover {
-    overflow: hidden;
-    width: 99.6px;
-    height: 149.4px;
-    margin: 0 auto;
-   }
+	overflow: hidden;
+	width: 99.6px;
+	height: 149.4px;
+	margin: 0 auto;
+}
 
+/* Bookcover tint */
 .tint {
-    position: relative;
-    float: left;
-    margin-right: 0px;
-    margin-bottom: 0px;
-    cursor: pointer;
-  }
-  
+	position: relative;
+	float: left;
+	margin-right: 0;
+	margin-bottom: 0;
+	cursor: pointer;
+}
+
 .tint:before {
-    content: "";
-    height: 149.4px;
-    display: block;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin-top: 20px;
-    margin-right: 0px;
-    margin-bottom: 0px;
-	background-color: rgba(255, 69, 0, 0.1);
-    -moz-transition: all .3s linear;
-    -webkit-transition: all .3s linear;
-    -ms-transition: all .3s linear;
-    -o-transition: all .3s linear;
-    transition: all .3s linear;
-  }
-  
+	content: "";
+	height: 149.4px;
+	display: block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin-top: 20px;
+	margin-right: 0;
+	margin-bottom: 0;
+	background-color: rgba(255,69,0,0.1);
+	-moz-transition: all .3s linear;
+	-webkit-transition: all .3s linear;
+	-ms-transition: all .3s linear;
+	-o-transition: all .3s linear;
+	transition: all .3s linear;
+}
+
 .tint:hover:before {
-    background: none;
-  }
-
-/************* READER ***************/
-b {
-/* font-family: "HkgroteskBold";*/
-	font-weight: 700;
+	background: none;
 }
 
-.section {
-	color: #171717;
-/*  background-color: #f4f4f4; */
-	background-color: #fff;
-	width: 100%;
-	font-size: 62.5%;
-}
 
-.section ul {
-	color: #000;
-}
+/* ******************************************************* V. NAVIGATION ******************** */
 
-.section current {
-	width: 100%;
-	padding-top: 0;
-}
+/******************
+     V-1. ARROWS
+*******************
+Arrows makes it able to jump directlyto the next (or preview) chapter /
 
-.current {
-	margin-top: 10px;
-}
-
+/* Arrow to go to prev chapter (right) */
 #display1 {
 	position: fixed;
 	right: 2%;
 	top: 45%;
 	z-index: 99;
-    font-size:16px;
+	font-size: 16px;
 }
 
+/* Arrow to go to next chapter (right) */
 #display {
 	position: fixed;
 	right: 2%;
 	bottom: 45%;
 	z-index: 99;
-    font-size:16px;
+	font-size: 16px;
 }
 
+/* Arrow to go to prev chapter (right) on short devices */
 @media (max-height:600px) {
 #display1 {
 	top: 40%;
 }
-
+    
+/* Arrow to go to next chapter (right) on short devices */
 #display {
 	bottom: 40%;
 }
 }
 
+
+/* ******************************************************* VI. READER ******************** */
+
+b {
+	font-weight: 700;
+}
+
+/******************
+     VI-1. SECTION
+*******************
+Style of each chapter (the whole text is divided into "sections" with the markdown export) /
+
+/* Section: colors and background */
+.section {
+	color: #171717;
+	background-color: #fff;
+}
+
+/* ?? */
+.section ul {
+	color: #000;
+}
+
+/* ?? */
+.section current {
+	width: 100%;
+	padding-top: 0;
+}
+
+/* .current: the first section of text has margins */
+.current {
+	margin-top: 10px;
+}
+
 .content {
-/*   overflow-x: hidden;
-   /* margin-left: 15%;
-    margin-right: 15%;*/
 	font-size: 1.2em;
 	line-height: 1.6em;
 	color: #1a1a1a;
 	margin: 0;
-}
-
-.content-pushed {
-/* width: 60%; 
-    margin-left: 10%;
-    margin-right: 5%;*/
-	line-height: 32px;
-	margin-right: 0;
-	margin-left: 0;
-	width: 90%;
-	padding-left: 0;
-}
-
-.content-pushed .text {
-	padding-left: 30px;
 }
 
 .content-pushed .sidenote {
@@ -329,46 +549,12 @@ b {
 	font-size: 10px;
 }
 
-a {
-}
+/***************************************
+     VI-2. TEXT TITLES & FONT STYLES
+*****************************************
+Defines the typography for texts in reader /
 
-.keyword {
-/*   text-shadow: 2px 3px 20px black; */
-	background-color: rgba(132,132,132,0.38);
-	cursor: pointer;
-	font-style: normal;
-	border-radius: 5px;
-	padding: 2px;
-	cursor: pointer;
-	line-height: 2em;
-	text-decoration: none;
-}
-
-.keyword:hover {
-	color: #000;
-	margin-left: 1px;
-	font-style: italic;
-	background-color: #f8f8f8;
-	text-decoration: none;
-}
-
-.keyword-searched {
-	margin-bottom: 14px;
-	background-color: rgba(255,51,0,0.54);
-	cursor: text;
-}
-
-.keyword-searched:hover {
-}
-
-.importantword {
-    background-color:transparent;
-}
-
-.importantword_shown{
-    background-color:#ff9f9f;
-}
-
+/* Title of big part */
 .section h2 {
 	margin-top: 20px;
 	margin-left: 0;
@@ -376,58 +562,55 @@ a {
 	padding-right: -40px;
 	padding-top: 10px;
 	max-width: 700px;
-/*  font-family: "Umemincho"; */
 	font-family: "Georgia";
 	font-size: 4em;
 	line-height: 1em;
-/*
-background-color: #c6c6c6;
-border-radius:5px;
--moz-box-shadow: 5px 5px 70px 60px #c6c6c6;
--webkit-box-shadow: 5px 5px 70px 60px #c6c6c6;
--o-box-shadow: 5px 5px 70px 60px #c6c6c6;
-box-shadow: 5px 5px 70px 60px #c6c6c6;
-filter:progid:DXImageTransform.Microsoft.Shadow(color=#c6c6c6, Direction=134, Strength=50s);*/
 }
 
+/* Title of sub-part (subtitle) */
 .section h3 {
 	font-size: 24px;
 }
 
+/* Font weight */
 .section p,h2,h3,h1,img,.author {
-	margin-right: 40%;
 	font-weight: 400;
-	width: auto;
 }
 
-.section .author,.section .words {
-	font-size: 1em;
-}
-
+/* Font-size for the reading text: !! do not change the units (em) to pixels !! */
 .section p {
 	font-size: 1.6em;
 	line-height: 1.7em;
 }
 
+/* Font-size for the informations: !! do not change the units (em) to pixels !! */
+.section .author,.section .words {
+	font-size: 1em;
+}
+
+/* author: the way the name of the author for each chapter displays */
 .author {
 	margin-left: 0;
 	margin-right: 0;
 	font-size: .7em;
 	text-transform: uppercase;
 	text-decoration: underline;
-/*  border-bottom: 10px;
-    border-bottom-style: solid;
-    border-bottom-color: rgba(0, 255, 255, 0.33); */
 }
 
+/* words: the way the keywords in each chapter display */
 .words {
 	font-size: .7em;
 	text-transform: uppercase;
 	text-decoration: none;
 }
 
+/****************************
+     VI-3. IMAGES IN TEXT
+*****************************
+Style of each images appearing in the reader, in .text /
+
+/* img: style for each image that appears in the text */
 img {
-	z-index: -1.0E+16;
 	width: 55%;
 	text-align: center;
 	margin-top: 40px;
@@ -440,26 +623,12 @@ img {
 	filter: progid:DXImageTransform.Microsoft.Shadow(color=#e6e6e6,Direction=134,Strength=50s);
 }
 
-section.content {
-/* padding: 10px 20px;*/
-}
 
-.text {
-	margin-top: 0;
-	margin-left: 0;
-	padding-left: 30px;
-/* padding: 0px 35px 0px 35px;*/
-	border-top: 1px solid #000;
-}
+/****************************
+     VI-4. REFERENCE-LIST
+*****************************
+The list of references that writers have used to write their texts, appears in the end of each text */
 
-.about_authors {
-	background-color: gray;
-	width: 400px;
-	height: 200px;
-	border-radius: 20px;
-}
-
-/************* REFERENCE LISTS ***************/
 #reference-list,#reference-list-1,#reference-list-2,#reference-list-3,#reference-list-4,#reference-list-5,#reference-list-6,#reference-list-7,#reference-list-8,#reference-list-9,#reference-list-10 {
 	font-family: "Verdana";
 	font-size: .8em;
@@ -472,7 +641,14 @@ section.content {
 	text-indent: 20px;
 }
 
-/************* NOTE ***************/
+/***************************
+    VI-5. SIDENOTES
+****************************
+Sidenotes are equivalent to footnotes, they display on right of the text.
+Sidenotes are transformed from footnotes to sidenotes with md-sidenotes.js script.
+They display on wide devices. */
+
+/* footnoteRef: Reference (number) to the note, that is in the text, after the word commented */
 .footnoteRef {
 	font-size: .7em;
 	text-decoration: none;
@@ -480,6 +656,7 @@ section.content {
 	line-height: .7em;
 }
 
+/* sidenote: Content of the note that displays on the right */
 .sidenote {
 	clear: right;
 	margin-right: 17%;
@@ -509,7 +686,18 @@ section.content {
 	line-height: 13px;
 }
 
-/************* TOOL BOX (right) ***************/
+/* ******************************************************************************************
+************************************************************* VII. TOOLS ********************
+****************************************************************************************** */
+
+/******************************
+     VII-1. TOOLBOX (right)
+******************************* 
+
+!! do not change the structure !!
+
+The toolbox is the container of the different tools. */
+
 label {
 	position: fixed;
 	background-color: none;
@@ -585,14 +773,6 @@ label {
 }
 
 #toggle:checked + label:after {
-/*content:"X";
-    z-index:999;
-    border:0px;
-    position: absolute;
-    margin-right: -20px;
-    margin-top:0px;
-    padding: 0;
-    background-color:rgb(255, 190, 173);*/
 	content: "Tools";
 	position: fixed;
 	background-color: #fff;
@@ -685,14 +865,6 @@ label {
 }
 
 #toggle2:checked + label:after {
-/*content:"X";
-    z-index:999;
-    border:0px;
-    position: absolute;
-    margin-right: -20px;
-    margin-top:0px;
-    padding: 0;
-    background-color:rgb(255, 190, 173);*/
 	content: "2";
 	position: fixed;
 	background-color: #fff;
@@ -705,7 +877,12 @@ label {
 	z-index: 999999;
 }
 
-/************* SEARCH BOX ***************/
+/********************************
+     VII-2. SEARCH BOX (right)
+*********************************
+Search box is where the user can enter keyword (in input) and look for words in text */
+
+/* container of the search box */
 #live-search-container {
 	padding: 2px 4px 10px;
 	margin-left: 0;
@@ -713,6 +890,7 @@ label {
 	border-radius: 5px;
 }
 
+/* search box */
 #live-search {
 	position: relative;
 	border-style: none;
@@ -721,6 +899,7 @@ label {
 	right: 2%;
 }
 
+/* where the user writes */
 fieldset {
 	margin: 0;
 	padding: 0;
@@ -733,6 +912,7 @@ fieldset {
 #filter > * {
 }
 
+/* how is the text the user writes when searching */
 #filter-count {
 	color: #000;
 	font-size: 12px;
@@ -763,20 +943,21 @@ input:hover {
 	border-radius: 5px;
 }
 
+/* how text of the book displays when a result is found */
 .search-found {
 	color: #000;
 }
 
+/* how "importantword" of the book displays when a result is found */
 .search-found .importantword {
-/*   text-shadow: 2px 3px 20px black; */
 	font-style: normal;
 	cursor: text;
 	color: #000;
 	border-bottom: 0 dotted #000;
 }
 
+/* how "keyword-searched" displays when a result is found */
 .search-found .keyword-searched {
-/*   text-shadow: 2px 3px 20px black; */
 	margin-bottom: 0;
 	background-color: #ff0;
 	cursor: text;
@@ -784,18 +965,20 @@ input:hover {
 	color: #000;
 }
 
+/* how the text of the book displays when no result is found */
 .search-notfound {
 	color: rgba(203,203,203,0.22);
 }
 
+/* how "importantword" of the book displays when a result is found */
 .search-notfound .importantword {
-/*   text-shadow: 2px 3px 20px black; */
 	font-style: normal;
 	cursor: text;
 	color: rgba(203,203,203,0.22);
 	border-bottom: 0 dotted #000;
 }
 
+/* how "keyword-searched" displays when no result is found */
 .search-notfound .keyword-searched {
 	margin-bottom: 0;
 	background-color: rgba(255,255,255,0);
@@ -815,7 +998,11 @@ input:hover {
 	margin-top: 2px;
 }
 
-/************* Tool FONTSIZE ***************/
+/*********************************
+     VII-3. FONT SIZE (right)
+**********************************
+Changes the font of .section .text in the reader */
+
 #tool-fontsize {
 	position: fixed;
 	background-color: #fff;
@@ -824,45 +1011,50 @@ input:hover {
 	top: 80px;
 	font-family: "HKGrotesk";
 	font-weight: 400;
-    width: auto;
-    height: auto;
-}
-#sizeUp #button2, #sizeDown #button1{
-    background-color:transparent;
-    border:0px;
-    cursor: pointer;
-    font-size: 30px;
-    display: inline-block;
-    float: left;
-    width: auto;
-    height: auto;
-}
-#sizeDown, #letter, #sizeUp{
-    float: left;
-    font-size: 30px;
+	width: auto;
+	height: auto;
 }
 
-/************* Citation BOX ***************/
+#sizeUp #button2,#sizeDown #button1 {
+	background-color: transparent;
+	border: 0;
+	cursor: pointer;
+	font-size: 30px;
+	display: inline-block;
+	float: left;
+	width: auto;
+	height: auto;
+}
+
+#sizeDown,#letter,#sizeUp {
+	float: left;
+	font-size: 30px;
+}
+
+/***********************************
+     VII-4. CITATION BOX (right)
+************************************
+Makes the user able to copy and paste references to the book and the webpage (conventionally written) */
+
+/* in-text: Box containing the box */
 .in-text {
 	background-color: #C7C7BB;
 }
 
+/* tip: Box containing the references */
 .tip {
 	background-color: #ff0;
-/*opacity: 0.9;*/
 	-webkit-filter: drop-shadow(2px 2px 10px rgba(0,0,0,0.9));
 	filter: drop-shadow(2px 2px 10px rgba(0,0,0,0.9));
-/*-webkit-filter: blur(5px);
-  	filter: blur(5px);*/
 	font-size: 14px;
 	max-width: 25%;
-/*overflow: scroll;*/
 	padding: 2px 7px;
 	border: 1px solid #000;
 	position: absolute;
 	right: 0;
 }
 
+/* x: Box containing the references */
 #x {
 	position: inherit;
 	right: -3px;
@@ -893,25 +1085,7 @@ input:hover {
 	font-size: 10px;
 	font-family: "Hkgrotesk";
 }
-/*
-#citation-box1 {
-	position: absolute;
-	width: 320px;
-	height: auto;
-	top: 0;
-	right: 0;
-	font-size: 10px;
-	font-family: "Hkgrotesk";
-}
 
-#toolbutton1 {
-	background-color: #fff;
-	right: 0;
-	position: fixed;
-	z-index: 99999;
-	font-family: "HKgrotesk";
-}
-*/
 button {
 	margin: 0;
 	font: 11px HKgrotesk;
@@ -928,243 +1102,6 @@ button {
 	border-radius: 5px;
 }
 
-/*textarea {
-	min-height: 50px;
-	width: 250px;
-	font-family: "Hkgrotesk";
-}*/
-
-/************* MENU *************************************************/
-/* PRINT / SHARE / FILES */
-.menu-below {
-	padding-left: 20px;
-	-webkit-transition: all .3s ease;
-	-moz-transition: all .3s ease;
-	transition: all .3s ease;
-	margin: auto;
-	text-decoration: none;
-	border-bottom: 0;
-	background-color: rgba(255,51,0,0.33);
-}
-
-.menu-below hr {
-	margin-top: 5px;
-	height: 1px;
-	border: 0;
-	padding: 0;
-}
-
-.menu-below:hover hr {
-	margin-top: 160px;
-	background-color: #f30;
-	color: #fff;
-}
-
-.button-menu-below {
-	margin-right: 70px;
-	position: relative;
-	float: left;
-}
-
-.text-share {
-	display: block;
-	margin: 0;
-	text-transform: uppercase;
-}
-
-#hover-button {
-	display: none;
-	position: absolute;
-}
-
-.menu-below:hover #hover-button {
-	display: block;
-	margin: 0;
-	-webkit-transition: all .3s ease;
-	-moz-transition: all .3s ease;
-	transition: all .3s ease;
-}
-
-.menu-below:hover .button-menu-below {
-	margin-right: 70px;
-	text-decoration: none;
-	-webkit-transition: all .3s ease;
-	-moz-transition: all .3s ease;
-	transition: all .3s ease;
-}
-
-.hover-button {
-	text-decoration: none;
-}
-
-.menu-below .button-menu-below a {
-	text-decoration: none;
-	font-size: 14px;
-	text-transform: none;
-	border-radius: 5px;
-	padding: 2px;
-}
-
-.text-share #hover-button .hover-button a {
-	background-color: rgba(95,95,95,0.29);
-	border-radius: 5px;
-}
-
-/********************* STRUCTURE **********************/
-.pushmenu {
-/* this is the nav that is hidden */
-	width: 20%;
-	height: 100%;
-	top: 0;
-	position: fixed;
-	background-color: rgba(255, 69, 0, 0.28);
-	overflow-x: hidden;
-	z-index: 1.0E+15;
-}
-
-#book-info {
-	margin-bottom: 20px;
-}
-
-#book-toc {
-	margin-left: 5px;
-	width: 100%;
-}
-
-/* links style */
-.button,.hover-button {
-	border-radius: 5px;
-	padding: 2px;
-	cursor: pointer;
-	line-height: 2em;
-}
-
-.button a,.hover-button {
-	text-decoration: none;
-}
-
-.button:hover,.button a:hover,.hover-button:hover,.hover-button a:hover {
-	margin-left: 1px;
-	margin-top: 1px;
-	color: #000;
-}
-
-.button a:active {
-	box-shadow: 4px 4px 2px rgba(128,128,128,0.5);
-	color: #000;
-	border-radius: 5px;
-	padding: 2px;
-}
-
-.pushmenu .date {
-	font-size: 12px;
-}
-
-.pushmenu-left,.pushmenu-left2 {
-	left: -20%;
-	overflow-y: scroll;
-}
-
-.pushmenu-left.pushmenu-open,.pushmenu-left2.pushmenu-open {
-	left: 0;
-/*  border-right: solid 1px black;*/
-	border-right: solid 0 #000;
-	-webkit-box-shadow: 0 10px 15px rgba(0,0,0,0.2);
-	-moz-box-shadow: 0 10px 15px rgba(0,0,0,0.2);
-	box-shadow: 0 10px 15px rgba(0,0,0,0.2);
-}
-
-.pushmenu-push,.pushmenu-push2 {
-	overflow-x: hidden;
-	position: relative;
-	left: 0;
-}
-
-.pushmenu-push-toright {
-	left: 20%;
-}
-
-.pushmenu a {
-	text-decoration: none;
-	margin: 0;
-}
-
-.pushmenu h2{
-	font-size: 16px;
-	line-height: 17px;
-	width: 90%;
-	border-radius: 5px;
-	-webkit-margin-before: 0;
-	-webkit-margin-after: 0;
-	-webkit-margin-start: 0;
-	-webkit-margin-end: 0;
-	margin-bottom: 4px;
-	margin-top: 10px;
-	margin-right: 10px;
-}
-
-.pushmenu h3{
-	font-size: 12px;
-	width: 80%;
-	border-radius: 5px;
-	-webkit-margin-before: 0;
-	-webkit-margin-after: 0;
-	-webkit-margin-start: 0;
-	-webkit-margin-end: 0;
-	margin-left: 20px;
-	margin-bottom: 4px;
-	line-height: 14px;
-	padding-right: 10px;
-}
-
-.pushmenu h3:before {
-	content: '● ';
-	position: relative;
-	bottom: .1em;
-}
-
-.pushmenu a:hover {
-	background-color: #ff3700;
-	color: #fff;
-	border-radius: 5px;
-	padding: 2px;
-}
-
-/*Transition*/
-.pushmenu,.pushmenu-push {
-	-webkit-transition: all .3s ease;
-	-moz-transition: all .3s ease;
-	transition: all .3s ease;
-}
-
-.pushmenu-left .pushmenu-open /*.buttonset*/ {
-	position: fixed;
-	left: 400px;
-}
-
-.buttonset {
-	position: fixed;
-	top: 0;
-	left: 0;
-}
-
-/*#book-toc {
-	position: relative; 
-}*/
-
-/********** VERTICAL SCROLLING INDICATOR *************/
-/*#vertical-progress-bar {
-	height: 800px;
-
-	position: absolute;
-	right: 10px;
-	width: 10px;
-	background-color: blue;
-
-
-}*/
-
-
 
 #nav_list /* button to active the pushmenu */ {
 /* background: url(http://www.onlywebpro.com/demo/jquery/icon_nav.png) no-repeat;*/
@@ -1176,14 +1113,13 @@ button {
 	text-align: left;*/
 /* background: linear-gradient(rgba(255, 51, 0, 0.4) 50%, rgba(255, 255, 255, 1) 50%); 
        background: linear-gradient(rgba(0, 0, 0, 0.78) 50%, rgba(255, 255, 255, 1) 50%);*/
-	/*color: #000;*/
-	/*border-top: none;*/
-	border: 0px solid #000;
-	padding: 0px;
-	/*margin-left: 0;*/
+/*color: #000;*/
+/*border-top: none;*/
+	border: 0 solid #000;
+	padding: 0;
+/*margin-left: 0;*/
 	background-color: #fff;
-	/*border-radius: 5px;*/
-
+/*border-radius: 5px;*/
 /* box-shadow: 0px -3px 15px 8px white;
     -webkit-box-shadow: 0px -3px 15px 8px white;
     -moz-box-shadow: 0px -3px 15px 8px white;*/
@@ -1194,11 +1130,9 @@ button {
 
 #verticalScroll {
 	width: 20px;
-	height: 0px;
+	height: 0;
 	background-color: red;
 	opacity: .7;
-
-
 }
 
 .nav_list {
@@ -1213,7 +1147,10 @@ button {
 	margin-left: 70px;
 }
 
-/************* FOOTER ***************/
+/* ******************************************************************************************
+************************************************************* VIII. FOOTER ******************
+****************************************************************************************** */
+
 #pre-footer {
 	width: 100%;
 	height: 400px;
@@ -1249,137 +1186,32 @@ button {
 	margin-left: 10%;
 }
 
-/*
-
-************ PARALLAX *************
-
-
-.parallax{
-    width: auto;
-}
-
-[class*="bg__"] {
-  height: 800px;
-  text-indent: -9999px;
-  fix background
-  background-attachment: fixed;
-  background-position: center center;
-  background-size: cover;
-  &:nth-child(2n) {
-    box-shadow: inset 0 0 1em #111;
-  }
-}
-
-.bg__foo {
-background-image: url('image/cover.jpg');
-    background-size: contain;
-    background-position:left top;
-    position: relative;
-}
-
-.cover {
-background-image: url('image/cover.jpg');
-    width: inherit;
-    position: relative;
-    background-repeat: no-repeat;
-}
-
-
-.bg__bar {
-  background-image: url(
-    https://s3-us-west-2.amazonaws.com/s.cdpn.io/30354/parallax2.jpg
-  );
-}
-
-.bg__baz {
-  background-image: url(
-    https://s3-us-west-2.amazonaws.com/s.cdpn.io/30354/parallax3.jpg
-  );
-}
-
-.bg__bazz {
-  height: 100vh;
-
-  background-image: url(
-    https://s3-us-west-2.amazonaws.com/s.cdpn.io/30354/parallax1.jpg
-  );
-}
-*/
-
-
-/*
-#a a{
-  text-decoration: none;
-  border: none;
-  color: red;
-}
-*/
-
-
-/*
-#a a:hover{
-  color: green;
-  background-color: transparent;
-}
-*/
-
-/*
-#myPopup p{
-   color: blue;
-  -webkit-user-select: all  !important;  /* Chrome all / Safari all 
-  -moz-user-select: all !important;     /* Firefox all 
-  -ms-user-select: all !important;      /* IE 10+ 
-   user-select: all !important;
-}
-*/
-
-
-/*button {
-    align-items: flex-start;
-    text-align: center;
-    cursor: default;
-    color: black;
-    padding: 0px 0px 0px;
-    border: 0px;
-    border-image-source: none;
-    border-image-slice: none;
-    border-image-width: none;
-    border-image-outset: none;
-    border-image-repeat: none;
-    background-color: white;
-    box-sizing: none;
-}*/
-
-
 .in-text {
 	background-color: #C7C7BB;
 }
 
 .tip {
-	background-color: yellow;
-	/*opacity: 0.9;*/
+	background-color: #ff0;
+/*opacity: 0.9;*/
 	-webkit-filter: drop-shadow(2px 2px 10px rgba(0,0,0,0.9));
-  filter: drop-shadow(2px 2px 10px rgba(0,0,0,0.9));
-  	/*-webkit-filter: blur(5px);
+	filter: drop-shadow(2px 2px 10px rgba(0,0,0,0.9));
+/*-webkit-filter: blur(5px);
   	filter: blur(5px);*/
 	font-size: 14px;
 	max-width: 300px;
-	/*overflow: scroll;*/
+/*overflow: scroll;*/
 	padding: 2px 7px;
-	border: 1px solid black;
-  border-radius: 5px;
+	border: 1px solid #000;
+	border-radius: 5px;
 	position: absolute;
 	right: 0;
-        height: 200px;
-
+	height: 200px;
 }
-
 
 .tip p {
-  margin: 0;
-    height: 200px;
+	margin: 0;
+	height: 200px;
 }
-
 
 #x {
 	position: inherit;
@@ -1392,81 +1224,51 @@ background-image: url('image/cover.jpg');
 	text-align: center;
 }
 
-
-
 #x a {
 	text-decoration: none;
-	color: black;
+	color: #000;
 }
-
 
 .keyword {
 	color: #454545;
-    /*text-shadow: 1px 1px #292929;
-   /*-webkit-text-fill-color: #FF9980;  /*Will override color (regardless of order) */
-   /*-webkit-text-stroke-width: .3px;
-   -webkit-text-stroke-color: #1F1F1F;	/*font-weight: bold !important;
-	font-family: "Baskerville";
-	border-radius: 20%;
-    background-color: #DEDEDE;
-    box-shadow:
-        0px 0px 60px 0px #BEBEBE, 
-        0 0 0px 0px #DEDEDE;*/
-
-	background: 
-	-webkit-linear-gradient(#FF9980, #292929);
+	background: -webkit-linear-gradient(#FF9980,#292929);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
 
-
-
 .full-citation {
-  text-align: left;
-  word-wrap: break-word;
-  background-color: yellow;
-  min-height: 6em;
-  width: 95%;
-  max-width: 95%;
-  margin-top: 1%;
-  margin-left: 1%;
-  margin-bottom: 1%
-
+	text-align: left;
+	word-wrap: break-word;
+	background-color: #ff0;
+	min-height: 6em;
+	width: 95%;
+	max-width: 95%;
+	margin-top: 1%;
+	margin-left: 1%;
+	margin-bottom: 1%;
 }
 
-
 #citation-box {
-  top: 10%;
-  right: 1%;
-  position: fixed;
-/*
-  position: absolute;
-  right: 2%;
-*/
-  border: 1px solid black;
-  border-radius: 5px;
-  background-color: #C7C7BB;
-  width: 30%;
-  min-height: 65%;
+	top: 10%;
+	right: 1%;
+	position: fixed;
+	border: 1px solid #000;
+	border-radius: 5px;
+	background-color: #C7C7BB;
+	width: 30%;
+	min-height: 65%;
 }
 
 .confirmation {
-  background-color: green;
-  display: inline;
-  margin: auto;
+	background-color: green;
+	display: inline;
+	margin: auto;
 }
 
+/* ******************************************************************************************
+************************************************************* IX. DEVICES *******************
+****************************************************************************************** */
 
-
-
-
-
-
-
-/*
-/************* DEVICES ***************/
-
-/*
 smartphones, iPhone, portrait 480x320 phones */
 @media (min-width:320px) {
 #book-title {
@@ -1542,11 +1344,10 @@ smartphones, iPhone, portrait 480x320 phones */
 	font-size: 1.4em;
 	line-height: 1.55em;
 }
-    
-    .sidenote{
-        display: none;
-    }
 
+.sidenote {
+	display: none;
+}
 }
 
 /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
@@ -1833,8 +1634,8 @@ img {
 	width: 85%;
 }
 
-.section h2{
-    width: 85%;            
+.section h2 {
+	width: 85%;
 }
 
 .sidenote {
@@ -1855,29 +1656,31 @@ img {
 .sidenote p {
 	font-size: 10px;
 	line-height: 14px;
-    width: 100%;
+	width: 100%;
 }
+
 .content-pushed .section p {
 	font-size: 1.4em;
 	line-height: 1.55em;
 	width: 75%;
 }
+
 .content-pushed .sidenote {
 	width: 150px;
-	margin-right: 0%;
+	margin-right: 0;
 	padding-right: 2px;
 	font-size: 10px;
 	line-height: 14px;
 }
-.content-pushed .sidenote p{
+
+.content-pushed .sidenote p {
 	font-size: 10px;
 	line-height: 14px;
-    width: 100%;
+	width: 100%;
 }
 
-
-.content-pushed .section h2{
-    width: 75%;            
+.content-pushed .section h2 {
+	width: 75%;
 }
 
 img {
@@ -1894,3 +1697,4 @@ img {
 	filter: progid:DXImageTransform.Microsoft.Shadow(color=#e6e6e6,Direction=134,Strength=50s);
 }
 }
+
