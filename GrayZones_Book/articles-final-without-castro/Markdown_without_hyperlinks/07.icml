@@ -845,7 +845,6 @@
 							<Br/>
 						</CharacterStyleRange>
 					</ParagraphStyleRange>
-					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph"/>
 				</Footnote>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">

@@ -1,0 +1,91 @@
+INSTRUCTIONS D'IMPRESSION ADOBE INDESIGN POUR LE RAPPORT DU PRESTATAIRE DE SERVICES
+
+NOM DE LA COMPOSITION : grayzones_content_test1.indd
+
+DATE D'ASSEMBLAGE : 16/11/15 16:05
+Date de création : 12/11/15
+Date de modification : 16/11/15
+
+INFORMATIONS DE CONTACT
+
+Nom de la société : 
+Contact : 
+Adresse : 
+
+
+
+
+
+Téléphone : 
+Télécopie : 
+Adresse électronique : 
+
+INSTRUCTIONS SPECIALES ET AUTRES REMARQUES
+
+
+
+
+
+
+Modules externes 0
+Objets non opaques :Page2
+
+POLICES
+7 Police(s) utilisée(s); 0 Manquant(e)(s), 0 Incorporé(e)(s), 0 Incomplète(s), 0 Protégée(s)
+
+Polices assemblées
+- Nom : HelveticaNeue; Type : TrueType, Etat : OK
+- Nom : HelveticaNeue-Bold; Type : TrueType, Etat : OK
+- Nom : HelveticaNeue-Light; Type : TrueType, Etat : OK
+- Nom : HelveticaNeue-LightItalic; Type : TrueType, Etat : OK
+- Nom : HelveticaNeue-Medium; Type : TrueType, Etat : OK
+- Nom : Lato-Bold; Type : TrueType, Etat : OK
+- Nom : Lato-Regular; Type : TrueType, Etat : OK
+
+
+COULEURS ET ENCRES
+4 Encre(s) quadri; 0 Encre(s) de tons directs
+
+- Nom et type : Cyan quadri; Angle : 0,000; Lignes/pouce : 0,000
+- Nom et type : Magenta quadri; Angle : 0,000; Lignes/pouce : 0,000
+- Nom et type : Jaune quadri; Angle : 0,000; Lignes/pouce : 0,000
+- Nom et type : Noir quadri; Angle : 0,000; Lignes/pouce : 0,000
+
+
+LIENS ET IMAGES
+(Liens manquants et incorporés uniquement)
+Liens et images : 9 Lien(s) détecté(s); 0 Modifié(s), 0 Manquant(e)(s) 0 Inaccessible
+Images : 0 Incorporé(e)(s), 0 utilisant l'espace colorimétrique RVB
+
+
+PARAMETRES D'IMPRESSION
+PPD : N/A, (Photosmart C6300 series [41DD81])
+Impression sur : Imprimante
+Nombre de copies : 1
+Planches : Non
+Pages paires/impaires : Les deux
+Pages : Toutes
+Epreuve : Non
+Mosaïque : Sans
+Echelle : 100 %, 100 %
+Position de la page : En haut, à gauche
+Imprimer les calques : Calques visibles et imprimables
+Marques d'imprimeur : Sans
+Fond perdu : 0 mm, 0 mm, 0 mm, 0 mm
+Couleur : RVB composite
+Mode de recouvrement : Sans
+Envoi des données d'images : Echantillonnage optimisé
+Substitution d'image OPI/DCS : Non
+Format de page : Personnalisé : 155,9 mm x 233,8 mm
+Dimensions du papier : 210,005 mm x 297 mm
+Orientation : Portrait
+Négatif : Non
+Symétrie : Désactivée
+
+
+LISTE DES FICHIERS DE L'ENVOI
+
+1. grayzones_content_test1.indd; type : Composition Adobe InDesign; taille : 2516K
+2. HelveticaNeue.dfont; type : Fichier de polices; taille : 6580K
+3. Lato-Bold.ttf; type : Fichier de polices; taille : 618K
+4. Lato-Regular.ttf; type : Fichier de polices; taille : 617K
