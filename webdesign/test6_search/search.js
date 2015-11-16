@@ -1,30 +1,7 @@
 $(document).ready(function() {
-
-	// $('.section').each(function(nr){
-	// 	$(this).attr('id', 'section'+nr);
-	// });
-
-	// // use document.body if the whole page is scrollable
-	// var myViewport = document.getElementById('myViewport');
-	// var firstSection = document.getElementById('section0');
-
-	// myViewport.addEventListener(
-	//     'scroll',
-	//     function() {
-	//         var location = firstSection.viewportTopLocation;
-	//         console.log(
-	//             'The viewport is at ' + location +
-	//             ' relatively to the first section'
-	//         );
-	//     },
-	//     false
-	// );
-
-
 /////////////////////////////////////////
-//PUSH MENU ON THE LEFT
+////PUSH MENU ON THE LEFT
 /////////////////////////////////////////
-
 	$menuLeft = $('.pushmenu-left');
 	$nav_list = $('#nav_list');
 	
@@ -34,10 +11,9 @@ $(document).ready(function() {
 		$menuLeft.toggleClass('pushmenu-open');
 	});
 
-///////////////////////
-//SCROLL PROGRESSION
-//////////////////////
-
+///////////////////////////
+////SCROLL PROGRESSION BARS
+///////////////////////////
 	var nr = 1;
 	$('.horizScroll').each(function() {
 		$(this).attr('id', 'title'+nr);
@@ -52,99 +28,36 @@ $(document).ready(function() {
         var verticalBar = (scrollTop / bottom)*windowHeight;
         $("#menu_bar_scroll").css('height', verticalBar);
 
-        
-     //    var e = $('#e').offset().top;	// height at which width=0
-     //    var zero = s - e;
-     //    var f = $('#f').offset().top;	//heigth at which width/heigth=1
-     //    var one = f - e;
-
-     //    $('p').text(e);
-     //    var q = (zero / one)*200;		// substitute the number with desired 
-     //    $('#d').css('width', q);		// height/width
-     
-
-
-////HORIZONTAL SCROLL BARS
-
-
-	
-
-
-		// var topChapter = $('.section').offset().top;
-		// var bottomChapter = $('.section').next().offset().top;
-		// var bottomChapter = $('#chapter'+(n+1)).offset().top;
-
-
-
-///with sections
-		 $('.section').each(function() {
-		 	var top = $(this).offset().top;	// 1
-		 	var a = $(this).attr('data-top', top);
-		// 	var b = a.next().attr('data-top');	// 2
-		// 	console.log('top: '+top);
-		// 	console.log('b: '+a.next().attr('data-top'));
-
-
-
-		// 	var n = 1;
-		// 	$('#title'+n).each(function() {
-		// 		var c = scrollTop - top;
-		// 		var d = b - top;
-		// 		var e = $(this).css('max-width');
-		// 		var f = (c/d)*e;
-		// 		n++;
-		// 	});
-		 });
-
-///with ids
+////////CREATES THE HORIZONTAL PROGRESSION
+////////SCROLL BARS IN THE MENU
 		var n = 1;
 		$('.section').each(function(){
 			$('#title'+n).each(function(){
 				var a = $('#chapter'+n).offset().top;
-				var b = $('#chapter'+(n+1)).offset().top; // try with different selectors for *NEXT*
-				
-				// console.log('a: '+a);
-				// console.log('b: '+b);
+				var b = $('#chapter'+(n+1)).offset().top;
 
-				var c = scrollTop - a;
-				var d = b - a;
-				var ee = $(window).width();
-				var e = 28/100*ee;
+				var c = scrollTop - a; // POSITION AT WHICH TO START SCROLL
+				var d = b - a;	// LENGTH IN PIXELS OF THE INDIVIDUAL ARTICLE
+				var ee = $(window).width(); // WIDTH OF THE WINDOW SCREEN
+				var e = 28/100*ee;	// THIS CALCULATES 28% OF THE WINDOW SCREEN (WHICH
+									// IS THE WIDTH OF THE TOC MENU)
 
-				var f = (c / d) * e;
+				var f = (c / d) * e; // SUBSTITUTE OR CALCULATE E ABOVE FOR ANY DESIRED WIDTH OF THE SCROLL BAR
 				$(this).css('width', f);
 
-				console.log('c: '+c);
-				console.log('d: '+d);
-				console.log('e: '+e);
+				// console.log('c: '+c);
+				// console.log('d: '+d);
+				// console.log('e: '+e);
 				n++;
 			});
-
 		});
-
-
-
-
-
-		// var n = 1;
-		// $('#title'+n).each(function(){
-
-		// 	var horizontalBars = ((scrollTop - topChapter) /
-		// (bottomChapter - topChapter)) * $('#title'+(n+1)).css('max-width');
-
-		// 	$(this).css('width', horizontalBars);
-		// 	n++;
-		// });
-
-        
      });
 
 /////////////////
-//SEARCH FUNCTION
+////SEARCH FUNCTION
 /////////////////
 	var elem = $('<div id="search_ui" style="position: fixed; float: right; right: 0px; top: 0px; display: none;"><button id="cancel" style="margin: 5px 0px 5px 0px;">Cancel</button></div>');
 	var maxCount;
-
 	$('#live-search').append(elem);
 
 ////this remove the classes in the text relating to search-highlighting
@@ -157,7 +70,7 @@ $(document).ready(function() {
 		});
         $('#filter-count').hide();
 	};
-
+////ON KEYUP DO THE FOLLOWING THINGS
 	$('#filter').on('keyup', function(e){
 ////////ON ENTER GO TO THE FIRST INSTENCE
 		if(e.keyCode == 13){
@@ -173,13 +86,11 @@ $(document).ready(function() {
 			return false;
 		}
 		
-////////Retrieve the input field text and reset the count to zero
+////////RETRIEVE THE INPUT FIELD TEXT AND RESET THE COUNT TO ZERO
 		var filter = $(this).val();
-		// Loop through the text
+////////IF THE ELEMENT DOES NOT CONTAIN THE TEXT PHRASE FADE IT OUT
 		$('h1, h2, h3, h4, p, div, ol, a').each(function(){
-////////////If the element does not contain the text phrase fade it out
 			if ($(this).text().search(new RegExp(filter, "i")) < 0) {
-				// add classes to the block elements
 				$(this).addClass('search-notfound');
 				$(this).removeClass('search-found');
 			} else {
@@ -194,14 +105,12 @@ $(document).ready(function() {
 ////////GENERATE IDs FOR ALL HIGHLIGHTED HITS
         $('.highlight').each(function(number) {
         	maxCount = number;
-       		console.log("highlight " +number);
        		$("#filter-count").show().text("Number of Hits = "+maxCount);
         	$(this).attr('id', 'hit'+number);
         });
 
-////////ON CLICK GO TO THE NEXT INSTANCE
+////////GET THE NUMBER OF HITS
         var counter = -1;
-
         function getHitCount() {
 	    	var i=0;
     		while ($('#hit'+i).length) {
@@ -212,31 +121,22 @@ $(document).ready(function() {
 
         function toNext(n){
         	counter = n;
-        	//console.log(count+ " ,"+ counter)
-        	// var next_nr = $('#next').attr('href').match(/\d+/);
-        	//  if (next_nr > count) {
-        	// 	counter = 0;
-        	//  }
         	if(counter < maxCount){
         		counter++;
         	}else{
         		counter = 0;
         	}
-        	//console.log("again " +count+ " ,"+ counter)
 	        $('#hit'+counter).css('background-color', 'yellow');
 	       	$('#hit'+(counter-1)).css('background-color', '#BFBFBF');
         }
 
+////////ON CLICK GO TO THE NEXT INSTANCE
         $('#next').click(function() {
-        	// if (0 == counter) {
-        	// 	counter = getHitCount();
-        	// }
         	toNext(counter);
         	$(this).attr('href', '#hit'+counter);
         	$('#prev').attr('href', '#hit'+(counter-2));
         });
 
-////////ON CLICK GO TO THE PREVIOUS INSTANCE
         function toPrev(n) {
         	counter = n;
         	if(counter > 0){
@@ -249,40 +149,14 @@ $(document).ready(function() {
         	$('#hit'+(counter+1)).css('background-color', '#BFBFBF');
         }
 
+////////ON CLICK GO TO THE PREVIOUS INSTANCE
         $('#prev').click(function() {
         	console.log("prev : "+counter);
-        	// if (0 == counter) {
-        	// 	counter = getHitCount();
-        	// }
         	toPrev(counter);
         	$(this).attr('href', '#hit'+(counter));
 	        $('#next').attr('href', '#hit'+(counter+2));
         });
 
-
-	    /*$(document).keypress(function(event) {
-		    if (event.keyCode == 13) {
-				toNext(counter);
-		    }
-		});*/
-
-
-/*
-	    $(document).keypress(function(e) {
-		    if(e.which == 13) {
-	    		console.log('pressed enter');
-	    	    nextInstance();
-		    }
-		});       
-*/
-        // WRAP ALL SUGGESTED MENU ITEMS IN A HREFs
-/*        $('.ui-menu-item').each(function(number) {
-*        	var link = document.createElement('A');
-*        	console.log(link);
-*        	$(link).attr('href', '#hit'+number);
-*        	$(this).insertNode(link);
-*        });
-*/
         /* gradient highlight
         *$('.highlight').each(function() {
         *	var span_top = $(this).offset().top;
@@ -293,9 +167,6 @@ $(document).ready(function() {
 		*	});
         *});
 		*/
-
-		//////// Update the count ////////
-//		var numberItems = count;
 		  
 ////////HIDE CANCEL BUTTON WHEN NO INPUT
 		if (0 < filter.length) {
@@ -313,10 +184,6 @@ $(document).ready(function() {
 			cancelSearch();
 		});
 	});
-
-
-	
-
 
 ////ARRAY OF ALL THE UNIQUE WORDS FOR AUTOCOMPLETE
 	$(function() {

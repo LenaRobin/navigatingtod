@@ -1,211 +1,207 @@
-/**************************************
-**** CONTENT **************************
-**************************************/
-body {
-    margin: 0;
-}
+/************************************
+		CONTENT 					
+************************************/
+		body {
+		    margin: 0;
+		}
 
-#content {
-	/*display: inline-block;*/
-	/*margin-left: 23%;*/
-	/*position: relative;
-	float: right;*/
-	margin-left: 20%;
-	width: 40%;
-}
+/*******THE CONTENT********************/
+		#content {
+			/*display: inline-block;*/
+			/*margin-left: 23%;*/
+			/*position: relative;
+			float: right;*/
+			margin-left: 20%;
+			width: 40%;
+		}
 
+/*******HORIZONTAL SCROLLBAR***********
+********FOR THE CHAPTERS*************/
+		.horizScroll {
+			/*line-height: 1.5em;*/
+			/*border-top: 1px dashed black;
+			border-left: 1px dashed black;*/
+			/*padding: 3% 0% 2% 5%;*/
+			/*margin-left: 1%;*/
+			    opacity: .5;
+			    width: 0%;
+			    height: 100%;
+			    max-width: 100%;
+			    position: absolute;
+			    /*max-height: 1em;*/
+			    /*position: fixed;*/
+			    /*top: 46px;
+			    left: 6px;*/
+			    background-color: magenta;
+		}
 
-.horizScroll {
-	/*line-height: 1.5em;*/
-	/*border-top: 1px dashed black;
-	border-left: 1px dashed black;*/
-	/*padding: 3% 0% 2% 5%;*/
-	/*margin-left: 1%;*/
-	    opacity: .5;
-	    width: 0%;
-	    height: 100%;
-	    max-width: 100%;
-	    position: absolute;
-	    /*max-height: 1em;*/
-	    /*position: fixed;*/
-	    /*top: 46px;
-	    left: 6px;*/
-	    background-color: magenta;
-}
+/****************************************
+		MENU
+****************************************/
+		#menu ul {
+			margin-top: 15%;
+			padding-left: 0;
+			list-style: none;
+			left: 0;
+		}
 
-/******************************************
-**************** MENU *********************
-******************************************/
-#menu ul {
-	margin-top: 15%;
-	padding-left: 0;
-	list-style: none;
-	left: 0;
-}
+		#menu li {
+			/*line-height: 1.5em;*/
+			position: relative;
+			max-height: 1em !important;
+			border-top: 1px solid black;
+			border-left: 1px solid black;
+			padding: 3% 0% 2% 0%;
+			margin-left: 1%;
 
-#menu li {
-	/*line-height: 1.5em;*/
-	position: relative;
-	max-height: 1em !important;
-	border-top: 1px solid black;
-	border-left: 1px solid black;
-	padding: 3% 0% 2% 0%;
-	margin-left: 1%;
+		}
+		#menu li:last-child {
+			border-bottom: 1px solid black;
+		}
 
-}
-#menu li:last-child {
-	border-bottom: 1px solid black;
-}
+		#menu li:hover {
+			background-color: aqua;
+		}
 
-#menu li:hover {
-	background-color: aqua;
-}
+		#menu li a {
+			position: absolute;
+			/*white-space: nowrap;*/
+			/*min-width: 100px !important;*/
+			text-decoration: none;
+			color: black;
+			padding: 4% 3% 3% 5%;
+		}
 
-#menu li a {
-	position: absolute;
-	/*white-space: nowrap;*/
-	/*min-width: 100px !important;*/
-	text-decoration: none;
-	color: black;
-	padding: 4% 3% 3% 5%;
-}
+/*******MENU WITH THE TOC THAT******************
+********COMES IN SLIDING FROM THE LEFT*********/
+		.pushmenu {
+		  background: gold;
+		  width: 28%;
+		  height: 100%;
+		  top: 0;
+		  position:fixed;
+		}
 
-/*
-MENU WITH THE TOC THAT COMES IN SLIDING FROM THE LEFT
-*/
-.pushmenu {
-  background: gold;
-  width: 28%;
-  height: 100%;
-  top: 0;
-  position:fixed;
-}
+/*******CLASS ADDED TO MAKE**************
+********IT GO OFF SCREEN****************/
+		.pushmenu-left {
+		  left: -28%;
 
-/*
-CLASS ADDED TO MAKE IT GO OFF SCREEN
-*/
-.pushmenu-left {
-  left: -28%;
+		}
 
-}
+/*******CLASS TO MAKE IT***********
+********SLIDE IN FROM LEFT********/
+		.pushmenu-left.pushmenu-open {
+		  left: 0;
+		}
 
-/*
-CLASS TO MAKE IT SLIDE IN FROM LEFT
-*/
-.pushmenu-left.pushmenu-open {
-  left: 0;
-}
+/*******PUSHES THE REST OF THE**********
+********#CONTENT TO THE RIGHT**********/
 
-/*
-PUSHES THE REST OF THE #CONTENT TO THE RIGHT
-POSITION: FIXED MAKES IT SO THAT THE TEXT FITS
-ITO THE REMAINING SPACE
-*/
-.pushmenu-push {
-  overflow-x: hidden;
-  position: relative;
-  left: 0;
-}
+		.pushmenu-push {
+		  overflow-x: hidden;
+		  position: relative;
+		  left: 0;
+		}
 
-/*
-CLASS THAT MAKES THE #CONTENT MOVE TO THE RIGHT
-*/
-.pushmenu-push-toright {
-  left: 28%;
-}
+/*******CLASS THAT MAKES**********
+********THE #CONTENT MOVE*********
+********TO THE RIGHT*************/
+		.pushmenu-push-toright {
+		  left: 28%;
+		}
 
-/*
-TRANSITIONS
-*/
-.pushmenu, .pushmenu-push {
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  transition: all 0.3s ease;  
-}
+/*******TRANSITIONS****************/
+		.pushmenu, .pushmenu-push {
+		  -webkit-transition: all 0.3s ease;
+		  -moz-transition: all 0.3s ease;
+		  transition: all 0.3s ease;  
+		}
 
+/*******VERTICAL BAR THAT*********
+********OPENS UP THE MENU********/
+		#nav_list {
+			cursor: pointer;
+			background-color: gold;
+			height: 100%;
+			width: 2%;
+			position: fixed;
+		}
 
-#nav_list { /*VERTICAL BAR THAT OPENS UP THE MENU*/
-	cursor: pointer;
-	background-color: gold;
-	height: 100%;
-	width: 2%;
-	position: fixed;
-}
-
-#menu_bar_scroll {	/*VERTICAL SCROLL BAR*/
-	cursor: pointer;
-	background-color: magenta;
-	opacity: .5;
-	height: 0%;
-	/*max-height: 100%;*/
-	width: 2%;
-	position: fixed;	
-}
+/*******VERTICAL SCROLL BAR*******/
+		#menu_bar_scroll {	
+			cursor: pointer;
+			background-color: magenta;
+			opacity: .5;
+			height: 0%;
+			/*max-height: 100%;*/
+			width: 2%;
+			position: fixed;	
+		}
 
 /**************************************
-***NEXT AND PREV***********************
+		NEXT AND PREV
 **************************************/
-.search_nav {
-	position: fixed;
-	top: 15px;
-}
+		.search_nav {
+			position: fixed;
+			top: 15px;
+		}
 
-#prev {
-	right: 155px;
-}
+		#prev {
+			right: 155px;
+		}
 
-#next {
-	right: 105px;
-}
+		#next {
+			right: 105px;
+		}
 
 
-.search-notfound {
-	color: #BFBFBF;
-}
+		.search-notfound {
+			color: #BFBFBF;
+		}
 
-.highlight {
-	/*display: inline-block; 
-	width: 50%;
-	height: 50%;
-	text-align: center;*/
-	background-color: #BFBFBF;
-	/*background: -webkit-radial-gradient(10px, white, white, #BFBFBF); /* Safari 5.1 to 6.0 */
-    /*background: -o-radial-gradient(10px, white, white, #BFBFBF); /* For Opera 11.6 to 12.0 */
-    /*background: -moz-radial-gradient(10px, white, white, #BFBFBF); /* For Firefox 3.6 to 15 */
-    /*background: radial-gradient(10px, white, white, #BFBFBF); /* Standard syntax (must be last)*/
-}
+		.highlight {
+			/*display: inline-block; 
+			width: 50%;
+			height: 50%;
+			text-align: center;*/
+			background-color: #BFBFBF;
+			/*background: -webkit-radial-gradient(10px, white, white, #BFBFBF); /* Safari 5.1 to 6.0 */
+		    /*background: -o-radial-gradient(10px, white, white, #BFBFBF); /* For Opera 11.6 to 12.0 */
+		    /*background: -moz-radial-gradient(10px, white, white, #BFBFBF); /* For Firefox 3.6 to 15 */
+		    /*background: radial-gradient(10px, white, white, #BFBFBF); /* Standard syntax (must be last)*/
+		}
 
-/*.search-found {
-	background: -webkit-radial-gradient(10px, white, white, #BFBFBF); /* Safari 5.1 to 6.0 
-    background: -o-radial-gradient(10px, white, white, #BFBFBF); /* For Opera 11.6 to 12.0 
-    background: -moz-radial-gradient(10px, white, white, #BFBFBF); /* For Firefox 3.6 to 15 
-    background: radial-gradient(10px, white, white, #BFBFBF); /* Standard syntax (must be last) *
-}*/
+		/*.search-found {
+			background: -webkit-radial-gradient(10px, white, white, #BFBFBF); /* Safari 5.1 to 6.0 
+		    background: -o-radial-gradient(10px, white, white, #BFBFBF); /* For Opera 11.6 to 12.0 
+		    background: -moz-radial-gradient(10px, white, white, #BFBFBF); /* For Firefox 3.6 to 15 
+		    background: radial-gradient(10px, white, white, #BFBFBF); /* Standard syntax (must be last) *
+		}*/
 
-#live-search {
-	top: 40px;
-	padding-right: 50px;
-	background-color: gray;
-	right: 0px;
-	position: fixed;
-}
+		#live-search {
+			top: 40px;
+			padding-right: 50px;
+			background-color: gray;
+			right: 0px;
+			position: fixed;
+		}
 
-/*
-AUTOCOMPLETE LIST OF ITEMS
-*/
-.ui-autocomplete {
-	list-style: none;
-	position: fixed;
-	padding-top: 2px;
-	-webkit-padding-start: 0px;
-}
+/*******AUTOCOMPLETE*********
+********LIST OF ITEMS*******/
+		.ui-autocomplete {
+			list-style: none;
+			position: fixed;
+			padding-top: 2px;
+			-webkit-padding-start: 0px;
+		}
 
-.ui-menu-item {
-	background-color: red;
-}
+		.ui-menu-item {
+			background-color: red;
+		}
 
-.ui-menu-item:focus {
-	background-color: yellow;
-}
+		.ui-menu-item:focus {
+			background-color: yellow;
+		}
 
 

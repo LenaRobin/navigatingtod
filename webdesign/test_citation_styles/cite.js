@@ -1,8 +1,3 @@
-// $(document).scroll(function() {
-// 	var b = $('#a').position();
-// 	console.log(b);	
-// });
-
 $(document).ready(function(){
 
 	console.log($('#a').css('height').replace(/[^0-9]/g, '') - $('#a').offset().top);
@@ -18,9 +13,9 @@ $(document).ready(function(){
 
 
 
-///////////////////////
-//POP-UP REFERENCE BOX
-///////////////////////
+////////////////////////
+////POP-UP REFERENCE BOX
+////////////////////////
 	$(".in-text").each(function(){
 		var n = $(this).data("dref");
 		var t = $("p#ref"+n).text();
@@ -28,18 +23,14 @@ $(document).ready(function(){
 //		console.log(t);
 	});
 
+////DISPLAY REFERENCE BOX WHEN IN-TEXT REFEERENCE IS CLICKED
 	$(".in-text").click(function(ev) {		// for all events
-	/*	$(document).tooltip();*/
 		ev.stopPropagation();				// go through layers
-		//var info = $(this).attr('id');
 		var info = $(this).data("ref");
-		//console.log("info : " +info);
-		//html-> <p data-ref="XXX">
 		var top = $(this).offset().top;
 		var left = $(this).offset().left;
 		$(".tip p").text(info);
 		$(".tip").css('display','block').offset({top: top - 30, left: left });
-		//console.log($(this).offset().top);
 	});
 
 	$('#x').click(function() {
@@ -47,7 +38,6 @@ $(document).ready(function(){
 	});
 
 	$("#main").click(function(){
-		//console.log("hi");
 		$('.tip').css('display', 'none');
 	});
 
@@ -55,32 +45,28 @@ $(document).ready(function(){
 
 
 
+////////////////
+////CITATION BOX
+////////////////
 
-
-///////////////////
-// GENERATE ID TO p
-///////////////////
+////GENERATE ID TO p
 	$('.section p').each(function(number){
 		//console.log(number);
 		$(this).attr("id", "p"+number);
 	});
 
-///////////////
-// TOGGLE TOOLS
-///////////////
+////TOGGLE TOOLS
 	$('#tools').click( function() {
 		$('#citation-box').fadeToggle();
 	});
 
-///////////////////
-//GENERATE CITATION
-///////////////////
-	
+////GENERATE CITATION
 	function getSelectedText() {
 	  	t = (document.all) ? document.selection.createRange().text : document.getSelection();
 		  return t;
 	}
 	
+////CONVERT SELECTION TO STRING AND WRAP A SPAN AROUND IT
 	var span = document.createElement('SPAN');
 	$('.section').mouseup(function(){
 	    var selection = getSelectedText();
@@ -89,11 +75,11 @@ $(document).ready(function(){
 	    //SPAN AROUND SELECTED TEXT
 	    selection_text = span.textContent.substr(0, 1);
 	    var range = selection.getRangeAt(0);
-//	    range.deleteContents();
 	    range.insertNode(span);
 	});
 
-
+////ON CLICK GET ALL THE DATA FROM PARENT ELEMENT AND GENERATE THE
+////CITING REFERENCE IN THREE DIFFERENT STYLES
 	$('#cite').click( function() {
 		span.className = "qwertz";		//ADD CLASS TO SPAN ON CLICK
 		var par = $('.qwertz').closest('p').attr('id');		//GET ID OF PARENT p
@@ -115,23 +101,28 @@ $(document).ready(function(){
 	    var MLA_date_of_access = moment().format('D MMMM YYYY');
 	    var chicago_date_of_access = moment().format('MMMM D, YYYY');
 		var url = $(location).attr('pathname');
+
+////////MLA STYLE 
 	    $('#mla').html(ref_authorLastName + ", " + ref_authorName + ". '" + ref_article + ".' " + "<i>" + ref_title + "</i>" 
 	    + ". Eds. " + ref_eds + ". " + ref_place + ": " + ref_pub + ", " + ref_year + ". &lt;" + url + "#" + par + "&gt;. " + MLA_date_of_access + ".");
 
+////////CHICAGO STYLE
 	    $('#chicago').html(ref_authorLastName + ", " + ref_authorName + ". '" + ref_article + ".' In " + "<i>" + ref_title + "</i>"
 	    + ", edited by "+ref_eds+". "+ref_place+": "+ref_pub+", "+ref_year+". "+ url + "#" + par + ". Accessed "+chicago_date_of_access + ".");
 
+////////APA STYLE
 	    $('#apa').html(ref_authorLastName + ", " + ref_apaAuthorName + ". (" + ref_year + "). " + ref_article + ". In "+ref_apaEds+" (Eds.), "+"<i>"+ref_title+"</i>"
 	    +". "+ref_place+": "+ref_pub+". Available from "+url+"#"+par+".");
-
-
 	});
 
+
+////////////////////////////////
+////CLICKING COPIES THE CITATION
+////TO THE CLIPBOARD////////////
+////////////////////////////////
 	var clipboard = new Clipboard('.full-citation');
 
-///////////////////////////////
-// DISPLAY CONFIRMATION AT COPY
-///////////////////////////////
+////DISPLAY CONFIRMATION AT COPY
 	$('.full-citation').click(function() {
 		$(this).prev().append('<div class="confirmation">Copied!</div>');
 	    $('.confirmation').fadeOut(3000);
@@ -146,37 +137,33 @@ $(document).ready(function(){
 	clipboard.on('error', function(e) {
 	    $('.full-citation').prev().append('<div class="confirmation"><br/>Error!</div>');
 	});
-
-
 });
 
+/*///////////////////////
+ON RESIZE DO THESE THINGS
+///////////////////////*/
 $(window).resize(function() {
-	//////////////////////////////////
-	//SIDENOTES = BOX WHEN WIDTH SMALL
-	//////////////////////////////////
-	console.log($(window).width());
-	if ($(window).width() <= "400") {
+////////////////////////////////////
+////SIDENOTES = BOX WHEN WIDTH SMALL
+////////////////////////////////////
+	if ($(window).width() <= "400") {	//SUBSTITUTE '400' WITH THE DESIRED MINIMUM SIZE
+		$('#footnotes, #notes').hide();
 
-	$('#footnotes, #notes').hide();
-
-	$('.footnoteRef').click(function(ev) {
-		ev.stopPropagation();
-		ev.preventDefault();
-		var n = $(this).attr('href').substr(3, 4);
-		var t = $('li#fn'+n).text();
-	//	var info = $(this).attr('id');
-		console.log(t);
-		var top = $(this).offset().top;
-		var left = $(this).offset().left;
-		$('.tip p').text(t);
-		$('.tip').css('display','block').offset({top: top - 30, left: left });
-		//$('.tip')
-		/*
-		and make the link bring up a box (same as the one used for in-text);
-		print the respective contents of the footnote in the box;
-		put the direct link to the footnote reference on the bottom;
-		*/
-	});
+		$('.footnoteRef').click(function(ev) {
+			ev.stopPropagation();
+			ev.preventDefault();
+			var n = $(this).attr('href').substr(3, 4);
+			var t = $('li#fn'+n).text();
+			var top = $(this).offset().top;
+			var left = $(this).offset().left;
+			$('.tip p').text(t);
+			$('.tip').css('display','block').offset({top: top - 30, left: left });
+			/*
+			and make the link bring up a box (same as the one used for in-text);
+			print the respective contents of the footnote in the box;
+			put the direct link to the footnote reference on the bottom;
+			*/
+		});
 	}else{
 		$('.footnoteRef').unbind("click");
 		$('#footnotes, #notes').show();
