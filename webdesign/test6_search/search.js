@@ -14,6 +14,8 @@ $(document).ready(function() {
 ///////////////////////////
 ////SCROLL PROGRESSION BARS
 ///////////////////////////
+
+////ASSIGN ID TO EACH CHAPTER IN THE TOC
 	var nr = 1;
 	$('.horizScroll').each(function() {
 		$(this).attr('id', 'title'+nr);
@@ -23,39 +25,57 @@ $(document).ready(function() {
 ////VERTICAL SCROLL BAR 
 	$(window).scroll(function () {
         var windowHeight = $(window).height();
-        var scrollTop = $(document).scrollTop();					// height of scroll on top (=0)
+        var scrollTop = $(document).scrollTop();			// height of scroll on top (=0)
         var bottom = $(document).height() - windowHeight;	// heigth from top at the end of doc
         var verticalBar = (scrollTop / bottom)*windowHeight;
         $("#menu_bar_scroll").css('height', verticalBar);
 
 ////////CREATES THE HORIZONTAL PROGRESSION
-////////SCROLL BARS IN THE MENU
+////////SCROLL BARS IN THE MENU (CHAPTERS LEVEL 1)
 		var n = 1;
 		$('.section').each(function(){
 			$('#title'+n).each(function(){
 				var a = $('#chapter'+n).offset().top;
 				var b = $('#chapter'+(n+1)).offset().top;
 
-				var c = scrollTop - a; // POSITION AT WHICH TO START SCROLL
-				var d = b - a;	// LENGTH IN PIXELS OF THE INDIVIDUAL ARTICLE
+				var c = scrollTop - a;		// POSITION AT WHICH TO START SCROLL
+				var d = b - a;				// LENGTH IN PIXELS OF THE INDIVIDUAL ARTICLE
 				var ee = $(window).width(); // WIDTH OF THE WINDOW SCREEN
-				var e = 28/100*ee;	// THIS CALCULATES 28% OF THE WINDOW SCREEN (WHICH
-									// IS THE WIDTH OF THE TOC MENU)
+				var e = 28/100*ee;			// THIS CALCULATES 28% OF THE WINDOW SCREEN (WHICH
+											// IS THE WIDTH OF THE TOC MENU)
 
-				var f = (c / d) * e; // SUBSTITUTE OR CALCULATE E ABOVE FOR ANY DESIRED WIDTH OF THE SCROLL BAR
+				var f = (c / d) * e; 		// SUBSTITUTE OR CALCULATE E ABOVE FOR ANY DESIRED WIDTH OF THE SCROLL BAR
 				$(this).css('width', f);
 
-				// console.log('c: '+c);
-				// console.log('d: '+d);
-				// console.log('e: '+e);
+
+////////////////LAST TITLE SCROLL BAR IN THE MENU
+				var lastChapterTop = $('.section:last-child').offset().top;
+				var lastChapterLength = $(document).height() - lastChapterTop;
+				var lastChapterScrollStart = scrollTop - lastChapterTop;
+				var lastBar = (lastChapterScrollStart / lastChapterLength) * e;
+
+				$('.horizScroll').last().css('width', lastBar); 
 				n++;
+			});
+		});
+
+////////SAME FOR CHAPTERS LEVEL 2
+		$('.subchapter').each(function(){		//add class subchapter to headings
+			$('#subtitle'+n).each(function(){	//add idss subtitle to easch subtitle
+				var subchapterTop = $('#subchapter'+n).offset().top;
+				var  subchapterTopNext= $('#subchapter'+(n+1)).offset().top;
+
+				var subScrollTop = scrollTop - subchapterTop;
+				var subLength = subchapterTopNext - subchapterTop;
+				var subScrollBar = (subScrollTop / subLength) * e;
+				$(this).css('width', subScrollBar);
 			});
 		});
      });
 
-/////////////////
+///////////////////
 ////SEARCH FUNCTION
-/////////////////
+///////////////////
 	var elem = $('<div id="search_ui" style="position: fixed; float: right; right: 0px; top: 0px; display: none;"><button id="cancel" style="margin: 5px 0px 5px 0px;">Cancel</button></div>');
 	var maxCount;
 	$('#live-search').append(elem);

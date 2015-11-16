@@ -15,7 +15,7 @@
 			width: 40%;
 		}
 
-/*******HORIZONTAL SCROLLBAR***********
+/*******HORIZONTAL SCROLLBAR**********
 ********FOR THE CHAPTERS*************/
 		.horizScroll {
 			/*line-height: 1.5em;*/
@@ -27,7 +27,8 @@
 			    width: 0%;
 			    height: 100%;
 			    max-width: 100%;
-			    position: absolute;
+			    z-index: 0;
+			    /*position: absolute;*/
 			    /*max-height: 1em;*/
 			    /*position: fixed;*/
 			    /*top: 46px;
@@ -46,9 +47,10 @@
 		}
 
 		#menu li {
+			z-index: -10;
 			/*line-height: 1.5em;*/
-			position: relative;
-			max-height: 1em !important;
+			/*position: relative;*/
+			min-height: 1em !important;
 			border-top: 1px solid black;
 			border-left: 1px solid black;
 			padding: 3% 0% 2% 0%;
@@ -64,12 +66,13 @@
 		}
 
 		#menu li a {
-			position: absolute;
+			z-index: 10;
+			/*position: absolute;*/
 			/*white-space: nowrap;*/
-			/*min-width: 100px !important;*/
+			min-width: 100px !important;
 			text-decoration: none;
 			color: black;
-			padding: 4% 3% 3% 5%;
+			/*padding: 4% 3% 3% 5%;*/
 		}
 
 /*******MENU WITH THE TOC THAT******************
