@@ -2,35 +2,54 @@
  *************************** STYLE FOR LAMBDA PAGES ********************************
 ************************************************************************************
 
-I.------- GENERAL STRUCTURE !! do not change !! ------------------------------------
-        1.
-        2.
-        3.
-
-II.------ COLORS - easy changes - ---------------------------------------------------
-        1.
-        2.
-        3.
-
-III.----- TYPOGRAPGY - easy changes - -----------------------------------------------
-        1. Keyword
-        2. Important word
-        3. Keyword-searched
-
-IV.------ INFO BOX (top) ------------------------------------------------------------
-        
-V.------- MENU (left) ---------------------------------------------------------------
-
-VI.------ NAVIGATION ----------------------------------------------------------------
-
-VII.----- READER --------------------------------------------------------------------
-
-VIII.---- TOOLS ---------------------------------------------------------------------
-
-IX.------ DEVICES -------------------------------------------------------------------
+Easy changes :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)    
+            1. Colors
 
 
-3-
+
+1.--- GENERAL STRUCTURE !! do not change !! ------------------------------------
+            1. General
+
+2.--- MENU (left) ------------------------------------------------------------
+            1. Menu
+            2. Nav list (button to active push menu)
+            3. Table of content
+
+3.--- INFO BOX (top) ------------------------------------------------------------
+            1. Info box
+            2. Table of informations
+            3. Bookcover
+
+4.--- READER --------------------------------------------------------------------
+            1. Section
+            2. Text titles & font styles
+            3. Images
+            4. Reference-list
+            5. Sidenotes
+
+5.--- TYPOGRAPHY -----------------------------------------------------------------
+            1. Keyword
+            2. Important word
+            3. Keyword-searched
+            4. Buttons
+
+6.--- NAVIGATION ----------------------------------------------------------------
+            1. Arrows
+
+7.--- TOOLS ---------------------------------------------------------------------
+            1. Toolbox (right)
+            2. Search box
+            3. Font size
+            4. Citation box
+
+8.--- FOOTER (bottom) ------------------------------------------------------------
+
+9.----- DEVICES -------------------------------------------------------------------
+            1. Smartphones, iPhones, portrait (480x320)
+            2. Portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide
+            3. Portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones
+            4. Tablet, landscape iPad, lo-res laptops ands desktops
+            5. Big landscape tablets, laptops, and desktops
 
 
 
@@ -39,10 +58,36 @@ IX.------ DEVICES --------------------------------------------------------------
 
 
 
-/* ******************************************* I. GENERAL STRUCTURE !! do not change !! ********* */
+
+
+
+/* Easy changes :-) */
+
+/* Background-color of text on selection */
+::-moz-selection {
+	background-color: #FFA;
+	color: #000;
+}
+::selection {
+	background-color: #FFA;
+	color: #000;
+}
+a {
+	color: inherit;
+}
+a:hover {
+	color: #f30;
+}
+
+
+
+
+
+
+/* ******************************************* 1. GENERAL STRUCTURE !! do not change !! ********* */
 
 /*******************
-     I-1. GENERAL
+     1-1. GENERAL
 ********************
 General website structure */
 
@@ -99,8 +144,12 @@ body {
 	padding-left: 0;
 }
 
+
+/* ******************************************************* 2. MENU (left) ******************** */
+
+
 /***********************
-     I-2. MENU (left)
+     2-1. MENU (left)
 ************************
 The menu on left (called pushmenu) gives the table of content but also pushes the whole content (reader) to the right */
 
@@ -158,6 +207,49 @@ The menu on left (called pushmenu) gives the table of content but also pushes th
 	left: 0;
 }
 
+
+/***********************
+     2-2. NAV LIST
+************************
+The way the user actives the pushmenu */
+
+#nav_list {
+	cursor: pointer;
+	width: 10px;
+	height: 700px;
+	border: 0 solid #000;
+	padding: 0;
+	background-color: #fff;
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	transition: all .3s ease;
+}
+
+#verticalScroll {
+	width: 20px;
+	height: 0;
+	background-color: red;
+	opacity: .7;
+}
+
+.nav_list {
+}
+
+.nav_list:hover {
+	background-color: #f30;
+}
+
+.pushmenu-left .pushmenu-open #nav_list {
+	display: none;
+	margin-left: 70px;
+}
+
+
+/********************************************************
+     2-3. TABLE OF CONTENT (left, inside the pushmenu)
+*********************************************************
+Table of content is contained in pushmenu, it shows the different parts of the book and can be clicked to navigate through them */
+
 /* Bloc containing the table of content in the pushmenu */
 #book-toc {
 	margin-left: 5px;
@@ -208,128 +300,15 @@ The menu on left (called pushmenu) gives the table of content but also pushes th
 }
 
 
-/* ******************************************************* II. COLORS ********************** */
-
-/* Background-color of text on selection */
-::-moz-selection {
-	background-color: #FFA;
-	color: #000;
-}
-::selection {
-	background-color: #FFA;
-	color: #000;
-}
-a {
-	color: inherit;
-}
-a:hover {
-	color: #f30;
-}
 
 
 
-/* ******************************************************* III. TYPOGRAPHY ******************** */
 
-/* Font-faces used in styles */
-@font-face {
-	font-family: Hkgrotesk;
-	src: url(fonts/HKGrotesk-Regular.otf);
-}
-@font-face {
-	font-family: HkgroteskBold;
-	src: url(fonts/HKGrotesk-Bold.otf);
-}
-body{
-    font-family: "Hkgrotesk";
-}
 
-/*********************
-     III-1. KEYWORD
-**********************
-Tags linking the book to other books that have similar topics /
-
-/* Keyword: regular style */
-.keyword {
-	background-color: rgba(132,132,132,0.38);
-	cursor: pointer;
-	font-style: normal;
-	border-radius: 5px;
-	padding: 2px;
-	cursor: pointer;
-	line-height: 2em;
-	text-decoration: none;
-}
-
-/* Keyword: when is hovered with the mouse */
-.keyword:hover {
-	color: #000;
-	margin-left: 1px;
-	font-style: italic;
-	background-color: #f8f8f8;
-	text-decoration: none;
-}
-
-/****************************
-     III-2. IMPORTANT WORD
-*****************************
-Important notion in the text of the book */
-
-/* Importantword: how it displays when the user choses not the make it appear in text */
-.importantword {
-	background-color: transparent;
-}
-
-/* Importantword: how it displays when the user choses to make it appear in text */
-.importantword_shown {
-	background-color: #ff9f9f;
-}
-
-/*******************************
-     III-3. KEYWORD-SEARCHED
-********************************
-What the user looks for (from the home page where he enters words in the search bar) /
-
-/* Keyword-searched: regular style */
-.keyword-searched {
-	margin-bottom: 14px;
-	background-color: rgba(255,51,0,0.54);
-	cursor: text;
-}
-
-/*********************
-     III-4. BUTTON
-**********************
-Buttons are the way the links to the different downloads & different tools… look like*/
-
-/* Button */
-.button,.hover-button {
-	border-radius: 5px;
-	padding: 2px;
-	cursor: pointer;
-	line-height: 2em;
-}
-
-.button a,.hover-button {
-	text-decoration: none;
-}
-
-.button:hover,.button a:hover,.hover-button:hover,.hover-button a:hover {
-	margin-left: 1px;
-	margin-top: 1px;
-	color: #000;
-}
-
-.button a:active {
-	box-shadow: 4px 4px 2px rgba(128,128,128,0.5);
-	color: #000;
-	border-radius: 5px;
-	padding: 2px;
-}
-
-/* ******************************************************* IV. INFO BOX (TOP) ******************** */
+/* ******************************************************* 3. INFO BOX (TOP) ******************** */
 
 /**********************
-     IV-1. INFO BOX
+     3-1. INFO BOX
 ***********************
 /* Box containing informations related to book ID */
 #info-box {
@@ -362,8 +341,9 @@ Buttons are the way the links to the different downloads & different tools… lo
 }
 
 /***********************************
-     IV-2. TABLE OF INFORMATIONS
+     3-2. TABLE OF INFORMATIONS
 ************************************
+"Table of informations" is the table in which all of the very practical informations about the book are written */
 
 /* Table: left column of the table */
 #summary .summary,#summary .author,#summary .editor,#summary .date,#summary .series,#summary .subjects {
@@ -397,7 +377,7 @@ Buttons are the way the links to the different downloads & different tools… lo
 }
 
 /***********************
-     IV-3. BOOKCOVER
+     3-3. BOOKCOVER
 ************************
 The bookcover is an overview of the bookcover of the book */
 
@@ -443,55 +423,23 @@ The bookcover is an overview of the bookcover of the book */
 }
 
 
-/* ******************************************************* V. NAVIGATION ******************** */
-
-/******************
-     V-1. ARROWS
-*******************
-Arrows makes it able to jump directlyto the next (or preview) chapter /
-
-/* Arrow to go to prev chapter (right) */
-#display1 {
-	position: fixed;
-	right: 2%;
-	top: 45%;
-	z-index: 99;
-	font-size: 16px;
-}
-
-/* Arrow to go to next chapter (right) */
-#display {
-	position: fixed;
-	right: 2%;
-	bottom: 45%;
-	z-index: 99;
-	font-size: 16px;
-}
-
-/* Arrow to go to prev chapter (right) on short devices */
-@media (max-height:600px) {
-#display1 {
-	top: 40%;
-}
-    
-/* Arrow to go to next chapter (right) on short devices */
-#display {
-	bottom: 40%;
-}
-}
 
 
-/* ******************************************************* VI. READER ******************** */
+
+
+
+
+
+/* ******************************************************* 4. READER ******************** */
+
+/*********************
+     4-1. SECTION
+**********************
+Style of each chapter (the whole text is divided into "sections" with the markdown export) */
 
 b {
 	font-weight: 700;
 }
-
-/******************
-     VI-1. SECTION
-*******************
-Style of each chapter (the whole text is divided into "sections" with the markdown export) /
-
 /* Section: colors and background */
 .section {
 	color: #171717;
@@ -550,7 +498,7 @@ Style of each chapter (the whole text is divided into "sections" with the markdo
 }
 
 /***************************************
-     VI-2. TEXT TITLES & FONT STYLES
+     4-2. TEXT TITLES & FONT STYLES
 *****************************************
 Defines the typography for texts in reader /
 
@@ -605,9 +553,9 @@ Defines the typography for texts in reader /
 }
 
 /****************************
-     VI-3. IMAGES IN TEXT
+     4-3. IMAGES IN TEXT
 *****************************
-Style of each images appearing in the reader, in .text /
+Style of each images appearing in the reader, in .text */
 
 /* img: style for each image that appears in the text */
 img {
@@ -625,7 +573,7 @@ img {
 
 
 /****************************
-     VI-4. REFERENCE-LIST
+     4-4. REFERENCE-LIST
 *****************************
 The list of references that writers have used to write their texts, appears in the end of each text */
 
@@ -642,7 +590,7 @@ The list of references that writers have used to write their texts, appears in t
 }
 
 /***************************
-    VI-5. SIDENOTES
+    4-5. SIDENOTES
 ****************************
 Sidenotes are equivalent to footnotes, they display on right of the text.
 Sidenotes are transformed from footnotes to sidenotes with md-sidenotes.js script.
@@ -686,12 +634,185 @@ They display on wide devices. */
 	line-height: 13px;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ******************************************************* 5. TYPOGRAPHY ******************** */
+
+/* Font-faces used in styles */
+@font-face {
+	font-family: Hkgrotesk;
+	src: url(fonts/HKGrotesk-Regular.otf);
+}
+@font-face {
+	font-family: HkgroteskBold;
+	src: url(fonts/HKGrotesk-Bold.otf);
+}
+body{
+    font-family: "Hkgrotesk";
+}
+
+/*********************
+     5-1. KEYWORD
+**********************
+Tags linking the book to other books that have similar topics /
+
+/* Keyword: regular style */
+.keyword {
+	background-color: rgba(132,132,132,0.38);
+	cursor: pointer;
+	font-style: normal;
+	border-radius: 5px;
+	padding: 2px;
+	cursor: pointer;
+	line-height: 2em;
+	text-decoration: none;
+}
+
+/* Keyword: when is hovered with the mouse */
+.keyword:hover {
+	color: #000;
+	margin-left: 1px;
+	font-style: italic;
+	background-color: #f8f8f8;
+	text-decoration: none;
+}
+
+/****************************
+     5-2. IMPORTANT WORD
+*****************************
+Important notion in the text of the book */
+
+/* Importantword: how it displays when the user choses not the make it appear in text */
+.importantword {
+	background-color: transparent;
+}
+
+/* Importantword: how it displays when the user choses to make it appear in text */
+.importantword_shown {
+	background-color: #ff9f9f;
+}
+
+/*******************************
+     5-3. KEYWORD-SEARCHED
+********************************
+What the user looks for (from the home page where he enters words in the search bar) /
+
+/* Keyword-searched: regular style */
+.keyword-searched {
+	margin-bottom: 14px;
+	background-color: rgba(255,51,0,0.54);
+	cursor: text;
+}
+
+/*********************
+     5-4. BUTTON
+**********************
+Buttons are the way the links to the different downloads & different tools… look like*/
+
+/* Button */
+.button,.hover-button {
+	border-radius: 5px;
+	padding: 2px;
+	cursor: pointer;
+	line-height: 2em;
+}
+
+.button a,.hover-button {
+	text-decoration: none;
+}
+
+.button:hover,.button a:hover,.hover-button:hover,.hover-button a:hover {
+	margin-left: 1px;
+	margin-top: 1px;
+	color: #000;
+}
+
+.button a:active {
+	box-shadow: 4px 4px 2px rgba(128,128,128,0.5);
+	color: #000;
+	border-radius: 5px;
+	padding: 2px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ******************************************************* 6. NAVIGATION ******************** */
+
+/******************
+     6-1. ARROWS
+*******************
+Arrows makes it able to jump directlyto the next (or preview) chapter /
+
+/* Arrow to go to prev chapter (right) */
+#display1 {
+	position: fixed;
+	right: 2%;
+	top: 45%;
+	z-index: 99;
+	font-size: 16px;
+}
+
+/* Arrow to go to next chapter (right) */
+#display {
+	position: fixed;
+	right: 2%;
+	bottom: 45%;
+	z-index: 99;
+	font-size: 16px;
+}
+
+/* Arrow to go to prev chapter (right) on short devices */
+@media (max-height:600px) {
+#display1 {
+	top: 40%;
+}
+    
+/* Arrow to go to next chapter (right) on short devices */
+#display {
+	bottom: 40%;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
 /* ******************************************************************************************
-************************************************************* VII. TOOLS ********************
+************************************************************* 7. TOOLS ********************
 ****************************************************************************************** */
 
 /******************************
-     VII-1. TOOLBOX (right)
+     7-1. TOOLBOX (right)
 ******************************* 
 
 !! do not change the structure !!
@@ -878,7 +999,7 @@ label {
 }
 
 /********************************
-     VII-2. SEARCH BOX (right)
+     7-2. SEARCH BOX (right)
 *********************************
 Search box is where the user can enter keyword (in input) and look for words in text */
 
@@ -999,7 +1120,7 @@ input:hover {
 }
 
 /*********************************
-     VII-3. FONT SIZE (right)
+     7-3. FONT SIZE (right)
 **********************************
 Changes the font of .section .text in the reader */
 
@@ -1032,7 +1153,7 @@ Changes the font of .section .text in the reader */
 }
 
 /***********************************
-     VII-4. CITATION BOX (right)
+     7-4. CITATION BOX (right)
 ************************************
 Makes the user able to copy and paste references to the book and the webpage (conventionally written) */
 
@@ -1102,89 +1223,6 @@ button {
 	border-radius: 5px;
 }
 
-
-#nav_list /* button to active the pushmenu */ {
-/* background: url(http://www.onlywebpro.com/demo/jquery/icon_nav.png) no-repeat;*/
-	cursor: pointer;
-	width: 10px;
-	height: 700px;
-/* text-indent: -99999em; */
-/*	line-height: normal;
-	text-align: left;*/
-/* background: linear-gradient(rgba(255, 51, 0, 0.4) 50%, rgba(255, 255, 255, 1) 50%); 
-       background: linear-gradient(rgba(0, 0, 0, 0.78) 50%, rgba(255, 255, 255, 1) 50%);*/
-/*color: #000;*/
-/*border-top: none;*/
-	border: 0 solid #000;
-	padding: 0;
-/*margin-left: 0;*/
-	background-color: #fff;
-/*border-radius: 5px;*/
-/* box-shadow: 0px -3px 15px 8px white;
-    -webkit-box-shadow: 0px -3px 15px 8px white;
-    -moz-box-shadow: 0px -3px 15px 8px white;*/
-	-webkit-transition: all .3s ease;
-	-moz-transition: all .3s ease;
-	transition: all .3s ease;
-}
-
-#verticalScroll {
-	width: 20px;
-	height: 0;
-	background-color: red;
-	opacity: .7;
-}
-
-.nav_list {
-}
-
-.nav_list:hover {
-	background-color: #f30;
-}
-
-.pushmenu-left .pushmenu-open #nav_list {
-	display: none;
-	margin-left: 70px;
-}
-
-/* ******************************************************************************************
-************************************************************* VIII. FOOTER ******************
-****************************************************************************************** */
-
-#pre-footer {
-	width: 100%;
-	height: 400px;
-	position: relative;
-	background-color: #fff;
-	z-index: -99999999;
-}
-
-#footer {
-	width: 100%;
-	height: 120px;
-	position: relative;
-	background-color: #444;
-	z-index: -99999999;
-	padding-top: 30px;
-}
-
-.footer-column {
-	margin-left: 5%;
-	width: 200px;
-	float: left;
-	margin-bottom: 0;
-	vertical-align: baseline;
-}
-
-.hva {
-	width: 250px;
-	height: 50px;
-	background-size: 100%;
-	background-image: url(image/hva-logo.png);
-	background-repeat: no-repeat;
-	float: left;
-	margin-left: 10%;
-}
 
 .in-text {
 	background-color: #C7C7BB;
@@ -1265,11 +1303,78 @@ button {
 	margin: auto;
 }
 
+
+
+
+
+
+
+
+
+
 /* ******************************************************************************************
-************************************************************* IX. DEVICES *******************
+************************************************************* 8. FOOTER ******************
 ****************************************************************************************** */
 
-smartphones, iPhone, portrait 480x320 phones */
+#pre-footer {
+	width: 100%;
+	height: 400px;
+	position: relative;
+	background-color: #fff;
+	z-index: -99999999;
+}
+
+#footer {
+	width: 100%;
+	height: 120px;
+	position: relative;
+	background-color: #444;
+	z-index: -99999999;
+	padding-top: 30px;
+}
+
+.footer-column {
+	margin-left: 5%;
+	width: 200px;
+	float: left;
+	margin-bottom: 0;
+	vertical-align: baseline;
+}
+
+.hva {
+	width: 250px;
+	height: 50px;
+	background-size: 100%;
+	background-image: url(image/hva-logo.png);
+	background-repeat: no-repeat;
+	float: left;
+	margin-left: 10%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ******************************************************************************************
+************************************************************* 9. DEVICES *******************
+****************************************************************************************** */
+
+
+/******************************************************
+     9-1. Smartphones, iPhones, portrait (480x320)
+*******************************************************
+Changes in the code that will occur for those devices */
+
 @media (min-width:320px) {
 #book-title {
 	font-size: 20px;
@@ -1350,7 +1455,13 @@ smartphones, iPhone, portrait 480x320 phones */
 }
 }
 
-/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+
+
+/************************************************************************************
+     9-2. Portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide.
+*************************************************************************************
+Changes in the code that will occur for those devices */
+
 @media screen and (min-width: 641px) {
 #book-title {
 	font-size: 20px;
@@ -1425,8 +1536,11 @@ smartphones, iPhone, portrait 480x320 phones */
 }
 }
 
-/*portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones
-*/
+/******************************************************************************************************
+     9-3. Portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones
+*******************************************************************************************************
+Changes in the code that will occur for those devices */
+
 @media screen and (min-width: 799px) {
 #book-title {
 	font-size: 20px;
@@ -1546,12 +1660,22 @@ img {
 }
 }
 
-/* tablet, landscape iPad, lo-res laptops ands desktops*/
+
+/*********************************************************************
+     9-4. Tablet, landscape iPad, lo-res laptops ands desktops
+**********************************************************************
+Changes in the code that will occur for those devices */
+
 @media (min-width:961px) {
 
 }
 
-/* big landscape tablets, laptops, and desktops  */
+
+/***********************************************************
+     9-5. Big landscape tablets, laptops, and desktops
+************************************************************
+Changes in the code that will occur for those devices */
+
 @media (min-width:1020px) {
 #book-title {
 	font-size: 20px;
