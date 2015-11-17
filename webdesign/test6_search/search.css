@@ -7,81 +7,92 @@
 
 /*******THE CONTENT********************/
 		#content {
-			/*display: inline-block;*/
-			/*margin-left: 23%;*/
-			/*position: relative;
-			float: right;*/
 			margin-left: 20%;
 			width: 40%;
 		}
 
+		a {
+			text-decoration: none;
+			color: black;
+		}
+
 /*******HORIZONTAL SCROLLBAR**********
 ********FOR THE CHAPTERS*************/
+		.horizScroll, .subScroll {
+		    opacity: .3;
+		    width: 0%;
+		    height: 100%;
+		    max-width: 100%;
+		    position: absolute;
+		    top: 0;
+		}
+
 		.horizScroll {
-			/*line-height: 1.5em;*/
-			/*border-top: 1px dashed black;
-			border-left: 1px dashed black;*/
-			/*padding: 3% 0% 2% 5%;*/
-			/*margin-left: 1%;*/
-			    opacity: .5;
-			    width: 0%;
-			    height: 100%;
-			    max-width: 100%;
-			    z-index: 0;
-			    /*position: absolute;*/
-			    /*max-height: 1em;*/
-			    /*position: fixed;*/
-			    /*top: 46px;
-			    left: 6px;*/
-			    background-color: magenta;
+			background-color: gray;
+		}
+
+		.subScroll {
+		    background-color: black;
 		}
 
 /****************************************
 		MENU
 ****************************************/
-		#menu ul {
-			margin-top: 15%;
-			padding-left: 0;
-			list-style: none;
-			left: 0;
+		#toc_wrapper {
+			margin: 0 0 0 2%;
+			padding: 0;
+			left: 0%;
+			cursor: pointer;
+			width: 98%;
+			overflow: 
 		}
 
-		#menu li {
-			z-index: -10;
-			/*line-height: 1.5em;*/
-			/*position: relative;*/
-			min-height: 1em !important;
-			border-top: 1px solid black;
-			border-left: 1px solid black;
-			padding: 3% 0% 2% 0%;
-			margin-left: 1%;
-
+		#toc_wrapper h2 {
+			font-size: 1em;
+			position: relative;
+			width: 100%;
+			min-height: 1em;
+			border-top: 1px dashed black;
+			padding: 1% 0%;
+			margin: 0;
 		}
-		#menu li:last-child {
-			border-bottom: 1px solid black;
+		#toc_wrapper h3 {
+			min-height: 1em;
+			width: 90%;
+			margin: 0%;
+			padding-bottom: 1%;
+			margin-left: 10%;
+			font-size: .7em;
+			position: relative;
 		}
 
-		#menu li:hover {
-			background-color: aqua;
-		}
-
-		#menu li a {
-			z-index: 10;
-			/*position: absolute;*/
-			/*white-space: nowrap;*/
-			min-width: 100px !important;
+		#toc_wrapper a {
+			/*display: block;
+			width: 100%;
 			text-decoration: none;
 			color: black;
-			/*padding: 4% 3% 3% 5%;*/
+			min-height: 1em !important;
+			border-top: 
+			border-left: 1px solid black;
+			padding: 3% 0% 2% 0%;
+			margin-left: 1%;*/
+		}
+
+		#toc_wrapper h2:last-child {
+			/*border-bottom: 1px solid black;*/
+		}
+
+		#toc_wrapper h2:hover, #toc_wrapper h3:hover {
+			background-color: aqua;
 		}
 
 /*******MENU WITH THE TOC THAT******************
 ********COMES IN SLIDING FROM THE LEFT*********/
-		.pushmenu {
+		.pushmenu {				/*basically nav*/
 		  background: gold;
 		  width: 28%;
 		  height: 100%;
-		  top: 0;
+		  padding-top: 3%;
 		  position:fixed;
 		}
 
@@ -125,7 +136,7 @@
 ********OPENS UP THE MENU********/
 		#nav_list {
 			cursor: pointer;
-			background-color: gold;
+			background-color: orange;
 			height: 100%;
 			width: 2%;
 			position: fixed;
@@ -135,7 +146,7 @@
 		#menu_bar_scroll {	
 			cursor: pointer;
 			background-color: magenta;
-			opacity: .5;
+			opacity: .3;
 			height: 0%;
 			/*max-height: 100%;*/
 			width: 2%;

@@ -124,7 +124,7 @@ $(document).ready(function(){
 
 ////DISPLAY CONFIRMATION AT COPY
 	$('.full-citation').click(function() {
-		$(this).prev().append('<span class="confirmation" style="color: green">        Copied!</span>');
+		$(this).prev().append('<span class="confirmation" style="color: green">Copied!</span>');
 	    $('.confirmation').fadeOut(3000);
 	});
 

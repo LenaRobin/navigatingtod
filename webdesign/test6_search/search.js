@@ -1,7 +1,7 @@
 $(document).ready(function() {
-/////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////
 ////PUSH MENU ON THE LEFT
-/////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////
 	$menuLeft = $('.pushmenu-left');
 	$nav_list = $('#nav_list');
 	
@@ -11,71 +11,65 @@ $(document).ready(function() {
 		$menuLeft.toggleClass('pushmenu-open');
 	});
 
-///////////////////////////
+//////////////////////////////////////////////////////////////////////////////////
 ////SCROLL PROGRESSION BARS
-///////////////////////////
-
-////ASSIGN ID TO EACH CHAPTER IN THE TOC
+//////////////////////////////////////////////////////////////////////////////////
 	var nr = 1;
 	$('.horizScroll').each(function() {
 		$(this).attr('id', 'title'+nr);
 		nr++;
 	});
 
+	var x = 1;
+	$('.subScroll').each(function() {
+		$(this).attr('id', 'subtitle'+x);
+		x++;
+	});
+
 ////VERTICAL SCROLL BAR 
-	$(window).scroll(function () {
+	$(window).scroll(function() {
         var windowHeight = $(window).height();
-        var scrollTop = $(document).scrollTop();			// height of scroll on top (=0)
-        var bottom = $(document).height() - windowHeight;	// heigth from top at the end of doc
+        var scrollTop = $(document).scrollTop();					// height of scroll on top (=0)
+        var bottom = $(document).height() - windowHeight;			// heigth from top at the end of doc
         var verticalBar = (scrollTop / bottom)*windowHeight;
+		var windowWidth = $(window).width(); // WIDTH OF THE WINDOW SCREEN
+		var titleWidth = ((28/100)*(98/100)*windowWidth);	//TITLE WIDTH
+		var subtitleWidth = titleWidth*(90/100);				//SUBTITLE WIDTH
+		var n = 1;
+		var y = 1;
         $("#menu_bar_scroll").css('height', verticalBar);
 
 ////////CREATES THE HORIZONTAL PROGRESSION
 ////////SCROLL BARS IN THE MENU (CHAPTERS LEVEL 1)
-		var n = 1;
 		$('.section').each(function(){
 			$('#title'+n).each(function(){
 				var a = $('#chapter'+n).offset().top;
-				var b = $('#chapter'+(n+1)).offset().top;
-
-				var c = scrollTop - a;		// POSITION AT WHICH TO START SCROLL
-				var d = b - a;				// LENGTH IN PIXELS OF THE INDIVIDUAL ARTICLE
-				var ee = $(window).width(); // WIDTH OF THE WINDOW SCREEN
-				var e = 28/100*ee;			// THIS CALCULATES 28% OF THE WINDOW SCREEN (WHICH
-											// IS THE WIDTH OF THE TOC MENU)
-
-				var f = (c / d) * e; 		// SUBSTITUTE OR CALCULATE E ABOVE FOR ANY DESIRED WIDTH OF THE SCROLL BAR
+				var b = $('#chapter'+n).height();
+				var c = scrollTop - a; // POSITION AT WHICH TO START SCROLL
+				var f = (c / b) * titleWidth; // SUBSTITUTE OR CALCULATE E ABOVE FOR ANY DESIRED WIDTH OF THE SCROLL BAR
+				
 				$(this).css('width', f);
-
-
-////////////////LAST TITLE SCROLL BAR IN THE MENU
-				var lastChapterTop = $('.section:last-child').offset().top;
-				var lastChapterLength = $(document).height() - lastChapterTop;
-				var lastChapterScrollStart = scrollTop - lastChapterTop;
-				var lastBar = (lastChapterScrollStart / lastChapterLength) * e;
-
-				$('.horizScroll').last().css('width', lastBar); 
 				n++;
 			});
 		});
 
-////////SAME FOR CHAPTERS LEVEL 2
-		$('.subchapter').each(function(){		//add class subchapter to headings
-			$('#subtitle'+n).each(function(){	//add idss subtitle to easch subtitle
-				var subchapterTop = $('#subchapter'+n).offset().top;
-				var  subchapterTopNext= $('#subchapter'+(n+1)).offset().top;
-
+		$('.subchapter').each(function(){
+			$('#subtitle'+y).each(function(){
+				var subchapterTop = $('#subchapter'+y).offset().top;
+				var subchapterBottom = $('#subchapter'+y).height();
 				var subScrollTop = scrollTop - subchapterTop;
-				var subLength = subchapterTopNext - subchapterTop;
-				var subScrollBar = (subScrollTop / subLength) * e;
+				var subScrollBar = (subScrollTop / subchapterBottom) * subtitleWidth;
+				
+
 				$(this).css('width', subScrollBar);
+				y++;
 			});
 		});
      });
 
-///////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////
 ////SEARCH FUNCTION
-///////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////
 	var elem = $('<div id="search_ui" style="position: fixed; float: right; right: 0px; top: 0px; display: none;"><button id="cancel" style="margin: 5px 0px 5px 0px;">Cancel</button></div>');
 	var maxCount;
 	$('#live-search').append(elem);
@@ -109,7 +103,7 @@ $(document).ready(function() {
 ////////RETRIEVE THE INPUT FIELD TEXT AND RESET THE COUNT TO ZERO
 		var filter = $(this).val();
 ////////IF THE ELEMENT DOES NOT CONTAIN THE TEXT PHRASE FADE IT OUT
-		$('h1, h2, h3, h4, p, div, ol, a').each(function(){
+		$('h1, h2, h3, p, div, ol, a').each(function(){
 			if ($(this).text().search(new RegExp(filter, "i")) < 0) {
 				$(this).addClass('search-notfound');
 				$(this).removeClass('search-found');
@@ -176,17 +170,6 @@ $(document).ready(function() {
         	$(this).attr('href', '#hit'+(counter));
 	        $('#next').attr('href', '#hit'+(counter+2));
         });
-
-        /* gradient highlight
-        *$('.highlight').each(function() {
-        *	var span_top = $(this).offset().top;
-        *	var span_left = $(this).offset().left;
-        *	console.log(span_top + " + " + span_left);
-        *	$(this).css({
-        *		'background': '-webkit-radial-gradient(span_top,span_left,circle,rgb(27,186,135),transparent)'
-		*	});
-        *});
-		*/
 		  
 ////////HIDE CANCEL BUTTON WHEN NO INPUT
 		if (0 < filter.length) {
