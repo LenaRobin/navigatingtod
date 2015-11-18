@@ -662,7 +662,6 @@
 							<Br/>
 						</CharacterStyleRange>
 					</ParagraphStyleRange>
-					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph"/>
 				</Footnote>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
@@ -1125,7 +1124,6 @@
 							<Br/>
 						</CharacterStyleRange>
 					</ParagraphStyleRange>
-					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph"/>
 				</Footnote>
 				<Br/>
 			</CharacterStyleRange>
@@ -1485,7 +1483,7 @@
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
 				<Footnote>
 					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
-						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
 							<Content><?ACE 4?></Content>
 						</CharacterStyleRange>
 						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
@@ -1501,7 +1499,7 @@
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
 				<Footnote>
 					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
-						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
 							<Content><?ACE 4?></Content>
 						</CharacterStyleRange>
 						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
@@ -1726,10 +1724,6 @@
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
 				<Content>. Maastricht: Jan van Eyck Academie (2009): 144-158, http://radical.temp.si/reader/TEMP.pdf</Content>
 				<Br/>
-			</CharacterStyleRange>
-		</ParagraphStyleRange>
-		<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Reference List">
-			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
 				<Content>The Institute for the Protection of Cultural Heritage of Slovenia </Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">

@@ -102,38 +102,47 @@ body {
 }
 
 .main {
+	overflow-x: hidden;
 }
 
-/* text: The content of the book */.pushmenu pushmenu-left pushmenu-open .content {
+/* text: The content of the book */
+.pushmenu pushmenu-left pushmenu-open .content {
 	width: 20%;
+	overflow-x: hidden;
 }
 
 .pushmenu-open .main {
 	width: 20%;
+	overflow-x: hidden;
 }
 
 .container {
+	overflow-x: hidden;
 }
 
 /* Menu, Table of content on left */
 .section {
 	width: 100%;
 	font-size: 62.5%;
+    overflow-x: hidden;
 }
 /* All of the content of the reader has margins on right to let place for sidenotes */
 .section p,h2,h3,h1,img,.author {
 	margin-right: 40%;
 	width: auto;
+	overflow-x: hidden;
 }
 /* text: The content of the book */
 .text {
 	margin-top: 0;
 	margin-left: 0;
 	padding-left: 30px;
+    overflow-x: hidden;
 }
 /* text: The content of the book when pushmenu is open */
 .content-pushed .text {
 	padding-left: 30px;
+	overflow-x: hidden;
 }
 /* text: The content of the book when pushmenu is open */
 .content-pushed {
@@ -142,6 +151,7 @@ body {
 	margin-left: 0;
 	width: 90%;
 	padding-left: 0;
+	overflow-x: hidden;
 }
 
 
@@ -166,6 +176,7 @@ The menu on left (called pushmenu) gives the table of content but also pushes th
 .pushmenu-left,.pushmenu-left2 {
 	left: -20%;
 	overflow-y: scroll;
+	overflow-x: hidden;
 }
 .pushmenu-left.pushmenu-open,.pushmenu-left2.pushmenu-open {
 	left: 0;
@@ -444,6 +455,7 @@ b {
 .section {
 	color: #171717;
 	background-color: #fff;
+	overflow-x: hidden;
 }
 
 /* ?? */
@@ -455,11 +467,13 @@ b {
 .section current {
 	width: 100%;
 	padding-top: 0;
+	overflow-x: hidden;
 }
 
 /* .current: the first section of text has margins */
 .current {
 	margin-top: 10px;
+	overflow-x: hidden;
 }
 
 .content {
@@ -467,6 +481,7 @@ b {
 	line-height: 1.6em;
 	color: #1a1a1a;
 	margin: 0;
+	overflow-x: hidden;
 }
 
 .content-pushed .sidenote {

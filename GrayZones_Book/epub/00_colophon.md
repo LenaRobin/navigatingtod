@@ -12,9 +12,8 @@ Author: Šefik Tatlić, Gordana Nikolić, Jonathan Beller, Josephine Berry Slate
 Author-email:    
 Author-bio: about the author     
 Editor: Šefik Tatlić, Gordana Nikolić
-Abstract: Computer mediated interpersonal interactions are defining our daily lives as we know it. Studying this phenomenon with various methodologies, across different cultures and traditions is a crucial component in understanding social ties. This book brings together articles that approach online dating from a  range of cultural and critical perspectives. 
-The research decodes the approach to online dating in various countries like France, India, China, Turkey, Cuba, USA and Portugal. Mapping the history of dating and courtship shows the evolution of these practices even before the introduction of the online medium and traces parallels and differences between old and new traditions.   
-Keywords: online dating, social media, Institute of Network Cultures, print on demand, digital media, media theory, sociology, humanities, new media, France, India, China, Portugal, USA, methodologies, match.com, courtship, traditional, differences, Turkey, interactions, romantic, partners, search, love, facebook. 
+Abstract: The Gray Zones of Creativity and Capital (Eds. Gordana Nikolić and Šefik Tatlić) consists of works from a diverse range of authors from around the globe. The collection brings together six essays that offer a critique of the relationship between the creative industries and capital.What is the correlation between the creative industries, creative industry policies as a global phenomenon and their connection with the new media paradigm? How can the phenomenon be critiqued in the context of the actual, neoliberal, flexible regime of reproduction of capital? This publication treats ‘the networked world’ — its democracies, cognitivities, attention and culture — as a domain wherein forms of the reproduction of capitalism are reorganized and ‘modernized’.
+Keywords: creativity, capital, industry, capitalism, globalisation, new media, neoliberal, politics, network, democracy, culture, modernity, hierarchy, exploitation, society, economy, imperalism, colonialism, empire, power, system, gentrification, post-modernism 
   
 Rights: Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC-BY-NC-SA 4.0)
 
@@ -92,5 +91,4 @@ This publication is licensed under the Creative Commons Attribution-NonCommercia
 
 <a href="ch009.xhtml">The Creative Factory: Collective Creativity and Autonomyin the Neoliberal Machine of Creative Industries</a><br/>
 
-<a href="ch010.xhtml">Neoliberalism and the Autonomy of Art:
-The Culture of Power, the Power of Culture	</a><br/>
+<a href="ch010.xhtml">Neoliberalism and the Autonomy of Art: The Culture of Power, the Power of Culture</a><br/><br/>
