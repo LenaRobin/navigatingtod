@@ -14,21 +14,28 @@
 </head>
 
 <body id="myViewport">
-
-	<!-- SEARCH BOX -->
-	<form id="live-search" action="" class="styled" method="post">
-		<fieldset>
-			<span id="filter-count"></span>
-			<input type="text" class="text-input" id="filter" value="" />
-		</fieldset>
-	</form>
-
-	<!-- PREV AND NEXT BUTTONS -->
-	<a class="search_nav" id="prev" href="">PREV</a>
-	<a class="search_nav" id="next" href="">NEXT</a>
-
 	
 	<div id="main" class="pushmenu-push">
+
+		<!-- SEARCH BOX -->
+		<form id="live-search" action="" class="styled" method="post">
+			<fieldset>
+				<span id="filter-count"></span>
+				<input type="text" class="text-input" id="filter" value="" onClick="this.select();" />
+			</fieldset>
+		</form>
+
+		<div id="buttons_wrapper">
+			<a href="#" class="search_nav" id="prev">PREV</a>
+			<a href="#" class="search_nav" id="next">NEXT</a>
+		</div>
+
+
+		<!-- CANCEL BUTTON -->
+		<div id="search_ui" style="position: fixed; float: right; right: 0px; top: 0px; display: none;">
+			<button id="cancel" style="margin: 5px 0px 5px 0px;">Cancel</button>
+		</div>
+
 		<!-- TABLE OF CONTENTS -->
 		<nav id="menu" class="pushmenu pushmenu-left">
 			<div id="toc_wrapper">

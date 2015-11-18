@@ -62,8 +62,9 @@
 			margin: 0%;
 			padding-bottom: 1%;
 			margin-left: 10%;
-			font-size: .7em;
+			font-size: .8em;
 			position: relative;
+			font-weight: normal;
 		}
 
 		#toc_wrapper a {
@@ -200,6 +201,11 @@
 			right: 0px;
 			position: fixed;
 		}
+
+		#buttons_wrapper{
+			display: none;
+		}
+
 
 /*******AUTOCOMPLETE*********
 ********LIST OF ITEMS*******/
