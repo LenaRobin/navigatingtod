@@ -170,6 +170,9 @@
 			right: 105px;
 		}
 
+		.search-found {
+			color: black;
+		}
 
 		.search-notfound {
 			color: #BFBFBF;

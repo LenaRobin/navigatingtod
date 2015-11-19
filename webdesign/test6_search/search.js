@@ -67,6 +67,7 @@ $(document).ready(function(e) {
 		});
      });
 
+
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 ////SEARCH FUNCTION
 /////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -90,8 +91,25 @@ $(document).ready(function(e) {
         clearAllHighlights();
 	};
 
+
+
 ////ON KEYUP DO THE FOLLOWING THINGS
-	$('#filter').on('keyup keydown', function(e){
+	// $('#filter').on('keyup keydown', function(e){
+	$('#filter').keypress(function(e){
+		
+		////////ON ENTER GO TO THE FIRST INSTENCE
+		if(e.keyCode == 13){
+			e.preventDefault();	
+			asdf();
+			$(this).trigger(toNext());	///// -----> shift attention to next
+			// location.href="#hit0";
+			console.log('jbh');
+        	// $(this).attr('href', '#hit'+counter);
+        	// $('#prev').attr('href', '#hit'+(counter-2));
+
+			// return false;
+		};
+
 		if (e.keyCode == 27){
 			cancelSearch();
 			clearAllHighlights();
@@ -101,110 +119,111 @@ $(document).ready(function(e) {
 			// console.log('ASDFGHJK');
 			return false;
 		};
-
-////////ON ENTER GO TO THE FIRST INSTENCE
-		if(e.keyCode == 13){		
-			location.href="#hit0";
-			toNext(counter);
-        	// $(this).attr('href', '#hit'+counter);
-        	// $('#prev').attr('href', '#hit'+(counter-2));
-			return false;
-		};
 		
+
+
 ////////RETRIEVE THE INPUT FIELD TEXT AND RESET THE COUNT TO ZERO
-		var filter = $(this).val();
-////////IF THE ELEMENT DOES NOT CONTAIN THE TEXT PHRASE FADE IT OUT
-		$('h1, h2, h3, p, div, ol, a').each(function(){
-			if ($(this).text().search(new RegExp(filter, "i")) < 0) {
-				$(this).addClass('search-notfound');
-				$(this).removeClass('search-found');
-			} else {
-				$(this).removeClass('search-notfound');
-				$(this).addClass('search-found');
-			}
-		});
 
-		$('#main').unhighlight();
-        $('#main').highlight(filter);
-
-////////GENERATE IDs FOR ALL HIGHLIGHTED HITS
-        $('.highlight').each(function(number) {
-        	maxCount = number;
-       		$("#filter-count").show().text("Number of Hits = "+maxCount);
-        	$(this).attr('id', 'hit'+number);
-        });
-
-////////GET THE NUMBER OF HITS
-        var counter = 0;
-        function getHitCount() {
-	    	var i=0;
-    		while ($('#hit'+i).length) {
-    			i++;
-    		} 
-	    	return i;
-        }
-
-        function toNext(n){
-        	counter = n;
-        	if(counter < maxCount){
-        		counter++;
-        	}else{
-        		counter = 0;
-        	}
-	        $('#hit'+counter).css('background-color', 'yellow');
-	       	$('#hit'+(counter-1)).css('background-color', '#BFBFBF');
-        }
+		
+		function asdf() {
+	////////IF THE ELEMENT DOES NOT CONTAIN THE TEXT PHRASE FADE IT OUT
+			$('h1, h2, h3, p, div, ol, a').each(function(){
+				var filter = $('#filter').val();
+				// if ($(this).text().search(new RegExp(filter, 'i') < 0)) {
+				if ($(this).text().indexOf(filter) >= 0) {
+					$(this).removeClass('search-notfound');
+					$(this).addClass('search-found');
+					// console.log("fghvbjkn");
+					$('#main').unhighlight();
+	        		$('#main').highlight(filter);
+				} else {
+					$(this).addClass('search-notfound');
+					$(this).removeClass('search-found');
+				 }
 
 
-////////ON CLICK GO TO THE NEXT INSTANCE
-        $('#next').click(function() {
-        	console.log('2');
-        	toNext(counter);
-        	$(this).attr('href', '#hit'+counter);
-        	$('#prev').attr('href', '#hit'+(counter-2));
-        });
+	 ////////HIDE CANCEL BUTTON WHEN NO INPUT
+				if (0 < filter.length) {
+				//var elem = $('<div id="buttons_wrapper"><a href="#" class="search_nav" id="prev">PREV</a><a href="#" class="search_nav" id="next">NEXT</a></div>');
+				//$('#live-search').append(elem);
+					// filter active
+					$('#search_ui').css('display', 'block');
+					$('#buttons_wrapper').css('display', 'block');
+				} else {
+					$('#search_ui').css('display', 'none');
+					$('#buttons_wrapper').css('display', 'none');
 
-        function toPrev(n) {
-        	counter = n;
-        	if(counter > 0){
-        		counter--;
-        	}else{
-        		counter = maxCount;
-        	}
-        	
-        	$('#hit'+counter).css('background-color', 'yellow');
-        	$('#hit'+(counter+1)).css('background-color', '#BFBFBF');
-        }
+					// cancelSearch();
+				}
 
-////////ON CLICK GO TO THE PREVIOUS INSTANCE
-        $('#prev').click(function() {
-        	console.log("prev : "+counter);
-        	toPrev(counter);
-        	$(this).attr('href', '#hit'+(counter));
-	        $('#next').attr('href', '#hit'+(counter+2));
-        });
-		  
-////////HIDE CANCEL BUTTON WHEN NO INPUT
-		if (0 < filter.length) {
-		//var elem = $('<div id="buttons_wrapper"><a href="#" class="search_nav" id="prev">PREV</a><a href="#" class="search_nav" id="next">NEXT</a></div>');
-		//$('#live-search').append(elem);
-			// filter active
-			$('#search_ui').css('display', 'block');
-			$('#buttons_wrapper').css('display', 'block');
-		} else {
-			$('#search_ui').css('display', 'none');
-			$('#buttons_wrapper').css('display', 'none');
+	////////HIDE CANCEL BUTTON WHEN CLICKED
+				$('#search_ui').click(function() {
+					$(this).css("display", "none");
+					$('#buttons_wrapper').css('display', 'none');
+					$("#filter").val('');
+					cancelSearch();
+				});
+			});
 
-			cancelSearch();
-		}
 
-////////HIDE CANCEL BUTTON WHEN CLICKED
-		$('#search_ui').click(function() {
-			$(this).css("display", "none");
-			$('#buttons_wrapper').css('display', 'none');
-			$("#filter").val('');
-			cancelSearch();
-		});
+	////////GENERATE IDs FOR ALL HIGHLIGHTED HITS
+	        $('.highlight').each(function(number) {
+	        	maxCount = number;
+	       		$("#filter-count").show().text("Number of Hits = "+maxCount);
+	        	$(this).attr('id', 'hit'+number);
+	        });
+		}	
+
+	////////GET THE NUMBER OF HITS
+	        var counter = 0;
+	        function getHitCount() {
+		    	var i=0;
+	    		while ($('#hit'+i).length) {
+	    			i++;
+	    		} 
+		    	return i;
+	        }
+
+	        function toNext(n){
+	        	counter = n;
+	        	if(counter < maxCount){
+	        		counter++;
+	        	}else{
+	        		counter = 0;
+	        	}
+		        $('#hit'+counter).css('background-color', 'yellow');
+		       	$('#hit'+(counter-1)).css('background-color', '#BFBFBF');
+	        }
+
+
+	////////ON CLICK GO TO THE NEXT INSTANCE
+	        $('#next').click(function() {
+	        	console.log('2');
+	        	toNext(counter);
+	        	$(this).attr('href', '#hit'+counter);
+	        	$('#prev').attr('href', '#hit'+(counter-2));
+	        });
+
+	        function toPrev(n) {
+	        	counter = n;
+	        	if(counter > 0){
+	        		counter--;
+	        	}else{
+	        		counter = maxCount;
+	        	}
+	        	
+	        	$('#hit'+counter).css('background-color', 'yellow');
+	        	$('#hit'+(counter+1)).css('background-color', '#BFBFBF');
+	        }
+
+	////////ON CLICK GO TO THE PREVIOUS INSTANCE
+	        $('#prev').click(function() {
+	        	console.log("prev : "+counter);
+	        	toPrev(counter);
+	        	$(this).attr('href', '#hit'+(counter));
+		        $('#next').attr('href', '#hit'+(counter+2));
+	        });
+		 
 	});
 
 ////ARRAY OF ALL THE UNIQUE WORDS FOR AUTOCOMPLETE
