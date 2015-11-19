@@ -5,7 +5,7 @@
 Easy changes :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)    
             1. Colors
 
-
+00.--- SUMMARY
 
 1.--- GENERAL STRUCTURE !! do not change !! ------------------------------------
             1. General
@@ -41,10 +41,11 @@ Easy changes :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-
             2. Search box
             3. Font size
             4. Citation box
+            5. Scrolling indicator
 
 8.--- FOOTER (bottom) ------------------------------------------------------------
 
-9.----- DEVICES -------------------------------------------------------------------
+9.--- DEVICES ---------------------------------------------------------------------
             1. Smartphones, iPhones, portrait (480x320)
             2. Portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide
             3. Portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones
@@ -163,7 +164,7 @@ body {
 ************************
 The menu on left (called pushmenu) gives the table of content but also pushes the whole content (reader) to the right */
 
-/* pushmenu: This is the way the menu displays when it is shown */
+/* pushmenu: This is the way the menu displays when it is shown, Menu with the TOC that comes in sliding from the left */
 .pushmenu {
 	width: 20%;
 	height: 100%;
@@ -173,24 +174,30 @@ The menu on left (called pushmenu) gives the table of content but also pushes th
 	overflow-x: hidden;
 	z-index: 999999;
 }
-.pushmenu-left,.pushmenu-left2 {
+
+/* pushmenu-left: class added to make it go off screen */
+.pushmenu-left {
 	left: -20%;
 	overflow-y: scroll;
 	overflow-x: hidden;
 }
-.pushmenu-left.pushmenu-open,.pushmenu-left2.pushmenu-open {
+/* pushmenu-open: class to make it slide from left */
+.pushmenu-left.pushmenu-open {
 	left: 0;
-/*  border-right: solid 1px black;*/
 	border-right: solid 0 #000;
 	-webkit-box-shadow: 0 10px 15px rgba(0,0,0,0.2);
 	-moz-box-shadow: 0 10px 15px rgba(0,0,0,0.2);
 	box-shadow: 0 10px 15px rgba(0,0,0,0.2);
 }
-.pushmenu-push,.pushmenu-push2 {
+
+/* pushmenu-push: pushes the rest of the content to the right */
+.pushmenu-push {
 	overflow-x: hidden;
 	position: relative;
 	left: 0;
 }
+
+/* pushmenu-push-toright: class that makes the content move to right */
 .pushmenu-push-toright {
 	left: 20%;
 }
@@ -225,15 +232,11 @@ The menu on left (called pushmenu) gives the table of content but also pushes th
 The way the user actives the pushmenu */
 
 #nav_list {
-	cursor: pointer;
-	width: 10px;
-	height: 700px;
-	border: 0 solid #000;
-	padding: 0;
-	background-color: #fff;
-	-webkit-transition: all .3s ease;
-	-moz-transition: all .3s ease;
-	transition: all .3s ease;
+    cursor: pointer;
+    background-color: orange;
+    height: 100%;
+    width: 2%;
+    position: fixed;
 }
 
 #verticalScroll {
@@ -311,9 +314,74 @@ Table of content is contained in pushmenu, it shows the different parts of the b
 }
 
 
+/********* JOSIP'S PART **********/
 
+/* Interactions: horizontal Scrollbar for the chapters */
+.horizScroll, .subScroll {
+    opacity: .3;
+    width: 0%;
+    height: 100%;
+    max-width: 100%;
+    position: absolute;
+    top: 0;
+}
 
+.horizScroll {
+    background-color: gray;
+}
 
+.subScroll {
+    background-color: black;
+}
+
+#toc_wrapper {
+    margin: 0 0 0 2%;
+    padding: 0;
+    left: 0%;
+    cursor: pointer;
+    width: 98%;
+    overflow: 
+}
+
+#toc_wrapper h2 {
+    font-size: 1em;
+    position: relative;
+    width: 100%;
+    min-height: 1em;
+    border-top: 1px dashed black;
+    padding: 1% 0%;
+    margin: 0;
+}
+#toc_wrapper h3 {
+    min-height: 1em;
+    width: 90%;
+    margin: 0%;
+    padding-bottom: 1%;
+    margin-left: 10%;
+    font-size: .8em;
+    position: relative;
+    font-weight: normal;
+}
+
+#toc_wrapper a {
+    /*display: block;
+    width: 100%;
+    text-decoration: none;
+    color: black;
+    min-height: 1em !important;
+    border-top: 
+    border-left: 1px solid black;
+    padding: 3% 0% 2% 0%;
+    margin-left: 1%;*/
+}
+
+#toc_wrapper h2:last-child {
+    /*border-bottom: 1px solid black;*/
+}
+
+#toc_wrapper h2:hover, #toc_wrapper h3:hover {
+    background-color: aqua;
+}
 
 
 /* ******************************************************* 3. INFO BOX (TOP) ******************** */
@@ -1018,6 +1086,9 @@ label {
 *********************************
 Search box is where the user can enter keyword (in input) and look for words in text */
 
+
+
+
 /* container of the search box */
 #live-search-container {
 	padding: 2px 4px 10px;
@@ -1133,6 +1204,85 @@ input:hover {
 	padding: 2px;
 	margin-top: 2px;
 }
+
+/* Next and prev buttons that appears to go to next word searched */
+
+.search_nav {
+    position: fixed;
+    top: 15px;
+}
+
+#prev {
+    right: 155px;
+}
+
+#next {
+    right: 105px;
+}
+
+.search-found {
+    color: black;
+}
+
+.search-notfound {
+    color: #BFBFBF;
+}
+
+.highlight {
+    /*display: inline-block; 
+    width: 50%;
+    height: 50%;
+    text-align: center;*/
+    background-color: #BFBFBF;
+    /*background: -webkit-radial-gradient(10px, white, white, #BFBFBF); /* Safari 5.1 to 6.0 */
+    /*background: -o-radial-gradient(10px, white, white, #BFBFBF); /* For Opera 11.6 to 12.0 */
+    /*background: -moz-radial-gradient(10px, white, white, #BFBFBF); /* For Firefox 3.6 to 15 */
+    /*background: radial-gradient(10px, white, white, #BFBFBF); /* Standard syntax (must be last)*/
+}
+
+/*.search-found {
+    background: -webkit-radial-gradient(10px, white, white, #BFBFBF); /* Safari 5.1 to 6.0 
+    background: -o-radial-gradient(10px, white, white, #BFBFBF); /* For Opera 11.6 to 12.0 
+    background: -moz-radial-gradient(10px, white, white, #BFBFBF); /* For Firefox 3.6 to 15 
+		    background: radial-gradient(10px, white, white, #BFBFBF); /* Standard syntax (must be last) *
+		}*/
+
+#live-search {
+    top: 40px;
+     padding-right: 50px;
+    background-color: gray;
+    right: 0px;
+    position: fixed;
+}
+
+#buttons_wrapper{
+    display: none;
+}
+
+/* Autocomplete list of items */
+
+.ui-autocomplete {
+    list-style: none;
+    position: fixed;
+    padding-top: 2px;
+    -webkit-padding-start: 0px;
+}
+
+.ui-menu-item {
+    background-color: red;
+}
+
+.ui-menu-item:focus {
+    background-color: yellow;
+}
+
+
+
+
+
+
+
+
 
 /*********************************
      7-3. FONT SIZE (right)
@@ -1320,7 +1470,22 @@ button {
 
 
 
+/***************************************
+     7-5. SCROLLING INDICATOR (left)
+****************************************
+Visual explanation of the deepth of scrolling into the text/how far we are by scrolling */
 
+
+/* #menu_bar_scroll: vertical scrollbar*/
+#menu_bar_scroll {	
+    cursor: pointer;
+    background-color: magenta;
+    opacity: .3;
+    height: 0%;
+    /*max-height: 100%;*/
+    width: 2%;
+    position: fixed;	
+}
 
 
 
