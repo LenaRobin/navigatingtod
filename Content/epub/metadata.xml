@@ -1,0 +1,25 @@
+<dc:identifier id="epub-id-1">urn:isbn:NNN-NN-NN-NN-n</dc:identifier>
+<meta refines="#epub-id-1" property="identifier-type" scheme="onix:codelist5">01</meta>
+<dc:title id="epub-title-1">The Gray Zones of Creativity and Capital</dc:title>
+<meta refines="#epub-title-1" property="title-type">The Gray Zones of Creativity and Capital</meta>
+<dc:publisher>Institute of Network Cultures</dc:publisher>    
+<dc:date id="epub-date">2015-02</dc:date>
+<dc:language>en-US</dc:language>
+<dc:creator id="epub-creator-0">Šefik Tatlić, Gordana Nikolić, Jonathan Beller, Josephine Berry Slater, Marc James Léger, Ana Vilenica, Sandi Abram, Irmgard Emmelheinz</dc:creator>
+<meta refines="#epub-creator-0" property="role" scheme="marc:relators">aut</meta>
+<dc:contributor id="epub-contributor-1">Šefik Tatlić, Gordana Nikolić</dc:contributor>
+<meta refines="#epub-contributor-1" property="role" scheme="marc:relators">edt</meta>
+<dc:contributor id="epub-contributor-5">Josip Batinić, Léna Robin</dc:contributor>
+<meta refines="#epub-contributor-5" property="role" scheme="marc:relators">dsr</meta>
+<dc:rights>Creative Commons Attribution, NonCommercial, ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)</dc:rights>
+<dc:subject>creativity, capital, industry, capitalism, globalisation, new media, neoliberal, politics, network, democracy, culture, modernity, hierarchy, exploitation, society, economy, imperalism, colonialism, empire, power, system, gentrification, post-modernism </dc:subject>
+<dc:description>The Gray Zones of Creativity and Capital (Eds. Gordana Nikolić and Šefik Tatlić) consists of works from a diverse range of authors from around the globe. The collection brings together six essays that offer a critique of the relationship between the creative industries and capital. What is the correlation between the creative industries, creative industry policies as a global phenomenon and their connection with the new media paradigm? How can the phenomenon be critiqued in the context of the actual, neoliberal, flexible regime of reproduction of capital? This publication treats ‘the networked world’ — its democracies, cognitivities, attention and culture — as a domain wherein forms of the reproduction of capitalism are reorganized and ‘modernized’.
+</dc:description>
+
+
+
+
+
+
+
+

@@ -1,0 +1,1019 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?aid style="50" type="snippet" readerVersion="6.0" featureSet="257" product="7.5(142)" ?>
+<?aid SnippetType="InCopyInterchange"?>
+<Document DOMVersion="7.5" Self="d">
+	<Color Self="Color/R=147 G=44 B=101" Model="Process" Space="RGB" ColorValue="96 81 152" ColorOverride="Normal" AlternateSpace="NoAlternateColor" AlternateColorValue="" Name="R=147 G=44 B=101" ColorEditable="true" ColorRemovable="true" Visible="true" SwatchCreatorID="7937"/>
+	<Ink Self="Ink/$ID/Process Cyan" Name="$ID/Process Cyan" Angle="75" ConvertToProcess="false" Frequency="70" NeutralDensity="0.61" PrintInk="true" TrapOrder="1" InkType="Normal"/>
+	<Ink Self="Ink/$ID/Process Magenta" Name="$ID/Process Magenta" Angle="15" ConvertToProcess="false" Frequency="70" NeutralDensity="0.76" PrintInk="true" TrapOrder="2" InkType="Normal"/>
+	<Ink Self="Ink/$ID/Process Yellow" Name="$ID/Process Yellow" Angle="0" ConvertToProcess="false" Frequency="70" NeutralDensity="0.16" PrintInk="true" TrapOrder="3" InkType="Normal"/>
+	<Ink Self="Ink/$ID/Process Black" Name="$ID/Process Black" Angle="45" ConvertToProcess="false" Frequency="70" NeutralDensity="1.7" PrintInk="true" TrapOrder="4" InkType="Normal"/>
+	<FontFamily Self="di38" Name="Minion Pro">
+		<Font Self="di38FontnMinion Pro Bold Cond" FontFamily="Minion Pro" Name="Minion Pro Bold Cond" PostScriptName="MinionPro-BoldCn" Status="Installed" FontStyleName="Bold Cond" FontType="OpenTypeCFF" WritingScript="0" FullName="Minion Pro Bold Cond" FullNameNative="Minion Pro Bold Cond" FontStyleNameNative="Bold Cond" PlatformName="$ID/" Version="Version 2.068;PS 2.000;hotconv 1.0.57;makeotf.lib2.0.21895"/>
+		<Font Self="di38FontnMinion Pro Bold Cond Italic" FontFamily="Minion Pro" Name="Minion Pro Bold Cond Italic" PostScriptName="MinionPro-BoldCnIt" Status="Installed" FontStyleName="Bold Cond Italic" FontType="OpenTypeCFF" WritingScript="0" FullName="Minion Pro Bold Cond Italic" FullNameNative="Minion Pro Bold Cond Italic" FontStyleNameNative="Bold Cond Italic" PlatformName="$ID/" Version="Version 2.068;PS 2.000;hotconv 1.0.57;makeotf.lib2.0.21895"/>
+		<Font Self="di38FontnMinion Pro Regular" FontFamily="Minion Pro" Name="Minion Pro Regular" PostScriptName="MinionPro-Regular" Status="Installed" FontStyleName="Regular" FontType="OpenTypeCFF" WritingScript="0" FullName="Minion Pro" FullNameNative="Minion Pro" FontStyleNameNative="Regular" PlatformName="$ID/" Version="Version 2.068;PS 2.000;hotconv 1.0.57;makeotf.lib2.0.21895"/>
+		<Font Self="di38FontnMinion Pro Italic" FontFamily="Minion Pro" Name="Minion Pro Italic" PostScriptName="MinionPro-It" Status="Installed" FontStyleName="Italic" FontType="OpenTypeCFF" WritingScript="0" FullName="Minion Pro Italic" FullNameNative="Minion Pro Italic" FontStyleNameNative="Italic" PlatformName="$ID/" Version="Version 2.068;PS 2.000;hotconv 1.0.57;makeotf.lib2.0.21895"/>
+		<Font Self="di38FontnMinion Pro Medium" FontFamily="Minion Pro" Name="Minion Pro Medium" PostScriptName="MinionPro-Medium" Status="Installed" FontStyleName="Medium" FontType="OpenTypeCFF" WritingScript="0" FullName="Minion Pro Medium" FullNameNative="Minion Pro Medium" FontStyleNameNative="Medium" PlatformName="$ID/" Version="Version 2.068;PS 2.000;hotconv 1.0.57;makeotf.lib2.0.21895"/>
+		<Font Self="di38FontnMinion Pro Medium Italic" FontFamily="Minion Pro" Name="Minion Pro Medium Italic" PostScriptName="MinionPro-MediumIt" Status="Installed" FontStyleName="Medium Italic" FontType="OpenTypeCFF" WritingScript="0" FullName="Minion Pro Medium Italic" FullNameNative="Minion Pro Medium Italic" FontStyleNameNative="Medium Italic" PlatformName="$ID/" Version="Version 2.068;PS 2.000;hotconv 1.0.57;makeotf.lib2.0.21895"/>
+		<Font Self="di38FontnMinion Pro Semibold" FontFamily="Minion Pro" Name="Minion Pro Semibold" PostScriptName="MinionPro-Semibold" Status="Installed" FontStyleName="Semibold" FontType="OpenTypeCFF" WritingScript="0" FullName="Minion Pro Semibold" FullNameNative="Minion Pro Semibold" FontStyleNameNative="Semibold" PlatformName="$ID/" Version="Version 2.068;PS 2.000;hotconv 1.0.57;makeotf.lib2.0.21895"/>
+		<Font Self="di38FontnMinion Pro Semibold Italic" FontFamily="Minion Pro" Name="Minion Pro Semibold Italic" PostScriptName="MinionPro-SemiboldIt" Status="Installed" FontStyleName="Semibold Italic" FontType="OpenTypeCFF" WritingScript="0" FullName="Minion Pro Semibold Italic" FullNameNative="Minion Pro Semibold Italic" FontStyleNameNative="Semibold Italic" PlatformName="$ID/" Version="Version 2.068;PS 2.000;hotconv 1.0.57;makeotf.lib2.0.21895"/>
+		<Font Self="di38FontnMinion Pro Bold" FontFamily="Minion Pro" Name="Minion Pro Bold" PostScriptName="MinionPro-Bold" Status="Installed" FontStyleName="Bold" FontType="OpenTypeCFF" WritingScript="0" FullName="Minion Pro Bold" FullNameNative="Minion Pro Bold" FontStyleNameNative="Bold" PlatformName="$ID/" Version="Version 2.068;PS 2.000;hotconv 1.0.57;makeotf.lib2.0.21895"/>
+		<Font Self="di38FontnMinion Pro Bold Italic" FontFamily="Minion Pro" Name="Minion Pro Bold Italic" PostScriptName="MinionPro-BoldIt" Status="Installed" FontStyleName="Bold Italic" FontType="OpenTypeCFF" WritingScript="0" FullName="Minion Pro Bold Italic" FullNameNative="Minion Pro Bold Italic" FontStyleNameNative="Bold Italic" PlatformName="$ID/" Version="Version 2.068;PS 2.000;hotconv 1.0.57;makeotf.lib2.0.21895"/>
+	</FontFamily>
+	<FontFamily Self="di79" Name="Myriad Pro">
+		<Font Self="di79FontnMyriad Pro Condensed" FontFamily="Myriad Pro" Name="Myriad Pro Condensed" PostScriptName="MyriadPro-Cond" Status="Installed" FontStyleName="Condensed" FontType="OpenTypeCFF" WritingScript="0" FullName="Myriad Pro Condensed" FullNameNative="Myriad Pro Condensed" FontStyleNameNative="Condensed" PlatformName="$ID/" Version="Version 2.062;PS 2.000;hotconv 1.0.57;makeotf.lib2.0.21895"/>
+		<Font Self="di79FontnMyriad Pro Condensed Italic" FontFamily="Myriad Pro" Name="Myriad Pro Condensed Italic" PostScriptName="MyriadPro-CondIt" Status="Installed" FontStyleName="Condensed Italic" FontType="OpenTypeCFF" WritingScript="0" FullName="Myriad Pro Condensed Italic" FullNameNative="Myriad Pro Condensed Italic" FontStyleNameNative="Condensed Italic" PlatformName="$ID/" Version="Version 2.062;PS 2.000;hotconv 1.0.57;makeotf.lib2.0.21895"/>
+		<Font Self="di79FontnMyriad Pro Bold Condensed" FontFamily="Myriad Pro" Name="Myriad Pro Bold Condensed" PostScriptName="MyriadPro-BoldCond" Status="Installed" FontStyleName="Bold Condensed" FontType="OpenTypeCFF" WritingScript="0" FullName="Myriad Pro Bold Condensed" FullNameNative="Myriad Pro Bold Condensed" FontStyleNameNative="Bold Condensed" PlatformName="$ID/" Version="Version 2.062;PS 2.000;hotconv 1.0.57;makeotf.lib2.0.21895"/>
+		<Font Self="di79FontnMyriad Pro Bold Condensed Italic" FontFamily="Myriad Pro" Name="Myriad Pro Bold Condensed Italic" PostScriptName="MyriadPro-BoldCondIt" Status="Installed" FontStyleName="Bold Condensed Italic" FontType="OpenTypeCFF" WritingScript="0" FullName="Myriad Pro Bold Condensed Italic" FullNameNative="Myriad Pro Bold Condensed Italic" FontStyleNameNative="Bold Condensed Italic" PlatformName="$ID/" Version="Version 2.062;PS 2.000;hotconv 1.0.57;makeotf.lib2.0.21895"/>
+		<Font Self="di79FontnMyriad Pro Regular" FontFamily="Myriad Pro" Name="Myriad Pro Regular" PostScriptName="MyriadPro-Regular" Status="Installed" FontStyleName="Regular" FontType="OpenTypeCFF" WritingScript="0" FullName="Myriad Pro" FullNameNative="Myriad Pro" FontStyleNameNative="Regular" PlatformName="$ID/" Version="Version 2.062;PS 2.000;hotconv 1.0.57;makeotf.lib2.0.21895"/>
+		<Font Self="di79FontnMyriad Pro Italic" FontFamily="Myriad Pro" Name="Myriad Pro Italic" PostScriptName="MyriadPro-It" Status="Installed" FontStyleName="Italic" FontType="OpenTypeCFF" WritingScript="0" FullName="Myriad Pro Italic" FullNameNative="Myriad Pro Italic" FontStyleNameNative="Italic" PlatformName="$ID/" Version="Version 2.062;PS 2.000;hotconv 1.0.57;makeotf.lib2.0.21895"/>
+		<Font Self="di79FontnMyriad Pro Semibold" FontFamily="Myriad Pro" Name="Myriad Pro Semibold" PostScriptName="MyriadPro-Semibold" Status="Installed" FontStyleName="Semibold" FontType="OpenTypeCFF" WritingScript="0" FullName="Myriad Pro Semibold" FullNameNative="Myriad Pro Semibold" FontStyleNameNative="Semibold" PlatformName="$ID/" Version="Version 2.062;PS 2.000;hotconv 1.0.57;makeotf.lib2.0.21895"/>
+		<Font Self="di79FontnMyriad Pro Semibold Italic" FontFamily="Myriad Pro" Name="Myriad Pro Semibold Italic" PostScriptName="MyriadPro-SemiboldIt" Status="Installed" FontStyleName="Semibold Italic" FontType="OpenTypeCFF" WritingScript="0" FullName="Myriad Pro Semibold Italic" FullNameNative="Myriad Pro Semibold Italic" FontStyleNameNative="Semibold Italic" PlatformName="$ID/" Version="Version 2.062;PS 2.000;hotconv 1.0.57;makeotf.lib2.0.21895"/>
+		<Font Self="di79FontnMyriad Pro Bold" FontFamily="Myriad Pro" Name="Myriad Pro Bold" PostScriptName="MyriadPro-Bold" Status="Installed" FontStyleName="Bold" FontType="OpenTypeCFF" WritingScript="0" FullName="Myriad Pro Bold" FullNameNative="Myriad Pro Bold" FontStyleNameNative="Bold" PlatformName="$ID/" Version="Version 2.062;PS 2.000;hotconv 1.0.57;makeotf.lib2.0.21895"/>
+		<Font Self="di79FontnMyriad Pro Bold Italic" FontFamily="Myriad Pro" Name="Myriad Pro Bold Italic" PostScriptName="MyriadPro-BoldIt" Status="Installed" FontStyleName="Bold Italic" FontType="OpenTypeCFF" WritingScript="0" FullName="Myriad Pro Bold Italic" FullNameNative="Myriad Pro Bold Italic" FontStyleNameNative="Bold Italic" PlatformName="$ID/" Version="Version 2.062;PS 2.000;hotconv 1.0.57;makeotf.lib2.0.21895"/>
+	</FontFamily>
+	<FontFamily Self="di7d" Name="Kozuka Mincho Pro">
+		<Font Self="di7dFontnKozuka Mincho Pro EL" FontFamily="Kozuka Mincho Pro" Name="Kozuka Mincho Pro EL" PostScriptName="KozMinPro-ExtraLight" Status="Installed" FontStyleName="EL" FontType="OpenTypeCID" WritingScript="1" FullName="Kozuka Mincho Pro EL" FullNameNative="小塚明朝 Pro EL" FontStyleNameNative="EL" PlatformName="$ID/" Version="Version 4.005;PS 4.003;hotconv 1.0.57;makeotf.lib2.0.21895"/>
+		<Font Self="di7dFontnKozuka Mincho Pro L" FontFamily="Kozuka Mincho Pro" Name="Kozuka Mincho Pro L" PostScriptName="KozMinPro-Light" Status="Installed" FontStyleName="L" FontType="OpenTypeCID" WritingScript="1" FullName="Kozuka Mincho Pro L" FullNameNative="小塚明朝 Pro L" FontStyleNameNative="L" PlatformName="$ID/" Version="Version 4.005;PS 4.003;hotconv 1.0.57;makeotf.lib2.0.21895"/>
+		<Font Self="di7dFontnKozuka Mincho Pro R" FontFamily="Kozuka Mincho Pro" Name="Kozuka Mincho Pro R" PostScriptName="KozMinPro-Regular" Status="Installed" FontStyleName="R" FontType="OpenTypeCID" WritingScript="1" FullName="Kozuka Mincho Pro R" FullNameNative="小塚明朝 Pro R" FontStyleNameNative="R" PlatformName="$ID/" Version="Version 4.005;PS 4.003;hotconv 1.0.57;makeotf.lib2.0.21895"/>
+		<Font Self="di7dFontnKozuka Mincho Pro M" FontFamily="Kozuka Mincho Pro" Name="Kozuka Mincho Pro M" PostScriptName="KozMinPro-Medium" Status="Installed" FontStyleName="M" FontType="OpenTypeCID" WritingScript="1" FullName="Kozuka Mincho Pro M" FullNameNative="小塚明朝 Pro M" FontStyleNameNative="M" PlatformName="$ID/" Version="Version 4.005;PS 4.003;hotconv 1.0.57;makeotf.lib2.0.21895"/>
+		<Font Self="di7dFontnKozuka Mincho Pro B" FontFamily="Kozuka Mincho Pro" Name="Kozuka Mincho Pro B" PostScriptName="KozMinPro-Bold" Status="Installed" FontStyleName="B" FontType="OpenTypeCID" WritingScript="1" FullName="Kozuka Mincho Pro B" FullNameNative="小塚明朝 Pro B" FontStyleNameNative="B" PlatformName="$ID/" Version="Version 4.005;PS 4.003;hotconv 1.0.57;makeotf.lib2.0.21895"/>
+		<Font Self="di7dFontnKozuka Mincho Pro H" FontFamily="Kozuka Mincho Pro" Name="Kozuka Mincho Pro H" PostScriptName="KozMinPro-Heavy" Status="Installed" FontStyleName="H" FontType="OpenTypeCID" WritingScript="1" FullName="Kozuka Mincho Pro H" FullNameNative="小塚明朝 Pro H" FontStyleNameNative="H" PlatformName="$ID/" Version="Version 4.005;PS 4.003;hotconv 1.0.57;makeotf.lib2.0.21895"/>
+	</FontFamily>
+	<FontFamily Self="dib6" Name="Lato">
+		<Font Self="dib6FontnLato Hairline" FontFamily="Lato" Name="Lato Hairline" PostScriptName="Lato-Hairline" Status="Installed" FontStyleName="Hairline" FontType="TrueType" WritingScript="0" FullName="Lato Hairline" FullNameNative="Lato Hairline" FontStyleNameNative="Hairline" PlatformName="$ID/" Version="Version 2.010; 2014-09-01; http://www.latofonts.com/"/>
+		<Font Self="dib6FontnLato Hairline Italic" FontFamily="Lato" Name="Lato Hairline Italic" PostScriptName="Lato-HairlineItalic" Status="Installed" FontStyleName="Hairline Italic" FontType="TrueType" WritingScript="0" FullName="Lato Hairline Italic" FullNameNative="Lato Hairline Italic" FontStyleNameNative="Hairline Italic" PlatformName="$ID/" Version="Version 2.010; 2014-09-01; http://www.latofonts.com/"/>
+		<Font Self="dib6FontnLato Thin" FontFamily="Lato" Name="Lato Thin" PostScriptName="Lato-Thin" Status="Installed" FontStyleName="Thin" FontType="TrueType" WritingScript="0" FullName="Lato Thin" FullNameNative="Lato Thin" FontStyleNameNative="Thin" PlatformName="$ID/" Version="Version 2.010; 2014-09-01; http://www.latofonts.com/"/>
+		<Font Self="dib6FontnLato Thin Italic" FontFamily="Lato" Name="Lato Thin Italic" PostScriptName="Lato-ThinItalic" Status="Installed" FontStyleName="Thin Italic" FontType="TrueType" WritingScript="0" FullName="Lato Thin Italic" FullNameNative="Lato Thin Italic" FontStyleNameNative="Thin Italic" PlatformName="$ID/" Version="Version 2.010; 2014-09-01; http://www.latofonts.com/"/>
+		<Font Self="dib6FontnLato Light" FontFamily="Lato" Name="Lato Light" PostScriptName="Lato-Light" Status="Installed" FontStyleName="Light" FontType="TrueType" WritingScript="0" FullName="Lato Light" FullNameNative="Lato Light" FontStyleNameNative="Light" PlatformName="$ID/" Version="Version 2.010; 2014-09-01; http://www.latofonts.com/"/>
+		<Font Self="dib6FontnLato Light Italic" FontFamily="Lato" Name="Lato Light Italic" PostScriptName="Lato-LightItalic" Status="Installed" FontStyleName="Light Italic" FontType="TrueType" WritingScript="0" FullName="Lato Light Italic" FullNameNative="Lato Light Italic" FontStyleNameNative="Light Italic" PlatformName="$ID/" Version="Version 2.010; 2014-09-01; http://www.latofonts.com/"/>
+		<Font Self="dib6FontnLato Regular" FontFamily="Lato" Name="Lato Regular" PostScriptName="Lato-Regular" Status="Installed" FontStyleName="Regular" FontType="TrueType" WritingScript="0" FullName="Lato Regular" FullNameNative="Lato Regular" FontStyleNameNative="Regular" PlatformName="$ID/" Version="Version 2.010; 2014-09-01; http://www.latofonts.com/"/>
+		<Font Self="dib6FontnLato Italic" FontFamily="Lato" Name="Lato Italic" PostScriptName="Lato-Italic" Status="Installed" FontStyleName="Italic" FontType="TrueType" WritingScript="0" FullName="Lato Italic" FullNameNative="Lato Italic" FontStyleNameNative="Italic" PlatformName="$ID/" Version="Version 2.010; 2014-09-01; http://www.latofonts.com/"/>
+		<Font Self="dib6FontnLato Medium" FontFamily="Lato" Name="Lato Medium" PostScriptName="Lato-Medium" Status="Installed" FontStyleName="Medium" FontType="TrueType" WritingScript="0" FullName="Lato Medium" FullNameNative="Lato Medium" FontStyleNameNative="Medium" PlatformName="$ID/" Version="Version 2.010; 2014-09-01; http://www.latofonts.com/"/>
+		<Font Self="dib6FontnLato Medium Italic" FontFamily="Lato" Name="Lato Medium Italic" PostScriptName="Lato-MediumItalic" Status="Installed" FontStyleName="Medium Italic" FontType="TrueType" WritingScript="0" FullName="Lato Medium Italic" FullNameNative="Lato Medium Italic" FontStyleNameNative="Medium Italic" PlatformName="$ID/" Version="Version 2.010; 2014-09-01; http://www.latofonts.com/"/>
+		<Font Self="dib6FontnLato Semibold" FontFamily="Lato" Name="Lato Semibold" PostScriptName="Lato-Semibold" Status="Installed" FontStyleName="Semibold" FontType="TrueType" WritingScript="0" FullName="Lato Semibold" FullNameNative="Lato Semibold" FontStyleNameNative="Semibold" PlatformName="$ID/" Version="Version 2.010; 2014-09-01; http://www.latofonts.com/"/>
+		<Font Self="dib6FontnLato Semibold Italic" FontFamily="Lato" Name="Lato Semibold Italic" PostScriptName="Lato-SemiboldItalic" Status="Installed" FontStyleName="Semibold Italic" FontType="TrueType" WritingScript="0" FullName="Lato Semibold Italic" FullNameNative="Lato Semibold Italic" FontStyleNameNative="Semibold Italic" PlatformName="$ID/" Version="Version 2.010; 2014-09-01; http://www.latofonts.com/"/>
+		<Font Self="dib6FontnLato Bold" FontFamily="Lato" Name="Lato Bold" PostScriptName="Lato-Bold" Status="Installed" FontStyleName="Bold" FontType="TrueType" WritingScript="0" FullName="Lato Bold" FullNameNative="Lato Bold" FontStyleNameNative="Bold" PlatformName="$ID/" Version="Version 2.010; 2014-09-01; http://www.latofonts.com/"/>
+		<Font Self="dib6FontnLato Bold Italic" FontFamily="Lato" Name="Lato Bold Italic" PostScriptName="Lato-BoldItalic" Status="Installed" FontStyleName="Bold Italic" FontType="TrueType" WritingScript="0" FullName="Lato Bold Italic" FullNameNative="Lato Bold Italic" FontStyleNameNative="Bold Italic" PlatformName="$ID/" Version="Version 2.010; 2014-09-01; http://www.latofonts.com/"/>
+		<Font Self="dib6FontnLato Heavy" FontFamily="Lato" Name="Lato Heavy" PostScriptName="Lato-Heavy" Status="Installed" FontStyleName="Heavy" FontType="TrueType" WritingScript="0" FullName="Lato Heavy" FullNameNative="Lato Heavy" FontStyleNameNative="Heavy" PlatformName="$ID/" Version="Version 2.010; 2014-09-01; http://www.latofonts.com/"/>
+		<Font Self="dib6FontnLato Heavy Italic" FontFamily="Lato" Name="Lato Heavy Italic" PostScriptName="Lato-HeavyItalic" Status="Installed" FontStyleName="Heavy Italic" FontType="TrueType" WritingScript="0" FullName="Lato Heavy Italic" FullNameNative="Lato Heavy Italic" FontStyleNameNative="Heavy Italic" PlatformName="$ID/" Version="Version 2.010; 2014-09-01; http://www.latofonts.com/"/>
+		<Font Self="dib6FontnLato Black" FontFamily="Lato" Name="Lato Black" PostScriptName="Lato-Black" Status="Installed" FontStyleName="Black" FontType="TrueType" WritingScript="0" FullName="Lato Black" FullNameNative="Lato Black" FontStyleNameNative="Black" PlatformName="$ID/" Version="Version 2.010; 2014-09-01; http://www.latofonts.com/"/>
+		<Font Self="dib6FontnLato Black Italic" FontFamily="Lato" Name="Lato Black Italic" PostScriptName="Lato-BlackItalic" Status="Installed" FontStyleName="Black Italic" FontType="TrueType" WritingScript="0" FullName="Lato Black Italic" FullNameNative="Lato Black Italic" FontStyleNameNative="Black Italic" PlatformName="$ID/" Version="Version 2.010; 2014-09-01; http://www.latofonts.com/"/>
+	</FontFamily>
+	<FontFamily Self="dib9" Name="Helvetica Neue">
+		<Font Self="dib9FontnHelvetica Neue Condensed Bold" FontFamily="Helvetica Neue" Name="Helvetica Neue Condensed Bold" PostScriptName="HelveticaNeue-CondensedBold" Status="Installed" FontStyleName="Condensed Bold" FontType="TrueType" WritingScript="0" FullName="Helvetica Neue Condensed Bold" FullNameNative="Helvetica Neue Condensed Bold" FontStyleNameNative="Condensed Bold" PlatformName="$ID/" Version="10.0d36e1"/>
+		<Font Self="dib9FontnHelvetica Neue Condensed Black" FontFamily="Helvetica Neue" Name="Helvetica Neue Condensed Black" PostScriptName="HelveticaNeue-CondensedBlack" Status="Installed" FontStyleName="Condensed Black" FontType="TrueType" WritingScript="0" FullName="Helvetica Neue Condensed Black" FullNameNative="Helvetica Neue Condensed Black" FontStyleNameNative="Condensed Black" PlatformName="$ID/" Version="10.0d36e1"/>
+		<Font Self="dib9FontnHelvetica Neue UltraLight" FontFamily="Helvetica Neue" Name="Helvetica Neue UltraLight" PostScriptName="HelveticaNeue-UltraLight" Status="Installed" FontStyleName="UltraLight" FontType="TrueType" WritingScript="0" FullName="Helvetica Neue UltraLight" FullNameNative="Helvetica Neue UltraLight" FontStyleNameNative="UltraLight" PlatformName="$ID/" Version="10.0d36e1"/>
+		<Font Self="dib9FontnHelvetica Neue UltraLight Italic" FontFamily="Helvetica Neue" Name="Helvetica Neue UltraLight Italic" PostScriptName="HelveticaNeue-UltraLightItalic" Status="Installed" FontStyleName="UltraLight Italic" FontType="TrueType" WritingScript="0" FullName="Helvetica Neue UltraLight Italic" FullNameNative="Helvetica Neue UltraLight Italic" FontStyleNameNative="UltraLight Italic" PlatformName="$ID/" Version="10.0d36e1"/>
+		<Font Self="dib9FontnHelvetica Neue Thin" FontFamily="Helvetica Neue" Name="Helvetica Neue Thin" PostScriptName="HelveticaNeue-Thin" Status="Installed" FontStyleName="Thin" FontType="TrueType" WritingScript="0" FullName="Helvetica Neue Thin" FullNameNative="Helvetica Neue Thin" FontStyleNameNative="Thin" PlatformName="$ID/" Version="10.0d36e1"/>
+		<Font Self="dib9FontnHelvetica Neue Thin Italic" FontFamily="Helvetica Neue" Name="Helvetica Neue Thin Italic" PostScriptName="HelveticaNeue-ThinItalic" Status="Installed" FontStyleName="Thin Italic" FontType="TrueType" WritingScript="0" FullName="Helvetica Neue Thin Italic" FullNameNative="Helvetica Neue Thin Italic" FontStyleNameNative="Thin Italic" PlatformName="$ID/" Version="10.0d36e1"/>
+		<Font Self="dib9FontnHelvetica Neue Light" FontFamily="Helvetica Neue" Name="Helvetica Neue Light" PostScriptName="HelveticaNeue-Light" Status="Installed" FontStyleName="Light" FontType="TrueType" WritingScript="0" FullName="Helvetica Neue Light" FullNameNative="Helvetica Neue Light" FontStyleNameNative="Light" PlatformName="$ID/" Version="10.0d36e1"/>
+		<Font Self="dib9FontnHelvetica Neue Light Italic" FontFamily="Helvetica Neue" Name="Helvetica Neue Light Italic" PostScriptName="HelveticaNeue-LightItalic" Status="Installed" FontStyleName="Light Italic" FontType="TrueType" WritingScript="0" FullName="Helvetica Neue Light Italic" FullNameNative="Helvetica Neue Light Italic" FontStyleNameNative="Light Italic" PlatformName="$ID/" Version="10.0d36e1"/>
+		<Font Self="dib9FontnHelvetica Neue Regular" FontFamily="Helvetica Neue" Name="Helvetica Neue Regular" PostScriptName="HelveticaNeue" Status="Installed" FontStyleName="Regular" FontType="TrueType" WritingScript="0" FullName="Helvetica Neue" FullNameNative="Helvetica Neue" FontStyleNameNative="Regular" PlatformName="$ID/" Version="10.0d36e1"/>
+		<Font Self="dib9FontnHelvetica Neue Italic" FontFamily="Helvetica Neue" Name="Helvetica Neue Italic" PostScriptName="HelveticaNeue-Italic" Status="Installed" FontStyleName="Italic" FontType="TrueType" WritingScript="0" FullName="Helvetica Neue Italic" FullNameNative="Helvetica Neue Italic" FontStyleNameNative="Italic" PlatformName="$ID/" Version="10.0d36e1"/>
+		<Font Self="dib9FontnHelvetica Neue Medium" FontFamily="Helvetica Neue" Name="Helvetica Neue Medium" PostScriptName="HelveticaNeue-Medium" Status="Installed" FontStyleName="Medium" FontType="TrueType" WritingScript="0" FullName="Helvetica Neue Medium" FullNameNative="Helvetica Neue Medium" FontStyleNameNative="Medium" PlatformName="$ID/" Version="10.0d36e1"/>
+		<Font Self="dib9FontnHelvetica Neue Medium Italic" FontFamily="Helvetica Neue" Name="Helvetica Neue Medium Italic" PostScriptName="HelveticaNeue-MediumItalic" Status="Installed" FontStyleName="Medium Italic" FontType="TrueType" WritingScript="0" FullName="Helvetica Neue Medium Italic" FullNameNative="Helvetica Neue Medium Italic" FontStyleNameNative="Medium Italic" PlatformName="$ID/" Version="10.0d36e1"/>
+		<Font Self="dib9FontnHelvetica Neue Bold" FontFamily="Helvetica Neue" Name="Helvetica Neue Bold" PostScriptName="HelveticaNeue-Bold" Status="Installed" FontStyleName="Bold" FontType="TrueType" WritingScript="0" FullName="Helvetica Neue Bold" FullNameNative="Helvetica Neue Bold" FontStyleNameNative="Bold" PlatformName="$ID/" Version="10.0d36e1"/>
+		<Font Self="dib9FontnHelvetica Neue Bold Italic" FontFamily="Helvetica Neue" Name="Helvetica Neue Bold Italic" PostScriptName="HelveticaNeue-BoldItalic" Status="Installed" FontStyleName="Bold Italic" FontType="TrueType" WritingScript="0" FullName="Helvetica Neue Bold Italic" FullNameNative="Helvetica Neue Bold Italic" FontStyleNameNative="Bold Italic" PlatformName="$ID/" Version="10.0d36e1"/>
+	</FontFamily>
+	<CompositeFont Self="CompositeFont/$ID/[No composite font]" Name="$ID/[No composite font]">
+		<CompositeFontEntry Self="u7c" Name="$ID/Kanji" FontStyle="$ID/R" RelativeSize="100" HorizontalScale="100" VerticalScale="100" Locked="true" ScaleOption="true" BaselineShift="0">
+			<Properties>
+				<AppliedFont type="string">Kozuka Mincho Pro</AppliedFont>
+			</Properties>
+		</CompositeFontEntry>
+		<CompositeFontEntry Self="u7e" Name="$ID/Kana" FontStyle="$ID/R" RelativeSize="100" HorizontalScale="100" VerticalScale="100" CustomCharacters="ぁあぃいぅうぇえぉおかがきぎくぐけげこごさざしじすずせぜそぞただちぢっつづてでとどなにぬねのはばぱひびぴふぶぷへべぺほぼぽまみむめもゃやゅゆょよらりるれろゎわゐゑをんゔゕゖゝゞァアィイゥウェエォオカガキギクグケゲコゴサザシジスズセゼソゾタダチヂッツヅテデトドナニヌネノハバパヒビピフブプヘベペホボポマミムメモャヤュユョヨラリルレロヮワヰヱヲンヴヵヶヷヸヹヺーヽヾ" Locked="true" ScaleOption="true" BaselineShift="0">
+			<Properties>
+				<AppliedFont type="string">Kozuka Mincho Pro</AppliedFont>
+			</Properties>
+		</CompositeFontEntry>
+		<CompositeFontEntry Self="u7f" Name="$ID/Punctuation" FontStyle="$ID/R" RelativeSize="100" HorizontalScale="100" VerticalScale="100" CustomCharacters="—―‖‘’“”‥…′″∥、。〈〉《》「」『』【】〔〕〜・！（），．／：；？［］｛｝～" Locked="true" ScaleOption="true" BaselineShift="0">
+			<Properties>
+				<AppliedFont type="string">Kozuka Mincho Pro</AppliedFont>
+			</Properties>
+		</CompositeFontEntry>
+		<CompositeFontEntry Self="u80" Name="$ID/Symbols" FontStyle="$ID/R" RelativeSize="100" HorizontalScale="100" VerticalScale="100" CustomCharacters="¢£§¨¬°±´¶×÷ΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩαβγδεζηθικλμνξοπρστυφχψωЁАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдежзийклмнопрстуфхцчшщъыьэюяё‐†‡‰※℃Å←↑→↓⇒⇔∀∂∃∇∈∋−√∝∞∠∧∨∩∪∫∬∴∵∽≒≠≡≦≧≪≫⊂⊃⊆⊇⊥⌒■□▲△▼▽◆◇○◎●◯★☆♀♂♪♭♯〃〆〇〒〓゛゜＃＄％＆＊＋－０１２３４５６７８９＜＝＞＠ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ＼＾＿｀ａｂｃｄｅｆｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚ｜￠￡￢￣￥" Locked="true" ScaleOption="true" BaselineShift="0">
+			<Properties>
+				<AppliedFont type="string">Kozuka Mincho Pro</AppliedFont>
+			</Properties>
+		</CompositeFontEntry>
+		<CompositeFontEntry Self="u81" Name="$ID/Alphabetic" FontStyle="$ID/Regular" RelativeSize="100" HorizontalScale="100" VerticalScale="100" CustomCharacters=" !&quot;#$%&amp;&apos;()*+,-./:;&lt;=&gt;?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~ ¡¤¥¦©ª«­®¯²³µ·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõöøùúûüýþÿıŒœŠšŸŽžƒˆˇ˘˙˚˛˜˝–‚„•‹›⁄€™∆∏∑≈≤≥◊ﬀﬁﬂﬃﬄﬅﬆ" Locked="true" ScaleOption="false" BaselineShift="0">
+			<Properties>
+				<AppliedFont type="string">Minion Pro</AppliedFont>
+			</Properties>
+		</CompositeFontEntry>
+		<CompositeFontEntry Self="u82" Name="$ID/Numbers" FontStyle="$ID/Regular" RelativeSize="100" HorizontalScale="100" VerticalScale="100" CustomCharacters="0123456789" Locked="true" ScaleOption="false" BaselineShift="0">
+			<Properties>
+				<AppliedFont type="string">Minion Pro</AppliedFont>
+			</Properties>
+		</CompositeFontEntry>
+	</CompositeFont>
+	<RootCharacterStyleGroup Self="u65">
+		<CharacterStyle Self="CharacterStyle/Default" Imported="false" KeyboardShortcut="0 0" Name="Default">
+			<Properties>
+				<BasedOn type="string">$ID/[No character style]</BasedOn>
+				<PreviewColor type="enumeration">Nothing</PreviewColor>
+			</Properties>
+		</CharacterStyle>
+		<CharacterStyle Self="CharacterStyle/Italic" Imported="false" KeyboardShortcut="0 0" Name="Italic" FontStyle="Light Italic">
+			<Properties>
+				<BasedOn type="object">CharacterStyle/Default</BasedOn>
+				<PreviewColor type="enumeration">Nothing</PreviewColor>
+				<AppliedFont type="string">Helvetica Neue</AppliedFont>
+			</Properties>
+		</CharacterStyle>
+		<CharacterStyle Self="CharacterStyle/Bold" Imported="false" KeyboardShortcut="0 0" Name="Bold" FontStyle="Bold">
+			<Properties>
+				<BasedOn type="object">CharacterStyle/Default</BasedOn>
+				<PreviewColor type="enumeration">Nothing</PreviewColor>
+			</Properties>
+		</CharacterStyle>
+	</RootCharacterStyleGroup>
+	<RootParagraphStyleGroup Self="u64">
+		<ParagraphStyle Self="ParagraphStyle/Header1" Name="Header1" Imported="false" NextStyle="ParagraphStyle/Header1" KeyboardShortcut="0 0" FontStyle="Bold" PointSize="14" Capitalization="AllCaps" Hyphenation="false" SpaceAfter="2.834645669291339" GridAlignFirstLineOnly="true" GridAlignment="AlignBaseline">
+			<Properties>
+				<BasedOn type="string">$ID/[No paragraph style]</BasedOn>
+				<PreviewColor type="enumeration">Nothing</PreviewColor>
+				<Leading type="unit">14</Leading>
+				<AppliedFont type="string">Lato</AppliedFont>
+			</Properties>
+		</ParagraphStyle>
+		<ParagraphStyle Self="ParagraphStyle/Footnote &gt; Paragraph" Name="Footnote &gt; Paragraph" Imported="false" NextStyle="ParagraphStyle/Footnote &gt; Paragraph" KeyboardShortcut="0 0" PointSize="7.5" LeftIndent="17.007874015748033" FirstLineIndent="-17.007874015748033" SpaceAfter="2.834645669291339" GridAlignment="None">
+			<Properties>
+				<BasedOn type="object">ParagraphStyle/Paragraph</BasedOn>
+				<PreviewColor type="enumeration">Nothing</PreviewColor>
+				<Leading type="unit">10</Leading>
+			</Properties>
+		</ParagraphStyle>
+		<ParagraphStyle Self="ParagraphStyle/Header3" Name="Header3" Imported="false" NextStyle="ParagraphStyle/Header3" KeyboardShortcut="0 0" FillColor="Color/R=147 G=44 B=101" PointSize="10" Capitalization="AllCaps" GridAlignFirstLineOnly="true" GridAlignment="AlignBaseline">
+			<Properties>
+				<BasedOn type="string">$ID/[No paragraph style]</BasedOn>
+				<PreviewColor type="enumeration">Nothing</PreviewColor>
+				<AppliedFont type="string">Lato</AppliedFont>
+			</Properties>
+		</ParagraphStyle>
+		<ParagraphStyle Self="ParagraphStyle/Paragraph" Name="Paragraph" Imported="false" NextStyle="ParagraphStyle/Paragraph" KeyboardShortcut="0 0" FontStyle="Light" PointSize="9" Ligatures="false" SpaceAfter="5.669291338582678" Justification="LeftJustified" GridAlignment="AlignBaseline">
+			<Properties>
+				<BasedOn type="string">$ID/[No paragraph style]</BasedOn>
+				<PreviewColor type="enumeration">Nothing</PreviewColor>
+				<AppliedFont type="string">Helvetica Neue</AppliedFont>
+			</Properties>
+		</ParagraphStyle>
+		<ParagraphStyle Self="ParagraphStyle/Blockquote &gt; Paragraph" Name="Blockquote &gt; Paragraph" Imported="false" NextStyle="ParagraphStyle/Blockquote &gt; Paragraph" KeyboardShortcut="0 0" FontStyle="Light" PointSize="9" LeftIndent="10" SpaceAfter="2.834645669291339" GridAlignment="AlignBaseline">
+			<Properties>
+				<BasedOn type="object">ParagraphStyle/$ID/NormalParagraphStyle</BasedOn>
+				<PreviewColor type="enumeration">Nothing</PreviewColor>
+				<AppliedFont type="string">Helvetica Neue</AppliedFont>
+			</Properties>
+		</ParagraphStyle>
+		<ParagraphStyle Self="ParagraphStyle/Reference List (title)" Name="Reference List (title)" Imported="false" NextStyle="ParagraphStyle/Reference List (title)" KeyboardShortcut="0 0" SpaceAfter="5.669291338582678">
+			<Properties>
+				<BasedOn type="object">ParagraphStyle/Header2</BasedOn>
+				<PreviewColor type="enumeration">Nothing</PreviewColor>
+			</Properties>
+		</ParagraphStyle>
+		<ParagraphStyle Self="ParagraphStyle/Reference List" Name="Reference List" Imported="false" NextStyle="ParagraphStyle/Reference List" KeyboardShortcut="0 0" PointSize="8" Justification="LeftAlign" GridAlignment="None">
+			<Properties>
+				<BasedOn type="object">ParagraphStyle/Paragraph</BasedOn>
+				<PreviewColor type="enumeration">Nothing</PreviewColor>
+			</Properties>
+		</ParagraphStyle>
+		<ParagraphStyle Self="ParagraphStyle/$ID/NormalParagraphStyle" Name="$ID/NormalParagraphStyle" Imported="false" NextStyle="ParagraphStyle/$ID/NormalParagraphStyle" KeyboardShortcut="0 0">
+			<Properties>
+				<BasedOn type="string">$ID/[No paragraph style]</BasedOn>
+				<PreviewColor type="enumeration">Nothing</PreviewColor>
+			</Properties>
+		</ParagraphStyle>
+		<ParagraphStyle Self="ParagraphStyle/Header2" Name="Header2" Imported="false" NextStyle="ParagraphStyle/Header2" KeyboardShortcut="0 0" FontStyle="Bold" GridAlignment="AlignBaseline">
+			<Properties>
+				<BasedOn type="string">$ID/[No paragraph style]</BasedOn>
+				<PreviewColor type="enumeration">Nothing</PreviewColor>
+				<Leading type="unit">12</Leading>
+				<AppliedFont type="string">Lato</AppliedFont>
+			</Properties>
+		</ParagraphStyle>
+	</RootParagraphStyleGroup>
+	<TinDocumentDataObject>
+		<Properties>
+			<GaijiRefMaps><![CDATA[/////wAAAAAAAAAA]]></GaijiRefMaps>
+		</Properties>
+	</TinDocumentDataObject>
+	<CrossReferenceFormat Self="u18e" Name="Full Paragraph &amp; Page Number" AppliedCharacterStyle="n">
+		<BuildingBlock Self="u18eBuildingBlock0" BlockType="CustomStringBuildingBlock" AppliedCharacterStyle="n" CustomText="&quot;" AppliedDelimiter="$ID/" IncludeDelimiter="false"/>
+		<BuildingBlock Self="u18eBuildingBlock1" BlockType="FullParagraphBuildingBlock" AppliedCharacterStyle="n" CustomText="$ID/" AppliedDelimiter="$ID/" IncludeDelimiter="false"/>
+		<BuildingBlock Self="u18eBuildingBlock2" BlockType="CustomStringBuildingBlock" AppliedCharacterStyle="n" CustomText="&quot; on page " AppliedDelimiter="$ID/" IncludeDelimiter="false"/>
+		<BuildingBlock Self="u18eBuildingBlock3" BlockType="PageNumberBuildingBlock" AppliedCharacterStyle="n" CustomText="$ID/" AppliedDelimiter="$ID/" IncludeDelimiter="false"/>
+	</CrossReferenceFormat>
+	<CrossReferenceFormat Self="u18f" Name="Full Paragraph" AppliedCharacterStyle="n">
+		<BuildingBlock Self="u18fBuildingBlock0" BlockType="CustomStringBuildingBlock" AppliedCharacterStyle="n" CustomText="&quot;" AppliedDelimiter="$ID/" IncludeDelimiter="false"/>
+		<BuildingBlock Self="u18fBuildingBlock1" BlockType="FullParagraphBuildingBlock" AppliedCharacterStyle="n" CustomText="$ID/" AppliedDelimiter="$ID/" IncludeDelimiter="false"/>
+		<BuildingBlock Self="u18fBuildingBlock2" BlockType="CustomStringBuildingBlock" AppliedCharacterStyle="n" CustomText="&quot;" AppliedDelimiter="$ID/" IncludeDelimiter="false"/>
+	</CrossReferenceFormat>
+	<CrossReferenceFormat Self="u190" Name="Paragraph Text &amp; Page Number" AppliedCharacterStyle="n">
+		<BuildingBlock Self="u190BuildingBlock0" BlockType="CustomStringBuildingBlock" AppliedCharacterStyle="n" CustomText="&quot;" AppliedDelimiter="$ID/" IncludeDelimiter="false"/>
+		<BuildingBlock Self="u190BuildingBlock1" BlockType="ParagraphTextBuildingBlock" AppliedCharacterStyle="n" CustomText="$ID/" AppliedDelimiter="$ID/" IncludeDelimiter="false"/>
+		<BuildingBlock Self="u190BuildingBlock2" BlockType="CustomStringBuildingBlock" AppliedCharacterStyle="n" CustomText="&quot; on page " AppliedDelimiter="$ID/" IncludeDelimiter="false"/>
+		<BuildingBlock Self="u190BuildingBlock3" BlockType="PageNumberBuildingBlock" AppliedCharacterStyle="n" CustomText="$ID/" AppliedDelimiter="$ID/" IncludeDelimiter="false"/>
+	</CrossReferenceFormat>
+	<CrossReferenceFormat Self="u191" Name="Paragraph Text" AppliedCharacterStyle="n">
+		<BuildingBlock Self="u191BuildingBlock0" BlockType="CustomStringBuildingBlock" AppliedCharacterStyle="n" CustomText="&quot;" AppliedDelimiter="$ID/" IncludeDelimiter="false"/>
+		<BuildingBlock Self="u191BuildingBlock1" BlockType="ParagraphTextBuildingBlock" AppliedCharacterStyle="n" CustomText="$ID/" AppliedDelimiter="$ID/" IncludeDelimiter="false"/>
+		<BuildingBlock Self="u191BuildingBlock2" BlockType="CustomStringBuildingBlock" AppliedCharacterStyle="n" CustomText="&quot;" AppliedDelimiter="$ID/" IncludeDelimiter="false"/>
+	</CrossReferenceFormat>
+	<CrossReferenceFormat Self="u192" Name="Paragraph Number &amp; Page Number" AppliedCharacterStyle="n">
+		<BuildingBlock Self="u192BuildingBlock0" BlockType="ParagraphNumberBuildingBlock" AppliedCharacterStyle="n" CustomText="$ID/" AppliedDelimiter="$ID/" IncludeDelimiter="false"/>
+		<BuildingBlock Self="u192BuildingBlock1" BlockType="CustomStringBuildingBlock" AppliedCharacterStyle="n" CustomText=" on page " AppliedDelimiter="$ID/" IncludeDelimiter="false"/>
+		<BuildingBlock Self="u192BuildingBlock2" BlockType="PageNumberBuildingBlock" AppliedCharacterStyle="n" CustomText="$ID/" AppliedDelimiter="$ID/" IncludeDelimiter="false"/>
+	</CrossReferenceFormat>
+	<CrossReferenceFormat Self="u193" Name="Paragraph Number" AppliedCharacterStyle="n">
+		<BuildingBlock Self="u193BuildingBlock0" BlockType="ParagraphNumberBuildingBlock" AppliedCharacterStyle="n" CustomText="$ID/" AppliedDelimiter="$ID/" IncludeDelimiter="false"/>
+	</CrossReferenceFormat>
+	<CrossReferenceFormat Self="u194" Name="Text Anchor Name &amp; Page Number" AppliedCharacterStyle="n">
+		<BuildingBlock Self="u194BuildingBlock0" BlockType="CustomStringBuildingBlock" AppliedCharacterStyle="n" CustomText="&quot;" AppliedDelimiter="$ID/" IncludeDelimiter="false"/>
+		<BuildingBlock Self="u194BuildingBlock1" BlockType="BookmarkNameBuildingBlock" AppliedCharacterStyle="n" CustomText="$ID/" AppliedDelimiter="$ID/" IncludeDelimiter="false"/>
+		<BuildingBlock Self="u194BuildingBlock2" BlockType="CustomStringBuildingBlock" AppliedCharacterStyle="n" CustomText="&quot; on page " AppliedDelimiter="$ID/" IncludeDelimiter="false"/>
+		<BuildingBlock Self="u194BuildingBlock3" BlockType="PageNumberBuildingBlock" AppliedCharacterStyle="n" CustomText="$ID/" AppliedDelimiter="$ID/" IncludeDelimiter="false"/>
+	</CrossReferenceFormat>
+	<CrossReferenceFormat Self="u195" Name="Text Anchor Name" AppliedCharacterStyle="n">
+		<BuildingBlock Self="u195BuildingBlock0" BlockType="CustomStringBuildingBlock" AppliedCharacterStyle="n" CustomText="&quot;" AppliedDelimiter="$ID/" IncludeDelimiter="false"/>
+		<BuildingBlock Self="u195BuildingBlock1" BlockType="BookmarkNameBuildingBlock" AppliedCharacterStyle="n" CustomText="$ID/" AppliedDelimiter="$ID/" IncludeDelimiter="false"/>
+		<BuildingBlock Self="u195BuildingBlock2" BlockType="CustomStringBuildingBlock" AppliedCharacterStyle="n" CustomText="&quot;" AppliedDelimiter="$ID/" IncludeDelimiter="false"/>
+	</CrossReferenceFormat>
+	<CrossReferenceFormat Self="u196" Name="Page Number" AppliedCharacterStyle="n">
+		<BuildingBlock Self="u196BuildingBlock0" BlockType="CustomStringBuildingBlock" AppliedCharacterStyle="n" CustomText="page " AppliedDelimiter="$ID/" IncludeDelimiter="false"/>
+		<BuildingBlock Self="u196BuildingBlock1" BlockType="PageNumberBuildingBlock" AppliedCharacterStyle="n" CustomText="$ID/" AppliedDelimiter="$ID/" IncludeDelimiter="false"/>
+	</CrossReferenceFormat>
+	<Story Self="uf7d" AppliedTOCStyle="n" TrackChanges="false" StoryTitle="" AppliedNamedGrid="n">
+		<StoryPreference OpticalMarginAlignment="true" OpticalMarginSize="12" FrameType="TextFrameType" StoryOrientation="Horizontal" StoryDirection="LeftToRightDirection"/>
+		<InCopyExportOption IncludeGraphicProxies="true" IncludeAllResources="false"/>
+		<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Header1">
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+				<Content>Neoliberalism and the Autonomy of Art: The Culture of Power, the Power of Culture</Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
+				<Footnote>
+					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+							<Content><?ACE 4?></Content>
+						</CharacterStyleRange>
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+							<Content>	Different versions of this essay were presented at Bureau Publik, Copenhagen, 31 October 2013 and KHIB in Bergen, Norway, on 5 November 2013.</Content>
+							<Br/>
+						</CharacterStyleRange>
+					</ParagraphStyleRange>
+				</Footnote>
+				<Br/>
+			</CharacterStyleRange>
+		</ParagraphStyleRange>
+		<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Header3">
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+				<Content>Irmgard Emmelheinz</Content>
+				<Br/>
+			</CharacterStyleRange>
+		</ParagraphStyleRange>
+		<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+				<Content>In Mexico, advanced neoliberal reforms are taking place at a much faster pace than in other parts of the world. These reforms have not only delivered new forms of life and making a living, but also created new sensibilities. The erosion of the social contract brought on by these reforms, has had tangible, negative effects on the social tissue. This has materialized, for example, in what is known as the most violent and dangerous city in the world, Ciudad Juárez, where in 2010 alone 3000 people were killed. Bearing this in mind, I define neoliberalism as a </Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+				<Content>sensibility</Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+				<Content> that shapes subjectivities, permeates art and culture, differentiates and homogenizes people, molds lives and desires, mistakes information for knowledge, gives shape to space and thus to social relations, normalizes violence, creates ways of seeing the world that justify destruction and dispossession with notions progress and development, or that tries to solve economic precarity through self-help and permanent education. I argue that neoliberalism is more than a system that is ruled by a free market economy, which implies the privatization of the welfare state and an array of government services (for example: education, health, energy), subcontracting to the private sector and changes in labor laws and worker’s rights as well as a transnational division of labor. The system of control under neoliberalism combines a militarized police regime with repressive tolerance, the logic of securitization with granting freedom of expression and ‘quality of life.’ The political figures, molded and governed by the neoliberal regime itself are: the </Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+				<Content>homo oeconomicus</Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+				<Content> (the entrepreneur responsible for his own well-being and manager of his own human capital) and the subject of rights (the State is in charge of guaranteeing that his human rights are respected). Aside from an economic-political system, I see neoliberalism as a way of relating to the world, to nature, to things and beings, which presupposes unlimited growth and development. It is also a way of living and working: human beings are put to work beyond their capacities, erasing the distinction between leisure and work time. Neoliberalism is also a sensibility that establishes the terms of empathy and sympathy and has outlined a new notion of alterity. Configured as ‘social responsibility’ or social work, to ‘help’ the Other means to focus on the (so-called) ‘secondary malfunctions’ of the current capitalist system by disseminating personal and managerial practices such as tolerance, showing respect, nurturing dialogue, transparency and social collaboration. In this sense, the &apos;Other&apos; is a ‘community to come’, the ‘subject of rights’ (to ethical restitution: refugees, displaced, immigrants, those who live under a ‘state of exception’), the </Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+				<Content>underclass</Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+				<Content>, that is, he or she who will be permanently outside globalizing processes, including access to education, jobs and consumption. The category of the &apos;Other&apos; encompasses political and religious fundamentalists as well: fanatics who are outside globalizing and modernizing processes by choice. These </Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+				<Content>Others</Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+				<Content> are sometimes given faces in the media or in art by spectacularizing their subjectivity but obviating the processes that render their lives precarious and endangered in the first place.</Content>
+				<Br/>
+				<Content>What has this got to do with the autonomy of art? As we will see, postmodernism put art and culture at the center of social, political and economic processes. They are now inextricable from work, production, consumption and subjectivity: in the neoliberal regime, art in particular and culture in general are used actively as compensation and improvement of tools, all the while normalizing and spreading the antithesis of autonomous art, that is, ‘useful art.’ Subsumed to political action, much of contemporary art has taken up a political role as either ‘sensible politics’ or ‘socially engaged artwork.’ This is tied to the fact that in our current world order, as Marina Vishmidt and Kerstin Stakemeier point out, &apos;art no longer designates a reproductive and representational realm, but one of productivity and social power&apos; and thus the autonomy of art itself has become a problem – in so far as it has become a realm for the production of added value.</Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
+				<Footnote>
+					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+							<Content><?ACE 4?></Content>
+						</CharacterStyleRange>
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+							<Content>	Kerstin Stakemeier and Marina Vishmidt, &apos;The Value of Autonomy: A conversation between Kerstin Stakemeier and Marina Vishmidt about the reproduction of art,&apos; </Content>
+						</CharacterStyleRange>
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+							<Content>Texte zur Kunst</Content>
+						</CharacterStyleRange>
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+							<Content> 88 (December 2012): 102-117.</Content>
+							<Br/>
+						</CharacterStyleRange>
+					</ParagraphStyleRange>
+				</Footnote>
+				<Br/>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+				<Content>In the September 2013 editorial of </Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+				<Content>e-flux journal</Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+				<Content>, editors Juliete Aranda, Brian Kuan Wood and Anton Vidokle stated that art is produced at a double bind: while art can be complicit in or instrumentalized by power, its autonomy is located in an imaginary space. What do they mean by this? First, that art, in order to be </Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+				<Content>seen</Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+				<Content>, depends on a platform – an institution – and thus needs to be part of some art world. Second, that the autonomy of art – as a separate regime or an isolated sphere – is a fantasy. In order to consider the autonomy of art outside of this double bind, Clement Greenberg tied the autonomy of art – as art’s for art’s sake – to the avant-garde situating criticality within the discipline or medium of art itself. In Greenberg&apos;s definition, avant-garde (modernist) painting clearly takes a position against socialist realist painting and those debates of the 1930s that rely on the relationship between art and politics (embodied for example by Mexican muralist painting, which was very popular in New York in the 1930s). He characterizes avant-garde by its self-critique in the sense that its formal expression is a meditation on the qualities of the medium of painting. This meant extricating figuration from the arts, and an essentialist understanding of the mediums of art: for Greenberg, ‘purity’ was political – especially if it was seen as an embodiment of a free nation versus the authoritarian Soviet Union.</Content>
+				<Br/>
+				<Content>Postmodernism could be understood as an effort to break with Greenberg’s disciplinary totalitarianism. Taking up the Dadaist and surrealist avant-garde’s goals of unifying art and life, postmodernism thrived on the advent of interdisciplinary strategies and the symbiosis of art with everything else. Post-war art continued the vanguardist critique of the bourgeois notions of autonomous art and expressive artists. It embraced everyday objects, transformed the artist’s function, questioned the institution of art and attacked it in an anarchist manner.</Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
+				<Footnote>
+					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+							<Content><?ACE 4?></Content>
+						</CharacterStyleRange>
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+							<Content>	Hal Foster, &apos;What’s Neo about the Neo-Avant-Garde?&apos; </Content>
+						</CharacterStyleRange>
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+							<Content>October</Content>
+						</CharacterStyleRange>
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+							<Content>, Vol. 70, The Duchamp Effect (Autumn 1994): 5-32.</Content>
+							<Br/>
+						</CharacterStyleRange>
+					</ParagraphStyleRange>
+				</Footnote>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+				<Content> Following Hal Foster, art from the 1950s and 1960s represents the failure to destroy the institution of art and the institutionalization of the avant-garde.</Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
+				<Footnote>
+					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+							<Content><?ACE 4?></Content>
+						</CharacterStyleRange>
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+							<Content>	Foster, &apos;What’s Neo about the Neo-Avant-Garde?&apos;.</Content>
+							<Br/>
+						</CharacterStyleRange>
+					</ParagraphStyleRange>
+				</Footnote>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+				<Content> If Greenberg advocated aesthetic autonomy with the purpose of resisting the illustrational meanings typical of kitsch and commercial forces, post-modernist’s interdisciplinary strategies led art, in Foster’s words, &apos;to become embedded into life under the terms of mass capitalism, while it became appropriated by the culture industry.&apos;</Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
+				<Footnote>
+					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+							<Content><?ACE 4?></Content>
+						</CharacterStyleRange>
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+							<Content>	Foster, &apos;What’s Neo about the Neo-Avant-Garde?&apos;.</Content>
+							<Br/>
+						</CharacterStyleRange>
+					</ParagraphStyleRange>
+				</Footnote>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+				<Content> Due to its ‘post-medium’ condition, as Rosalind Krauss termed ‘postmodern interdisciplinarity’, art is enmeshed with reality, and its materials can range from and beyond social interaction to scientific research and montage. With postmodernism, the politics of the autonomy of art meant breaking away from in Greenberg’s sense of purity and thus art’s autonomy came to be conceived as &apos;provisional, always defined diacritically (as something supplemental to art) and situated politically, always </Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+				<Content>semi</Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+				<Content>.&apos;</Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
+				<Footnote>
+					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+							<Content><?ACE 4?></Content>
+						</CharacterStyleRange>
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+							<Content>	Foster, &apos;What’s Neo about the Neo-Avant-Garde?&apos;.</Content>
+							<Br/>
+						</CharacterStyleRange>
+					</ParagraphStyleRange>
+				</Footnote>
+				<Br/>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+				<Content>Beyond postmodernism, parallel to an increase of corporate subsidies to the arts, there has been a recent boom in private collecting and thus a market boom. The value of art is speculative and reflects the logic of finance-based economy (and risk): the economy and critical art share the core value of ‘innovation.’ In this regard, neoliberalism has meant privatization for the arts or the collusion between the private and the public sector in order to subsidize them. In the past decade or so (and in the US long before that), corporations have played an important role in investing in culture. Institutions and corporations have been seeking to play an important role in communicating the point of view of the private sector on an array of critical public topics.</Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
+				<Footnote>
+					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+							<Content><?ACE 4?></Content>
+						</CharacterStyleRange>
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+							<Content>	Gregory Sholette, &apos;Welcome to the Desert of the Real Artworld,&apos; </Content>
+						</CharacterStyleRange>
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+							<Content>Oxford Art Journal</Content>
+						</CharacterStyleRange>
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+							<Content> 27.2, (2004), p. 259. http://www.gregorysholette.com/wp-content/uploads/2011/04/07_welcome1.pdf.</Content>
+							<Br/>
+						</CharacterStyleRange>
+					</ParagraphStyleRange>
+				</Footnote>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+				<Content> If art was previously supported by the state, because culture was considered to be an asset to the nation, today, corporations have appropriated this function, as they sponsor and jury art shows, grant awards and funds and collect artworks. Meanwhile, they promote their perspectives on critical public topics.</Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
+				<Footnote>
+					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+							<Content><?ACE 4?></Content>
+						</CharacterStyleRange>
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+							<Content>	Sholette, &apos;Welcome to the Desert of the Real Artworld,&apos; pp. 260-261.</Content>
+							<Br/>
+						</CharacterStyleRange>
+					</ParagraphStyleRange>
+				</Footnote>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+				<Content> In a 1998 article, art historian Chin-tao Wu highlighted how corporations appropriate the concept of innovation – also known as innovative disruption or creative destruction – in order to redefine its meaning in corporate terms. She quotes John Murphy, executive vice-president of Philip Morris Inc – a U.S. cigarette company – on their sponsorship of the 1969 exhibition, </Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+				<Content>When Attitudes Become Form</Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+				<Content>:</Content>
+				<Br/>
+			</CharacterStyleRange>
+		</ParagraphStyleRange>
+		<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Blockquote &gt; Paragraph">
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+				<Content>We feel it is appropriate that we participate in bringing these works to the attention of the public, for there is a key element in this ‘new art’ which has its counterpart in the business world. That element is innovation – without which it would be impossible for progress to be made in any segment in society.</Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
+				<Footnote>
+					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+							<Content><?ACE 4?></Content>
+						</CharacterStyleRange>
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+							<Content>	Chin-Tao Wu, &apos;Embracing the Enterprise Culture: Art Institutions Since the 1980s&apos;, </Content>
+						</CharacterStyleRange>
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+							<Content>New Left Review</Content>
+						</CharacterStyleRange>
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+							<Content> I/230, (July-August 1998): 31.</Content>
+							<Br/>
+						</CharacterStyleRange>
+					</ParagraphStyleRange>
+				</Footnote>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Ligatures="false">
+				<Br/>
+			</CharacterStyleRange>
+		</ParagraphStyleRange>
+		<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+				<Content>Furthermore, in the context of neoliberal reforms and sensibilities, there is a global tendency to subdue contemporary art to the politics of culture administration, which implies &apos;democratizing culture&apos; making it accessible to the masses, using it as a tool for the well-being of society, and the reconstruction or healing of a community or society that has experienced violence. Cultural institutions subsidized by corporations and individual patrons apparently follow progressive agendas promoting political or socially minded art. For instance, </Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+				<Content>Creative Time</Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+				<Content> in New York (funded by a mix of state and corporate support) supports public and community art, with the goal of enabling the politicization of social space with cultural intervention. This organization sponsored Tania Bruguera’s </Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+				<Content>Immigrant Movement International</Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+				<Content>, a project developed in Queens, New York in 2011, which the artist describes as: a flexible community space and long-term socio-political movement, public workshops, events, actions and partnerships with immigrant and service organizations. The artist further qualified her project as &apos;useful art.&apos;</Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
+				<Footnote>
+					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+							<Content><?ACE 4?></Content>
+						</CharacterStyleRange>
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+							<Content>	See artist’s statement available at: http://www.taniabruguera.com/cms/486-0-Immigrant+Movement+International.htm.</Content>
+							<Br/>
+						</CharacterStyleRange>
+					</ParagraphStyleRange>
+				</Footnote>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+				<Content> The problem is that initiatives such as this one, render opaque the real economic conditions that led to situations of immigrant precarity to begin with; immigrants are local signs of complex global forces operating on conditions of life and work at home and abroad. Many would argue that to subsidize a project like Bruguera’s signals the transfer of social work to artistic work funded by the private sector. Politics comes into the scene through art as social work in the name of ‘public interest’, only to become subject to administration, engineering and a technocratic way of administering social problems, configuring the private version of the welfare state.</Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
+				<Footnote>
+					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+							<Content><?ACE 4?></Content>
+						</CharacterStyleRange>
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+							<Content>	Oliver Marchart, &apos;Art, Space and the Public Sphere(s)&apos; , 2002, http://eipcp.net/transversal/0102/marchart/en.</Content>
+							<Br/>
+						</CharacterStyleRange>
+					</ParagraphStyleRange>
+				</Footnote>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+				<Content> Furthermore, as corporate support to the establishment of antagonistic spaces becomes gradually institutionalized within society, the question rises, after Gregory Sholette, &apos;Who owns cultural capital and who has the right to use it?&apos; For him, corporate involvement in the arts is akin, or perhaps integral, to the current erosion of public space.</Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
+				<Footnote>
+					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+							<Content><?ACE 4?></Content>
+						</CharacterStyleRange>
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+							<Content>	Sholette, &apos;Welcome to the Desert of the Real Artworld’.</Content>
+							<Br/>
+						</CharacterStyleRange>
+					</ParagraphStyleRange>
+				</Footnote>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+				<Content> Moreover, as cultural spaces become institutional bastions of democratic self-expression and sites for social reconciliation and self-help, dissent is criminalized and forcefully punished worldwide.</Content>
+				<Br/>
+				<Content>It becomes evident that art and culture are central to neoliberal processes that act as agents of globalization and as tools for improvement and development, counterinsurgency and pacification. An extreme example of this could be the ‘culturally sensible’ occupation of Iraq as described by Nato Thompson (director of </Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+				<Content>Creative Time</Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+				<Content>). In uncritical terms, Thompson recounts how General David Petraeus wrote a field manual geared at changing people’s attitudes towards the American occupation of Mosul:</Content>
+				<Br/>
+			</CharacterStyleRange>
+		</ParagraphStyleRange>
+		<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Blockquote &gt; Paragraph">
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+				<Content>[It is] a story about counterinsurgency and community organizing, about getting to know people as an occupying force, and getting to know people as neighbors. It is a story about the military entering the terrain of that thing called culture.</Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
+				<Footnote>
+					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+							<Content><?ACE 4?></Content>
+						</CharacterStyleRange>
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+							<Content>	Nato Thompson, &apos;The Insurgents Part I: Community-Based Practice as Military Methodology,&apos; </Content>
+						</CharacterStyleRange>
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+							<Content>e-flux journal</Content>
+						</CharacterStyleRange>
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+							<Content> # 47, (September 2013), http://www.e-flux.com/journal/the-insurgents-part-i-community-based-practice-as-military-methodology. In the second part of his essay, Thompson includes a disclaimer about him glossing over U.S. military violence in Iraq. See: http://www.e-flux.com/journal/the-insurgents-part-ii-fighting-the-left-by-being-the-left.</Content>
+							<Br/>
+						</CharacterStyleRange>
+					</ParagraphStyleRange>
+				</Footnote>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Ligatures="false">
+				<Br/>
+			</CharacterStyleRange>
+		</ParagraphStyleRange>
+		<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+				<Content>In this regard, a ‘cultural approach’ to military occupation is akin to artistic social and community practices, as both involve &apos;getting to know people to be able to change the landscapes of life and of power.&apos;</Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
+				<Footnote>
+					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+							<Content><?ACE 4?></Content>
+						</CharacterStyleRange>
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+							<Content>	Thompson, ‘&apos;The Insurgents Part I’.</Content>
+							<Br/>
+						</CharacterStyleRange>
+					</ParagraphStyleRange>
+				</Footnote>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+				<Content> In the case of civilians in Mosul, this is done by obviating their experiences of being under attack. This cultural turn in the U.S. military machinery took place a few years after theorist Frederic Jameson diagnosed a &apos;cultural turn&apos; in capitalism, arguing that social space had been completely saturated with the image of culture. This is because in professional and daily activities, as well as in the various forms of entertainment we enjoy, society consumes cultural products all the time. The postmodern &apos;cultural turn&apos; diagnosed by Jameson, was further elaborated by George Yúdice upon observing (in 2003) that the uses of culture had undergone an unprecedented expansion not just in the marketplace but also along social, political, and economic lines. According to Yúdice, since the state and corporations already utilize culture as a tool as they search for economic and sociopolitical betterment, culture has become a resource and a compensatory device to the ravages neoliberal policies have caused on social tissue: both give meaning and symbolic representations, provide mechanisms of solace, as well as function as tools for re-invention and amelioration.</Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
+				<Footnote>
+					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+							<Content><?ACE 4?></Content>
+						</CharacterStyleRange>
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+							<Content>	See Irmgard Emmelhainz, &apos;Art and the Cultural Turn: Farewell to Committed Autonomous Art?&apos;, </Content>
+						</CharacterStyleRange>
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+							<Content>e-flux journal</Content>
+						</CharacterStyleRange>
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+							<Content> N. 42 (February 2013), http://www.e-flux.com/journal/art-and-the-cultural-turn-farewell-to-committed-autonomous-art.</Content>
+							<Br/>
+						</CharacterStyleRange>
+					</ParagraphStyleRange>
+				</Footnote>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+				<Content> In this context, the line between public programs and relational aesthetics or participative art appears to be increasingly blurred. Former Mexican president Felipe Calderón made a public appearance in February 2012 in Ciudad Juárez in front of a sign that read: &apos;No More Weapons.&apos; The billboard measured 8 x 21 meters, and was built by soldiers of the National Defense Department with 3 tons of assault weapons that were confiscated at the Mexican border and molten into bricks. During the ceremony in which the billboard was unveiled, Calderón turned toward the Mexican-American border and begged the U.S. (in bad English): &apos;No more weapons! Dear friends of the United States, Mexico needs your help to stop this terrible violence we are suffering.&apos; During this trip, Calderón also participated in the destruction of 6 thousand confiscated weapons, and planted a tree at a Community Center. Calderon’s propagandistic gestures immediately recall the language of socially engaged contemporary art, particularly, Pedro Reyes’ intervention, </Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+				<Content>Palas por Pistolas</Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+				<Content> in Culiacán in 2008 (also executed in Juárez in the same week of Calderon’s visit). Reyes’ project of exchanging shovels for weapons was subsidized by two predominant Mexican corporations: Trupper, which produces hardware, and Coppel, which sells appliances and other goods. For this project, Reyes devised a Television campaign inviting citizens to give up their weapons in exchange for a coupon for appliances. The artist collected 1527 weapons, which were destroyed at a military zone in a public act. Giving his action a further twist, Reyes sought to have the rests of the weapons welded together to produce 1527 shovels carrying an inscription telling the story of the weapon they represented (this was not possible due to technical reasons, so Trupper ended up donating them). The engraved shovels were distributed in art institutions and public schools. Adults and children planted 1527 trees. To Reyes, this ritual had a pedagogical purpose: &apos;to show the people how an agent of death can become an agent of life.&apos;</Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
+				<Footnote>
+					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+							<Content><?ACE 4?></Content>
+						</CharacterStyleRange>
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+							<Content>	Artist’s statement available online: http://pedroreyes.net/palasporpistolas.php(http://newleftreview.org/I/87-88/theodor-adorno-commitment).</Content>
+							<Br/>
+						</CharacterStyleRange>
+					</ParagraphStyleRange>
+				</Footnote>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+				<Content> A similar public purge of weapons in exchange for appliances (and tablets), is currently happening in Mexico City led by a &apos;Pink Ladies Brigade.&apos; These relational actions – both by General Petraeus’ and by the Mexican government – show how the language of contemporary art has been appropriated by propaganda for its purposes, making politics and aesthetics indistinguishable, as both operate in the realm of symbolic and perceptive work. These are also examples of the predominant idea that violence can be eased – or appeased – through cultural intervention and in the Mexican case, by giving away highly desirable goods.</Content>
+				<Br/>
+				<Content>Aside from this &apos;artistic approach&apos; to social, political and military action, sensible production has taken up a political function. Political work has been developed into a matter of codification using medial forms with the purpose of creating a terrain for political acts, creating an &apos;activist imaginary&apos; made of political fields constituted by images. Political action embedded in cultural forms implies making things public as a way of signs.</Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
+				<Footnote>
+					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+							<Content><?ACE 4?></Content>
+						</CharacterStyleRange>
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+							<Content>	See Megan McLagan and Yates McKee (eds), &apos;Introduction&apos;, </Content>
+						</CharacterStyleRange>
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+							<Content>Sensible Politics: The Visual Culture of Nongovernmental Activism</Content>
+						</CharacterStyleRange>
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+							<Content>, Cambridge, Mass.: Zone Books, 2012, pp. 9-22.</Content>
+							<Br/>
+						</CharacterStyleRange>
+					</ParagraphStyleRange>
+				</Footnote>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+				<Content> An example could be Trevor Paglen’s (sometimes abstract or blurry) photographs of top-secret governmental, nuclear and military sites. Works such as Paglen’s, seek to make visible the invisible under the premise that such an act is political. Yet, what images such as Paglen’s represent is vague in political terms. What I find problematic is that the gap between </Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+				<Content>political</Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+				<Content> representation and </Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+				<Content>aesthetic</Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+				<Content> representation is now wider than ever. Representation means &apos;making the absent present&apos;, which is always an incomplete task because totality is impossible to convey, and it works in two senses. As </Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+				<Content>Vertreten</Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+				<Content> (or political representation) it means taking the place of others in order to speak on their behalf, and as </Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+				<Content>Darstellen</Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+				<Content> (or aesthetic representation) it is the form of representation that implies describing the other in the first person. Representation was brought into a crisis in the 1960s because it was accused of hiding the fact that the speaker was occupying the place of the represented and thus, workers and minorities were prompted to speak on their own behalf and in the first person. Nowadays, however, the gap between political (</Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+				<Content>Vertreten</Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+				<Content>) and aesthetic (</Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+				<Content>Darstellen</Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+				<Content>) representations is wider than ever. Whatever political acts encoded in medial forms may represent, they render it unstable, partly because politics have become unrepresentable due to a lack of stable political subjects; they are collective enunciations constantly ‘becoming’. In this context, &apos;expressive&apos; politics is valued over representation because &apos;it embodies rebellious subjectivities expressing themselves without delegation and they do so through formal and symbolic richness.&apos;</Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
+				<Footnote>
+					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+							<Content><?ACE 4?></Content>
+						</CharacterStyleRange>
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+							<Content>	Marcelo Espósito, &apos;Lecciones de historia. El arte, entre la experimentación institucional y las políticas del movimiento&apos;, SITAC 2009. http://marceloexposito.net/pdf/exposito_sitac.pdf (http://www.e-flux.com/journal/art-and-the-cultural-turn-farewell-to-committed-autonomous-art/).</Content>
+							<Br/>
+						</CharacterStyleRange>
+					</ParagraphStyleRange>
+				</Footnote>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+				<Content> One of the issues that rises is that there is lack of a common ground to universalize the multiplicity of singular struggles and social movements scattered across the world like archipelagos. There are just too many images in the infosphere, and ‘sensible politics’ exists for and by its own public, which is made up of social movements and politically minded cultural producers. In this regard, cultural infrastructure functions as the platform for ‘sensible politics,’ in which curators, museum directors and board members (sometimes representing corporate interests) select and contextualize artwork that presents certain events and social actions, thus determining the boundaries of public thinking.</Content>
+				<Br/>
+				<Content>Aside from its compensatory role, culture (when it is ‘creativity’ and cognitive production), is not only at the center of political action, but is also embedded in production and consumption processes, and in neoliberalism, at least insofar as it has thrived in post-Fordist (flexible) forms and conditions of labor. Neoliberalism has taken up the characteristics of aesthetic production. Signs and nascent meanings, desires and projections meet in the market because the post-Fordist economy is based on manufacturing experiences, signs and information. The core of the knowledge economy is creativity. This is why qualities of aesthetic production have become hegemonic and have transformed labor and consumption processes as well as aesthetic experiences. Not only sensations and feelings are trivialized and packaged for sale, disinterestedness (the core of aesthetic experience as defined by Kant) has also vanished.</Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
+				<Footnote>
+					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+							<Content><?ACE 4?></Content>
+						</CharacterStyleRange>
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+							<Content>	Stephen Shaviro, &apos;Accelerationist Aesthetics,&apos; </Content>
+						</CharacterStyleRange>
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+							<Content>e-flux journal</Content>
+						</CharacterStyleRange>
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+							<Content> #46 (Summer 2013).</Content>
+							<Br/>
+						</CharacterStyleRange>
+					</ParagraphStyleRange>
+				</Footnote>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+				<Content> This arises as the result of aesthetic experience that is enslaved for profit, as well as subsumed to &apos;political&apos; efficiency in the sense of State and corporate strategic investment in culture and the transformation of political action into sensible forms – as opposed to action. These tendencies are a result of what Stephen Shaviro describes as &apos;the ruthless cognition of aesthetic sensations and feelings&apos;, as they are transformed into data and exploited forms of labor which are marketed as fresh experiences, exciting lifestyle choices, or as socially-responsible cultural activities. In the political arena, thirty years of neoliberalism have crushed any confidence that we might have had in the social contract. If artists used to identify with the proletariat and social struggles, nowadays, aesthetic production – which is lacking a reflexive program in regards to the conditions of its own production – is geared just toward the supplementing of the entertainment market with cultivated and knowledgeable new experiences and sensations. Furthermore, through subsidizing art and cultural projects, corporations, states and arts patrons put into practice the following principle of the Prince Claus Fund: &apos;There can be no development without culture, and there can be no cultural development without freedom of debate.&apos;</Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
+				<Footnote>
+					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+							<Content><?ACE 4?></Content>
+						</CharacterStyleRange>
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+							<Content>	From their website: “… The Prince Claus Fund’s mission is to actively seek cultural collaborations founded on equality and trust, with partners of excellence, in spaces where resources and opportunities for cultural expression, creative production and research are limited and cultural heritage is threatened. The Prince Claus Fund is based in Amsterdam and is supported by the Dutch Ministry of Foreign Affairs and the Dutch Postcode Lottery.” For more information, visit their website: http://www.princeclausfund.org/en/the-fund.</Content>
+						</CharacterStyleRange>
+					</ParagraphStyleRange>
+				</Footnote>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+				<Content> As this quote becomes evermore evident, the public expects from culture and art rigorous accountability, critical questioning, democratic access, dialogue, openness and equal representation in the visual regime. This is posited as the road to development. In this context, culture is perceived as &apos;a basic need&apos;, as the founding principle of Prince Claus Fund states. Thus, states, corporations, the private sector and society attribute to art a decisive political, as they invest in culture with the purpose of generating political and economic surplus value. Bearing in mind that the autonomy of art is always a political matter, could art be politicized beyond its autonomy as a site for added value?</Content>
+				<Br/>
+				<Content>The condition of possibility of autonomous, committed art under the new neoliberal world order, is radically different from what we see as the autonomy of art under modernism (as </Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+				<Content>l’art pour l’art</Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+				<Content>) and post-modern interdisciplinarity. These imply the institutionalization of the avant-garde and the subsumption of art to the market, bearing in mind that the emancipatory promises of modernism (criticality, self-design, creativity) are now located at the center of our everyday lives both via consumption and production processes. Theodor Adorno’s take on the autonomy of art in his 1962 essay entitled </Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+				<Content>Commitment</Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+				<Content>, can be helpful here. In this essay, Adorno responds to Jean-Paul Sartre’s aesthetic manifesto </Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+				<Content>What is Literature?</Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+				<Content> and elaborates a theoretical debate about engaged literature and autonomous art. According to Adorno there are two kinds artworks. On the one hand, there are works that &apos;are vulgarly assimilated to the existence against which they protest.&apos;</Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
+				<Footnote>
+					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
+							<Br/>
+						</CharacterStyleRange>
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+							<Content><?ACE 4?></Content>
+						</CharacterStyleRange>
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+							<Content>	Theodor Adorno, &apos;Comittment&apos;, </Content>
+						</CharacterStyleRange>
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+							<Content>New Left Review</Content>
+						</CharacterStyleRange>
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+							<Content> I/87088 (September-December 1974), http://newleftreview.org/I/87-88/theodor-adorno-commitment (http://whitney.org/file_columns/0002/9848/andreafraser_1_2012whitneybiennial.pdf).</Content>
+							<Br/>
+						</CharacterStyleRange>
+					</ParagraphStyleRange>
+				</Footnote>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+				<Content> These works &apos;are content with being mere fetishes or a pastime, and thus degenerate and become de-politicized cultural merchandise.&apos;</Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
+				<Footnote>
+					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+							<Content><?ACE 4?></Content>
+						</CharacterStyleRange>
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+							<Content>	Adorno, &apos;Comittment&apos;.</Content>
+							<Br/>
+						</CharacterStyleRange>
+					</ParagraphStyleRange>
+				</Footnote>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+				<Content> This de-politicization, for Adorno is in fact, deeply political. A lot of politically or socially-minded contemporary art would fit into this category. On the other hand, there is </Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+				<Content>engaged autonomous art</Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+				<Content> which is necessarily detached from reality. Adorno defines the autonomy of art not in the sense of its strictly formalist aspect, although like Walter Benjamin, Adorno also vouches for works of art that are both formally and politically progressive. For Adorno, autonomous art negates a direct connection to reality. The distance that autonomous art has from reality, however, is mediated by reality itself. This means that a work of art cannot come out of the blue: its origin is a reaction against reality. Adorno, as does Benjamin, draws a distinction between ‘commitment’ and ‘tendency.’ Committed art does not bear the intention of generating betterment measures, legislative acts, practical institutions (like propaganda) or even transmitting a concrete ideology. It operates at the level of fundamental attitudes. For Adorno, autonomous and engaged works of art operate at the level of abandoning the social contract with reality and &apos;cease to speak as if they were reporting the facts: this is the moment in which a work of art makes people’s hair stand up.&apos;</Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
+				<Footnote>
+					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+							<Content><?ACE 4?></Content>
+						</CharacterStyleRange>
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+							<Content>	Adorno, &apos;Comittment&apos;.</Content>
+							<Br/>
+						</CharacterStyleRange>
+					</ParagraphStyleRange>
+				</Footnote>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+				<Content> According to Adorno, the shock of the unintelligible (or the ambiguous), is able to communicate more than what is legible and explicit. In that sense, works of art are autonomous, instead of heteronomous. Heteronomy implies that an artwork is subject to a different power, a law that is external and foreign to art and its formal logic. When it is autonomous, engaged art is neither subject to empirical reality nor a correct political tendency. Art’s autonomy protects it from popularization and adoption by the market. Its autonomy implies liberating it from any other external purpose: from being useful. In this manner, an autonomous work of art does not convey a message nor does it need to convince the public or preach to the converted. And although it opposes society, autonomous art is still part of it.</Content>
+				<Br/>
+				<Content>If the autonomy of modern art implied considering art as a realm distanced from reality, art’s post-medium condition now means that it has become a niche within reality.</Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
+				<Footnote>
+					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+							<Content><?ACE 4?></Content>
+						</CharacterStyleRange>
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+							<Content>	Marina Vishmidt, &apos;Mimesis of the Hardened and Alienated: Social Practice as a Business Model,&apos; </Content>
+						</CharacterStyleRange>
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+							<Content>e-flux journal</Content>
+						</CharacterStyleRange>
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+							<Content> 43 (March, 2013), http://www.e-flux.com/journal/“mimesis-of-the-hardened-and-alienated”-social-practice-as-business-model (http://eipcp.net/transversal/0102/marchart/en).</Content>
+							<Br/>
+						</CharacterStyleRange>
+					</ParagraphStyleRange>
+				</Footnote>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+				<Content> What is at stake in autonomous art nowadays, would be to posit it as an experience of reality that is fundamentally foreign and antagonistic to the prevailing reality. If the autonomy of art should be located in the realm of reproduction, as Marina Vischmidt argues,</Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
+				<Footnote>
+					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+							<Content><?ACE 4?></Content>
+						</CharacterStyleRange>
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+							<Content>	Vishmidt, &apos;Mimesis of the Hardened and Alienated’.</Content>
+							<Br/>
+						</CharacterStyleRange>
+					</ParagraphStyleRange>
+				</Footnote>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+				<Content> it would oppose the realm of production of the social, political and economic surplus value. It would go against embodying power and the entrepreneurial model of work. Producing difference and dragging out the laboring conditions hidden within it, autonomous art would imply mimesis with distancing itself. Beyond being used as a tool, autonomous art would refuse becoming an instrument against its own illusions, as well as refusing to become a political force, to be subjected to interests foreign to itself or simply becoming a pleasing commodity. Overcoming self-censorship, it would cease to participate in the economy of the globalized art world, especially in the name of critical practices, political work or social justice, abandoning its claim to become a progressive social force.</Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
+				<Footnote>
+					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+							<Content><?ACE 4?></Content>
+						</CharacterStyleRange>
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+							<Content>	Andrea Fraser, &apos;Le 1% c’est moi&apos;, 2011: ‘Le gorille penseur est un guerrier: le guerrier est un être pour la mort, puisque son métier consiste à mourir. Ici, il pense un peu à la fin de son espèce, ou à la fin de l&apos;ère des — notre époque n&apos;est plus celle des guerriers, elle est celle des insectes, des animaux insignifiants, plus capables de s&apos;adapter...’ http://whitney.org/file_columns/0002/9848/andreafraser_1_2012whitneybiennial.pdf (http://www.e-flux.com/journal/accelerationist-aesthetics-necessary-inefficiency-in-times-of-real-subsumption/).</Content>
+							<Br/>
+						</CharacterStyleRange>
+					</ParagraphStyleRange>
+				</Footnote>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+				<Content> Above all, it would work against the power of culture and the culture of power.</Content>
+				<Br/>
+			</CharacterStyleRange>
+		</ParagraphStyleRange>
+		<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Reference List (title)">
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+				<Content>References</Content>
+				<Br/>
+			</CharacterStyleRange>
+		</ParagraphStyleRange>
+		<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Reference List">
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+				<Content>Adorno, Theodor. &apos;Commitment&apos;, </Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+				<Content>New Left Review</Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+				<Content> I (87088) (September-December, 1974), http://newleftreview.org/I/87-88/theodor-adorno-commitment.</Content>
+				<Br/>
+				<Content>Emmelhainz, Irmgard. &apos;Art and the Cultural Turn: Farewell to Committed Autonomous Art?&apos;, </Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+				<Content>e-flux journal</Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+				<Content> 42 (February, 2013), http://www.e-flux.com/journal/art-and-the-cultural-turn-farewell-to-committed-autonomous-art.</Content>
+				<Br/>
+				<Content>Espósito, Marcelo. &apos;Lecciones de historia. El arte, entre la experimentación institucional y las políticas del movimiento&apos;, 2009. SITAC lecture, http://marceloexposito.net/pdf/exposito_sitac.pdf.</Content>
+				<Br/>
+				<Content>Foster, Hal. &apos;What’s Neo about the Neo-Avant-Garde?&apos;, </Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+				<Content>October</Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+				<Content>, Vol. 70 (Autumn, 1994): 5-32.</Content>
+				<Br/>
+				<Content>Fraser, Andrea. &apos;Le 1% c’est moi&apos;, 2011, http://whitney.org/file_columns/0002/9848/andreafraser_1_2012whitneybiennial.pdf.</Content>
+				<Br/>
+				<Content>Marchart, Oliver. &apos;Art, Space and the Public Sphere(s)&apos;, 2002, http://eipcp.net/transversal/0102/marchart/en.</Content>
+				<Br/>
+				<Content>McLagan, Megan and McKee, Yates (eds). </Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+				<Content>Sensible Politics:</Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+				<Content> </Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+				<Content>The Visual Culture of Nongovernmental Activism</Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+				<Content>. Cambridge, Mass.: Zone Books, 2012.</Content>
+				<Br/>
+				<Content>Shaviro, Stephen. &apos;Accelerationist Aesthetics&apos;, </Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+				<Content>e-flux journal</Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+				<Content> #46 (Summer, 2013), http://www.e-flux.com/journal/accelerationist-aesthetics-necessary-inefficiency-in-times-of-real-subsumption.</Content>
+				<Br/>
+				<Content>Sholette, Gregory. &apos;Welcome to the Desert of the Real Artworld&apos;, </Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+				<Content>Oxford Art Journal</Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+				<Content> 27 (2) (2004) pp. 260-261. http://www.gregorysholette.com/wp-content/uploads/2011/04/07_welcome1.pdf.</Content>
+				<Br/>
+				<Content>Stakemeier, Kerstin and Vishmidt, Marina. &apos;The Value of Autonomy: A Conversation Between Kerstin Stakemeier and Marina Vishmidt About the Reproduction of Art&apos;, </Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+				<Content>Texte zur Kunst</Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+				<Content> 88 (December, 2012): 102-117.</Content>
+				<Br/>
+				<Content>Thompson, Nato. 2013, &apos;The Insurgents Part I: Community-Based Practice as Military Methodology,&apos; </Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+				<Content>e-flux journal</Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+				<Content> # 47 (September, 2013), http://www.e-flux.com/journal/the-insurgents-part-i-community-based-practice-as-military-methodology.</Content>
+				<Br/>
+				<Content>Vishmidt, Marina. &apos;Mimesis of the Hardened and Alienated: Social Practice as a Business Model&apos;, </Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+				<Content>e-flux journal</Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+				<Content> # 46 (March, 2013), http://www.e-flux.com/journal/“mimesis-of-the-hardened-and-alienated”-social-practice-as-business-model.</Content>
+				<Br/>
+				<Content>Wu, Chin-tao. &apos;Embracing the Enterprise Culture: Art Institutions Since the 1980s&apos;, </Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+				<Content>New Left Review</Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+				<Content> I 230 (July-August, 1998).</Content>
+				<Br/>
+			</CharacterStyleRange>
+		</ParagraphStyleRange>
+	</Story>
+	<HyperlinkURLDestination Self="HyperlinkURLDestination/link" DestinationUniqueKey="1" Name="link" DestinationURL="numbering.xml" Hidden="false"/>
+	<HyperlinkURLDestination Self="HyperlinkURLDestination/URL 2" DestinationUniqueKey="2" Name="URL 2" DestinationURL="http://www.tapuz.co.il" Hidden="false"/>
+	<HyperlinkURLDestination Self="HyperlinkURLDestination/URL 3" DestinationUniqueKey="3" Name="URL 3" DestinationURL="http://www.tapuz.co.il" Hidden="false"/>
+	<HyperlinkURLDestination Self="HyperlinkURLDestination/URL 38" DestinationUniqueKey="4" Name="URL 38" DestinationURL="http://www.pewinternet.org/Reports/2013/Online-Dating.aspx" Hidden="false"/>
+	<HyperlinkURLDestination Self="HyperlinkURLDestination/URL 37" DestinationUniqueKey="5" Name="URL 37" DestinationURL="http://www.pewinternet.org/Reports/2013/Online-Dating.aspx" Hidden="false"/>
+</Document>
