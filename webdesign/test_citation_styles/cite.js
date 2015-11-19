@@ -109,7 +109,7 @@ $(document).ready(function(){
 	    +", edited by "+ref_eds+". "+ref_place+": "+ref_pub+", "+ref_year+". "+url+"#"+par+". Accessed "+chicago_date_of_access+".");
 
 ////////APA STYLE
-	    $('#apa').html(ref_authorLastName + ", " + ref_apaAuthorName+,+amp+ref_authorLastName2+,+ref_authorName2+". ("+ref_year+"). "+ref_article+". In "+ref_apaEds+" (Eds.), "+"<i>"+ref_title+"</i>"
+	    $('#apa').html(ref_authorLastName + ", " + ref_apaAuthorName+,+amp+ref_authorLastName2+,+ref_apaAuthorName2+". ("+ref_year+"). "+ref_article+". In "+ref_apaEds+" (Eds.), "+"<i>"+ref_title+"</i>"
 	    +". "+ref_place+": "+ref_pub+". Available from "+url+"#"+par+".");
 	});
 
