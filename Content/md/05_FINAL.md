@@ -1,23 +1,33 @@
 ---
-Pr-id: Publications   
-P-id: Theory on Demand  
-A-id: 17  
-Type (formerly called Item): book  
-Book-type: anthology  
-Anthology item: article  
-Item-id:   
-Article-title: The Gray Zones of Creativity and Capital  
-Article-status: accepted  
-Author: Ana Vilenica
-Author-email: gordana.nikolic@msuv.org, tatlic.s@gmail.com
-Author-bio:     
-Editor: Šefik Tatlić, Gordana Nikolić
-Abstract:     
-Keywords: art, urban, cultural, project, creative, belgrade
-  
+Pr-id: Publications   
+P-id: Theory on Demand  
+A-id: 17  
+Type (formerly called Item): book  
+Book-type: anthology  
+Anthology item: article  
+Item-id:   
+Article-title: The Gray Zones of Creativity and Capital  
+Article-status: accepted  
+Author: Ana Vilenica           
+Author-email:    
+Author-bio:     
+Editor: Šefik Tatlić, Gordana Nikolić     
+Abstract:     
+Keywords: art, urban, cultural, project, creativity, belgrade              
+  
+  
+  
+  
 Rights: Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC-BY-NC-SA 4.0)
 
+
+
 ---
+
+
+
+
+
 
 
 # The Art of New Class Geography of the City: Culture-Guided Urban Regeneration Serving the Modernization of the Periphery 

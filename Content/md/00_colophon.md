@@ -55,7 +55,7 @@ Theory on Demand #17
 
 **Printer:** Print on Demand<br/>
 **Publisher:** Institute of Network Cultures, Amsterdam, 2015<br/>
-**ISBN:** <br/> 
+**ISBN:** 978-94-92302-03-8<br/> 
 
 
 **Contact**

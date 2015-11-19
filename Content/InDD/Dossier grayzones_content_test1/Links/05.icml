@@ -75,6 +75,10 @@
 		<Font Self="dib9FontnHelvetica Neue Bold" FontFamily="Helvetica Neue" Name="Helvetica Neue Bold" PostScriptName="HelveticaNeue-Bold" Status="Installed" FontStyleName="Bold" FontType="TrueType" WritingScript="0" FullName="Helvetica Neue Bold" FullNameNative="Helvetica Neue Bold" FontStyleNameNative="Bold" PlatformName="$ID/" Version="10.0d36e1"/>
 		<Font Self="dib9FontnHelvetica Neue Bold Italic" FontFamily="Helvetica Neue" Name="Helvetica Neue Bold Italic" PostScriptName="HelveticaNeue-BoldItalic" Status="Installed" FontStyleName="Bold Italic" FontType="TrueType" WritingScript="0" FullName="Helvetica Neue Bold Italic" FullNameNative="Helvetica Neue Bold Italic" FontStyleNameNative="Bold Italic" PlatformName="$ID/" Version="10.0d36e1"/>
 	</FontFamily>
+	<FontFamily Self="di3520" Name="HK Grotesk">
+		<Font Self="di3520FontnHK Grotesk Regular" FontFamily="HK Grotesk" Name="HK Grotesk Regular" PostScriptName="HKGrotesk-Regular" Status="Installed" FontStyleName="Regular" FontType="OpenTypeCFF" WritingScript="0" FullName="HK Grotesk Regular" FullNameNative="HK Grotesk Regular" FontStyleNameNative="Regular" PlatformName="$ID/" Version="Version 001.000 "/>
+		<Font Self="di3520FontnHK Grotesk Bold" FontFamily="HK Grotesk" Name="HK Grotesk Bold" PostScriptName="HKGrotesk-Bold" Status="Installed" FontStyleName="Bold" FontType="OpenTypeCFF" WritingScript="0" FullName="HK Grotesk Bold" FullNameNative="HK Grotesk Bold" FontStyleNameNative="Bold" PlatformName="$ID/" Version="Version 001.000 "/>
+	</FontFamily>
 	<CompositeFont Self="CompositeFont/$ID/[No composite font]" Name="$ID/[No composite font]">
 		<CompositeFontEntry Self="u7c" Name="$ID/Kanji" FontStyle="$ID/R" RelativeSize="100" HorizontalScale="100" VerticalScale="100" Locked="true" ScaleOption="true" BaselineShift="0">
 			<Properties>
@@ -114,45 +118,51 @@
 				<PreviewColor type="enumeration">Nothing</PreviewColor>
 			</Properties>
 		</CharacterStyle>
-		<CharacterStyle Self="CharacterStyle/Italic" Imported="false" KeyboardShortcut="0 0" Name="Italic" FontStyle="Light Italic">
+		<CharacterStyle Self="CharacterStyle/Italic" Imported="false" KeyboardShortcut="0 0" Name="Italic" FontStyle="Regular" VerticalScale="101" Skew="12">
 			<Properties>
 				<BasedOn type="object">CharacterStyle/Default</BasedOn>
 				<PreviewColor type="enumeration">Nothing</PreviewColor>
-				<AppliedFont type="string">Helvetica Neue</AppliedFont>
+				<AppliedFont type="string">HK Grotesk</AppliedFont>
+			</Properties>
+		</CharacterStyle>
+		<CharacterStyle Self="CharacterStyle/Bold" Imported="false" KeyboardShortcut="0 0" Name="Bold" FontStyle="Bold">
+			<Properties>
+				<BasedOn type="object">CharacterStyle/Default</BasedOn>
+				<PreviewColor type="enumeration">Nothing</PreviewColor>
 			</Properties>
 		</CharacterStyle>
 	</RootCharacterStyleGroup>
 	<RootParagraphStyleGroup Self="u64">
-		<ParagraphStyle Self="ParagraphStyle/Header1" Name="Header1" Imported="false" NextStyle="ParagraphStyle/Header1" KeyboardShortcut="0 0" FontStyle="Bold" PointSize="14" Capitalization="AllCaps" Hyphenation="false" SpaceAfter="2.834645669291339" GridAlignFirstLineOnly="true" GridAlignment="AlignBaseline">
+		<ParagraphStyle Self="ParagraphStyle/Header1" Name="Header1" Imported="false" NextStyle="ParagraphStyle/Header1" KeyboardShortcut="0 0" FontStyle="Bold" PointSize="14" Capitalization="AllCaps" Hyphenation="false" GridAlignFirstLineOnly="true" GridAlignment="AlignBaseline">
 			<Properties>
 				<BasedOn type="string">$ID/[No paragraph style]</BasedOn>
 				<PreviewColor type="enumeration">Nothing</PreviewColor>
-				<Leading type="unit">14</Leading>
+				<Leading type="unit">17</Leading>
 				<AppliedFont type="string">Lato</AppliedFont>
 			</Properties>
 		</ParagraphStyle>
-		<ParagraphStyle Self="ParagraphStyle/Header3" Name="Header3" Imported="false" NextStyle="ParagraphStyle/Header3" KeyboardShortcut="0 0" FillColor="Color/R=147 G=44 B=101" PointSize="10" Capitalization="AllCaps" GridAlignFirstLineOnly="true" GridAlignment="AlignBaseline">
+		<ParagraphStyle Self="ParagraphStyle/Header3" Name="Header3" Imported="false" NextStyle="ParagraphStyle/Header3" KeyboardShortcut="0 0" FillColor="Color/R=147 G=44 B=101" PointSize="10" Capitalization="AllCaps" SpaceBefore="5.669291338582678" SpaceAfter="2.834645669291339" GridAlignment="AlignBaseline">
 			<Properties>
 				<BasedOn type="string">$ID/[No paragraph style]</BasedOn>
 				<PreviewColor type="enumeration">Nothing</PreviewColor>
 				<AppliedFont type="string">Lato</AppliedFont>
 			</Properties>
 		</ParagraphStyle>
-		<ParagraphStyle Self="ParagraphStyle/Paragraph" Name="Paragraph" Imported="false" NextStyle="ParagraphStyle/Paragraph" KeyboardShortcut="0 0" FontStyle="Light" PointSize="9" Ligatures="false" SpaceAfter="5.669291338582678" Justification="LeftJustified" GridAlignment="AlignBaseline">
+		<ParagraphStyle Self="ParagraphStyle/Paragraph" Name="Paragraph" Imported="false" NextStyle="ParagraphStyle/Paragraph" KeyboardShortcut="0 0" PointSize="9" Ligatures="false" AppliedLanguage="$ID/English: USA" HyphenateAfterFirst="3" SpaceAfter="5.669291338582678" MaximumWordSpacing="110.00000000000001" MinimumWordSpacing="90" MaximumLetterSpacing="5" MinimumLetterSpacing="-5" Justification="LeftJustified" GridAlignment="AlignBaseline">
 			<Properties>
 				<BasedOn type="string">$ID/[No paragraph style]</BasedOn>
 				<PreviewColor type="enumeration">Nothing</PreviewColor>
-				<AppliedFont type="string">Helvetica Neue</AppliedFont>
+				<AppliedFont type="string">HK Grotesk</AppliedFont>
 			</Properties>
 		</ParagraphStyle>
-		<ParagraphStyle Self="ParagraphStyle/Footnote &gt; Paragraph" Name="Footnote &gt; Paragraph" Imported="false" NextStyle="ParagraphStyle/Footnote &gt; Paragraph" KeyboardShortcut="0 0" PointSize="7.5" LeftIndent="17.007874015748033" FirstLineIndent="-17.007874015748033" SpaceAfter="2.834645669291339" GridAlignment="None">
+		<ParagraphStyle Self="ParagraphStyle/Footnote &gt; Paragraph" Name="Footnote &gt; Paragraph" Imported="false" NextStyle="ParagraphStyle/Footnote &gt; Paragraph" KeyboardShortcut="0 0" PointSize="7.5" LeftIndent="17.007874015748033" FirstLineIndent="-17.007874015748033" Hyphenation="false" SpaceAfter="0" Justification="LeftAlign" GridAlignment="None">
 			<Properties>
 				<BasedOn type="object">ParagraphStyle/Paragraph</BasedOn>
 				<PreviewColor type="enumeration">Nothing</PreviewColor>
 				<Leading type="unit">10</Leading>
 			</Properties>
 		</ParagraphStyle>
-		<ParagraphStyle Self="ParagraphStyle/Header2" Name="Header2" Imported="false" NextStyle="ParagraphStyle/Header2" KeyboardShortcut="0 0" FontStyle="Bold" GridAlignment="AlignBaseline">
+		<ParagraphStyle Self="ParagraphStyle/Header2" Name="Header2" Imported="false" NextStyle="ParagraphStyle/Header2" KeyboardShortcut="0 0" FontStyle="Bold" SpaceAfter="2.834645669291339" GridAlignment="AlignBaseline">
 			<Properties>
 				<BasedOn type="string">$ID/[No paragraph style]</BasedOn>
 				<PreviewColor type="enumeration">Nothing</PreviewColor>
@@ -170,6 +180,7 @@
 			<Properties>
 				<BasedOn type="object">ParagraphStyle/Paragraph</BasedOn>
 				<PreviewColor type="enumeration">Nothing</PreviewColor>
+				<Leading type="unit">10</Leading>
 			</Properties>
 		</ParagraphStyle>
 	</RootParagraphStyleGroup>
@@ -228,7 +239,7 @@
 		<InCopyExportOption IncludeGraphicProxies="true" IncludeAllResources="false"/>
 		<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Header1">
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
-				<Content>The Art of New Class Geography of the City: Culture-Guided Urban Regeneration Serving the Modernization of the Periphery</Content>
+				<Content>The Art of New Class Geography of the City: Culture-Guided Urban Regeneration Serving the Modernization of the Periphery</Content>
 				<Br/>
 			</CharacterStyleRange>
 		</ParagraphStyleRange>
@@ -240,7 +251,7 @@
 		</ParagraphStyleRange>
 		<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
-				<Content>This text was written within the framework of the project ‘Creative Work and Urban Regenerations’, financed by the Secretariat for Science and Technological Development of the Autonomous Province of Vojvodina, as part of a campaign entitled ‘The Right to a First Chance’. One version of this text was published in a collection of papers of the Institute for Researching Art in Novi Sad: Vilenica, Ana, ‘Umetnost regeneracije grada – Predu(z)metništvo kao biznis model novih geopolitičkih konstelacija [The Art of City Regeneration: Artepreneurship as a Business Model of New Geopolitical Constellations]’.</Content>
+				<Content>This text was written within the framework of the project ‘Creative Work and Urban Regenerations’, financed by the Secretariat for Science and Technological Development of the Autonomous Province of Vojvodina, as part of a campaign entitled ‘The Right to a First Chance’. One version of this text was published in a collection of papers of the Institute for Researching Art in Novi Sad: Vilenica, Ana, ‘Umetnost regeneracije grada — Predu(z)metništvo kao biznis model novih geopolitičkih konstelacija [The Art of City Regeneration: Artepreneurship as a Business Model of New Geopolitical Constellations]’.</Content>
 				<Br/>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
@@ -274,12 +285,12 @@
 				<Content>progress</Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
-				<Content>, both in public narratives and in the academic discourse. Such a discursive practice acts as an accomplice to the attempts at smoothly carrying out aggressive processes of transformation in cities that merely continue to produce the unendurable state of enormous social disparities, the degradation of workers&apos; and social rights and the environment, as well as the all-round discrimination of all those who do not belong to the desirable higher classes, ethnicity, race or sexual orientation. Understanding this state of affairs, as well as the role of culture and art, in a situation of constant production of manipulative images and false promises, turns out to be an important perspective towards articulating possible future forms of struggle and creation of ‘new territories’.</Content>
+				<Content>, both in public narratives and in the academic discourse. Such a discursive practice acts as an accomplice to the attempts at smoothly carrying out aggressive processes of transformation in cities that merely continue to produce the unendurable state of enormous social disparities, the degradation of workers’ and social rights and the environment, as well as the all-round discrimination of all those who do not belong to the desirable higher classes, ethnicity, race or sexual orientation. Understanding this state of affairs, as well as the role of culture and art, in a situation of constant production of manipulative images and false promises, turns out to be an important perspective towards articulating possible future forms of struggle and creation of ‘new territories’.</Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
 				<Footnote>
 					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
-						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
 							<Content><?ACE 4?></Content>
 						</CharacterStyleRange>
 						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
@@ -310,7 +321,7 @@
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
 				<Footnote>
 					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
-						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
 							<Content><?ACE 4?></Content>
 						</CharacterStyleRange>
 						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
@@ -326,7 +337,7 @@
 							<Content>No Room to Move: Radical Art and Regenerate City</Content>
 						</CharacterStyleRange>
 						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
-							<Content>, London: Mute, 2010; Matteo Pasquinelli, &apos;Kreativna sabotaža u fabrici kulture: umetnost, džentrifikacija i metropola [Creative Sabotage in the Culture Factory: Art, Gentrification and the Metropolis]&apos;, in Ana Vilenica and kuda.org. </Content>
+							<Content>, London: Mute, 2010; Matteo Pasquinelli, ‘Kreativna sabotaža u fabrici kulture: umetnost, džentrifikacija i metropola [Creative Sabotage in the Culture Factory: Art, Gentrification and the Metropolis], in Ana Vilenica and kuda.org. </Content>
 						</CharacterStyleRange>
 						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
 							<Content>Na ruševinama kreativnog grada</Content>
@@ -344,7 +355,7 @@
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
 				<Footnote>
 					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
-						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
 							<Content><?ACE 4?></Content>
 						</CharacterStyleRange>
 						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
@@ -371,8 +382,8 @@
 						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
 							<Content>Theories and Practices of Activism in Art in the Second Half of the 20</Content>
 						</CharacterStyleRange>
-						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic" Position="Superscript">
-							<Content>th </Content>
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic" PointSize="9" Position="Superscript">
+							<Content>th  </Content>
 						</CharacterStyleRange>
 						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
 							<Content>Century</Content>
@@ -385,16 +396,16 @@
 				</Footnote>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
-				<Content> Under these circumstances, art has become a resource and one of the important places when it comes to constructing power. The historical genesis of the connection between art and the transformation of cities is linked to the context of the USA and the 1970&apos;s, when art created the preconditions for the increase of real estate prices in reindustrialized cities</Content>
+				<Content> Under these circumstances, art has become a resource and one of the important places when it comes to constructing power. The historical genesis of the connection between art and the transformation of cities is linked to the context of the USA and the 1970’s, when art created the preconditions for the increase of real estate prices in reindustrialized cities</Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
 				<Footnote>
 					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
-						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
 							<Content><?ACE 4?></Content>
 						</CharacterStyleRange>
 						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
-							<Content>	Rosalyn Deutsche and Gandel Cara Rian, &apos;The Fine Art of Gentrification&apos;, </Content>
+							<Content>	Rosalyn Deutsche and Gandel Cara Rian, ‘The Fine Art of Gentrification’, </Content>
 						</CharacterStyleRange>
 						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
 							<Content>October</Content>
@@ -418,7 +429,7 @@
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
 				<Footnote>
 					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
-						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
 							<Content><?ACE 4?></Content>
 						</CharacterStyleRange>
 						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
@@ -436,7 +447,7 @@
 				<Br/>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
-				<Content>In the local context, the establishment of connections between art and urban regenerations became possible with the forcible transformation of socialist Yugoslavia after the 1990s and the establishment of new capitalist relations. This change was accompanied by the wartime destruction of cities – urbicide, the transformation of ownership structure from social to private ownership, the switch from self-management relations to capitalist-exploitative relations, the development of corruption mechanisms and the absence of regulations when it came to the acquisition of capital, deindustrialization, the pauperization of the population, as well as the destruction of the existing mechanisms for work in the domain of culture and art, and the implementation of a new art/entrepreneurial model. In the era of socialism, the development of cities was based on central urban planning, and the state was the chief investor and planner of the new modern socialist city, aimed at fulfilling the needs of the new socialist man. Today, the new initiators of </Content>
+				<Content>In the local context, the establishment of connections between art and urban regenerations became possible with the forcible transformation of socialist Yugoslavia after the 1990s and the establishment of new capitalist relations. This change was accompanied by the wartime destruction of cities — urbicide, the transformation of ownership structure from social to private ownership, the switch from self-management relations to capitalist-exploitative relations, the development of corruption mechanisms and the absence of regulations when it came to the acquisition of capital, deindustrialization, the pauperization of the population, as well as the destruction of the existing mechanisms for work in the domain of culture and art, and the implementation of a new art/entrepreneurial model. In the era of socialism, the development of cities was based on central urban planning, and the state was the chief investor and planner of the new modern socialist city, aimed at fulfilling the needs of the new socialist man. Today, the new initiators of </Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
 				<Content>urban development</Content>
@@ -447,11 +458,11 @@
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
 				<Footnote>
 					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
-						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
 							<Content><?ACE 4?></Content>
 						</CharacterStyleRange>
 						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
-							<Content>	Ana Vilenica and kuda.org, &apos;Preuzmimo grad! Kako? [Let&apos;s Take Over the City! How?]&apos;, in Vilenica, Ana, kuda.org, </Content>
+							<Content>	Ana Vilenica and kuda.org, ‘Preuzmimo grad! Kako? [Let’s Take Over the City! How?], in Vilenica, Ana, kuda.org, </Content>
 						</CharacterStyleRange>
 						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
 							<Content>Na ruševinama kreativnog grada</Content>
@@ -475,7 +486,7 @@
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
 				<Footnote>
 					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
-						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
 							<Content><?ACE 4?></Content>
 						</CharacterStyleRange>
 						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
@@ -498,7 +509,7 @@
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
 				<Footnote>
 					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
-						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
 							<Content><?ACE 4?></Content>
 						</CharacterStyleRange>
 						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
@@ -532,11 +543,11 @@
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
 				<Footnote>
 					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
-						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
 							<Content><?ACE 4?></Content>
 						</CharacterStyleRange>
 						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
-							<Content>	Inga Tomić-Koludrović, Mirko Petrić, &apos;Creative Industries in Transition: Towards a Creative Economy?&apos;, in Nada Švob-Đokić (ed.), </Content>
+							<Content>	Inga Tomić-Koludrović, Mirko Petrić, ‘Creative Industries in Transition: Towards a Creative Economy?’, in Nada Švob-Đokić (ed.), </Content>
 						</CharacterStyleRange>
 						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
 							<Content>The Emerging Creative industries in Southeastern Europe</Content>
@@ -567,16 +578,16 @@
 				<Content>Belgradisation of Belgrade</Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
-				<Content> project and Belgrade&apos;s bid for a European Capital of Culture in 2020,</Content>
+				<Content> project and Belgrade’s bid for a European Capital of Culture in 2020,</Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
 				<Footnote>
 					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
-						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
 							<Content><?ACE 4?></Content>
 						</CharacterStyleRange>
 						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
-							<Content>	Vida Knežević, Marko Miletić, &apos;Beograd 2020: Grad čuda, nova kulturna politika u Srbiji i prostori borbe [Belgrade 2020: A City of Wonder, the New Cultural Policy in Serbia and the Spaces of Struggle]&apos; in Ana Vilenica, kuda.org, </Content>
+							<Content>	Vida Knežević, Marko Miletić, ‘Beograd 2020: Grad čuda, nova kulturna politika u Srbiji i prostori borbe [Belgrade 2020: A City of Wonder, the New Cultural Policy in Serbia and the Spaces of Struggle]’ in Ana Vilenica, kuda.org, </Content>
 						</CharacterStyleRange>
 						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
 							<Content>Na ruševinama kreativnog grada</Content>
@@ -618,11 +629,11 @@
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
 				<Footnote>
 					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
-						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
-							<Content><?ACE 4?>	</Content>
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
+							<Content><?ACE 4?></Content>
 						</CharacterStyleRange>
 						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
-							<Content>Vilenica and kuda.org, &apos;Preuzmimo grad! Kako? [Let&apos;s Take Over the City! How?]&apos;.</Content>
+							<Content>	Vilenica and kuda.org, ‘Preuzmimo grad! Kako? [Let’s Take Over the City! How?]’.</Content>
 							<Br/>
 						</CharacterStyleRange>
 					</ParagraphStyleRange>
@@ -631,7 +642,7 @@
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
 				<Content> and a guarantor of social inclusion in their implementation. Such practices are aimed at creating an image of the city as an innovative, exciting, creative and safe place for living, playing and consumption, promising benefits for all, whereas what is, in fact, being planned is a city of walled fortresses wherein the elite and its way of life are to be reproduced.</Content>
 				<Br/>
-				<Content>In the local context, since the 1990&apos;s culture and art have become an instrument of </Content>
+				<Content>In the local context, since the 1990’s culture and art have become an instrument of </Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
 				<Content>progressive</Content>
@@ -666,11 +677,11 @@
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
 				<Footnote>
 					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
-						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
 							<Content><?ACE 4?></Content>
 						</CharacterStyleRange>
 						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
-							<Content>	Dušan Grlja, &apos;Antinomies of Post-Socialist Autonomy&apos;, </Content>
+							<Content>	Dušan Grlja, ‘Antinomies of Post-Socialist Autonomy’, </Content>
 						</CharacterStyleRange>
 						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
 							<Content>Red Thread</Content>
@@ -695,16 +706,16 @@
 				<Content>new modernization</Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
-				<Content> of local society, which is viewed as backward, and is particularly in evidence in the cases of instrumentalization of art in the processes of urban regenerations. A new profile of the artist that is promoted in this way is the entrepreneurial artist – artepreneur</Content>
+				<Content> of local society, which is viewed as backward, and is particularly in evidence in the cases of instrumentalization of art in the processes of urban regenerations. A new profile of the artist that is promoted in this way is the entrepreneurial artist-artepreneur</Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
 				<Footnote>
 					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
-						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
 							<Content><?ACE 4?></Content>
 						</CharacterStyleRange>
 						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
-							<Content>	Pierre Guillet de Monthoux, &apos;Organising Reality Machines: Artepreneurs and the New Aesthetic Enlightenment&apos;, in Daniel Hjorth (ed.), </Content>
+							<Content>	Pierre Guillet de Monthoux, ‘Organising Reality Machines: Artepreneurs and the New Aesthetic Enlightenment’, in Daniel Hjorth (ed.), </Content>
 						</CharacterStyleRange>
 						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
 							<Content>Handbook on Organisational Entrepreneurship</Content>
@@ -722,11 +733,11 @@
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
 				<Footnote>
 					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
-						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
 							<Content><?ACE 4?></Content>
 						</CharacterStyleRange>
 						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
-							<Content>	Campbell Jones and Anna-Maria Murtola, &apos;Entrepreneurship, Crisis, Critique&apos;, in Daniel Hjorth (ed.), </Content>
+							<Content>	Campbell Jones and Anna-Maria Murtola, ‘Entrepreneurship, Crisis, Critique’, in Daniel Hjorth (ed.), </Content>
 						</CharacterStyleRange>
 						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
 							<Content>Handbook on Organisational Entrepreneurship</Content>
@@ -751,7 +762,7 @@
 		</ParagraphStyleRange>
 		<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
-				<Content>In Serbia, culture- and art-guided urban regenerations have been promoted over the course of the past decade, and the realization of such ideas has only intensified in the last few years. We find examples of practices of culture- and art-guided urban regenerations in Serbia in big cities, mostly in Belgrade, where the political, economic and cultural life of Serbia is centralized. The epicenter of such activities is in the area of Belgrade&apos;s riverbanks, which is currently the most exclusive and profitable location in Belgrade. There has been interest in the areas on the banks of the Sava and Danube rivers for a number of years, and various projects prepared for that part of the city have reflected the political, economic and cultural climate in the newly established state. In early 1990, the Serbian Academy of Sciences and Arts called an internal tender, within the framework of which the project ‘Water City’ emerged, and in 1996 the Socialist Party of Serbia commissioned the project </Content>
+				<Content>In Serbia, culture- and art-guided urban regenerations have been promoted over the course of the past decade, and the realization of such ideas has only intensified in the last few years. We find examples of practices of culture- and art-guided urban regenerations in Serbia in big cities, mostly in Belgrade, where the political, economic and cultural life of Serbia is centralized. The epicenter of such activities is in the area of Belgrade’s riverbanks, which is currently the most exclusive and profitable location in Belgrade. There has been interest in the areas on the banks of the Sava and Danube rivers for a number of years, and various projects prepared for that part of the city have reflected the political, economic and cultural climate in the newly established state. In early 1990, the Serbian Academy of Sciences and Arts called an internal tender, within the framework of which the project ‘Water City’ emerged, and in 1996 the Socialist Party of Serbia commissioned the project </Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
 				<Content>Europolis</Content>
@@ -762,11 +773,11 @@
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
 				<Footnote>
 					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
-						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
 							<Content><?ACE 4?></Content>
 						</CharacterStyleRange>
 						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
-							<Content>	&apos;Beograd na vodi ili političari u kampanji [Belgrade on Water or Politicians Campaigning]&apos;, </Content>
+							<Content>	‘Beograd na vodi ili političari u kampanji [Belgrade on Water or Politicians Campaigning], </Content>
 						</CharacterStyleRange>
 						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
 							<Content>Politika</Content>
@@ -781,18 +792,18 @@
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
 				<Content> These projects have never been realized, but that part of the city has never stopped attracting the attention of new investors and the political parties in power, most often during the course of pre-election campaigns.</Content>
 				<Br/>
-				<Content>The interest shown in Belgrade&apos;s riverbanks is not accidental and does not concern only the attractiveness of the actual location. It also has to do with the systematic work aimed at creating a new identity for Serbia and Belgrade, in a place which, during the pre-socialist period, in the first half of the 19</Content>
+				<Content>The interest shown in Belgrade’s riverbanks is not accidental and does not concern only the attractiveness of the actual location. It also has to do with the systematic work aimed at creating a new identity for Serbia and Belgrade, in a place which, during the pre-socialist period, in the first half of the 19</Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
-				<Content>th</Content>
+				<Content>th  </Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
-				<Content> century, was projected to become the economic centre of the city.</Content>
+				<Content>century, was projected to become the economic centre of the city.</Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
 				<Footnote>
 					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
-						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
 							<Content><?ACE 4?></Content>
 						</CharacterStyleRange>
 						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
@@ -814,7 +825,7 @@
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
 				<Footnote>
 					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
-						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
 							<Content><?ACE 4?></Content>
 						</CharacterStyleRange>
 						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
@@ -837,16 +848,16 @@
 				</Footnote>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
-				<Content> The riverbanks are also a place of memory engineering, connected with the recent history of the wars fought in the 1990&apos;s on the territory of the former Yugoslavia, which represents a continuation of the processes of historical revisionism in Serbia, without which a projection of Belgrade as a new European-Serbian urban centre for the higher classes is not possible. One of the first great state projects of the regeneration of that area was the renovation of Sava Square</Content>
+				<Content> The riverbanks are also a place of memory engineering, connected with the recent history of the wars fought in the 1990’s on the territory of the former Yugoslavia, which represents a continuation of the processes of historical revisionism in Serbia, without which a projection of Belgrade as a new European-Serbian urban centre for the higher classes is not possible. One of the first great state projects of the regeneration of that area was the renovation of Sava Square</Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
 				<Footnote>
 					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
-						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
 							<Content><?ACE 4?></Content>
 						</CharacterStyleRange>
 						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
-							<Content>	&apos;Uskoro novo lice Savskog trga [Soon, a New Look of Sava Square]&apos;, </Content>
+							<Content>	‘Uskoro novo lice Savskog trga [Soon, a New Look of Sava Square], </Content>
 						</CharacterStyleRange>
 						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
 							<Content>Blic</Content>
@@ -890,7 +901,7 @@
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
 				<Footnote>
 					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
-						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
 							<Content><?ACE 4?></Content>
 						</CharacterStyleRange>
 						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
@@ -901,7 +912,7 @@
 				</Footnote>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
-				<Content> By planning the processes of urban regenerations and involving art and cultural industries in the local strategic plans, the new creators of optimistic visions wish to make Belgrade a part of the world market of cities and make up for the decline of economic activities in the city. The main social trump card of these projects is their promise to resolve the problem of unemployment by creating new jobs in the sphere of construction work during the realization phase, in the service sector of the new walled communities, and also in the sector of cultural industries, whereas what is happening in practice is a flexibilization and deregulation of the procedures for investors and undertakers, coupled with a degradation of workers&apos; rights, which means an increasingly frantic exploitation of all those engaged on the projects. Experienced engineers of urban transformations, such as renowned world architects, as well as mayors of cities wherein such processes have been practiced, have already been involved in the initiation of urban regeneration processes through the projects </Content>
+				<Content> By planning the processes of urban regenerations and involving art and cultural industries in the local strategic plans, the new creators of optimistic visions wish to make Belgrade a part of the world market of cities and make up for the decline of economic activities in the city. The main social trump card of these projects is their promise to resolve the problem of unemployment by creating new jobs in the sphere of construction work during the realization phase, in the service sector of the new walled communities, and also in the sector of cultural industries, whereas what is happening in practice is a flexibilization and deregulation of the procedures for investors and undertakers, coupled with a degradation of workers’ rights, which means an increasingly frantic exploitation of all those engaged on the projects. Experienced engineers of urban transformations, such as renowned world architects, as well as mayors of cities wherein such processes have been practiced, have already been involved in the initiation of urban regeneration processes through the projects </Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
 				<Content>Water City</Content>
@@ -925,16 +936,16 @@
 				<Content>Belgrade on Water</Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
-				<Content> project is the well-known New York mayor Rudolph Giuliani, whose brutal class and racist cleansing of New York in the 1990&apos;s is well known.</Content>
+				<Content> project is the well-known New York mayor Rudolph Giuliani, whose brutal class and racist cleansing of New York in the 1990’s is well known.</Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
 				<Footnote>
 					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
-						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
-							<Content><?ACE 4?>	</Content>
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
+							<Content><?ACE 4?></Content>
 						</CharacterStyleRange>
 						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
-							<Content>Smith, 1996, Politika, 11 September 2012.</Content>
+							<Content>	Smith, 1996, Politika, 11 September 2012.</Content>
 							<Br/>
 						</CharacterStyleRange>
 					</ParagraphStyleRange>
@@ -991,7 +1002,7 @@
 				<Content>Soho effect</Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
-				<Content>. Over the past several years, this term has become a synonym for urban regenerations in a number of instances involving the relocation of art studios and artists&apos; flats to derelict part of cities in the hope of producing additional symbolic capital and thus initiating the accumulation of capital. In the case of the project </Content>
+				<Content>. Over the past several years, this term has become a synonym for urban regenerations in a number of instances involving the relocation of art studios and artists’ flats to derelict part of cities in the hope of producing additional symbolic capital and thus initiating the accumulation of capital. In the case of the project </Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
 				<Content>Soho in Belgrade</Content>
@@ -1002,11 +1013,11 @@
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
 				<Footnote>
 					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
-						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
 							<Content><?ACE 4?></Content>
 						</CharacterStyleRange>
 						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
-							<Content>	Ana Vilenica, &apos;Soho u Beogradu: Umetnička elita u službi tajkuna [Soho in Belgrade: The Art Elite in the Service of Tycoons]&apos;, in </Content>
+							<Content>	Ana Vilenica, ‘Soho u Beogradu: Umetnička elita u službi tajkuna [Soho in Belgrade: The Art Elite in the Service of Tycoons], in </Content>
 						</CharacterStyleRange>
 						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
 							<Content>Maribor 2012</Content>
@@ -1041,11 +1052,11 @@
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
 				<Footnote>
 					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
-						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
 							<Content><?ACE 4?></Content>
 						</CharacterStyleRange>
 						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
-							<Content>	Vilenica, &apos;Soho u Beogradu’.</Content>
+							<Content>	Vilenica, ‘Soho u Beogradu’.</Content>
 							<Br/>
 						</CharacterStyleRange>
 					</ParagraphStyleRange>
@@ -1058,13 +1069,13 @@
 				<Content>Sohoite</Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
-				<Content> artists constitute the embodiment of everything that the new art establishment represents today. These are positions that are defended through a return to aestheticism and individual expression as the main criterion of art. Within the framework of this kind of positioning, opportunism and commercialism become desirable characteristics and a generator of success. What is at work here is a reactionary artistic practice that is articulated in opposition to the domain of critical and contextual practices, with which it enters into an open conflict through its insistence on being separated from sociability as the measure of true art. In Belgrade&apos;s Soho, studios were allocated to select elite artists, without anything in the nature of a public competition, which resulted in the exclusion of those artists who are engaged in non-market-oriented artistic practices, who are dependent on public financing and who do need a working space. This resulted in an unbridgeable gap on the art scene, which became visible to the public when the </Content>
+				<Content> artists constitute the embodiment of everything that the new art establishment represents today. These are positions that are defended through a return to aestheticism and individual expression as the main criterion of art. Within the framework of this kind of positioning, opportunism and commercialism become desirable characteristics and a generator of success. What is at work here is a reactionary artistic practice that is articulated in opposition to the domain of critical and contextual practices, with which it enters into an open conflict through its insistence on being separated from sociability as the measure of true art. In Belgrade’s Soho, studios were allocated to select elite artists, without anything in the nature of a public competition, which resulted in the exclusion of those artists who are engaged in non-market-oriented artistic practices, who are dependent on public financing and who do need a working space. This resulted in an unbridgeable gap on the art scene, which became visible to the public when the </Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
 				<Content>Sohoites</Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
-				<Content> organized a panel discussion at the Kolarac People&apos;s University, in the course of which public interest was defended by a group of artists presenting themselves as </Content>
+				<Content> organized a panel discussion at the Kolarac People’s University, in the course of which public interest was defended by a group of artists presenting themselves as </Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
 				<Content>The World Communal Heritage</Content>
@@ -1075,15 +1086,14 @@
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
 				<Footnote>
 					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
-						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
 							<Content><?ACE 4?></Content>
 						</CharacterStyleRange>
 						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
-							<Content>	Vilenica, &apos;Soho u Beogradu’.</Content>
+							<Content>	Vilenica, ‘Soho u Beogradu’.</Content>
 							<Br/>
 						</CharacterStyleRange>
 					</ParagraphStyleRange>
-					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph"/>
 				</Footnote>
 				<Br/>
 			</CharacterStyleRange>
@@ -1105,11 +1115,11 @@
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
 				<Footnote>
 					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
-						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
 							<Content><?ACE 4?></Content>
 						</CharacterStyleRange>
 						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
-							<Content>	&apos;Pokrenut stečaj Luke Beograd [The Bankruptcy Procedure Initiated for the Port of Belgrade]&apos;, </Content>
+							<Content>	‘Pokrenut stečaj Luke Beograd [The Bankruptcy Procedure Initiated for the Port of Belgrade], </Content>
 						</CharacterStyleRange>
 						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
 							<Content>Vreme</Content>
@@ -1148,13 +1158,13 @@
 				<Content>independent</Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
-				<Content> cultural initiatives, in cooperation with business groups and with the German cultural mission – the Goethe Institute. Still, the city and municipal authorities support the initiatives undertaken through budget financing, allowing the use of space owned by the city, and through affirmation by means of projects of establishing creative economies and producing a creative city such as </Content>
+				<Content> cultural initiatives, in cooperation with business groups and with the German cultural mission — the Goethe Institute. Still, the city and municipal authorities support the initiatives undertaken through budget financing, allowing the use of space owned by the city, and through affirmation by means of projects of establishing creative economies and producing a creative city such as </Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
 				<Content>Belgrade 2020</Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
-				<Content>, which accompanies Belgrade&apos;s bid for a European Capital of Culture.</Content>
+				<Content>, which accompanies Belgrade’s bid for a European Capital of Culture.</Content>
 				<Br/>
 				<Content>The introduction and affirmation of cultural industries and stimulation of the development of entrepreneurial creative economy as a form of social activism and struggle for the revitalization of Savamala is a task set by the project </Content>
 			</CharacterStyleRange>
@@ -1173,7 +1183,7 @@
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
 				<Footnote>
 					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
-						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
 							<Content><?ACE 4?></Content>
 						</CharacterStyleRange>
 						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
@@ -1202,7 +1212,7 @@
 				<Content>liberation</Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
-				<Content>, in a parallel development public budget funds are invested in the project through a number of public companies and funds, which clearly shows a switch in the domain of public financing – from support given to critical practices to support given to commercial initiatives. The idea of </Content>
+				<Content>, in a parallel development public budget funds are invested in the project through a number of public companies and funds, which clearly shows a switch in the domain of public financing — from support given to critical practices to support given to commercial initiatives. The idea of </Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
 				<Content>Mixer</Content>
@@ -1219,7 +1229,7 @@
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
 				<Footnote>
 					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
-						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
 							<Content><?ACE 4?></Content>
 						</CharacterStyleRange>
 						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
@@ -1273,7 +1283,7 @@
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
 				<Footnote>
 					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
-						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
 							<Content><?ACE 4?></Content>
 						</CharacterStyleRange>
 						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
@@ -1308,7 +1318,7 @@
 				<Content>Western model</Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
-				<Content> of culture-guided urban regeneration in the local context (of the eleven projects that were accepted in the competition, only two were initiated by local artists and architects), and has been recognized as such by the local city authorities and the municipality of Savski venac – as having potential for the </Content>
+				<Content> of culture-guided urban regeneration in the local context (of the eleven projects that were accepted in the competition, only two were initiated by local artists and architects), and has been recognized as such by the local city authorities and the municipality of Savski venac — as having potential for the </Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
 				<Content>development</Content>
@@ -1333,7 +1343,7 @@
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
 				<Footnote>
 					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
-						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
 							<Content><?ACE 4?></Content>
 						</CharacterStyleRange>
 						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
@@ -1355,7 +1365,7 @@
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
 				<Footnote>
 					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
-						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
 							<Content><?ACE 4?></Content>
 						</CharacterStyleRange>
 						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
@@ -1372,7 +1382,7 @@
 				</Footnote>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
-				<Content> ‘Urban Incubator’ is a symptom of social architects&apos; </Content>
+				<Content> ‘Urban Incubator’ is a symptom of social architects’ </Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
 				<Content>paranoid fear</Content>
@@ -1486,10 +1496,6 @@
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
 				<Content> (http://www.academia.edu/771895/On_participatory_art_Interview_with_Claire_Bishop).</Content>
 				<Br/>
-			</CharacterStyleRange>
-		</ParagraphStyleRange>
-		<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Reference List">
-			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
 				<Content>Berman, Marshall (http://en.wikipedia.org/wiki/Marshall_Berman). </Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
@@ -1506,7 +1512,7 @@
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
 				<Content> (http://www.beograd2020.com/).</Content>
 				<Br/>
-				<Content>&apos;Beograd na vodi: projekat vredan osam milijardi evra! [Belgrade on Water: A Project Worth Eight Billion Euros!]&apos;, </Content>
+				<Content>Beograd na vodi: projekat vredan osam milijardi evra! [Belgrade on Water: A Project Worth Eight Billion Euros!], </Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
 				<Content>Večernje novosti</Content>
@@ -1520,7 +1526,7 @@
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
 				<Content> (http://www.kurir-info.rs/beograd-na-vodi-projekat-vredan-osam-milijardi-evra-clanak-1034045).</Content>
 				<Br/>
-				<Content>&apos;Beograd na vodi ili političari u kampanji [Belgrade on Water or Politicians Campaigning]&apos;, </Content>
+				<Content>Beograd na vodi ili političari u kampanji [Belgrade on Water or Politicians Campaigning], </Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
 				<Content>Politika</Content>
@@ -1563,7 +1569,7 @@
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
 				<Content>(http://ec.europa.eu/culture/creative-europe/).</Content>
 				<Br/>
-				<Content>Dave Beech, &apos;Include Me Out!&apos;. </Content>
+				<Content>Dave Beech, ‘Include Me Out!’. </Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
 				<Content>ViS</Content>
@@ -1585,13 +1591,13 @@
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
 				<Content>, London: Edward Arnold, 1977.</Content>
 				<Br/>
-				<Content>Deutsche, Rosalyn and Cara Gandel Rian. &apos;The fine art of gentrification&apos;, </Content>
+				<Content>Deutsche, Rosalyn and Cara Gandel Rian. ‘The fine art of gentrification’, </Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
 				<Content>October</Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
-				<Content> 31 (Winter, 1984): 91–111.</Content>
+				<Content> 31 (Winter, 1984): 91-111.</Content>
 				<Br/>
 				<Content>Foster, Hal. </Content>
 			</CharacterStyleRange>
@@ -1612,11 +1618,15 @@
 				<Content>Florida, Richard. </Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
-				<Content>The Rise of the Creative Class and how it&apos;s Transforming Work, Leisure and Everyday Life</Content>
+				<Content>The Rise of the Creative Class and how it’s Transforming Work, Leisure and Everyday Life</Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
 				<Content>, London: Basic Books, 2002.</Content>
 				<Br/>
+			</CharacterStyleRange>
+		</ParagraphStyleRange>
+		<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Reference List">
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
 				<Content>Glass, Ruth. </Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
@@ -1633,7 +1643,7 @@
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
 				<Content>(http://www.lukabeograd.com/GradNaVodi/Masterplan.html).</Content>
 				<Br/>
-				<Content>Grlja, Dušan. &apos;Antinomies of Post-Socialist Autonomy&apos;. </Content>
+				<Content>Grlja, Dušan. ‘Antinomies of Post-Socialist Autonomy’. </Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
 				<Content>Red Thread</Content>
@@ -1671,7 +1681,7 @@
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
 				<Content>, London: Verso, 2012.</Content>
 				<Br/>
-				<Content>&apos;Incident na otkrivanju spomenika na Savskom trgu [Incident During the Unveiling of the Monument in Sava Square]&apos;, </Content>
+				<Content>Incident na otkrivanju spomenika na Savskom trgu [Incident During the Unveiling of the Monument in Sava Square], </Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
 				<Content>Kurir</Content>
@@ -1693,7 +1703,7 @@
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
 				<Content>], Belgrade: KIZ Art Press, 1995.</Content>
 				<Br/>
-				<Content>Jones, Campbell and Murtola, Anna-Maria. &apos;Entrepreneurship, Crisis, Critique, in Hjorth, Daniel (ed.) </Content>
+				<Content>Jones, Campbell and Murtola, Anna-Maria. ‘Entrepreneurship, Crisis, Critique, in Hjorth, Daniel (ed.) </Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
 				<Content>Handbook on Organisational Entrepreneurship</Content>
@@ -1709,13 +1719,13 @@
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
 				<Content> master diss., CEU Budapest, 2008.</Content>
 				<Br/>
-				<Content>Knežević, Vida, Miletić, Marko. &apos;Beograd 2020: Grad čuda, nova kulturna politika u Srbiji i prostori borbe [</Content>
+				<Content>Knežević, Vida, Miletić, Marko. ‘Beograd 2020: Grad čuda, nova kulturna politika u Srbiji i prostori borbe [</Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
 				<Content>Belgrade 2020: A City of Wonder, the New Cultural Policy in Serbia and the Spaces of Struggle</Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
-				<Content>]&apos;, in Ana Vilenica and kuda.org </Content>
+				<Content>], in Ana Vilenica and kuda.org </Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
 				<Content>Na ruševinama kreativnog grada</Content>
@@ -1737,17 +1747,23 @@
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
 				<Content> London: Routledge, 2009.</Content>
 				<Br/>
-				<Content>Luka Beograd. Grad na vodi [The Port of Belgrade – Water City], http://www.lukabeograd.com/GradNaVodi/Masterplan.html.</Content>
+				<Content>Luka Beograd. Grad na vodi [The Port of Belgrade  —  Water City], http://www.lukabeograd.com/GradNaVodi/Masterplan.html.</Content>
 				<Br/>
 				<Content>Mikser [Mixer]. </Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
-				<Content>http://blog.mikser.rs/o-mikseru. 04th August 2013</Content>
+				<Content>http://blog.mikser.rs/o-mikseru. 04</Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic" Position="Superscript">
+				<Content>th  </Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+				<Content>August 2013</Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
 				<Content>(http://blog.mikser.rs/o-mikseru.%2004.%20avgust%202013).</Content>
 				<Br/>
-				<Content>Monthoux, Pierre Guillet de. &apos;Organising Reality Machines: Artepreneurs and the new Aesthetic Enlightenment&apos;, in Daniel Hjorth (ed.), </Content>
+				<Content>Monthoux, Pierre Guillet de. ‘Organising Reality Machines: Artepreneurs and the new Aesthetic Enlightenment’, in Daniel Hjorth (ed.), </Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
 				<Content>Handbook on Organisational Entrepreneurship</Content>
@@ -1755,7 +1771,7 @@
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
 				<Content>, Northampton: Edward Elgar, 2012.</Content>
 				<Br/>
-				<Content>Pasquinelli, Matteo. &apos;Kreativna sabotaža u fabrici kulture: umetnost, džentrifikacija i metropola [Creative Sabotage in the Culture Factory: Art, Gentrification and the Metropolis]&apos;, in Ana Vilenica and kuda.org. </Content>
+				<Content>Pasquinelli, Matteo. ‘Kreativna sabotaža u fabrici kulture: umetnost, džentrifikacija i metropola [Creative Sabotage in the Culture Factory: Art, Gentrification and the Metropolis], in Ana Vilenica and kuda.org. </Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
 				<Content>Na ruševinama kreativnog grada</Content>
@@ -1763,7 +1779,7 @@
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
 				<Content>, Novi Sad: kuda.org, 2012.</Content>
 				<Br/>
-				<Content>Peck, Jamie. &apos;The Creativity Fix&apos; in </Content>
+				<Content>Peck, Jamie. ‘The Creativity Fix’ in </Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
 				<Content>Eurozine</Content>
@@ -1771,7 +1787,7 @@
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
 				<Content>, 28 June 2007, http://www.eurozine.com/articles/2007-06-28-peck-en.html.</Content>
 				<Br/>
-				<Content>&apos;Pokrenut stečaj Luke Beograd [The Bankruptcy Procedure Initiated for the Port of Belgrade]&apos;, </Content>
+				<Content>Pokrenut stečaj Luke Beograd [The Bankruptcy Procedure Initiated for the Port of Belgrade], </Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
 				<Content>Vreme</Content>
@@ -1785,11 +1801,7 @@
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
 				<Content> (http://www.vreme.rs/cms/view.php?id=1130342)</Content>
 				<Br/>
-			</CharacterStyleRange>
-		</ParagraphStyleRange>
-		<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Reference List">
-			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
-				<Content>&apos;Počela beogradizacija Beograda [The Belgradisation of Belgrade Begins]&apos;, </Content>
+				<Content>Počela beogradizacija Beograda [The Belgradisation of Belgrade Begins], </Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
 				<Content>Blic</Content>
@@ -1817,7 +1829,7 @@
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
 				<Content>]. Belgrade: Anonymous said, 2011.</Content>
 				<Br/>
-				<Content>&apos;Rudolf Džulijani u poseti Beogradu i SNS [Rudolph Giuliani Visits Belgrade and the Serbian Progressive Party]&apos;, </Content>
+				<Content>Rudolf Džulijani u poseti Beogradu i SNS [Rudolph Giuliani Visits Belgrade and the Serbian Progressive Party], </Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
 				<Content>Politika</Content>
@@ -1857,7 +1869,7 @@
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
 				<Content>, Zagreb: Institute for International Relations, 2005.</Content>
 				<Br/>
-				<Content>Tomić-Koludrović, Inga and Petrić, Mirko &apos;Creative Industries in Transition: Towards a Creative Economy?&apos;, in Švob-Đokić, Nada (ed.), </Content>
+				<Content>Tomić-Koludrović, Inga and Petrić, Mirko ‘Creative Industries in Transition: Towards a Creative Economy?’, in Švob-Đokić, Nada (ed.), </Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
 				<Content>The Emerging Creative industries in Southeastern Europe</Content>
@@ -1881,7 +1893,7 @@
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
 				<Content> (http://www.goethe.de/ins/cs/bel/prj/uic/enindex.htm).</Content>
 				<Br/>
-				<Content>&apos;Uskoro novo lice Savskog trga [Soon, a New Look of Sava Square]&apos;, </Content>
+				<Content>Uskoro novo lice Savskog trga [Soon, a New Look of Sava Square], </Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
 				<Content>Blic</Content>
@@ -1898,18 +1910,12 @@
 				<Content> [</Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
-				<Content>Theories and Practices of Activism in Art in the Second Half of the 20</Content>
-			</CharacterStyleRange>
-			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic" Position="Superscript">
-				<Content>th</Content>
-			</CharacterStyleRange>
-			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
-				<Content> Century</Content>
+				<Content>Theories and Practices of Activism in Art in the Second Half of the 20th Century</Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
 				<Content>], PhD thesis, The University of the Arts, University of Belgrade, 2012.</Content>
 				<Br/>
-				<Content>Vilenica, Ana and kuda.org. &apos;Preuzmimo grad! Kako? [Let&apos;s Take Over the City! How?]&apos;, in Vilenica, Ana, kuda.org, </Content>
+				<Content>Vilenica, Ana and kuda.org. ‘Preuzmimo grad! Kako? [Let’s Take Over the City! How?], in Vilenica, Ana, kuda.org, </Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
 				<Content>Na ruševinama kreativnog grada</Content>
@@ -1917,7 +1923,11 @@
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
 				<Content>, Novi Sad: kuda.org, 2012.</Content>
 				<Br/>
-				<Content>Vilenica, Ana. &apos;Soho u Beogradu: Umetnička elita u službi tajkuna [Soho in Belgrade: The Art Elite in the Service of Tycoons]&apos;, in nsparentnost </Content>
+			</CharacterStyleRange>
+		</ParagraphStyleRange>
+		<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Reference List">
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+				<Content>Vilenica, Ana. ‘Soho u Beogradu: Umetnička elita u službi tajkuna [Soho in Belgrade: The Art Elite in the Service of Tycoons], in nsparentnost </Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
 				<Content>2012</Content>
@@ -1971,7 +1981,7 @@
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
 				<Content>, Cambridge MA and Oxford UK: Blackwell, 1995.</Content>
 				<Br/>
-				<Content>&apos;Šeik ‘doneo’ BG na vodi, kredite… [The Sheikh ‘Brings’ Belgrade on Water, Loans]&apos;, </Content>
+				<Content>Šeik ‘doneo’ BG na vodi, kredite… [The Sheikh ‘Brings’ Belgrade on Water, Loans], </Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
 				<Content>B92</Content>

@@ -201,7 +201,7 @@ by capitalism. The author concludes that within the space of division of
 political and aesthetic representation occurs a paradigmatic change in
 the role of culture in neoliberal capitalism, whose autonomy no longer
 points to its ability to produce a radical criticism of the system, but
-precisely the opposite – to its total depoliticization.
+precisely the opposite –to its total depoliticization.
 
 First of all, the function of all these texts within the context of this
 publication is to expand the critique of capitalism to include a
@@ -223,12 +223,12 @@ establishes a structural connection between the reportedly separated
 concepts of modernization and the establishment of capitalist
 hierarchies of exploitation.
 
-In this sense, all those processes – such as the depoliticization of
+In this sense, all those processes –such as the depoliticization of
 culture, subjecting culture and art to the logic of the free market,
-that is, separating the state from culture – which are presented in the
+that is, separating the state from culture– which are presented in the
 public discourse by the ruling elites and free market proponents as
 strategies and ideological principles necessary for a transformation of
-society, politics and the economy into functional modern societies – are
+society, politics and the economy into functional modern societies –are
 viewed in this publication as strategies and ideological principles
 serving to establish capitalist modernity only. This publication, then,
 positions itself radically against the imposition and legitimization of
@@ -1688,6 +1688,8 @@ Wu, Chin-Tao. ‘Embracing the Enterprise Culture’, *New Left Review* 230
 
 
 
+
+
 #The Agency of Art in the Unconscious 
 ###Marc James Léger
 
@@ -2243,6 +2245,11 @@ Materialism*, London: Verso, 2012.
     Politics*, Winchester, UK: Zero Books, 2012.
 [^31]: Žižek, *Less than Nothing*, p. 70.
 [^32]: Žižek, *Less than Nothing*, pp. 106-11.
+
+
+
+
+
 
 
 

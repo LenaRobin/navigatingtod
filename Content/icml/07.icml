@@ -1,0 +1,983 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?aid style="50" type="snippet" readerVersion="6.0" featureSet="513" product="8.0(370)" ?>
+<?aid SnippetType="InCopyInterchange"?>
+<Document DOMVersion="8.0" Self="pandoc_doc">
+    <RootCharacterStyleGroup Self="pandoc_character_styles">
+      <CharacterStyle Self="$ID/NormalCharacterStyle" Name="Default" />
+      <CharacterStyle Self="CharacterStyle/Italic" Name="Italic" FontStyle="Italic">
+        <Properties>
+          <BasedOn type="object">$ID/NormalCharacterStyle</BasedOn>
+        </Properties>
+      </CharacterStyle> 
+    </RootCharacterStyleGroup>
+    <RootParagraphStyleGroup Self="pandoc_paragraph_styles">
+      <ParagraphStyle Self="$ID/NormalParagraphStyle" Name="$ID/NormalParagraphStyle"
+          SpaceBefore="6" SpaceAfter="6"> <!-- paragraph spacing -->
+        <Properties>
+          <TabList type="list">
+            <ListItem type="record">
+              <Alignment type="enumeration">LeftAlign</Alignment>
+              <AlignmentCharacter type="string">.</AlignmentCharacter>
+              <Leader type="string"></Leader>
+              <Position type="unit">10</Position> <!-- first tab stop -->
+            </ListItem>
+          </TabList>
+        </Properties>
+      </ParagraphStyle>
+      <ParagraphStyle Self="ParagraphStyle/Blockquote &gt; Paragraph" Name="Blockquote &gt; Paragraph" LeftIndent="10">
+        <Properties>
+          <BasedOn type="object">$ID/NormalParagraphStyle</BasedOn>
+        </Properties>
+      </ParagraphStyle>
+      <ParagraphStyle Self="ParagraphStyle/Footnote &gt; Paragraph" Name="Footnote &gt; Paragraph" LeftIndent="0">
+        <Properties>
+          <BasedOn type="object">$ID/NormalParagraphStyle</BasedOn>
+        </Properties>
+      </ParagraphStyle>
+      <ParagraphStyle Self="ParagraphStyle/Header1" Name="Header1" LeftIndent="0" PointSize="36">
+        <Properties>
+          <BasedOn type="object">$ID/NormalParagraphStyle</BasedOn>
+        </Properties>
+      </ParagraphStyle>
+      <ParagraphStyle Self="ParagraphStyle/Header3" Name="Header3" LeftIndent="0" PointSize="24">
+        <Properties>
+          <BasedOn type="object">$ID/NormalParagraphStyle</BasedOn>
+        </Properties>
+      </ParagraphStyle>
+      <ParagraphStyle Self="ParagraphStyle/Paragraph" Name="Paragraph" LeftIndent="0">
+        <Properties>
+          <BasedOn type="object">$ID/NormalParagraphStyle</BasedOn>
+        </Properties>
+      </ParagraphStyle> 
+    </RootParagraphStyleGroup>
+    <RootTableStyleGroup Self="pandoc_table_styles">
+      <TableStyle Self="TableStyle/Table" Name="Table" />
+    </RootTableStyleGroup>
+    <RootCellStyleGroup Self="pandoc_cell_styles">
+      <CellStyle Self="CellStyle/Cell" AppliedParagraphStyle="ParagraphStyle/$ID/[No paragraph style]" Name="Cell" />
+    </RootCellStyleGroup>
+  <Story Self="pandoc_story"
+      TrackChanges="false"
+      StoryTitle=""
+      AppliedTOCStyle="n"
+      AppliedNamedGrid="n" >
+    <StoryPreference OpticalMarginAlignment="true" OpticalMarginSize="12" />
+
+<!-- body needs to be non-indented, otherwise code blocks are indented too far -->
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Header1">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Neoliberalism and the Autonomy of Art: The Culture of Power, the Power of Culture</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle" Position="Superscript">
+    <Footnote>
+      <ParagraphStyleRange>
+        <CharacterStyleRange>
+          <Content><?ACE 4?></Content>
+        </CharacterStyleRange>
+      </ParagraphStyleRange>
+      <ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
+        <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+          <Content>	</Content>
+        </CharacterStyleRange>
+        <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+          <Content>Different versions of this essay were presented at Bureau Publik, Copenhagen, 31 October 2013 and KHIB in Bergen, Norway, on 5 November 2013.</Content>
+        </CharacterStyleRange><Br />
+      </ParagraphStyleRange>
+    </Footnote>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Header3">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Irmgard Emmelheinz</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>In Mexico, advanced neoliberal reforms are taking place at a much faster pace than in other parts of the world. These reforms have not only delivered new forms of life and making a living, but also created new sensibilities. The erosion of the social contract brought on by these reforms, has had tangible, negative effects on the social tissue. This has materialized, for example, in what is known as the most violent and dangerous city in the world, Ciudad Juárez, where in 2010 alone 3000 people were killed. Bearing this in mind, I define neoliberalism as a </Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+    <Content>sensibility</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content> that shapes subjectivities, permeates art and culture, differentiates and homogenizes people, molds lives and desires, mistakes information for knowledge, gives shape to space and thus to social relations, normalizes violence, creates ways of seeing the world that justify destruction and dispossession with notions progress and development, or that tries to solve economic precarity through self-help and permanent education. I argue that neoliberalism is more than a system that is ruled by a free market economy, which implies the privatization of the welfare state and an array of government services (for example: education, health, energy), subcontracting to the private sector and changes in labor laws and worker’s rights as well as a transnational division of labor. The system of control under neoliberalism combines a militarized police regime with repressive tolerance, the logic of securitization with granting freedom of expression and ‘quality of life’. The political figures, molded and governed by the neoliberal regime itself are: the </Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+    <Content>homo oeconomicus</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content> (the entrepreneur responsible for his own well-being and manager of his own human capital) and the subject of rights (the State is in charge of guaranteeing that his human rights are respected). Aside from an economic-political system, I see neoliberalism as a way of relating to the world, to nature, to things and beings, which presupposes unlimited growth and development. It is also a way of living and working: human beings are put to work beyond their capacities, erasing the distinction between leisure and work time. Neoliberalism is also a sensibility that establishes the terms of empathy and sympathy and has outlined a new notion of alterity. Configured as ‘social responsibility’ or social work, to ‘help’ the Other means to focus on the (so-called) ‘secondary malfunctions’ of the current capitalist system by disseminating personal and managerial practices such as tolerance, showing respect, nurturing dialogue, transparency and social collaboration. In this sense, the ‘Other’ is a ‘community to come’, the ‘subject of rights’ (to ethical restitution: refugees, displaced, immigrants, those who live under a ‘state of exception’), the </Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+    <Content>underclass</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>, that is, he or she who will be permanently outside globalizing processes, including access to education, jobs and consumption. The category of the ‘Other’ encompasses political and religious fundamentalists as well: fanatics who are outside globalizing and modernizing processes by choice. These </Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+    <Content>Others</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content> are sometimes given faces in the media or in art by spectacularizing their subjectivity but obviating the processes that render their lives precarious and endangered in the first place.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>What has this got to do with the autonomy of art? As we will see, postmodernism put art and culture at the center of social, political and economic processes. They are now inextricable from work, production, consumption and subjectivity: in the neoliberal regime, art in particular and culture in general are used actively as compensation and improvement of tools, all the while normalizing and spreading the antithesis of autonomous art, that is, ‘useful art’. Subsumed to political action, much of contemporary art has taken up a political role as either ‘sensible politics’ or ‘socially engaged artwork’. This is tied to the fact that in our current world order, as Marina Vishmidt and Kerstin Stakemeier point out, ‘art no longer designates a reproductive and representational realm, but one of productivity and social power’ and thus the autonomy of art itself has become a problem – in so far as it has become a realm for the production of added value.</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle" Position="Superscript">
+    <Footnote>
+      <ParagraphStyleRange>
+        <CharacterStyleRange>
+          <Content><?ACE 4?></Content>
+        </CharacterStyleRange>
+      </ParagraphStyleRange>
+      <ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
+        <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+          <Content>	</Content>
+        </CharacterStyleRange>
+        <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+          <Content>Kerstin Stakemeier and Marina Vishmidt, ‘The Value of Autonomy: A conversation between Kerstin Stakemeier and Marina Vishmidt about the reproduction of art,’ </Content>
+        </CharacterStyleRange>
+        <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+          <Content>Texte zur Kunst</Content>
+        </CharacterStyleRange>
+        <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+          <Content> 88 (December 2012): 102-117.</Content>
+        </CharacterStyleRange><Br />
+      </ParagraphStyleRange>
+    </Footnote>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>In the September 2013 editorial of </Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+    <Content>e-flux journal</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>, editors Juliete Aranda, Brian Kuan Wood and Anton Vidokle stated that art is produced at a double bind: while art can be complicit in or instrumentalized by power, its autonomy is located in an imaginary space. What do they mean by this? First, that art, in order to be </Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+    <Content>seen</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>, depends on a platform – an institution – and thus needs to be part of some art world. Second, that the autonomy of art – as a separate regime or an isolated sphere – is a fantasy. In order to consider the autonomy of art outside of this double bind, Clement Greenberg tied the autonomy of art – as art’s for art’s sake – to the avant-garde situating criticality within the discipline or medium of art itself. In Greenberg’s definition, avant-garde (modernist) painting clearly takes a position against socialist realist painting and those debates of the 1930s that rely on the relationship between art and politics (embodied for example by Mexican muralist painting, which was very popular in New York in the 1930s). He characterizes avant-garde by its self-critique in the sense that its formal expression is a meditation on the qualities of the medium of painting. This meant extricating figuration from the arts, and an essentialist understanding of the mediums of art: for Greenberg, ‘purity’ was political – especially if it was seen as an embodiment of a free nation versus the authoritarian Soviet Union.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Postmodernism could be understood as an effort to break with Greenberg’s disciplinary totalitarianism. Taking up the Dadaist and surrealist avant-garde’s goals of unifying art and life, postmodernism thrived on the advent of interdisciplinary strategies and the symbiosis of art with everything else. Post-war art continued the vanguardist critique of the bourgeois notions of autonomous art and expressive artists. It embraced everyday objects, transformed the artist’s function, questioned the institution of art and attacked it in an anarchist manner.</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle" Position="Superscript">
+    <Footnote>
+      <ParagraphStyleRange>
+        <CharacterStyleRange>
+          <Content><?ACE 4?></Content>
+        </CharacterStyleRange>
+      </ParagraphStyleRange>
+      <ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
+        <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+          <Content>	</Content>
+        </CharacterStyleRange>
+        <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+          <Content>Hal Foster, ‘What’s Neo about the Neo-Avant-Garde?’ </Content>
+        </CharacterStyleRange>
+        <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+          <Content>October</Content>
+        </CharacterStyleRange>
+        <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+          <Content>, Vol. 70, The Duchamp Effect (Autumn 1994): 5-32.</Content>
+        </CharacterStyleRange><Br />
+      </ParagraphStyleRange>
+    </Footnote>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content> Following Hal Foster, art from the 1950s and 1960s represents the failure to destroy the institution of art and the institutionalization of the avant-garde.</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle" Position="Superscript">
+    <Footnote>
+      <ParagraphStyleRange>
+        <CharacterStyleRange>
+          <Content><?ACE 4?></Content>
+        </CharacterStyleRange>
+      </ParagraphStyleRange>
+      <ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
+        <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+          <Content>	</Content>
+        </CharacterStyleRange>
+        <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+          <Content>Foster, ‘What’s Neo about the Neo-Avant-Garde?’.</Content>
+        </CharacterStyleRange><Br />
+      </ParagraphStyleRange>
+    </Footnote>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content> If Greenberg advocated aesthetic autonomy with the purpose of resisting the illustrational meanings typical of kitsch and commercial forces, post-modernist’s interdisciplinary strategies led art, in Foster’s words, ‘to become embedded into life under the terms of mass capitalism, while it became appropriated by the culture industry’.</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle" Position="Superscript">
+    <Footnote>
+      <ParagraphStyleRange>
+        <CharacterStyleRange>
+          <Content><?ACE 4?></Content>
+        </CharacterStyleRange>
+      </ParagraphStyleRange>
+      <ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
+        <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+          <Content>	</Content>
+        </CharacterStyleRange>
+        <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+          <Content>Foster, ‘What’s Neo about the Neo-Avant-Garde?’.</Content>
+        </CharacterStyleRange><Br />
+      </ParagraphStyleRange>
+    </Footnote>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content> Due to its ‘post-medium’ condition, as Rosalind Krauss termed ‘postmodern interdisciplinarity’, art is enmeshed with reality, and its materials can range from and beyond social interaction to scientific research and montage. With postmodernism, the politics of the autonomy of art meant breaking away from in Greenberg’s sense of purity and thus art’s autonomy came to be conceived as ‘provisional, always defined diacritically (as something supplemental to art) and situated politically, always </Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+    <Content>semi</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>’.</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle" Position="Superscript">
+    <Footnote>
+      <ParagraphStyleRange>
+        <CharacterStyleRange>
+          <Content><?ACE 4?></Content>
+        </CharacterStyleRange>
+      </ParagraphStyleRange>
+      <ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
+        <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+          <Content>	</Content>
+        </CharacterStyleRange>
+        <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+          <Content>Foster, ‘What’s Neo about the Neo-Avant-Garde?’.</Content>
+        </CharacterStyleRange><Br />
+      </ParagraphStyleRange>
+    </Footnote>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Beyond postmodernism, parallel to an increase of corporate subsidies to the arts, there has been a recent boom in private collecting and thus a market boom. The value of art is speculative and reflects the logic of finance-based economy (and risk): the economy and critical art share the core value of ‘innovation’. In this regard, neoliberalism has meant privatization for the arts or the collusion between the private and the public sector in order to subsidize them. In the past decade or so (and in the US long before that), corporations have played an important role in investing in culture. Institutions and corporations have been seeking to play an important role in communicating the point of view of the private sector on an array of critical public topics.</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle" Position="Superscript">
+    <Footnote>
+      <ParagraphStyleRange>
+        <CharacterStyleRange>
+          <Content><?ACE 4?></Content>
+        </CharacterStyleRange>
+      </ParagraphStyleRange>
+      <ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
+        <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+          <Content>	</Content>
+        </CharacterStyleRange>
+        <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+          <Content>Gregory Sholette, ‘Welcome to the Desert of the Real Artworld,’ </Content>
+        </CharacterStyleRange>
+        <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+          <Content>Oxford Art Journal</Content>
+        </CharacterStyleRange>
+        <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+          <Content> 27.2, (2004), p. 259. http://www.gregorysholette.com/wp-content/uploads/2011/04/07_welcome1.pdf.</Content>
+        </CharacterStyleRange><Br />
+      </ParagraphStyleRange>
+    </Footnote>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content> If art was previously supported by the state, because culture was considered to be an asset to the nation, today, corporations have appropriated this function, as they sponsor and jury art shows, grant awards and funds and collect artworks. Meanwhile, they promote their perspectives on critical public topics.</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle" Position="Superscript">
+    <Footnote>
+      <ParagraphStyleRange>
+        <CharacterStyleRange>
+          <Content><?ACE 4?></Content>
+        </CharacterStyleRange>
+      </ParagraphStyleRange>
+      <ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
+        <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+          <Content>	</Content>
+        </CharacterStyleRange>
+        <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+          <Content>Sholette, ‘Welcome to the Desert of the Real Artworld,’ pp. 260-261.</Content>
+        </CharacterStyleRange><Br />
+      </ParagraphStyleRange>
+    </Footnote>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content> In a 1998 article, art historian Chin-tao Wu highlighted how corporations appropriate the concept of innovation – also known as innovative disruption or creative destruction – in order to redefine its meaning in corporate terms. She quotes John Murphy, executive vice-president of Philip Morris Inc – a U.S. cigarette company – on their sponsorship of the 1969 exhibition, </Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+    <Content>When Attitudes Become Form</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>:</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Blockquote &gt; Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>We feel it is appropriate that we participate in bringing these works to the attention of the public, for there is a key element in this ‘new art’ which has its counterpart in the business world. That element is innovation – without which it would be impossible for progress to be made in any segment in society.</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle" Position="Superscript">
+    <Footnote>
+      <ParagraphStyleRange>
+        <CharacterStyleRange>
+          <Content><?ACE 4?></Content>
+        </CharacterStyleRange>
+      </ParagraphStyleRange>
+      <ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
+        <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+          <Content>	</Content>
+        </CharacterStyleRange>
+        <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+          <Content>Chin-Tao Wu, ‘Embracing the Enterprise Culture: Art Institutions Since the 1980s’, </Content>
+        </CharacterStyleRange>
+        <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+          <Content>New Left Review</Content>
+        </CharacterStyleRange>
+        <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+          <Content> I/230, (July-August 1998): 31.</Content>
+        </CharacterStyleRange><Br />
+      </ParagraphStyleRange>
+    </Footnote>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Furthermore, in the context of neoliberal reforms and sensibilities, there is a global tendency to subdue contemporary art to the politics of culture administration, which implies ‘democratizing culture’ making it accessible to the masses, using it as a tool for the well-being of society, and the reconstruction or healing of a community or society that has experienced violence. Cultural institutions subsidized by corporations and individual patrons apparently follow progressive agendas promoting political or socially minded art. For instance, </Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+    <Content>Creative Time</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content> in New York (funded by a mix of state and corporate support) supports public and community art, with the goal of enabling the politicization of social space with cultural intervention. This organization sponsored Tania Bruguera’s </Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+    <Content>Immigrant Movement International</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>, a project developed in Queens, New York in 2011, which the artist describes as: a flexible community space and long-term socio-political movement, public workshops, events, actions and partnerships with immigrant and service organizations. The artist further qualified her project as ‘useful art’.</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle" Position="Superscript">
+    <Footnote>
+      <ParagraphStyleRange>
+        <CharacterStyleRange>
+          <Content><?ACE 4?></Content>
+        </CharacterStyleRange>
+      </ParagraphStyleRange>
+      <ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
+        <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+          <Content>	</Content>
+        </CharacterStyleRange>
+        <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+          <Content>See artist’s statement available at: http://www.taniabruguera.com/cms/486-0-Immigrant+Movement+International.htm.</Content>
+        </CharacterStyleRange><Br />
+      </ParagraphStyleRange>
+    </Footnote>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content> The problem is that initiatives such as this one, render opaque the real economic conditions that led to situations of immigrant precarity to begin with; immigrants are local signs of complex global forces operating on conditions of life and work at home and abroad. Many would argue that to subsidize a project like Bruguera’s signals the transfer of social work to artistic work funded by the private sector. Politics comes into the scene through art as social work in the name of ‘public interest’, only to become subject to administration, engineering and a technocratic way of administering social problems, configuring the private version of the welfare state.</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle" Position="Superscript">
+    <Footnote>
+      <ParagraphStyleRange>
+        <CharacterStyleRange>
+          <Content><?ACE 4?></Content>
+        </CharacterStyleRange>
+      </ParagraphStyleRange>
+      <ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
+        <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+          <Content>	</Content>
+        </CharacterStyleRange>
+        <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+          <Content>Oliver Marchart, ‘Art, Space and the Public Sphere(s)’, 2002, http://eipcp.net/transversal/0102/marchart/en.</Content>
+        </CharacterStyleRange><Br />
+      </ParagraphStyleRange>
+    </Footnote>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content> Furthermore, as corporate support to the establishment of antagonistic spaces becomes gradually institutionalized within society, the question rises, after Gregory Sholette, ‘Who owns cultural capital and who has the right to use it?’ For him, corporate involvement in the arts is akin, or perhaps integral, to the current erosion of public space.</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle" Position="Superscript">
+    <Footnote>
+      <ParagraphStyleRange>
+        <CharacterStyleRange>
+          <Content><?ACE 4?></Content>
+        </CharacterStyleRange>
+      </ParagraphStyleRange>
+      <ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
+        <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+          <Content>	</Content>
+        </CharacterStyleRange>
+        <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+          <Content>Sholette, ‘Welcome to the Desert of the Real Artworld’.</Content>
+        </CharacterStyleRange><Br />
+      </ParagraphStyleRange>
+    </Footnote>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content> Moreover, as cultural spaces become institutional bastions of democratic self-expression and sites for social reconciliation and self-help, dissent is criminalized and forcefully punished worldwide.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>It becomes evident that art and culture are central to neoliberal processes that act as agents of globalization and as tools for improvement and development, counterinsurgency and pacification. An extreme example of this could be the ‘culturally sensible’ occupation of Iraq as described by Nato Thompson (director of </Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+    <Content>Creative Time</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>). In uncritical terms, Thompson recounts how General David Petraeus wrote a field manual geared at changing people’s attitudes towards the American occupation of Mosul:</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Blockquote &gt; Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>[It is] a story about counterinsurgency and community organizing, about getting to know people as an occupying force, and getting to know people as neighbors. It is a story about the military entering the terrain of that thing called culture.</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle" Position="Superscript">
+    <Footnote>
+      <ParagraphStyleRange>
+        <CharacterStyleRange>
+          <Content><?ACE 4?></Content>
+        </CharacterStyleRange>
+      </ParagraphStyleRange>
+      <ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
+        <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+          <Content>	</Content>
+        </CharacterStyleRange>
+        <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+          <Content>Nato Thompson, ‘The Insurgents Part I: Community-Based Practice as Military Methodology,’ </Content>
+        </CharacterStyleRange>
+        <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+          <Content>e-flux journal</Content>
+        </CharacterStyleRange>
+        <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+          <Content> # 47, (September 2013), http://www.e-flux.com/journal/the-insurgents-part-i-community-based-practice-as-military-methodology. In the second part of his essay, Thompson includes a disclaimer about him glossing over U.S. military violence in Iraq. See: http://www.e-flux.com/journal/the-insurgents-part-ii-fighting-the-left-by-being-the-left.</Content>
+        </CharacterStyleRange><Br />
+      </ParagraphStyleRange>
+    </Footnote>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>In this regard, a ‘cultural approach’ to military occupation is akin to artistic social and community practices, as both involve ‘getting to know people to be able to change the landscapes of life and of power’.</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle" Position="Superscript">
+    <Footnote>
+      <ParagraphStyleRange>
+        <CharacterStyleRange>
+          <Content><?ACE 4?></Content>
+        </CharacterStyleRange>
+      </ParagraphStyleRange>
+      <ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
+        <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+          <Content>	</Content>
+        </CharacterStyleRange>
+        <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+          <Content>Thompson, ‘The Insurgents Part I’.</Content>
+        </CharacterStyleRange><Br />
+      </ParagraphStyleRange>
+    </Footnote>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content> In the case of civilians in Mosul, this is done by obviating their experiences of being under attack. This cultural turn in the U.S. military machinery took place a few years after theorist Frederic Jameson diagnosed a ‘cultural turn’ in capitalism, arguing that social space had been completely saturated with the image of culture. This is because in professional and daily activities, as well as in the various forms of entertainment we enjoy, society consumes cultural products all the time. The postmodern ‘cultural turn’ diagnosed by Jameson, was further elaborated by George Yúdice upon observing (in 2003) that the uses of culture had undergone an unprecedented expansion not just in the marketplace but also along social, political, and economic lines. According to Yúdice, since the state and corporations already utilize culture as a tool as they search for economic and sociopolitical betterment, culture has become a resource and a compensatory device to the ravages neoliberal policies have caused on social tissue: both give meaning and symbolic representations, provide mechanisms of solace, as well as function as tools for re-invention and amelioration.</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle" Position="Superscript">
+    <Footnote>
+      <ParagraphStyleRange>
+        <CharacterStyleRange>
+          <Content><?ACE 4?></Content>
+        </CharacterStyleRange>
+      </ParagraphStyleRange>
+      <ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
+        <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+          <Content>	</Content>
+        </CharacterStyleRange>
+        <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+          <Content>See Irmgard Emmelhainz, ‘Art and the Cultural Turn: Farewell to Committed Autonomous Art?’, </Content>
+        </CharacterStyleRange>
+        <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+          <Content>e-flux journal</Content>
+        </CharacterStyleRange>
+        <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+          <Content> N. 42 (February 2013), http://www.e-flux.com/journal/art-and-the-cultural-turn-farewell-to-committed-autonomous-art.</Content>
+        </CharacterStyleRange><Br />
+      </ParagraphStyleRange>
+    </Footnote>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content> In this context, the line between public programs and relational aesthetics or participative art appears to be increasingly blurred. Former Mexican president Felipe Calderón made a public appearance in February 2012 in Ciudad Juárez in front of a sign that read: ‘No More Weapons’. The billboard measured 8×21 meters, and was built by soldiers of the National Defense Department with 3 tons of assault weapons that were confiscated at the Mexican border and molten into bricks. During the ceremony in which the billboard was unveiled, Calderón turned toward the Mexican-American border and begged the U.S. (in bad English): ‘No more weapons! Dear friends of the United States, Mexico needs your help to stop this terrible violence we are suffering’. During this trip, Calderón also participated in the destruction of 6 thousand confiscated weapons, and planted a tree at a Community Center. Calderon’s propagandistic gestures immediately recall the language of socially engaged contemporary art, particularly, Pedro Reyes’ intervention, </Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+    <Content>Palas por Pistolas</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content> in Culiacán in 2008 (also executed in Juárez in the same week of Calderon’s visit). Reyes’ project of exchanging shovels for weapons was subsidized by two predominant Mexican corporations: Trupper, which produces hardware, and Coppel, which sells appliances and other goods. For this project, Reyes devised a Television campaign inviting citizens to give up their weapons in exchange for a coupon for appliances. The artist collected 1527 weapons, which were destroyed at a military zone in a public act. Giving his action a further twist, Reyes sought to have the rests of the weapons welded together to produce 1527 shovels carrying an inscription telling the story of the weapon they represented (this was not possible due to technical reasons, so Trupper ended up donating them). The engraved shovels were distributed in art institutions and public schools. Adults and children planted 1527 trees. To Reyes, this ritual had a pedagogical purpose: ‘to show the people how an agent of death can become an agent of life’.</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle" Position="Superscript">
+    <Footnote>
+      <ParagraphStyleRange>
+        <CharacterStyleRange>
+          <Content><?ACE 4?></Content>
+        </CharacterStyleRange>
+      </ParagraphStyleRange>
+      <ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
+        <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+          <Content>	</Content>
+        </CharacterStyleRange>
+        <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+          <Content>Artist’s statement available online: http://pedroreyes.net/palasporpistolas.php(http://newleftreview.org/I/87-88/theodor-adorno-commitment).</Content>
+        </CharacterStyleRange><Br />
+      </ParagraphStyleRange>
+    </Footnote>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content> A similar public purge of weapons in exchange for appliances (and tablets), is currently happening in Mexico City led by a ‘Pink Ladies Brigade’. These relational actions – both by General Petraeus’ and by the Mexican government – show how the language of contemporary art has been appropriated by propaganda for its purposes, making politics and aesthetics indistinguishable, as both operate in the realm of symbolic and perceptive work. These are also examples of the predominant idea that violence can be eased – or appeased – through cultural intervention and in the Mexican case, by giving away highly desirable goods.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Aside from this ‘artistic approach’ to social, political and military action, sensible production has taken up a political function. Political work has been developed into a matter of codification using medial forms with the purpose of creating a terrain for political acts, creating an ‘activist imaginary’ made of political fields constituted by images. Political action embedded in cultural forms implies making things public as a way of signs.</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle" Position="Superscript">
+    <Footnote>
+      <ParagraphStyleRange>
+        <CharacterStyleRange>
+          <Content><?ACE 4?></Content>
+        </CharacterStyleRange>
+      </ParagraphStyleRange>
+      <ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
+        <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+          <Content>	</Content>
+        </CharacterStyleRange>
+        <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+          <Content>See Megan McLagan and Yates McKee (eds), ‘Introduction’, </Content>
+        </CharacterStyleRange>
+        <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+          <Content>Sensible Politics: The Visual Culture of Nongovernmental Activism</Content>
+        </CharacterStyleRange>
+        <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+          <Content>, Cambridge, Mass.: Zone Books, 2012, pp. 9-22.</Content>
+        </CharacterStyleRange><Br />
+      </ParagraphStyleRange>
+    </Footnote>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content> An example could be Trevor Paglen’s (sometimes abstract or blurry) photographs of top-secret governmental, nuclear and military sites. Works such as Paglen’s, seek to make visible the invisible under the premise that such an act is political. Yet, what images such as Paglen’s represent is vague in political terms. What I find problematic is that the gap between </Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+    <Content>political</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content> representation and </Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+    <Content>aesthetic</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content> representation is now wider than ever. Representation means ‘making the absent present’, which is always an incomplete task because totality is impossible to convey, and it works in two senses. As </Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+    <Content>Vertreten</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content> (or political representation) it means taking the place of others in order to speak on their behalf, and as </Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+    <Content>Darstellen</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content> (or aesthetic representation) it is the form of representation that implies describing the other in the first person. Representation was brought into a crisis in the 1960s because it was accused of hiding the fact that the speaker was occupying the place of the represented and thus, workers and minorities were prompted to speak on their own behalf and in the first person. Nowadays, however, the gap between political (</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+    <Content>Vertreten</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>) and aesthetic (</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+    <Content>Darstellen</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>) representations is wider than ever. Whatever political acts encoded in medial forms may represent, they render it unstable, partly because politics have become unrepresentable due to a lack of stable political subjects; they are collective enunciations constantly ‘becoming’. In this context, ‘expressive’ politics is valued over representation because ‘it embodies rebellious subjectivities expressing themselves without delegation and they do so through formal and symbolic richness’.</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle" Position="Superscript">
+    <Footnote>
+      <ParagraphStyleRange>
+        <CharacterStyleRange>
+          <Content><?ACE 4?></Content>
+        </CharacterStyleRange>
+      </ParagraphStyleRange>
+      <ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
+        <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+          <Content>	</Content>
+        </CharacterStyleRange>
+        <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+          <Content>Marcelo Espósito, ‘Lecciones de historia. El arte, entre la experimentación institucional y las políticas del movimiento’, SITAC 2009. http://marceloexposito.net/pdf/exposito_sitac.pdf (http://www.e-flux.com/journal/art-and-the-cultural-turn-farewell-to-committed-autonomous-art/).</Content>
+        </CharacterStyleRange><Br />
+      </ParagraphStyleRange>
+    </Footnote>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content> One of the issues that rises is that there is lack of a common ground to universalize the multiplicity of singular struggles and social movements scattered across the world like archipelagos. There are just too many images in the infosphere, and ‘sensible politics’ exists for and by its own public, which is made up of social movements and politically minded cultural producers. In this regard, cultural infrastructure functions as the platform for ‘sensible politics,’ in which curators, museum directors and board members (sometimes representing corporate interests) select and contextualize artwork that presents certain events and social actions, thus determining the boundaries of public thinking.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Aside from its compensatory role, culture (when it is ‘creativity’ and cognitive production), is not only at the center of political action, but is also embedded in production and consumption processes, and in neoliberalism, at least insofar as it has thrived in post-Fordist (flexible) forms and conditions of labor. Neoliberalism has taken up the characteristics of aesthetic production. Signs and nascent meanings, desires and projections meet in the market because the post-Fordist economy is based on manufacturing experiences, signs and information. The core of the knowledge economy is creativity. This is why qualities of aesthetic production have become hegemonic and have transformed labor and consumption processes as well as aesthetic experiences. Not only sensations and feelings are trivialized and packaged for sale, disinterestedness (the core of aesthetic experience as defined by Kant) has also vanished.</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle" Position="Superscript">
+    <Footnote>
+      <ParagraphStyleRange>
+        <CharacterStyleRange>
+          <Content><?ACE 4?></Content>
+        </CharacterStyleRange>
+      </ParagraphStyleRange>
+      <ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
+        <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+          <Content>	</Content>
+        </CharacterStyleRange>
+        <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+          <Content>Stephen Shaviro, ‘Accelerationist Aesthetics,’ </Content>
+        </CharacterStyleRange>
+        <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+          <Content>e-flux journal</Content>
+        </CharacterStyleRange>
+        <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+          <Content> #46 (Summer 2013).</Content>
+        </CharacterStyleRange><Br />
+      </ParagraphStyleRange>
+    </Footnote>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content> This arises as the result of aesthetic experience that is enslaved for profit, as well as subsumed to ‘political’ efficiency in the sense of State and corporate strategic investment in culture and the transformation of political action into sensible forms – as opposed to action. These tendencies are a result of what Stephen Shaviro describes as ‘the ruthless cognition of aesthetic sensations and feelings’, as they are transformed into data and exploited forms of labor which are marketed as fresh experiences, exciting lifestyle choices, or as socially-responsible cultural activities. In the political arena, thirty years of neoliberalism have crushed any confidence that we might have had in the social contract. If artists used to identify with the proletariat and social struggles, nowadays, aesthetic production – which is lacking a reflexive program in regards to the conditions of its own production – is geared just toward the supplementing of the entertainment market with cultivated and knowledgeable new experiences and sensations. Furthermore, through subsidizing art and cultural projects, corporations, states and arts patrons put into practice the following principle of the Prince Claus Fund: ‘There can be no development without culture, and there can be no cultural development without freedom of debate’.</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle" Position="Superscript">
+    <Footnote>
+      <ParagraphStyleRange>
+        <CharacterStyleRange>
+          <Content><?ACE 4?></Content>
+        </CharacterStyleRange>
+      </ParagraphStyleRange>
+      <ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
+        <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+          <Content>	</Content>
+        </CharacterStyleRange>
+        <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+          <Content>From their website: “… The Prince Claus Fund’s mission is to actively seek cultural collaborations founded on equality and trust, with partners of excellence, in spaces where resources and opportunities for cultural expression, creative production and research are limited and cultural heritage is threatened. The Prince Claus Fund is based in Amsterdam and is supported by the Dutch Ministry of Foreign Affairs and the Dutch Postcode Lottery.” For more information, visit their website: http://www.princeclausfund.org/en/the-fund.</Content>
+        </CharacterStyleRange><Br />
+      </ParagraphStyleRange>
+    </Footnote>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content> As this quote becomes evermore evident, the public expects from culture and art rigorous accountability, critical questioning, democratic access, dialogue, openness and equal representation in the visual regime. This is posited as the road to development. In this context, culture is perceived as ‘a basic need’, as the founding principle of Prince Claus Fund states. Thus, states, corporations, the private sector and society attribute to art a decisive political, as they invest in culture with the purpose of generating political and economic surplus value. Bearing in mind that the autonomy of art is always a political matter, could art be politicized beyond its autonomy as a site for added value?</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>The condition of possibility of autonomous, committed art under the new neoliberal world order, is radically different from what we see as the autonomy of art under modernism (as </Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+    <Content>l’art pour l’art</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>) and post-modern interdisciplinarity. These imply the institutionalization of the avant-garde and the subsumption of art to the market, bearing in mind that the emancipatory promises of modernism (criticality, self-design, creativity) are now located at the center of our everyday lives both via consumption and production processes. Theodor Adorno’s take on the autonomy of art in his 1962 essay entitled </Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+    <Content>Commitment</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>, can be helpful here. In this essay, Adorno responds to Jean-Paul Sartre’s aesthetic manifesto </Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+    <Content>What is Literature?</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content> and elaborates a theoretical debate about engaged literature and autonomous art. According to Adorno there are two kinds artworks. On the one hand, there are works that ‘are vulgarly assimilated to the existence against which they protest’.</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle" Position="Superscript">
+    <Footnote>
+      <ParagraphStyleRange>
+        <CharacterStyleRange>
+          <Content><?ACE 4?></Content>
+        </CharacterStyleRange>
+      </ParagraphStyleRange>
+      <ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
+        <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+          <Content>	</Content>
+        </CharacterStyleRange>
+        <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+          <Content>Theodor Adorno, ‘Comittment’, </Content>
+        </CharacterStyleRange>
+        <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+          <Content>New Left Review</Content>
+        </CharacterStyleRange>
+        <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+          <Content> I/87088 (September-December 1974), http://newleftreview.org/I/87-88/theodor-adorno-commitment (http://whitney.org/file_columns/0002/9848/andreafraser_1_2012whitneybiennial.pdf).</Content>
+        </CharacterStyleRange><Br />
+      </ParagraphStyleRange>
+    </Footnote>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content> These works ‘are content with being mere fetishes or a pastime, and thus degenerate and become de-politicized cultural merchandise’.</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle" Position="Superscript">
+    <Footnote>
+      <ParagraphStyleRange>
+        <CharacterStyleRange>
+          <Content><?ACE 4?></Content>
+        </CharacterStyleRange>
+      </ParagraphStyleRange>
+      <ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
+        <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+          <Content>	</Content>
+        </CharacterStyleRange>
+        <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+          <Content>Adorno, ‘Comittment’.</Content>
+        </CharacterStyleRange><Br />
+      </ParagraphStyleRange>
+    </Footnote>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content> This de-politicization, for Adorno is in fact, deeply political. A lot of politically or socially-minded contemporary art would fit into this category. On the other hand, there is </Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+    <Content>engaged autonomous art</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content> which is necessarily detached from reality. Adorno defines the autonomy of art not in the sense of its strictly formalist aspect, although like Walter Benjamin, Adorno also vouches for works of art that are both formally and politically progressive. For Adorno, autonomous art negates a direct connection to reality. The distance that autonomous art has from reality, however, is mediated by reality itself. This means that a work of art cannot come out of the blue: its origin is a reaction against reality. Adorno, as does Benjamin, draws a distinction between ‘commitment’ and ‘tendency’. Committed art does not bear the intention of generating betterment measures, legislative acts, practical institutions (like propaganda) or even transmitting a concrete ideology. It operates at the level of fundamental attitudes. For Adorno, autonomous and engaged works of art operate at the level of abandoning the social contract with reality and ‘cease to speak as if they were reporting the facts: this is the moment in which a work of art makes people’s hair stand up’.</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle" Position="Superscript">
+    <Footnote>
+      <ParagraphStyleRange>
+        <CharacterStyleRange>
+          <Content><?ACE 4?></Content>
+        </CharacterStyleRange>
+      </ParagraphStyleRange>
+      <ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
+        <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+          <Content>	</Content>
+        </CharacterStyleRange>
+        <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+          <Content>Adorno, ‘Comittment’.</Content>
+        </CharacterStyleRange><Br />
+      </ParagraphStyleRange>
+    </Footnote>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content> According to Adorno, the shock of the unintelligible (or the ambiguous), is able to communicate more than what is legible and explicit. In that sense, works of art are autonomous, instead of heteronomous. Heteronomy implies that an artwork is subject to a different power, a law that is external and foreign to art and its formal logic. When it is autonomous, engaged art is neither subject to empirical reality nor a correct political tendency. Art’s autonomy protects it from popularization and adoption by the market. Its autonomy implies liberating it from any other external purpose: from being useful. In this manner, an autonomous work of art does not convey a message nor does it need to convince the public or preach to the converted. And although it opposes society, autonomous art is still part of it.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>If the autonomy of modern art implied considering art as a realm distanced from reality, art’s post-medium condition now means that it has become a niche within reality.</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle" Position="Superscript">
+    <Footnote>
+      <ParagraphStyleRange>
+        <CharacterStyleRange>
+          <Content><?ACE 4?></Content>
+        </CharacterStyleRange>
+      </ParagraphStyleRange>
+      <ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
+        <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+          <Content>	</Content>
+        </CharacterStyleRange>
+        <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+          <Content>Marina Vishmidt, ‘Mimesis of the Hardened and Alienated: Social Practice as a Business Model,’ </Content>
+        </CharacterStyleRange>
+        <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+          <Content>e-flux journal</Content>
+        </CharacterStyleRange>
+        <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+          <Content> 43 (March, 2013), http://www.e-flux.com/journal/“mimesis-of-the-hardened-and-alienated”-social-practice-as-business-model (http://eipcp.net/transversal/0102/marchart/en).</Content>
+        </CharacterStyleRange><Br />
+      </ParagraphStyleRange>
+    </Footnote>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content> What is at stake in autonomous art nowadays, would be to posit it as an experience of reality that is fundamentally foreign and antagonistic to the prevailing reality. If the autonomy of art should be located in the realm of reproduction, as Marina Vischmidt argues,</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle" Position="Superscript">
+    <Footnote>
+      <ParagraphStyleRange>
+        <CharacterStyleRange>
+          <Content><?ACE 4?></Content>
+        </CharacterStyleRange>
+      </ParagraphStyleRange>
+      <ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
+        <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+          <Content>	</Content>
+        </CharacterStyleRange>
+        <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+          <Content>Vishmidt, ‘Mimesis of the Hardened and Alienated’.</Content>
+        </CharacterStyleRange><Br />
+      </ParagraphStyleRange>
+    </Footnote>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content> it would oppose the realm of production of the social, political and economic surplus value. It would go against embodying power and the entrepreneurial model of work. Producing difference and dragging out the laboring conditions hidden within it, autonomous art would imply mimesis with distancing itself. Beyond being used as a tool, autonomous art would refuse becoming an instrument against its own illusions, as well as refusing to become a political force, to be subjected to interests foreign to itself or simply becoming a pleasing commodity. Overcoming self-censorship, it would cease to participate in the economy of the globalized art world, especially in the name of critical practices, political work or social justice, abandoning its claim to become a progressive social force.</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle" Position="Superscript">
+    <Footnote>
+      <ParagraphStyleRange>
+        <CharacterStyleRange>
+          <Content><?ACE 4?></Content>
+        </CharacterStyleRange>
+      </ParagraphStyleRange>
+      <ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
+        <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+          <Content>	</Content>
+        </CharacterStyleRange>
+        <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+          <Content>Andrea Fraser, ‘Le 1% c’est moi’, 2011: ‘Le gorille penseur est un guerrier: le guerrier est un être pour la mort, puisque son métier consiste à mourir. Ici, il pense un peu à la fin de son espèce, ou à la fin de l’ère des — notre époque n’est plus celle des guerriers, elle est celle des insectes, des animaux insignifiants, plus capables de s’adapter…’ http://whitney.org/file_columns/0002/9848/andreafraser_1_2012whitneybiennial.pdf (http://www.e-flux.com/journal/accelerationist-aesthetics-necessary-inefficiency-in-times-of-real-subsumption/).</Content>
+        </CharacterStyleRange><Br />
+      </ParagraphStyleRange>
+    </Footnote>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content> Above all, it would work against the power of culture and the culture of power.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Header3">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>References</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Adorno, Theodor. ‘Commitment’, </Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+    <Content>New Left Review</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content> I (87088) (September-December, 1974), http://newleftreview.org/I/87-88/theodor-adorno-commitment.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Emmelhainz, Irmgard. ‘Art and the Cultural Turn: Farewell to Committed Autonomous Art?’, </Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+    <Content>e-flux journal</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content> 42 (February, 2013), http://www.e-flux.com/journal/art-and-the-cultural-turn-farewell-to-committed-autonomous-art.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Espósito, Marcelo. ‘Lecciones de historia. El arte, entre la experimentación institucional y las políticas del movimiento’, 2009. SITAC lecture, http://marceloexposito.net/pdf/exposito_sitac.pdf.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Foster, Hal. ‘What’s Neo about the Neo-Avant-Garde?’, </Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+    <Content>October</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>, Vol. 70 (Autumn, 1994): 5-32.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Fraser, Andrea. ‘Le 1% c’est moi’, 2011, http://whitney.org/file_columns/0002/9848/andreafraser_1_2012whitneybiennial.pdf.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Marchart, Oliver. ‘Art, Space and the Public Sphere(s)’, 2002, http://eipcp.net/transversal/0102/marchart/en.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>McLagan, Megan and McKee, Yates (eds). </Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+    <Content>Sensible Politics:</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content> </Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+    <Content>The Visual Culture of Nongovernmental Activism</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>. Cambridge, Mass.: Zone Books, 2012.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Shaviro, Stephen. ‘Accelerationist Aesthetics’, </Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+    <Content>e-flux journal</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content> #46 (Summer, 2013), http://www.e-flux.com/journal/accelerationist-aesthetics-necessary-inefficiency-in-times-of-real-subsumption.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Sholette, Gregory. ‘Welcome to the Desert of the Real Artworld’, </Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+    <Content>Oxford Art Journal</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content> 27 (2) (2004) pp. 260-261. http://www.gregorysholette.com/wp-content/uploads/2011/04/07_welcome1.pdf.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Stakemeier, Kerstin and Vishmidt, Marina. ‘The Value of Autonomy: A Conversation Between Kerstin Stakemeier and Marina Vishmidt About the Reproduction of Art’, </Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+    <Content>Texte zur Kunst</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content> 88 (December, 2012): 102-117.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Thompson, Nato. 2013, ‘The Insurgents Part I: Community-Based Practice as Military Methodology,’ </Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+    <Content>e-flux journal</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content> # 47 (September, 2013), http://www.e-flux.com/journal/the-insurgents-part-i-community-based-practice-as-military-methodology.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Vishmidt, Marina. ‘Mimesis of the Hardened and Alienated: Social Practice as a Business Model’, </Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+    <Content>e-flux journal</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content> # 46 (March, 2013), http://www.e-flux.com/journal/“mimesis-of-the-hardened-and-alienated”-social-practice-as-business-model.</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Wu, Chin-tao. ‘Embracing the Enterprise Culture: Art Institutions Since the 1980s’, </Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+    <Content>New Left Review</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content> I 230 (July-August, 1998).</Content>
+  </CharacterStyleRange><Br />
+</ParagraphStyleRange>
+
+  </Story>
+  
+</Document>

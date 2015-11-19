@@ -1,24 +1,30 @@
 ---
-Pr-id: Publications   
-P-id: Theory on Demand  
-A-id: 17  
-Type (formerly called Item): book  
-Book-type: anthology  
-Anthology item: article  
-Item-id:   
-Article-title: The Gray Zones of Creativity and Capital  
-Article-status: accepted  
-Author: Marc James Léger
-Author-email: gordana.nikolic@msuv.org, tatlic.s@gmail.com
-Author-bio:     
+Pr-id: Publications   
+P-id: Theory on Demand  
+A-id: 17  
+Type (formerly called Item): book  
+Book-type: anthology  
+Anthology item: article  
+Item-id:   
+Article-title: The Gray Zones of Creativity and Capital  
+Article-status: accepted  
+Author: Marc James Léger     
+Author-email:    
+Author-bio:     
 Editor: Šefik Tatlić, Gordana Nikolić
-Abstract:     
-Keywords: art, social, artist, avant garde, art world, the big other
-  
+Abstract:     
+Keywords: art, social, artist, avant garde, art world, big other       
+  
+  
+  
+  
 Rights: Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC-BY-NC-SA 4.0)
 
 
+
 ---
+
+
 
 
 #The Agency of Art in the Unconscious 

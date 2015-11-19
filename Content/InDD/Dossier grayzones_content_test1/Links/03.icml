@@ -75,6 +75,10 @@
 		<Font Self="dib9FontnHelvetica Neue Bold" FontFamily="Helvetica Neue" Name="Helvetica Neue Bold" PostScriptName="HelveticaNeue-Bold" Status="Installed" FontStyleName="Bold" FontType="TrueType" WritingScript="0" FullName="Helvetica Neue Bold" FullNameNative="Helvetica Neue Bold" FontStyleNameNative="Bold" PlatformName="$ID/" Version="10.0d36e1"/>
 		<Font Self="dib9FontnHelvetica Neue Bold Italic" FontFamily="Helvetica Neue" Name="Helvetica Neue Bold Italic" PostScriptName="HelveticaNeue-BoldItalic" Status="Installed" FontStyleName="Bold Italic" FontType="TrueType" WritingScript="0" FullName="Helvetica Neue Bold Italic" FullNameNative="Helvetica Neue Bold Italic" FontStyleNameNative="Bold Italic" PlatformName="$ID/" Version="10.0d36e1"/>
 	</FontFamily>
+	<FontFamily Self="di3520" Name="HK Grotesk">
+		<Font Self="di3520FontnHK Grotesk Regular" FontFamily="HK Grotesk" Name="HK Grotesk Regular" PostScriptName="HKGrotesk-Regular" Status="Installed" FontStyleName="Regular" FontType="OpenTypeCFF" WritingScript="0" FullName="HK Grotesk Regular" FullNameNative="HK Grotesk Regular" FontStyleNameNative="Regular" PlatformName="$ID/" Version="Version 001.000 "/>
+		<Font Self="di3520FontnHK Grotesk Bold" FontFamily="HK Grotesk" Name="HK Grotesk Bold" PostScriptName="HKGrotesk-Bold" Status="Installed" FontStyleName="Bold" FontType="OpenTypeCFF" WritingScript="0" FullName="HK Grotesk Bold" FullNameNative="HK Grotesk Bold" FontStyleNameNative="Bold" PlatformName="$ID/" Version="Version 001.000 "/>
+	</FontFamily>
 	<CompositeFont Self="CompositeFont/$ID/[No composite font]" Name="$ID/[No composite font]">
 		<CompositeFontEntry Self="u7c" Name="$ID/Kanji" FontStyle="$ID/R" RelativeSize="100" HorizontalScale="100" VerticalScale="100" Locked="true" ScaleOption="true" BaselineShift="0">
 			<Properties>
@@ -114,11 +118,17 @@
 				<PreviewColor type="enumeration">Nothing</PreviewColor>
 			</Properties>
 		</CharacterStyle>
-		<CharacterStyle Self="CharacterStyle/Italic" Imported="false" KeyboardShortcut="0 0" Name="Italic" FontStyle="Light Italic">
+		<CharacterStyle Self="CharacterStyle/Italic" Imported="false" KeyboardShortcut="0 0" Name="Italic" FontStyle="Regular" VerticalScale="101" Skew="12">
 			<Properties>
 				<BasedOn type="object">CharacterStyle/Default</BasedOn>
 				<PreviewColor type="enumeration">Nothing</PreviewColor>
-				<AppliedFont type="string">Helvetica Neue</AppliedFont>
+				<AppliedFont type="string">HK Grotesk</AppliedFont>
+			</Properties>
+		</CharacterStyle>
+		<CharacterStyle Self="CharacterStyle/Bold" Imported="false" KeyboardShortcut="0 0" Name="Bold" FontStyle="Bold">
+			<Properties>
+				<BasedOn type="object">CharacterStyle/Default</BasedOn>
+				<PreviewColor type="enumeration">Nothing</PreviewColor>
 			</Properties>
 		</CharacterStyle>
 		<CharacterStyle Self="CharacterStyle/Superscript" Imported="false" KeyboardShortcut="0 0" Name="Superscript" Position="Superscript">
@@ -129,36 +139,36 @@
 		</CharacterStyle>
 	</RootCharacterStyleGroup>
 	<RootParagraphStyleGroup Self="u64">
-		<ParagraphStyle Self="ParagraphStyle/Header1" Name="Header1" Imported="false" NextStyle="ParagraphStyle/Header1" KeyboardShortcut="0 0" FontStyle="Bold" PointSize="14" Capitalization="AllCaps" Hyphenation="false" SpaceAfter="2.834645669291339" GridAlignFirstLineOnly="true" GridAlignment="AlignBaseline">
+		<ParagraphStyle Self="ParagraphStyle/Header1" Name="Header1" Imported="false" NextStyle="ParagraphStyle/Header1" KeyboardShortcut="0 0" FontStyle="Bold" PointSize="14" Capitalization="AllCaps" Hyphenation="false" GridAlignFirstLineOnly="true" GridAlignment="AlignBaseline">
 			<Properties>
 				<BasedOn type="string">$ID/[No paragraph style]</BasedOn>
 				<PreviewColor type="enumeration">Nothing</PreviewColor>
-				<Leading type="unit">14</Leading>
+				<Leading type="unit">17</Leading>
 				<AppliedFont type="string">Lato</AppliedFont>
 			</Properties>
 		</ParagraphStyle>
-		<ParagraphStyle Self="ParagraphStyle/Header3" Name="Header3" Imported="false" NextStyle="ParagraphStyle/Header3" KeyboardShortcut="0 0" FillColor="Color/R=147 G=44 B=101" PointSize="10" Capitalization="AllCaps" GridAlignFirstLineOnly="true" GridAlignment="AlignBaseline">
+		<ParagraphStyle Self="ParagraphStyle/Header3" Name="Header3" Imported="false" NextStyle="ParagraphStyle/Header3" KeyboardShortcut="0 0" FillColor="Color/R=147 G=44 B=101" PointSize="10" Capitalization="AllCaps" SpaceBefore="5.669291338582678" SpaceAfter="2.834645669291339" GridAlignment="AlignBaseline">
 			<Properties>
 				<BasedOn type="string">$ID/[No paragraph style]</BasedOn>
 				<PreviewColor type="enumeration">Nothing</PreviewColor>
 				<AppliedFont type="string">Lato</AppliedFont>
 			</Properties>
 		</ParagraphStyle>
-		<ParagraphStyle Self="ParagraphStyle/Paragraph" Name="Paragraph" Imported="false" NextStyle="ParagraphStyle/Paragraph" KeyboardShortcut="0 0" FontStyle="Light" PointSize="9" Ligatures="false" SpaceAfter="5.669291338582678" Justification="LeftJustified" GridAlignment="AlignBaseline">
+		<ParagraphStyle Self="ParagraphStyle/Paragraph" Name="Paragraph" Imported="false" NextStyle="ParagraphStyle/Paragraph" KeyboardShortcut="0 0" PointSize="9" Ligatures="false" AppliedLanguage="$ID/English: USA" HyphenateAfterFirst="3" SpaceAfter="5.669291338582678" MaximumWordSpacing="110.00000000000001" MinimumWordSpacing="90" MaximumLetterSpacing="5" MinimumLetterSpacing="-5" Justification="LeftJustified" GridAlignment="AlignBaseline">
 			<Properties>
 				<BasedOn type="string">$ID/[No paragraph style]</BasedOn>
 				<PreviewColor type="enumeration">Nothing</PreviewColor>
-				<AppliedFont type="string">Helvetica Neue</AppliedFont>
+				<AppliedFont type="string">HK Grotesk</AppliedFont>
 			</Properties>
 		</ParagraphStyle>
-		<ParagraphStyle Self="ParagraphStyle/Blockquote &gt; Paragraph" Name="Blockquote &gt; Paragraph" Imported="false" NextStyle="ParagraphStyle/Blockquote &gt; Paragraph" KeyboardShortcut="0 0" FontStyle="Light" PointSize="9" LeftIndent="10" SpaceAfter="2.834645669291339" GridAlignment="AlignBaseline">
+		<ParagraphStyle Self="ParagraphStyle/Blockquote &gt; Paragraph" Name="Blockquote &gt; Paragraph" Imported="false" NextStyle="ParagraphStyle/Blockquote &gt; Paragraph" KeyboardShortcut="0 0" PointSize="9" LeftIndent="10" AppliedLanguage="$ID/English: USA" SpaceAfter="2.834645669291339" MaximumWordSpacing="110.00000000000001" MinimumWordSpacing="90" MaximumLetterSpacing="5" MinimumLetterSpacing="-5" Justification="LeftJustified" GridAlignment="AlignBaseline">
 			<Properties>
 				<BasedOn type="object">ParagraphStyle/$ID/NormalParagraphStyle</BasedOn>
 				<PreviewColor type="enumeration">Nothing</PreviewColor>
-				<AppliedFont type="string">Helvetica Neue</AppliedFont>
+				<AppliedFont type="string">HK Grotesk</AppliedFont>
 			</Properties>
 		</ParagraphStyle>
-		<ParagraphStyle Self="ParagraphStyle/Footnote &gt; Paragraph" Name="Footnote &gt; Paragraph" Imported="false" NextStyle="ParagraphStyle/Footnote &gt; Paragraph" KeyboardShortcut="0 0" PointSize="7.5" LeftIndent="17.007874015748033" FirstLineIndent="-17.007874015748033" SpaceAfter="2.834645669291339" GridAlignment="None">
+		<ParagraphStyle Self="ParagraphStyle/Footnote &gt; Paragraph" Name="Footnote &gt; Paragraph" Imported="false" NextStyle="ParagraphStyle/Footnote &gt; Paragraph" KeyboardShortcut="0 0" PointSize="7.5" LeftIndent="17.007874015748033" FirstLineIndent="-17.007874015748033" Hyphenation="false" SpaceAfter="0" Justification="LeftAlign" GridAlignment="None">
 			<Properties>
 				<BasedOn type="object">ParagraphStyle/Paragraph</BasedOn>
 				<PreviewColor type="enumeration">Nothing</PreviewColor>
@@ -175,6 +185,7 @@
 			<Properties>
 				<BasedOn type="object">ParagraphStyle/Paragraph</BasedOn>
 				<PreviewColor type="enumeration">Nothing</PreviewColor>
+				<Leading type="unit">10</Leading>
 			</Properties>
 		</ParagraphStyle>
 		<ParagraphStyle Self="ParagraphStyle/$ID/NormalParagraphStyle" Name="$ID/NormalParagraphStyle" Imported="false" NextStyle="ParagraphStyle/$ID/NormalParagraphStyle" KeyboardShortcut="0 0">
@@ -183,7 +194,7 @@
 				<PreviewColor type="enumeration">Nothing</PreviewColor>
 			</Properties>
 		</ParagraphStyle>
-		<ParagraphStyle Self="ParagraphStyle/Header2" Name="Header2" Imported="false" NextStyle="ParagraphStyle/Header2" KeyboardShortcut="0 0" FontStyle="Bold" GridAlignment="AlignBaseline">
+		<ParagraphStyle Self="ParagraphStyle/Header2" Name="Header2" Imported="false" NextStyle="ParagraphStyle/Header2" KeyboardShortcut="0 0" FontStyle="Bold" SpaceAfter="2.834645669291339" GridAlignment="AlignBaseline">
 			<Properties>
 				<BasedOn type="string">$ID/[No paragraph style]</BasedOn>
 				<PreviewColor type="enumeration">Nothing</PreviewColor>
@@ -247,7 +258,7 @@
 		<InCopyExportOption IncludeGraphicProxies="true" IncludeAllResources="false"/>
 		<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Header1">
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
-				<Content>Neutralizing Engaged Subjects in the Creative City</Content>
+				<Content>Neutralizing Engaged Subjects in the Creative City</Content>
 				<Br/>
 			</CharacterStyleRange>
 		</ParagraphStyleRange>
@@ -263,9 +274,9 @@
 				<Br/>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
-				<Content>During the Blair government, a new criminal offence was passed for nearly every day spent in office – this period saw the biggest expansion in the legal regulation of conduct of any time since the end of WW2. This was also a period which saw an explosion in the commissioning of public art across Britain – a commissioning frenzy, buoyed by the liquidity of the financial bubble, which has consequently been called ‘the public art bubble’. I think these phenomena can be linked, because what they represent are two prongs of a pincer that form a governmentality that acts to engage and activate subjects with the one prong, while neutralizing them with the other. Or put another way, it acts to engage certain capacities, conducts and valorizable behaviors – not least the participation in aesthetic spectatorship – while at the same time disabling, discouraging and disallowing other forms of conduct deemed disruptive to the smooth functioning of the state and some of its principle activities; namely the production of a large enough, healthy, peaceable, active and economically productive population. These two phenomena – the offence bubble and the public art bubble – can also be linked as governmental strategies for managing the antagonisms and painful inequalities of neoliberal capitalism as it comes to bear upon the everyday spaces of life in post-industrial urban society.</Content>
+				<Content>During the Blair government, a new criminal offence was passed for nearly every day spent in office — this period saw the biggest expansion in the legal regulation of conduct of any time since the end of WW2. This was also a period which saw an explosion in the commissioning of public art across Britain — a commissioning frenzy, buoyed by the liquidity of the financial bubble, which has consequently been called ‘the public art bubble’. I think these phenomena can be linked, because what they represent are two prongs of a pincer that form a governmentality that acts to engage and activate subjects with the one prong, while neutralizing them with the other. Or put another way, it acts to engage certain capacities, conducts and valorizable behaviors — not least the participation in aesthetic spectatorship — while at the same time disabling, discouraging and disallowing other forms of conduct deemed disruptive to the smooth functioning of the state and some of its principle activities; namely the production of a large enough, healthy, peaceable, active and economically productive population. These two phenomena — the offense bubble and the public art bubble — can also be linked as governmental strategies for managing the antagonisms and painful inequalities of neoliberal capitalism as it comes to bear upon the everyday spaces of life in post-industrial urban society.</Content>
 				<Br/>
-				<Content>We are looking at a complicated conjunction of issues – neoliberal urban development, the legal regulation of behavior, and the role of public art within the post-industrial city; each has its own specificities, developmental history and extensive body of knowledge attached. But what I want to do here is to thread them together according to certain ‘regulatory ideas’, as Michel Foucault would say, which intersect and bind together aesthetic, governmental and economic fields. The first ones I want to think about are the concepts of ‘event’ and ‘milieu’. The act-painting of the ’40s and ’50s, and the Happenings of the ’60s swept the artwork clean first of representation, and then more broadly of ‘retinality’ as art departed pictorial and sculptural frameworks, in a bid to convene a space in which something, an ‘act’ and later an ‘event’, could occur. These twinned notions of ‘act’ and ‘event’ are deeply implicated in the multiple breaching of the art/life divide undertaken by neo-avant-garde artists of this period, and presuppose art’s ability to reach out of itself to effect some kind of wider transformation of life and the world around it, whether that be: the life of the artist or the viewer as it coincides with a set of materials, ideas or conditions during the act of creation; the way parts of the sensorium and cognitive apparatus become newly open and differently sensitized through an encounter with art – what Rancière calls the ‘redistribution of the sensible’; or art’s wider, subtle and unknowable infection of the social and physical environment, ‘indirectly, as a stored code’, as Kaprow put it.</Content>
+				<Content>We are looking at a complicated conjunction of issues — neoliberal urban development, the legal regulation of behavior, and the role of public art within the post-industrial city — each has its own specificities, developmental history and extensive body of knowledge attached. But what I want to do here is to thread them together according to certain ‘regulatory ideas’, as Michel Foucault would say, which intersect and bind together aesthetic, governmental and economic fields. The first ones I want to think about are the concepts of ‘event’ and ‘milieu’. The act-painting of the ’40s and ’50s, and the Happenings of the ’60s swept the artwork clean first of representation, and then more broadly of ‘retinality’ as art departed pictorial and sculptural frameworks, in a bid to convene a space in which something, an ‘act’ and later an ‘event’, could occur. These twinned notions of ‘act’ and ‘event’ are deeply implicated in the multiple breaching of the art/life divide undertaken by neo-avant-garde artists of this period, and presuppose art’s ability to reach out of itself to effect some kind of wider transformation of life and the world around it, whether that be: the life of the artist or the viewer as it coincides with a set of materials, ideas or conditions during the act of creation; the way parts of the sensorium and cognitive apparatus become newly open and differently sensitized through an encounter with art — what Rancière calls the ‘redistribution of the sensible’ — ; or art’s wider, subtle and unknowable infection of the social and physical environment, ‘indirectly, as a stored code’, as Kaprow put it.</Content>
 				<Br/>
 				<Content>Essential to the myriad possible manifestations of the ‘event’ is the notion that it takes place in an ‘expanded field’ that entails a potentially infinite series of elements; a field that admits new contextual, environmental, social, sensual, emotional, institutional, political and material dimensions into the conception of the artwork. This expansion could be understood as a growing reflection on and recursive folding inwards of the artwork’s relationality. This folding inwards of the world, and unfurling outwards of the artwork, leads in numerous directions, from minimalism, to conceptualism to institutional critique, from body art, to performance to media art and net art, and so on. However, we need to maintain our focus on the notion of ‘event’ as a specific aspect of the artwork’s expanded field of signification in order to induce an understanding of how developments in art are reflective of those of biopolitical governmentality and, for our purposes here, within the neoliberal moment of urban development. We also need to think about how the extension and flexibilization of the artwork makes itself newly available to deployment within a governmental and economic expansion that operates upon ever finer fissures of subjectivity.</Content>
 				<Br/>
@@ -275,30 +286,36 @@
 				<Content>Security, Territory, Population</Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
-				<Content> (1977-78), Foucault discusses – in the context of the development of the modern state and its governmental rationality – the mid-17</Content>
+				<Content> (1977-78), Foucault discusses — in the context of the development of the modern state and its governmental rationality — the mid-17</Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
-				<Content>th</Content>
+				<Content>th  </Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
-				<Content> century production of a new spatial relationship of sovereignty to its territory, one in which the capital city comes to the fore. He concentrates on a text called </Content>
+				<Content>century production of a new spatial relationship of sovereignty to its territory, one in which the capital city comes to the fore. He concentrates on a text called </Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
 				<Content>La Métropolitée</Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
-				<Content>, written by a French protestant émigré called Alexandre Le Maitre, for the protestant kind of Sweden. In it Le Maitre puts forwards general recommendations for the good spatial layout of a territory; one which will open up the territory to the ‘general network of the sovereign’s orders and controls’. Without getting too distracted by the detail of his schema, what Foucault seizes on is how he draws together the problems of sovereignty with a set of specifically urban problematics. He writes,</Content>
+				<Content>, written by a French protestant </Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+				<Content>émigré</Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+				<Content> called Alexandre Le Maître, for the protestant kind of Sweden. In it Le Maître puts forwards general recommendations for the good spatial layout of a territory; one which will open up the territory to the ‘general network of the sovereign’s orders and controls’. Without getting too distracted by the detail of his schema, what Foucault seizes on is how he draws together the problems of sovereignty with a set of specifically urban problematics. He writes,</Content>
 				<Br/>
 			</CharacterStyleRange>
 		</ParagraphStyleRange>
 		<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Blockquote &gt; Paragraph">
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
-				<Content>In short, the interesting thing is Le Maitre dreams of connecting the political effectiveness of sovereignty to a spatial distribution. A good sovereign, be it a collective or individual sovereign, is someone well placed within a territory, and a territory that is well policed in terms of its obedience to the sovereign is a territory that has a good spatial layout.</Content>
+				<Content>In short, the interesting thing is Le Maître dreams of connecting the political effectiveness of sovereignty to a spatial distribution. A good sovereign, be it a collective or individual sovereign, is someone well placed within a territory, and a territory that is well policed in terms of its obedience to the sovereign is a territory that has a good spatial layout.</Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
 				<Footnote>
 					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
-						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
 							<Content><?ACE 4?></Content>
 						</CharacterStyleRange>
 						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
@@ -318,7 +335,7 @@
 		</ParagraphStyleRange>
 		<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
-				<Content>For Le Maitre, the capital city is the ultimate arena for the production of an ideal set of spatial conditions of sovereignty, and the exemplary life it will induce and that will act as a model for the entire territory. Foucault then tracks the changing relationship between the development of towns and cities in the context of the production of a new ‘</Content>
+				<Content>For Le Maître, the capital city is the ultimate arena for the production of an ideal set of spatial conditions of sovereignty, and the exemplary life it will induce and that will act as a model for the entire territory. Foucault then tracks the changing relationship between the development of towns and cities in the context of the production of a new ‘</Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
 				<Content>raison d’État</Content>
@@ -329,15 +346,15 @@
 				<Content>Looking at the development of French cities such as Nantes and Vigny in the 18</Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
-				<Content>th</Content>
+				<Content>th  </Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
-				<Content> century, Foucault identifies not only a response to the requirement to open up cities in order to better connect them to external routes, to deal with overcrowding and to eliminate dangerous elements and so-called miasmas, but also a new consideration of possible future events that are not precisely knowable or controllable. The calculation with and management of an indefinite series of accumulating and mobile units – ‘circulation, x number of carts, x number of passers-by, x number of thieves, x number of miasmas, and so on’ – is, he says, the essential characteristic of the mechanism of security. As opposed to the ‘disciplinary’ structuring of space (here he means, the hierarchical spatial orderings of the Middle Ages) the securitized structuring of space ‘will try to plan a milieu in terms of events or series of events or possible elements, […] that will have to be regulated within a multivalent and transformable network.’</Content>
+				<Content>century, Foucault identifies not only a response to the requirement to open up cities in order to better connect them to external routes, to deal with overcrowding and to eliminate dangerous elements and so-called miasmas, but also a new consideration of possible future events that are not precisely knowable or controllable. The calculation with and management of an indefinite series of accumulating and mobile units — ‘circulation, x number of carts, x number of passers-by, x number of thieves, x number of miasmas, and so on’ — is, he says, the essential characteristic of the mechanism of security. As opposed to the ‘disciplinary’ structuring of space (here he means, the hierarchical spatial orderings of the Middle Ages) the securitized structuring of space ‘will try to plan a milieu in terms of events or series of events or possible elements, […] that will have to be regulated within a multivalent and transformable network’.</Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
 				<Footnote>
 					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
-						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
 							<Content><?ACE 4?></Content>
 						</CharacterStyleRange>
 						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
@@ -354,12 +371,12 @@
 				</Footnote>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
-				<Content> He ventures a further definition: ‘The space in which a series of uncertain elements unfold is, I think, roughly what one can call the milieu.’</Content>
+				<Content> He ventures a further definition: ‘The space in which a series of uncertain elements unfold is, I think, roughly what one can call the milieu’.</Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
 				<Footnote>
 					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
-						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
 							<Content><?ACE 4?></Content>
 						</CharacterStyleRange>
 						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
@@ -379,10 +396,10 @@
 				<Content> Borrowing the concept of ‘milieu’ from biology, and imposing it retrospectively onto the problem of city planning in this era of 17</Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
-				<Content>th</Content>
+				<Content>th  </Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
-				<Content> century </Content>
+				<Content>century </Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
 				<Content>Raison d’État</Content>
@@ -394,12 +411,12 @@
 		</ParagraphStyleRange>
 		<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Blockquote &gt; Paragraph">
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
-				<Content>The milieu is a certain number of combined overall effects bearing on all who live in it. It is an element in which a circular link is produced between effects and causes… More disease will obviously mean more deaths. More deaths will mean more cadavers and consequently more miasmas, and so on. […] Finally, the milieu appears as a field of intervention in which, instead of affecting individuals as a set of legal subjects capable of voluntary actions […] or as a multiplicity of organisms, of bodies capable of performances – one tries to affect, precisely, a population. I mean a multiplicity of individuals who are and fundamentally and essentially only exist biologically bound to the materiality within which they live. […] What one tries to reach through this milieu, is precisely the conjunction of a series of events produced by these individuals, population, and groups and quasi natural events which occur around them.</Content>
+				<Content>The milieu is a certain number of combined overall effects bearing on all who live in it. It is an element in which a circular link is produced between effects and causes[…] More disease will obviously mean more deaths. More deaths will mean more cadavers and consequently more miasmas, and so on. […] Finally, the milieu appears as a field of intervention in which, instead of affecting individuals as a set of legal subjects capable of voluntary actions […] or as a multiplicity of organisms, of bodies capable of performances — one tries to affect, precisely, a population. I mean a multiplicity of individuals who are and fundamentally and essentially only exist biologically bound to the materiality within which they live. […] What one tries to reach through this milieu, is precisely the conjunction of a series of events produced by these individuals, population, and groups and quasi natural events which occur around them.</Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
 				<Footnote>
 					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
-						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
 							<Content><?ACE 4?></Content>
 						</CharacterStyleRange>
 						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
@@ -437,15 +454,15 @@
 				<Content>raison d’État</Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
-				<Content>, entails a logic that concedes that the state is its own manifest destiny – it no longer imagines itself as becoming an empire, or ultimately as merging with the cosmic unity and temporality of the heavens. It is held in a balance of power, after the Treaty of Westphalia in 1648, with the other European states, and now turns inwards, discovering the utility of its own population which it starts to police in the interests of population expansion (which promised the freedom to pay lower wages), increased activity, greater levels of commodity production, higher levels of export and hence growing revenues to the treasury coffers.</Content>
+				<Content>, entails a logic that concedes that the state is its own manifest destiny — it no longer imagines itself as becoming an empire, or ultimately as merging with the cosmic unity and temporality of the heavens. It is held in a balance of power, after the Treaty of Westphalia in 1648, with the other European states, and now turns inwards, discovering the utility of its own population which it starts to police in the interests of population expansion (which promised the freedom to pay lower wages), increased activity, greater levels of commodity production, higher levels of export and hence growing revenues to the treasury coffers.</Content>
 				<Br/>
 				<Content>This logic changes, however, to some degree in the 18</Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
-				<Content>th</Content>
+				<Content>th  </Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
-				<Content> century, with the advent of the physiocrats and the </Content>
+				<Content>century, with the advent of the physiocrats and the </Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
 				<Content>économistes</Content>
@@ -463,7 +480,7 @@
 				<Content>laissez-faire</Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
-				<Content>. So instead of extending the spatial model of the city to the entire territory – because it is in the city that the techniques of security and policing are developed – the idea is to ‘let nature take its course’. In regards to grain production, for example, the idea was to get rid of price controls and the control of import and export. This way production would be self-regulating, responding more agilely to the market value of grain, and ultimately better avoid the grain shortages and famines that were a frequent result of state intervention. The peasants would be better off, better fed and more productive.</Content>
+				<Content>. So instead of extending the spatial model of the city to the entire territory — because it is in the city that the techniques of security and policing are developed — the idea is to ‘let nature take its course’. In regards to grain production, for example, the idea was to get rid of price controls and the control of import and export. This way production would be self-regulating, responding more agilely to the market value of grain, and ultimately better avoid the grain shortages and famines that were a frequent result of state intervention. The peasants would be better off, better fed and more productive.</Content>
 				<Br/>
 				<Content>Without wishing to go too deeply into this historical sequence, what is important is that Foucault argues both in </Content>
 			</CharacterStyleRange>
@@ -480,10 +497,10 @@
 				<Content> that from the 18</Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
-				<Content>th</Content>
+				<Content>th  </Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
-				<Content> century, an ‘art of government’ came to replace the more disciplinary and interventionist governmental reason that preceded it, and that this later art of government would retain the population as its focus – but strive to fulfil the interests of the state (higher levels of production, greater circulation and export of goods etc.) through an </Content>
+				<Content>century an ‘art of government’ came to replace the more disciplinary and interventionist governmental reason that preceded it, and that this later art of government would retain the population as its focus, but strive to fulfil the interests of the state (higher levels of production, greater circulation and export of goods etc.) through an </Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
 				<Content>economic</Content>
@@ -491,13 +508,13 @@
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
 				<Content> reason. This economic art of government is based on the notion, formulated by Adam Smith, of the ‘secret hand of the market’; a quasi-natural force that can better settle the balance of competing interests than any more rigid and partial intervention of the state.</Content>
 				<Br/>
-				<Content>However, what is important here, and for our thinking about the links between the aesthetic blurring of art and life and biopower, is that the economic governmental reason retains the centrality of the ‘event’ and the ‘milieu’, the speculative balancing of a set of variables, which is expanded outwards from the setting of the town and its conditions, to the whole complexion of factors, interests and conditions that it needs to balance – one that would increasingly resolve into what we call ‘the economy’. Perhaps we can even go as far as to say that </Content>
+				<Content>However, what is important here, and for our thinking about the links between the aesthetic blurring of art and life and biopower, is that the economic governmental reason retains the centrality of the ‘event’ and the ‘milieu’, the speculative balancing of a set of variables, which is expanded outwards from the setting of the town and its conditions, to the whole complexion of factors, interests and conditions that it needs to balance — one that would increasingly resolve into what we call ‘the economy’. Perhaps we can even go as far as to say that </Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
 				<Content>the economy is ‘the event’ par excellence</Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
-				<Content> of this governmental rationality. As Foucault states many times, this entails a population-scale thinking – one which departs from earlier, religious or pastoral models of sovereignty in which the entire flock must be sacrificed to save a single soul, and conversely, the single soul must be sacrificed for the salvation of the flock – an economy of souls in which every individual matters. With biopower, what we see is the state intervening only</Content>
+				<Content> of this governmental rationality. As Foucault states many times, this entails a population-scale thinking — one which departs from earlier, religious or pastoral models of sovereignty in which the entire flock must be sacrificed to save a single soul, and conversely, the single soul must be sacrificed for the salvation of the flock — an economy of souls in which every individual matters. With biopower, what we see is the state intervening only</Content>
 				<Br/>
 			</CharacterStyleRange>
 		</ParagraphStyleRange>
@@ -508,7 +525,7 @@
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
 				<Footnote>
 					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
-						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
 							<Content><?ACE 4?></Content>
 						</CharacterStyleRange>
 						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
@@ -528,15 +545,15 @@
 		</ParagraphStyleRange>
 		<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
-				<Content>In this respect, the individual ceases to be important, and of interest; but the conditions affecting the mass of interactions between individuals, the ‘multiplicity of individuals’, indeed the population, becomes the site of state intervention. I want to take a bit of a leap of argumentative faith, and suggest that we can plot a related development in art from the presiding concern with the individual object – the ‘hard object’ – as it is sometimes called with reference to sculpture, to an increasingly distributed aesthetic field of attention and concern. It is interesting to consider this shift in terms of a movement from the depth model of the Christian and enlightenment subject, in which all orders of experience are of moral if not economic importance, to a flattened model of the secular and biopolitical subject in which the individual becomes a moment, or the centre of a contingent set of effects, within a mobile series of interactions. We must, of course, be careful to distinguish between the objectives of a governmental reason concerned primarily with the economic and its attendant, opportune conditions of life, and the motivating forces behind this diffusion of the artwork into a relational field. Or, put another way, the reorientation of the aesthetic field of attention from the single object often involves a critique of individuality which heads in a very different direction from the biopolitical reconception of individuality as a unit of interaction within a field of forces and effects; one of a variety of mobile units that comprise the ‘milieu’ and the ‘event’.</Content>
+				<Content>In this respect, the individual ceases to be important, and of interest; but the conditions affecting the mass of interactions between individuals, the ‘multiplicity of individuals’, indeed the population, becomes the site of state intervention. I want to take a bit of a leap of argumentative faith, and suggest that we can plot a related development in art from the presiding concern with the individual object — the ‘hard object’ — as it is sometimes called with reference to sculpture, to an increasingly distributed aesthetic field of attention and concern. It is interesting to consider this shift in terms of a movement from the depth model of the Christian and enlightenment subject, in which all orders of experience are of moral if not economic importance, to a flattened model of the secular and biopolitical subject in which the individual becomes a moment, or the centre of a contingent set of effects, within a mobile series of interactions. We must, of course, be careful to distinguish between the objectives of a governmental reason concerned primarily with the economic and its attendant, opportune conditions of life, and the motivating forces behind this diffusion of the artwork into a relational field. Or, put another way, the reorientation of the aesthetic field of attention from the single object often involves a critique of individuality which heads in a very different direction from the biopolitical reconception of individuality as a unit of interaction within a field of forces and effects; one of a variety of mobile units that comprise the ‘milieu’ and the ‘event’.</Content>
 				<Br/>
-				<Content>Roland Barthes’ concept of the ‘death of the author’ and the ‘birth of the reader’ can be related to the notion of ‘singularity’ – that which defies the opposition between universal and particular, general and individual, to grasp a sense by which all universalities are particularized, given as such, but only in so far as the particular occurs this way, but could always occur otherwise; the characteristics of the particular are both being as it is, as it has occurred, but neither are they all that could potentially occur. This balance, and refusal of the general and the particular, one that allows for all the potential unrealized forms of Being in so far as it embraces Being as such, is what Giorgio Agamben calls the ‘whatever singularity’. The relinquishing of the author, or the hard object, or representation, or technique, or retinality are all maneuvers through which a space is cleared, or rather a milieu is opened, grasped and excavated within which there is potential for something, the </Content>
+				<Content>Roland Barthes’ concept of the ‘death of the author’ and the ‘birth of the reader’ can be related to the notion of ‘singularity’ — that which defies the opposition between universal and particular, general and individual, to grasp a sense by which all universalities are particularized, given as such, but only in so far as the particular occurs this way, but could always occur otherwise; the characteristics of the particular are both being as it is, as it has occurred, but neither are they all that could potentially occur. This balance, and refusal of the general and the particular, one that allows for all the potential unrealized forms of Being in so far as it embraces Being as such, is what Giorgio Agamben calls the ‘whatever singularity’. The relinquishing of the author, or the hard object, or representation, or technique, or retinality are all maneuvers through which a space is cleared, or rather a milieu is opened, grasped and excavated within which there is potential for something, the </Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
 				<Content>whatever</Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
-				<Content>, to occur within – call it an ‘act’, an ‘event’ or a ‘singularity’. This potential to be otherwise, or merely this </Content>
+				<Content>, to occur within — call it an ‘act’, an ‘event’ or a ‘singularity’. This potential to be otherwise, or merely this </Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
 				<Content>potential for potential</Content>
@@ -548,9 +565,9 @@
 				<Content>pre</Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
-				<Content>cuperated into a social and economic equilibrium; in the best relational artworks, the event’s effects resist being put to work – they may even resist being consciously identified or understood, and operate more as a ‘stored code’, an unspent power with unknowable potential future manifestations – a whatever singularity.</Content>
+				<Content>cuperated into a social and economic equilibrium; in the best relational artworks, the event’s effects resist being put to work — they may even resist being consciously identified or understood — and operate more as a ‘stored code’, an unspent power with unknowable potential future manifestations — a whatever singularity.</Content>
 				<Br/>
-				<Content>Returning to the problematic of the city in its neoliberal mode of development – it is important to note the transition that occurred in the 1980s from the process of ‘gentrification’ to the state-led stimulation of ‘urban regeneration’. Gentrification is a term coined by sociologist Ruth Glass in 1964 to describe the movement of affluent individuals into lower class areas of the city. The state simulation of this apparently ad hoc activity is what has been named ‘regeneration’. I want to think about how this governmental simulation, or forced stimulation of a process deemed natural, bears all the hallmarks of neoliberalism’s schizophrenic need to posit the naturalness of the market’s ordering of social and economic processes on the one hand, while constantly needing to intervene to produce the correct conditions within which ‘nature’ can take its course. Here we will consider the role that creativity and public art is given in the production of a set of conditions which not only apparently stimulate growth, but also affect the behavior of subjects, of city dwellers, rendering them compatible with the desired trajectory of growth, productivity, and active social participation. How, in other words, the public display of creativity helps valorize life within an economic and biopolitical rationality. Part of this process of valorization is also, of course, to pre-empt, drive out and mask over those subjects and behaviors that cannot be put to use. In this sense, we can think about how securitization extends to creativity – perhaps we can call this the ‘securitization of creativity’.</Content>
+				<Content>Returning to the problematic of the city in its neoliberal mode of development — it is important to note the transition that occurred in the 1980s from the process of ‘gentrification’ to the state-led stimulation of ‘urban regeneration’. Gentrification is a term coined by sociologist Ruth Glass in 1964 to describe the movement of affluent individuals into lower class areas of the city. The state simulation of this apparently ad hoc activity is what has been named ‘regeneration’. I want to think about how this governmental simulation, or forced stimulation of a process deemed natural, bears all the hallmarks of neoliberalism’s schizophrenic need to posit the naturalness of the market’s ordering of social and economic processes on the one hand, while constantly needing to intervene to produce the correct conditions within which ‘nature’ can take its course. Here we will consider the role that creativity and public art is given in the production of a set of conditions which not only apparently stimulate growth, but also affect the behavior of subjects, of city dwellers, rendering them compatible with the desired trajectory of growth, productivity, and active social participation. How, in other words, the public display of creativity helps valorize life within an economic and biopolitical rationality. Part of this process of valorization is also, of course, to pre-empt, drive out and mask over those subjects and behaviors that cannot be put to use. In this sense, we can think about how securitization extends to creativity — perhaps we can call this the ‘securitization of creativity’.</Content>
 				<Br/>
 				<Content>So, as noted, initially considered an ad hoc, </Content>
 			</CharacterStyleRange>
@@ -563,7 +580,7 @@
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
 				<Footnote>
 					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
-						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
 							<Content><?ACE 4?></Content>
 						</CharacterStyleRange>
 						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
@@ -580,7 +597,7 @@
 				</Footnote>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
-				<Content> In the UK, it was also part of a governmental response to a virulent wave of riots that erupted across Britain’s streets in the summer of 1981, from London’s Brixton, Liverpool’s Toxteth, Birmingham’s Handsworth, to Leeds’ Chapeltown. During this hot summer, dispossessed populations vented their rage and contempt for a system that treated them as surplus to requirement; both neglecting and harassing them by turns. These riots – often cast as race riots – were not only a response to high unemployment (or Thatcher’s planned unemployment), biting poverty and the degenerating of housing stock, but also the aggressive policing of the non-white working class population who were subjected to discriminatory and heavy-handed policing, under ‘sus’ law – the police power to stop and search preemptively, purely on the basis of suspicion. Poet Levi Tafari put it this way:</Content>
+				<Content> In the UK, it was also part of a governmental response to a virulent wave of riots that erupted across Britain’s streets in the summer of 1981, from London’s Brixton, Liverpool’s Toxteth, Birmingham’s Handsworth, to Leeds’ Chapeltown. During this hot summer, dispossessed populations vented their rage and contempt for a system that treated them as surplus to requirement; both neglecting and harassing them by turns. These riots — often cast as race riots — were not only a response to high unemployment (or Thatcher’s planned unemployment), biting poverty and the degenerating of housing stock, but also the aggressive policing of the non-white working class population who were subjected to discriminatory and heavy-handed policing, under ‘sus’ law — the police power to stop and search preemptively, purely on the basis of suspicion. Poet Levi Tafari put it this way:</Content>
 				<Br/>
 			</CharacterStyleRange>
 		</ParagraphStyleRange>
@@ -591,7 +608,7 @@
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
 				<Footnote>
 					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
-						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
 							<Content><?ACE 4?></Content>
 						</CharacterStyleRange>
 						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
@@ -611,16 +628,16 @@
 		</ParagraphStyleRange>
 		<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
-				<Content>And how did the British state respond to the uprising and discontent of significant pockets of its population? Then Secretary of the Environment, Michael Heseltine, was dispatched around the country in a helicopter, to consult with so-called community leaders. The outcome? A series of ‘Garden Festivals’ around the UK, which offer an early model of ‘cultural’ regeneration. These festivals combined the production of a series of ornamental gardens with pop-cultural hagiography – in Liverpool, for instance, the festival included a yellow submarine and a statue of John Lennon. They were typically placed in derelict industrial sites near to working class areas, and unlocked large tranches of public money to clear sites, purify land, improve transport links and eventually transfer land to private developers. At each of the Garden Festival sites, special agencies such as the Merseyside Development Corporation were established to attract private capital investment and lead regeneration in areas undergoing post-industrial decline; these QUANGOs were directly appointed by the minister and overrode local authority planning controls – a measure which would pre-empt later large-scale redevelopment projects of the 90s and 00s.</Content>
+				<Content>And how did the British state respond to the uprising and discontent of significant pockets of its population? Then Secretary of the Environment, Michael Heseltine, was dispatched around the country in a helicopter, to consult with so-called community leaders. The outcome? A series of ‘Garden Festivals’ around the UK, which offer an early model of ‘cultural’ regeneration. These festivals combined the production of a series of ornamental gardens with pop-cultural hagiography — in Liverpool, for instance, the festival included a yellow submarine and a statue of John Lennon. They were typically placed in derelict industrial sites near to working class areas, and unlocked large tranches of public money to clear sites, purify land, improve transport links and eventually transfer land to private developers. At each of the Garden Festival sites, special agencies such as the Merseyside Development Corporation were established to attract private capital investment and lead regeneration in areas undergoing post-industrial decline; these QUANGOs were directly appointed by the minister and overrode local authority planning controls — a measure which would pre-empt later large-scale redevelopment projects of the 90s and 00s.</Content>
 				<Br/>
-				<Content>This mode of addressing social unrest and infrastructural decline exhibits several characteristics of the biopolitical governmentality we have been discussing. The decision to clear, purify and deregulate public lands constitutes a massive subsidy to the private sector which is courted and effectively underwritten to take over the state’s previous role of city development. (Soon after the festivals had ended, most of the expensively treated land they occupied was sold off to developers – an outcome that made the entire cultural experiment seem like mere foreplay). This is a prime example of the schizophrenic genuflecting to and artificial stimulation of market activity which is apparently better able to regulate social and economic activity than the state. This is also what David Harvey has termed the ‘entrepreneurial’ mode of municipal government which no longer directly addresses the material and social needs of inhabitants through the provision of services and the planning, building and maintenance of infrastructure, but which instead presents cities and city districts as attractive commodities whose inhabitants provide ‘social and cultural capital’ – effectively, just another business opportunity competing against others for inward investment from portfolio capitalists. Cultural events and signature art and architecture are of course key to this branding and selling of the city – a familiar strategy which explains much of the state subsidized public art bubble of the boom years.</Content>
+				<Content>This mode of addressing social unrest and infrastructural decline exhibits several characteristics of the biopolitical governmentality we have been discussing. The decision to clear, purify and deregulate public lands constitutes a massive subsidy to the private sector which is courted and effectively underwritten to take over the state’s previous role of city development. (Soon after the festivals had ended, most of the expensively treated land they occupied was sold off to developers — an outcome that made the entire cultural experiment seem like mere foreplay). This is a prime example of the schizophrenic genuflecting to and artificial stimulation of market activity which is apparently better able to regulate social and economic activity than the state. This is also what David Harvey has termed the ‘entrepreneurial’ mode of municipal government which no longer directly addresses the material and social needs of inhabitants through the provision of services and the planning, building and maintenance of infrastructure, but which instead presents cities and city districts as attractive commodities whose inhabitants provide ‘social and cultural capital’ — effectively, just another business opportunity competing against others for inward investment from portfolio capitalists. Cultural events and signature art and architecture are of course key to this branding and selling of the city — a familiar strategy which explains much of the state subsidized public art bubble of the boom years.</Content>
 				<Br/>
 				<Content>Another key biopolitical characteristic witnessed in the response of the Thatcher government to the misery and desperation of inner-city populations is the use of the ‘state of exception’ witnessed through the suspension of local planning laws within designated parts of the city. Actions such as these expose the state’s ultimate externality to its own laws which must, Foucault argues, be temporarily suspended in order to attain the very ends of the state, namely its perpetuation. (We should note, however, that Agamben sees the state of exception as having become sovereignty’s permanent condition of operation within capitalism).</Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
 				<Footnote>
 					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
-						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
 							<Content><?ACE 4?></Content>
 						</CharacterStyleRange>
 						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
@@ -640,21 +657,45 @@
 				<Content> Quoting Chemnitz, the 17</Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
-				<Content>th</Content>
+				<Content>th  </Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
-				<Content> century political theorist, Foucault describes the relationship of the state to its own laws thus:</Content>
+				<Content>century political theorist, Foucault describes the relationship of the state to its own laws thus:</Content>
 				<Br/>
 			</CharacterStyleRange>
 		</ParagraphStyleRange>
 		<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Blockquote &gt; Paragraph">
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
-				<Content>In fact, raison d’État must command, not by ‘sticking to the laws,’ but, if necessary, it must command ‘the laws themselves, which must adapt to the present state of the republic’. So, the coup d’État does not break with raison d’État. It is an element, an event, a way of doing things that, as something that breaches the laws […] falls entirely within the general horizon, the general form of raison d’État.</Content>
+				<Content>In fact, </Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+				<Content>raison d’État</Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+				<Content> must command, not by ‘sticking to the laws,’ but, if necessary, it must command ‘the laws themselves, which must adapt to the present state of the republic’. So, the </Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+				<Content>coup d’État</Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+				<Content> does not break with </Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+				<Content>raison d’État</Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+				<Content>. It is an element, an event, a way of doing things that, as something that breaches the laws […] falls entirely within the general horizon, the general form of </Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+				<Content>raison d’État</Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
+				<Content>.</Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
 				<Footnote>
 					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
-						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
 							<Content><?ACE 4?></Content>
 						</CharacterStyleRange>
 						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
@@ -689,7 +730,7 @@
 				<Content>. It is interesting to consider the role of culture as part of the theatrical </Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
-				<Content>mise-en-scene</Content>
+				<Content>mise-en-scène</Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
 				<Content> that allows this micro-</Content>
@@ -703,10 +744,10 @@
 				<Content>A further biopolitically paradigmatic aspect of the Thatcher government’s response was its attempt to intervene in the conditions of life to produce effects of ‘happiness’ and ‘well-being’ as a way of maintaining control and boosting the co-operation and productive activity of its subjects. Speaking of the development of policing in the 17</Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
-				<Content>th</Content>
+				<Content>th  </Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
-				<Content> century, during the emergence of </Content>
+				<Content>century, during the emergence of </Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
 				<Content>raison d’État</Content>
@@ -723,7 +764,7 @@
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
 				<Footnote>
 					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
-						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
 							<Content><?ACE 4?></Content>
 						</CharacterStyleRange>
 						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
@@ -743,7 +784,7 @@
 		</ParagraphStyleRange>
 		<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
-				<Content>He goes on to say that this circle will pass through more than just the life of individuals, but through their ‘convenience’, their ‘amenity’, something which amounts to ‘more than just living’ – all of which the police were charged with ensuring through their surveillance, regulation and control of the dense interactions between individuals, especially in the towns and cities. This concern for the individual’s ‘better than just living’ he writes,</Content>
+				<Content>He goes on to say that this circle will pass through more than just the life of individuals, but through their ‘convenience’, their ‘amenity’, something which amounts to ‘more than just living’ — all of which the police were charged with ensuring through their surveillance, regulation and control of the dense interactions between individuals, especially in the towns and cities. This concern for the individual’s ‘better than just living’ he writes,</Content>
 				<Br/>
 			</CharacterStyleRange>
 		</ParagraphStyleRange>
@@ -754,7 +795,7 @@
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
 				<Footnote>
 					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
-						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
 							<Content><?ACE 4?></Content>
 						</CharacterStyleRange>
 						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
@@ -777,10 +818,10 @@
 				<Content>Although Foucault describes the police state as a 17</Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
-				<Content>th</Content>
+				<Content>th  </Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
-				<Content> century phenomenon, something which recedes firstly within the ideology of </Content>
+				<Content>century phenomenon, something which recedes firstly within the ideology of </Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
 				<Content>laissez-faire</Content>
@@ -806,12 +847,12 @@
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
 				<Content> tower for the Olympic site), or relational and ephemeral urban interventions, reveals something of the uneasy marriage of agendas that conspire around public art to help deliver the effects of happiness the state so badly needs to gain the acquiescence and self-regulation of subjects within the context of large-scale urban change.</Content>
 				<Br/>
-				<Content>It is precisely this conjunction of happiness and control that philosopher Maria Muhle wants to emphasize through her rejection of those characterizations of biopower that cast it as an aggressive takeover of life. Instead, she argues, it is a modality that possesses a positive and not merely repressive relation to life. ‘My claim’, she writes, ‘is that biopolitics is defined by the fact that rather than merely relating to life, it takes on the way life itself functions; that it functions like life in order to be better able to regulate it.’</Content>
+				<Content>It is precisely this conjunction of happiness and control that philosopher Maria Muhle wants to emphasize through her rejection of those characterizations of biopower that cast it as an aggressive takeover of life. Instead, she argues, it is a modality that possesses a positive and not merely repressive relation to life. ‘My claim’, she writes, ‘is that biopolitics is defined by the fact that rather than merely relating to life, it takes on the way life itself functions; that it functions like life in order to be better able to regulate it’.</Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
 				<Footnote>
 					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
-						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
 							<Content><?ACE 4?></Content>
 						</CharacterStyleRange>
 						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
@@ -828,20 +869,20 @@
 				</Footnote>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
-				<Content> So there are positive and pleasurable aspects to the governmental subsumption of life – its life-like activity – that relate to art’s desire to be more like-life and less like the moribund objects within the museum. Indeed, the production of this ‘positive’ relation, often entails the deployment of art for governmental and economic ends – as has been amply demonstrated by the paradigm of the Creative City. The general aestheticization of urban spaces certainly helps mark off the disciplinary city of factory work from the securitized city of immaterial production and consumption. The pain, filth and graft of production is increasingly purged from our cities (or at least from view), and with it the workers who performed this graft. In its place comes the illusion of our general conversion to a pleasurable, weightless form of production, and the accompanying figure of what in German is called the ‘</Content>
+				<Content> So there are positive and pleasurable aspects to the governmental subsumption of life — its life-like activity — that relate to art’s desire to be more like-life and less like the moribund objects within the museum. Indeed, the production of this ‘positive’ relation, often entails the deployment of art for governmental and economic ends — as has been amply demonstrated by the paradigm of the Creative City. The general aestheticization of urban spaces certainly helps mark off the disciplinary city of factory work from the securitized city of immaterial production and consumption. The pain, filth and graft of production is increasingly purged from our cities (or at least from view), and with it the workers who performed this graft. In its place comes the illusion of our general conversion to a pleasurable, weightless form of production, and the accompanying figure of what in German is called the ‘</Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
 				<Content>Bummler’</Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
-				<Content>, the ambler, the Bourgeois enjoyer of the city as a playground rich in cultural and retail diversions. No longer the austere streets of factory towns, but the slick and virtualized pedestrian zones of creative quarters, in which people’s happiness is catered to, life is deemed ‘more than just lived’, and art contributes invaluably to a cultivation and passification of public space. But it is not just the use of art for the production of happiness effects and place branding, I would argue, that creates discomfort for the more conscious practitioners, but the sharing of certain characteristics by aesthetic and governmental regimes. Beyond a shared orientation towards the event and the milieu – complex fields of interrelation between life, activity and environment which entail a speculative approach to potential effects – there are other key ‘regulatory ideas’ operative in both realms, namely the concepts of ‘engagement’ and ‘openness’.</Content>
+				<Content>, the ambler, the Bourgeois enjoyer of the city as a playground rich in cultural and retail diversions. No longer the austere streets of factory towns, but the slick and virtualized pedestrian zones of creative quarters, in which people’s happiness is catered to, life is deemed ‘more than just lived’, and art contributes invaluably to a cultivation and passification of public space. But it is not just the use of art for the production of happiness effects and place branding, I would argue, that creates discomfort for the more conscious practitioners, but the sharing of certain characteristics by aesthetic and governmental regimes. Beyond a shared orientation towards the event and the milieu — complex fields of interrelation between life, activity and environment which entail a speculative approach to potential effects — there are other key ‘regulatory ideas’ operative in both realms, namely the concepts of ‘engagement’ and ‘openness’.</Content>
 				<Br/>
-				<Content>In a recent interview about making art in the context of regeneration with the artist Alberto Duman, we discussed how the ‘hard object’ had been relegated in public art practice over the last decade or so.</Content>
+				<Content>In a recent interview about making art in the context of regeneration with the artist Alberto Duman, Anthony Iles and I discussed how the ‘hard object’ had been relegated in public art practice over the last decade or so.</Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
 				<Footnote>
 					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
-						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
 							<Content><?ACE 4?></Content>
 						</CharacterStyleRange>
 						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
@@ -881,7 +922,7 @@
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
 				<Footnote>
 					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
-						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
 							<Content><?ACE 4?></Content>
 						</CharacterStyleRange>
 						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
@@ -901,7 +942,7 @@
 		</ParagraphStyleRange>
 		<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
-				<Content>What is interesting here is not only how she counters socially-oriented public art to economic development, but also how governmental her language sounds when she cites the objectives of this kind of work: ‘stabilizing community development’ and ‘improving society’ and ‘improving the quality of life’, not to mention the extraordinary grandiosity of her claim that art can save lives. Running through this equation of art’s social orientation with ameliorating social effects is the implicit idea that the art can serve to activate members of the ‘community,’ to ‘engage’ them in constructive dialogues, to alter their behavior. This conception of activated spectatorship, and its coupling to the blurring of art and life, presents a crucial isomorphism between aesthetics and the self-management of the subject that biopolitical info-capitalism attempts to stage. Present here is also a kind of crass identification between notions of engaged spectatorship and a literalization of activity that attempts to draw out aesthetic contemplation into immediate behavioral and social effects. In his book </Content>
+				<Content>What is interesting here is not only how she counters socially-oriented public art to economic development, but also how governmental her language sounds when she cites the objectives of this kind of work: ‘stabilizing community development’ and ‘improving society’ and ‘improving the quality of life’, not to mention the extraordinary grandiosity of her claim that art can save lives. Running through this equation of art’s social orientation with ameliorating social effects is the implicit idea that the art can serve to activate members of the ‘community’, to ‘engage’ them in constructive dialogues, to alter their behavior. This conception of activated spectatorship, and its coupling to the blurring of art and life, presents a crucial isomorphism between aesthetics and the self-management of the subject that biopolitical info-capitalism attempts to stage. Present here is also a kind of crass identification between notions of engaged spectatorship and a literalization of activity that attempts to draw out aesthetic contemplation into immediate behavioral and social effects. In his book </Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
 				<Content>The Emancipated Spectator</Content>
@@ -913,7 +954,7 @@
 				<Content>cul-de-sac</Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
-				<Content> of avant-garde notions of activating the audience, from Bertolt Brecht to Guy Debord, for the imposition, finally, of a prescriptive and ‘sovereign’ notion of what counts as activity onto an audience contemptuously imagined as unrelentingly passive, as victims of the spectacle. Speaking of the wish to abolish the separation of active performers from passive spectators, or between the spaces of art and everyday life, in avant-garde theatre he says,</Content>
+				<Content> of avant-garde notions of activating the audience, from Bertolt Brecht to Guy Debord, for the imposition, finally, of a prescriptive and ‘sovereign’ notion of what counts as activity onto an audience contemptuously imagined as unrelentingly passive, as victims of the spectacle. Speaking of the wish to abolish the separation of active performers from passive spectators, or between the spaces of art and everyday life, in avant-garde theater he says,</Content>
 				<Br/>
 			</CharacterStyleRange>
 		</ParagraphStyleRange>
@@ -924,7 +965,7 @@
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
 				<Footnote>
 					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
-						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
 							<Content><?ACE 4?></Content>
 						</CharacterStyleRange>
 						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
@@ -955,7 +996,7 @@
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
 				<Footnote>
 					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
-						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
 							<Content><?ACE 4?></Content>
 						</CharacterStyleRange>
 						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
@@ -969,23 +1010,22 @@
 							<Br/>
 						</CharacterStyleRange>
 					</ParagraphStyleRange>
-					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph"/>
 				</Footnote>
 				<Br/>
 			</CharacterStyleRange>
 		</ParagraphStyleRange>
 		<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
-				<Content>Art, he argues, need not and should not strive to create a collectivity of its spectators. Art that attempts this fails to recognize the capacity that has always already joined people across boundaries, namely, the ‘shared power of the equality of intelligence’ which ‘makes them exchange their intellectual adventures, in so far as it keeps them separate from one another, equally capable of using the power everyone has to plot her own path.’</Content>
+				<Content>Art, he argues, need not and should not strive to create a collectivity of its spectators. Art that attempts this fails to recognize the capacity that has always already joined people across boundaries, namely, the ‘shared power of the equality of intelligence’ which ‘makes them exchange their intellectual adventures, in so far as it keeps them separate from one another, equally capable of using the power everyone has to plot her own path’.</Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
 				<Footnote>
 					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
-						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
-							<Content><?ACE 4?>	</Content>
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
+							<Content><?ACE 4?></Content>
 						</CharacterStyleRange>
 						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
-							<Content>Rancière, </Content>
+							<Content>	Rancière, </Content>
 						</CharacterStyleRange>
 						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
 							<Content>The Emancipated Spectator</Content>
@@ -1000,7 +1040,7 @@
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
 				<Content> It is easy to see the potential overlaps between the community creating desires of avant-gardism which neglect the singularity of the viewer’s experience and thought, and the desire of the New Labour government to create a stakeholder society, a series of communities in which a place and activity is allocated to each and every one, but which takes no soul into account.</Content>
 				<Br/>
-				<Content>I think Anthony Gormley’s public art exemplifies the stakes of this institutional takeover of engagement and participation – we see its machinations whirring around most nakedly in his 2009 work for Trafalgar Square’s fourth column titled, </Content>
+				<Content>I think Anthony Gormley’s public art exemplifies the stakes of this institutional takeover of engagement and participation — we see its machinations whirring around most nakedly in his 2009 work for Trafalgar Square’s fourth column titled, </Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
 				<Content>One and Other</Content>
@@ -1008,12 +1048,12 @@
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
 				<Content>. This piece entailed the rotation of a volunteer living occupant of the plinth on an hourly basis; an occupation which was filmed and archived on its associated website. In a grotesque bureaucratic aping of avant-garde notions of the audience’s co-production of the work, the volunteer needed to obtain the right to participate by applying, via a website, and having their intended action vetted in advance before being given a time slot. The performances, by and large, became a theater of civil society initiatives, exaggerated presentations of identity and narcissistic exhibitionism. This work, it seems to me, operates according to the Agambanian logic of ‘inclusive exclusion’, a logic that uses the very act of inclusion as a means to exclude subjects from the scene of the political or the aesthetic. The artwork becomes a microcosm of the inclusive exclusion of the democratic process itself; participants, like voters, are fairly and evenly, if impersonally and bureaucratically treated, given a voice within the narrowly constructed terms of a permissible utterance and, in so doing, denied the ability to be heard, act collectively or engage in any ‘act’ that might rupture the normal functioning of things. They are effectively engaged in order to be neutralized, in the interests of the self-perpetuation of the state or the state-like power of Gormley’s signature branding of high-profile public space.</Content>
 				<Br/>
-				<Content>This stake of institutionalized engagement – its logic of inclusive exclusion – is often discussed by artists who have worked within the context of regeneration as a tactic of ‘soft policing’ performed on those populations who will be most dramatically affected by development. Alberto Duman has described the consultative work of public artists in regeneration or ‘social conflict zones’ as that of appeasement. He says, ‘The artist, very often is called in with a fairly backward idea that art has the capacity to negotiate, be a meeting place, art is a space where differences are negotiated because it can transcend the specifics of the situation, of time and space.’</Content>
+				<Content>This stake of institutionalized engagement — its logic of inclusive exclusion — is often discussed by artists who have worked within the context of regeneration as a tactic of ‘soft policing’ performed on those populations who will be most dramatically affected by development. Alberto Duman has described the consultative work of public artists in regeneration or ‘social conflict zones’ as that of appeasement. He says, ‘The artist, very often is called in with a fairly backward idea that art has the capacity to negotiate, be a meeting place, art is a space where differences are negotiated because it can transcend the specifics of the situation, of time and space’.</Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
 				<Footnote>
 					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
-						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
 							<Content><?ACE 4?></Content>
 						</CharacterStyleRange>
 						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
@@ -1034,12 +1074,12 @@
 				<Br/>
 				<Content>With a sharp sense of this double-sided, or as he calls it ‘two-faced’, character of much participatory public art, Duman submitted a highly sarcastic proposal to the Spitalfields Sculpture Prize in 2009. The sculpture was intended to be sited in the conflict zone of a relatively new corporate plaza that had been laid over the now demolished site of one half of Spitalfields Market in East London. The prize is funded by Hammerson, the developers behind the commercial development of the area over the last 15 years. Playing a ‘two-faced’ game himself, Duman submitted plans for a giant, 10m high ‘Cleaning in Progress’ sign that would be both eye-catching, amusing and provide shelter for shoppers and amblers from the elements. Of course the sting in the tail of this apparently innocuous object was that the cleaning it makes reference to is both social and literal; it commemorates those who have been purged from the area in order to make way for the high real estate and rental values it can now command, and flags up the relegation of those working class occupants who remain to the ancillary role of cleaners and service workers; the ghosts who maintain the space but for whom it isn’t intended. The giant sign acts in solidarity with these ghosts who haunt and preserve the spaces of pleasure and consumption, whilst allowing the new occupants to shelter under its protective mantle.</Content>
 				<Br/>
-				<Content>For Boris Groys, avant-garde art’s development of a regime of ‘equal aesthetic rights’ hinges on the idea, linked to the blurring of art and life, that the classical avant-garde ‘has struggled to achieve recognition of all signs, forms, and things as legitimate objects of artistic desire and, hence, also as legitimate objects of representation in art.’</Content>
+				<Content>For Boris Groys, avant-garde art’s development of a regime of ‘equal aesthetic rights’ hinges on the idea, linked to the blurring of art and life, that the classical avant-garde ‘has struggled to achieve recognition of all signs, forms, and things as legitimate objects of artistic desire and, hence, also as legitimate objects of representation in art’.</Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
 				<Footnote>
 					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
-						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
 							<Content><?ACE 4?></Content>
 						</CharacterStyleRange>
 						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
@@ -1056,12 +1096,12 @@
 				</Footnote>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
-				<Content> He sees a parallel between the aesthetic struggle for recognition, and the political struggle for the recognition and inclusion of all minorities. Within art, however, the thought that anything can potentially be recognized as art potentially leads to an entropic game where each artwork appears to be simply an arbitrary and unnecessary extension or iteration of this field of equal rights. However, he argues, art today ‘operates in the gap between the formal equality of all art forms and their factual inequality.’</Content>
+				<Content> He sees a parallel between the aesthetic struggle for recognition, and the political struggle for the recognition and inclusion of all minorities. Within art, however, the thought that anything can potentially be recognized as art potentially leads to an entropic game where each artwork appears to be simply an arbitrary and unnecessary extension or iteration of this field of equal rights. However, he argues, art today ‘operates in the gap between the formal equality of all art forms and their factual inequality’.</Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
 				<Footnote>
 					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
-						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
 							<Content><?ACE 4?></Content>
 						</CharacterStyleRange>
 						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
@@ -1083,7 +1123,7 @@
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
 				<Footnote>
 					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
-						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
 							<Content><?ACE 4?></Content>
 						</CharacterStyleRange>
 						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
@@ -1102,16 +1142,16 @@
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
 				<Content> I think Duman’s work strikes just such a balance, elevating the readymade plastic sign to a higher power which implies the potential elevation of any profane object, whilst mobilizing this banal object to signify the factual exclusion of former inhabitants who become the ‘revenants’ of this apparent space of open, democratic enjoyment. Put another way, the participation of the banal object in the aesthetic regime of equal rights becomes a cipher for the factual impossibility of participation within a wider regime of participatory aesthetics.</Content>
 				<Br/>
-				<Content>Earlier I mentioned that ‘openness’ was another regulatory idea that intersects governmental, economic and aesthetic terrains. As with the regime of equal aesthetic rights, the principle of openness can also happily co-exist with and co-produce factual inequalities and closed or proprietary systems. We see this everywhere from the deployment of the open standards of the web, such as HTML and HTTP to run proprietary software or for private profit, to the double standards of free market capitalism where developing countries are compelled to open up their markets and allow inward investment while economic giants like the US are able to maintain trade barriers and subsidies for domestic production. Openness itself is a kind of conceptual medium along which, as chairman for the US Business Committee for the Arts in the 80s Winton Blount once said, business can also travel. Fighting trade regulations, taxation and overt government control was not just a civic duty, he argued, but a means of keeping ‘open those avenues of freedom along which art and commerce both travel.’</Content>
+				<Content>Earlier I mentioned that ‘openness’ was another regulatory idea that intersects governmental, economic and aesthetic terrains. As with the regime of equal aesthetic rights, the principle of openness can also happily co-exist with and co-produce factual inequalities and closed or proprietary systems. We see this everywhere from the deployment of the open standards of the web, such as HTML and HTTP to run proprietary software or for private profit, to the double standards of free market capitalism where developing countries are compelled to open up their markets and allow inward investment while economic giants like the US are able to maintain trade barriers and subsidies for domestic production. Openness itself is a kind of conceptual medium along which, as chairman for the US Business Committee for the Arts in the 80s Winton Blount once said, business can also travel. Fighting trade regulations, taxation and overt government control was not just a civic duty, he argued, but a means of keeping ‘open those avenues of freedom along which art and commerce both travel’.</Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
 				<Footnote>
 					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
-						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
 							<Content><?ACE 4?></Content>
 						</CharacterStyleRange>
 						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
-							<Content>	Cited in Chin-Tao Wu, &apos;Embracing the Enterprise Culture’, </Content>
+							<Content>	Cited in Chin-Tao Wu, ‘Embracing the Enterprise Culture’, </Content>
 						</CharacterStyleRange>
 						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
 							<Content>New Left Review</Content>
@@ -1125,12 +1165,12 @@
 				<Br/>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
-				<Content>Roman Vasseur, Lead Artist appointed to oversee the redevelopment of Harlow New Town, has argued, this reversibility of openness can also extend to who might be considered an artist in the context of creative-led regeneration. ‘One can envisage a future’ he says, ‘where artists, or individuals with an extensive training in the visual arts and art history will be slowly moved out of this new economy in favor of “creatives” able to privilege deliverability and consultation over other concerns.’</Content>
+				<Content>Roman Vasseur, Lead Artist appointed to oversee the redevelopment of Harlow New Town, has argued, this reversibility of openness can also extend to who might be considered an artist in the context of creative-led regeneration. ‘One can envisage a future’ he says, ‘where artists, or individuals with an extensive training in the visual arts and art history will be slowly moved out of this new economy in favor of “creatives” able to privilege deliverability and consultation over other concerns’.</Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default" Position="Superscript">
 				<Footnote>
 					<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Footnote &gt; Paragraph">
-						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
 							<Content><?ACE 4?></Content>
 						</CharacterStyleRange>
 						<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
@@ -1191,7 +1231,7 @@
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
 				<Content>, Cambridge, Massachussetts: MIT Press, 2004.</Content>
 				<Br/>
-				<Content>Muhle, Maria. &apos;“Qu-est-ce Que la Biopolitique”&apos; A Conversation on Theories of Biopolitics between Thomas Lemke and Maria Muhle, moderated by André Rottman”, </Content>
+				<Content>Muhle, Maria. ‘“Qu-est-ce Que la Biopolitique”’ A Conversation on Theories of Biopolitics between Thomas Lemke and Maria Muhle, moderated by André Rottman”, </Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
 				<Content>Texte Zur Kunst</Content>
@@ -1223,7 +1263,7 @@
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Default">
 				<Content>, [Germany]: Michael Schwinn, 1989.</Content>
 				<Br/>
-				<Content>Wu, Chin-Tao. &apos;Embracing the Enterprise Culture’, </Content>
+				<Content>Wu, Chin-Tao. ‘Embracing the Enterprise Culture’, </Content>
 			</CharacterStyleRange>
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
 				<Content>New Left Review</Content>
