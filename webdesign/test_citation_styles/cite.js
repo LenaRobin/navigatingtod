@@ -1,18 +1,5 @@
 $(document).ready(function(){
 
-	console.log($('#a').css('height').replace(/[^0-9]/g, '') - $('#a').offset().top);
-
-// $(window).on('scroll', function () {
-//     var scrollTop     = $(window).scrollTop(),
-//         elementOffset = $('#a').offset().top,
-//         distance      = (elementOffset - scrollTop);
-//        console.log(scrollTop);
-//     });
-
-
-
-
-
 ////////////////////////
 ////POP-UP REFERENCE BOX
 ////////////////////////
@@ -85,13 +72,21 @@ $(document).ready(function(){
 		var par = $('.qwertz').closest('p').attr('id');		//GET ID OF PARENT p
 	  	var ref_article = $('.qwertz').closest('.section').attr('data-article');
 
-	    var ref_authorName = $('.qwertz').closest('.section').attr('data-authorName');
-	    var author = function() {
+	  	var author = function() {
 	    	return ref_authorName.substr(0, 1);
 	    }
+
+	    var author2 = function() {
+			return ref_authorName2.substr(0, 1);
+	    }	    	
+	    	
+
+	    var ref_authorName = $('.qwertz').closest('.section').attr('data-authorName');
 	    var ref_apaAuthorName = author();
-	    console.log(ref_apaAuthorName);
+	    var ref_apaAuthorName2 = author2();
 	    var ref_authorLastName = $('.qwertz').closest('.section').attr('data-authorLastName');
+	    var ref_authorName2 = $('.qwertz').closest('.section').attr('data-authorName2');
+	    var ref_authorLastName2 = $('.qwertz').closest('.section').attr('data-authorLastName2');
 	    var ref_title = $('meta[name="title"]').attr('content');
 	    var ref_eds = $('meta[name="editors"]').attr('content');
 	    var ref_apaEds = $('meta[name="apa-editors"]').attr('content');
@@ -101,17 +96,20 @@ $(document).ready(function(){
 	    var MLA_date_of_access = moment().format('D MMMM YYYY');
 	    var chicago_date_of_access = moment().format('MMMM D, YYYY');
 		var url = $(location).attr('pathname');
+		var and = $('.qwertz').closest('.section').attr('data-and');
+		var amp = $('.qwertz').closest('.section').attr('data-amp');
+		var , = $('.qwertz').closest('.section').attr('data-,');
 
 ////////MLA STYLE 
-	    $('#mla').html(ref_authorLastName + ", " + ref_authorName + ". '" + ref_article + ".' " + "<i>" + ref_title + "</i>" 
-	    + ". Eds. " + ref_eds + ". " + ref_place + ": " + ref_pub + ", " + ref_year + ". &lt;" + url + "#" + par + "&gt;. " + MLA_date_of_access + ".");
+	    $('#mla').html(ref_authorLastName +", "+ ref_authorName+,+and+ref_authorName2+ref_authorLastName2+". '"+ref_article+", "+"<i>"+ref_title+"</i>" 
+	    +". Eds. "+ref_eds+". "+ref_place+": "+ref_pub+", "+ref_year+". &lt;"+url+"#"+par+"&gt;. "+MLA_date_of_access+".");
 
 ////////CHICAGO STYLE
-	    $('#chicago').html(ref_authorLastName + ", " + ref_authorName + ". '" + ref_article + ".' In " + "<i>" + ref_title + "</i>"
-	    + ", edited by "+ref_eds+". "+ref_place+": "+ref_pub+", "+ref_year+". "+ url + "#" + par + ". Accessed "+chicago_date_of_access + ".");
+	    $('#chicago').html(ref_authorLastName+", "+ref_authorName+,+and+ref_authorName2+ref_authorLastName2+". '"+ref_article+".' In "+"<i>"+ref_title+"</i>"
+	    +", edited by "+ref_eds+". "+ref_place+": "+ref_pub+", "+ref_year+". "+url+"#"+par+". Accessed "+chicago_date_of_access+".");
 
 ////////APA STYLE
-	    $('#apa').html(ref_authorLastName + ", " + ref_apaAuthorName + ". (" + ref_year + "). " + ref_article + ". In "+ref_apaEds+" (Eds.), "+"<i>"+ref_title+"</i>"
+	    $('#apa').html(ref_authorLastName + ", " + ref_apaAuthorName+,+amp+ref_authorLastName2+,+ref_authorName2+". ("+ref_year+"). "+ref_article+". In "+ref_apaEds+" (Eds.), "+"<i>"+ref_title+"</i>"
 	    +". "+ref_place+": "+ref_pub+". Available from "+url+"#"+par+".");
 	});
 
