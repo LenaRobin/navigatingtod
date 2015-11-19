@@ -1,8 +1,10 @@
-# Makefile for INC hybrid publications: TOD
+# Makefile for INC hybrid publications
 
 ## Issues:
 # * why can't i make icmls before making markdowns ??
 
+# Spaces and colons in filenames are a problem
+# http://stackoverflow.com/questions/13963563/using-makefile-wildcard-command-for-file-names-with-spaces/13963859#13963859
 alldocx=$(wildcard docx/*.docx)
 allmarkdown=$(filter-out md/book.md, $(shell ls md/*.md)) # TODO: add if, so that if no md is present no error: "ls: cannot access md/*.md: No such file or directory"
 markdowns_compound=compound_src.md
@@ -32,7 +34,6 @@ markdowns:$(alldocx) # convert docx to md
 	       	--atx-headers \
 		--template=essay.md.template \
 		-o $$md ; \
-	./scripts/md_unique_footnotes.py $$md ; \
 	done
 
 
@@ -60,33 +61,34 @@ scribus: $(allmarkdown)
 		-o scribus_html/$$html ; \
 	done
 
-
+html: book.md
+	cd md && pandoc -s --from markdown --to html -o ../book.html book.md
 
 book.md: clean $(allmarkdown)
 	for i in $(allmarkdown) ; \
 	do ./scripts/md_stripmetada.py $$i >> md/book.md ; \
-	./scripts/md_urlize.py md/book.md ; \
 	done
 #Note: md_urlize.py script requires Django to be installed
 
 
-book.epub: clean $(allmarkdown) book.md epub/metadata.xml epub/styles.epub.css epub/cover.png
+# GH: see https://github.com/jgm/pandoc/issues/1939
+book.epub: clean $(allmarkdown) book.md epub/metadata.xml epub/styles.epub.css epub/cover.jpg
 	cd md && pandoc \
 		--from markdown \
 		--to epub3 \
 		--self-contained \
 		--epub-chapter-level=1 \
 		--epub-stylesheet=../epub/styles.epub.css \
-		--epub-cover-image=../epub/cover.png \
+		--epub-cover-image=../epub/cover.jpg \
 		--epub-metadata=../epub/metadata.xml \
 		--default-image-extension png \
 		--toc-depth=1 \
-		--epub-embed-font=../lib/* \
+		--epub-embed-font=../lib/OpenSans-Regular.otf \
+		--epub-embed-font=../lib/OpenSans-Light.otf \
+		--epub-embed-font=../lib/OpenSans-LightItalic.otf \
 		-o ../book.epub \
 		book.md && \
-		cd .. && \
-		python scripts/epub_process.py book.epub ;
-#		--epub-embed-font=lib/UbuntuMono-B.ttf \
+		cd ..
 
 clean:  # remove outputs
 	rm -f md/book.md  
