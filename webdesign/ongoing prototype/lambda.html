@@ -15,14 +15,13 @@
 
     <title>The Gray Zones of Creativity and Capital</title>
 
-
 <!--––––––––––––––––––––––– FAVICON –––––––––––––––––––––––––––––––––––––-->
     <link rel="icon" href="http://networkcultures.org/wp-content/themes/inc-home/favicon.png">
 
 <!--––––––––––––––––––––––– CSS –––––––––––––––––––––––––––––––––––––––––-->
-    <link rel="stylesheet" type="text/css" href="css/style-lambda2.css" media="screen" />
-    <link rel="stylesheet" href="css/styleprint-lambda2.css" type="text/css" media="print" />
-
+    <link rel="stylesheet" type="text/css" href="lambdaCSS.css">
+    <!-- <link rel="stylesheet" type="text/css" href="css/style-lambda3.css" media="screen" /> -->
+    <!-- <link rel="stylesheet" href="css/styleprint-lambda3.css" type="text/css" media="print" /> -->
 
 <!--––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 ––––––––––––––––––––––––––– SCRIPTS ––––––––––––––––––––––––––––––––––––––––
@@ -30,16 +29,18 @@
 
     <script src="http://code.jquery.com/jquery-1.7.2.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 
 
-<script src="cite.js"></script>
+    <script src="lambda.js"></script>
 
 <!--––––––––––––––––––––––– PLUGINS –––––––––––––––––––––––––––––––––––––--> 
-    <script src="highlight.js"></script>
-    <script src="moment.js"></script>
-    <script src="clipboard.js-master/dist/clipboard.min.js"></script>
+    <script src="final_js/highlight.js"></script>
+    <script src="final_js/moment.js"></script>
+    <script src="final_js/clipboard.min.js"></script>
+    <script src="final_js/jquery.sidenotes.js"></script>
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
-
 
 <!--––––––––––––––––––––––– KEYWORD TOGGLE ––––––––––––––––––––––––––––––-->
     <script>
@@ -51,8 +52,20 @@
     </script>
 
 </head>
-
 <body>
+
+<!--––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+––––––––––––––––––––––––––– HEADER BAR –––––––––––––––––––––––––––––––––
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––-->
+
+    <!-- <div id="header_bar">
+        <div id="header_bar_wrapper"> -->
+
+
+
+
+        <!-- </div> --> <!-- HEADER BAR WRAPPER -->
+<!--     </div> --> <!-- HEADER BAR -->
 
 <!--––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 ––––––––––––––––––––––––––– STRUCTURE (pushmenu) –––––––––––––––––––––––––––
@@ -98,29 +111,13 @@
 //        </div>
 --> 
 
-<!--––––––––––––––––––––––– CHANGE FONT SIZE ––––––––––––––––––––––––––––-->
-        <div id="tool-fontsize">
-            <div id="sizeUp">
-              <button id="button2" value="smaller" type="button" onclick="changeFontSize(this)">-</button>
-          </div>
-          <span id="letter">A</span>
-          <div id="sizeDown">
-              <button id="button1" value="larger" type="button" onclick="changeFontSize(this)">+</button>
-          </div>
-        </div>
-
 <!--––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 ––––––––––––––––––––––––––– MENU ON THE LEFT (TABLE OF CONTENTS) –––––––––––
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––-->
 
-        <nav id="menu" class="pushmenu pushmenu-left">
+        <nav id="menu" class="pushmenu pushmenu-left not">
             <div id="toc_wrapper">
                 <h2><a href="#chapter1">The Gray Zones of Creativity and Capital<div class="horizScroll"></div></a></h2>
-               <!--  <h2><a href="#chapter2">The Missing Chapter of Empire<div class="horizScroll"></div></a></h2>
-                    <h3><a href="#subchapter1">The Era of Empire<div class="subScroll"></div></a></h3>
-                    <h3><a href="#subchapter2">The Darker Side of the force<div class="subScroll"></div></a></h3>
-                    <h3><a href="#subchapter3">The (post)coloniality of power<div class="subScroll"></div></a></h3> -->
-
                 <h2><a href="#chapter2">Within the Image<div class="horizScroll"></div></a></h2>
                     <h3><a href="#subchapter1">Within the Image / The System of Global Apartheid<div class="subScroll"></div></a></h3>
                 <h2><a href="#chapter3">Neutralising Engaged Subjects in the Creative City<div class="horizScroll"></div></a></h2>
@@ -143,7 +140,7 @@
         </nav>
 
 <!--––––––––––––––––––––––– VERTICAL SCROLL BAR –––––––––––––––––––––––––-->
-        <div id="nav_list">
+        <div id="menu_bar">
             <div id="menu_bar_scroll"></div>
         </div>
 
@@ -159,7 +156,7 @@
         <div id="content">
 
 <!--––––––––––––––––––––––– INFO BOX (top) ––––––––––––––––––––––––––––––-->
-            <div id="info-box">
+            <div id="info-box" class="not">
                 <!-- BOOK TITLE -->
                 <div id="book-title">
                     The Gray Zones of Creativity and Capital
@@ -187,11 +184,11 @@
                         <tr class="subjects">
                             <td class="subjects">Summary:</td>
                             <td class="subjects_tofill">
-                             The initial idea that led to the preparation of this publication was not a reflection of the editors’ wish to merely add another publication focusing on a critique of the relationship between creative industries and capital to the huge corpus of similar publications taking a critical stance towards the <span class="keyword-searched">process</span> of co-optation of creativity, creative industries, art or the domain of abstraction in general by capital. Even though, precisely through the logic of the mass production of critical texts dealing with the above-mentioned context, this publication as well will ultimately exist in such a register, the distinctive feature of this publication is its aspiration to place the relationship between creativity and capital in the context of an analysis wherein <span class="importantword">capitalism</span> is treated as the framework of a broader relationship of domination, which to a great degree goes beyond the currently popular critical niche focused on analyzing the relationship between creativity, abstraction or representation in general and capital.    
+                             The initial idea that led to the preparation of this publication was not a reflection of the editors’ wish to merely add another publication focusing on a critique of the relationship between creative industries and capital to the huge corpus of similar publications taking a critical stance towards the process of co-optation of creativity, creative industries, art or the domain of abstraction in general by capital. Even though, precisely through the logic of the mass production of critical texts dealing with the above-mentioned context, this publication as well will ultimately exist in such a register, the distinctive feature of this publication is its aspiration to place the relationship between creativity and capital in the context of an analysis wherein capitalism is treated as the framework of a broader relationship of domination, which to a great degree goes beyond the currently popular critical niche focused on analyzing the relationship between creativity, abstraction or representation in general and capital.    
                             </td>
                         </tr> 
                         <tr class="subjects">
-                            <td class="subjects">Subjects:</td>
+                            <td class="subjects">Keywords:</td>
                             <td class="subjects_tofill"><span class="keyword">Creativity</span>, <span class="keyword">Capital</span>, <span class="keyword">Abstraction</span></td>
                         </tr> 
                     </table>
@@ -203,9 +200,9 @@
             </div> <!-- END INFO BOX -->
 
 <!--––––––––––––––––––––––– ARROWS FOR SCROLL –––––––––––––––––––––––––––-->
-            <a href="#" id="display1" class="display" style="text-decoration: none;">&#8593;
+            <a href="#" id="up" class="display" style="text-decoration: none;">&#8593;
             </a><br>
-            <a href="#" id="display" class="display"  style="text-decoration: none;">&#8595;
+            <a href="#" id="down" class="display"  style="text-decoration: none;">&#8595;
             </a>
 
 <!--––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
@@ -224,7 +221,7 @@
 -->
 
 <!--––––––––––––––––––––––– SECTION 1 –––––––––––––––––––––––––––––––––––-->
-            <div class="section" id="chapter1" data-authorName="Gordana" data-authorLastName="Nikolić" data-authorName2="Šefik" data-authorLastName2="Tatlić" data-and=", and " data-,=", " data-amp=", &amp; " data-article="Introduction">
+            <div class="section" id="chapter1" data-authorName="Gordana" data-authorLastName="Nikolić" data-article="Introduction">
 
               <!-- CONTENT OF THE BOOK -->
 <!-- 
@@ -275,43 +272,45 @@
                     <p>Clarity about the reconfiguration of subjectivity, language function and of interiority by the intensification of visuality, along with the consequent recession (devaluation) of the signified (Real) vis-à-vis the inflation of the sign (image) reveals that there is not a single iteration of social form that is separable from political-economic history. This dialectic further insists that we consider the mediological basis, that is, the system of support-apparatus-procedure that Regis Debray argues underpins ‘mediological’ transmissions (in his view incorrectly identified for the better part of a century as ‘communication’), of some other recent endeavors to treat the transformation of the value form and the transformed situation of labor.<a href="#fn14" class="footnoteRef" id="fnref14"><sup>14</sup></a></p>
                     <p>In <em>Empire</em>, for example, Hardt and Negri return to Marx’s idea of social cooperation as endemic to production and argue for the real subsumption of society by capital. This real subsumption is stated as a fact, but we might ask how is it accomplished? What is the material basis of subsumption? What are the media of Empire? Paolo Virno (2004) has argued convincingly that capital has captured the cognitive-linguistic capacities of the species. Pointedly, he argues that we are now all virtuosos who perform speech acts in accord with ‘the score’ orchestrated by capital – this, precisely, is the operation of the general intellect. Post-Fordist production requires virtuosity for the maintenance of capital expansion. Our cognitive-linguistic abilities have been conscripted and expropriated. But again, what are the mediological conditions of possibility of post-Fordism, and what are the raced and gendered dimensions of the ‘servility’ that Virno identifies?</p>
                     <p>Relatedly, we also have the work of Maurizio Lazzarato (1996), Christian Marazzi (2010),Tiziana Terranova (2003) on ‘free labor’ and ‘cognitive capitalism,’ providing us with a set of post-Fordist variants in which, given the sublime expansion of the financial system, virtuosos, by and large, accommodate themselves and their situations to the requisites of capitalist society in the performance of cognitive labor in a way which, according to some of these theorists, renders value immeasurable and the significance of post-Fordist input potentially undecidable.</p>
-                    <p>One might identify in these innovative modes of conceptualization a relatively unacknowledged debt to the apparatus theory of Louis Althusser (1971), to feminism (Kristeva 1982, Cixous, 1994, Haraway 1991) and Marxist feminism (Fortunati, 2007; Maria Mies, 1999), to de/post-colonial and critical race theory (Fanon, 2008; Spillers, 1987; Spivak, 1999), and to media theory. However, the dominant post-Marxist arguments could be more cognisant of their conditions of possibility, both in terms of the history of raced and gendered labor (the socio-political <em>tekhnè</em>) that inaugurated the very changes in the mode of production being theorized, and in terms of the intellectual debts owed for their own theoretical formulations. This debt is a matter of citational politics, clearly, but not in any simple sense. These theories have been built upon the labor of long suffering communities as well as on their labor of insurrection and insurrectionary critique. For, let us agree to consider it a fact that revolutionary energies large and small have advanced planetary intersubjectivity in their quest for liberation even if these same energies have been domesticated by the financialization of media platforms. We must therefore be relentlessly critical when we observe that in spite of the mass basis of mediological transformations, some critical micro-cultures now proceed as if the only people worth having a conversation with are those avid readers of Badiou and Agamben, a posture that belies the highly circumscribed standpoint of the Franco-Italian insights. This insularity, palpable to readers with roots and affinities in queer, of color, and global south communities, underscores a widespread if disavowed complicity with racism, sexism and eurocentrism in still all too Western theory.</p>
+                    <p>One might identify in these innovative modes of conceptualization a relatively unacknowledged debt to the apparatus theory of Louis Althusser <a class="in-text" data-dref="1">(1971)</a>, to feminism  <a class="in-text" data-dref="17">(Kristeva, 1982,</a> <a class="in-text" data-dref="7">Cixous, 1994,</a> <a class="in-text" data-dref="14"> Haraway, 1991)</a> and Marxist feminism <a class="in-text" data-dref="11">(Fortunati, 2007;</a> <a class="in-text" data-dref="20">Maria Mies, 1999)</a>, to de/post-colonial and critical race theory <a class="in-text" data-dref="10">(Fanon, 2008;</a> <a class="in-text" data-dref="21">Spillers, 1987;</a> <a class="in-text" data-dref="22">Spivak, 1999)</a>, and to media theory. However, the dominant post-Marxist arguments could be more cognisant of their conditions of possibility, both in terms of the history of raced and gendered labor (the socio-political <em>tekhnè</em>) that inaugurated the very changes in the mode of production being theorized, and in terms of the intellectual debts owed for their own theoretical formulations. This debt is a matter of citational politics, clearly, but not in any simple sense. These theories have been built upon the labor of long suffering communities as well as on their labor of insurrection and insurrectionary critique. For, let us agree to consider it a fact that revolutionary energies large and small have advanced planetary intersubjectivity in their quest for liberation even if these same energies have been domesticated by the financialization of media platforms. We must therefore be relentlessly critical when we observe that in spite of the mass basis of mediological transformations, some critical micro-cultures now proceed as if the only people worth having a conversation with are those avid readers of Badiou and Agamben, a posture that belies the highly circumscribed standpoint of the Franco-Italian insights. This insularity, palpable to readers with roots and affinities in queer, of color, and global south communities, underscores a widespread if disavowed complicity with racism, sexism and eurocentrism in still all too Western theory.</p>
                     <p>The dearth of awareness of these multiple debts and of the historicity of practices that form the new economic order of Empire is least true for Tiziana Terranova, who draws on feminism, cyber-feminism and critical race theory. Because of this she is sometimes wrongly perceived as being less original and innovative than her male counterparts. However, in arguing that ‘the digital economy [i]s a specific mechanism of internal “capture” of larger pools of social and cultural knowledge [and that t]he digital economy is an important area of experimentation with value and free cultural/affective labor’, Terranova is clear that the exploit of digital capitalism draws upon practices and inequalities that were ‘always and already capitalism’.<a href="#fn15" class="footnoteRef" id="fnref15"><sup>15</sup></a> In other words, for her at least, racism and sexism are embroiled in capitalism, and it would seem senseless to talk about (or critique) the latter in the absence of the former.</p>
                     <p>Given these observations, one should see that the concrete elements of the social: the ideological state apparatus, racial formations, the visual turn, the cultural turn, the feminization of labor and the servility and virtuosity of cognitive capitalism as part of the same equation. This is one in which the capitalized image reconfigures cultural praxis as a wholesale production site in ways that impose servility and would delimit and even foreclose the emergence of practicable anti-capitalist, anti-patriarchal, anti-racist and anti-imperialist speech-acts. Material formations precisely delimit speech-acts thus, because, generally speaking, the post-Fordist attention economy still depends upon the patriarchal, white-supremacist, imperialist organization of the global imaginary to maximize returns. The ambient machines of the social, be they concrete machines (cameras, cell phones, networks) or abstract machines (races, laws, nations) are in fact real abstractions, that is, cut-n-mixable instruments available for the virtuosic configuration of social relations such that they adhere to the requisites of raced and gendered capitalist exploitation.</p>
-                    <p>To give but one example here of how a critique cognisant of these relations might take form, Cindy Gao (2012) examines a series of videos by Asian-American YouTube celebrities, including vlogs of NigaHiga and KevJumba, and Wong Fu’s Yellow Fever, and characterizes their practice of performing race as ‘virtuosic virtuality’.<a href="#fn16" class="footnoteRef" id="fnref16"><sup>16</sup></a> Without essentializing identity (Gao sees the term Asian-American as itself a form of virtuality), the construct ‘virtuosic virtuality’ cranks up the stakes of the virtual and suggests that, here at least, these technologically enabled performances of ethnicity are subsumed by a capitalism that still requires and indeed develops the racial regimes that are the legacy of white supremacist capitalist patriarchy. Indeed Gao shows that one can investigate this subsumption without insisting that Marxism trumps critical race theory. It is rather that in making the critique of a narrowly empowering Asian-American performativity (narrow because achieved through the trafficking in gendered and racist stereotypes), anti-racist and anti-capitalist critique go together. To be a bit reductive, it is arguable that in the absence of anti-racist, anti-capitalist critique the cultural movement is inevitably towards a system of structural inequality that invents and indeed requires new forms of racism – which is precisely what is going on with many of the popular Asian-American YouTube celebrities (there are certain advances but somebody has to pay, e.g., women, South Asians); or, the movement is towards a critique of capitalism that sees racism as epiphenomenal rather than constitutive and therefore uncritically replicates the racist and Eurocentric assumptions of the era.</p>
+                    <p>To give but one example here of how a critique cognisant of these relations might take form, Cindy Gao <a class="in-text" data-dref="13">(2012)</a> examines a series of videos by Asian-American YouTube celebrities, including vlogs of NigaHiga and KevJumba, and Wong Fu’s Yellow Fever, and characterizes their practice of performing race as ‘virtuosic virtuality’.<a href="#fn16" class="footnoteRef" id="fnref16"><sup>16</sup></a> Without essentializing identity (Gao sees the term Asian-American as itself a form of virtuality), the construct ‘virtuosic virtuality’ cranks up the stakes of the virtual and suggests that, here at least, these technologically enabled performances of ethnicity are subsumed by a capitalism that still requires and indeed develops the racial regimes that are the legacy of white supremacist capitalist patriarchy. Indeed Gao shows that one can investigate this subsumption without insisting that Marxism trumps critical race theory. It is rather that in making the critique of a narrowly empowering Asian-American performativity (narrow because achieved through the trafficking in gendered and racist stereotypes), anti-racist and anti-capitalist critique go together. To be a bit reductive, it is arguable that in the absence of anti-racist, anti-capitalist critique the cultural movement is inevitably towards a system of structural inequality that invents and indeed requires new forms of racism – which is precisely what is going on with many of the popular Asian-American YouTube celebrities (there are certain advances but somebody has to pay, e.g., women, South Asians); or, the movement is towards a critique of capitalism that sees racism as epiphenomenal rather than constitutive and therefore uncritically replicates the racist and Eurocentric assumptions of the era.</p>
                     <p>Thus equipped we must confront the fact that increasingly, every ad we see, every page we browse, every email we send, every word we say, every thought we think and every dream we have is part of the production and reproduction of capitalist society – sensuous labor 2.0. The various media platforms, social categories, and imaginal iterations are one with capital and these <em>would</em> script our participation in order to allow capital to think in us and through us. I italicize ‘would’ here because this point is both complex and contentious and appears to be moving towards a genuine crisis. The dialectic requires that we have it both ways. On the one hand, capitalist expropriation has never lain so closely upon thought, utterance, the imagination and bodily practices – it has engineered a networked cybernetic matrix of control, an occupation that has seized the bio-social commons. Anti-racist, anti-capitalist critique is ever more difficult to launch effectively, since the general intellect, increasingly expropriated, thinks for capital. On the other hand, and without doubt, real subsumption can never be complete if it is to matter at all, which it does, if the thoughts (and indeed the material connections to life) for example in this essay are to be anything more than a means by which you advance your career. And whilst non-proprietary file sharing, p2p, creative commons, copy-left, etc., are laudable endeavors, and ‘gateways’<a href="#fn17" class="footnoteRef" id="fnref17"><sup>17</sup></a> that may open to a post-capitalist society, it seems premature to claim for any of these innovations that the medium is the message. For these practices at present do not contain within themselves a genuinely revolutionary critique or message (anti-racist, anti-imperialist, prison abolitionist, environmentalist, feminist, queer). It is not even clear that some of them are anti-capitalist.</p>
                     <p>With our language de-fanged, our critical theory suspect, and our machines and imaginations complicit, where to turn? I suggest below that there are discursive and aesthetic dimensions to contemporary life that are incompletely explored. Here we must reconsider the third world, its legacies of survival and heritable corporeal commons and the possible non-capitalist transmission of these resources. The reconstitution of consciousness in post-Fordism materially links each to all in ever more intensive ways and raises question of solidarity, democracy and social justice in new domains. As I will show, the attention economy induces a movement from the wage to the wager, and with this shift demands an analysis of the politics of the utterance and aesthetics of survival.</p>
                     <p>Experience teaches me that when discussing the logistics of the image and social production/reproduction through digital interactivity and human attention, I am obliged to add that none of these statements regarding the violence of media-capitalism and its subsuming of the life-world as well as many of its ‘alternatives’, means to say that ‘prior’ forms of exploitation that are characteristic of feudal serfdom, slavery, proletarianization, prostitution, domestic work, migrant labor, or the labor of survival in either camps or the postmodern slum have ceased to exist. Rather these persisting modes should be viewed as conditions of dispossession which are coordinated and legitimated, marginalized or made unrepresentable by the command-control apparatus of the digital-visual via a calculus of the image that enlists our for-profit participation in the capitalist military-media-prison-industrial complex. From a macro-structural point of view, human becoming is bent toward two dialectically identical ends: capital accumulation and radical dispossession. The overall result is the immeasurable violence of the worldwide suppression of democratic becoming. We participate in this totalitarian systemic practice despite the relatively clear facts that the earth is headed towards environmental catastrophe and that two billion people (the entire population of Earth in 1929) are even now laboring to survive actually existing Armageddon. Given their intimate and indeed inescapable connection to the world media-system and the attention economy, the dispossessed have thus become the living substrate of contemporary systems of representation.<a href="#fn18" class="footnoteRef" id="fnref18"><sup>18</sup></a> We write our revolutionary tracts on the backs of slaves. Radical dispossession as the other side of a world-media system is in the most literal sense the condition of possibility for our contemporary thought and writing. It bears asking, under what image or images do the radically dispossessed labor? And also, what’s it to you?</p>
                     <p>The questions I pose at this point concern the images written over and on the historically produced informatic black hole smothering the bottom two billion denizens of postmodern globality. They are questions about subalterns whom I have come to think should never be designated by the sign bare life, but, at the very least, by the sign ‘bare life’, now in quotation marks. The quotation marks are there so that the signifier registers its own constitutive performativity in relation to those who are being signified upon. ‘Bare life’ neither merely exists nor merely appears but by virtue of a signifying process – a signifying industrial complex – that codifies its messages on bodies presumed to be incapacitated and unaccommodated to such an extent that they are beyond the reach of dialogue. These bodies are thereby made to signify the limit of sociality and presumed to exist in a condition of social death. My point here is that whether it is Agamben selling philosophy books or bankers and policy-makers selling bailouts and weapons, we find bodies and populations being constituted as surfaces of inscription: bodies whose living labor of survival serves to make them fodder for philosophy, statistics, political theory, entrepreneurs, militaries, banks and states. Subalterns are actively configured as the living substrate of representation for capitalist mediation. In other words, the unceasing disfiguration of the masses is the price of success, but the success belongs to someone else: the celebrity capitalists, militarized nations, and some of their aspirant followers. Such is the enclosure wrought by the world of technical images. Squatters, trash-pickers, illegals, displaced populations, post-modern slaves, and billions for whom we here have no names and whose deaths will not appear in any newspaper, attend to the historically imposed exigencies of life. Their attention to the world-machine of survival, their endeavors to constitute themselves in myriad ways, underpin the spectacular-digital of meaning, agency, and global citizenship. For the world-media system, subaltern survival or death is mere raw material for semiotics, affect and intensity. As threat, tragedy, irrational irruption or non-entity, entire populations are bundled and sold, converted into semiotic and affective chits for capital’s master-gamers.</p>
-                    <p>We must register the violence endemic to the conversion of historically dispossessed others into images and signs —in addition to objects (a concern central to the work of the young urban photo-graffiti artist JR)— because in being figured as bare life, multitudes, refugees, tribes, slum-dwellers, or terrorists, and even when not being figured at all, the capitalized universe of images and signs constitutes and de-constitutes these beings (this flesh, to borrow from Hortense Spillers, 1987) for its own purposes. As entity, non-entity, iPad, auto-part, rare earth metal, securitized population or void, the now doubly dispossessed are materially and symbolically disappeared for politico-economic ends. In other words, not only global commodity-chain production (which relies on disappeared labor 1.0) but planetary semiosis and affect-formation (which relies on disappeared labor 2.0) are rooted in the biomass of a planet of persons excluded not just from meaningful dialogue, but from dialogue. It should be underscored that the movement from 1.0 to 2.0 is a movement that took place over a matter of centuries of racialization and gendered violence but is today ‘noticeable’ which is to say ‘theorizeable’ because the chickens are coming home to roost. As Aimé Césaire remarked, what was unforgiveable about the Holocaust, was not the brutality, torture and murder, what was unforgiveable was that the techniques of colonization were applied to white people.<a href="#fn19" class="footnoteRef" id="fnref19"><sup>19</sup></a> People of the Global South were the first ‘content providers’. Now the situation is generalized.</p>
+                    <p>We must register the violence endemic to the conversion of historically dispossessed others into images and signs —in addition to objects (a concern central to the work of the young urban photo-graffiti artist JR)— because in being figured as bare life, multitudes, refugees, tribes, slum-dwellers, or terrorists, and even when not being figured at all, the capitalized universe of images and signs constitutes and de-constitutes these beings <a class="in-text" data-dref="21">(this flesh, to borrow from Hortense Spillers, 1987)</a> for its own purposes. As entity, non-entity, iPad, auto-part, rare earth metal, securitized population or void, the now doubly dispossessed are materially and symbolically disappeared for politico-economic ends. In other words, not only global commodity-chain production (which relies on disappeared labor 1.0) but planetary semiosis and affect-formation (which relies on disappeared labor 2.0) are rooted in the biomass of a planet of persons excluded not just from meaningful dialogue, but from dialogue. It should be underscored that the movement from 1.0 to 2.0 is a movement that took place over a matter of centuries of racialization and gendered violence but is today ‘noticeable’ which is to say ‘theorizeable’ because the chickens are coming home to roost. As Aimé Césaire remarked, what was unforgiveable about the Holocaust, was not the brutality, torture and murder, what was unforgiveable was that the techniques of colonization were applied to white people.<a href="#fn19" class="footnoteRef" id="fnref19"><sup>19</sup></a> People of the Global South were the first ‘content providers’. Now the situation is generalized.</p>
                     <p>Understood in this way, it would appear that the result of not just history, but also of the history of representation – representation now ‘fully’ captured by capital, and shunted into an informatics matrix in which capital structures images and images structure sign function, and sign function is endemic to social production and reproduction – has been to make democracy structurally impossible. Such is the ‘reality’ for which the recession of the Real stands as symptom. The material foreclosure of the logic endemic to the conceit of human being is the technical achievement that provides the historical explanation for ‘being’ being placed under erasure in the realm of the sign. Understanding philosophically, as it were, that with the expiration of Western metaphysics one also confronts the expiration of humanism and the conceits pertaining to ‘the human’ follows logically; however understanding mediologically that this emptying out of tradition called post-structuralism is consequent upon the historico-material conversion and therefore demotion of ‘natural language’ into one medium among media requires a materialist approach to the totality of informatic networks that avowedly post-dialectical and post-historical thought cannot easily accommodate. Admittedly, it might take a book-length study to properly historicize Jacques Derrida’s <em>Of Grammatology</em> and to methodologically ‘comprehend’ the moment in intellectual history known as ‘deconstruction’ as a specific symptom of and in the long historical process of uprooting and eviscerating language. Nonetheless, one might speculate that the ‘being’ under erasure there was formerly assumed to be part of the commons. As Kwame Anthony Appiah question indicated in ‘Is the Post- in Postmodernism the Post- in Postcolonial?’ there is an intimate connection between the erosion of the birthrights of colonized peoples and the erosion of the Western birthright purportedly guaranteed by Western metaphysics. For our purposes here we may grasp that in both the material and philosophical domains the basis and the rationale for democracy have been steadily eroded. This somewhat controversial hypothesis affirms what has been discernible at least since the onset of post-modernity: because of shifts in the matrix of representation and its material underpinnings, under advanced capitalism neither reality nor being can be adequately mounted and sustained and thus neither democratic representation nor perhaps democracy is possible. From a technical perspective this is an advance. Dialectically speaking, from this historically achieved and instrumental condition of generalized simulation there is no return.</p>
                     <p>Put another way, having reached historically the general fulfillment of what Marx saw clearly as the specific experience of the wage-laborer, namely ‘the loss of reality,’ the real is gone and thus the aestheticization of politics is complete. It would seem that Communism must respond by politicizing simulation, which is to say, the universe of appearances mediated by abstraction, which is to say, in short, everything, however we must leave the very question of ‘the political’ along with the transformed ontology of ‘politics’ itself for another time.</p>
-                    <h3>References</h3>
-                    <p>Althusser, L. ‘Ideology and Ideological State Apparatuses,<em>’ Lenin and Philosophy and Other Essays</em>, trans. B. Brewster, Monthly Review Press, 1971.</p>
-                    <p>Beller, J. <em>The Cinematic Mode of Production: Attention Economy and the Society of the Spectacle</em>, Lebanon, NH: Dartmouth University Press, 2006.</p>
-                    <p>Beller, J. ‘Paying Attention’, <em>Cabinet</em> 24, 2008, http://www.cabinetmagazine.org/issues/24/beller.php .</p>
-                    <p>Beller, J. ‘Camera Obscura After All: The Racist Writing With Light’, in Jonathan Beller (ed.) <em>The Scholar and Feminist Online, Special Issue: Feminist Media Theory, Iterations of Social Difference</em>, 2012.</p>
-                    <p>Black, E. <em>IBM and the Holocaust: The Strategic Alliance Between Nazi Germany and America’s Most Powerful Corporation</em>, Washington, D.C.: Dialog Press, 2012.</p>
-                    <p>Césaire, A. <em>Discourse on Colonialism</em>, trans. J. Pinkham, New York and London: Monthly Review Press, 1972.</p>
-                    <p>Cixous, H. <em>The Helene Cixous Reader</em>, New York and London: Routledge, 1994.</p>
-                    <p>Cubitt, S. ‘The Political Economy of Cosmopolis’ in T. Scholz (ed.) <em>Digital Labor</em>, New York and London: Routledge, 2012.</p>
-                    <p>Debray, R. <em>Media Manifestos</em>, London: Verso, 1996.</p>
-                    <p>Fanon, F. <em>Black Skin, White Masks</em>, New York: Grove Press, 2008.</p>
-                    <p>Fortunati, L. ‘Immaterial Labor and Its Mechanisation’ in <em>ephemera</em> 7(1, 2007): 139-157.</p>
-                    <p>Flusser, V. <em>Towards a Philosophy of Photography</em>, trans. A. Matthews, London: Reaktion Books, 2000.</p>
-                    <p>Gao, C. ‘Virtuosic Virtuality of Asian American Youtube Stars,’ in Jonathan Beller (ed.) <em>The Scholar and Feminist Online, Special Issue: Feminist Media Theory, Iterations of Social Difference</em>, 2012.</p>
-                    <p>Haraway, D. ‘A Cyborg Manifesto,’ in <em>Simians, Cyborgs and Women</em>. New York and London: Routledge, 1991.</p>
-                    <p>Hoffman, D. ‘Violent Virtuosity: Visual Labor in West Africa’s Mano River War,’ <em>Anthropological Quarterly</em>, Vol. 84, no. 4 (Fall, 2011): 949-976.</p>
-                    <p>Jay, M. ‘Scopic Regimes of Modernity’, in <em>Vision and Visuality</em>, New York: The New Press, 1988.</p>
-                    <p>Kristeva, J. <em>Powers of Horror: An Essay on Abjection</em>, New York: Columbia University Press, 1982.</p>
-                    <p>Lazzarato, M. ‘Immaterial Labour’ in M. Hardt. &amp; P. Virno (eds), <em>Radical Thought in Italy: A Potential Politics</em>, Minneapolis: University of Minnesota Press, 1996, pp. 133-147.</p>
-                    <p>Marazzi, C. <em>The Violence of Financial Capitalism</em>, New York: Semiotext(e), 2010.</p>
-                    <p>Mies, M. <em>Patriarchy and Accumulation on a World Scale</em>, London: Zed Books, 1999.</p>
-                    <p>Spillers, H. ‘Mama’s Baby, Papa’s Maybe: An American Grammar Book,’ <em>diacritics</em> 17: 2 (Summer, 1987): 65-81.</p>
-                    <p>Spivak, G. <em>A Critique of Postcolonial Reason</em>, Cambridge: Harvard University Press, 1999.</p>
-                    <p>Terranova, T. ‘Free Labor: Producing Culture for the Digital Economy’, 2003, http://www.electronicbookreview.com/thread/technocapitalism/voluntary.</p>
-                    <p>Virno, P. <em>A Grammar of the Multitude</em>, Cambridge: MIT Press, 2004.</p>
-                    <p>Zizek, S. ‘The Revolt of the Salaried Bourgeoisie’, <em>London Review of Books</em>, Vol. 34 No. 2, (26 January, 2012): 9-10.</p>
+                    <div class="references">
+                        <h3>References</h3>
+                        <p>Althusser, L. ‘Ideology and Ideological State Apparatuses,<em>’ Lenin and Philosophy and Other Essays</em>, trans. B. Brewster, Monthly Review Press, 1971.</p>
+                        <p>Beller, J. <em>The Cinematic Mode of Production: Attention Economy and the Society of the Spectacle</em>, Lebanon, NH: Dartmouth University Press, 2006.</p>
+                        <p>Beller, J. ‘Paying Attention’, <em>Cabinet</em> 24, 2008, http://www.cabinetmagazine.org/issues/24/beller.php .</p>
+                        <p>Beller, J. ‘Camera Obscura After All: The Racist Writing With Light’, in Jonathan Beller (ed.) <em>The Scholar and Feminist Online, Special Issue: Feminist Media Theory, Iterations of Social Difference</em>, 2012.</p>
+                        <p>Black, E. <em>IBM and the Holocaust: The Strategic Alliance Between Nazi Germany and America’s Most Powerful Corporation</em>, Washington, D.C.: Dialog Press, 2012.</p>
+                        <p>Césaire, A. <em>Discourse on Colonialism</em>, trans. J. Pinkham, New York and London: Monthly Review Press, 1972.</p>
+                        <p>Cixous, H. <em>The Helene Cixous Reader</em>, New York and London: Routledge, 1994.</p>
+                        <p>Cubitt, S. ‘The Political Economy of Cosmopolis’ in T. Scholz (ed.) <em>Digital Labor</em>, New York and London: Routledge, 2012.</p>
+                        <p>Debray, R. <em>Media Manifestos</em>, London: Verso, 1996.</p>
+                        <p>Fanon, F. <em>Black Skin, White Masks</em>, New York: Grove Press, 2008.</p>
+                        <p>Fortunati, L. ‘Immaterial Labor and Its Mechanisation’ in <em>ephemera</em> 7(1, 2007): 139-157.</p>
+                        <p>Flusser, V. <em>Towards a Philosophy of Photography</em>, trans. A. Matthews, London: Reaktion Books, 2000.</p>
+                        <p>Gao, C. ‘Virtuosic Virtuality of Asian American Youtube Stars,’ in Jonathan Beller (ed.) <em>The Scholar and Feminist Online, Special Issue: Feminist Media Theory, Iterations of Social Difference</em>, 2012.</p>
+                        <p>Haraway, D. ‘A Cyborg Manifesto,’ in <em>Simians, Cyborgs and Women</em>. New York and London: Routledge, 1991.</p>
+                        <p>Hoffman, D. ‘Violent Virtuosity: Visual Labor in West Africa’s Mano River War,’ <em>Anthropological Quarterly</em>, Vol. 84, no. 4 (Fall, 2011): 949-976.</p>
+                        <p>Jay, M. ‘Scopic Regimes of Modernity’, in <em>Vision and Visuality</em>, New York: The New Press, 1988.</p>
+                        <p>Kristeva, J. <em>Powers of Horror: An Essay on Abjection</em>, New York: Columbia University Press, 1982.</p>
+                        <p>Lazzarato, M. ‘Immaterial Labour’ in M. Hardt. &amp; P. Virno (eds), <em>Radical Thought in Italy: A Potential Politics</em>, Minneapolis: University of Minnesota Press, 1996, pp. 133-147.</p>
+                        <p>Marazzi, C. <em>The Violence of Financial Capitalism</em>, New York: Semiotext(e), 2010.</p>
+                        <p>Mies, M. <em>Patriarchy and Accumulation on a World Scale</em>, London: Zed Books, 1999.</p>
+                        <p>Spillers, H. ‘Mama’s Baby, Papa’s Maybe: An American Grammar Book,’ <em>diacritics</em> 17: 2 (Summer, 1987): 65-81.</p>
+                        <p>Spivak, G. <em>A Critique of Postcolonial Reason</em>, Cambridge: Harvard University Press, 1999.</p>
+                        <p>Terranova, T. ‘Free Labor: Producing Culture for the Digital Economy’, 2003, http://www.electronicbookreview.com/thread/technocapitalism/voluntary.</p>
+                        <p>Virno, P. <em>A Grammar of the Multitude</em>, Cambridge: MIT Press, 2004.</p>
+                        <p>Zizek, S. ‘The Revolt of the Salaried Bourgeoisie’, <em>London Review of Books</em>, Vol. 34 No. 2, (26 January, 2012): 9-10.</p>
+                    </div>
                 </div>
             </div>
 
@@ -324,7 +323,7 @@
                 <p>During the Blair government, a new criminal offence was passed for nearly every day spent in office —this period saw the biggest expansion in the legal regulation of conduct of any time since the end of WW2. This was also a period which saw an explosion in the commissioning of public art across Britain— a commissioning frenzy, buoyed by the liquidity of the financial bubble, which has consequently been called ‘the public art bubble’. I think these phenomena can be linked, because what they represent are two prongs of a pincer that form a governmentality that acts to engage and activate subjects with the one prong, while neutralizing them with the other. Or put another way, it acts to engage certain capacities, conducts and valorizable behaviors —not least the participation in aesthetic spectatorship— while at the same time disabling, discouraging and disallowing other forms of conduct deemed disruptive to the smooth functioning of the state and some of its principle activities; namely the production of a large enough, healthy, peaceable, active and economically productive population. These two phenomena —the offense bubble and the public art bubble— can also be linked as governmental strategies for managing the antagonisms and painful inequalities of neoliberal capitalism as it comes to bear upon the everyday spaces of life in post-industrial urban society.</p>
                 <p>We are looking at a complicated conjunction of issues —neoliberal urban development, the legal regulation of behavior, and the role of public art within the post-industrial city— each has its own specificities, developmental history and extensive body of knowledge attached. But what I want to do here is to thread them together according to certain ‘regulatory ideas’, as Michel Foucault would say, which intersect and bind together aesthetic, governmental and economic fields. The first ones I want to think about are the concepts of ‘event’ and ‘milieu’. The act-painting of the ’40s and ’50s, and the Happenings of the ’60s swept the artwork clean first of representation, and then more broadly of ‘retinality’ as art departed pictorial and sculptural frameworks, in a bid to convene a space in which something, an ‘act’ and later an ‘event’, could occur. These twinned notions of ‘act’ and ‘event’ are deeply implicated in the multiple breaching of the art/life divide undertaken by neo-avant-garde artists of this period, and presuppose art’s ability to reach out of itself to effect some kind of wider transformation of life and the world around it, whether that be: the life of the artist or the viewer as it coincides with a set of materials, ideas or conditions during the act of creation; the way parts of the sensorium and cognitive apparatus become newly open and differently sensitized through an encounter with art —what Rancière calls the ‘redistribution of the sensible’— ; or art’s wider, subtle and unknowable infection of the social and physical environment, ‘indirectly, as a stored code’, as Kaprow put it.</p>
                 <p>Essential to the myriad possible manifestations of the ‘event’ is the notion that it takes place in an ‘expanded field’ that entails a potentially infinite series of elements; a field that admits new contextual, environmental, social, sensual, emotional, institutional, political and material dimensions into the conception of the artwork. This expansion could be understood as a growing reflection on and recursive folding inwards of the artwork’s relationality. This folding inwards of the world, and unfurling outwards of the artwork, leads in numerous directions, from minimalism, to conceptualism to institutional critique, from body art, to performance to media art and net art, and so on. However, we need to maintain our focus on the notion of ‘event’ as a specific aspect of the artwork’s expanded field of signification in order to induce an understanding of how developments in art are reflective of those of biopolitical governmentality and, for our purposes here, within the neoliberal moment of urban development. We also need to think about how the extension and flexibilization of the artwork makes itself newly available to deployment within a governmental and economic expansion that operates upon ever finer fissures of subjectivity.</p>
-                <p>In his lecture series <em>Security, Territory, Population</em> (1977-78), Foucault discusses —in the context of the development of the modern state and its governmental rationality— the mid-17<sup>th</sup> century production of a new spatial relationship of sovereignty to its territory, one in which the capital city comes to the fore. He concentrates on a text called <em>La Métropolitée</em>, written by a French protestant <em>émigré</em> called Alexandre Le Maître, for the protestant kind of Sweden. In it Le Maître puts forwards general recommendations for the good spatial layout of a territory; one which will open up the territory to the ‘general network of the sovereign’s orders and controls’. Without getting too distracted by the detail of his schema, what Foucault seizes on is how he draws together the problems of sovereignty with a set of specifically urban problematics. He writes,</p>
+                <p>In his lecture series <em>Security, Territory, Population</em> <a class="in-text" data-dref="27">(1977-78)</a>, Foucault discusses —in the context of the development of the modern state and its governmental rationality— the mid-17<sup>th</sup> century production of a new spatial relationship of sovereignty to its territory, one in which the capital city comes to the fore. He concentrates on a text called <em>La Métropolitée</em>, written by a French protestant <em>émigré</em> called Alexandre Le Maître, for the protestant kind of Sweden. In it Le Maître puts forwards general recommendations for the good spatial layout of a territory; one which will open up the territory to the ‘general network of the sovereign’s orders and controls’. Without getting too distracted by the detail of his schema, what Foucault seizes on is how he draws together the problems of sovereignty with a set of specifically urban problematics. He writes,</p>
                 <blockquote>
                     <p>In short, the interesting thing is Le Maître dreams of connecting the political effectiveness of sovereignty to a spatial distribution. A good sovereign, be it a collective or individual sovereign, is someone well placed within a territory, and a territory that is well policed in terms of its obedience to the sovereign is a territory that has a good spatial layout.<a href="#fn20" class="footnoteRef" id="fnref20"><sup>20</sup></a></p>
                 </blockquote>
@@ -383,16 +382,18 @@
                 <p>For Boris Groys, avant-garde art’s development of a regime of ‘equal aesthetic rights’ hinges on the idea, linked to the blurring of art and life, that the classical avant-garde ‘has struggled to achieve recognition of all signs, forms, and things as legitimate objects of artistic desire and, hence, also as legitimate objects of representation in art’.<a href="#fn38" class="footnoteRef" id="fnref38"><sup>38</sup></a> He sees a parallel between the aesthetic struggle for recognition, and the political struggle for the recognition and inclusion of all minorities. Within art, however, the thought that anything can potentially be recognized as art potentially leads to an entropic game where each artwork appears to be simply an arbitrary and unnecessary extension or iteration of this field of equal rights. However, he argues, art today ‘operates in the gap between the formal equality of all art forms and their factual inequality’.<a href="#fn39" class="footnoteRef" id="fnref39"><sup>39</sup></a> So, while recognizing the potential legitimacy of anything as art, in reality not everything is considered as such and admitted into the museum or the canon. ‘The good artwork’, he continues, ‘is precisely that work which affirms the formal equality of all images under the conditions of their factual inequality. This gesture is always contextual and historically specific, but it also has paradigmatic importance as a model for further repetition of the gesture.’<a href="#fn40" class="footnoteRef" id="fnref40"><sup>40</sup></a> I think Duman’s work strikes just such a balance, elevating the readymade plastic sign to a higher power which implies the potential elevation of any profane object, whilst mobilizing this banal object to signify the factual exclusion of former inhabitants who become the ‘revenants’ of this apparent space of open, democratic enjoyment. Put another way, the participation of the banal object in the aesthetic regime of equal rights becomes a cipher for the factual impossibility of participation within a wider regime of participatory aesthetics.</p>
                 <p>Earlier I mentioned that ‘openness’ was another regulatory idea that intersects governmental, economic and aesthetic terrains. As with the regime of equal aesthetic rights, the principle of openness can also happily co-exist with and co-produce factual inequalities and closed or proprietary systems. We see this everywhere from the deployment of the open standards of the web, such as HTML and HTTP to run proprietary software or for private profit, to the double standards of free market capitalism where developing countries are compelled to open up their markets and allow inward investment while economic giants like the US are able to maintain trade barriers and subsidies for domestic production. Openness itself is a kind of conceptual medium along which, as chairman for the US Business Committee for the Arts in the 80s Winton Blount once said, business can also travel. Fighting trade regulations, taxation and overt government control was not just a civic duty, he argued, but a means of keeping ‘open those avenues of freedom along which art and commerce both travel’.<a href="#fn41" class="footnoteRef" id="fnref41"><sup>41</sup></a></p>
                 <p>Roman Vasseur, Lead Artist appointed to oversee the redevelopment of Harlow New Town, has argued, this reversibility of openness can also extend to who might be considered an artist in the context of creative-led regeneration. ‘One can envisage a future’ he says, ‘where artists, or individuals with an extensive training in the visual arts and art history will be slowly moved out of this new economy in favor of “creatives” able to privilege deliverability and consultation over other concerns’.<a href="#fn42" class="footnoteRef" id="fnref42"><sup>42</sup></a> It is worth considering how the energies that drive the privileging of openness as an aesthetic, technical, economic and social form waver between the political horizon of inclusion and the degraded, flattening equivalence of the value form. This has the interesting effect of driving the Beuysian claim that ‘everyone is an artist’ in at least two directions at once: the death of the author also presides over the birth of the professionalized creative. What this final example reveals is the extent to which governmental and economic calculation and the social engineering of happiness can move along similar trajectories as the life-oriented activities of art. But in keeping with Groys’ remarks about the good artwork, the artistic attempt to promote a life which is ‘more than just lived’ cannot take place under the monocultural regime of human capital, or under the logic of biopolitical happiness, if it does not draw attention to the way biopolitical capitalism mobilizes individuals to create optimum effects within its own paradigm of population optimization. The good artwork that aims to act upon life takes into account the more radical horizons of openness, event, act, milieu, engagement and participation, admitting as much to the factual absence of these realities as to the potential for their potential in a wholly unspecified future form.</p>
-                <h3>References</h3>
-                <p>Agamben, Giorgio. <em>Homo Sacer: Sovereign Power and Bare Life</em>, Palo Alto: Stanford University Press, 1998.</p>
-                <p>Foucault, Michel. <em>Security, Territory, Population: Lectures at the Collège de France 1977-1978</em>, New York: Picador / Palgrave Macmillan, 2007.</p>
-                <p>Groys, Boris. <em>Art Power</em>, Cambridge, Massachussetts: MIT Press, 2008.</p>
-                <p>Kwon, Miwon. <em>One Place After Another: Site Specific Art and Locational Identity</em>, Cambridge, Massachussetts: MIT Press, 2004.</p>
-                <p>Muhle, Maria. ‘“Qu-est-ce Que la Biopolitique”’ A Conversation on Theories of Biopolitics between Thomas Lemke and Maria Muhle, moderated by André Rottman”, <em>Texte Zur Kunst</em>, 73 (March 2009).</p>
-                <p>Rancière, Jacques. <em>The Emancipated Spectator</em>, London: Verso, 2011.</p>
-                <p>Slater, Josephine Berry and Anthony Iles. <em>No Room to Move: Radical Art and the Regenerate City</em>, Berlin: Mute Books, 2010.</p>
-                <p>Tafari, Levi. <em>Liverpool Experience</em>, [Germany]: Michael Schwinn, 1989.</p>
-                <p>Wu, Chin-Tao. ‘Embracing the Enterprise Culture’, <em>New Left Review</em> 230 (1998).</p>
+                <div class="references">
+                    <h3>References</h3>
+                    <p>Agamben, Giorgio. <em>Homo Sacer: Sovereign Power and Bare Life</em>, Palo Alto: Stanford University Press, 1998.</p>
+                    <p>Foucault, Michel. <em>Security, Territory, Population: Lectures at the Collège de France 1977-1978</em>, New York: Picador / Palgrave Macmillan, 2007.</p>
+                    <p>Groys, Boris. <em>Art Power</em>, Cambridge, Massachussetts: MIT Press, 2008.</p>
+                    <p>Kwon, Miwon. <em>One Place After Another: Site Specific Art and Locational Identity</em>, Cambridge, Massachussetts: MIT Press, 2004.</p>
+                    <p>Muhle, Maria. ‘“Qu-est-ce Que la Biopolitique”’ A Conversation on Theories of Biopolitics between Thomas Lemke and Maria Muhle, moderated by André Rottman”, <em>Texte Zur Kunst</em>, 73 (March 2009).</p>
+                    <p>Rancière, Jacques. <em>The Emancipated Spectator</em>, London: Verso, 2011.</p>
+                    <p>Slater, Josephine Berry and Anthony Iles. <em>No Room to Move: Radical Art and the Regenerate City</em>, Berlin: Mute Books, 2010.</p>
+                    <p>Tafari, Levi. <em>Liverpool Experience</em>, [Germany]: Michael Schwinn, 1989.</p>
+                    <p>Wu, Chin-Tao. ‘Embracing the Enterprise Culture’, <em>New Left Review</em> 230 (1998).</p>
+                </div>
             </div>
 
     		<div class="section" id="chapter4" data-authorName="Marc James" data-authorLastName="Léger" data-article="The Agency of Art in the Unconscious">
@@ -432,22 +433,24 @@
                     <p>Almost every artwork preserves some aspect of the idea of art as a reserve, or background against which we can measure deviations. Art’s non-art status is therefore inscribed into the idea of Art—something that Duchamp was perhaps the first artist to expound. Art is deeply atheistic, to put things in terms of belief, and perversion is at the core of the aesthetic. The obsession with the ineffable <em>big Other</em> is sublated into acts of creation, something that Lacan defines as drive. Creativity can therefore be defined as the eruption of a new form that reorganizes the social field, imposing itself as a new necessity through an act of ungrounded subjective decision, abandoned by Art and with no guarantee of aesthetic value or art world consecration.<a href="#fn74" class="footnoteRef" id="fnref74"><sup>74</sup></a> The inscrutability of the aesthetic <em>big Other</em>, even as blue chip investment, is the certitude of creativity, the condition of its ecstatic production. Since art is dead and the author is dead and since therefore the function of the critic is nullified, art making and art judgments are sacrificed to a pure Otherness of subjective destitution.</p>
                     <p>Art making is a scandal that undermines art from within. Such work has a tragic self-effacing quality that socially engaged art sometimes refuses in its resentment and narcissistic hatred of the ‘no’ of Art. It denounces art in favor of ethics but it does so through the disavowal of the love of art. It proffers the socially networked artist as the better of the avant-garde artist but it is the latter who properly betrays the extorsion of creativity. The revolutionary artist acts unconditionally and therefore comes closest to art’s expression of freedom and emancipation, insisting, much like Antigone, on symbolic demand. The creative artist is consequently excluded from the community of humans.</p>
                     <p>Holmes’ notion of ‘liar’s poker’ can be explained as the insistence on aesthetic sublimation rather than the insistence on the refusal of co-optation; it implies an awareness of the monstrosity of the game since the game is not only fixed in the symbolic order, but more radically, since through his or her act the artist believes in the game more than s/he is aware. The artist acts as though he or she is not aware of capitalist recuperation, observing the appearances, the virtuality of the illusion of the real. In the case of Barber’s pyramid, the ‘prayer’ in the set represents a transitive function; he or she does not have to believe since belief is presupposed by the artwork as virtual entity. No wonder then that so many artists today are attempting to go beyond the making of objects, taking social interaction itself as the direct instantiation of art. This becomes possible due to the perverse core of art and is an indication of the transitivity of belief. The paradox, however, is that if we take away whatever stands in for belief, we lose the reality of the illusion and so any claim to emancipation through the community of believers is equally annulled. The function of the art world, therefore—critics, museums, magazines, even this essay—is to maintain appearances, in particular, against any agency or Master who would pretend to know everything. The master artist is the person who possesses an almost God-like ability to both make art and to simultaneously prohibit the making of art. This prohibition takes the form in capitalist society of symbolic castration through surplus value. A provisional definition of the avant-garde artist can therefore be the condition of the acceptance of the inexistence of aesthetic criteria. There are no guarantees for the social importance of artworks, only the passage from creativity to consequences. For things to happen, creation must be a condition of the truth of illusion.</p>
-                    <h3 id="references-2">References</h3>
-                    <p>Aranda, Julieta, Brian Kuan Wood and Anton Vidokle (eds). ‘Editorial’, <em>e-flux journal 21</em> (2010), http://www.e-flux.com/journal/editorial-18/.</p>
-                    <p>Bishop, Claire. ‘Antagonism and Relational Aesthetics’, <em>October 110</em> (2004): 51-79.</p>
-                    <p>Bishop, Claire. <em>Artificial Hells: Participatory Art and the Politics of Spectatorship</em>, London: Verso, 2012.</p>
-                    <p>Bürger, Peter. <em>Theory of the Avant-Garde</em>, trans. Michael Shaw, Minneapolis: University of Minnesota Press, 1984.</p>
-                    <p>Graeber, David. ‘“The Sadness of Post-Workerism”, or, “Art and Immaterial Labour” Conference: A Sort of Review’, 2008, http://www.scribd.com/doc/38093582/The-Sadness-of-Post-Workerism-David-Graeber.</p>
-                    <p>Holmes, Brian. <em>Unleashing the Collective Phantoms: Essays in Reverse Imagineering</em>, Brooklyn: Autonomedia, 2008.</p>
-                    <p>Kester, Grant. <em>The One and the Many: Contemporary Collaborative Art in a Global Context</em>, Durham: Duke University Press, 2011.</p>
-                    <p>Léger, Marc James. ‘Art and Art History After Globalization’, <em>Third Text</em> 26:5 (2012): 515-527.</p>
-                    <p>Léger, Marc James. ‘The Subject Supposed to Over-Identify: BAVO and the Fundamental Fantasy of a Cultural Avant Garde’, in Léger (ed.) <em>Brave New Avant Garde: Essays on Contemporary Art and Politics</em>, Winchester, UK: Zero Books, 2012.</p>
-                    <p>Raunig, Gerald, Gene Ray and Ulf Wuggenig (eds). <em>Critique of Creativity: Precarity, Subjectivity and Resistance in the ‘Creative Industries’</em>, London: MayFly Books, 2011.</p>
-                    <p>Roberts, John. ‘Art, “Enclave Theory” and the Communist Imaginary’, <em>Third Text</em> 23:4 (2009): 353-367.</p>
-                    <p>Sholette, Gregory. <em>Dark Matter: Art and Politics in the Age of Enterprise Culture</em>, London: Pluto, 2011.</p>
-                    <p>Yúdice, George. <em>The Expediency of Culture: Uses of Culture in the Global Era</em>, Durham: Duke University Press, 2003.</p>
-                    <p>Žižek, Slavoj. <em>The Fragile Absolute, or, Why Is the Christian Legacy Worth Fighting For?,</em> London: Verso, 2000.</p>
-                    <p>Žižek, Slavoj. <em>Less than Nothing: Hegel and the Shadow of Dialectical Materialism</em>, London: Verso, 2012.</p>
+                    <div class="references">
+                        <h3>References</h3>
+                        <p>Aranda, Julieta, Brian Kuan Wood and Anton Vidokle (eds). ‘Editorial’, <em>e-flux journal 21</em> (2010), http://www.e-flux.com/journal/editorial-18/.</p>
+                        <p>Bishop, Claire. ‘Antagonism and Relational Aesthetics’, <em>October 110</em> (2004): 51-79.</p>
+                        <p>Bishop, Claire. <em>Artificial Hells: Participatory Art and the Politics of Spectatorship</em>, London: Verso, 2012.</p>
+                        <p>Bürger, Peter. <em>Theory of the Avant-Garde</em>, trans. Michael Shaw, Minneapolis: University of Minnesota Press, 1984.</p>
+                        <p>Graeber, David. ‘“The Sadness of Post-Workerism”, or, “Art and Immaterial Labour” Conference: A Sort of Review’, 2008, http://www.scribd.com/doc/38093582/The-Sadness-of-Post-Workerism-David-Graeber.</p>
+                        <p>Holmes, Brian. <em>Unleashing the Collective Phantoms: Essays in Reverse Imagineering</em>, Brooklyn: Autonomedia, 2008.</p>
+                        <p>Kester, Grant. <em>The One and the Many: Contemporary Collaborative Art in a Global Context</em>, Durham: Duke University Press, 2011.</p>
+                        <p>Léger, Marc James. ‘Art and Art History After Globalization’, <em>Third Text</em> 26:5 (2012): 515-527.</p>
+                        <p>Léger, Marc James. ‘The Subject Supposed to Over-Identify: BAVO and the Fundamental Fantasy of a Cultural Avant Garde’, in Léger (ed.) <em>Brave New Avant Garde: Essays on Contemporary Art and Politics</em>, Winchester, UK: Zero Books, 2012.</p>
+                        <p>Raunig, Gerald, Gene Ray and Ulf Wuggenig (eds). <em>Critique of Creativity: Precarity, Subjectivity and Resistance in the ‘Creative Industries’</em>, London: MayFly Books, 2011.</p>
+                        <p>Roberts, John. ‘Art, “Enclave Theory” and the Communist Imaginary’, <em>Third Text</em> 23:4 (2009): 353-367.</p>
+                        <p>Sholette, Gregory. <em>Dark Matter: Art and Politics in the Age of Enterprise Culture</em>, London: Pluto, 2011.</p>
+                        <p>Yúdice, George. <em>The Expediency of Culture: Uses of Culture in the Global Era</em>, Durham: Duke University Press, 2003.</p>
+                        <p>Žižek, Slavoj. <em>The Fragile Absolute, or, Why Is the Christian Legacy Worth Fighting For?,</em> London: Verso, 2000.</p>
+                        <p>Žižek, Slavoj. <em>Less than Nothing: Hegel and the Shadow of Dialectical Materialism</em>, London: Verso, 2012.</p>
+                    </div>
                 </div>
             </div>
 
@@ -483,59 +486,61 @@
                     <p>The transformation of the existing socialist structures and mechanisms of cultural and artistic production, as well as the abandonment of certain projects of sociability, the diminishing and increasingly non-transparent public financing and the devastation of cultural institutions, as well as giving in to the operation of the market forces, have created conditions that are unendurable for the vast majority of artists and workers in the sphere of culture. Seemingly paradoxically, the public and investors give their support to the art establishment and initiatives that promote <em>apolitical</em> entrepreneurial artistic-designer practices. The creation of such conditions has produced a fertile soil for manipulation and instrumentalization of art by the state and its powerful bureaucrats, tycoons and their firms and corporations, the cultural missions of national European states and the broader EU policies, as well as local cultural entrepreneurs who believe that they are on their way to becoming capitalists.</p>
                     <p>As has been shown in the local context and in countries of the periphery, what is at work here is practicing certain creative-economic models of regeneration of cities in the name of the <em>modernization</em> and <em>democratization</em> of local society and its economy, within the framework of which are intertwined <em>national and neo-colonial modernization</em>, which act as accomplices in the process of producing the spaces of capitalist periphery. What this is about is the implementation of new neoliberal regimes of producing cities and creating conditions for producing a new class geography in spaces where there are still populations of different social and economic status living together, and, naturally enough, the production of new mechanisms of flexibilization of work and legislation in a project wherein the local environment continues to be produced as a resource for <em>the developed world</em>, and which is kept under control by means of carefully measured loans which create a condition of <em>debt slavery</em>. Through the use of art, culture and the cultural industry, <em>Western models</em> of urban regenerations are implemented, the intention being to produce a quick effect of changing the function of the given space, increasing its symbolic capital, producing a new <em>identity</em> of the city, introducing new forms of capitalist economy, as well as normalizing potential social conflicts.</p>
                     <p>Still, despite their above-mentioned instrumental function in the processes of reshaping cities, art, creativity and culture can also represent significant factors of the destabilization of such <em>smooth</em> processes of capital-guided urban transformation, and can participate in producing a city based on different and more egalitarian relations, outside the proven exploitative relations of power and division of labor. For them to be established as such, it is necessary, to begin with, to articulate a radical class critique of the (newly established) capitalist relations in formerly socialist cities in Serbia, as well as a critique of the use of art and culture, and also to be engaged in continual theoretical-activistic-political work on producing different relations, which are anxiously articulated today through certain local practices in a state of <em>insobriety</em> produced by the social transformation and the new rules of the game wherein (artistic and cultural) activism becomes an instrument of capital.</p>
-                    <h3>References</h3>
-                    <p>Barok, Dušan. <em>On Participatory Art: Interview with Clear Bishop</em>. Prague: Transit Initiative, 29 July 2009, <em>http://www.academia.edu/771895/On_participatory_art_Interview_with_Claire_Bishop</em> (http://www.academia.edu/771895/On_participatory_art_Interview_with_Claire_Bishop).</p>
-                    <p>Berman, Marshall (http://en.wikipedia.org/wiki/Marshall_Berman). <em>All That Is Solid Melts into Air: The Experience of Modernity</em> (http://books.google.co.uk/books?id=mox1ywiyhtgC), Ringwood: Viking Penguin. 1988.</p>
-                    <p>Beograd 2020. <em>http://www.beograd2020.com/</em> (http://www.beograd2020.com/).</p>
-                    <p>Beograd na vodi: projekat vredan osam milijardi evra! [Belgrade on Water: A Project Worth Eight Billion Euros!], <em>Večernje novosti</em>, 14 October 2013, <em>http://www.kurir-info.rs/beograd-na-vodi-projekat-vredan-osam-milijardi-evra-clanak-1034045</em> (http://www.kurir-info.rs/beograd-na-vodi-projekat-vredan-osam-milijardi-evra-clanak-1034045).</p>
-                    <p>Beograd na vodi ili političari u kampanji [Belgrade on Water or Politicians Campaigning], <em>Politika</em>, 11 August 2013, <em>http://www.politika.rs/rubrike/Beograd/Beograd-na-vodi-ili-politicari-u-kampanji.lt.html</em> (http://www.politika.rs/rubrike/Beograd/Beograd-na-vodi-ili-politicari-u-kampanji.lt.html).</p>
-                    <p>Berry Slater, J. and Iles, A. <em>No Room to Move: Radical Art and Regenerate City</em>, London: Mute, 2010.</p>
-                    <p>C5, School of Urban Practices. <em>http://projectc5.blogspot.it/</em>(http://projectc5.blogspot.it/).</p>
-                    <p><em>Creative Europe.</em> <em>http://ec.europa.eu/culture/creative-europe/</em>(http://ec.europa.eu/culture/creative-europe/).</p>
-                    <p>Dave Beech, ‘Include Me Out!’. <em>ViS</em>, 1 September 2010, <em>http://visualintosocial.wordpress.com/category/talks/dave-beech-on-participation/</em>(http://visualintosocial.wordpress.com/category/talks/dave-beech-on-participation/).</p>
-                    <p>Castells, Manuel. <em>The Urban Question</em>, London: Edward Arnold, 1977.</p>
-                    <p>Deutsche, Rosalyn and Cara Gandel Rian. ‘The fine art of gentrification’, <em>October</em> 31 (Winter, 1984): 91-111.</p>
-                    <p>Foster, Hal. <em>The Return of the Real</em>, Massachusetts: MIT Press, 1996.</p>
-                    <p>Florida, Richard. <em>Cities and the Creative Class</em>, London: Routledge, 2005.</p>
-                    <p>Florida, Richard. <em>The Rise of the Creative Class and how it’s Transforming Work, Leisure and Everyday Life</em>, London: Basic Books, 2002.</p>
-                    <p>Glass, Ruth. <em>London: Aspects of Change</em>, London: Centre for Urban Studies, 1964.</p>
-                    <p>Grad na vodi: Luka Beograd [Water City: the Port of Belgrade], <em>http://www.lukabeograd.com/GradNaVodi/Masterplan.html</em>(http://www.lukabeograd.com/GradNaVodi/Masterplan.html).</p>
-                    <p>Grlja, Dušan. ‘Antinomies of Post-Socialist Autonomy’. <em>Red Thread</em> (2009), <em>http://www.red-thread.org/en/article.asp?a=16</em> (http://www.red-thread.org/en/article.asp?a=16).</p>
-                    <p>Harvey, David. <em>The Urbanization of Capital.</em> Oxford: Basil Blackwell, 1985.</p>
-                    <p>Harvey, David. <em>The Condition of Postmodernity</em>. Cambridge MA and Oxford UK: Blackwell, 1992.</p>
-                    <p>Harvey David. <em>Rebel Cities: From the Right to the City to the Urban Revolution</em>, London: Verso, 2012.</p>
-                    <p>Incident na otkrivanju spomenika na Savskom trgu [Incident During the Unveiling of the Monument in Sava Square], <em>Kurir</em>, 24 March 2012.</p>
-                    <p>Jameson, Fredric<em>. Postmodernizam u kasnom kapitalizmu</em> [<em>Postmodernism in Late Capitalism</em>], Belgrade: KIZ Art Press, 1995.</p>
-                    <p>Jones, Campbell and Murtola, Anna-Maria. ‘Entrepreneurship, Crisis, Critique, in Hjorth, Daniel (ed.) <em>Handbook on Organisational Entrepreneurship</em>, Edward Elgar: Northampton, 2012.</p>
-                    <p>Jovanović, Miloš. <em>Constructing the National Capital,</em> master diss., CEU Budapest, 2008.</p>
-                    <p>Knežević, Vida, Miletić, Marko. ‘Beograd 2020: Grad čuda, nova kulturna politika u Srbiji i prostori borbe [<em>Belgrade 2020: A City of Wonder, the New Cultural Policy in Serbia and the Spaces of Struggle</em>], in Ana Vilenica and kuda.org <em>Na ruševinama kreativnog grada</em> [<em>On the Ruins of the Creative City</em>], Novi Sad: kuda.org, 2012.</p>
-                    <p>Libby Porter and Kate Shaw (eds). <em>Whose Urban Renaissance,</em> London: Routledge, 2009.</p>
-                    <p>Luka Beograd. Grad na vodi [The Port of Belgrade – Water City], http://www.lukabeograd.com/GradNaVodi/Masterplan.html.</p>
-                    <p>Mikser [Mixer]. <em>http://blog.mikser.rs/o-mikseru. 04th August 2013</em>(http://blog.mikser.rs/o-mikseru.%2004.%20avgust%202013).</p>
-                    <p>Monthoux, Pierre Guillet de. ‘Organising Reality Machines: Artepreneurs and the new Aesthetic Enlightenment’, in Daniel Hjorth (ed.), <em>Handbook on Organisational Entrepreneurship</em>, Northampton: Edward Elgar, 2012.</p>
-                    <p>Pasquinelli, Matteo. ‘Kreativna sabotaža u fabrici kulture: umetnost, džentrifikacija i metropola [Creative Sabotage in the Culture Factory: Art, Gentrification and the Metropolis], in Ana Vilenica and kuda.org. <em>Na ruševinama kreativnog grada</em>, Novi Sad: kuda.org, 2012.</p>
-                    <p>Peck, Jamie. ‘The Creativity Fix’ in <em>Eurozine</em>, 28 June 2007, http://www.eurozine.com/articles/2007-06-28-peck-en.html.</p>
-                    <p>Pokrenut stečaj Luke Beograd [The Bankruptcy Procedure Initiated for the Port of Belgrade], <em>Vreme</em>, 6 August 2013, <em>http://www.vreme.rs/cms/view.php?id=1130342</em> (http://www.vreme.rs/cms/view.php?id=1130342)</p>
-                    <p>Počela beogradizacija Beograda [The Belgradisation of Belgrade Begins], <em>Blic</em>, 2 August 2010, <em>http://www.blic.rs/Vesti/Beograd/201025/Pocela-Beogradizacija-Beograda</em> (http://www.blic.rs/Vesti/Beograd/201025/Pocela-Beogradizacija-Beograda).</p>
-                    <p>Rikalović, Gojko. <em>Kreativna Srbija: Novi pravci razvoja</em> [<em>Creative Serbia: New Directions of Development</em>]. Belgrade: Anonymous said, 2011.</p>
-                    <p>Rudolf Džulijani u poseti Beogradu i SNS [Rudolph Giuliani Visits Belgrade and the Serbian Progressive Party], <em>Politika</em>, 11 September 2012.</p>
-                    <p>Soho u Beogradu [Soho in Belgrade], <em>http://www2.lukabeograd.com/soho-bg.html</em>(http://www2.lukabeograd.com/soho-bg.html).</p>
-                    <p>Smith, Neil. <em>Uneven Development: Nature, Capital, and the Production of Space</em>, Oxford: Basil Blackwell, 1990.</p>
-                    <p>Smith, Neil. <em>New Urban Frontier: Gentrification and the Revanchist City</em>. London: Routledge, 1996.</p>
-                    <p>Švob-Đokić, Nada (ed.). <em>The Emerging Creative industries in Southeastern Europe</em>, Zagreb: Institute for International Relations, 2005.</p>
-                    <p>Tomić-Koludrović, Inga and Petrić, Mirko ‘Creative Industries in Transition: Towards a Creative Economy?’, in Švob-Đokić, Nada (ed.), <em>The Emerging Creative industries in Southeastern Europe</em>, Zagreb: Institute for International Relations, 2005.</p>
-                    <p>UN CER. United Nations Creative Economy Report (UN CER), United Nations, 2008, <em>http://unctad.org/en/Docs/ditc20082cer_en.pdf</em> (http://unctad.org/en/Docs/ditc20082cer_en.pdf).</p>
-                    <p>Urban Incubator Belgrade, <em>http://www.goethe.de/ins/cs/bel/prj/uic/enindex.htm</em> (http://www.goethe.de/ins/cs/bel/prj/uic/enindex.htm).</p>
-                    <p>Uskoro novo lice Savskog trga [Soon, a New Look of Sava Square], <em>Blic</em>, 28 November 2011.</p>
-                    <p>Vilenica, Ana. <em>Teorije i prakse aktivizma u umetnosti u drugoj polovini XX veka</em> [<em>Theories and Practices of Activism in Art in the Second Half of the 20<sup>th</sup> Century</em>], PhD thesis, The University of the Arts, University of Belgrade, 2012.</p>
-                    <p>Vilenica, Ana and kuda.org. ‘Preuzmimo grad! Kako? [Let’s Take Over the City! How?], in Vilenica, Ana, kuda.org, <em>Na ruševinama kreativnog grada</em>, Novi Sad: kuda.org, 2012.</p>
-                    <p>Vilenica, Ana. ‘Soho u Beogradu: Umetnička elita u službi tajkuna [Soho in Belgrade: The Art Elite in the Service of Tycoons], in nsparentnost <em>2012</em>, 14 September 2011, http://82.149.22.226/~mobcinamb/index.php?ptype=8&amp;menu=0&amp;id=220&amp;Pid=617.</p>
-                    <p>Vuksanović-Macura, Zlata. <em>Život na ivici: Stanovanje sirotinje u Beogradu 1919-1941</em> [<em>Living on the Edge: The Housing of the Poor in Belgrade 1919-1941</em>], Belgrade: Orion Art, 2012.</p>
-                    <p>World Bank. <em>Entrepreneurship Snapshots 2010: Measuring the Impact of the Financial Crisis on New Business Registration</em>, 2011.</p>
-                    <p>Yudice, George. <em>The Expediency of Culture: Uses of Culture in the Global Era</em>, Durham and London: Duke University Press, 2003.</p>
-                    <p>Zibechi, Raúl. <em>Territories in Resistance: A Cartography of Latin American Social Movements</em>, Edinburgh: AK Press, 2012.</p>
-                    <p>Zukin, Sheron. <em>Cultures of the Cities</em>, Cambridge MA and Oxford UK: Blackwell, 1995.</p>
-                    <p>Šeik ‘doneo’ BG na vodi, kredite… [The Sheikh ‘Brings’ Belgrade on Water, Loans], <em>B92</em>, 12 December 2013, http://www.b92.net/biz/vesti/srbija.php?yyyy=2013&amp;mm=12&amp;dd=12&amp;nav_id=788601 (http://www.b92.net/biz/vesti/srbija.php?yyyy=2013&amp;mm=12&amp;dd=12&amp;nav_id=788601).</p>
+                    <div class="references">
+                        <h3>References</h3>
+                        <p>Barok, Dušan. <em>On Participatory Art: Interview with Clear Bishop</em>. Prague: Transit Initiative, 29 July 2009, <em>http://www.academia.edu/771895/On_participatory_art_Interview_with_Claire_Bishop</em> (http://www.academia.edu/771895/On_participatory_art_Interview_with_Claire_Bishop).</p>
+                        <p>Berman, Marshall (http://en.wikipedia.org/wiki/Marshall_Berman). <em>All That Is Solid Melts into Air: The Experience of Modernity</em> (http://books.google.co.uk/books?id=mox1ywiyhtgC), Ringwood: Viking Penguin. 1988.</p>
+                        <p>Beograd 2020. <em>http://www.beograd2020.com/</em> (http://www.beograd2020.com/).</p>
+                        <p>Beograd na vodi: projekat vredan osam milijardi evra! [Belgrade on Water: A Project Worth Eight Billion Euros!], <em>Večernje novosti</em>, 14 October 2013, <em>http://www.kurir-info.rs/beograd-na-vodi-projekat-vredan-osam-milijardi-evra-clanak-1034045</em> (http://www.kurir-info.rs/beograd-na-vodi-projekat-vredan-osam-milijardi-evra-clanak-1034045).</p>
+                        <p>Beograd na vodi ili političari u kampanji [Belgrade on Water or Politicians Campaigning], <em>Politika</em>, 11 August 2013, <em>http://www.politika.rs/rubrike/Beograd/Beograd-na-vodi-ili-politicari-u-kampanji.lt.html</em> (http://www.politika.rs/rubrike/Beograd/Beograd-na-vodi-ili-politicari-u-kampanji.lt.html).</p>
+                        <p>Berry Slater, J. and Iles, A. <em>No Room to Move: Radical Art and Regenerate City</em>, London: Mute, 2010.</p>
+                        <p>C5, School of Urban Practices. <em>http://projectc5.blogspot.it/</em>(http://projectc5.blogspot.it/).</p>
+                        <p><em>Creative Europe.</em> <em>http://ec.europa.eu/culture/creative-europe/</em>(http://ec.europa.eu/culture/creative-europe/).</p>
+                        <p>Dave Beech, ‘Include Me Out!’. <em>ViS</em>, 1 September 2010, <em>http://visualintosocial.wordpress.com/category/talks/dave-beech-on-participation/</em>(http://visualintosocial.wordpress.com/category/talks/dave-beech-on-participation/).</p>
+                        <p>Castells, Manuel. <em>The Urban Question</em>, London: Edward Arnold, 1977.</p>
+                        <p>Deutsche, Rosalyn and Cara Gandel Rian. ‘The fine art of gentrification’, <em>October</em> 31 (Winter, 1984): 91-111.</p>
+                        <p>Foster, Hal. <em>The Return of the Real</em>, Massachusetts: MIT Press, 1996.</p>
+                        <p>Florida, Richard. <em>Cities and the Creative Class</em>, London: Routledge, 2005.</p>
+                        <p>Florida, Richard. <em>The Rise of the Creative Class and how it’s Transforming Work, Leisure and Everyday Life</em>, London: Basic Books, 2002.</p>
+                        <p>Glass, Ruth. <em>London: Aspects of Change</em>, London: Centre for Urban Studies, 1964.</p>
+                        <p>Grad na vodi: Luka Beograd [Water City: the Port of Belgrade], <em>http://www.lukabeograd.com/GradNaVodi/Masterplan.html</em>(http://www.lukabeograd.com/GradNaVodi/Masterplan.html).</p>
+                        <p>Grlja, Dušan. ‘Antinomies of Post-Socialist Autonomy’. <em>Red Thread</em> (2009), <em>http://www.red-thread.org/en/article.asp?a=16</em> (http://www.red-thread.org/en/article.asp?a=16).</p>
+                        <p>Harvey, David. <em>The Urbanization of Capital.</em> Oxford: Basil Blackwell, 1985.</p>
+                        <p>Harvey, David. <em>The Condition of Postmodernity</em>. Cambridge MA and Oxford UK: Blackwell, 1992.</p>
+                        <p>Harvey David. <em>Rebel Cities: From the Right to the City to the Urban Revolution</em>, London: Verso, 2012.</p>
+                        <p>Incident na otkrivanju spomenika na Savskom trgu [Incident During the Unveiling of the Monument in Sava Square], <em>Kurir</em>, 24 March 2012.</p>
+                        <p>Jameson, Fredric<em>. Postmodernizam u kasnom kapitalizmu</em> [<em>Postmodernism in Late Capitalism</em>], Belgrade: KIZ Art Press, 1995.</p>
+                        <p>Jones, Campbell and Murtola, Anna-Maria. ‘Entrepreneurship, Crisis, Critique, in Hjorth, Daniel (ed.) <em>Handbook on Organisational Entrepreneurship</em>, Edward Elgar: Northampton, 2012.</p>
+                        <p>Jovanović, Miloš. <em>Constructing the National Capital,</em> master diss., CEU Budapest, 2008.</p>
+                        <p>Knežević, Vida, Miletić, Marko. ‘Beograd 2020: Grad čuda, nova kulturna politika u Srbiji i prostori borbe [<em>Belgrade 2020: A City of Wonder, the New Cultural Policy in Serbia and the Spaces of Struggle</em>], in Ana Vilenica and kuda.org <em>Na ruševinama kreativnog grada</em> [<em>On the Ruins of the Creative City</em>], Novi Sad: kuda.org, 2012.</p>
+                        <p>Libby Porter and Kate Shaw (eds). <em>Whose Urban Renaissance,</em> London: Routledge, 2009.</p>
+                        <p>Luka Beograd. Grad na vodi [The Port of Belgrade – Water City], http://www.lukabeograd.com/GradNaVodi/Masterplan.html.</p>
+                        <p>Mikser [Mixer]. <em>http://blog.mikser.rs/o-mikseru. 04th August 2013</em>(http://blog.mikser.rs/o-mikseru.%2004.%20avgust%202013).</p>
+                        <p>Monthoux, Pierre Guillet de. ‘Organising Reality Machines: Artepreneurs and the new Aesthetic Enlightenment’, in Daniel Hjorth (ed.), <em>Handbook on Organisational Entrepreneurship</em>, Northampton: Edward Elgar, 2012.</p>
+                        <p>Pasquinelli, Matteo. ‘Kreativna sabotaža u fabrici kulture: umetnost, džentrifikacija i metropola [Creative Sabotage in the Culture Factory: Art, Gentrification and the Metropolis], in Ana Vilenica and kuda.org. <em>Na ruševinama kreativnog grada</em>, Novi Sad: kuda.org, 2012.</p>
+                        <p>Peck, Jamie. ‘The Creativity Fix’ in <em>Eurozine</em>, 28 June 2007, http://www.eurozine.com/articles/2007-06-28-peck-en.html.</p>
+                        <p>Pokrenut stečaj Luke Beograd [The Bankruptcy Procedure Initiated for the Port of Belgrade], <em>Vreme</em>, 6 August 2013, <em>http://www.vreme.rs/cms/view.php?id=1130342</em> (http://www.vreme.rs/cms/view.php?id=1130342)</p>
+                        <p>Počela beogradizacija Beograda [The Belgradisation of Belgrade Begins], <em>Blic</em>, 2 August 2010, <em>http://www.blic.rs/Vesti/Beograd/201025/Pocela-Beogradizacija-Beograda</em> (http://www.blic.rs/Vesti/Beograd/201025/Pocela-Beogradizacija-Beograda).</p>
+                        <p>Rikalović, Gojko. <em>Kreativna Srbija: Novi pravci razvoja</em> [<em>Creative Serbia: New Directions of Development</em>]. Belgrade: Anonymous said, 2011.</p>
+                        <p>Rudolf Džulijani u poseti Beogradu i SNS [Rudolph Giuliani Visits Belgrade and the Serbian Progressive Party], <em>Politika</em>, 11 September 2012.</p>
+                        <p>Soho u Beogradu [Soho in Belgrade], <em>http://www2.lukabeograd.com/soho-bg.html</em>(http://www2.lukabeograd.com/soho-bg.html).</p>
+                        <p>Smith, Neil. <em>Uneven Development: Nature, Capital, and the Production of Space</em>, Oxford: Basil Blackwell, 1990.</p>
+                        <p>Smith, Neil. <em>New Urban Frontier: Gentrification and the Revanchist City</em>. London: Routledge, 1996.</p>
+                        <p>Švob-Đokić, Nada (ed.). <em>The Emerging Creative industries in Southeastern Europe</em>, Zagreb: Institute for International Relations, 2005.</p>
+                        <p>Tomić-Koludrović, Inga and Petrić, Mirko ‘Creative Industries in Transition: Towards a Creative Economy?’, in Švob-Đokić, Nada (ed.), <em>The Emerging Creative industries in Southeastern Europe</em>, Zagreb: Institute for International Relations, 2005.</p>
+                        <p>UN CER. United Nations Creative Economy Report (UN CER), United Nations, 2008, <em>http://unctad.org/en/Docs/ditc20082cer_en.pdf</em> (http://unctad.org/en/Docs/ditc20082cer_en.pdf).</p>
+                        <p>Urban Incubator Belgrade, <em>http://www.goethe.de/ins/cs/bel/prj/uic/enindex.htm</em> (http://www.goethe.de/ins/cs/bel/prj/uic/enindex.htm).</p>
+                        <p>Uskoro novo lice Savskog trga [Soon, a New Look of Sava Square], <em>Blic</em>, 28 November 2011.</p>
+                        <p>Vilenica, Ana. <em>Teorije i prakse aktivizma u umetnosti u drugoj polovini XX veka</em> [<em>Theories and Practices of Activism in Art in the Second Half of the 20<sup>th</sup> Century</em>], PhD thesis, The University of the Arts, University of Belgrade, 2012.</p>
+                        <p>Vilenica, Ana and kuda.org. ‘Preuzmimo grad! Kako? [Let’s Take Over the City! How?], in Vilenica, Ana, kuda.org, <em>Na ruševinama kreativnog grada</em>, Novi Sad: kuda.org, 2012.</p>
+                        <p>Vilenica, Ana. ‘Soho u Beogradu: Umetnička elita u službi tajkuna [Soho in Belgrade: The Art Elite in the Service of Tycoons], in nsparentnost <em>2012</em>, 14 September 2011, http://82.149.22.226/~mobcinamb/index.php?ptype=8&amp;menu=0&amp;id=220&amp;Pid=617.</p>
+                        <p>Vuksanović-Macura, Zlata. <em>Život na ivici: Stanovanje sirotinje u Beogradu 1919-1941</em> [<em>Living on the Edge: The Housing of the Poor in Belgrade 1919-1941</em>], Belgrade: Orion Art, 2012.</p>
+                        <p>World Bank. <em>Entrepreneurship Snapshots 2010: Measuring the Impact of the Financial Crisis on New Business Registration</em>, 2011.</p>
+                        <p>Yudice, George. <em>The Expediency of Culture: Uses of Culture in the Global Era</em>, Durham and London: Duke University Press, 2003.</p>
+                        <p>Zibechi, Raúl. <em>Territories in Resistance: A Cartography of Latin American Social Movements</em>, Edinburgh: AK Press, 2012.</p>
+                        <p>Zukin, Sheron. <em>Cultures of the Cities</em>, Cambridge MA and Oxford UK: Blackwell, 1995.</p>
+                        <p>Šeik ‘doneo’ BG na vodi, kredite… [The Sheikh ‘Brings’ Belgrade on Water, Loans], <em>B92</em>, 12 December 2013, http://www.b92.net/biz/vesti/srbija.php?yyyy=2013&amp;mm=12&amp;dd=12&amp;nav_id=788601 (http://www.b92.net/biz/vesti/srbija.php?yyyy=2013&amp;mm=12&amp;dd=12&amp;nav_id=788601).</p>
+                    </div>
                 </div>
             </div>
 
@@ -590,42 +595,44 @@
                 </div>
                 <div class="subchapter" id="subchapter11">
                     <h3>‘Gentrification is class war’</h3>
-                    <p>The fundamental reason behind the repeatedly converted plans of demolishment of the liberated Rog factory area seems simple;<a href="#fn150" class="footnoteRef" id="fnref150"><sup>150</sup></a> communities ‘that swarm in Rog, are not dangerous for MOL because of the revitalization of […] abandoned spaces, but because of the swarming of new and different forms of social activities, connections and collaboration’.<a href="#fn151" class="footnoteRef" id="fnref151"><sup>151</sup></a> The eradication and neutralization, discursive or violently material, of autonomous collective creativity, troubling the flows of capital, are inevitably inherent to wider processes of capital accumulation. For once, in the current condition, the extraction of monopoly rent as the business model in cognitive capitalism (Pasquinelli 2010) is obstructed. In the hegemonic notion of the collective creativity, we run into the creativity as ideological substitution for labour. The creativity as understood by the apologist of corporative creative industries has not become the Deleuzian becoming, but an ideological superstructure of labour and therefore exploitation.</p>
+                    <p>The fundamental reason behind the repeatedly converted plans of demolishment of the liberated Rog factory area seems simple;<a href="#fn150" class="footnoteRef" id="fnref150"><sup>150</sup></a> communities ‘that swarm in Rog, are not dangerous for MOL because of the revitalization of […] abandoned spaces, but because of the swarming of new and different forms of social activities, connections and collaboration’.<a href="#fn151" class="footnoteRef" id="fnref151"><sup>151</sup></a> The eradication and neutralization, discursive or violently material, of autonomous collective creativity, troubling the flows of capital, are inevitably inherent to wider processes of capital accumulation. For once, in the current condition, the extraction of monopoly rent as the business model in cognitive capitalism <a class="in-text" data-dref="120">(Pasquinelli 2010)</a> is obstructed. In the hegemonic notion of the collective creativity, we run into the creativity as ideological substitution for labour. The creativity as understood by the apologist of corporative creative industries has not become the Deleuzian becoming, but an ideological superstructure of labour and therefore exploitation.</p>
                     <p>Beuys’ famous claim fulfils itself in an odd manner – in the age of cognitive capitalism, elevating each and every individual into divinity, everyone is not an artist, but a <em>creator</em>. Fortunately, the repolitization of creativity and its emancipation from the neoliberal colonial deadlock are being collectively produced in factories of the Foucauldian insurrectional subjugated knowledge. The remaining question is whether one will hop on the moving train rushing through the urbanscape moved by these machines.</p>
-                    <h3>References</h3>
-                    <p>Anonymous. 1989. <em>The Occupation of art and gentrification</em>. Internet source: http://theanarchistlibrary.org/library/anonymous-the-occupation-of-art-and-gentrification#fn_back7, reviewed October 1, 2013.</p>
-                    <p>Bloch, Ernst. ‘Building in Empty Spaces,’ in Bloch, Ernst: <em>The Utopian Function of Art and Literature</em>. Cambridge, Massachusetts: MIT Press, 1959/1996, pp. 185-198.</p>
-                    <p>Bourdieu, Pierre and Loïc Wacquant. ‘NewLiberalSpeak. Notes on the new planetary vulgate.’ <em>Radical Philosophy</em> 105 (2001) pp. 1-5.</p>
-                    <p>Florida, Richard. <em>Cities and the Creative Class</em>. London, New York: Routledge, 2005.</p>
-                    <p>Gregorčič, Marta. ‘Rog – presenečanja, iz katerih rojijo multitude.’ <em>Časopis za kritiko znanosti</em>, 34 -223 (2006) pp. 7-10.</p>
-                    <p>Hardt, Michael and Antonio Negri. <em>Multitude: War and Democracy in the Age of Empire</em>. New York: Penguin Press, 2004.</p>
-                    <p>Harvey, David. ‘The Art of Rent: Globalisation, Monopoly and the Commodification of Culture’ (2001). http://www.generation-online.org/c/fc_rent1.htm</p>
-                    <p>Harvey, David. <em>A Brief History of Neoliberalism</em>. Oxford: Oxford University Press, 2005.</p>
-                    <p>Harvey, David. ‘The Right to the City.’ <em>New Left Review</em>, 53 Sept. Oct (2008): 23-40.</p>
-                    <p>Institute for Civilisation and Culture. <em>SWOT Analysis for the Purposes of the Revitalisation of the Former Rog Factory with the Establishment of the Rog — Centre of Contemporary Arts</em>. (2011) Internet source: http://www.secondchanceproject.eu/wp/wp-content/uploads/2011/07/SWOT_Analysis_Ljubljana.pdf</p>
-                    <p>Jelesijević, Nenad. Rog med razlastitvijo in prilastitvijo skupnega. Radio Študent (5 April 2012). Internet source: http://radiostudent.si/kultura/dlako-z-jezika/rog-med-razlastitvijo-in-prilastitvijo-skupnega</p>
-                    <p>Krajčinović, Nina. Rog kot politični projekt brez zagotovljenih sredstev. <em>Delo</em> (5 September 2013) http://www.delo.si/novice/ljubljana/rog-kot-politicni-projekt-brez-zagotovljenih-sredstev.html</p>
-                    <p>Katrin Fischer et al. <em>Revitalisation through arts and culture: new developments for 5 European industrial complexes.</em> Nürnberg: Second Chance (2012) http://www.secondchanceproject.eu/wp/wp-content/uploads/2012/11/SECOND-CHANCE_Mid-Project-Brochure_online_final.pdf&gt;, reviewed 1 October, 2013.</p>
-                    <p>Kurnik, Andrej and Barbara Beznec. ‘Resident Alien: The Rog Experience on the Margin,’ in Radical Education Collective (eds) <em>New public spaces: dissensual political and artistic practices in the post-Yugoslav context</em>. Maastricht: Jan van Eyck Academie, 2009, pp. 45-62. http://radical.temp.si/reader/AndrejBarbara.pdf</p>
-                    <p>Kurnik, Andrej. <em>Vzamimo si mesto!</em> (2013), http://www.njetwork.org/Vzamimo-si-mesto</p>
-                    <p>Landry, Charles. <em>The Creative City: A Toolkit for Urban Innovators</em>. London: Earthscan, 2000.</p>
-                    <p>Mihelič, Breda et al. <em>Les anciennes usines ‘Rog’/Ljubljana : exemple Européen de mise en valeur du patrimoine architectural abandonné : actes du 4ème Colloque Eurocultures, Ljubljana: 29 mai—2 juin</em> (1995), Brussels: Institut Supérieur d’Architecture Saint-Luc.</p>
-                    <p>MOL. 2013. <em>Dopolnjeni osnutek Odloka o spremembah in dopolnitvah Odloka o občinskem podrobnem prostorskem načrtu za del območja urejanja CI 5/6 Rog</em>, http://www.ljubljana.si/file/1351552/dop_osn_spr_oppn_ci56.pdf</p>
-                    <p>Pasquinelli, Matteo. ‘Beyond the Ruins of the Creative City: Berlin’s Factory of Culture and the Sabotage of Rent’, in KUNSTrePUBLIK (eds), <em>Skulpturenpark Berlin_Zentrum</em>. Berlin: Verlag der Buchhandlung Walther König, 2010.</p>
-                    <p>Pungerčar, Marija Mojca. ND, http://www.3via.org/index.php?htm=mojca</p>
-                    <p>Rog Centre Pilot Project. <em>About</em>, (2013) http://www.roglab.si/en/about</p>
-                    <p>Rog Centre Pilot Project. <em>Socialdress – Power to the People</em> (2013), http://www.roglab.si/en/fresh/2013/socialdress_empowering_people</p>
-                    <p>Sassen, Saskia. ‘Locating cities on global circuits.’ <em>Environment &amp; Urbanization</em> 14 (2002): 13-30. http://www.rrojasdatabank.info/urban/euv14n1p13.pdf</p>
-                    <p>Second Chance. <em>Project Description</em> (2013). Internet source: http://www.secondchanceproject.eu/wp/?page_id=26</p>
-                    <p>Second Chance. The Former Rog Factory (2013) Internet source: http://www.secondchanceproject.eu/wp/?page_id=16</p>
-                    <p>Second Chance. Rog Centre of Contemporary Arts (2013). Internet source: http://www.secondchanceproject.eu/wp/?page_id=94</p>
-                    <p>Second Chance. Can Culture Alone Regenerate Places? (2012), http://www.secondchanceproject.eu/wp/?p=1112</p>
-                    <p>TEMP. ‘TEMP about TEMP, or a quick and unsystematic retrospective of the workings of one temporary and informal multidisciplinary group.’ In: Radical Education Collective (eds.): <em>New public spaces: dissensual political and artistic practices in the post-Yugoslav context</em>. Maastricht: Jan van Eyck Academie (2009): 144-158, http://radical.temp.si/reader/TEMP.pdf</p>
-                    <p>The Institute for the Protection of Cultural Heritage of Slovenia <em>STROKOVNE ZASNOVE VARSTVA KULTURNE DEDIŠČINE za območje MESTNE OBČINE LJUBLJANA</em> (2008), http://giskd2s.situla.org/evrdd/SZ/eVRD_SZ_Ljubljana_2008_02_00.pdf</p>
-                    <p>Vercellone, Carlo. <em>The New Articulation of Wages, Rent and Profit in Cognitive Capitalism</em> (2008)., http://halshs.archives-ouvertes.fr/docs/00/26/55/84/PDF/The_new_ articulation_of_wagesHall1.pdf</p>
-                    <p>Zukin, Sharon. <em>Loft Living: Culture and Capital in Urban Change</em>, Baltimore and London: The Johns Hopkins University Press, 1982.</p>
-                    <p>Zukin, Sharon. <em>Landscapes of Power: From Detroit to Disney World</em>, Berkeley: University of California Press, 1991.</p>
-                    <p>Zukin, Sharon. <em>The Cultures of Cities</em>, Cambridge: Blackwell, 1995.</p>
+                    <div class="references">
+                        <h3>References</h3>
+                        <p>Anonymous. 1989. <em>The Occupation of art and gentrification</em>. Internet source: http://theanarchistlibrary.org/library/anonymous-the-occupation-of-art-and-gentrification#fn_back7, reviewed October 1, 2013.</p>
+                        <p>Bloch, Ernst. ‘Building in Empty Spaces,’ in Bloch, Ernst: <em>The Utopian Function of Art and Literature</em>. Cambridge, Massachusetts: MIT Press, 1959/1996, pp. 185-198.</p>
+                        <p>Bourdieu, Pierre and Loïc Wacquant. ‘NewLiberalSpeak. Notes on the new planetary vulgate.’ <em>Radical Philosophy</em> 105 (2001) pp. 1-5.</p>
+                        <p>Florida, Richard. <em>Cities and the Creative Class</em>. London, New York: Routledge, 2005.</p>
+                        <p>Gregorčič, Marta. ‘Rog – presenečanja, iz katerih rojijo multitude.’ <em>Časopis za kritiko znanosti</em>, 34 -223 (2006) pp. 7-10.</p>
+                        <p>Hardt, Michael and Antonio Negri. <em>Multitude: War and Democracy in the Age of Empire</em>. New York: Penguin Press, 2004.</p>
+                        <p>Harvey, David. ‘The Art of Rent: Globalisation, Monopoly and the Commodification of Culture’ (2001). http://www.generation-online.org/c/fc_rent1.htm</p>
+                        <p>Harvey, David. <em>A Brief History of Neoliberalism</em>. Oxford: Oxford University Press, 2005.</p>
+                        <p>Harvey, David. ‘The Right to the City.’ <em>New Left Review</em>, 53 Sept. Oct (2008): 23-40.</p>
+                        <p>Institute for Civilisation and Culture. <em>SWOT Analysis for the Purposes of the Revitalisation of the Former Rog Factory with the Establishment of the Rog — Centre of Contemporary Arts</em>. (2011) Internet source: http://www.secondchanceproject.eu/wp/wp-content/uploads/2011/07/SWOT_Analysis_Ljubljana.pdf</p>
+                        <p>Jelesijević, Nenad. Rog med razlastitvijo in prilastitvijo skupnega. Radio Študent (5 April 2012). Internet source: http://radiostudent.si/kultura/dlako-z-jezika/rog-med-razlastitvijo-in-prilastitvijo-skupnega</p>
+                        <p>Krajčinović, Nina. Rog kot politični projekt brez zagotovljenih sredstev. <em>Delo</em> (5 September 2013) http://www.delo.si/novice/ljubljana/rog-kot-politicni-projekt-brez-zagotovljenih-sredstev.html</p>
+                        <p>Katrin Fischer et al. <em>Revitalisation through arts and culture: new developments for 5 European industrial complexes.</em> Nürnberg: Second Chance (2012) http://www.secondchanceproject.eu/wp/wp-content/uploads/2012/11/SECOND-CHANCE_Mid-Project-Brochure_online_final.pdf&gt;, reviewed 1 October, 2013.</p>
+                        <p>Kurnik, Andrej and Barbara Beznec. ‘Resident Alien: The Rog Experience on the Margin,’ in Radical Education Collective (eds) <em>New public spaces: dissensual political and artistic practices in the post-Yugoslav context</em>. Maastricht: Jan van Eyck Academie, 2009, pp. 45-62. http://radical.temp.si/reader/AndrejBarbara.pdf</p>
+                        <p>Kurnik, Andrej. <em>Vzamimo si mesto!</em> (2013), http://www.njetwork.org/Vzamimo-si-mesto</p>
+                        <p>Landry, Charles. <em>The Creative City: A Toolkit for Urban Innovators</em>. London: Earthscan, 2000.</p>
+                        <p>Mihelič, Breda et al. <em>Les anciennes usines ‘Rog’/Ljubljana : exemple Européen de mise en valeur du patrimoine architectural abandonné : actes du 4ème Colloque Eurocultures, Ljubljana: 29 mai—2 juin</em> (1995), Brussels: Institut Supérieur d’Architecture Saint-Luc.</p>
+                        <p>MOL. 2013. <em>Dopolnjeni osnutek Odloka o spremembah in dopolnitvah Odloka o občinskem podrobnem prostorskem načrtu za del območja urejanja CI 5/6 Rog</em>, http://www.ljubljana.si/file/1351552/dop_osn_spr_oppn_ci56.pdf</p>
+                        <p>Pasquinelli, Matteo. ‘Beyond the Ruins of the Creative City: Berlin’s Factory of Culture and the Sabotage of Rent’, in KUNSTrePUBLIK (eds), <em>Skulpturenpark Berlin_Zentrum</em>. Berlin: Verlag der Buchhandlung Walther König, 2010.</p>
+                        <p>Pungerčar, Marija Mojca. ND, http://www.3via.org/index.php?htm=mojca</p>
+                        <p>Rog Centre Pilot Project. <em>About</em>, (2013) http://www.roglab.si/en/about</p>
+                        <p>Rog Centre Pilot Project. <em>Socialdress – Power to the People</em> (2013), http://www.roglab.si/en/fresh/2013/socialdress_empowering_people</p>
+                        <p>Sassen, Saskia. ‘Locating cities on global circuits.’ <em>Environment &amp; Urbanization</em> 14 (2002): 13-30. http://www.rrojasdatabank.info/urban/euv14n1p13.pdf</p>
+                        <p>Second Chance. <em>Project Description</em> (2013). Internet source: http://www.secondchanceproject.eu/wp/?page_id=26</p>
+                        <p>Second Chance. The Former Rog Factory (2013) Internet source: http://www.secondchanceproject.eu/wp/?page_id=16</p>
+                        <p>Second Chance. Rog Centre of Contemporary Arts (2013). Internet source: http://www.secondchanceproject.eu/wp/?page_id=94</p>
+                        <p>Second Chance. Can Culture Alone Regenerate Places? (2012), http://www.secondchanceproject.eu/wp/?p=1112</p>
+                        <p>TEMP. ‘TEMP about TEMP, or a quick and unsystematic retrospective of the workings of one temporary and informal multidisciplinary group.’ In: Radical Education Collective (eds.): <em>New public spaces: dissensual political and artistic practices in the post-Yugoslav context</em>. Maastricht: Jan van Eyck Academie (2009): 144-158, http://radical.temp.si/reader/TEMP.pdf</p>
+                        <p>The Institute for the Protection of Cultural Heritage of Slovenia <em>STROKOVNE ZASNOVE VARSTVA KULTURNE DEDIŠČINE za območje MESTNE OBČINE LJUBLJANA</em> (2008), http://giskd2s.situla.org/evrdd/SZ/eVRD_SZ_Ljubljana_2008_02_00.pdf</p>
+                        <p>Vercellone, Carlo. <em>The New Articulation of Wages, Rent and Profit in Cognitive Capitalism</em> (2008)., http://halshs.archives-ouvertes.fr/docs/00/26/55/84/PDF/The_new_ articulation_of_wagesHall1.pdf</p>
+                        <p>Zukin, Sharon. <em>Loft Living: Culture and Capital in Urban Change</em>, Baltimore and London: The Johns Hopkins University Press, 1982.</p>
+                        <p>Zukin, Sharon. <em>Landscapes of Power: From Detroit to Disney World</em>, Berkeley: University of California Press, 1991.</p>
+                        <p>Zukin, Sharon. <em>The Cultures of Cities</em>, Cambridge: Blackwell, 1995.</p>
+                    </div>
                 </div>
             </div>
 
@@ -651,20 +658,22 @@
                 <p>Aside from its compensatory role, culture (when it is ‘creativity’ and cognitive production), is not only at the center of political action, but is also embedded in production and consumption processes, and in neoliberalism, at least insofar as it has thrived in post-Fordist (flexible) forms and conditions of labor. Neoliberalism has taken up the characteristics of aesthetic production. Signs and nascent meanings, desires and projections meet in the market because the post-Fordist economy is based on manufacturing experiences, signs and information. The core of the knowledge economy is creativity. This is why qualities of aesthetic production have become hegemonic and have transformed labor and consumption processes as well as aesthetic experiences. Not only sensations and feelings are trivialized and packaged for sale, disinterestedness (the core of aesthetic experience as defined by Kant) has also vanished.<a href="#fn170" class="footnoteRef" id="fnref170"><sup>170</sup></a> This arises as the result of aesthetic experience that is enslaved for profit, as well as subsumed to ‘political’ efficiency in the sense of State and corporate strategic investment in culture and the transformation of political action into sensible forms – as opposed to action. These tendencies are a result of what Stephen Shaviro describes as ‘the ruthless cognition of aesthetic sensations and feelings’, as they are transformed into data and exploited forms of labor which are marketed as fresh experiences, exciting lifestyle choices, or as socially-responsible cultural activities. In the political arena, thirty years of neoliberalism have crushed any confidence that we might have had in the social contract. If artists used to identify with the proletariat and social struggles, nowadays, aesthetic production – which is lacking a reflexive program in regards to the conditions of its own production – is geared just toward the supplementing of the entertainment market with cultivated and knowledgeable new experiences and sensations. Furthermore, through subsidizing art and cultural projects, corporations, states and arts patrons put into practice the following principle of the Prince Claus Fund: ‘There can be no development without culture, and there can be no cultural development without freedom of debate’.<a href="#fn171" class="footnoteRef" id="fnref171"><sup>171</sup></a> As this quote becomes evermore evident, the public expects from culture and art rigorous accountability, critical questioning, democratic access, dialogue, openness and equal representation in the visual regime. This is posited as the road to development. In this context, culture is perceived as ‘a basic need’, as the founding principle of Prince Claus Fund states. Thus, states, corporations, the private sector and society attribute to art a decisive political, as they invest in culture with the purpose of generating political and economic surplus value. Bearing in mind that the autonomy of art is always a political matter, could art be politicized beyond its autonomy as a site for added value?</p>
                 <p>The condition of possibility of autonomous, committed art under the new neoliberal world order, is radically different from what we see as the autonomy of art under modernism (as <em>l’art pour l’art</em>) and post-modern interdisciplinarity. These imply the institutionalization of the avant-garde and the subsumption of art to the market, bearing in mind that the emancipatory promises of modernism (criticality, self-design, creativity) are now located at the center of our everyday lives both via consumption and production processes. Theodor Adorno’s take on the autonomy of art in his 1962 essay entitled <em>Commitment</em>, can be helpful here. In this essay, Adorno responds to Jean-Paul Sartre’s aesthetic manifesto <em>What is Literature?</em> and elaborates a theoretical debate about engaged literature and autonomous art. According to Adorno there are two kinds artworks. On the one hand, there are works that ‘are vulgarly assimilated to the existence against which they protest’.<a href="#fn172" class="footnoteRef" id="fnref172"><sup>172</sup></a> These works ‘are content with being mere fetishes or a pastime, and thus degenerate and become de-politicized cultural merchandise’.<a href="#fn173" class="footnoteRef" id="fnref173"><sup>173</sup></a> This de-politicization, for Adorno is in fact, deeply political. A lot of politically or socially-minded contemporary art would fit into this category. On the other hand, there is <em>engaged autonomous art</em> which is necessarily detached from reality. Adorno defines the autonomy of art not in the sense of its strictly formalist aspect, although like Walter Benjamin, Adorno also vouches for works of art that are both formally and politically progressive. For Adorno, autonomous art negates a direct connection to reality. The distance that autonomous art has from reality, however, is mediated by reality itself. This means that a work of art cannot come out of the blue: its origin is a reaction against reality. Adorno, as does Benjamin, draws a distinction between ‘commitment’ and ‘tendency’. Committed art does not bear the intention of generating betterment measures, legislative acts, practical institutions (like propaganda) or even transmitting a concrete ideology. It operates at the level of fundamental attitudes. For Adorno, autonomous and engaged works of art operate at the level of abandoning the social contract with reality and ‘cease to speak as if they were reporting the facts: this is the moment in which a work of art makes people’s hair stand up’.<a href="#fn174" class="footnoteRef" id="fnref174"><sup>174</sup></a> According to Adorno, the shock of the unintelligible (or the ambiguous), is able to communicate more than what is legible and explicit. In that sense, works of art are autonomous, instead of heteronomous. Heteronomy implies that an artwork is subject to a different power, a law that is external and foreign to art and its formal logic. When it is autonomous, engaged art is neither subject to empirical reality nor a correct political tendency. Art’s autonomy protects it from popularization and adoption by the market. Its autonomy implies liberating it from any other external purpose: from being useful. In this manner, an autonomous work of art does not convey a message nor does it need to convince the public or preach to the converted. And although it opposes society, autonomous art is still part of it.</p>
                 <p>If the autonomy of modern art implied considering art as a realm distanced from reality, art’s post-medium condition now means that it has become a niche within reality.<a href="#fn175" class="footnoteRef" id="fnref175"><sup>175</sup></a> What is at stake in autonomous art nowadays, would be to posit it as an experience of reality that is fundamentally foreign and antagonistic to the prevailing reality. If the autonomy of art should be located in the realm of reproduction, as Marina Vischmidt argues,<a href="#fn176" class="footnoteRef" id="fnref176"><sup>176</sup></a> it would oppose the realm of production of the social, political and economic surplus value. It would go against embodying power and the entrepreneurial model of work. Producing difference and dragging out the laboring conditions hidden within it, autonomous art would imply mimesis with distancing itself. Beyond being used as a tool, autonomous art would refuse becoming an instrument against its own illusions, as well as refusing to become a political force, to be subjected to interests foreign to itself or simply becoming a pleasing commodity. Overcoming self-censorship, it would cease to participate in the economy of the globalized art world, especially in the name of critical practices, political work or social justice, abandoning its claim to become a progressive social force.<a href="#fn177" class="footnoteRef" id="fnref177"><sup>177</sup></a> Above all, it would work against the power of culture and the culture of power.</p>
-                <h3>References</h3>
-                <p>Adorno, Theodor. ‘Commitment’, <em>New Left Review</em> I (87088) (September-December, 1974), http://newleftreview.org/I/87-88/theodor-adorno-commitment.</p>
-                <p>Emmelhainz, Irmgard. ‘Art and the Cultural Turn: Farewell to Committed Autonomous Art?’, <em>e-flux journal</em> 42 (February, 2013), http://www.e-flux.com/journal/art-and-the-cultural-turn-farewell-to-committed-autonomous-art.</p>
-                <p>Espósito, Marcelo. ‘Lecciones de historia. El arte, entre la experimentación institucional y las políticas del movimiento’, 2009. SITAC lecture, http://marceloexposito.net/pdf/exposito_sitac.pdf.</p>
-                <p>Foster, Hal. ‘What’s Neo about the Neo-Avant-Garde?’, <em>October</em>, Vol. 70 (Autumn, 1994): 5-32.</p>
-                <p>Fraser, Andrea. ‘Le 1% c’est moi’, 2011, http://whitney.org/file_columns/0002/9848/andreafraser_1_2012whitneybiennial.pdf.</p>
-                <p>Marchart, Oliver. ‘Art, Space and the Public Sphere(s)’, 2002, http://eipcp.net/transversal/0102/marchart/en.</p>
-                <p>McLagan, Megan and McKee, Yates (eds). <em>Sensible Politics:</em> <em>The Visual Culture of Nongovernmental Activism</em>. Cambridge, Mass.: Zone Books, 2012.</p>
-                <p>Shaviro, Stephen. ‘Accelerationist Aesthetics’, <em>e-flux journal</em> #46 (Summer, 2013), http://www.e-flux.com/journal/accelerationist-aesthetics-necessary-inefficiency-in-times-of-real-subsumption.</p>
-                <p>Sholette, Gregory. ‘Welcome to the Desert of the Real Artworld’, <em>Oxford Art Journal</em> 27 (2) (2004) pp. 260-261. http://www.gregorysholette.com/wp-content/uploads/2011/04/07_welcome1.pdf.</p>
-                <p>Stakemeier, Kerstin and Vishmidt, Marina. ‘The Value of Autonomy: A Conversation Between Kerstin Stakemeier and Marina Vishmidt About the Reproduction of Art’, <em>Texte zur Kunst</em> 88 (December, 2012): 102-117.</p>
-                <p>Thompson, Nato. 2013, ‘The Insurgents Part I: Community-Based Practice as Military Methodology,’ <em>e-flux journal</em> # 47 (September, 2013), http://www.e-flux.com/journal/the-insurgents-part-i-community-based-practice-as-military-methodology.</p>
-                <p>Vishmidt, Marina. ‘Mimesis of the Hardened and Alienated: Social Practice as a Business Model’, <em>e-flux journal</em> # 46 (March, 2013), http://www.e-flux.com/journal/“mimesis-of-the-hardened-and-alienated”-social-practice-as-business-model.</p>
-                <p>Wu, Chin-tao. ‘Embracing the Enterprise Culture: Art Institutions Since the 1980s’, <em>New Left Review</em> I 230 (July-August, 1998).</p>
+                <div class="references">
+                    <h3>References</h3>
+                    <p>Adorno, Theodor. ‘Commitment’, <em>New Left Review</em> I (87088) (September-December, 1974), http://newleftreview.org/I/87-88/theodor-adorno-commitment.</p>
+                    <p>Emmelhainz, Irmgard. ‘Art and the Cultural Turn: Farewell to Committed Autonomous Art?’, <em>e-flux journal</em> 42 (February, 2013), http://www.e-flux.com/journal/art-and-the-cultural-turn-farewell-to-committed-autonomous-art.</p>
+                    <p>Espósito, Marcelo. ‘Lecciones de historia. El arte, entre la experimentación institucional y las políticas del movimiento’, 2009. SITAC lecture, http://marceloexposito.net/pdf/exposito_sitac.pdf.</p>
+                    <p>Foster, Hal. ‘What’s Neo about the Neo-Avant-Garde?’, <em>October</em>, Vol. 70 (Autumn, 1994): 5-32.</p>
+                    <p>Fraser, Andrea. ‘Le 1% c’est moi’, 2011, http://whitney.org/file_columns/0002/9848/andreafraser_1_2012whitneybiennial.pdf.</p>
+                    <p>Marchart, Oliver. ‘Art, Space and the Public Sphere(s)’, 2002, http://eipcp.net/transversal/0102/marchart/en.</p>
+                    <p>McLagan, Megan and McKee, Yates (eds). <em>Sensible Politics:</em> <em>The Visual Culture of Nongovernmental Activism</em>. Cambridge, Mass.: Zone Books, 2012.</p>
+                    <p>Shaviro, Stephen. ‘Accelerationist Aesthetics’, <em>e-flux journal</em> #46 (Summer, 2013), http://www.e-flux.com/journal/accelerationist-aesthetics-necessary-inefficiency-in-times-of-real-subsumption.</p>
+                    <p>Sholette, Gregory. ‘Welcome to the Desert of the Real Artworld’, <em>Oxford Art Journal</em> 27 (2) (2004) pp. 260-261. http://www.gregorysholette.com/wp-content/uploads/2011/04/07_welcome1.pdf.</p>
+                    <p>Stakemeier, Kerstin and Vishmidt, Marina. ‘The Value of Autonomy: A Conversation Between Kerstin Stakemeier and Marina Vishmidt About the Reproduction of Art’, <em>Texte zur Kunst</em> 88 (December, 2012): 102-117.</p>
+                    <p>Thompson, Nato. 2013, ‘The Insurgents Part I: Community-Based Practice as Military Methodology,’ <em>e-flux journal</em> # 47 (September, 2013), http://www.e-flux.com/journal/the-insurgents-part-i-community-based-practice-as-military-methodology.</p>
+                    <p>Vishmidt, Marina. ‘Mimesis of the Hardened and Alienated: Social Practice as a Business Model’, <em>e-flux journal</em> # 46 (March, 2013), http://www.e-flux.com/journal/“mimesis-of-the-hardened-and-alienated”-social-practice-as-business-model.</p>
+                    <p>Wu, Chin-tao. ‘Embracing the Enterprise Culture: Art Institutions Since the 1980s’, <em>New Left Review</em> I 230 (July-August, 1998).</p>
+                </div>
             </div>
 <!--
 //    				<div id="footnotes" class="footnotes">
@@ -676,7 +685,6 @@ FROM THIS SECTION ONCE FOOTNOTES ARE
 TRANSFORMED INTO SIDENOTES
 -->
             <div class="section" id="chapter8">
-				<hr />
                 <ol>
                     <li id="fn1"><p>Different versions of this essay were presented at Bureau Publik, Copenhagen, 31 October 2013 and KHIB in Bergen, Norway, on 5 November 2013.<a href="#fnref1">↩</a></p></li>
                     <li id="fn2"><p>Different versions of this essay were presented at Bureau Publik, Copenhagen, 31 October 2013 and KHIB in Bergen, Norway, on 5 November 2013.<a href="#fnref2">↩</a></p></li>
@@ -857,14 +865,88 @@ TRANSFORMED INTO SIDENOTES
                     <li id="fn177"><p>Andrea Fraser, ‘Le 1% c’est moi’, 2011: ‘Le gorille penseur est un guerrier: le guerrier est un être pour la mort, puisque son métier consiste à mourir. Ici, il pense un peu à la fin de son espèce, ou à la fin de l’ère des — notre époque n’est plus celle des guerriers, elle est celle des insectes, des animaux insignifiants, plus capables de s’adapter…’ http://whitney.org/file_columns/0002/9848/andreafraser_1_2012whitneybiennial.pdf (http://www.e-flux.com/journal/accelerationist-aesthetics-necessary-inefficiency-in-times-of-real-subsumption/).<a href="#fnref177">↩</a></p></li>
                 </ol>
 			</div> <!-- END FOOTNOTES CONTAINER -->
-			<!-- </section>End Content -->
-        </div><!-- End Main -->
 
-			
+        </div><!-- End #content -->
 
-    </div><!-- End Container -->
 
-    <!----- FOOTER 
+<!--––––––––––––––––––––––– SEARCH BOX ––––––––––––––––––––––––––––––––––––––––––-->
+
+            <form id="live-search" class="not" action="" method="post">
+                <!-- <fieldset> -->
+                    <span id="filter-count"></span>
+                    <input type="text" class="text-input" id="filter" value="" onClick="this.select();" />
+                <!-- </fieldset> -->
+            </form>
+
+
+            <div id="buttons_wrapper" class="not">
+                <a href="#" class="search_nav" id="prev">PREV</a>
+                <a href="#" class="search_nav" id="next">NEXT</a>
+            </div>
+
+
+<!--––––––––––––––––––––––– CHANGE FONT SIZE ––––––––––––––––––––––––––––-->
+            <div id="tool-fontsize" class="not">
+                <div id="sizeUp">
+                  <button id="button2" value="smaller" class="button" onclick="changeFontSize(this)">-</button>
+                </div>
+                <span id="letter">A</span>
+                <div id="sizeDown">
+                  <button id="button1" value="larger" class="button" onclick="changeFontSize(this)">+</button>
+                </div>
+            </div>
+
+<!--––––––––––––––––––––––– CANCEL BUTTON –––––––––––––––––––––––––––––––––––––––-->
+            <div id="search_ui" style="position: fixed; float: right; right: 0px; top: 0px; display: none;">
+                <button id="cancel" style="margin: 5px 0px 5px 0px;">Cancel</button>
+            </div>
+
+<!--––––––––––––––––––––––– FULL REFERENCE BOX –––––––––––––––––––––––––––––––––-->
+            <div class="tip not" style="display:none;">
+                <p style="margin:0>"></p>
+                <div id="x"><a href="#0">X</a></div>
+            </div>
+
+<!--––––––––––––––––––––––– CITATION BUTTON AND BOX ––––––––––––––––––––––––––––-->
+            <button id="tools">TOOLS</button>
+
+            <div id="citation-box" class="not" style="display: none">Cite your selection with the following conventions:
+                <button id="cite" style="display:block">PRESS TO CITE</button>
+                <p><abbr title="Modern Language Association">MLA</abbr></p>
+                <button data-clipboard-target="#mla" class="full-citation" id="mla"></button>
+                <p>Chicago</p>
+                <button data-clipboard-target="#chicago" class="full-citation" id="chicago"></button>
+                <p><abbr title="American Psychological Association">APA</abbr></p>
+                <button data-clipboard-target="#apa" class="full-citation" id="apa"></button>
+            </div>
+
+           <!--  <div id="citation-box" style="display: none">Cite your selection with the following conventions:
+                <button id="cite" style="display:block">PRESS TO CITE</button>
+                <button style="display:block" id="mlaButton"><abbr title="Modern Language Association">MLA</abbr></button>
+                <button style="display: none" data-clipboard-target="#mla" class="full-citation" id="mla"></button>
+                
+                <button style="display:block" id="chicagoButton">Chicago</button>
+                <button style="display: none" data-clipboard-target="#chicago" class="full-citation" id="chicago"></button>
+                
+                <button style="display:block" id="apaButton"><abbr title="American Psychological Association">APA</abbr></button>
+                <button style="display: none" data-clipboard-target="#apa" class="full-citation" id="apa"></button>
+            </div> -->
+
+
+
+
+
+
+    </div><!-- End #main .pushmenu -->
+
+
+
+
+
+      
+
+<!--––––––––––––––––––––––– FOOTER ––––––––––––––––––––––––––––––––––––––––––––-->
+<!--
     <div id="pre-footer"></div>
     <div id="footer">
         <div class="hva"></div>
@@ -872,10 +954,13 @@ TRANSFORMED INTO SIDENOTES
     					Credits<br>
     					2015</div>
         <div class="footer-column"></div>
-    </div>	----->		</div><!-- End Pushmenu: has to stay here to get the whole page pushed -->
+    </div>	
 
 
-    <!--</div> <!-- <==END PUSHMENU 
+</div>--><!-- End Pushmenu: has to stay here to get the whole page pushed -->
+
+
+    <!--</div> <==END PUSHMENU 
     </div>			
     <script>
     		/*$(window).bind('scroll', function(e) {
@@ -890,11 +975,11 @@ TRANSFORMED INTO SIDENOTES
     -->
 
 
-    <!----- script: nav ---->
+    <!-- script: nav 
         <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
         <script src="js/nav.js" type="text/javascript"></script>
 
-        <!----- script: pushmenu on the left ---->		
+         script: pushmenu on the left 	
         <script>
         $(document).ready(function() {
           $menuLeft = $('.pushmenu-left');                               							   $nav_list = $('#nav_list');
@@ -920,10 +1005,10 @@ TRANSFORMED INTO SIDENOTES
 
 
 
-        <!-- script: search bar -->
+         script: search bar 
         <script src="js/search.js" type="text/javascript"></script>
 
-        <!-- script: font size -->    
+        <!-- script: font size   
         <script>function changeFontSize(target) {
           var demo = document.getElementById("text");
           var computedStyle = window.getComputedStyle
@@ -943,32 +1028,27 @@ TRANSFORMED INTO SIDENOTES
         }
         }</script>
 
-        <!----- script: sidenote 
-        <script src="js/md-sidenotes.js" type="text/javascript">
-        </script> 
+
+        <script src="js/md-sidenotes.js" type="text/javascript"></script>
+        <script src="js/script.js" type="text/javascript"></script>
+        
         <script>
-        							   console.log("hi");
+        // 							   console.log("hi");
 
-        							   initialize({
-        							   rootSel:'.content', //rootWrapper for your content
-        							   footNotesContainerSel:'.footnotes', //base container for the footnotes to transform into sidenotes
-        							   footNotesSel:'ol li', //selector for the footnotes
-        							   footNoteIdPattern:'fn', //existing footNotes ID prefix
-        							   footNoteAnchorPattern:'fnref', //ID prefix for the anchors in the main content, linking to notes.
-        							   sideNoteClass:'sidenote', //optional : this class will be used for the generated sidenotes
-        							   largeMediaQuery:'(min-width: 600px)', //Media query to trigger the behavior for ‘large’ screens
-        							   mediumMediaQuery:'(max-width: 600px)', //Media query to trigger the behavior for ‘medium’ screens
-        							   smallMediaQuery:'' //Media query to trigger the behavior for ‘small’ screens
-        							   });
-        </script>	----->			
+        // 							   initialize({
+        // 							   rootSel:'.content', //rootWrapper for your content
+        // 							   footNotesContainerSel:'.footnotes', //base container for the footnotes to transform into sidenotes
+        // 							   footNotesSel:'ol li', //selector for the footnotes
+        // 							   footNoteIdPattern:'fn', //existing footNotes ID prefix
+        // 							   footNoteAnchorPattern:'fnref', //ID prefix for the anchors in the main content, linking to notes.
+        // 							   sideNoteClass:'sidenote', //optional : this class will be used for the generated sidenotes
+        // 							   largeMediaQuery:'(min-width: 600px)', //Media query to trigger the behavior for ‘large’ screens
+        // 							   mediumMediaQuery:'(max-width: 600px)', //Media query to trigger the behavior for ‘medium’ screens
+        // 							   smallMediaQuery:'' //Media query to trigger the behavior for ‘small’ screens
+        // 							   });
+        // </script>
         		
-
-        <!-- jQuery library -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-
-        </script>-->
-
+-->
 
 </body>
 </html>

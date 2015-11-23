@@ -5,7 +5,7 @@
 Easy changes :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)    
             1. Colors
 
-00.--- SUMMARY
+
 
 1.--- GENERAL STRUCTURE !! do not change !! ------------------------------------
             1. General
@@ -41,11 +41,10 @@ Easy changes :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-
             2. Search box
             3. Font size
             4. Citation box
-            5. Scrolling indicator
 
 8.--- FOOTER (bottom) ------------------------------------------------------------
 
-9.--- DEVICES ---------------------------------------------------------------------
+9.----- DEVICES -------------------------------------------------------------------
             1. Smartphones, iPhones, portrait (480x320)
             2. Portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide
             3. Portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones
@@ -102,24 +101,16 @@ body {
 	background-color: #fff;
 }
 
-.main {
-	overflow-x: hidden;
-}
-
 /* text: The content of the book */
-.pushmenu .pushmenu-left .pushmenu-open .content {
+/*.pushmenu .pushmenu-left .pushmenu-open .content {
 	width: 20%;
 	overflow-x: hidden;
-}
+}*/
 
-.pushmenu-open .main {
+/*.pushmenu-open {
 	width: 20%;
 	overflow-x: hidden;
-}
-
-.container {
-	overflow-x: hidden;
-}
+}*/
 
 /* Menu, Table of content on left */
 .section {
@@ -127,26 +118,17 @@ body {
 	font-size: 62.5%;
     overflow-x: hidden;
 }
+
 /* All of the content of the reader has margins on right to let place for sidenotes */
 .section p,h2,h3,h1,img,.author {
 	margin-right: 40%;
 	width: auto;
 	overflow-x: hidden;
 }
-/* text: The content of the book */
-.text {
-	margin-top: 0;
-	margin-left: 0;
-	padding-left: 30px;
-    overflow-x: hidden;
-}
+
+
 /* text: The content of the book when pushmenu is open */
-.content-pushed .text {
-	padding-left: 30px;
-	overflow-x: hidden;
-}
-/* text: The content of the book when pushmenu is open */
-.content-pushed {
+/*.content-pushed {
 	line-height: 32px;
 	margin-right: 0;
 	margin-left: 0;
@@ -154,7 +136,7 @@ body {
 	padding-left: 0;
 	overflow-x: hidden;
 }
-
+*/
 
 /* ******************************************************* 2. MENU (left) ******************** */
 
@@ -164,47 +146,44 @@ body {
 ************************
 The menu on left (called pushmenu) gives the table of content but also pushes the whole content (reader) to the right */
 
-/* pushmenu: This is the way the menu displays when it is shown, Menu with the TOC that comes in sliding from the left */
+/* pushmenu: This is the way the menu displays when it is shown */
 .pushmenu {
-	width: 20%;
-	height: 100%;
-	top: 0;
-	position: fixed;
-	background-color: rgba(255,69,0,0.28);
-	overflow-x: hidden;
-	z-index: 999999;
+			/*width: 20%;
+			height: 100%;
+			top: 0;
+			position: fixed;
+			background-color: rgba(255,69,0,0.28);
+			overflow-x: hidden;
+			z-index: 999999;*/
+}
+.pushmenu-left {
+			/*left: -20%;
+			overflow-y: scroll;
+			overflow-x: hidden;*/
 }
 
-/* pushmenu-left: class added to make it go off screen */
-.pushmenu-left {
-	left: -20%;
-	overflow-y: scroll;
-	overflow-x: hidden;
-}
-/* pushmenu-open: class to make it slide from left */
-.pushmenu-left.pushmenu-open {
+/*.pushmenu-left.pushmenu-open, .pushmenu-open {
 	left: 0;
+  border-right: solid 1px black;
 	border-right: solid 0 #000;
 	-webkit-box-shadow: 0 10px 15px rgba(0,0,0,0.2);
 	-moz-box-shadow: 0 10px 15px rgba(0,0,0,0.2);
 	box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+}*/
+
+.pushmenu-push, {
+			/*overflow-x: hidden;
+			position: relative;
+			left: 0;*/
 }
 
-/* pushmenu-push: pushes the rest of the content to the right */
-.pushmenu-push {
-	overflow-x: hidden;
-	position: relative;
-	left: 0;
-}
-
-/* pushmenu-push-toright: class that makes the content move to right */
 .pushmenu-push-toright {
 	left: 20%;
 }
 
 .pushmenu a {
-	text-decoration: none;
-	margin: 0;
+			/*text-decoration: none;
+			margin: 0;*/
 }
 
 /* The speed of pushmenu appearing */
@@ -219,168 +198,93 @@ The menu on left (called pushmenu) gives the table of content but also pushes th
 	left: 400px;
 }
 
-.buttonset {
-	position: fixed;
-	top: 0;
-	left: 0;
-}
-
 
 /***********************
      2-2. NAV LIST
 ************************
 The way the user actives the pushmenu */
 
-#nav_list {
-    cursor: pointer;
-    background-color: orange;
-    height: 100%;
-    width: 2%;
-    position: fixed;
-}
+/*#nav_list {
+	cursor: pointer;
+	width: 10px;
+	height: 700px;
+	border: 0 solid #000;
+	padding: 0;
+	background-color: #fff;
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	transition: all .3s ease;
+}*/
 
-#verticalScroll {
+/*#verticalScroll {
 	width: 20px;
 	height: 0;
 	background-color: red;
 	opacity: .7;
-}
+}*/
 
-.nav_list {
-}
-
-.nav_list:hover {
+/*.nav_list:hover {
 	background-color: #f30;
-}
+}*/
 
-.pushmenu-left .pushmenu-open #nav_list {
-	display: none;
-	margin-left: 70px;
+.pushmenu-left .pushmenu-open {
+	/*display: none;
+	margin-left: 70px;*/
 }
 
 
 /********************************************************
-     2-3. TABLE OF CONTENT (left, inside the pushmenu)
+     2-3. TABLE OF CONTENTS (left, inside the pushmenu)
 *********************************************************
 Table of content is contained in pushmenu, it shows the different parts of the book and can be clicked to navigate through them */
 
 /* Bloc containing the table of content in the pushmenu */
-#book-toc {
+/*#book-toc {
 	margin-left: 5px;
 	width: 100%;
-}
+}*/
 
 /* Table of contents: title for big part */
 .pushmenu h2 {
-	font-size: 16px;
-	line-height: 17px;
-	width: 90%;
-	border-radius: 5px;
-	-webkit-margin-before: 0;
-	-webkit-margin-after: 0;
-	-webkit-margin-start: 0;
-	-webkit-margin-end: 0;
-	margin-bottom: 4px;
-	margin-top: 10px;
-	margin-right: 10px;
+			/*font-size: 16px;
+			line-height: 17px;
+			width: 90%;
+			border-radius: 5px;
+			-webkit-margin-before: 0;
+			-webkit-margin-after: 0;
+			-webkit-margin-start: 0;
+			-webkit-margin-end: 0;
+			margin-bottom: 4px;
+			margin-top: 10px;
+			margin-right: 10px*/;
 }
 
 /* Table of contents: title for sub-parts (subtitles) */
 .pushmenu h3 {
-	font-size: 12px;
-	width: 80%;
-	border-radius: 5px;
-	-webkit-margin-before: 0;
-	-webkit-margin-after: 0;
-	-webkit-margin-start: 0;
-	-webkit-margin-end: 0;
-	margin-left: 20px;
-	margin-bottom: 4px;
-	line-height: 14px;
-	padding-right: 10px;
+			/*font-size: 12px;
+			width: 80%;
+			border-radius: 5px;
+			-webkit-margin-before: 0;
+			-webkit-margin-after: 0;
+			-webkit-margin-start: 0;
+			-webkit-margin-end: 0;
+			margin-left: 20px;
+			margin-bottom: 4px;
+			line-height: 14px;
+			padding-right: 10px;*/
 }
 .pushmenu h3:before {
-	content: '● ';
-	position: relative;
-	bottom: .1em;
+		/*	content: '● ';
+			position: relative;
+			bottom: .1em;*/
 }
 
 /* Table of contents: when the user goes over a part of the book */
 .pushmenu a:hover {
-	background-color: #ff3700;
-	color: #fff;
-	border-radius: 5px;
-	padding: 2px;
-}
-
-
-/********* JOSIP'S PART **********/
-
-/* Interactions: horizontal Scrollbar for the chapters */
-.horizScroll, .subScroll {
-    opacity: .3;
-    width: 0%;
-    height: 100%;
-    max-width: 100%;
-    position: absolute;
-    top: 0;
-}
-
-.horizScroll {
-    background-color: gray;
-}
-
-.subScroll {
-    background-color: black;
-}
-
-#toc_wrapper {
-    margin: 0 0 0 2%;
-    padding: 0;
-    left: 0%;
-    cursor: pointer;
-    width: 98%;
-    overflow: 
-}
-
-#toc_wrapper h2 {
-    font-size: 1em;
-    position: relative;
-    width: 100%;
-    min-height: 1em;
-    border-top: 1px dashed black;
-    padding: 1% 0%;
-    margin: 0;
-}
-#toc_wrapper h3 {
-    min-height: 1em;
-    width: 90%;
-    margin: 0%;
-    padding-bottom: 1%;
-    margin-left: 10%;
-    font-size: .8em;
-    position: relative;
-    font-weight: normal;
-}
-
-#toc_wrapper a {
-    /*display: block;
-    width: 100%;
-    text-decoration: none;
-    color: black;
-    min-height: 1em !important;
-    border-top: 
-    border-left: 1px solid black;
-    padding: 3% 0% 2% 0%;
-    margin-left: 1%;*/
-}
-
-#toc_wrapper h2:last-child {
-    /*border-bottom: 1px solid black;*/
-}
-
-#toc_wrapper h2:hover, #toc_wrapper h3:hover {
-    background-color: aqua;
+		/*	background-color: #ff3700;
+			color: #fff;
+			border-radius: 5px;
+			padding: 2px;*/
 }
 
 
@@ -420,9 +324,9 @@ Table of content is contained in pushmenu, it shows the different parts of the b
 }
 
 /***********************************
-     3-2. TABLE OF INFORMATIONS
+     3-2. TABLE OF INFORMATION
 ************************************
-"Table of informations" is the table in which all of the very practical informations about the book are written */
+"Table of information" is the table in which all of the very practical information about the book are written */
 
 /* Table: left column of the table */
 #summary .summary,#summary .author,#summary .editor,#summary .date,#summary .series,#summary .subjects {
@@ -461,23 +365,23 @@ Table of content is contained in pushmenu, it shows the different parts of the b
 The bookcover is an overview of the bookcover of the book */
 
 /* Bookcover container */
-.bookcover {
+/*.bookcover {
 	overflow: hidden;
 	width: 99.6px;
 	height: 149.4px;
 	margin: 0 auto;
-}
+}*/
 
 /* Bookcover tint */
-.tint {
+/*.tint {
 	position: relative;
 	float: left;
 	margin-right: 0;
 	margin-bottom: 0;
 	cursor: pointer;
-}
+}*/
 
-.tint:before {
+/*.tint:before {
 	content: "";
 	height: 149.4px;
 	display: block;
@@ -495,17 +399,11 @@ The bookcover is an overview of the bookcover of the book */
 	-ms-transition: all .3s linear;
 	-o-transition: all .3s linear;
 	transition: all .3s linear;
-}
+}*/
 
-.tint:hover:before {
+/*.tint:hover:before {
 	background: none;
-}
-
-
-
-
-
-
+}*/
 
 
 
@@ -527,32 +425,34 @@ b {
 }
 
 /* ?? */
-.section ul {
+/*.section ul {
 	color: #000;
-}
+}*/
 
 /* ?? */
-.section current {
+/*.section current {
 	width: 100%;
 	padding-top: 0;
 	overflow-x: hidden;
-}
+}*/
 
 /* .current: the first section of text has margins */
-.current {
+/*.current {
 	margin-top: 10px;
 	overflow-x: hidden;
+}*/
+
+#content {
+			/*font-size: 1.2em;
+			line-height: 1.6em;
+			color: #1a1a1a;
+			margin-left: 2%;
+			overflow-x: hidden;*/
+	margin-left: 20%;
+	width: 40%;
 }
 
-.content {
-	font-size: 1.2em;
-	line-height: 1.6em;
-	color: #1a1a1a;
-	margin: 0;
-	overflow-x: hidden;
-}
-
-.content-pushed .sidenote {
+/*.content-pushed .sidenote {
 	clear: right;
 	margin-right: 23%;
 	margin-bottom: 2px;
@@ -570,7 +470,7 @@ b {
 	hyphens: auto;
 	font-family: "Verdana";
 	z-index: 9999999;
-	border-radius: 5Px;
+	border-radius: 5px;
 	background-color: #f4f4f4;
 }
 
@@ -578,7 +478,7 @@ b {
 	margin-right: 0;
 	padding: 0 2px;
 	font-size: 10px;
-}
+}*/
 
 /***************************************
      4-2. TEXT TITLES & FONT STYLES
@@ -600,11 +500,11 @@ Defines the typography for texts in reader /
 
 /* Title of sub-part (subtitle) */
 .section h3 {
-	font-size: 24px;
+	font-size: 2em;
 }
 
 /* Font weight */
-.section p,h2,h3,h1,img,.author {
+.section p,h2,h3,img,.author {
 	font-weight: 400;
 }
 
@@ -660,15 +560,15 @@ img {
 *****************************
 The list of references that writers have used to write their texts, appears in the end of each text */
 
-#reference-list,#reference-list-1,#reference-list-2,#reference-list-3,#reference-list-4,#reference-list-5,#reference-list-6,#reference-list-7,#reference-list-8,#reference-list-9,#reference-list-10 {
+.references h3 {
 	font-family: "Verdana";
-	font-size: .8em;
+	/*font-size: 1em;*/
 	text-decoration: underline;
 }
 
-.references {
-	font-size: .7em;
-	line-height: 1.4em;
+.section .references p {
+	font-size: 1em;
+	line-height: 1em;
 	text-indent: 20px;
 }
 
@@ -681,10 +581,10 @@ They display on wide devices. */
 
 /* footnoteRef: Reference (number) to the note, that is in the text, after the word commented */
 .footnoteRef {
-	font-size: .7em;
+	/*font-size: .7em;
 	text-decoration: none;
 	vertical-align: super;
-	line-height: .7em;
+	line-height: .7em;*/
 }
 
 /* sidenote: Content of the note that displays on the right */
@@ -719,19 +619,6 @@ They display on wide devices. */
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ******************************************************* 5. TYPOGRAPHY ******************** */
 
 /* Font-faces used in styles */
@@ -753,7 +640,7 @@ body{
 Tags linking the book to other books that have similar topics /
 
 /* Keyword: regular style */
-.keyword {
+/*.keyword {
 	background-color: rgba(132,132,132,0.38);
 	cursor: pointer;
 	font-style: normal;
@@ -762,16 +649,16 @@ Tags linking the book to other books that have similar topics /
 	cursor: pointer;
 	line-height: 2em;
 	text-decoration: none;
-}
+}*/
 
 /* Keyword: when is hovered with the mouse */
-.keyword:hover {
+/*.keyword:hover {
 	color: #000;
 	margin-left: 1px;
 	font-style: italic;
 	background-color: #f8f8f8;
 	text-decoration: none;
-}
+}*/
 
 /****************************
      5-2. IMPORTANT WORD
@@ -794,12 +681,12 @@ Important notion in the text of the book */
 What the user looks for (from the home page where he enters words in the search bar) /
 
 /* Keyword-searched: regular style */
-.keyword-searched {
+/*.keyword-searched {
 	margin-bottom: 14px;
 	background-color: rgba(255,51,0,0.54);
 	cursor: text;
 }
-
+*/
 /*********************
      5-4. BUTTON
 **********************
@@ -832,17 +719,6 @@ Buttons are the way the links to the different downloads & different tools… lo
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 /* ******************************************************* 6. NAVIGATION ******************** */
 
 /******************
@@ -851,7 +727,7 @@ Buttons are the way the links to the different downloads & different tools… lo
 Arrows makes it able to jump directlyto the next (or preview) chapter /
 
 /* Arrow to go to prev chapter (right) */
-#display1 {
+#up {
 	position: fixed;
 	right: 2%;
 	top: 45%;
@@ -860,7 +736,7 @@ Arrows makes it able to jump directlyto the next (or preview) chapter /
 }
 
 /* Arrow to go to next chapter (right) */
-#display {
+#down {
 	position: fixed;
 	right: 2%;
 	bottom: 45%;
@@ -870,23 +746,14 @@ Arrows makes it able to jump directlyto the next (or preview) chapter /
 
 /* Arrow to go to prev chapter (right) on short devices */
 @media (max-height:600px) {
-#display1 {
+#up {
 	top: 40%;
 }
     
 /* Arrow to go to next chapter (right) on short devices */
-#display {
+#down {
 	bottom: 40%;
 }
-}
-
-
-
-
-
-
-
-
 
 
 
@@ -902,7 +769,7 @@ Arrows makes it able to jump directlyto the next (or preview) chapter /
 
 The toolbox is the container of the different tools. */
 
-label {
+/*label {
 	position: fixed;
 	background-color: none;
 	border: 0;
@@ -1079,23 +946,20 @@ label {
 	border-radius: 5px;
 	padding: 2px 5px;
 	z-index: 999999;
-}
+}*/
 
 /********************************
      7-2. SEARCH BOX (right)
 *********************************
 Search box is where the user can enter keyword (in input) and look for words in text */
 
-
-
-
 /* container of the search box */
-#live-search-container {
+/*#live-search-container {
 	padding: 2px 4px 10px;
 	margin-left: 0;
 	background-color: #fff;
 	border-radius: 5px;
-}
+}*/
 
 /* search box */
 #live-search {
@@ -1113,24 +977,12 @@ fieldset {
 	border-style: none;
 }
 
-#filter {
-}
-
-#filter > * {
-}
-
 /* how is the text the user writes when searching */
 #filter-count {
 	color: #000;
 	font-size: 12px;
 	font-family: "Hkgrotesk";
 	text-align: justify;
-}
-
-#filter.text-input {
-}
-
-input#filter {
 }
 
 input {
@@ -1205,85 +1057,6 @@ input:hover {
 	margin-top: 2px;
 }
 
-/* Next and prev buttons that appears to go to next word searched */
-
-.search_nav {
-    position: fixed;
-    top: 15px;
-}
-
-#prev {
-    right: 155px;
-}
-
-#next {
-    right: 105px;
-}
-
-.search-found {
-    color: black;
-}
-
-.search-notfound {
-    color: #BFBFBF;
-}
-
-.highlight {
-    /*display: inline-block; 
-    width: 50%;
-    height: 50%;
-    text-align: center;*/
-    background-color: #BFBFBF;
-    /*background: -webkit-radial-gradient(10px, white, white, #BFBFBF); /* Safari 5.1 to 6.0 */
-    /*background: -o-radial-gradient(10px, white, white, #BFBFBF); /* For Opera 11.6 to 12.0 */
-    /*background: -moz-radial-gradient(10px, white, white, #BFBFBF); /* For Firefox 3.6 to 15 */
-    /*background: radial-gradient(10px, white, white, #BFBFBF); /* Standard syntax (must be last)*/
-}
-
-/*.search-found {
-    background: -webkit-radial-gradient(10px, white, white, #BFBFBF); /* Safari 5.1 to 6.0 
-    background: -o-radial-gradient(10px, white, white, #BFBFBF); /* For Opera 11.6 to 12.0 
-    background: -moz-radial-gradient(10px, white, white, #BFBFBF); /* For Firefox 3.6 to 15 
-		    background: radial-gradient(10px, white, white, #BFBFBF); /* Standard syntax (must be last) *
-		}*/
-
-#live-search {
-    top: 40px;
-     padding-right: 50px;
-    background-color: gray;
-    right: 0px;
-    position: fixed;
-}
-
-#buttons_wrapper{
-    display: none;
-}
-
-/* Autocomplete list of items */
-
-.ui-autocomplete {
-    list-style: none;
-    position: fixed;
-    padding-top: 2px;
-    -webkit-padding-start: 0px;
-}
-
-.ui-menu-item {
-    background-color: red;
-}
-
-.ui-menu-item:focus {
-    background-color: yellow;
-}
-
-
-
-
-
-
-
-
-
 /*********************************
      7-3. FONT SIZE (right)
 **********************************
@@ -1322,173 +1095,6 @@ Changes the font of .section .text in the reader */
 ************************************
 Makes the user able to copy and paste references to the book and the webpage (conventionally written) */
 
-/* in-text: Box containing the box */
-.in-text {
-	background-color: #C7C7BB;
-}
-
-/* tip: Box containing the references */
-.tip {
-	background-color: #ff0;
-	-webkit-filter: drop-shadow(2px 2px 10px rgba(0,0,0,0.9));
-	filter: drop-shadow(2px 2px 10px rgba(0,0,0,0.9));
-	font-size: 14px;
-	max-width: 25%;
-	padding: 2px 7px;
-	border: 1px solid #000;
-	position: absolute;
-	right: 0;
-}
-
-/* x: Box containing the references */
-#x {
-	position: inherit;
-	right: -3px;
-	top: -7px;
-	border-radius: 9px;
-	border: 1px solid red;
-	background-color: orange;
-	padding: 0 4px;
-	text-align: center;
-}
-
-#x a {
-	text-decoration: none;
-	color: #000;
-}
-
-.tip p {
-	margin: 0;
-}
-
-#tools {
-}
-
-#citation-box {
-	position: fixed;
-	width: 320px;
-	height: auto;
-	font-size: 10px;
-	font-family: "Hkgrotesk";
-}
-
-button {
-	margin: 0;
-	font: 11px HKgrotesk;
-	text-rendering: auto;
-	color: initial;
-	letter-spacing: normal;
-	word-spacing: normal;
-	text-transform: none;
-	text-indent: 0;
-	text-shadow: none;
-	display: inline-block;
-	text-align: start;
-	border: 1px solid #000;
-	border-radius: 5px;
-}
-
-
-.in-text {
-	background-color: #C7C7BB;
-}
-
-.tip {
-	background-color: #ff0;
-/*opacity: 0.9;*/
-	-webkit-filter: drop-shadow(2px 2px 10px rgba(0,0,0,0.9));
-	filter: drop-shadow(2px 2px 10px rgba(0,0,0,0.9));
-/*-webkit-filter: blur(5px);
-  	filter: blur(5px);*/
-	font-size: 14px;
-	max-width: 300px;
-/*overflow: scroll;*/
-	padding: 2px 7px;
-	border: 1px solid #000;
-	border-radius: 5px;
-	position: absolute;
-	right: 0;
-	height: 200px;
-}
-
-.tip p {
-	margin: 0;
-	height: 200px;
-}
-
-#x {
-	position: inherit;
-	right: -6px;
-	top: -6px;
-	border-radius: 9px;
-	border: 1px solid red;
-	background-color: orange;
-	padding: 0 4px;
-	text-align: center;
-}
-
-#x a {
-	text-decoration: none;
-	color: #000;
-}
-
-.keyword {
-	color: #454545;
-	background: -webkit-linear-gradient(#FF9980,#292929);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-}
-
-.full-citation {
-	text-align: left;
-	word-wrap: break-word;
-	background-color: #ff0;
-	min-height: 6em;
-	width: 95%;
-	max-width: 95%;
-	margin-top: 1%;
-	margin-left: 1%;
-	margin-bottom: 1%;
-}
-
-#citation-box {
-	top: 10%;
-	right: 1%;
-	position: fixed;
-	border: 1px solid #000;
-	border-radius: 5px;
-	background-color: #C7C7BB;
-	width: 30%;
-	min-height: 65%;
-}
-
-.confirmation {
-	background-color: green;
-	display: inline;
-	margin: auto;
-}
-
-
-
-/***************************************
-     7-5. SCROLLING INDICATOR (left)
-****************************************
-Visual explanation of the deepth of scrolling into the text/how far we are by scrolling */
-
-
-/* #menu_bar_scroll: vertical scrollbar*/
-#menu_bar_scroll {	
-    cursor: pointer;
-    background-color: magenta;
-    opacity: .3;
-    height: 0%;
-    /*max-height: 100%;*/
-    width: 2%;
-    position: fixed;	
-}
-
-
-
 
 
 
@@ -1496,7 +1102,7 @@ Visual explanation of the deepth of scrolling into the text/how far we are by sc
 ************************************************************* 8. FOOTER ******************
 ****************************************************************************************** */
 
-#pre-footer {
+/*#pre-footer {
 	width: 100%;
 	height: 400px;
 	position: relative;
@@ -1530,7 +1136,7 @@ Visual explanation of the deepth of scrolling into the text/how far we are by sc
 	float: left;
 	margin-left: 10%;
 }
-
+*/
 
 
 
@@ -1999,6 +1605,5 @@ img {
 	-o-box-shadow: 5px 5px 40px 30px #e6e6e6;
 	box-shadow: 5px 5px 40px 30px #e6e6e6;
 	filter: progid:DXImageTransform.Microsoft.Shadow(color=#e6e6e6,Direction=134,Strength=50s);
-}
 }
 

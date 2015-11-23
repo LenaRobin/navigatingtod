@@ -1,0 +1,407 @@
+/************************************
+******* CONTENT *********************
+************************************/
+		body {
+		    margin: 0;
+		}
+
+/*******THE CONTENT********************/
+		#content {
+			margin-left: 5%;
+			width: 55%;
+		}
+
+		a {
+			text-decoration: none;
+		}
+
+/*******HORIZONTAL SCROLLBAR**********
+********FOR THE CHAPTERS*************/
+		.horizScroll, .subScroll {
+		    opacity: .3;
+		    width: 0%;
+		    height: 100%;
+		    max-width: 100%;
+		    position: absolute;
+		    top: 0;
+		}
+
+		.horizScroll {
+			background-color: gray;
+		}
+
+		.subScroll {
+		    background-color: black;
+		}
+
+/****************************************
+******* MENU ****************************
+****************************************/
+		#toc_wrapper {
+			margin: 0 0 0 2%;
+			padding: 0;
+			left: 0%;
+			cursor: pointer;
+			width: 98%;
+			overflow: 
+		}
+
+		#toc_wrapper h2 {
+			font-size: 1em;
+			position: relative;
+			width: 100%;
+			min-height: 1em;
+			border-top: 1px dashed black;
+			padding: 1% 0%;
+			margin: 0;
+		}
+		#toc_wrapper h3 {
+			min-height: 1em;
+			width: 90%;
+			margin: 0%;
+			padding-bottom: 1%;
+			margin-left: 10%;
+			font-size: .8em;
+			position: relative;
+			font-weight: normal;
+		}
+
+		#toc_wrapper a {
+			/*display: block;
+			width: 100%;
+			text-decoration: none;
+			color: black;
+			min-height: 1em !important;
+			border-top: 
+			border-left: 1px solid black;
+			padding: 3% 0% 2% 0%;
+			margin-left: 1%;*/
+		}
+
+		#toc_wrapper h2:last-child {
+			/*border-bottom: 1px solid black;*/
+		}
+
+		#toc_wrapper h2:hover, #toc_wrapper h3:hover {
+			background-color: aqua;
+		}
+
+/*******MENU WITH THE TOC THAT******************
+********COMES IN SLIDING FROM THE LEFT*********/
+		.pushmenu {				/*basically nav*/
+		  background: gold;
+		  width: 28%;
+		  height: 100%;
+		  padding-top: 3%;
+		  position:fixed;
+		}
+
+/*******CLASS ADDED TO MAKE**************
+********IT GO OFF SCREEN****************/
+		.pushmenu-left {
+		  left: -28%;
+
+		}
+
+/*******CLASS TO MAKE IT***********
+********SLIDE IN FROM LEFT********/
+		.pushmenu-left.pushmenu-open {
+		  left: 0;
+		}
+
+/*******PUSHES THE REST OF THE**********
+********#CONTENT TO THE RIGHT**********/
+
+		.pushmenu-push {
+		  overflow-x: hidden;
+		  position: relative;
+		  left: 0;
+		}
+
+/*******CLASS THAT MAKES**********
+********THE #CONTENT MOVE*********
+********TO THE RIGHT*************/
+		.pushmenu-push-toright {
+		  left: 28%;
+		}
+
+/*******TRANSITIONS****************/
+		.pushmenu, .pushmenu-push {
+		  -webkit-transition: all 0.3s ease;
+		  -moz-transition: all 0.3s ease;
+		  transition: all 0.3s ease;  
+		}
+
+/*******VERTICAL BAR THAT*********
+********OPENS UP THE MENU********/
+		#menu_bar {
+			cursor: pointer;
+			background-color: orange;
+			height: 100%;
+			width: 2%;
+			position: fixed;
+		}
+
+/*******VERTICAL SCROLL BAR*******/
+		#menu_bar_scroll {	
+			cursor: pointer;
+			background-color: magenta;
+			opacity: .3;
+			height: 0%;
+			/*max-height: 100%;*/
+			width: 2%;
+			position: fixed;	
+		}
+
+
+
+/****************************************
+******* HEADER BAR **********************
+****************************************/
+/*
+#header_bar {
+		position: fixed;
+	top: 0;
+		left: 0;
+	width: 100%;
+	height: .5em;
+	background-color: yellow;
+	overflow: hidden;
+}
+
+#header_bar_wrapper {
+	height: 100%;
+	background-color: purple;
+		position: fixed;
+	bottom: 0;
+		left: 0;
+	width: 100%;
+	
+}
+
+#header_bar:hover {
+		display: block;
+	height: 3em;
+	background-color: green;
+}*/
+
+/**************************************
+******* FONT-SIZE UP/DOWN *************
+**************************************/
+
+#tool-fontsize {
+	position: fixed;
+	/*float: left;*/
+/*		position: static;
+		bottom: 5px;
+		display: inline-block;*/
+	background-color: #fff;
+	float: right;
+	right: 2%;
+	top: 8%;
+	font-family: "HKGrotesk";
+	/*font-weight: 400;*/
+	width: auto;
+	height: auto;
+}
+
+#sizeUp #button2,#sizeDown #button1 {
+	position: absolute;
+	background-color: transparent;
+	border: 0;
+	cursor: pointer;
+	font-size: 30px;
+	display: inline-block;
+	float: left;
+	width: auto;
+	height: auto;
+}
+
+#sizeDown,#letter,#sizeUp {
+	position: absolute;
+	float: left;
+	font-size: 30px;
+}
+
+/**************************************
+******* NEXT AND PREV *****************
+**************************************/
+	.search_nav {
+		/*position: absolute;*/
+		position: fixed;
+		top: 50%;
+	}
+
+	#prev {
+		right: 155px;
+	}
+
+	#next {
+		right: 105px;
+	}
+
+	.search-found {
+		color: black;
+	}
+
+	.search-notfound {
+		color: #BFBFBF;
+	}
+
+	.highlight {
+		background-color: #BFBFBF;
+	}
+
+	#live-search {
+		top: 10%;
+		padding-right: 30%;
+		background-color: violet;
+		right: 0;
+	/*		position: static;
+			bottom: 5px;
+			display: inline-block;*/
+		position: fixed;
+	}
+
+	#buttons_wrapper{
+		display: none;
+	}
+
+
+/*******AUTOCOMPLETE*********
+********LIST OF ITEMS*******/
+	.ui-autocomplete {
+		list-style: none;
+		position: fixed;
+		padding-top: 2px;
+		-webkit-padding-start: 0px;
+	}
+
+	.ui-menu-item {
+		background-color: red;
+	}
+
+	.ui-menu-item:focus {
+		background-color: yellow;
+	}
+
+
+/*************************************
+******* REFERENCE BOX ****************
+*************************************/
+    .in-text {
+    	background-color: #C7C7BB;
+    }
+
+/********THE BOX**********************/
+    .tip {
+    	background-color: yellow;
+    	/*opacity: 0.9;*/
+    	-webkit-filter: drop-shadow(2px 2px 10px rgba(0,0,0,0.9));
+     	filter: drop-shadow(2px 2px 10px rgba(0,0,0,0.9));
+      	/*-webkit-filter: blur(5px);
+      	filter: blur(5px);*/
+    	font-size: 14px;
+    	max-width: 25%;
+    	/*overflow: scroll;*/
+    	padding: 2px 7px;
+    	border: 1px solid black;
+    	border-radius: 5px;
+    	position: absolute;
+    	right: 0;
+    }
+
+/********THE TEXT*********************/
+    .tip p {
+      margin: 0;
+    }
+
+/********THE X BUTTON******************/
+    #x {
+    	position: inherit;
+    	right: -6px;
+    	top: -6px;
+    	border-radius: 9px;
+    	border: 1px solid red;
+    	background-color: orange;
+    	padding: 0 4px;
+    	text-align: center;
+    }
+
+
+
+    #x a {
+    	text-decoration: none;
+    	color: black;
+    }
+
+
+    .keyword {
+    	color: #454545;
+        /*text-shadow: 1px 1px #292929;
+       /*-webkit-text-fill-color: #FF9980;  /*Will override color (regardless of order) */
+       /*-webkit-text-stroke-width: .3px;
+       -webkit-text-stroke-color: #1F1F1F;	/*font-weight: bold !important;
+    	font-family: "Baskerville";
+    	border-radius: 20%;
+        background-color: #DEDEDE;
+        box-shadow:
+            0px 0px 60px 0px #BEBEBE, 
+            0 0 0px 0px #DEDEDE;*/
+
+    	background: 
+    	-webkit-linear-gradient(#FF9980, #292929);
+    	-webkit-background-clip: text;
+    	-webkit-text-fill-color: transparent;
+    }
+
+/********CITATIONS************************/
+
+	button {
+		/*display: block;*/
+	}
+
+    #tools {
+	top: 2%;
+	right: 1%;
+		/*position: static;
+		bottom: 5px;
+		display: inline-block;*/
+    position: fixed;
+    }
+
+    .full-citation {
+      text-align: left;
+      word-wrap: break-word;
+      background-color: yellow;
+      min-height: 6em;
+      width: 95%;
+      max-width: 95%;
+      margin-top: 1%;
+      margin-left: 1%;
+      margin-bottom: 1%
+
+    }
+
+    #citation-box {
+      top: 10%;
+      right: 1%;
+      position: fixed;
+    /*
+      position: absolute;
+      right: 2%;
+    */
+      border: 1px solid black;
+      border-radius: 5px;
+      background-color: #C7C7BB;
+      width: 30%;
+      min-height: 15%;
+    }
+
+/********ON SUCCESFUL COPY****************/
+    .confirmation {
+    background-color: green;
+    display: inline;
+    margin-left: 5%;
+    /*margin: auto;*/
+    }
