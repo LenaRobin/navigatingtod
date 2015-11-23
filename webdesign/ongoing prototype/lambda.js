@@ -99,23 +99,27 @@ $(document).ready(function(){
 
 
 
-////ON KEYUP DO THE FOLLOWING THINGS
+////ON KEYPRESS DO THE FOLLOWING THINGS
 	// $('#filter').on('keyup keydown', function(e){
 	$('#filter').keypress(function(e){
 		
 		////////ON ENTER GO TO THE FIRST INSTENCE
 		if(e.keyCode == 13){
 			e.preventDefault();	
-			asdf();
-			$(this).trigger(toNext());	///// -----> shift attention to next
-			// location.href="#hit0";
-			console.log('jbh');
+			searchAndHighlight();
+			toNext();
+			// location.href="#hit"+counter;
+			$("#next").trigger('focus', function() {
+				// location.href="#hit1";
+				$('#next').trigger('focus');
+			});
         	// $(this).attr('href', '#hit'+counter);
         	// $('#prev').attr('href', '#hit'+(counter-2));
 
 			// return false;
 		};
 
+////////ON ESC ESXIT THE SEARCH
 		if (e.keyCode == 27){
 			cancelSearch();
 			clearAllHighlights();
@@ -123,112 +127,121 @@ $(document).ready(function(){
 			$('#search_ui').css('display', 'none');
 			$('#buttons_wrapper').css('display', 'none');
 			// console.log('ASDFGHJK');
-			return false;
+			// return false;
 		};
 		
+		// if ($('#next').focus()) {
+		// 	$(this).keypress(function(e){
+		// 		if (e.keyCode == 13) {
+		// 			e.preventDefault;
+		// 			$('#next').trigger('focus');
+		// 		}
+		// 	});
+		// };
 
 
 ////////RETRIEVE THE INPUT FIELD TEXT AND RESET THE COUNT TO ZERO
 
 //.not('#menu', '#info-box', '#citation-box', '.tip', '#tool-fontsize', '#buttons_wrapper')
 		
-		function asdf() {
-	////////IF THE ELEMENT DOES NOT CONTAIN THE TEXT PHRASE FADE IT OUT
-			$('h1, h2, h3, p, div, ol, a').not('.not').each(function(){
-				var filter = $('#filter').val();
-				// if ($(this).text().search(new RegExp(filter, 'i') < 0)) {
-				if ($(this).text().indexOf(filter) >= 0) {
-					$(this).removeClass('search-notfound');
-					$(this).addClass('search-found');
-					// console.log("fghvbjkn");
-					$('#main').unhighlight();
-	        		$('#main').highlight(filter);
-				} else {
-					$(this).addClass('search-notfound');
-					$(this).removeClass('search-found');
-				}
+	function searchAndHighlight() {
+////////IF THE ELEMENT DOES NOT CONTAIN THE TEXT PHRASE FADE IT OUT
+		// $('h1, h2, h3, p, div, ol, a').each(function(){
+		$('.section > h2, .section > p, .section > ol > li, .section > span, .subchapter > h3, .subchapter > p, .subchapter > ol > li, .subchapter > span, blockquote > *, .references > h3, .references > p').each(function(){
+			var filter = $('#filter').val();
+			// if ($(this).text().search(new RegExp(filter, 'i') < 0)) {
+			if ($(this).text().indexOf(filter) >= 0) {
+				$(this).removeClass('search-notfound');
+				$(this).addClass('search-found');
+				// console.log("fghvbjkn");
+				$(this).unhighlight();
+        		$(this).highlight(filter);
+			} else {
+				$(this).addClass('search-notfound');
+				$(this).removeClass('search-found');
+			}
 
 
-	 ////////HIDE CANCEL BUTTON WHEN NO INPUT
-				if (0 < filter.length) {
-				//var elem = $('<div id="buttons_wrapper"><a href="#" class="search_nav" id="prev">PREV</a><a href="#" class="search_nav" id="next">NEXT</a></div>');
-				//$('#live-search').append(elem);
-					// filter active
-					$('#search_ui').css('display', 'block');
-					$('#buttons_wrapper').css('display', 'block');
-				} else {
-					$('#search_ui').css('display', 'none');
-					$('#buttons_wrapper').css('display', 'none');
-					// cancelSearch();
-				}
+ ////////HIDE CANCEL BUTTON WHEN NO INPUT
+			if (0 < filter.length) {
+			//var elem = $('<div id="buttons_wrapper"><a href="#" class="search_nav" id="prev">PREV</a><a href="#" class="search_nav" id="next">NEXT</a></div>');
+			//$('#live-search').append(elem);
+				// filter active
+				$('#search_ui').css('display', 'block');
+				$('#buttons_wrapper').css('display', 'block');
+			} else {
+				$('#search_ui').css('display', 'none');
+				$('#buttons_wrapper').css('display', 'none');
+				// cancelSearch();
+			}
 
-	////////HIDE CANCEL BUTTON WHEN CLICKED
-				$('#search_ui').click(function() {
-					$(this).css("display", "none");
-					$('#buttons_wrapper').css('display', 'none');
-					$("#filter").val('');
-					cancelSearch();
-				});
+////////HIDE CANCEL BUTTON WHEN CLICKED
+			$('#search_ui').click(function() {
+				$(this).css("display", "none");
+				$('#buttons_wrapper').css('display', 'none');
+				$("#filter").val('');
+				cancelSearch();
 			});
+		});
 
 
-	////////GENERATE IDs FOR ALL HIGHLIGHTED HITS
-	        $('.highlight').each(function(number) {
-	        	maxCount = number;
-	       		$("#filter-count").show().text("Number of Hits = "+maxCount);
-	        	$(this).attr('id', 'hit'+number);
-	        });
-		}	
+////////GENERATE IDs FOR ALL HIGHLIGHTED HITS
+        $('.highlight').each(function(number) {
+        	maxCount = number;
+       		$("#filter-count").show().text("Number of Hits = "+maxCount);
+        	$(this).attr('id', 'hit'+number);
+        });
+	}	
 
-	////////GET THE NUMBER OF HITS
-        var counter = 0;
-        function getHitCount() {
-	    	var i=0;
-    		while ($('#hit'+i).length) {
-    			i++;
-    		} 
-	    	return i;
-        }
+////////GET THE NUMBER OF HITS
+    var counter = 0;
+    function getHitCount() {
+    	var i=0;
+		while ($('#hit'+i).length) {
+			i++;
+		} 
+    	return i;
+    }
 
-        function toNext(n){
-        	counter = n;
-        	if(counter < maxCount){
-        		counter++;
-        	}else{
-        		counter = 0;
-        	}
-	        $('#hit'+counter).css('background-color', 'yellow');
-	       	$('#hit'+(counter-1)).css('background-color', '#BFBFBF');
-        }
+    function toNext(n){
+    	counter = n;
+    	// location.href="#hit"+counter;
+    	if(counter < maxCount){
+    		counter++;
+    	}else{
+    		counter = 0;
+    	}
+        $('#hit'+counter).css('background-color', 'yellow');
+       	$('#hit'+(counter-1)).css('background-color', '#BFBFBF');
+    }
 
 
 ////////ON CLICK GO TO THE NEXT INSTANCE
-        $('#next').click(function() {
-        	console.log('2');
-        	toNext(counter);
-        	$(this).attr('href', '#hit'+counter);
-        	$('#prev').attr('href', '#hit'+(counter-2));
-        });
+    $('#next').click(function() {
+    	toNext(counter);
+    	$(this).attr('href', '#hit'+counter);
+    	$('#prev').attr('href', '#hit'+(counter-2));
+    });
 
-        function toPrev(n) {
-        	counter = n;
-        	if(counter > 0){
-        		counter--;
-        	}else{
-        		counter = maxCount;
-        	}
-        	
-        	$('#hit'+counter).css('background-color', 'yellow');
-        	$('#hit'+(counter+1)).css('background-color', '#BFBFBF');
-        }
+    function toPrev(n) {
+    	counter = n;
+    	if(counter > 0){
+    		counter--;
+    	}else{
+    		counter = maxCount;
+    	}
+    	
+    	$('#hit'+counter).css('background-color', 'yellow');
+    	$('#hit'+(counter+1)).css('background-color', '#BFBFBF');
+    }
 
 ////////ON CLICK GO TO THE PREVIOUS INSTANCE
-        $('#prev').click(function() {
-        	console.log("prev : "+counter);
-        	toPrev(counter);
-        	$(this).attr('href', '#hit'+(counter));
-	        $('#next').attr('href', '#hit'+(counter+2));
-        });
+    $('#prev').click(function() {
+    	console.log("prev : "+counter);
+    	toPrev(counter);
+    	$(this).attr('href', '#hit'+(counter));
+        $('#next').attr('href', '#hit'+(counter+2));
+    });
 		 
 	});
 
@@ -1425,6 +1438,21 @@ $(document).ready(function(){
 	clipboard.on('error', function(e) {
 	    $('.full-citation').prev().append('<div class="confirmation"><br/>Error!</div>');
 	});
+
+//////////////////////
+////SHOW/HIDE KEYWORDS
+//////////////////////
+	$( "#button_keyword" ).click(function(){
+        $("span.importantword").toggleClass("importantword_shown");
+    });
+
+
+
+
+
+
+
+
 });
 
 /*///////////////////////
