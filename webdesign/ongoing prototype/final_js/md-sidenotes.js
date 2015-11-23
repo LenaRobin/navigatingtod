@@ -144,5 +144,5 @@ var initialize = function initialize(options){
 
 };
 
-module.exports = processFootNotes;
+//module.exports = processFootNotes;
 

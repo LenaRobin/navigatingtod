@@ -73,6 +73,10 @@ $(document).ready(function(){
 		});
      });
 
+	if ($('#menu_bar').offset('left') > 20) {
+		$(this).hide();
+	}
+
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 ////SEARCH FUNCTION
@@ -248,1005 +252,7 @@ $(document).ready(function(){
 ////ARRAY OF ALL THE UNIQUE WORDS FOR AUTOCOMPLETE
 
 	var someWords = allWords
-	var allWords = [
-		"20th",
-		"21st",
-		"a",
-		"ability",
-		"about",
-		"above",
-		"Abram",
-		"abstraction",
-		"actions",
-
-		"actors",
-
-		"add",
-
-		"addresses",
-
-		"administrative",
-
-		"aesthetic",
-
-		"against",
-
-		"Agency",
-
-		"all",
-
-		"alliance",
-
-		"also",
-
-		"although",
-
-		"America",
-
-		"an",
-
-		"Ana",
-
-		"analyses",
-
-		"analysis",
-
-		"analyzing",
-
-		"AND",
-
-		"another",
-
-		"antagonize",
-
-		"Antonio",
-
-		"apartheids",
-
-		"apparatus",
-
-		"are",
-
-		"areas",
-
-		"art",
-
-		"as",
-
-		"aspiration",
-
-		"assumes",
-
-		"at",
-
-		"attack",
-
-		"attention",
-
-		"author",
-
-		"Autonomy",
-
-		"be",
-
-		"beginning",
-
-		"Beller",
-
-		"Berry",
-
-		"between",
-
-		"beyond",
-
-		"biopolitical",
-
-		"bloc",
-
-		"Britain",
-
-		"broader",
-
-		"but",
-
-		"by",
-
-		"called",
-
-		"CAPITAL",
-
-		"capitalism",
-
-		"capitalist",
-
-		"carried",
-
-		"Castro",
-
-		"category",
-
-		"centrality",
-
-		"centre",
-
-		"century",
-
-		"certain",
-
-		"change",
-
-		"Chapter",
-
-		"character",
-
-		"characterized",
-
-		"city",
-
-		"class",
-
-		"co",
-
-		"cognitive",
-
-		"cognitivities",
-
-		"Collective",
-
-		"colonial",
-
-		"coloniality",
-
-		"commodification",
-
-		"commodified",
-
-		"concept",
-
-		"concepts",
-
-		"concludes",
-
-		"connection",
-
-		"constitute",
-
-		"contained",
-
-		"contemporary",
-
-		"context",
-
-		"contribute",
-
-		"control",
-
-		"cooperation",
-
-		"corpus",
-
-		"creative",
-
-		"CREATIVITY",
-
-		"critical",
-
-		"critically",
-
-		"criticism",
-
-		"criticizes",
-
-		"critique",
-
-		"culture",
-
-		"current",
-
-		"currently",
-
-		"cusing",
-
-		"dealing",
-
-		"deals",
-
-		"decolonialist",
-
-		"defining",
-
-		"degree",
-
-		"democracies",
-
-		"democracy",
-
-		"democratic",
-
-		"depoliticization",
-
-		"derogation",
-
-		"detects",
-
-		"detriment",
-
-		"devastating",
-
-		"devastation",
-
-		"dichotomy",
-
-		"dictated",
-
-		"different",
-
-		"discourse",
-
-		"discourses",
-
-		"distinctive",
-
-		"distribution",
-
-		"division",
-
-		"divisions",
-
-		"does",
-
-		"domain",
-
-		"domains",
-
-		"dominant",
-
-		"domination",
-
-		"economy",
-
-		"editors",
-
-		"effects",
-
-		"elites",
-
-		"Emmelheinz",
-
-		"emphasizing",
-
-		"Empire",
-
-		"encompassed",
-
-		"end",
-
-		"Engaged",
-
-		"engagement",
-
-		"engineering",
-
-		"entire",
-
-		"entitled",
-
-		"environments",
-
-		"epistemological",
-
-		"equal",
-
-		"era",
-
-		"establish",
-
-		"establishes",
-
-		"establishment",
-
-		"ethnic",
-
-		"ethnicity",
-
-		"ethnocentric",
-
-		"European",
-
-		"Even",
-
-		"exist",
-
-		"expand",
-
-		"exploitation",
-
-		"extent",
-
-		"Factory",
-
-		"faire",
-
-		"feature",
-
-		"fiction",
-
-		"figure",
-
-		"financial",
-
-		"First",
-
-		"fo",
-
-		"focus",
-
-		"focused",
-
-		"for",
-
-		"Fordist",
-
-		"form",
-
-		"former",
-
-		"forms",
-
-		"Foucault",
-
-		"framework",
-
-		"free",
-
-		"from",
-
-		"function",
-
-		"functional",
-
-		"general",
-
-		"generally",
-
-		"gentrification",
-
-		"Geography",
-
-		"ghettoized",
-
-		"global",
-
-		"goes",
-
-		"Gomez",
-
-		"Gordana",
-
-		"GRAY",
-
-		"great",
-
-		"guided",
-
-		"Gómez",
-
-		"Hardt",
-
-		"has",
-
-		"he",
-
-		"hegemonic",
-
-		"hegemony",
-
-		"help",
-
-		"heterogeneous",
-
-		"hierarchies",
-
-		"historical",
-
-		"historicization",
-
-		"huge",
-
-		"idea",
-
-		"ideological",
-
-		"ideologies",
-
-		"Image",
-
-		"implies",
-
-		"imposition",
-
-		"impotence",
-
-		"impotent",
-
-		"in",
-
-		"include",
-
-		"industries",
-
-		"initial",
-
-		"instances",
-
-		"institutions",
-
-		"interpretation",
-
-		"interpretations",
-
-		"into",
-
-		"Introduction",
-
-		"introductory",
-
-		"invested",
-
-		"involved",
-
-		"Irmgard",
-
-		"is",
-
-		"it",
-
-		"its",
-
-		"itself",
-
-		"James",
-
-		"Jonathan",
-
-		"Josephine",
-
-		"Lacan",
-
-		"laissez",
-
-		"large",
-
-		"Latin",
-
-		"led",
-
-		"Leger",
-
-		"legitimization",
-
-		"level",
-
-		"links",
-
-		"Ljubljana",
-
-		"locates",
-
-		"logic",
-
-		"logics",
-
-		"longer",
-
-		"Machine",
-
-		"mainstream",
-
-		"maintaining",
-
-		"majority",
-
-		"manner",
-
-		"Marc",
-
-		"market",
-
-		"mass",
-
-		"meaning",
-
-		"mentioned",
-
-		"merely",
-
-		"Mexico",
-
-		"Michael",
-
-		"Missing",
-
-		"model",
-
-		"modern",
-
-		"modernity",
-
-		"modernization",
-
-		"modernized",
-
-		"monopoly",
-
-		"most",
-
-		"name",
-
-		"nation",
-
-		"necessary",
-
-		"necessity",
-
-		"needs",
-
-		"Negri",
-
-		"neoliberal",
-
-		"Neoliberalism",
-
-		"networked",
-
-		"neutralization",
-
-		"Neutralizing",
-
-		"New",
-
-		"niche",
-
-		"Nikolić",
-
-		"no",
-
-		"normative",
-
-		"not",
-
-		"nullity",
-
-		"obscene",
-
-		"occupies",
-
-		"occurs",
-
-		"OF",
-
-		"on",
-
-		"only",
-
-		"opposite",
-
-		"optation",
-
-		"or",
-
-		"organization",
-
-		"organizing",
-
-		"Other",
-
-		"out",
-
-		"pan",
-
-		"paradigm",
-
-		"paradigmatic",
-
-		"part",
-
-		"partnership",
-
-		"parts",
-
-		"perception",
-
-		"period",
-
-		"periods",
-
-		"periphery",
-
-		"perpetuation",
-
-		"perspective",
-
-		"place",
-
-		"plays",
-
-		"point",
-
-		"points",
-
-		"political",
-
-		"politically",
-
-		"politicized",
-
-		"politics",
-
-		"popular",
-
-		"position",
-
-		"positioning",
-
-		"positions",
-
-		"post",
-
-		"postfordist",
-
-		"Postmodern",
-
-		"power",
-
-		"practices",
-
-		"preceding",
-
-		"precisely",
-
-		"preparation",
-
-		"presented",
-
-		"primarily",
-
-		"principles",
-
-		"private",
-
-		"privileges",
-
-		"process",
-
-		"processes",
-
-		"produce",
-
-		"producing",
-
-		"production",
-
-		"professional",
-
-		"profit",
-
-		"progress",
-
-		"proponents",
-
-		"psychoanalytic",
-
-		"public",
-
-		"publication",
-
-		"publications",
-
-		"racial",
-
-		"radical",
-
-		"radically",
-
-		"rationalization",
-
-		"reconfiguring",
-
-		"reduced",
-
-		"refer",
-
-		"reflection",
-
-		"Regardless",
-
-		"regards",
-
-		"regeneration",
-
-		"region",
-
-		"register",
-
-		"regulation",
-
-		"reinvented",
-
-		"relation",
-
-		"relations",
-
-		"relationship",
-
-		"relying",
-
-		"remain",
-
-		"reorganization",
-
-		"reorganized",
-
-		"reportedly",
-
-		"representation",
-
-		"repressive",
-
-		"reproducing",
-
-		"reproduction",
-
-		"retain",
-
-		"retains",
-
-		"rhetorics",
-
-		"Rog",
-
-		"role",
-
-		"roots",
-
-		"ruling",
-
-		"s",
-
-		"same",
-
-		"Sandi",
-
-		"Santiago",
-
-		"scene",
-
-		"see",
-
-		"sees",
-
-		"sense",
-
-		"separated",
-
-		"separating",
-
-		"Serbia",
-
-		"serving",
-
-		"she",
-
-		"should",
-
-		"significance",
-
-		"similar",
-
-		"Since",
-
-		"Slater",
-
-		"Slovenia",
-
-		"so",
-
-		"social",
-
-		"societies",
-
-		"society",
-
-		"socio",
-
-		"sorts",
-
-		"space",
-
-		"speak",
-
-		"specific",
-
-		"stance",
-
-		"state",
-
-		"still",
-
-		"strategies",
-
-		"strategy",
-
-		"strives",
-
-		"structural",
-
-		"structuralist",
-
-		"structurally",
-
-		"structure",
-
-		"subjected",
-
-		"subjecting",
-
-		"subjects",
-
-		"subversive",
-
-		"such",
-
-		"supernarrative",
-
-		"surpass",
-
-		"surplus",
-
-		"system",
-
-		"takes",
-
-		"taking",
-
-		"Tatlić",
-
-		"temporal",
-
-		"text",
-
-		"texts",
-
-		"than",
-
-		"that",
-
-		"Thatcher",
-
-		"THE",
-
-		"their",
-
-		"then",
-
-		"theoretical",
-
-		"theory",
-
-		"therefore",
-
-		"these",
-
-		"this",
-
-		"those",
-
-		"though",
-
-		"through",
-
-		"title",
-
-		"to",
-
-		"today",
-
-		"topics",
-
-		"total",
-
-		"towards",
-
-		"transcend",
-
-		"transcends",
-
-		"transformation",
-
-		"transforming",
-
-		"transition",
-
-		"treated",
-
-		"treats",
-
-		"try",
-
-		"turning",
-
-		"ultimately",
-
-		"unbalanced",
-
-		"Unconscious",
-
-		"undergoing",
-
-		"urban",
-
-		"use",
-
-		"utilization",
-
-		"vagueness",
-
-		"vast",
-
-		"view",
-
-		"viewed",
-
-		"views",
-
-		"Vilenica",
-
-		"was",
-
-		"way",
-
-		"we",
-
-		"wealth",
-
-		"well",
-
-		"West",
-
-		"wherein",
-
-		"whether",
-
-		"which",
-
-		"who",
-
-		"whose",
-
-		"will",
-
-		"wish",
-
-		"with",
-
-		"within",
-
-		"work",
-
-		"world",
-
-		"would",
-
-		"yet",
-
-		"Yugoslavia",
-
-		"ZONES",
-
-		"Šefik",
-
-		"Žižek"
-
+	var allWords = ["20th", "21st", "a", "ability", "about", "above", "Abram", "abstraction", "actions", "actors", "add", "addresses", "administrative", "aesthetic", "against", "Agency", "all", "alliance", "also", "although", "America", "an", "Ana", "analyses", "analysis", "analyzing", "AND", "another", "antagonize", "Antonio", "apartheids", "apparatus", "are", "areas", "art", "as", "aspiration", "assumes", "at", "attack", "attention", "author", "Autonomy", "be", "beginning", "Beller", "Berry", "between", "beyond", "biopolitical", "bloc", "Britain", "broader", "but", "by", "called", "CAPITAL", "capitalism", "capitalist", "carried", "Castro", "category", "centrality", "centre", "century", "certain", "change", "Chapter", "character", "characterized", "city", "class", "co", "cognitive", "cognitivities", "Collective", "colonial", "coloniality", "commodification", "commodified", "concept", "concepts", "concludes", "connection", "constitute", "contained", "contemporary", "context", "contribute", "control", "cooperation", "corpus", "creative", "CREATIVITY", "critical", "critically", "criticism", "criticizes", "critique", "culture", "current", "currently", "cusing", "dealing", "deals", "decolonialist", "defining", "degree", "democracies", "democracy", "democratic", "depoliticization", "derogation", "detects", "detriment", "devastating", "devastation", "dichotomy", "dictated", "different", "discourse", "discourses", "distinctive", "distribution", "division", "divisions", "does", "domain", "domains", "dominant", "domination", "economy", "editors", "effects", "elites", "Emmelheinz", "emphasizing", "Empire", "encompassed", "end", "Engaged", "engagement", "engineering", "entire", "entitled", "environments", "epistemological", "equal", "era", "establish", "establishes", "establishment", "ethnic", "ethnicity", "ethnocentric", "European", "Even", "exist", "expand", "exploitation", "extent", "Factory", "faire", "feature", "fiction", "figure", "financial", "First", "fo", "focus", "focused", "for", "Fordist", "form", "former", "forms", "Foucault", "framework", "free", "from", "function", "functional", "general", "generally", "gentrification", "Geography", "ghettoized", "global", "goes", "Gomez", "Gordana", "GRAY", "great", "guided", "Gómez", "Hardt", "has", "he", "hegemonic", "hegemony", "help", "heterogeneous", "hierarchies", "historical", "historicization", "huge", "idea", "ideological", "ideologies", "Image", "implies", "imposition", "impotence", "impotent", "in", "include", "industries", "initial", "instances", "institutions", "interpretation", "interpretations", "into", "Introduction", "introductory", "invested", "involved", "Irmgard", "is", "it", "its", "itself", "James", "Jonathan", "Josephine", "Lacan", "laissez", "large", "Latin", "led", "Leger", "legitimization", "level", "links", "Ljubljana", "locates", "logic", "logics", "longer", "Machine", "mainstream", "maintaining", "majority", "manner", "Marc", "market", "mass", "meaning", "mentioned", "merely", "Mexico", "Michael", "Missing", "model", "modern", "modernity", "modernization", "modernized", "monopoly", "most", "name", "nation", "necessary", "necessity", "needs", "Negri", "neoliberal", "Neoliberalism", "networked", "neutralization", "Neutralizing", "New", "niche", "Nikolić", "no", "normative", "not", "nullity", "obscene", "occupies", "occurs", "OF", "on", "only", "opposite", "optation", "or", "organization", "organizing", "Other", "out", "pan", "paradigm", "paradigmatic", "part", "partnership", "parts", "perception", "period", "periods", "periphery", "perpetuation", "perspective", "place", "plays", "point", "points", "political", "politically", "politicized", "politics", "popular", "position", "positioning", "positions", "post", "postfordist", "Postmodern", "power", "practices", "preceding", "precisely", "preparation", "presented", "primarily", "principles", "private", "privileges", "process", "processes", "produce", "producing", "production", "professional", "profit", "progress", "proponents", "psychoanalytic", "public", "publication", "publications", "racial", "radical", "radically", "rationalization", "reconfiguring", "reduced", "refer", "reflection", "Regardless", "regards", "regeneration", "region", "register", "regulation", "reinvented", "relation", "relations", "relationship", "relying", "remain", "reorganization", "reorganized", "reportedly", "representation", "repressive", "reproducing", "reproduction", "retain", "retains", "rhetorics", "Rog", "role", "roots", "ruling", "s", "same", "Sandi", "Santiago", "scene", "see", "sees", "sense", "separated", "separating", "Serbia", "serving", "she", "should", "significance", "similar", "Since", "Slater", "Slovenia", "so", "social", "societies", "society", "socio", "sorts", "space", "speak", "specific", "stance", "state", "still", "strategies", "strategy", "strives", "structural", "structuralist", "structurally", "structure", "subjected", "subjecting", "subjects", "subversive", "such", "supernarrative", "surpass", "surplus", "system", "takes", "taking", "Tatlić", "temporal", "text", "texts", "than", "that", "Thatcher", "THE", "their", "then", "theoretical", "theory", "therefore", "these", "this", "those", "though", "through", "title", "to", "today", "topics", "total", "towards", "transcend", "transcends", "transformation", "transforming", "transition", "treated", "treats", "try", "turning", "ultimately", "unbalanced", "Unconscious", "undergoing", "urban", "use", "utilization", "vagueness", "vast", "view", "viewed", "views", "Vilenica", "was", "way", "we", "wealth", "well", "West", "wherein", "whether", "which", "who", "whose", "will", "wish", "with", "within", "work", "world", "would", "yet", "Yugoslavia", "ZONES", "Šefik", "Žižek"
 	];
 
 	
@@ -1278,13 +284,6 @@ $(document).ready(function(){
 // END SCRIPT SEARCH
 //––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 //––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-
-
-
-
-
-
-
 
 
 
@@ -1429,31 +428,145 @@ $(document).ready(function(){
 	    $('.confirmation').fadeOut(3000);
 	});
 
-	// clipboard.on('success', function(e) {
-	//     $('.full-citation').append('<div class="confirmation">YXCVBN</div>');
-	//     $('.confirmation').fadeOut(3000);
-	//     //e.clearSelection();
-	// });
-
 	clipboard.on('error', function(e) {
 	    $('.full-citation').prev().append('<div class="confirmation"><br/>Error!</div>');
 	});
 
-//////////////////////
-////SHOW/HIDE KEYWORDS
-//////////////////////
-	$( "#button_keyword" ).click(function(){
-        $("span.importantword").toggleClass("importantword_shown");
-    });
+// //////////////////////
+// ////SHOW/HIDE KEYWORDS
+// //////////////////////
+// 	if ($('#content').text().indexOf('capital') >= 0) {
+// 		$(this).removeClass('search-notfound')
+
+
+	// $( "#button_keyword" ).click(function(){
+ //        $("span.importantword").toggleClass("importantword_shown");
+ //    });
 
 
 
 
+////////////////////
+////ARROW NAVIGATION
+////////////////////
+	var toppyDiv = 0;
+	var sValues = [];
+	var counter = 0;
+
+	$('.section').each(function () {
+	    var scrValue = $(this).offset().top;
+	    console.log(scrValue);
+	    sValues.push(scrValue);
+	    $(this).attr("data-scroll", scrValue);
+	});
+
+	$(".nav-tabs h2 a").each(function(ind){
+	    $(this).attr("id", "hid"+(ind+1)); 
+	    $(this).attr("data-scr", sValues[ind]);
+	});
+
+	$(".nav-tabs h2 a").on('click', function(e){
+	    e.preventDefault();
+	    var number = $(this).attr("data-scr");
+	    var index = $(this).attr("id");
+	    scrollIt(number, index);
+	});
+
+	function scrollIt(number, index){
+	    $('html, body').animate({
+	            scrollTop: number })    
+	    }
+
+	$("#down").on('click', function (e){
+	    e.preventDefault();
+	    if(counter >= sValues.length - 1){
+	    $(this).css("display","none");
+	  	}else{
+	      $(this).css("display","block");
+	  	}
+    	if($('.current').next('div.section').length > 0) {
+            var $next = $('.current').next('.section');
+            var top = $next.offset().top ;
+            $('.current').removeClass('current toppy');
+            $(function () {
+                $next.addClass('current toppy');
+                $('html, body').animate({
+	                scrollTop: top
+                });
+            });
+	          
+        }else{
+            if(counter == 0){
+                var $next = $('.section:first');
+                var top = $next.offset().top ;
+                $(function () {
+                    $next.addClass('current toppy');
+                    $('html, body').animate({
+                        scrollTop: top
+                    });
+                });	                
+            }     
+        }
+	    counter++;
+	});
+
+	$("#up").on('click', function (e){
+	    e.preventDefault();
+	    $("#down").css("display","block");
+	    if( $('.current').prev('.section').length){
+	        var $prev = $('.current').prev('.section');
+	        var top = $prev.offset().top;
+
+	        $('.current').removeClass('current toppy');
+
+	        $(function () {
+	          $prev.addClass('current toppy');
+	            $('html, body').animate({
+	                scrollTop: top
+	            }, 'slow');
+	         });
+	    }else{
+	         $('.current').removeClass('current');
+	        $('html, body').animate({
+	                scrollTop: 0
+	            }, 'slow');
+	    }
+	    counter--;
+	});
+
+
+	function hideShowLinks() {
+	    $('.section').each(function (k, v) {
+	        var self = $(this);
+	        if (self.hasClass('toppy')) {
+	            toppyDiv = k;
+	        }
+	    });
+	}
+
+	$(window).scroll(function () {
+	    hideShowLinks();
+	});
 
 
 
 
-});
+/////////////
+////SIDENOTES
+/////////////
+	var tic = 1;
+	$('#chapter8 ol li').each(function(){
+		$('#fn'+tic).each(function(){
+			var anchorposition = $('#fnref'+tic).offset().top;
+			$(this).offset({top: anchorposition});
+			tic++;
+			console.log(tic+': '+anchorposition);
+		});
+	});
+
+
+}); // <-- document ready
+
 
 /*///////////////////////
 ON RESIZE DO THESE THINGS
@@ -1462,7 +575,7 @@ $(window).resize(function() {
 ////////////////////////////////////
 ////SIDENOTES = BOX WHEN WIDTH SMALL
 ////////////////////////////////////
-	if ($(window).width() <= "400") {	//SUBSTITUTE '400' WITH THE DESIRED MINIMUM SIZE
+	if ($(window).width() <= "500") {	//SUBSTITUTE '400' WITH THE DESIRED MINIMUM SIZE
 		$('#chapter8').hide();
 
 		$('.footnoteRef').click(function(ev) {
@@ -1482,7 +595,15 @@ $(window).resize(function() {
 		});
 	}else{
 		$('.footnoteRef').unbind("click");
-		$('#footnotes, #notes').show();
+		$('#chapter8').show();
 	}
 });
+
+
+
+
+
+
+
+
 

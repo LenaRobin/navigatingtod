@@ -268,6 +268,17 @@
 	}
 
 
+/****************************
+******** ARROWS *************
+****************************/
+
+#arrows {
+	position: fixed;
+	right: 1%;
+	top: 50%;
+}
+
+
 /*******AUTOCOMPLETE*********
 ********LIST OF ITEMS*******/
 	.ui-autocomplete {
@@ -405,3 +416,40 @@
     margin-left: 5%;
     /*margin: auto;*/
     }
+
+
+
+/********************************************
+********FOOT-/SIDENOTES**********************
+********************************************/
+#chapter8 {
+	height: 100%;
+	width: 20%;
+	position: absolute;
+	right: 3%;
+	top: 1%;
+	background-color: lime;
+	border: 1px dashed black;
+}
+
+#chapter8 ol {
+	padding-left: 0%;
+}
+
+/*******INDIVIDUAL BOXES*******************/
+#chapter8 ol li {
+	position: relative;
+	background-color: turquoise;
+	border: 1px solid black;
+	/*min-height:1em;*/
+	min-height: 3em;
+	/*overflow: scroll;*/
+}
+
+#chapter8 ol li p {
+	margin: 0;
+}
+
+
+
+/********************************************/

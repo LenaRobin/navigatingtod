@@ -77,7 +77,6 @@ a {
 	color: inherit;
 }
 a:hover {
-	color: #f30;
 }
 
 
@@ -95,7 +94,6 @@ General website structure */
 /* Body */
 body {
 	margin: 0;
-	overflow-y: scroll;
 	overflow-x: hidden;
 	width: 100%;
 	text-rendering: optimizeSpeed;
@@ -178,7 +176,6 @@ The menu on left (called pushmenu) gives the table of content but also pushes th
 /* pushmenu-left: class added to make it go off screen */
 .pushmenu-left {
 	left: -20%;
-	overflow-y: scroll;
 	overflow-x: hidden;
 }
 /* pushmenu-open: class to make it slide from left */
@@ -204,7 +201,6 @@ The menu on left (called pushmenu) gives the table of content but also pushes th
 
 .pushmenu a {
 	text-decoration: none;
-	margin: 0;
 }
 
 /* The speed of pushmenu appearing */
@@ -233,7 +229,6 @@ The way the user actives the pushmenu */
 
 #nav_list {
     cursor: pointer;
-    background-color: orange;
     height: 100%;
     width: 2%;
     position: fixed;
@@ -242,7 +237,6 @@ The way the user actives the pushmenu */
 #verticalScroll {
 	width: 20px;
 	height: 0;
-	background-color: red;
 	opacity: .7;
 }
 
@@ -275,14 +269,18 @@ Table of content is contained in pushmenu, it shows the different parts of the b
 	font-size: 16px;
 	line-height: 17px;
 	width: 90%;
-	border-radius: 5px;
+	border-radius: 8px;
 	-webkit-margin-before: 0;
 	-webkit-margin-after: 0;
 	-webkit-margin-start: 0;
 	-webkit-margin-end: 0;
-	margin-bottom: 4px;
+	margin-bottom: 10px;
 	margin-top: 10px;
 	margin-right: 10px;
+    border:1px solid  #ff4625;
+     background-color:rgba(255, 255, 255, 0.22);
+    padding: 5px;
+
 }
 
 /* Table of contents: title for sub-parts (subtitles) */
@@ -295,7 +293,6 @@ Table of content is contained in pushmenu, it shows the different parts of the b
 	-webkit-margin-start: 0;
 	-webkit-margin-end: 0;
 	margin-left: 20px;
-	margin-bottom: 4px;
 	line-height: 14px;
 	padding-right: 10px;
 }
@@ -303,14 +300,14 @@ Table of content is contained in pushmenu, it shows the different parts of the b
 	content: '● ';
 	position: relative;
 	bottom: .1em;
+    padding-left: 3px;
 }
 
 /* Table of contents: when the user goes over a part of the book */
-.pushmenu a:hover {
-	background-color: #ff3700;
-	color: #fff;
-	border-radius: 5px;
-	padding: 2px;
+.pushmenu h3:hover, .pushmenu h2:hover {
+    background-color:#ff4625;
+    color: white;
+    z-index: 999999999999;
 }
 
 
@@ -318,49 +315,47 @@ Table of content is contained in pushmenu, it shows the different parts of the b
 
 /* Interactions: horizontal Scrollbar for the chapters */
 .horizScroll, .subScroll {
-    opacity: .3;
     width: 0%;
     height: 100%;
     max-width: 100%;
     position: absolute;
     top: 0;
+    padding: 0;
 }
 
 .horizScroll {
-    background-color: gray;
+   background-color: rgba(255, 69, 0, 0.23);
+    	border-radius: 5px;
+    margin-left: -5px;
 }
 
+
 .subScroll {
-    background-color: black;
+    border-radius: 5px;
+    background-color: rgba(255, 69, 0, 0.23);
 }
 
 #toc_wrapper {
-    margin: 0 0 0 2%;
-    padding: 0;
-    left: 0%;
     cursor: pointer;
-    width: 98%;
-    overflow: 
+    padding: 2px;
 }
 
 #toc_wrapper h2 {
     font-size: 1em;
     position: relative;
-    width: 100%;
-    min-height: 1em;
-    border-top: 1px dashed black;
-    padding: 1% 0%;
+    width: 95%;
     margin: 0;
+    margin-bottom: 3px;
+    margin-top: 3px;
+
 }
 #toc_wrapper h3 {
     min-height: 1em;
-    width: 90%;
-    margin: 0%;
-    padding-bottom: 1%;
-    margin-left: 10%;
+    margin-left: 20px;
     font-size: .8em;
     position: relative;
     font-weight: normal;
+    width: 220px;
 }
 
 #toc_wrapper a {
@@ -380,7 +375,6 @@ Table of content is contained in pushmenu, it shows the different parts of the b
 }
 
 #toc_wrapper h2:hover, #toc_wrapper h3:hover {
-    background-color: aqua;
 }
 
 
@@ -524,6 +518,8 @@ b {
 	color: #171717;
 	background-color: #fff;
 	overflow-x: hidden;
+	margin-left: 20px;
+
 }
 
 /* ?? */
@@ -548,7 +544,6 @@ b {
 	font-size: 1.2em;
 	line-height: 1.6em;
 	color: #1a1a1a;
-	margin: 0;
 	overflow-x: hidden;
 }
 
@@ -596,11 +591,21 @@ Defines the typography for texts in reader /
 	font-family: "Georgia";
 	font-size: 4em;
 	line-height: 1em;
+    
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    overflow-y: hidden;
 }
 
 /* Title of sub-part (subtitle) */
 .section h3 {
-	font-size: 24px;
+	font-size: 3em;
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
 }
 
 /* Font weight */
@@ -612,6 +617,8 @@ Defines the typography for texts in reader /
 .section p {
 	font-size: 1.6em;
 	line-height: 1.7em;
+    padding-left:-10px;
+   margin-left:-10px;
 }
 
 /* Font-size for the informations: !! do not change the units (em) to pixels !! */
@@ -668,8 +675,10 @@ The list of references that writers have used to write their texts, appears in t
 
 .references {
 	font-size: .7em;
-	line-height: 1.4em;
 	text-indent: 20px;
+    height: auto;
+    margin-bottom: 100px;
+    margin-top:40px;
 }
 
 /***************************
@@ -1269,7 +1278,17 @@ input:hover {
 }
 
 .ui-menu-item {
-    background-color: red;
+    background-color: white;
+    cursor: pointer;
+	-webkit-box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+	box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+    padding-left:3px;
+}
+
+.ui-menu-item:hover{
+	background-color: #FFA;
+	color: #000;
 }
 
 .ui-menu-item:focus {
@@ -1479,15 +1498,17 @@ Visual explanation of the deepth of scrolling into the text/how far we are by sc
 /* #menu_bar_scroll: vertical scrollbar*/
 #menu_bar_scroll {	
     cursor: pointer;
-    background-color: magenta;
-    opacity: .3;
+    background-color: #ff3b22;
+    opacity: .7;
     height: 0%;
     /*max-height: 100%;*/
-    width: 2%;
+    width: 5px;
     position: fixed;	
 }
 
-
+.pushmenu-left .pushmenu-open #menu_bar_scroll {
+    display: none;
+}
 
 
 
@@ -1602,7 +1623,6 @@ Changes in the code that will occur for those devices */
 
 .pushmenu-left.pushmenu-open,.pushmenu-left2.pushmenu-open {
 	left: 0;
-	z-index: 1.0E+15;
 /*  border-right: solid 1px black;*/
 	border-right: solid 0 #000;
 	-webkit-box-shadow: 0 10px 15px rgba(0,0,0,0.2);
