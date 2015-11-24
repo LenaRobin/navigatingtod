@@ -4,12 +4,13 @@ $(document).ready(function(){
 ////PUSH MENU ON THE LEFT
 //////////////////////////////////////////////////////////////////////////////////
 	$menuLeft = $('.pushmenu-left');
-	$nav_list = $('#menu_bar');
+	$menu_bar = $('.toggle_menu');
 	
-	$nav_list.click(function() {
-		$(this).toggleClass('active');
+	$menu_bar.click(function() {
+		// $(this).toggleClass('active');
 		$('.pushmenu-push').toggleClass('pushmenu-push-toright');
 		$menuLeft.toggleClass('pushmenu-open');
+		$(this).toggleClass('close_menu');
 	});
 
 //////////////////////////////////////////////////////////////////////////////////
@@ -77,6 +78,7 @@ $(document).ready(function(){
 ////SEARCH FUNCTION
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 	var maxCount;
+	var counter = 0;
 ////REMOVES ALL THE HIGHLIGHTS
 	function clearAllHighlights(){
 		for (var i=0; i<maxCount; i++){
@@ -99,23 +101,20 @@ $(document).ready(function(){
 
 
 ////ON KEYPRESS DO THE FOLLOWING THINGS
-	// $('#filter').on('keyup keydown', function(e){
 	$('#filter').keypress(function(e){
-		
-		////////ON ENTER GO TO THE FIRST INSTENCE
+////////ON ENTER GO TO THE FIRST INSTENCE
 		if(e.keyCode == 13){
-			e.preventDefault();	
+			// clearAllHighlights();
+			// cancelSearch();
+	    	e.preventDefault();
+	    	$('.highlight').each(function() {
+    			$(this).remove();
+    		});	
 			searchAndHighlight();
-			toNext();
-			// location.href="#hit"+counter;
+			toNext(counter);
 			$("#next").trigger('focus', function() {
-				// location.href="#hit1";
 				$('#next').trigger('focus');
 			});
-        	// $(this).attr('href', '#hit'+counter);
-        	// $('#prev').attr('href', '#hit'+(counter-2));
-
-			// return false;
 		};
 
 ////////ON ESC ESXIT THE SEARCH
@@ -125,27 +124,15 @@ $(document).ready(function(){
 			$(this).blur();
 			$('#search_ui').css('display', 'none');
 			$('#buttons_wrapper').css('display', 'none');
-			// console.log('ASDFGHJK');
-			// return false;
 		};
-		
-		// if ($('#next').focus()) {
-		// 	$(this).keypress(function(e){
-		// 		if (e.keyCode == 13) {
-		// 			e.preventDefault;
-		// 			$('#next').trigger('focus');
-		// 		}
-		// 	});
-		// };
+
+	});
 
 
-////////RETRIEVE THE INPUT FIELD TEXT AND RESET THE COUNT TO ZERO
 
-//.not('#menu', '#info-box', '#citation-box', '.tip', '#tool-fontsize', '#buttons_wrapper')
-		
+	
 	function searchAndHighlight() {
 ////////IF THE ELEMENT DOES NOT CONTAIN THE TEXT PHRASE FADE IT OUT
-		// $('h1, h2, h3, p, div, ol, a').each(function(){
 		$('.section > h2, .section > p, .section > ol > li, .section > span, .subchapter > h3, .subchapter > p, .subchapter > ol > li, .subchapter > span, blockquote > *, .references > h3, .references > p').each(function(){
 			var filter = $('#filter').val();
 			// if ($(this).text().search(new RegExp(filter, 'i') < 0)) {
@@ -193,7 +180,6 @@ $(document).ready(function(){
 	}	
 
 ////////GET THE NUMBER OF HITS
-    var counter = 0;
     function getHitCount() {
     	var i=0;
 		while ($('#hit'+i).length) {
@@ -203,13 +189,16 @@ $(document).ready(function(){
     }
 
     function toNext(n){
+    	// clearAllHighlights();
+    	// cancelSearch();
     	counter = n;
-    	// location.href="#hit"+counter;
     	if(counter < maxCount){
     		counter++;
     	}else{
     		counter = 0;
     	}
+    	location.href="#hit"+counter;
+    	$('#next').focus();
         $('#hit'+counter).css('background-color', 'yellow');
        	$('#hit'+(counter-1)).css('background-color', '#BFBFBF');
     }
@@ -218,8 +207,6 @@ $(document).ready(function(){
 ////////ON CLICK GO TO THE NEXT INSTANCE
     $('#next').click(function() {
     	toNext(counter);
-    	$(this).attr('href', '#hit'+counter);
-    	$('#prev').attr('href', '#hit'+(counter-2));
     });
 
     function toPrev(n) {
@@ -229,20 +216,17 @@ $(document).ready(function(){
     	}else{
     		counter = maxCount;
     	}
-    	
+    	location.href="#hit"+counter;
+    	$('#prev').focus();
     	$('#hit'+counter).css('background-color', 'yellow');
     	$('#hit'+(counter+1)).css('background-color', '#BFBFBF');
     }
 
 ////////ON CLICK GO TO THE PREVIOUS INSTANCE
     $('#prev').click(function() {
-    	console.log("prev : "+counter);
     	toPrev(counter);
-    	$(this).attr('href', '#hit'+(counter));
-        $('#next').attr('href', '#hit'+(counter+2));
     });
 		 
-	});
 
 ////ARRAY OF ALL THE UNIQUE WORDS FOR AUTOCOMPLETE
 
@@ -268,11 +252,6 @@ $(document).ready(function(){
 	$("#filter").autocomplete({
 		source: someWords
 	});
-
-
-
-
-
 
 //––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 //––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
@@ -448,7 +427,6 @@ $(document).ready(function(){
 
 	$('.section').each(function () {
 	    var scrValue = $(this).offset().top;
-	    console.log(scrValue);
 	    sValues.push(scrValue);
 	    $(this).attr("data-scroll", scrValue);
 	});
@@ -553,7 +531,6 @@ $(document).ready(function(){
 			var anchorposition = $('#fnref'+tic).offset().top;
 			$(this).offset({top: anchorposition});
 			tic++;
-			console.log(tic+': '+anchorposition);
 		});
 	});
 
