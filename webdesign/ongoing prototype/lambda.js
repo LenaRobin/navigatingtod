@@ -1,9 +1,4 @@
 $(document).ready(function(){
-//––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-//––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-//SCRIPT FROM THE SEARCH JS FILE
-//––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-//––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
 //////////////////////////////////////////////////////////////////////////////////
 ////PUSH MENU ON THE LEFT
@@ -73,9 +68,9 @@ $(document).ready(function(){
 		});
      });
 
-	if ($('#menu_bar').offset('left') > 20) {
-		$(this).hide();
-	}
+	// if ($('#menu_bar').offset('left') > 20) {
+	// 	$(this).hide();
+	// }
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -86,8 +81,8 @@ $(document).ready(function(){
 	function clearAllHighlights(){
 		for (var i=0; i<maxCount; i++){
 			 $('#hit'+i).css('background-color', 'transparent');
-		};
-	};
+		}
+	}
 
 ////this removes the classes in the text relating to search-highlighting
 	function cancelSearch() {
@@ -383,12 +378,10 @@ $(document).ready(function(){
 		var url = $(location).attr('pathname');
 
 
-		$('#mla').html("Nikolić, Gordana and Tatlić Šefik"+", "+"<i>"+ref_title+"</i>" 
-		    +". Eds. "+ref_eds+". "+ref_place+": "+ref_pub+", "+ref_year+". &lt;"+url+"#"+par+"&gt;. "+MLA_date_of_access+".");
+		// $('#mla').html("Nikolić, Gordana and Tatlić Šefik"+", "+"<i>"+ref_title+"</i>" 
+		//     +". Eds. "+ref_eds+". "+ref_place+": "+ref_pub+", "+ref_year+". &lt;"+url+"#"+par+"&gt;. "+MLA_date_of_access+".");
 
 				
-
-
 		if (blaaa < 15) {
 			$('#mla').html("Nikolić, Gordana and Tatlić Šefik"+", "+"<i>"+ref_title+"</i>" 
 		    +". Eds. "+ref_eds+". "+ref_place+": "+ref_pub+", "+ref_year+". &lt;"+url+"#"+par+"&gt;. "+MLA_date_of_access+".");
