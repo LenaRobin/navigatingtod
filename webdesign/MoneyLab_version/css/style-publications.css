@@ -1,0 +1,326 @@
+@font-face {
+    font-family: Hkgrotesk;
+    src: url('fonts/HKGrotesk-Regular.otf');
+}
+@font-face {
+    font-family: HkgroteskBold;
+    src: url('fonts/HKGrotesk-Bold.otf');
+}
+body {
+    font-family: "Hkgrotesk";
+    text-rendering: optimizeSpeed;
+     background-color:#f4f4f4;
+    margin: 0;
+    margin-top: 0;
+    font-size: 14px;
+    height: 100%;
+
+}
+
+#wrap{
+    margin: 0;
+    margin-top: 0;
+        overflow-y: hidden;
+
+}
+
+
+
+
+/*********************
+06. MENU BUTTONS/SELECTORS
+*********************/
+
+/* Tags */
+.button{
+    border-radius: 5px;
+    padding:2px; 
+    cursor: pointer;
+        line-height: 2em;
+    background-color: #f7ff2c;
+    box-shadow: 4px 4px 2px rgba(128, 128, 128, 0.5);
+
+}
+.button:hover{
+    margin-left:1px;
+    margin-top:1px;
+}
+
+.off {
+    background-color:#dddddd;
+}
+.on {
+    background-color: #dddddd;  
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+
+.menu-tags{
+    margin-top: 20px;
+    width: 250px;
+}
+
+/* Date */
+.menu-date{
+    margin-top:20px;
+}
+section.range-slider {
+    width: 150px;
+    height: 35px;
+    text-align: center;
+        position: relative;
+
+}
+
+section.range-slider input {
+    pointer-events: none;
+    overflow: hidden;
+    left: 0;
+    top: 15px;
+    width: 150px;
+    outline: none;
+    height: 18px;
+    margin: 0;
+    padding: 0;
+        position: absolute;
+
+}
+
+section.range-slider input::-webkit-slider-thumb {
+    pointer-events: all;
+    position: relative;
+    z-index: 1;
+    outline: 0;
+    cursor: pointer;
+}
+
+section.range-slider input::-moz-range-thumb {
+    pointer-events: all;
+    position: relative;
+    z-index: 10;
+    -moz-appearance: none;
+    width: 9px;
+}
+
+section.range-slider input::-moz-range-track {
+    position: relative;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 0;
+}
+section.range-slider input:last-of-type::-moz-range-track {
+    -moz-appearance: none;
+    background: none transparent;
+    border: 0;
+}
+  section.range-slider input[type=range]::-moz-focus-outer {
+  border: 0;
+}
+
+/* Forms (Author, Title, Keyword, Editor) */
+
+.menu-form{
+    margin-top: 0px;
+     background-color:#f4f4f4;
+}
+
+.menu-form input{
+    width: 230px;
+    margin-bottom: 8px;
+    font-size: 15px;
+    font-family: "Hkgrotesk";
+    border-style: none;
+    border-bottom: 1px dashed black;
+    color: black;
+    padding: 0;
+    background-color:#f4f4f4;
+}
+
+input{
+    width: auto;
+    border:0px;
+}
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    padding: 0;
+    margin: 0;
+    width: 230px;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    padding: 0;
+    margin: 0;
+    width: 230px;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    padding: 0;
+    margin: 0;
+    width: 230px;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    padding: 0;
+    margin: 0;
+        width: 230px;
+}
+
+input[type="search" i] {
+    -webkit-appearance: searchfield;
+    box-sizing: border-box;
+}
+user agent stylesheetinput {
+    -webkit-appearance: textfield;
+    padding: 0px;
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    -webkit-rtl-ordering: logical;
+    -webkit-user-select: text;
+    cursor: auto;
+}
+user agent stylesheetinput, textarea, keygen, select, button {
+    margin: 0em;
+    font: 51px BlinkMacSystemFont;
+    text-rendering: auto;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+
+}
+user agent stylesheetinput, textarea, keygen, select, button, meter, progress {
+    -webkit-writing-mode: horizontal-tb;
+}
+  /*********************
+HEADER STYLES
+*********************/
+  .header #inner-header {
+    height: 60px;
+background: rgba(255,255,255,1);
+background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 74%, rgba(246,246,246,1) 95%, rgba(244,244,244,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(74%, rgba(255,255,255,1)), color-stop(95%, rgba(246,246,246,1)), color-stop(100%, rgba(244,244,244,1)));
+background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 74%, rgba(246,246,246,1) 95%, rgba(244,244,244,1) 100%);
+background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 74%, rgba(246,246,246,1) 95%, rgba(244,244,244,1) 100%);
+background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 74%, rgba(246,246,246,1) 95%, rgba(244,244,244,1) 100%);
+background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 74%, rgba(246,246,246,1) 95%, rgba(244,244,244,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f4f4f4', GradientType=0 );      width: 100%;
+  }
+  .header #inner-header #logo a img {
+    height: 50px;
+    margin-bottom: 10px;
+  }
+  .header #inner-header #search input {
+    width: 240px;
+    height: 33px;
+    margin-top: 18px;
+    background-position: 95% center;
+    background-size: 18px;
+  }
+p {
+    display: block;
+    -webkit-margin-before: 0px;
+    -webkit-margin-after: 0px;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+
+#container{
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-top: 0px;
+        overflow-x:hidden;
+    position: absolute;
+}
+#menu{
+    width: 300px;
+    float: left;
+    position:fixed;
+    margin-top:0px;
+}
+#content{
+    width: 80%;
+margin: 0;
+    margin-left: 300px;
+    clear:left;
+
+}
+
+/*********************
+06. BOOKS SELECTION
+*********************/
+div.publication div.cover {
+    height: 270px;
+    text-align: center;
+    padding-top: 10px;
+    position: relative;
+}
+.publication{
+    width: 24%;
+    height: 400px;
+    margin: 20px;
+    float: left;
+    font-size: 0.9em;
+    padding: 1em 1em 0.5em 1em;
+    overflow: scroll;
+}
+.publication .entry{
+}
+.publication:hover{
+    background-color: #fcfcfc;
+    box-shadow: 4px 4px 2px rgba(128, 128, 128, 0.5);
+    border-radius: 10px;
+
+}
+.publication:hover img{
+    border: 1px solid #d1d1d1;
+}
+
+.cover{
+    text-align: center;
+}
+.publication img{
+    width: auto;
+    height: 220px;
+}
+.pub-title{
+    font-size: 15px;
+    line-height: 1.3em;
+}
+.publication a{
+        color: black;
+    text-decoration: none;
+}
+/************* FOOTER ***************/
+
+#footer{
+    width: 100%;    
+  background-color: #444444;
+  color: #ffffff;
+  height: 120px;
+    position: absolute;
+bottom: 0; left: 0; right: 0;
+}
+.footer-column{
+    margin-left: 5%;
+    width: 200px;
+    float: left;
+    margin-bottom: 0px;
+    vertical-align:baseline;
+}
+
+.hva{
+    width: 250px;
+    height: 50px;
+    background-size: 100%;
+        background-image: url(image/hva-logo.png);
+    background-repeat: no-repeat;
+    float: left;
+    margin-left: 10%;
+}
+
+
+
