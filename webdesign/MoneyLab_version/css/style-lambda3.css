@@ -1,0 +1,1609 @@
+/* *********************************************************************************
+ *************************** STYLE FOR LAMBDA PAGES ********************************
+************************************************************************************
+
+Easy changes :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)    
+            1. Colors
+
+
+
+1.--- GENERAL STRUCTURE !! do not change !! ------------------------------------
+            1. General
+
+2.--- MENU (left) ------------------------------------------------------------
+            1. Menu
+            2. Nav list (button to active push menu)
+            3. Table of content
+
+3.--- INFO BOX (top) ------------------------------------------------------------
+            1. Info box
+            2. Table of informations
+            3. Bookcover
+
+4.--- READER --------------------------------------------------------------------
+            1. Section
+            2. Text titles & font styles
+            3. Images
+            4. Reference-list
+            5. Sidenotes
+
+5.--- TYPOGRAPHY -----------------------------------------------------------------
+            1. Keyword
+            2. Important word
+            3. Keyword-searched
+            4. Buttons
+
+6.--- NAVIGATION ----------------------------------------------------------------
+            1. Arrows
+
+7.--- TOOLS ---------------------------------------------------------------------
+            1. Toolbox (right)
+            2. Search box
+            3. Font size
+            4. Citation box
+
+8.--- FOOTER (bottom) ------------------------------------------------------------
+
+9.----- DEVICES -------------------------------------------------------------------
+            1. Smartphones, iPhones, portrait (480x320)
+            2. Portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide
+            3. Portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones
+            4. Tablet, landscape iPad, lo-res laptops ands desktops
+            5. Big landscape tablets, laptops, and desktops
+
+
+
+*/
+
+
+
+
+
+
+
+/* Easy changes :-) */
+
+/* Background-color of text on selection */
+::-moz-selection {
+	background-color: #FFA;
+	color: #000;
+}
+::selection {
+	background-color: #FFA;
+	color: #000;
+}
+a {
+	color: inherit;
+}
+a:hover {
+	color: #f30;
+}
+
+
+
+
+
+
+/* ******************************************* 1. GENERAL STRUCTURE !! do not change !! ********* */
+
+/*******************
+     1-1. GENERAL
+********************
+General website structure */
+
+/* Body */
+body {
+	margin: 0;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	width: 100%;
+	text-rendering: optimizeSpeed;
+	background-color: #fff;
+}
+
+/* text: The content of the book */
+/*.pushmenu .pushmenu-left .pushmenu-open .content {
+	width: 20%;
+	overflow-x: hidden;
+}*/
+
+/*.pushmenu-open {
+	width: 20%;
+	overflow-x: hidden;
+}*/
+
+/* Menu, Table of content on left */
+.section {
+	width: 100%;
+	font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+/* All of the content of the reader has margins on right to let place for sidenotes */
+.section p,h2,h3,h1,img,.author {
+	margin-right: 40%;
+	width: auto;
+	overflow-x: hidden;
+}
+
+
+/* text: The content of the book when pushmenu is open */
+/*.content-pushed {
+	line-height: 32px;
+	margin-right: 0;
+	margin-left: 0;
+	width: 90%;
+	padding-left: 0;
+	overflow-x: hidden;
+}
+*/
+
+/* ******************************************************* 2. MENU (left) ******************** */
+
+
+/***********************
+     2-1. MENU (left)
+************************
+The menu on left (called pushmenu) gives the table of content but also pushes the whole content (reader) to the right */
+
+/* pushmenu: This is the way the menu displays when it is shown */
+.pushmenu {
+			/*width: 20%;
+			height: 100%;
+			top: 0;
+			position: fixed;
+			background-color: rgba(255,69,0,0.28);
+			overflow-x: hidden;
+			z-index: 999999;*/
+}
+.pushmenu-left {
+			/*left: -20%;
+			overflow-y: scroll;
+			overflow-x: hidden;*/
+}
+
+/*.pushmenu-left.pushmenu-open, .pushmenu-open {
+	left: 0;
+  border-right: solid 1px black;
+	border-right: solid 0 #000;
+	-webkit-box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+	box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+}*/
+
+.pushmenu-push, {
+			/*overflow-x: hidden;
+			position: relative;
+			left: 0;*/
+}
+
+.pushmenu-push-toright {
+	left: 20%;
+}
+
+.pushmenu a {
+			/*text-decoration: none;
+			margin: 0;*/
+}
+
+/* The speed of pushmenu appearing */
+.pushmenu,.pushmenu-push {
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	transition: all .3s ease;
+}
+
+.pushmenu-left .pushmenu-open /*.buttonset*/ {
+	position: fixed;
+	left: 400px;
+}
+
+
+/***********************
+     2-2. NAV LIST
+************************
+The way the user actives the pushmenu */
+
+/*#nav_list {
+	cursor: pointer;
+	width: 10px;
+	height: 700px;
+	border: 0 solid #000;
+	padding: 0;
+	background-color: #fff;
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	transition: all .3s ease;
+}*/
+
+/*#verticalScroll {
+	width: 20px;
+	height: 0;
+	background-color: red;
+	opacity: .7;
+}*/
+
+/*.nav_list:hover {
+	background-color: #f30;
+}*/
+
+.pushmenu-left .pushmenu-open {
+	/*display: none;
+	margin-left: 70px;*/
+}
+
+
+/********************************************************
+     2-3. TABLE OF CONTENTS (left, inside the pushmenu)
+*********************************************************
+Table of content is contained in pushmenu, it shows the different parts of the book and can be clicked to navigate through them */
+
+/* Bloc containing the table of content in the pushmenu */
+/*#book-toc {
+	margin-left: 5px;
+	width: 100%;
+}*/
+
+/* Table of contents: title for big part */
+.pushmenu h2 {
+			/*font-size: 16px;
+			line-height: 17px;
+			width: 90%;
+			border-radius: 5px;
+			-webkit-margin-before: 0;
+			-webkit-margin-after: 0;
+			-webkit-margin-start: 0;
+			-webkit-margin-end: 0;
+			margin-bottom: 4px;
+			margin-top: 10px;
+			margin-right: 10px*/;
+}
+
+/* Table of contents: title for sub-parts (subtitles) */
+.pushmenu h3 {
+			/*font-size: 12px;
+			width: 80%;
+			border-radius: 5px;
+			-webkit-margin-before: 0;
+			-webkit-margin-after: 0;
+			-webkit-margin-start: 0;
+			-webkit-margin-end: 0;
+			margin-left: 20px;
+			margin-bottom: 4px;
+			line-height: 14px;
+			padding-right: 10px;*/
+}
+.pushmenu h3:before {
+		/*	content: '● ';
+			position: relative;
+			bottom: .1em;*/
+}
+
+/* Table of contents: when the user goes over a part of the book */
+.pushmenu a:hover {
+		/*	background-color: #ff3700;
+			color: #fff;
+			border-radius: 5px;
+			padding: 2px;*/
+}
+
+
+/* ******************************************************* 3. INFO BOX (TOP) ******************** */
+
+/**********************
+     3-1. INFO BOX
+***********************
+/* Box containing informations related to book ID */
+#info-box {
+	height: auto;
+	overflow: hidden;
+	width: 100%;
+	color: #000;
+	padding-left: 40px;
+	background-color: rgba(255,69,0,0.1);
+	padding-bottom: 30px;
+}
+.info {
+	height: auto;
+}
+
+/* How is written the book's title */
+#book-title {
+	font-size: 40px;
+	margin-top: 10px;
+	line-height: 1em;
+	max-width: 50%;
+}
+
+/* How is written the book's summary */
+#summary {
+	font-size: 14px;
+	max-width: 50%;
+	border-radius: 10px;
+	padding-right: 10px;
+}
+
+/***********************************
+     3-2. TABLE OF INFORMATION
+************************************
+"Table of information" is the table in which all of the very practical information about the book are written */
+
+/* Table: left column of the table */
+#summary .summary,#summary .author,#summary .editor,#summary .date,#summary .series,#summary .subjects {
+	color: #000;
+	font-size: 14px;
+	text-decoration: none;
+	vertical-align: top;
+	text-transform: none;
+	width: 80px;
+}
+
+/* Table: right column of the table: how the author's name is written */
+.author_tofill {
+	color: #f30;
+	font-size: 40px;
+	line-height: 1.2em;
+}
+
+/* Table: right column of the table: how the editor's name is written */
+.editor_tofill {
+	color: green;
+	font-size: 40px;
+	line-height: 1.2em;
+}
+
+/* Table: right column of the table: how the date is written */
+.date_tofill {
+	color: #00008b;
+	font-size: 40px;
+	line-height: 1.2em;
+}
+
+/***********************
+     3-3. BOOKCOVER
+************************
+The bookcover is an overview of the bookcover of the book */
+
+/* Bookcover container */
+/*.bookcover {
+	overflow: hidden;
+	width: 99.6px;
+	height: 149.4px;
+	margin: 0 auto;
+}*/
+
+/* Bookcover tint */
+/*.tint {
+	position: relative;
+	float: left;
+	margin-right: 0;
+	margin-bottom: 0;
+	cursor: pointer;
+}*/
+
+/*.tint:before {
+	content: "";
+	height: 149.4px;
+	display: block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin-top: 20px;
+	margin-right: 0;
+	margin-bottom: 0;
+	background-color: rgba(255,69,0,0.1);
+	-moz-transition: all .3s linear;
+	-webkit-transition: all .3s linear;
+	-ms-transition: all .3s linear;
+	-o-transition: all .3s linear;
+	transition: all .3s linear;
+}*/
+
+/*.tint:hover:before {
+	background: none;
+}*/
+
+
+
+/* ******************************************************* 4. READER ******************** */
+
+/*********************
+     4-1. SECTION
+**********************
+Style of each chapter (the whole text is divided into "sections" with the markdown export) */
+
+b {
+	font-weight: 700;
+}
+/* Section: colors and background */
+.section {
+	color: #171717;
+	background-color: #fff;
+	overflow-x: hidden;
+}
+
+/* ?? */
+/*.section ul {
+	color: #000;
+}*/
+
+/* ?? */
+/*.section current {
+	width: 100%;
+	padding-top: 0;
+	overflow-x: hidden;
+}*/
+
+/* .current: the first section of text has margins */
+/*.current {
+	margin-top: 10px;
+	overflow-x: hidden;
+}*/
+
+#content {
+			/*font-size: 1.2em;
+			line-height: 1.6em;
+			color: #1a1a1a;
+			margin-left: 2%;
+			overflow-x: hidden;*/
+	margin-left: 20%;
+	width: 40%;
+}
+
+/*.content-pushed .sidenote {
+	clear: right;
+	margin-right: 23%;
+	margin-bottom: 2px;
+	width: 14%;
+	float: right;
+	font-size: 10px;
+	line-height: 14px;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	-ms-word-break: break-all;
+	word-break: break-word;
+	-ms-hyphens: auto;
+	-moz-hyphens: auto;
+	-webkit-hyphens: auto;
+	hyphens: auto;
+	font-family: "Verdana";
+	z-index: 9999999;
+	border-radius: 5px;
+	background-color: #f4f4f4;
+}
+
+.content-pushed .sidenote p {
+	margin-right: 0;
+	padding: 0 2px;
+	font-size: 10px;
+}*/
+
+/***************************************
+     4-2. TEXT TITLES & FONT STYLES
+*****************************************
+Defines the typography for texts in reader /
+
+/* Title of big part */
+.section h2 {
+	margin-top: 20px;
+	margin-left: 0;
+	margin-bottom: 30px;
+	padding-right: -40px;
+	padding-top: 10px;
+	max-width: 700px;
+	font-family: "Georgia";
+	font-size: 4em;
+	line-height: 1em;
+}
+
+/* Title of sub-part (subtitle) */
+.section h3 {
+	font-size: 2em;
+}
+
+/* Font weight */
+.section p,h2,h3,img,.author {
+	font-weight: 400;
+}
+
+/* Font-size for the reading text: !! do not change the units (em) to pixels !! */
+.section p {
+	font-size: 1.6em;
+	line-height: 1.7em;
+}
+
+/* Font-size for the informations: !! do not change the units (em) to pixels !! */
+.section .author,.section .words {
+	font-size: 1em;
+}
+
+/* author: the way the name of the author for each chapter displays */
+.author {
+	margin-left: 0;
+	margin-right: 0;
+	font-size: .7em;
+	text-transform: uppercase;
+	text-decoration: underline;
+}
+
+/* words: the way the keywords in each chapter display */
+.words {
+	font-size: .7em;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+/****************************
+     4-3. IMAGES IN TEXT
+*****************************
+Style of each images appearing in the reader, in .text */
+
+/* img: style for each image that appears in the text */
+img {
+	width: 55%;
+	text-align: center;
+	margin-top: 40px;
+	margin-left: 40px;
+	margin-bottom: 40px;
+	-moz-box-shadow: 5px 5px 40px 30px #e6e6e6;
+	-webkit-box-shadow: 5px 5px 40px 30px #e6e6e6;
+	-o-box-shadow: 5px 5px 40px 30px #e6e6e6;
+	box-shadow: 5px 5px 40px 30px #e6e6e6;
+	filter: progid:DXImageTransform.Microsoft.Shadow(color=#e6e6e6,Direction=134,Strength=50s);
+}
+
+
+/****************************
+     4-4. REFERENCE-LIST
+*****************************
+The list of references that writers have used to write their texts, appears in the end of each text */
+
+.references h3 {
+	font-family: "Verdana";
+	/*font-size: 1em;*/
+	text-decoration: underline;
+}
+
+.section .references p {
+	font-size: 1em;
+	line-height: 1em;
+	text-indent: 20px;
+}
+
+/***************************
+    4-5. SIDENOTES
+****************************
+Sidenotes are equivalent to footnotes, they display on right of the text.
+Sidenotes are transformed from footnotes to sidenotes with md-sidenotes.js script.
+They display on wide devices. */
+
+/* footnoteRef: Reference (number) to the note, that is in the text, after the word commented */
+.footnoteRef {
+	/*font-size: .7em;
+	text-decoration: none;
+	vertical-align: super;
+	line-height: .7em;*/
+}
+
+/* sidenote: Content of the note that displays on the right */
+.sidenote {
+	clear: right;
+	margin-right: 17%;
+	margin-bottom: 2px;
+	width: 15%;
+	float: right;
+	font-size: 10px;
+	line-height: 14px;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	-ms-word-break: break-all;
+	word-break: break-word;
+	-ms-hyphens: auto;
+	-moz-hyphens: auto;
+	-webkit-hyphens: auto;
+	hyphens: auto;
+	font-family: "Verdana";
+	z-index: 9999999;
+	border-radius: 5Px;
+	background-color: #f4f4f4;
+}
+
+.sidenote p {
+	margin-right: 0;
+	padding: 0 5px;
+	font-size: 10px;
+	line-height: 13px;
+}
+
+
+
+/* ******************************************************* 5. TYPOGRAPHY ******************** */
+
+/* Font-faces used in styles */
+@font-face {
+	font-family: Hkgrotesk;
+	src: url(fonts/HKGrotesk-Regular.otf);
+}
+@font-face {
+	font-family: HkgroteskBold;
+	src: url(fonts/HKGrotesk-Bold.otf);
+}
+body{
+    font-family: "Hkgrotesk";
+}
+
+/*********************
+     5-1. KEYWORD
+**********************
+Tags linking the book to other books that have similar topics /
+
+/* Keyword: regular style */
+/*.keyword {
+	background-color: rgba(132,132,132,0.38);
+	cursor: pointer;
+	font-style: normal;
+	border-radius: 5px;
+	padding: 2px;
+	cursor: pointer;
+	line-height: 2em;
+	text-decoration: none;
+}*/
+
+/* Keyword: when is hovered with the mouse */
+/*.keyword:hover {
+	color: #000;
+	margin-left: 1px;
+	font-style: italic;
+	background-color: #f8f8f8;
+	text-decoration: none;
+}*/
+
+/****************************
+     5-2. IMPORTANT WORD
+*****************************
+Important notion in the text of the book */
+
+/* Importantword: how it displays when the user choses not the make it appear in text */
+.importantword {
+	background-color: transparent;
+}
+
+/* Importantword: how it displays when the user choses to make it appear in text */
+.importantword_shown {
+	background-color: #ff9f9f;
+}
+
+/*******************************
+     5-3. KEYWORD-SEARCHED
+********************************
+What the user looks for (from the home page where he enters words in the search bar) /
+
+/* Keyword-searched: regular style */
+/*.keyword-searched {
+	margin-bottom: 14px;
+	background-color: rgba(255,51,0,0.54);
+	cursor: text;
+}
+*/
+/*********************
+     5-4. BUTTON
+**********************
+Buttons are the way the links to the different downloads & different tools… look like*/
+
+/* Button */
+.button,.hover-button {
+	border-radius: 5px;
+	padding: 2px;
+	cursor: pointer;
+	line-height: 2em;
+}
+
+.button a,.hover-button {
+	text-decoration: none;
+}
+
+.button:hover,.button a:hover,.hover-button:hover,.hover-button a:hover {
+	margin-left: 1px;
+	margin-top: 1px;
+	color: #000;
+}
+
+.button a:active {
+	box-shadow: 4px 4px 2px rgba(128,128,128,0.5);
+	color: #000;
+	border-radius: 5px;
+	padding: 2px;
+}
+
+
+
+/* ******************************************************* 6. NAVIGATION ******************** */
+
+/******************
+     6-1. ARROWS
+*******************
+Arrows makes it able to jump directlyto the next (or preview) chapter /
+
+/* Arrow to go to prev chapter (right) */
+#up {
+	position: fixed;
+	right: 2%;
+	top: 45%;
+	z-index: 99;
+	font-size: 16px;
+}
+
+/* Arrow to go to next chapter (right) */
+#down {
+	position: fixed;
+	right: 2%;
+	bottom: 45%;
+	z-index: 99;
+	font-size: 16px;
+}
+
+/* Arrow to go to prev chapter (right) on short devices */
+@media (max-height:600px) {
+#up {
+	top: 40%;
+}
+    
+/* Arrow to go to next chapter (right) on short devices */
+#down {
+	bottom: 40%;
+}
+
+
+
+/* ******************************************************************************************
+************************************************************* 7. TOOLS ********************
+****************************************************************************************** */
+
+/******************************
+     7-1. TOOLBOX (right)
+******************************* 
+
+!! do not change the structure !!
+
+The toolbox is the container of the different tools. */
+
+/*label {
+	position: fixed;
+	background-color: none;
+	border: 0;
+}
+
+.message {
+	top: -450px;
+	right: 0;
+	width: 240px;
+	height: auto;
+	padding: 10px;
+	transition: top 300ms cubic-bezier(0.17,0.04,0.03,0.94);
+	overflow: hidden;
+	position: fixed;
+}
+
+.message h1 {
+	color: #FFF;
+}
+
+#toggle {
+	position: fixed;
+	appearance: none;
+	cursor: pointer;
+	left: -100%;
+	top: -100%;
+}
+
+#toggle + label {
+	position: absolute;
+	cursor: pointer;
+	padding: 10px;
+	width: 30px;
+	border-radius: 3px;
+	padding: 8px 10px;
+	line-height: 20px;
+	font-size: 12px;
+	text-align: center;
+	-webkit-font-smoothing: antialiased;
+	cursor: pointer;
+	right: 0;
+	margin: 20px 50px;
+	transition: all 500ms ease;
+}
+
+#toggle + label:after {
+	content: "Tools";
+	position: fixed;
+	background-color: #fff;
+	float: right;
+	right: 2%;
+	top: 20px;
+	border: 1px solid #000;
+	border-radius: 5px;
+	padding: 2px 5px;
+	z-index: 999999;
+}
+
+#toggle:checked ~ .message {
+	top: 100px;
+	right: 10px;
+	background-color: #ffbead;
+	border: 1px solid #000;
+	border-radius: 5px;
+}
+
+#toggle:checked ~ .container {
+	margin-top: 0;
+}
+
+#toggle:checked + label {
+}
+
+#toggle:checked + label:after {
+	content: "Tools";
+	position: fixed;
+	background-color: #fff;
+	float: right;
+	right: 2%;
+	top: 20px;
+	border: 1px solid #000;
+	border-radius: 5px;
+	padding: 2px 5px;
+	z-index: 999999;
+}
+
+label {
+	position: fixed;
+	background-color: none;
+	border: 0;
+}
+
+.message2 {
+	position: fixed;
+	top: -450px;
+	right: 0;
+	width: 270px;
+	height: auto;
+	padding: 10px;
+	transition: top 300ms cubic-bezier(0.17,0.04,0.03,0.94);
+	overflow: hidden;
+	box-sizing: border-box;
+}
+
+#toggle2 {
+	position: fixed;
+	appearance: none;
+	cursor: pointer;
+	left: -100%;
+	top: -100%;
+}
+
+#toggle2 + label {
+	position: absolute;
+	cursor: pointer;
+	padding: 10px;
+	width: 30px;
+	border-radius: 3px;
+	padding: 8px 10px;
+	line-height: 20px;
+	font-size: 12px;
+	text-align: center;
+	-webkit-font-smoothing: antialiased;
+	cursor: pointer;
+	right: 0;
+	margin: 20px 50px;
+	transition: all 500ms ease;
+}
+
+#toggle2 + label:after {
+	content: "2";
+	position: fixed;
+	background-color: #fff;
+	float: right;
+	right: 2%;
+	top: 120px;
+	border: 1px solid #000;
+	border-radius: 5px;
+	padding: 2px 5px;
+	z-index: 999999;
+}
+
+#toggle2:checked ~ .message2 {
+	top: 100px;
+	right: 10px;
+	background-color: #ffbead;
+	border: 1px solid #000;
+	border-radius: 5px;
+}
+
+#toggle2:checked ~ .message {
+	display: none;
+}
+
+#toggle2:checked .message {
+	display: none;
+}
+
+#toggle2:checked ~ .container {
+	margin-top: 0;
+}
+
+#toggle2:checked + label {
+}
+
+#toggle2:checked + label:after {
+	content: "2";
+	position: fixed;
+	background-color: #fff;
+	float: right;
+	right: 2%;
+	top: 120px;
+	border: 1px solid #000;
+	border-radius: 5px;
+	padding: 2px 5px;
+	z-index: 999999;
+}*/
+
+/********************************
+     7-2. SEARCH BOX (right)
+*********************************
+Search box is where the user can enter keyword (in input) and look for words in text */
+
+/* container of the search box */
+/*#live-search-container {
+	padding: 2px 4px 10px;
+	margin-left: 0;
+	background-color: #fff;
+	border-radius: 5px;
+}*/
+
+/* search box */
+#live-search {
+	position: relative;
+	border-style: none;
+	display: inline-block;
+	float: right;
+	right: 2%;
+}
+
+/* where the user writes */
+fieldset {
+	margin: 0;
+	padding: 0;
+	border-style: none;
+}
+
+/* how is the text the user writes when searching */
+#filter-count {
+	color: #000;
+	font-size: 12px;
+	font-family: "Hkgrotesk";
+	text-align: justify;
+}
+
+input {
+	width: 230px;
+	margin-bottom: 8px;
+	font-size: 15px;
+	font-family: "Hkgrotesk";
+	border-style: none;
+	color: #000;
+	padding: 0;
+	background-color: #f4f4f4;
+	border-radius: 5px;
+	box-shadow: 4px 4px 2px rgba(128,128,128,0.5);
+}
+
+input:hover {
+	border-radius: 5px;
+}
+
+/* how text of the book displays when a result is found */
+.search-found {
+	color: #000;
+}
+
+/* how "importantword" of the book displays when a result is found */
+.search-found .importantword {
+	font-style: normal;
+	cursor: text;
+	color: #000;
+	border-bottom: 0 dotted #000;
+}
+
+/* how "keyword-searched" displays when a result is found */
+.search-found .keyword-searched {
+	margin-bottom: 0;
+	background-color: #ff0;
+	cursor: text;
+	border-radius: 5px;
+	color: #000;
+}
+
+/* how the text of the book displays when no result is found */
+.search-notfound {
+	color: rgba(203,203,203,0.22);
+}
+
+/* how "importantword" of the book displays when a result is found */
+.search-notfound .importantword {
+	font-style: normal;
+	cursor: text;
+	color: rgba(203,203,203,0.22);
+	border-bottom: 0 dotted #000;
+}
+
+/* how "keyword-searched" displays when no result is found */
+.search-notfound .keyword-searched {
+	margin-bottom: 0;
+	background-color: rgba(255,255,255,0);
+	cursor: text;
+	color: rgba(203,203,203,0.22);
+}
+
+.allWords {
+	font-size: 13px;
+	background-color: #fff;
+	width: auto;
+	position: fixed;
+	padding-left: 2px;
+	list-style-type: none;
+	cursor: pointer;
+	padding: 2px;
+	margin-top: 2px;
+}
+
+/*********************************
+     7-3. FONT SIZE (right)
+**********************************
+Changes the font of .section .text in the reader */
+
+#tool-fontsize {
+	position: fixed;
+	background-color: #fff;
+	float: right;
+	right: 2%;
+	top: 80px;
+	font-family: "HKGrotesk";
+	font-weight: 400;
+	width: auto;
+	height: auto;
+}
+
+#sizeUp #button2,#sizeDown #button1 {
+	background-color: transparent;
+	border: 0;
+	cursor: pointer;
+	font-size: 30px;
+	display: inline-block;
+	float: left;
+	width: auto;
+	height: auto;
+}
+
+#sizeDown,#letter,#sizeUp {
+	float: left;
+	font-size: 30px;
+}
+
+/***********************************
+     7-4. CITATION BOX (right)
+************************************
+Makes the user able to copy and paste references to the book and the webpage (conventionally written) */
+
+
+
+
+/* ******************************************************************************************
+************************************************************* 8. FOOTER ******************
+****************************************************************************************** */
+
+/*#pre-footer {
+	width: 100%;
+	height: 400px;
+	position: relative;
+	background-color: #fff;
+	z-index: -99999999;
+}
+
+#footer {
+	width: 100%;
+	height: 120px;
+	position: relative;
+	background-color: #444;
+	z-index: -99999999;
+	padding-top: 30px;
+}
+
+.footer-column {
+	margin-left: 5%;
+	width: 200px;
+	float: left;
+	margin-bottom: 0;
+	vertical-align: baseline;
+}
+
+.hva {
+	width: 250px;
+	height: 50px;
+	background-size: 100%;
+	background-image: url(image/hva-logo.png);
+	background-repeat: no-repeat;
+	float: left;
+	margin-left: 10%;
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ******************************************************************************************
+************************************************************* 9. DEVICES *******************
+****************************************************************************************** */
+
+
+/******************************************************
+     9-1. Smartphones, iPhones, portrait (480x320)
+*******************************************************
+Changes in the code that will occur for those devices */
+
+@media (min-width:320px) {
+#book-title {
+	font-size: 20px;
+}
+
+.content {
+	overflow-x: hidden;
+	margin-left: 1%;
+	margin-right: 1%;
+	width: auto;
+}
+
+.content-pushed {
+	width: 60%;
+	margin-left: 105%;
+	margin-right: 5%;
+}
+
+.pushmenu {
+	width: 97%;
+	z-index: 1.0E+15;
+}
+
+.main {
+}
+
+.pushmenu pushmenu-left pushmenu-open .content {
+	width: 97%;
+}
+
+.pushmenu-open .main {
+	width: 97%;
+}
+
+.section p,h2,h3,h1,img,.author {
+	margin-left: 1%;
+	margin-right: 0;
+	font-weight: 400;
+}
+
+.pushmenu-left,.pushmenu-left2 {
+	left: -97%;
+	overflow-y: scroll;
+}
+
+.pushmenu-left.pushmenu-open,.pushmenu-left2.pushmenu-open {
+	left: 0;
+	z-index: 1.0E+15;
+/*  border-right: solid 1px black;*/
+	border-right: solid 0 #000;
+	-webkit-box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+	box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+}
+
+.pushmenu-push,.pushmenu-push2 {
+	overflow-x: hidden;
+	position: relative;
+	left: 0;
+}
+
+.pushmenu-push-toright {
+	left: 97%;
+}
+
+.pushmenu-left .pushmenu-open #nav_list {
+	display: none;
+	margin-left: 70px;
+}
+
+.section p {
+	font-size: 1.4em;
+	line-height: 1.55em;
+}
+
+.sidenote {
+	display: none;
+}
+}
+
+
+
+/************************************************************************************
+     9-2. Portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide.
+*************************************************************************************
+Changes in the code that will occur for those devices */
+
+@media screen and (min-width: 641px) {
+#book-title {
+	font-size: 20px;
+}
+
+.content {
+	overflow-x: hidden;
+	margin-left: 1%;
+	margin-right: 1%;
+	width: auto;
+}
+
+.content-pushed {
+	width: 97%;
+	margin-left: 105%;
+	margin-right: 5%;
+}
+
+.pushmenu {
+	width: 97%;
+}
+
+.main {
+}
+
+.pushmenu pushmenu-left pushmenu-open .content {
+	width: 97%;
+}
+
+.pushmenu-open .main {
+	width: 97%;
+}
+
+.section p,h2,h3,h1,img,.author {
+	margin-left: 1%;
+	margin-right: 0;
+	font-weight: 400;
+}
+
+.pushmenu-left,.pushmenu-left2 {
+	left: -97%;
+	overflow-y: scroll;
+}
+
+.pushmenu-left.pushmenu-open,.pushmenu-left2.pushmenu-open {
+	left: 0;
+/*  border-right: solid 1px black;*/
+	border-right: solid 0 #000;
+	-webkit-box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+	box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+}
+
+.pushmenu-push,.pushmenu-push2 {
+	overflow-x: hidden;
+	position: relative;
+	left: 0;
+}
+
+.pushmenu-push-toright {
+	width: 97%;
+}
+
+.pushmenu-left .pushmenu-open #nav_list {
+	display: none;
+	margin-left: 70px;
+}
+
+.section p {
+	font-size: 1.4em;
+	line-height: 1.55em;
+}
+}
+
+/******************************************************************************************************
+     9-3. Portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones
+*******************************************************************************************************
+Changes in the code that will occur for those devices */
+
+@media screen and (min-width: 799px) {
+#book-title {
+	font-size: 20px;
+}
+
+.content {
+	overflow-x: hidden;
+	margin-left: 1%;
+	margin-right: 1%;
+	width: auto;
+}
+
+.content-pushed {
+	margin-right: 0;
+	margin-left: 0;
+	width: 70%;
+}
+
+.text {
+	width: 70%;
+}
+
+.pushmenu {
+	width: 400px;
+}
+
+.main {
+}
+
+.pushmenu pushmenu-left pushmenu-open .content {
+	width: 400px;
+}
+
+.pushmenu-open .main {
+	width: 400px;
+}
+
+.content-pushed .text {
+	padding-left: 20px;
+}
+
+.content-pushed .sidenote {
+	width: 32%;
+	margin-right: -200px;
+}
+
+.section p,h2,h3,h1,img,.author {
+	margin-right: 0;
+	font-weight: 400;
+}
+
+.pushmenu-left,.pushmenu-left2 {
+	left: -400px;
+	overflow-y: scroll;
+}
+
+.pushmenu-left.pushmenu-open,.pushmenu-left2.pushmenu-open {
+	left: 0;
+/*  border-right: solid 1px black;*/
+	border-right: solid 0 #000;
+	-webkit-box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+	box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+}
+
+.pushmenu-push,.pushmenu-push2 {
+	overflow-x: hidden;
+	position: relative;
+	left: 0;
+}
+
+.pushmenu-push-toright {
+	left: 400px;
+}
+
+.pushmenu-left .pushmenu-open #nav_list {
+	display: none;
+	margin-left: 70px;
+}
+
+.section p {
+	font-size: 1.4em;
+	line-height: 1.55em;
+}
+
+.sidenote {
+	-moz-hyphens: auto;
+	background-color: #f4f4f4;
+	border-radius: 5px;
+	clear: right;
+	float: right;
+	font-family: "Verdana";
+	margin-bottom: 2px;
+	margin-right: -200px;
+	width: 25%;
+	word-wrap: break-word;
+	z-index: 9999999;
+}
+
+.sidenote p {
+	font-size: 10px;
+	line-height: 14px;
+}
+
+img {
+	z-index: -1.0E+16;
+	width: 110%;
+	text-align: center;
+	margin-top: 20px;
+	margin-left: 0;
+	margin-bottom: 20px;
+	-moz-box-shadow: 5px 5px 40px 30px #e6e6e6;
+	-webkit-box-shadow: 5px 5px 40px 30px #e6e6e6;
+	-o-box-shadow: 5px 5px 40px 30px #e6e6e6;
+	box-shadow: 5px 5px 40px 30px #e6e6e6;
+	filter: progid:DXImageTransform.Microsoft.Shadow(color=#e6e6e6,Direction=134,Strength=50s);
+}
+}
+
+
+/*********************************************************************
+     9-4. Tablet, landscape iPad, lo-res laptops ands desktops
+**********************************************************************
+Changes in the code that will occur for those devices */
+
+@media (min-width:961px) {
+
+}
+
+
+/***********************************************************
+     9-5. Big landscape tablets, laptops, and desktops
+************************************************************
+Changes in the code that will occur for those devices */
+
+@media (min-width:1020px) {
+#book-title {
+	font-size: 20px;
+}
+
+.content {
+	overflow-x: hidden;
+	margin-left: 1%;
+	margin-right: 1%;
+	width: auto;
+}
+
+.content-pushed {
+	margin-right: 0;
+	margin-left: 0;
+	width: 100%;
+}
+
+.text {
+	width: 70%;
+	margin-right: 20%;
+}
+
+.pushmenu {
+	width: 270px;
+}
+
+.main {
+}
+
+.pushmenu pushmenu-left pushmenu-open .content {
+	width: 270px;
+}
+
+.pushmenu-open .main {
+	width: 270px;
+}
+
+.content-pushed .text {
+	padding-left: 20px;
+}
+
+.section p,h2,h3,h1,img,.author {
+	margin-right: 0;
+	font-weight: 400;
+}
+
+.pushmenu-left,.pushmenu-left2 {
+	left: -270px;
+	overflow-y: scroll;
+}
+
+.pushmenu-left.pushmenu-open,.pushmenu-left2.pushmenu-open {
+	left: 0;
+/*  border-right: solid 1px black;*/
+	border-right: solid 0 #000;
+	-webkit-box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+	box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+}
+
+.pushmenu-push,.pushmenu-push2 {
+	overflow-x: hidden;
+	position: relative;
+	left: 0;
+}
+
+.pushmenu-push-toright {
+	left: 270px;
+}
+
+.pushmenu-left .pushmenu-open #nav-list {
+	display: none;
+	margin-left: 70px;
+}
+
+.section p {
+	font-size: 1.4em;
+	line-height: 1.55em;
+	width: 85%;
+}
+
+.section h2 {
+	width: 85%;
+}
+
+.sidenote {
+	-moz-hyphens: auto;
+	background-color: #f4f4f4;
+	border-radius: 5px;
+	clear: right;
+	float: right;
+	font-family: "Verdana";
+	margin-bottom: 2px;
+	margin-right: -200px;
+	width: 150px;
+	word-wrap: break-word;
+	z-index: 9999999;
+	padding-right: 2px;
+}
+
+.sidenote p {
+	font-size: 10px;
+	line-height: 14px;
+	width: 100%;
+}
+
+.content-pushed .section p {
+	font-size: 1.4em;
+	line-height: 1.55em;
+	width: 75%;
+}
+
+.content-pushed .sidenote {
+	width: 150px;
+	margin-right: 0;
+	padding-right: 2px;
+	font-size: 10px;
+	line-height: 14px;
+}
+
+.content-pushed .sidenote p {
+	font-size: 10px;
+	line-height: 14px;
+	width: 100%;
+}
+
+.content-pushed .section h2 {
+	width: 75%;
+}
+
+img {
+	z-index: -1.0E+16;
+	width: 110%;
+	text-align: center;
+	margin-top: 20px;
+	margin-left: 0;
+	margin-bottom: 20px;
+	-moz-box-shadow: 5px 5px 40px 30px #e6e6e6;
+	-webkit-box-shadow: 5px 5px 40px 30px #e6e6e6;
+	-o-box-shadow: 5px 5px 40px 30px #e6e6e6;
+	box-shadow: 5px 5px 40px 30px #e6e6e6;
+	filter: progid:DXImageTransform.Microsoft.Shadow(color=#e6e6e6,Direction=134,Strength=50s);
+}
+
