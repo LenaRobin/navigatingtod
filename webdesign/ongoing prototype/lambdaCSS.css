@@ -15,6 +15,18 @@
 			text-decoration: none;
 		}
 
+		.section {
+			font-size: 1em;
+		}
+
+		.section h2 {
+			font-size: 1em;
+		}
+
+		.section p {
+			font-size: 1em;
+		}
+
 /*******HORIZONTAL SCROLLBAR**********
 ********FOR THE CHAPTERS*************/
 		.horizScroll, .subScroll {
@@ -66,18 +78,6 @@
 			font-weight: normal;
 		}
 
-		#toc_wrapper a {
-			/*display: block;
-			width: 100%;
-			text-decoration: none;
-			color: black;
-			min-height: 1em !important;
-			border-top: 
-			border-left: 1px solid black;
-			padding: 3% 0% 2% 0%;
-			margin-left: 1%;*/
-		}
-
 		#toc_wrapper h2:last-child {
 			/*border-bottom: 1px solid black;*/
 		}
@@ -100,20 +100,21 @@
 ********IT GO OFF SCREEN****************/
 		.pushmenu-left {
 		  left: -28%;
-
+		  /*transition: all 0.5s ease;  */
 		}
 
 /*******CLASS TO MAKE IT***********
 ********SLIDE IN FROM LEFT********/
 		.pushmenu-left.pushmenu-open {
 		  left: 0;
+		  /*transition: all 0.5s ease;  */
 		}
 
 /*******PUSHES THE REST OF THE**********
 ********#CONTENT TO THE RIGHT**********/
 
 		.pushmenu-push {
-		  overflow-x: hidden;
+		  /*overflow-x: hidden;*/
 		  position: relative;
 		  left: 0;
 		}
@@ -123,34 +124,36 @@
 ********TO THE RIGHT*************/
 		.pushmenu-push-toright {
 		  left: 28%;
+		  margin-right: 28%;
+		  /*transition: all .5s ease;*/
 		}
 
 /*******TRANSITIONS****************/
-		.pushmenu, .pushmenu-push {
-		  -webkit-transition: all 0.3s ease;
-		  -moz-transition: all 0.3s ease;
-		  transition: all 0.3s ease;  
+		.pushmenu, .pushmenu-push, .pushmenu-push-toright {
+		  -webkit-transition: all 0.5s ease;
+		  -moz-transition: all 0.5s ease;
+		  transition: all 0.5s ease;  
 		}
 
 /*******VERTICAL BAR THAT*********
 ********OPENS UP THE MENU********/
 		#menu_bar {
-			cursor: pointer;
+			/*cursor: pointer;*/
 			background-color: orange;
 			height: 100%;
-			width: 2%;
+			width: 1%;
 			position: fixed;
 		}
 
 /*******VERTICAL SCROLL BAR*******/
 		#menu_bar_scroll {	
-			cursor: pointer;
+			/*cursor: pointer;*/
 			background-color: magenta;
 			opacity: .3;
 			height: 0%;
 			/*max-height: 100%;*/
-			width: 2%;
-			position: fixed;	
+			width: 1%;
+			position: fixed;
 		}
 
 
@@ -179,37 +182,6 @@
 		  transition: all 1s ease; 
 	}
 
-
-/****************************************
-******* HEADER BAR **********************
-****************************************/
-/*
-#header_bar {
-		position: fixed;
-	top: 0;
-		left: 0;
-	width: 100%;
-	height: .5em;
-	background-color: yellow;
-	overflow: hidden;
-}
-
-#header_bar_wrapper {
-	height: 100%;
-	background-color: purple;
-		position: fixed;
-	bottom: 0;
-		left: 0;
-	width: 100%;
-	
-}
-
-#header_bar:hover {
-		display: block;
-	height: 3em;
-	background-color: green;
-}*/
-
 /**************************************
 ******* FONT-SIZE UP/DOWN *************
 **************************************/
@@ -221,7 +193,7 @@
 		bottom: 5px;
 		display: inline-block;*/
 	background-color: #fff;
-	float: right;
+	/*float: right;*/
 	right: 2%;
 	top: 8%;
 	font-family: "HKGrotesk";
@@ -230,7 +202,12 @@
 	height: auto;
 }
 
-#sizeUp #button2,#sizeDown #button1 {
+#tool-fontsize > * {
+	position: static;
+}
+
+
+/*#sizeUp #button2,#sizeDown #button1 {
 	position: absolute;
 	background-color: transparent;
 	border: 0;
@@ -246,7 +223,7 @@
 	position: absolute;
 	float: left;
 	font-size: 30px;
-}
+}*/
 
 /**************************************
 ******* NEXT AND PREV *****************
@@ -371,9 +348,10 @@
     	color: black;
     }
 
-
-    .keyword {
-    	color: #454545;
+/******* THE KEYWORDS *****************/
+    .capitalism, .capital, .creativity, .art, .contemporary, .culture, .ideological, .social, .labor, .attention, .image, .production, .capitalism, .art, .state, .life, .public, .city, .economics, .production, .development, .art, .social, .avant-garde, .world, .big, .Other, .art, .urban, .cultural, .project, .creativity, .Belgrade, .Rog, .capital, .creative, .collective, .urban, .factory, .gentrification, .art, .political, .social, .culture, .autonomy, .public, .work {
+    	color: #3B0000; /*#454545;*/
+    	/*font-weight: 500;*/
         /*text-shadow: 1px 1px #292929;
        /*-webkit-text-fill-color: #FF9980;  /*Will override color (regardless of order) */
        /*-webkit-text-stroke-width: .3px;
@@ -385,24 +363,16 @@
             0px 0px 60px 0px #BEBEBE, 
             0 0 0px 0px #DEDEDE;*/
 
-    	background: 
+    /*	background: 
     	-webkit-linear-gradient(#FF9980, #292929);
     	-webkit-background-clip: text;
-    	-webkit-text-fill-color: transparent;
+    	-webkit-text-fill-color: transparent;*/
     }
 
 /********CITATIONS************************/
-
-	button {
-		/*display: block;*/
-	}
-
     #tools {
 	top: 2%;
 	right: 1%;
-		/*position: static;
-		bottom: 5px;
-		display: inline-block;*/
     position: fixed;
     }
 
@@ -442,8 +412,6 @@
     /*margin: auto;*/
     }
 
-
-
 /********************************************
 ********FOOT-/SIDENOTES**********************
 ********************************************/
@@ -451,30 +419,53 @@
 	height: 100%;
 	width: 20%;
 	position: absolute;
-	right: 3%;
-	top: 1%;
-	background-color: lime;
+	right: 5%;
+	top: 0%;
+	background-color: azure;
 	border: 1px dashed black;
 }
 
 #chapter8 ol {
-	/*padding-left: 0%;*/
+	margin: 0;
+	padding: 0;
 }
 
 /*******INDIVIDUAL BOXES*******************/
 #chapter8 ol li {
-	position: relative;
-	background-color: turquoise;
+	position: absolute;
+	background-color: lavender;
 	border: 1px solid black;
-	/*min-height:1em;*/
 	min-height: 3em;
-	/*overflow: scroll;*/
+	max-width: 100%;
 }
 
 #chapter8 ol li p {
-	/*margin: 0;*/
+	margin: .5em 0;
+	word-wrap: break-word;
+}
+/*******BRINGS SIDENOTES TO FRONT**********/
+.focusSidenote {
+	z-index: 1000;
+	-webkit-filter: drop-shadow(2px 2px 10px rgba(0,0,0,0.9));
+     filter: drop-shadow(2px 2px 10px rgba(0,0,0,0.9));
+}
+
+/********************************************/
+.ui-helper-hidden-accessible {
+	display: none;
+}
+
+
+#img {
+	height: 409,8px;
+	width: 600px;
+}
+
+#leger_img {
+	height: 409,8px;
+	width: 600px;
 }
 
 
 
-/********************************************/
+

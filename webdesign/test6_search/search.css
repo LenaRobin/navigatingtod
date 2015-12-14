@@ -135,7 +135,7 @@
 
 /*******VERTICAL BAR THAT*********
 ********OPENS UP THE MENU********/
-		#nav_list {
+		#menu_bar {
 			cursor: pointer;
 			background-color: orange;
 			height: 100%;
