@@ -10,7 +10,7 @@ $(document).ready(function(){
 		// fadeOutSidenotes();
 		// alignSidenotes();
 		// alignVertically();
-		$(this).toggleClass('active');
+		// $(this).toggleClass('active');
 
 		// if ($toggle_menu.hasClass('active')) {
 		// $('#menu').toggleClass('col-md-hidden col-md-2');
@@ -37,10 +37,11 @@ $(document).ready(function(){
 	// fadeOutSidenotes();
 	// $toggle_menu.toggleClass('active');
 	
-// 	$(this).on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function() {
-// 		alignSidenotes();
-// 		alignVertically();
-// });
+	$(this).on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function() {
+		alignSidenotes();
+		alignVertically();
+		fadeInSidenotes();
+});
 
 	// $('.pushmenu-push').toggleClass('pushmenu-push-toright');
 	if ($(window).width() < "992") {	//SUBSTITUTE '400' WITH THE DESIRED MINIMUM SIZE
