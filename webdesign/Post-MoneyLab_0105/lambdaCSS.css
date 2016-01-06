@@ -82,49 +82,45 @@ a:hover {
 /* ******************************************************* 3. INFO BOX (TOP) ******************** */
 
 /**********************
-     3-1. INFO BOX
+3-1. INFO BOX
 ***********************
 /* Box containing informations related to book ID */
 #info-box {
-	/*height: auto; */
-	overflow: hidden;
-	padding-left: 40px;
-	padding-bottom: 30px;
-    margin:0;
-    margin-bottom: 10px;
-/*background-color: rgba(255,69,0,0.19);*/
-    -webkit-box-shadow: 0px -1px 39px 9px rgba(0,0,0,0.35);
--moz-box-shadow: 0px -1px 39px 9px rgba(0,0,0,0.35);
-box-shadow: 0px -1px 39px 9px rgba(0,0,0,0.35);
-padding-top:50px;
-   width: 100%;
-
+    /*height: auto; */
+    overflow: hidden;
+    padding-bottom: 100px;
+    background-color:rgba(255, 51, 0, 0.12);
+    -webkit-box-shadow: 2px 20px 15px 8px rgba(255, 35, 35, 0.35) !important;
+    -moz-box-shadow: 2px 20px 15px 8px rgba(217, 217, 217, 0.35) !important;
+    box-shadow: 2px 20px 15px 8px rgba(217, 217, 217, 0.35) !important;
+    border-bottom: 1px #d9d9d9 solid;
+    z-index: 44444444444;
+    position: relative;
+    color:black;
 }
 .info {
-	height: auto;
+    height: auto;
 }
 
 /* How is written the book's title */
 #book-title {
-	font-size: 70px;
-    letter-spacing: 1.2em;
-	margin-top: 10px;
-	line-height: 1em;
-    margin-bottom: 10px;
-    color: black;
-    text-align: center;
-   /* color: #f30; */
+    font-size: 60px;
+    margin-top: 10px;
+    line-height: 1em;
+    padding-left: 60px;
+    /* color: #f30; */
 }
 
-/* How is written the book's summary */
-#summary {
-	font-size: 14px;
-    width: 60%;
-	border-radius: 10px;
-	padding: 0px;
-
+#info-box .keyword{
+    border:1px solid black;
+    padding: 1px 2px 1px 2px;
+    line-height: 2em;
+    cursor: pointer;
+    font-size:16px;
+    word-break: keep-all;
+    white-space:nowrap;
+    background-color: rgba(255, 255, 255, 0.7);
 }
-
 
 /***********************************
      3-2. TABLE OF INFORMATIONS
@@ -189,7 +185,6 @@ Defines the typography for texts in reader */
     padding-bottom: 20px;
 	padding-right: 0;
 	padding-top: 50px;
-	font-family: "Georgia";
 	font-size: 4.5em;
 	line-height: 1.1em;
     -webkit-margin-before: 0em;
@@ -314,10 +309,6 @@ body{
         margin: 0;
 }	
 
-#main {
-    padding-left: 0;
-}
-
 /*******THE CONTENT********************/
 	#content {
 /*
@@ -352,10 +343,8 @@ body{
 }
 
 .horizScroll {
-    background-color:rgba(0, 234, 206, 0.21);
-  background-color: rgba(255, 69, 0, 0.23);
-background-color:rgba(0, 0, 255, 0.14);
-    	border-radius: 5px;
+    background-color:rgba(172, 172, 172, 0.14);
+    border-radius: 5px;
     /*margin-left: -5px;*/
 }
 
@@ -416,13 +405,12 @@ a.page-scroll:hover, a.page-scroll:active, a.page-scroll:link, a.page-scroll:vis
 /*******MENU WITH THE TOC THAT******************
 ********COMES IN SLIDING FROM THE LEFT*********/
 #menu {				/*basically nav*/
-    background-color:#f4f4f4;
     /*width:16.66666667%;*/
     padding: 0;
     height: 100%;
     position:fixed;
-    z-index: 5;
     overflow: hidden;
+    background-color:rgba(255, 51, 0, 0.12);
 /* -webkit-box-shadow: 10px 0px 31px -10px rgba(61,61,61,0.67);
 -moz-box-shadow: 10px 0px 31px -10px rgba(61,61,61,0.67);
 box-shadow: 10px 0px 31px -10px rgba(61,61,61,0.67); */
@@ -443,24 +431,18 @@ Table of content is contained in pushmenu, it shows the different parts of the b
 
 /* Table of contents: title for big part */
 #menu h2 {
-	font-size: 16px;
-	line-height: 17px;
+	font-size: 13px;
+    line-height: 18px;
 	/*width: 90%;*/
-	border-radius: 8px;
 	-webkit-margin-before: 0;
 	-webkit-margin-after: 0;
 	-webkit-margin-start: 0;
 	-webkit-margin-end: 0;
-	margin-bottom: 10px;
-	margin-top: 10px;
-	/*margin-right: 10px;*/
-    border:1px solid  blue;
-     background-color:rgba(255, 255, 255, 0.22);
-background-color:rgba(255, 255, 255, 0.5);
-    background-color:rgba(142, 142, 255, 0.14);
-
-    /*padding: 5px;*/
-
+	margin:10px;
+    text-transform: uppercase;
+    text-align: center;
+    border-top: 1px solid black;
+    padding-top:4px;
 }
 
 /* Table of contents: title for sub-parts (subtitles) */
@@ -485,15 +467,16 @@ background-color:rgba(255, 255, 255, 0.5);
 
 /* Table of contents: when the user goes over a part of the book */
 #menu h3:hover, #menu h2:hover, #menu .toc_author:hover, #toc_wrapper h2 .toc_author:hover {
-    
-    background-color:rgb(226, 0, 255);
-    background-color:rgb(0, 234, 206);
-    background-color:blue;
+    background-color:#ff3300;
     color: white;
 }
 
 #toc_wrapper h2 a {
     color: black;
+}
+
+.toc_author{
+    text-transform: capitalize;
 }
 
 #menu h2:hover .toc_author, #toc_wrapper h2:hover a {
@@ -594,7 +577,7 @@ left:0px;
 box-shadow: 9px -3px 20px 23px rgba(255,255,255,1); 
     background-color: white;
     height: 1px;
-     z-index:9999999999999999999999;
+     z-index:99;
 }
 
 #search-button, #files-button, #copy-button, #print-button, #tools-button, #share-button{
@@ -647,32 +630,6 @@ border: 1px solid #ff3300;
 
 
 
-.extra, .keyword-clickme1, .keyword-clickme2, .keyword-clickme3, .keyword-clickme4, .keyword-clickme5, .keyword-clickme6, .keyword-clickme7, .keyword-show-all {
-   /* background-color:#d8d8d8; */
-    /*background-color:rgb(255, 181, 162);
-    display: inline-block;
-    border-radius: 5px;
-    padding:1px;
-    padding-left:4px;
-    padding-right: 4px;
-    margin-right: 4px;
-    margin-bottom: 2px;
-    cursor: pointer;
-    font-size: 14px;*/
-}
-
-.extra:hover, .keyword-clickme1:hover, .keyword-clickme2:hover, .keyword-clickme3:hover, .keyword-clickme4:hover, .keyword-clickme5:hover, .keyword-clickme6:hover, .keyword-clickme7:hover .keyword-show-all:hover{
-    /*margin-left:1px;
-    -webkit-box-shadow: 3px 3px 5px -4px rgba(0,0,0,0.18);
-    -moz-box-shadow: 3px 3px 5px -4px rgba(0,0,0,0.18);
-    box-shadow: 3px 3px 5px -4px rgba(0,0,0,0.18);*/
-   /* background-color:#e6e6e6; */
-    /*background-color:rgb(255, 211, 200);
-
-    cursor: pointer;
-    font-size: 14px;*/
-
-}
 
 #print-pannel input{
         background-color:#d8d8d8;
@@ -711,7 +668,7 @@ border: 1px solid #ff3300;
     box-shadow: 10px 10px 5px -4px rgba(0,0,0,0.18);
     position:fixed;
     top:40px; 
-    z-index:999999999999999999;
+    z-index:99;
     height: auto;
     border-radius: 5px;
     display: none;
@@ -726,7 +683,7 @@ border: 1px solid #ff3300;
      width: 200px;
     position:fixed;
     top:20px; 
-    z-index:999999999999999999;
+    z-index:99;
     height: auto;
     border-radius: 5px;
     display: none;
@@ -784,11 +741,11 @@ line-height: 15px;
 margin-right: 2px;
 text-align: center;
 width: 15px;
-z-index:999999999999999999;}
+z-index:99;}
 
 .toggle-box:checked + label:before {
 content: "\2212";
-z-index:999999999999999999;
+z-index:99;
 }
 
 
@@ -886,7 +843,7 @@ z-index:999999999999999999;
 	position: fixed;
 	right: 14px;
 	top: 50%;
-    z-index: 99999999999999999999999999999999;
+    z-index: 99;
 }
 
 
@@ -919,7 +876,7 @@ fieldset {
     margin-left:100px;
     position: fixed;
     color: #afafaf;
-    z-index: 999999999999999999999999999999;
+    z-index: 99;
 }
 
 #filter.text-input {
@@ -1043,7 +1000,7 @@ input:hover {
     position: fixed;
     padding-top: 2px;
     -webkit-padding-start: 0px;
-    z-index: 999999999999999999999999999;
+    z-index: 99;
 }
 
 .ui-menu-item {
@@ -1053,7 +1010,7 @@ input:hover {
 	-moz-box-shadow: 0 10px 15px rgba(0,0,0,0.2);
 	box-shadow: 0 10px 15px rgba(0,0,0,0.2);
     padding-left:3px;
-    z-index: 999999999999999999999999999;
+    z-index: 99;
 
 }
 
@@ -1307,30 +1264,6 @@ ol {
     text-indent: 10px;
 }
 
-.keyword-link, .keyword-list{
-   /* color:#f30; */
-   /*   text-decoration: underline;
-    cursor: pointer;
-    font-size: 14px;*/
-}
-.keyword-link:hover, .keyword-list:hover{
-/*    text-decoration: none;
-    cursor: pointer;
-    font-size: 14px;*/
-
-}
-
-.keyword-display{
-  /*  color: #f30; */
-  /* box-shadow: 7px 7px 30px 15px rgba(145, 145, 145, 0.6), -7px 7px 30px 15px rgba(145, 145, 145, 0.6), 7px -7px 30px 15px rgba(145, 145, 145, 0.6), -7px -7px 30px 15px rgba(145, 145, 145, 0.6);
-    background-color:#dddddd;*/
-   /* box-shadow: 3px 3px 6px 4px rgba(203, 203, 203, 0.4), -1px 3px 6px 4px rgba(203, 203, 203, 0.4), 3px -3px 6px 4px rgba(203, 203, 203, 0.4), -1px -3px 6px 4px rgba(203, 203, 203, 0.4);
-    background-color:rgb(203, 203, 203);
-    border-radius: 3px;
-*/
-}
-
-
 /******** TUNNING BOOTSTRAP ********/
 
 #menu-right{
@@ -1340,6 +1273,23 @@ ol {
     background-color:  #f4f4f4;
 }
 
+
+.panel-group .panel {
+    margin-bottom: 0;
+    border-radius: 8px;
+}
+
+.panel-body{
+    font-size: 13px;
+}
+
+
+.panel-default>.panel-heading {
+    color: #333;
+    background-color: #f5f5f5;
+    border-color: #ddd;
+    border-radius: 8px;
+}
 
 
 /* Tooltip */
@@ -1394,7 +1344,7 @@ blockquote {
 /********* XS DEVICES MENU **********/
 #menu-bar-xs{
     position: fixed;
-    z-index: 999999999999999;
+    z-index: 99;
     bottom:0px;
     width: 100%;
     background-color: white;
@@ -1403,7 +1353,7 @@ blockquote {
     padding: 5px;
     text-align: center;
     background-color: #f4f4f4;
-    z-index: 999999999999999;
+    z-index: 99;
     border-radius: 5px;
 }
 
