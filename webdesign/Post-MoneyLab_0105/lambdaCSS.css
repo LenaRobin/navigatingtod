@@ -415,13 +415,14 @@ a.page-scroll:hover, a.page-scroll:active, a.page-scroll:link, a.page-scroll:vis
 
 /*******MENU WITH THE TOC THAT******************
 ********COMES IN SLIDING FROM THE LEFT*********/
-.pushmenu {				/*basically nav*/
+#menu {				/*basically nav*/
     background-color:#f4f4f4;
     /*width:16.66666667%;*/
     padding: 0;
     height: 100%;
     position:fixed;
     z-index: 5;
+    overflow: hidden;
 /* -webkit-box-shadow: 10px 0px 31px -10px rgba(61,61,61,0.67);
 -moz-box-shadow: 10px 0px 31px -10px rgba(61,61,61,0.67);
 box-shadow: 10px 0px 31px -10px rgba(61,61,61,0.67); */
@@ -441,7 +442,7 @@ Table of content is contained in pushmenu, it shows the different parts of the b
 }
 
 /* Table of contents: title for big part */
-.pushmenu h2 {
+#menu h2 {
 	font-size: 16px;
 	line-height: 17px;
 	/*width: 90%;*/
@@ -463,7 +464,7 @@ background-color:rgba(255, 255, 255, 0.5);
 }
 
 /* Table of contents: title for sub-parts (subtitles) */
-.pushmenu h3 {
+#menu h3 {
 	font-size: 12px;
 	/*width: 80%;*/
 	border-radius: 5px;
@@ -475,7 +476,7 @@ background-color:rgba(255, 255, 255, 0.5);
 	line-height: 14px;
 	/*padding-right: 10px;*/
 }
-.pushmenu h3:before {
+#menu h3:before {
 	content: '● ';
 	position: relative;
 	bottom: .1em;
@@ -483,7 +484,7 @@ background-color:rgba(255, 255, 255, 0.5);
 }
 
 /* Table of contents: when the user goes over a part of the book */
-.pushmenu h3:hover, .pushmenu h2:hover, .pushmenu .toc_author:hover, #toc_wrapper h2 .toc_author:hover {
+#menu h3:hover, #menu h2:hover, #menu .toc_author:hover, #toc_wrapper h2 .toc_author:hover {
     
     background-color:rgb(226, 0, 255);
     background-color:rgb(0, 234, 206);
@@ -495,21 +496,21 @@ background-color:rgba(255, 255, 255, 0.5);
     color: black;
 }
 
-.pushmenu h2:hover .toc_author, #toc_wrapper h2:hover a {
+#menu h2:hover .toc_author, #toc_wrapper h2:hover a {
     color:white;
 }
 
 /*******CLASS ADDED TO MAKE**************
 ********IT GO OFF SCREEN****************/
 		.pushmenu-left {
-            left: -16.66666667%;
-
+/*            left: -16.66666667%;
+*/
 		}
 
 /*******CLASS TO MAKE IT***********
 ********SLIDE IN FROM LEFT********/
 		.pushmenu-left.pushmenu-open {
-		  left: 0;
+		  /*left: 0;*/
 		}
 
 /*******PUSHES THE REST OF THE**********
@@ -524,16 +525,16 @@ background-color:rgba(255, 255, 255, 0.5);
 /*******CLASS THAT MAKES**********
 ********THE #CONTENT MOVE*********
 ********TO THE RIGHT*************/
-		.pushmenu-push-toright {
-/*            left: 16.66666667%;
-            margin-right:-16.66666667*/%;
+		.pushmenu-push-toright {/*
+       left: 16.66666667%;
+            margin-right:-16.66666667%;*/
 		}
 
 /*******TRANSITIONS****************/
 		.pushmenu, .pushmenu-push, .pushmenu-push-toright {
-		  -webkit-transition: all 0.3s ease;
+		/*  -webkit-transition: all 0.3s ease;
 		  -moz-transition: all 0.3s ease;
-		  transition: all 0.3s ease;  
+		  transition: all 0.3s ease;*/  
 		}
 
 /*******VERTICAL BAR THAT*********
@@ -1418,25 +1419,25 @@ blockquote {
 }
 
 /* Large desktops and laptops */
-@media (min-width: 1200px) {
+/*@media (min-width: 1200px) {
     #menu-bar-xs{
         display: none;
     }
-}
+}*/
 
 /* Landscape tablets and medium desktops */
-@media (min-width: 992px) and (max-width: 1199px) {
+/*@media (min-width: 992px) and (max-width: 1199px) {
     #menu-bar-xs{
         display: none;
     }
-}
+}*/
 
 /* Portrait tablets and small desktops */
-@media (min-width: 768px) and (max-width: 991px) {
+/*@media (min-width: 768px) and (max-width: 991px) {
     #menu-bar-xs{
         display: none;
     }
-}
+}*/
 
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px) {

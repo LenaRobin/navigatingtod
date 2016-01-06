@@ -3,11 +3,13 @@ $(document).ready(function(){
 //////////////////////////////////////////////////////////////////////////////////
 ////PUSH MENU ON THE LEFT
 //////////////////////////////////////////////////////////////////////////////////
-	$menuLeft = $('.pushmenu-left');
+	// $menuLeft = $('.pushmenu-left');
 	$toggle_menu = $('.toggle_menu');
 
 	$toggle_menu.click(function() {
 		// fadeOutSidenotes();
+		// alignSidenotes();
+		// alignVertically();
 		$(this).toggleClass('active');
 
 		// if ($toggle_menu.hasClass('active')) {
@@ -19,8 +21,9 @@ $(document).ready(function(){
 		// }
 
 		// $('.pushmenu-push').toggleClass('pushmenu-push-toright');
-		$menuLeft.toggleClass('pushmenu-open');
-		$(this).toggleClass('close_menu');
+		// $menuLeft.toggleClass('pushmenu-open');
+		// $(this).toggleClass('close_menu');
+		$('#menu').animate({width: 'toggle'});
 		$('#menu_bar_scroll').toggle(); 
 		// $('.pushmenu-push').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function() {
 		// 	alignSidenotes();
@@ -32,17 +35,25 @@ $(document).ready(function(){
 
 ////ON LOAD OPEN THE TOC
 	// fadeOutSidenotes();
-	$toggle_menu.toggleClass('active');
-	// $('.pushmenu-push').toggleClass('pushmenu-push-toright');
-	$menuLeft.toggleClass('pushmenu-open').on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function() {
-		alignSidenotes();
-		alignVertically();
-	});
-	$toggle_menu.toggleClass('close_menu');
-	fadeInSidenotes();
-
+	// $toggle_menu.toggleClass('active');
 	
+// 	$(this).on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function() {
+// 		alignSidenotes();
+// 		alignVertically();
+// });
 
+	// $('.pushmenu-push').toggleClass('pushmenu-push-toright');
+	if ($(window).width() < "992") {	//SUBSTITUTE '400' WITH THE DESIRED MINIMUM SIZE
+		$('#menu').animate({width: 'toggle'});
+		// $menuLeft.toggleClass('pushmenu-open').on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function() {
+		// alignSidenotes();
+		// alignVertically();
+		// });
+	// } else {
+	// 	$menuLeft.toggle
+
+	}
+	// $toggle_menu.toggleClass('close_menu');
 
 
 //////////////////////////////////////////////////////////////////////////////////
@@ -671,7 +682,7 @@ $(document).ready(function(){
 
 ////SIDENOTES BECOME TIP BOXES IF SCREEN IS SMALL, AND THEY ARE CENTERED
 	function sideToBox() {
-		if ($(window).width() <= "700") {	//SUBSTITUTE '400' WITH THE DESIRED MINIMUM SIZE
+		if ($(window).width() < "768") {	//SUBSTITUTE '400' WITH THE DESIRED MINIMUM SIZE
 			$("a sup").each(function(){
 				var n = $(this).text();
 				console.log('n: '+n);
@@ -766,7 +777,6 @@ $(document).ready(function(){
 // var keepHeight = $(window).scrollTop();
 
 
-
 /*///////////////////////
 ON RESIZE DO THESE THINGS
 ///////////////////////*/
@@ -777,7 +787,6 @@ ON RESIZE DO THESE THINGS
 		alignSidenotes();
 		alignVertically();
 		fadeInSidenotes();
-		console.log($('.sidenote').offset().left);
 	});
 
 
@@ -806,8 +815,6 @@ ON RESIZE DO THESE THINGS
         });
 		fadeInSidenotes();
 	});
-
-
 
 }); // <-- document ready
 
