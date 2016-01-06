@@ -393,7 +393,10 @@ $(document).ready(function(){
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	var clipboard = new Clipboard('.full-citation');
 
+	$('[data-toggle="tooltip"]').tooltip({trigger: 'hover', placement: "bottom"});
+
 ////DISPLAY CONFIRMATION AT COPY
+// $('#citation-box').tooltip({trigger: 'click', placement: 'top', title: 'Copied', animation: true});
 	$('.full-citation').click(function() {
 		$(this).prev().append('<span class="confirmation">Copied!</span>');
 	    $('.confirmation').fadeOut(3000);
@@ -615,20 +618,24 @@ $('.btn-default').each(function(m){
 
 // });
 
-var keepHeight = $(window).scrollTop();		// ???
+// var keepHeight = $(window).scrollTop();		// ???
 	
+if ($(window).width() <= '500') {	//SUBSTITUTE '400' WITH THE DESIRED MINIMUM SIZE
+	$('#chapter8').hide();
+}
 
 /*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ON RESIZE DO THESE THINGS
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 	$(window).resize(function() {
+		console.log('inside resize');
 ////////ALIGNS SIDENOTES ON WINDOW RESIZE
 		alignSidenotes();
 		alignVertically();
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////SIDENOTES = BOX WHEN WIDTH SMALL
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-		if ($(window).width() <= "500") {	//SUBSTITUTE '400' WITH THE DESIRED MINIMUM SIZE
+		if ($(window).width() <= '500') {	//SUBSTITUTE '400' WITH THE DESIRED MINIMUM SIZE
 			$('#chapter8').hide();
 
 			$('.footnoteRef').click(function(ev) {

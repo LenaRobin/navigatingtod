@@ -110,9 +110,10 @@
         <!-- Main (content of the website that is in the container) -->   
         <!-- <div class="main"> -->
 
-        <div id="content">
+        <div class="container-fluid">
+            <div class="row">
 
-
+        <div id="content" class="col-md-8">
 <!--––––––––––––––––––––––– INFO BOX (top) ––––––––––––––––––––––––––––––-->
             <div id="info-box" class="not">
                 <!-- BOOK TITLE -->
@@ -689,6 +690,7 @@
                     <p>Wu, Chin-tao. ‘Embracing the Enterprise Culture: Art Institutions Since the 1980s’, <em>New Left Review</em> I 230 (July-August, 1998).</p>
                 </div>
             </div>
+        </div>
 <!--
 //    				<div id="footnotes" class="footnotes">
 -->
@@ -698,6 +700,7 @@ REMOVE THE IDENTIFICATIONS
 FROM THIS SECTION ONCE FOOTNOTES ARE
 TRANSFORMED INTO SIDENOTES
 -->
+        <div class="col-lg-4">
             <div id="chapter8">
                 <ol>
                     <li class="sidenote" id="fn1"><p>Different versions of this essay were presented at Bureau Publik, Copenhagen, 31 October 2013 and KHIB in Bergen, Norway, on 5 November 2013.<a href="#fnref1">↩</a></p></li>
@@ -879,6 +882,10 @@ TRANSFORMED INTO SIDENOTES
                     <li class="sidenote" id="fn177"><p>Andrea Fraser, ‘Le 1% c’est moi’, 2011: ‘Le gorille penseur est un guerrier: le guerrier est un être pour la mort, puisque son métier consiste à mourir. Ici, il pense un peu à la fin de son espèce, ou à la fin de l’ère des — notre époque n’est plus celle des guerriers, elle est celle des insectes, des animaux insignifiants, plus capables de s’adapter…’ http://whitney.org/file_columns/0002/9848/andreafraser_1_2012whitneybiennial.pdf (http://www.e-flux.com/journal/accelerationist-aesthetics-necessary-inefficiency-in-times-of-real-subsumption/).<a href="#fnref177">↩</a></p></li>
                 </ol>
 			</div> <!-- END FOOTNOTES CONTAINER -->
+            
+
+        </div> <!-- col -->
+    </div> <!-- row -->
 
         </div><!-- End #content -->
 
@@ -927,51 +934,16 @@ TRANSFORMED INTO SIDENOTES
             <div id="citation-box" class="not" style="display: none">Cite your selection with the following conventions:
                 <!-- <button id="cite" style="display:block">PRESS TO CITE</button> -->
                 <p><abbr title="Modern Language Association">MLA</abbr></p>
-                <button data-clipboard-target="#mla" class="full-citation" id="mla"></button>
+                <button data-clipboard-target="#mla" class="full-citation" id="mla" data-toggle="tooltip" title="Click to copy to clipboard"></button>
                 <p>Chicago</p>
-                <button data-clipboard-target="#chicago" class="full-citation" id="chicago"></button>
+                <button data-clipboard-target="#chicago" class="full-citation" id="chicago" data-toggle="tooltip" title="Click to copy to clipboard"></button>
                 <p><abbr title="American Psychological Association">APA</abbr></p>
-                <button data-clipboard-target="#apa" class="full-citation" id="apa"></button>
+                <button data-clipboard-target="#apa" class="full-citation" id="apa" data-toggle="tooltip" title="Click to copy to clipboard"></button>
             </div>
-
-           <!--  <div id="citation-box" style="display: none">Cite your selection with the following conventions:
-                <button id="cite" style="display:block">PRESS TO CITE</button>
-                <button style="display:block" id="mlaButton"><abbr title="Modern Language Association">MLA</abbr></button>
-                <button style="display: none" data-clipboard-target="#mla" class="full-citation" id="mla"></button>
-                
-                <button style="display:block" id="chicagoButton">Chicago</button>
-                <button style="display: none" data-clipboard-target="#chicago" class="full-citation" id="chicago"></button>
-                
-                <button style="display:block" id="apaButton"><abbr title="American Psychological Association">APA</abbr></button>
-                <button style="display: none" data-clipboard-target="#apa" class="full-citation" id="apa"></button>
-            </div> -->
 
     <div> <!-- PUSHMENU -->
 
 <!--––––––––––––––––––––––– FOOTER ––––––––––––––––––––––––––––––––––––––––––––-->
-
-
-<script>function changeFontSize(target) {
-          var demo = document.getElementById("content");
-          var computedStyle = window.getComputedStyle
-                ? getComputedStyle(demo) // Standards
-                : demo.currentStyle;     // Old IE
-                var fontSize;
-
-          if (computedStyle) { // This will be true on nearly all browsers
-              fontSize = parseFloat(computedStyle && computedStyle.fontSize);
-
-              if (target == document.getElementById("button1")) {
-                fontSize += 1;
-            } else if (target == document.getElementById("button2")) {
-                fontSize -= 1;
-            }
-            demo.style.fontSize = fontSize + "px";
-        }
-        }
-</script>
-
-
 
 </body>
 </html>

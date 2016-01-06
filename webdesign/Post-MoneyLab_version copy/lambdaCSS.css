@@ -1,0 +1,1454 @@
+/* *********************************************************************************
+ *************************** STYLE FOR LAMBDA PAGES ********************************
+************************************************************************************
+
+Easy changes :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)    
+            1. Colors
+
+00.--- SUMMARY
+
+1.--- GENERAL STRUCTURE !! do not change !! ------------------------------------
+            1. General
+
+2.--- MENU (left) ------------------------------------------------------------
+            1. Menu
+            2. Nav list (button to active push menu)
+            3. Table of content
+
+3.--- INFO BOX (top) ------------------------------------------------------------
+            1. Info box
+            2. Table of informations
+            3. Bookcover
+
+4.--- READER --------------------------------------------------------------------
+            1. Section
+            2. Text titles & font styles
+            3. Images
+            4. Reference-list
+            5. Sidenotes
+
+5.--- TYPOGRAPHY -----------------------------------------------------------------
+            1. Keyword
+            2. Important word
+            3. Keyword-searched
+            4. Buttons
+
+6.--- NAVIGATION ----------------------------------------------------------------
+            1. Arrows
+
+7.--- TOOLS ---------------------------------------------------------------------
+            1. Toolbox (right)
+            2. Search box
+            3. Font size
+            4. Citation box
+            5. Scrolling indicator
+
+8.--- FOOTER (bottom) ------------------------------------------------------------
+
+9.--- DEVICES ---------------------------------------------------------------------
+            1. Smartphones, iPhones, portrait (480x320)
+            2. Portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide
+            3. Portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones
+            4. Tablet, landscape iPad, lo-res laptops ands desktops
+            5. Big landscape tablets, laptops, and desktops
+*/
+
+
+/* Easy changes :-) */
+
+/* Background-color of text on selection */
+::-moz-selection {
+	background-color: #FFA;
+	color: #000;
+}
+::selection {
+	background-color: #FFA;
+	color: #000;
+}
+a {
+	color: inherit;
+}
+a:hover {
+}
+
+
+
+
+
+/* ******************************************************* 3. INFO BOX (TOP) ******************** */
+
+/**********************
+     3-1. INFO BOX
+***********************
+/* Box containing informations related to book ID */
+#info-box {
+	/*height: auto; */
+	overflow: hidden;
+	padding-left: 40px;
+	background-color: rgb(237, 237, 237); 
+	padding-bottom: 30px;
+    margin:0;
+    margin-bottom: 200px;
+/*background-color: rgba(255,69,0,0.19);*/
+    -webkit-box-shadow: 0px -1px 39px 9px rgba(0,0,0,0.35);
+-moz-box-shadow: 0px -1px 39px 9px rgba(0,0,0,0.35);
+box-shadow: 0px -1px 39px 9px rgba(0,0,0,0.35);
+padding-top:50px;
+   width: 100%;
+
+}
+.info {
+	height: auto;
+}
+
+/* How is written the book's title */
+#book-title {
+	font-size: 40px;
+	margin-top: 10px;
+	line-height: 1em;
+    margin-bottom: 10px;
+
+    width: 60%;
+   /* color: #f30; */
+}
+
+/* How is written the book's summary */
+#summary {
+	font-size: 14px;
+    width: 60%;
+	border-radius: 10px;
+	padding: 0px;
+
+}
+
+
+/***********************************
+     3-2. TABLE OF INFORMATIONS
+************************************
+"Table of informations" is the table in which all of the very practical informations about the book are written */
+
+/* Table: left column of the table */
+#summary .summary,#summary .author,#summary .editor,#summary .date,#summary .series,#summary .subjects {
+	color: #000;
+	font-size: 14px;
+	text-decoration: none;
+	vertical-align: top;
+	text-transform: none;
+	width: 80px;
+}
+
+/* Table: right column of the table: how the author's name is written */
+.author_tofill {
+	font-size: 24px;
+	line-height: 1.2em;
+}
+
+/* Table: right column of the table: how the editor's name is written */
+.editor_tofill {
+	font-size: 14px;
+	line-height: 1.2em;
+
+}
+
+/* Table: right column of the table: how the date is written */
+.date_tofill {
+	font-size: 14px;
+	line-height: 1.2em;
+
+}
+
+.series_tofill{
+    font-size: 14px;
+	line-height: 1.2em;
+
+}
+
+/***************************************
+     4-2. TEXT TITLES & FONT STYLES
+*****************************************
+Defines the typography for texts in reader */
+
+.section{
+    	font-size: 62.5%;
+
+}
+/* Title of big part */
+.section h2 {
+	margin-top: 0px;
+	margin-left: 0;
+	margin-bottom: 0px;
+    padding-bottom: 20px;
+	padding-right: 0;
+	padding-top: 50px;
+	font-family: "Georgia";
+	font-size: 4.5em;
+	line-height: 1.1em;
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 5px;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    overflow-y: hidden;
+ /*box-shadow:-40px -50px 40px -10px darkblue, 40px 50px 60px -10px darkblue, -20px -30px 40px -10px darkblue, 20px 30px 40px -10px darkblue, -100px 100px 40px -10px darkblue; */
+    box-shadow: 0px 5px 180px 130px #a5a5a5, 0px -5px 180px 130px #a5a5a5;
+background-color:#a5a5a5; 
+vertical-align: middle;
+    border-radius: 10px;
+    width: 500px;
+}
+
+.shadow{
+    height: 400px;
+    width: 400px;
+     background-color:transparent;
+    border-radius: 10px;
+    -webkit-box-shadow: 10px 10px 162px 43px rgba(145,145,145,1);
+-moz-box-shadow: 10px 10px 162px 43px rgba(145,145,145,1);
+box-shadow: 10px 10px 162px 43px rgba(145,145,145,1);
+}
+
+/* Title of sub-part (subtitle) */
+.section h3 {
+	font-size: 2.7em;
+    -webkit-margin-before: 30px;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+
+/* Font weight */
+.section p,h2,h3,h1,img,.author {
+	font-weight: 400;
+}
+
+/* Font-size for the reading text: !! do not change the units (em) to pixels !! */
+.section p {
+	font-size: 1.6em;
+	line-height: 1.7em;
+    padding-left:-10px;
+   margin-left:-10px;
+}
+
+/* Font-size for the informations: !! do not change the units (em) to pixels !! */
+.section .author,.section .words {
+	font-size: 1.2em;
+}
+
+/* author: the way the name of the author for each chapter displays */
+.author {
+	margin-left: 0;
+	margin-right: 0;
+	font-size: 1.2em;
+	text-transform: uppercase;
+}
+
+/* words: the way the keywords in each chapter display */
+.words {
+	font-size: 1.2em;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+
+.references {
+	font-size: 0.7em;
+	text-indent: 20px;
+    margin-bottom: 100px;
+    margin-top:40px;
+}
+
+/****************************
+     4-3. IMAGES IN TEXT
+*****************************
+Style of each images appearing in the reader, in .text */
+
+/* img: style for each image that appears in the text */
+img {
+	width: 90%;
+	text-align: center;
+	margin-top: 40px;
+	margin-left: 20px;
+	margin-bottom: 40px;
+	-moz-box-shadow: 5px 5px 40px 30px #e6e6e6;
+	-webkit-box-shadow: 5px 5px 40px 30px #e6e6e6;
+	-o-box-shadow: 5px 5px 40px 30px #e6e6e6;
+	box-shadow: 5px 5px 40px 30px #e6e6e6;
+	filter: progid:DXImageTransform.Microsoft.Shadow(color=#e6e6e6,Direction=134,Strength=50s);
+}
+
+
+/* ******************************************************* 5. TYPOGRAPHY ******************** */
+
+/* Font-faces used in styles */
+@font-face {
+	font-family: Hkgrotesk;
+	src: url(css/fonts/HKGrotesk-Regular.otf);
+}
+@font-face {
+	font-family: HkgroteskBold;
+	src: url(css/fonts/HKGrotesk-Bold.otf);
+}
+body{
+    font-family: "Hkgrotesk";
+}
+
+
+
+/************************************
+******* CONTENT *********************
+************************************/
+		body {
+	margin: 0;
+    background-color:#e8e8e8;
+}	
+
+/*******THE CONTENT********************/
+		#content {
+			margin-left: 5%;
+			width: 55%;
+		}
+
+		a {
+			text-decoration: none;
+		}
+
+
+/********* JOSIP'S PART **********/
+
+/* Interactions: horizontal Scrollbar for the chapters */
+.horizScroll, .subScroll {
+    width: 0%;
+    height: 100%;
+    max-width: 100%;
+    position: absolute;
+    top: 0;
+    padding: 0;
+}
+
+.horizScroll {
+    background-color:rgba(0, 234, 206, 0.21);
+  background-color: rgba(255, 69, 0, 0.23);
+background-color:rgba(0, 0, 255, 0.14);
+    	border-radius: 5px;
+    margin-left: -5px;
+}
+
+
+.subScroll {
+    border-radius: 5px;
+    background-color: rgba(255, 69, 0, 0.23);
+}
+
+#toc_wrapper {
+    cursor: pointer;
+    padding: 2px;
+        margin-top:40px;    
+
+}
+
+#toc_wrapper_print{
+    display: none;
+}
+#toc_wrapper h2 {
+    font-weight: 4000;
+    font-size: 14px;
+    position: relative;
+    width: 95%;
+    margin: 0;
+    margin-bottom: 3px;
+    margin-top: 3px;
+
+}
+#toc_wrapper h3 {
+/*    min-height: 1em;
+    margin-left: 20px;
+    font-size: .8em;
+    position: relative;
+    font-weight: normal;
+    width: 220px;*/
+}
+
+.toc_author{
+    font-size: 12px;
+    color:#3e3e3e;
+    padding-left: 10px;
+}
+
+
+/*******MENU WITH THE TOC THAT******************
+********COMES IN SLIDING FROM THE LEFT*********/
+		.pushmenu {				/*basically nav*/
+	background-color: rgba(255,69,0,0.28);
+background-color:#393939;
+            background-color:rgba(66, 66, 255, 0.4);
+		  width: 20%;
+		  height: 100%;
+		  position:fixed;
+-webkit-box-shadow: 10px 0px 31px -10px rgba(61,61,61,0.67);
+-moz-box-shadow: 10px 0px 31px -10px rgba(61,61,61,0.67);
+box-shadow: 10px 0px 31px -10px rgba(61,61,61,0.67);
+
+    }
+
+
+/********************************************************
+     2-3. TABLE OF CONTENT (left, inside the pushmenu)
+*********************************************************
+Table of content is contained in pushmenu, it shows the different parts of the book and can be clicked to navigate through them */
+
+/* Bloc containing the table of content in the pushmenu */
+#book-toc {
+	margin-left: 5px;
+	width: 100%;
+}
+
+/* Table of contents: title for big part */
+.pushmenu h2 {
+	font-size: 16px;
+	line-height: 17px;
+	width: 90%;
+	border-radius: 8px;
+	-webkit-margin-before: 0;
+	-webkit-margin-after: 0;
+	-webkit-margin-start: 0;
+	-webkit-margin-end: 0;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	margin-right: 10px;
+    border:1px solid  blue;
+     background-color:rgba(255, 255, 255, 0.22);
+background-color:rgba(255, 255, 255, 0.5);
+    background-color:rgba(142, 142, 255, 0.14);
+
+    padding: 5px;
+
+}
+
+/* Table of contents: title for sub-parts (subtitles) */
+.pushmenu h3 {
+	font-size: 12px;
+	width: 80%;
+	border-radius: 5px;
+	-webkit-margin-before: 0;
+	-webkit-margin-after: 0;
+	-webkit-margin-start: 0;
+	-webkit-margin-end: 0;
+	margin-left: 20px;
+	line-height: 14px;
+	padding-right: 10px;
+}
+.pushmenu h3:before {
+	content: '● ';
+	position: relative;
+	bottom: .1em;
+    padding-left: 3px;
+}
+
+/* Table of contents: when the user goes over a part of the book */
+.pushmenu h3:hover, .pushmenu h2:hover, .pushmenu .toc_author:hover, #toc_wrapper h2 .toc_author:hover {
+    
+    background-color:rgb(226, 0, 255);
+    background-color:rgb(0, 234, 206);
+    background-color:blue;
+    color: white;
+}
+
+#toc_wrapper h2 a {
+    color: black;
+}
+
+.pushmenu h2:hover .toc_author, #toc_wrapper h2:hover a {
+    color:white;
+}
+
+/*******CLASS ADDED TO MAKE**************
+********IT GO OFF SCREEN****************/
+		.pushmenu-left {
+		  left: -20%;
+
+		}
+
+/*******CLASS TO MAKE IT***********
+********SLIDE IN FROM LEFT********/
+		.pushmenu-left.pushmenu-open {
+		  left: 0;
+		}
+
+/*******PUSHES THE REST OF THE**********
+********#CONTENT TO THE RIGHT**********/
+
+		.pushmenu-push {
+		  overflow-x: hidden;
+		  position: relative;
+		  left: 0;
+		}
+
+/*******CLASS THAT MAKES**********
+********THE #CONTENT MOVE*********
+********TO THE RIGHT*************/
+		.pushmenu-push-toright {
+		  left: 20%;
+            margin-right:20%;
+		}
+
+/*******TRANSITIONS****************/
+		.pushmenu, .pushmenu-push, .pushmenu-push-toright {
+		  -webkit-transition: all 0.3s ease;
+		  -moz-transition: all 0.3s ease;
+		  transition: all 0.3s ease;  
+		}
+
+/*******VERTICAL BAR THAT*********
+********OPENS UP THE MENU********/
+		#menu_bar {
+			cursor: pointer;
+			background-color: white;
+			height: 100%;
+			width: 5px;
+			position: fixed;
+            z-index: 999999999999999999999999999999999999;
+-webkit-box-shadow: 10px 0px 31px -10px rgba(61,61,61,0.67);
+-moz-box-shadow: 10px 0px 31px -10px rgba(61,61,61,0.67);
+box-shadow: 10px 0px 31px -10px rgba(61,61,61,0.67);
+		}
+
+/*******VERTICAL SCROLL BAR*******/
+		#menu_bar_scroll {	
+ cursor: pointer;
+            background-color:#00EACE;
+           background-color:rgb(66, 66, 255);
+       /* background-color: #ff3b22; */
+
+    opacity: .7;
+    height: 0%;
+    /*max-height: 100%;*/
+    width: 5px;
+    position: fixed;	
+		}
+
+
+/*******MENU TOGGLE BUTTON**********/
+
+
+
+	.close_menu {
+        margin-left:0%;
+    }
+
+/****************************************
+******* HEADER  **********************
+***************************************/
+#nav_test{
+    background-color:red;
+    top:800px;
+    height:300px;
+}
+
+
+#tool-bar-container{
+    position: fixed;
+    background-color: white;
+    top:0px;
+right:0px;
+    width: 100%;
+-webkit-box-shadow: 9px -3px 20px 23px rgba(255,255,255,1);
+-moz-box-shadow: 9px -3px 20px 23px rgba(255,255,255,1);
+box-shadow: 9px -3px 20px 23px rgba(255,255,255,1);
+    height: 20px;
+     z-index:9999999999999999999999;
+}
+
+#search-button, #files-button, #copy-button, #print-button, #tools-button, #share-button{
+    padding:0px;
+    padding-top:5px;
+    height:23px;
+   /* background-image: url(css/image/search.png); */
+    background-size: contain;
+    width: 30px;
+    cursor: pointer;
+    float:right;
+    position: absolute;
+    top:5px;
+    color:black;
+    text-align: center;
+    align-content: center;
+    vertical-align: middle;
+}
+
+.toggle_menu {
+		/*z-index: 1000;
+		cursor: pointer;
+		position: fixed;
+        margin-left:10px;
+		width: 50px;
+		height: 50px;
+		background-image: url('css/image/arrow-right.png');
+		background-size: 13px 14px;
+        background-repeat: no-repeat;
+		/*background-color: blue;*/
+    padding:3px;
+    padding-top:5px;
+          position: fixed;
+    top:0px;
+    left:15px;
+}
+
+#search-button:hover, #files-button:hover, #copy-button:hover, #print-button:hover, #tools-button:hover, #share-button:hover, .toggle_menu:hover{
+background-color: #ff3300;
+    border-radius: 5px;
+    color:white;
+    cursor: pointer;
+}
+
+#search-button:active, #files-button:active, #copy-button:active, #print-button:active, #tools-button:active, #share-button:active{
+border: 1px solid #ff3300;
+}
+
+
+
+.extra, .keyword-clickme1, .keyword-clickme2, .keyword-clickme3, .keyword-clickme4, .keyword-clickme5, .keyword-clickme6, .keyword-clickme7, .keyword-show-all {
+   /* background-color:#d8d8d8; */
+    /*background-color:rgb(255, 181, 162);
+    display: inline-block;
+    border-radius: 5px;
+    padding:1px;
+    padding-left:4px;
+    padding-right: 4px;
+    margin-right: 4px;
+    margin-bottom: 2px;
+    cursor: pointer;
+    font-size: 14px;*/
+}
+
+.extra:hover, .keyword-clickme1:hover, .keyword-clickme2:hover, .keyword-clickme3:hover, .keyword-clickme4:hover, .keyword-clickme5:hover, .keyword-clickme6:hover, .keyword-clickme7:hover .keyword-show-all:hover{
+    /*margin-left:1px;
+    -webkit-box-shadow: 3px 3px 5px -4px rgba(0,0,0,0.18);
+    -moz-box-shadow: 3px 3px 5px -4px rgba(0,0,0,0.18);
+    box-shadow: 3px 3px 5px -4px rgba(0,0,0,0.18);*/
+   /* background-color:#e6e6e6; */
+    /*background-color:rgb(255, 211, 200);
+
+    cursor: pointer;
+    font-size: 14px;*/
+
+}
+
+#print-pannel input{
+        background-color:#d8d8d8;
+    display: inline-block;
+    border-radius: 5px;
+    padding:1px;
+    padding-left:4px;
+    padding-right: 4px;
+    margin-right: 4px;
+}
+
+#share-button{
+    right:4px;
+}
+#tools-button{
+    right:34px;
+}
+#print-button{
+    right:64px;
+}
+#copy-button{
+    right:94px;
+}
+#files-button{
+    right:124px;
+}
+#search-button{
+    right:154px;
+}
+
+#files-pannel, #copy-pannel, #print-pannel, #tools-pannel, #share-pannel{
+    width: 300px;
+    background-color:rgb(255, 234, 228);
+    -webkit-box-shadow: 10px 10px 5px -4px rgba(0,0,0,0.18);
+    -moz-box-shadow: 10px 10px 5px -4px rgba(0,0,0,0.18);
+    box-shadow: 10px 10px 5px -4px rgba(0,0,0,0.18);
+    position:fixed;
+    top:40px; 
+    z-index:999999999999999999;
+    height: auto;
+    border-radius: 5px;
+    display: none;
+    font-size:13px;
+    padding:4px;
+    padding-left:5px;
+    transition:0s 5s;
+    right:20px;
+}
+
+#search-pannel{
+     width: 200px;
+    position:fixed;
+    top:20px; 
+    z-index:999999999999999999;
+    height: auto;
+    border-radius: 5px;
+    display: none;
+    font-size:13px;
+    padding:4px;
+    padding-left:5px;
+    transition:0s 5s;
+    right:180px;
+}
+
+.close{
+    position: absolute;
+    right: 3px;
+    top:3px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+
+.toggle-box {
+display: none;
+}
+
+.toggle-box + label {
+cursor: pointer;
+display: block;
+font-weight: bold;
+line-height: 21px;
+margin-bottom: 5px;
+border-top: 1px solid #898989;
+}
+
+.toggle-box + label + div {
+display: none;
+margin-bottom: 10px;
+}
+
+.toggle-box:checked + label + div {
+display: block;
+}
+
+.toggle-box + label:before {
+background-color: rgba(177, 177, 177, 0.51);
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+color: #FFFFFF;
+content: "+";
+display: block;
+float: right;
+font-weight: bold;
+height: 15px;
+line-height: 15px;
+margin-right: 2px;
+text-align: center;
+width: 15px;
+z-index:999999999999999999;}
+
+.toggle-box:checked + label:before {
+content: "\2212";
+z-index:999999999999999999;
+}
+
+
+.icon{
+    width:30px;
+    height:30px;
+    cursor: pointer;
+    box-shadow:none;
+    margin:0;
+    margin-right:15px;
+}
+
+/**************************************
+******* FONT-SIZE UP/DOWN *************
+**************************************/
+
+
+#button1{
+	position: relative;
+	background-color: transparent;
+	border: 0;
+	cursor: pointer;
+	font-size: 18px;
+	display: inline-block;
+
+}
+ #button2{
+	position: relative;
+	background-color: transparent;
+	border: 0;
+	cursor: pointer;
+	font-size: 12px;
+	display: inline-block;
+}
+
+
+.print{
+    background-color:#c7c7c7;
+    font-size: 13px;
+    cursor: pointer;
+    float: left;
+    margin-top:50px;
+}
+
+/**************************************
+******* NEXT AND PREV *****************
+**************************************/
+	.search_nav {
+		/*position: absolute;*/
+		position: fixed;
+		margin-top: 15px;
+        margin-left:0px;
+	}
+
+	#prev {
+        position: fixed;
+        margin-top:-20px;
+        margin-left:60px;
+    }
+
+	#next {
+        position: fixed;
+        margin-left:110px;
+            margin-top:-20px;
+	}
+
+	.search-found {
+		color: black;
+	}
+
+	.search-notfound {
+		color: #BFBFBF !important;
+	}
+
+	.highlight {
+		background-color: #BFBFBF;
+	}
+
+	#live-search {
+    right: 0;
+    display: inline-block;
+    margin-top:20px;
+	}
+
+	#buttons_wrapper{
+		display: none;
+	}
+
+
+/****************************
+******** ARROWS *************
+****************************/
+
+#arrows {
+	position: fixed;
+	right: 14px;
+	top: 50%;
+    z-index: 99999999999999999999999999999999;
+}
+
+
+
+/********************************
+     7-2. SEARCH BOX (right)
+*********************************
+Search box is where the user can enter keyword (in input) and look for words in text */
+
+
+/* where the user writes */
+fieldset {
+	margin: 0;
+	padding: 0;
+	border-style: none;
+}
+
+#filter {
+}
+
+#filter > * {
+}
+
+/* how is the text the user writes when searching */
+#filter-count {
+	font-size: 13px;
+	font-family: "Hkgrotesk";
+    text-align: right;
+    margin-top:-38px;
+    margin-left:100px;
+    position: fixed;
+    color: #afafaf;
+    z-index: 999999999999999999999999999999;
+}
+
+#filter.text-input {
+}
+
+input#filter {
+}
+
+input {
+	width: 200px;
+	font-size: 15px;
+	font-family: "Hkgrotesk";
+	border-style: none;
+	color: #000;
+	padding: 0;
+    border-bottom: 1px solid #868686;
+    padding-left: 4px;
+    margin-top:  -40px;
+    position: absolute;
+    right:50px;
+}
+
+input:hover {
+	border-radius: 5px;
+}
+
+/* how text of the book displays when a result is found */
+.search-found {
+	color: #000;
+}
+
+/* how "importantword" of the book displays when a result is found */
+.search-found .importantword {
+	font-style: normal;
+	cursor: text;
+	color: #000;
+	border-bottom: 0 dotted #000;
+}
+
+/* how "keyword-searched" displays when a result is found */
+.search-found .keyword-searched {
+	margin-bottom: 0;
+	background-color: #ff0;
+	cursor: text;
+	border-radius: 5px;
+	color: #000;
+}
+
+/* how the text of the book displays when no result is found */
+.search-notfound {
+	color: rgba(203,203,203,0.22);
+}
+
+/* how "importantword" of the book displays when a result is found */
+.search-notfound .importantword {
+	font-style: normal;
+	cursor: text;
+	color: rgba(203,203,203,0.22);
+	border-bottom: 0 dotted #000;
+}
+
+/* how "keyword-searched" displays when no result is found */
+.search-notfound .keyword-searched {
+	margin-bottom: 0;
+	background-color: rgba(255,255,255,0);
+	cursor: text;
+	color: rgba(203,203,203,0.22);
+}
+
+.allWords {
+	font-size: 13px;
+	background-color: #fff;
+	width: auto;
+	position: fixed;
+	padding-left: 2px;
+	list-style-type: none;
+	cursor: pointer;
+	padding: 2px;
+	margin-top: 2px;
+}
+
+/* Next and prev buttons that appears to go to next word searched */
+
+
+.search-found {
+    color: black;
+}
+
+.search-notfound {
+    color: #BFBFBF;
+}
+
+.highlight {
+    /*display: inline-block; 
+    width: 50%;
+    height: 50%;
+    text-align: center;*/
+    background-color: #BFBFBF;
+    /*background: -webkit-radial-gradient(10px, white, white, #BFBFBF); /* Safari 5.1 to 6.0 */
+    /*background: -o-radial-gradient(10px, white, white, #BFBFBF); /* For Opera 11.6 to 12.0 */
+    /*background: -moz-radial-gradient(10px, white, white, #BFBFBF); /* For Firefox 3.6 to 15 */
+    /*background: radial-gradient(10px, white, white, #BFBFBF); /* Standard syntax (must be last)*/
+}
+
+/*.search-found {
+    background: -webkit-radial-gradient(10px, white, white, #BFBFBF); /* Safari 5.1 to 6.0 
+    background: -o-radial-gradient(10px, white, white, #BFBFBF); /* For Opera 11.6 to 12.0 
+    background: -moz-radial-gradient(10px, white, white, #BFBFBF); /* For Firefox 3.6 to 15 
+		    background: radial-gradient(10px, white, white, #BFBFBF); /* Standard syntax (must be last) *
+		}*/
+
+
+#buttons_wrapper{
+    display: none;
+}
+
+/* Autocomplete list of items */
+
+.ui-autocomplete {
+    list-style: none;
+    position: fixed;
+    padding-top: 2px;
+    -webkit-padding-start: 0px;
+    z-index: 999999999999999999999999999;
+}
+
+.ui-menu-item {
+    background-color: white;
+    cursor: pointer;
+	-webkit-box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+	box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+    padding-left:3px;
+    z-index: 999999999999999999999999999;
+
+}
+
+.ui-menu-item:hover{
+	background-color: #FFA;
+	color: #000;
+}
+
+.ui-menu-item:focus {
+    background-color: yellow;
+}
+
+
+
+
+/*************************************
+******* REFERENCE BOX ****************
+*************************************/
+    .in-text {
+    border-bottom: dashed 1px black;
+    }
+
+/********THE BOX**********************/
+    .tip {
+    background-color: #e8e8e8;
+    	/*opacity: 0.9;*/
+    	-webkit-filter: drop-shadow(2px 2px 10px rgba(0,0,0,0.9));
+     	filter: drop-shadow(2px 2px 10px rgba(0,0,0,0.9));
+      	/*-webkit-filter: blur(5px);
+      	filter: blur(5px);*/
+    	font-size: 1em;
+    	width: 300px;
+    	/*overflow: scroll;*/
+    	padding: 2px 7px;
+    	border: 1px solid black;
+    	border-radius: 5px;
+    	position: fixed;
+    	margin:auto;
+        word-wrap: break-word;
+        font-family:"Verdna";
+    }
+
+/********THE TEXT*********************/
+    .tip p {
+      margin: 0;
+    }
+
+/********THE X BUTTON******************/
+    #x {
+    	position: inherit;
+    	right: -6px;
+    	top: -6px;
+    	border-radius: 9px;
+    	border: 1px solid red;
+    	background-color: orange;
+    	padding: 0 4px;
+    	text-align: center;
+    }
+
+
+
+    #x a {
+    	text-decoration: none;
+    	color: black;
+    }
+
+
+     .capitalism, .capital, .creativity, .art, .contemporary, .culture, .ideological, .social, .labor, .attention, .image, .production, .capitalism, .art, .state, .life, .public, .city, .economics, .production, .development, .art, .social, .avant-garde, .world, .big, .Other, .art, .urban, .cultural, .project, .creativity, .Belgrade, .Rog, .capital, .creative, .collective, .urban, .factory, .gentrification, .art, .political, .social, .culture, .autonomy, .public, .work {
+        color: #3B0000;
+        /*text-shadow: 1px 1px #292929;
+       /*-webkit-text-fill-color: #FF9980;  /*Will override color (regardless of order) */
+       /*-webkit-text-stroke-width: .3px;
+       -webkit-text-stroke-color: #1F1F1F;	/*font-weight: bold !important;
+    	font-family: "Baskerville";
+    	border-radius: 20%;
+        background-color: #DEDEDE;
+        box-shadow:
+            0px 0px 60px 0px #BEBEBE, 
+            0 0 0px 0px #DEDEDE;*/
+
+    	/*background: 
+    	-webkit-linear-gradient(#FF9980, #292929);
+    	-webkit-background-clip: text;
+    	-webkit-text-fill-color: transparent;
+        	color: #454545;
+*/
+    }
+
+/********CITATIONS************************/
+
+	button {
+		/*display: block;*/
+	}
+
+    #tools {
+	top: 2%;
+	right: 1%;
+		/*position: static;
+		bottom: 5px;
+		display: inline-block;*/
+    position: fixed;
+    }
+
+    .full-citation {
+      text-align: left;
+      word-wrap: break-word;
+      background-color: #fcfcfc;
+      min-height: 5em;
+    max-height: 6em;
+        overflow-y: auto;
+      width: 95%;
+      max-width: 95%;
+
+        margin-right: 5px;
+        border:none;
+        border-radius: 5px;
+
+    }
+
+    #citation-box {
+      top: 10%;
+      right: 1%;
+      position: fixed;
+    /*
+      position: absolute;
+      right: 2%;
+    */
+      border: 1px solid black;
+      border-radius: 5px;
+      background-color: #C7C7BB;
+      width: 30%;
+      min-height: 15%;
+    }
+
+/********ON SUCCESFUL COPY****************/
+    .confirmation {
+    background-color: #82ff82;
+    display: inline;
+    margin-left: 5%;
+        font-size:13px;
+    /*margin: auto;*/
+    }
+
+
+
+/********************************************
+********FOOT-/SIDENOTES**********************
+********************************************/
+#chapter8 {
+	/*height: auto; */
+	width: 23%;
+	position: absolute;
+	right: 0%;
+	top: 1%;
+    padding-right:3%;
+    height: auto;
+  /*  background-color: white; */
+}
+
+#chapter8 ol {
+	/*padding-left: 0%;*/
+    list-style: decimal;
+    text-indent: 0px;
+}
+
+/*******INDIVIDUAL BOXES*******************/
+#chapter8 ol li {
+	position: relative;
+    border-radius: 5px;
+    /*min-height:1em;*/
+	min-height: 3em;
+	/*overflow: scroll;*/
+    font-family: "Verdana";
+    font-size:11px;
+    line-height: 13px;
+    /*padding:5px 3px;*/
+    word-wrap: break-word;
+	-moz-hyphens: auto;
+    -webkit-box-shadow: 5px -2px 8px 1px rgba(0,0,0,0.21);
+    -moz-box-shadow: 5px -2px 8px 1px rgba(0,0,0,0.21);
+    box-shadow: 5px -2px 8px 1px rgba(0,0,0,0.21);
+	background-color: #e8e8e8;
+
+}
+
+#chapter8 ol li p {
+	/*margin: 0;*/
+    padding: 8px 11px;
+}
+
+
+
+.footnoteRef{
+    text-decoration: none;
+   /* color: #ff3300; */
+    color: #FF5500;
+}
+.footnoteRef:hover{
+    text-decoration: underline;
+}
+
+.focusSidenote{
+/*    z-index: 9999999999999999999999999999999999;
+    -webkit-box-shadow: 5px -2px 8px 1px rgba(0,0,0,0.21);
+-moz-box-shadow: 5px -2px 8px 1px rgba(0,0,0,0.21);
+box-shadow: 5px -2px 8px 1px rgba(0,0,0,0.21);
+    background-color:bisque;*/
+}
+
+/********************************************/
+
+
+
+
+sup{
+    font-size:11px;
+    line-height: 1em;
+}
+
+li{
+    font-size:1em;
+}
+
+
+
+
+
+ol {
+    list-style-type: disc;
+    text-indent: 10px;
+}
+
+.keyword-link, .keyword-list{
+   /* color:#f30; */
+   /*   text-decoration: underline;
+    cursor: pointer;
+    font-size: 14px;*/
+}
+.keyword-link:hover, .keyword-list:hover{
+/*    text-decoration: none;
+    cursor: pointer;
+    font-size: 14px;*/
+
+}
+
+.keyword-display{
+  /*  color: #f30; */
+  /* box-shadow: 7px 7px 30px 15px rgba(145, 145, 145, 0.6), -7px 7px 30px 15px rgba(145, 145, 145, 0.6), 7px -7px 30px 15px rgba(145, 145, 145, 0.6), -7px -7px 30px 15px rgba(145, 145, 145, 0.6);
+    background-color:#dddddd;*/
+   /* box-shadow: 3px 3px 6px 4px rgba(203, 203, 203, 0.4), -1px 3px 6px 4px rgba(203, 203, 203, 0.4), 3px -3px 6px 4px rgba(203, 203, 203, 0.4), -1px -3px 6px 4px rgba(203, 203, 203, 0.4);
+    background-color:rgb(203, 203, 203);
+    border-radius: 3px;
+*/
+}
+
+
+
+
+
+/************* DEVICES ***************/
+
+/*
+smartphones, iPhone, portrait 480x320 phones */
+@media (max-width:650px) {
+#book-title {
+	font-size: 20px;
+}
+
+    #summary {
+	font-size: 14px;
+    width: 90%;
+	border-radius: 10px;
+	padding-right: 10px;
+}
+    
+.author_tofill, .editor_tofill {
+	font-size: 14px;
+    line-height: 1.2em;
+}
+.toggle_menu{
+        position: fixed;
+    margin-left:0px;
+    }    
+.section p{
+    margin-left:0px;
+    font-size: 1.4em;
+    line-height: 1.5em;
+    width: 90%;
+}
+    
+    #tool-bar-container {
+    background-color: white;
+    box-shadow: 9px -3px 20px 23px rgba(255, 255, 255, 1);
+    height: 20px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 99999999999999999999999;
+}
+#content{
+    width: 95%;
+    margin-right:5px;
+    }
+    
+.pushmenu {				
+    width: 97%;
+overflow-y: scroll;
+}
+
+/*******CLASS ADDED TO MAKE**************
+********IT GO OFF SCREEN****************/
+.pushmenu-left {
+    left: 100%;
+
+}
+
+/*******CLASS THAT MAKES**********
+********THE #CONTENT MOVE*********
+********TO THE RIGHT*************/
+.pushmenu-push-toright {
+    margin-right:100%;
+}
+
+#toc_wrapper{
+    margin-top:40px;    
+    }
+
+    .close_menu {
+        margin-left:0px;
+        z-index: 99999999999999999999999999999999;
+        position: fixed;
+        left:0px;
+    }
+    
+.section h2 {
+    font-family: "Georgia";
+    font-size: 3em;
+    line-height: 1.1em;
+    margin-bottom: 20px;
+    margin-left: 0;
+    padding-top: 40px;
+    max-width: 90%;
+    overflow-y: hidden;
+}
+#info-box, .info, tbody{
+        margin-left:-15px;
+    width: 100%;
+    margin-top:40px;
+    }
+}
+
+
+
+@media (min-width:650px, max-width:950px) {
+     #book-title {
+	font-size: 20px;
+}
+
+.toggle_menu{
+        position: fixed;
+    margin-left:0px;
+    }    
+.section p{
+    margin-left:0px;
+    font-size: 1.4em;
+    line-height: 1.5em;
+    width: 50%;
+    }
+    
+    #tool-bar-container {
+    background-color: white;
+    box-shadow: 9px -3px 20px 23px rgba(255, 255, 255, 1);
+    height: 20px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 99999999999999999999999;
+}
+#content{
+    width: 95%;
+    margin-right:5px;
+    }
+    
+.pushmenu {				
+    width: 97%;
+overflow-y: scroll;
+}
+
+/*******CLASS ADDED TO MAKE**************
+********IT GO OFF SCREEN****************/
+.pushmenu-left {
+    left: 100%;
+
+}
+
+/*******CLASS THAT MAKES**********
+********THE #CONTENT MOVE*********
+********TO THE RIGHT*************/
+.pushmenu-push-toright {
+    margin-right:100%;
+}
+
+#toc_wrapper{
+    margin-top:40px;    
+    }
+
+    .close_menu {
+        margin-left:0px;
+        z-index: 99999999999999999999999999999999;
+        position: fixed;
+        left:0px;
+    }
+    
+.section h2 {
+    font-family: "Georgia";
+    font-size: 3em;
+    line-height: 1.1em;
+    margin-bottom: 20px;
+    margin-left: 0;
+    padding-top: 40px;
+    max-width: 700px;
+    overflow-y: hidden;
+}
+#info-box, .info, tbody{
+        margin-left:-15px;
+    width: 100%;
+    margin-top:40px;
+    }
+}
+
+
+
+
+/* big landscape tablets, laptops, and desktops  */
+@media (max-width:1020px) {
+
+
+}

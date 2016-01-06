@@ -1,0 +1,126 @@
+/*!
+ * Start Bootstrap - Simple Sidebar HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+/* Toggle Styles */
+
+/*#wrapper {*/
+#main {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#main.toggled {
+    padding-left: 250px;
+}
+
+#menu {
+    z-index: 1000;
+    position: fixed;
+    left: 250px;
+    width: 0;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    background: #000;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#main.toggled #menu {
+    width: 250px;
+}
+
+#content {
+    width: 100%;
+    position: absolute;
+    padding: 15px;
+}
+
+#main.toggled #content {
+    position: absolute;
+    margin-right: -250px;
+}
+
+/* Sidebar Styles */
+
+#toc_wrapper {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#toc_wrapper h2 {
+    text-indent: 20px;
+    line-height: 40px;
+}
+
+#toc_wrapper h2 a {
+    display: block;
+    text-decoration: none;
+    color: #999999;
+}
+
+#toc_wrapper h2 a:hover {
+    text-decoration: none;
+    color: #fff;
+    background: rgba(255,255,255,0.2);
+}
+
+#toc_wrapper h2 a:active,
+#toc_wrapper h2 a:focus {
+    text-decoration: none;
+}
+
+#toc_wrapper > .sidebar-brand {
+    height: 65px;
+    font-size: 18px;
+    line-height: 60px;
+}
+
+#toc_wrapper > .sidebar-brand a {
+    color: #999999;
+}
+
+#toc_wrapper > .sidebar-brand a:hover {
+    color: #fff;
+    background: none;
+}
+
+@media(min-width:768px) {
+    #main {
+        padding-left: 250px;
+    }
+
+    #main.toggled {
+        padding-left: 0;
+    }
+
+    #menu {
+        width: 250px;
+    }
+
+    #main.toggled #menu {
+        width: 0;
+    }
+
+    #content {
+        padding: 20px;
+        position: relative;
+    }
+
+    #main.toggled #content {
+        position: relative;
+        margin-right: 0;
+    }
+}
