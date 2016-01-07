@@ -67,12 +67,15 @@ Easy changes :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-
 	color: #000;
 }
 
-a {
+a, a:visited{
 	color: inherit;
-    /*text-decoration: none;*/
+    color:#ff3300;
+    text-decoration: none;
 }
 
-a:hover {
+a:hover, a:active,  a:focus  {
+    color:#ff3300;
+    text-decoration: underline;
 }
 
 
@@ -88,15 +91,22 @@ a:hover {
 #info-box {
     /*height: auto; */
     overflow: hidden;
-    padding-bottom: 100px;
-    background-color:white;
-    -webkit-box-shadow: 2px 20px 15px 8px rgba(255, 35, 35, 0.35) !important;
-    -moz-box-shadow: 2px 20px 15px 8px rgba(217, 217, 217, 0.35) !important;
-    box-shadow: 2px 20px 15px 8px rgba(217, 217, 217, 0.35) !important;
-    border-bottom: 1px #d9d9d9 solid;
+    padding-bottom: 40px;
+
+    background-color: white;
+    color:#ff3300;
+/*      -webkit-box-shadow: 2px 20px 15px 8px rgba(255, 255, 255, 0.61) !important;
+         -moz-box-shadow: 2px 20px 15px 8px rgba(255, 255, 255, 0.61) !important;
+         box-shadow: 2px 20px 15px 8px rgba(255, 255, 255, 0.61) !important; */
+ /*    -webkit-box-shadow: 2px 20px 15px 8px rgba(119, 119, 119, 0.31) !important;
+    -moz-box-shadow: 2px 20px 15px 8px rgba(119, 119, 119, 0.31) !important;
+    box-shadow: 2px 20px 15px 8px rgba(119, 119, 119, 0.31) !important; */
+    -webkit-box-shadow: 2px 20px 15px 8px #ff3300 !important;
+    -moz-box-shadow: 2px 20px 15px 8px #ff3300 !important;
+    box-shadow: 2px 20px 15px 8px #ff3300 !important;
+    border-bottom: 1px #5b5b5b solid;
     z-index: 44444444444;
     position: relative;
-    color:black;
 }
 .info {
     height: auto;
@@ -104,22 +114,32 @@ a:hover {
 
 /* How is written the book's title */
 #book-title {
-    font-size: 60px;
+    font-size: 45px;
     margin-top: 10px;
     line-height: 1em;
-    padding-left: 60px;
+    padding: 0px;
     /* color: #f30; */
 }
 
 #info-box .keyword{
-    border:1px solid black;
+/*     border:1px solid black;
     padding: 1px 2px 1px 2px;
     line-height: 2em;
     cursor: pointer;
     font-size:16px;
     word-break: keep-all;
     white-space:nowrap;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.7); */
+    background-color: #dbdbdb;
+    border-radius:5px;
+    padding: 5px;
+    padding-top:2px;
+    padding-bottom: 2px;
+    margin-right:4px;
+    cursor: pointer;
+    white-space: nowrap;
+    word-break: keep-all;
+    line-height: 2em;
 }
 
 /***********************************
@@ -186,7 +206,7 @@ Defines the typography for texts in reader */
 	margin-bottom: 0px;
     padding-bottom: 20px;
 	padding-right: 0;
-	padding-top: 50px;
+	padding-top: 30px;
 	font-size: 4.5em;
 	line-height: 1.1em;
     -webkit-margin-before: 0em;
@@ -199,6 +219,8 @@ Defines the typography for texts in reader */
     background-color:#a5a5a5;  */
 vertical-align: middle;
     border-radius: 10px;
+    font-family: "Georgia";
+    letter-spacing: 2%;
 }
 
 .shadow{
@@ -215,7 +237,7 @@ vertical-align: middle;
 .section h3 {
 	font-size: 2.7em;
     -webkit-margin-before: 30px;
-    -webkit-margin-after: 0em;
+    -webkit-margin-after: 15px;
     -webkit-margin-start: 0px;
     -webkit-margin-end: 0px;
 }
@@ -235,24 +257,20 @@ vertical-align: middle;
 */
 }
 
-/* Font-size for the informations: !! do not change the units (em) to pixels !! */
-.section .author,.section .words {
-	font-size: 1.2em;
-}
-
 /* author: the way the name of the author for each chapter displays */
-.author {
+.section .author {
 	margin-left: 0;
 	margin-right: 0;
-	font-size: 1.2em;
-	text-transform: uppercase;
+    color:lightgray;
+    font-size: 1.7em;
 }
 
-/* words: the way the keywords in each chapter display */
-.words {
-	font-size: 1.2em;
-	text-transform: uppercase;
+/* words: the way the words contained in each chapter display */
+.section .words {
+    font-size: 1.7em;
+    color:lightgray;
 	text-decoration: none;
+    margin-bottom: 14px;
 }
 
 
@@ -298,6 +316,10 @@ img {
 	font-family: HkgroteskBold;
 	src: url(css/fonts/HKGrotesk-Bold.otf);
 }
+@font-face {
+    font-family: KreonLight;
+    src: url(css/fonts/Kreon-Light.ttf);
+}
 body{
     font-family: "Hkgrotesk";
 }
@@ -309,7 +331,12 @@ body{
 ************************************/
     body {
         margin: 0;
-}	
+/*         background-color:rgba(255, 51, 0, 0.10);
+         */   
+        color: black;
+    background-color:#fafafa;
+        background-color:#f4f4f4;
+    }	
 
 /*******THE CONTENT********************/
 	#content {
@@ -325,6 +352,7 @@ body{
         /* width: 100%;
         padding-left: 10%;
         padding-right: 15%;*/
+        background-color:white;
 }
 	
 
@@ -346,7 +374,7 @@ body{
 }
 
 .horizScroll {
-    background-color:rgba(172, 172, 172, 0.14);
+    background-color:rgba(172, 172, 172, 0.24);
     border-radius: 5px;
     /*margin-left: -5px;*/
 }
@@ -408,18 +436,14 @@ a.page-scroll:hover, a.page-scroll:active, a.page-scroll:link, a.page-scroll:vis
 /*******MENU WITH THE TOC THAT******************
 ********COMES IN SLIDING FROM THE LEFT*********/
 #menu {				/*basically nav*/
-<<<<<<< Updated upstream
-    /*width:16.66666667%;*/
-=======
-    background-color:#f4f4f4;
     left: -16.66666667%;
->>>>>>> Stashed changes
     padding: 0;
     height: 100%;
     position:fixed;
     overflow: hidden;
-    background-color:rgba(255, 51, 0, 0.12);
-/* -webkit-box-shadow: 10px 0px 31px -10px rgba(61,61,61,0.67);
+    background-color:rgb(255, 212, 193);
+    background-color:#e6e6e6;
+    /* -webkit-box-shadow: 10px 0px 31px -10px rgba(61,61,61,0.67);
 -moz-box-shadow: 10px 0px 31px -10px rgba(61,61,61,0.67);
 box-shadow: 10px 0px 31px -10px rgba(61,61,61,0.67); */
     
@@ -447,10 +471,17 @@ Table of content is contained in pushmenu, it shows the different parts of the b
 	-webkit-margin-start: 0;
 	-webkit-margin-end: 0;
 	margin:10px;
-    text-transform: uppercase;
+    text-transform:uppercase;
     text-align: center;
-    border-top: 1px solid black;
     padding-top:4px;
+    border-radius: 8px;
+    background-color:rgba(255, 255, 255, 1);
+    box-shadow: 5px 5px 3px rgba(136, 136, 136, 0.03);
+    color:black;
+}
+
+#menu .toc_author{
+    font-family: "HKGrotesk";
 }
 
 /* Table of contents: title for sub-parts (subtitles) */
@@ -474,9 +505,11 @@ Table of content is contained in pushmenu, it shows the different parts of the b
 }
 
 /* Table of contents: when the user goes over a part of the book */
-#menu h3:hover, #menu h2:hover, #menu .toc_author:hover, #toc_wrapper h2 .toc_author:hover {
-    background-color:#ff3300;
-    color: white;
+#menu h2:hover{
+    border:1px solid #ff3300;
+    color:black;
+    background-color:white;
+    cursor: pointer;
 }
 
 #toc_wrapper h2 a {
@@ -487,9 +520,6 @@ Table of content is contained in pushmenu, it shows the different parts of the b
     text-transform: capitalize;
 }
 
-#menu h2:hover .toc_author, #toc_wrapper h2:hover a {
-    color:white;
-}
 
 /*******CLASS ADDED TO MAKE**************
 ********IT GO OFF SCREEN****************/
@@ -580,9 +610,9 @@ box-shadow: 10px 0px 31px -10px rgba(61,61,61,0.67); */
     top:0px;
 left:0px;
     width: 80%;
- -webkit-box-shadow: 9px -3px 20px 23px rgba(255,255,255,1);
--moz-box-shadow: 9px -3px 20px 23px rgba(255,255,255,1);
-box-shadow: 9px -3px 20px 23px rgba(255,255,255,1); 
+/*  -webkit-box-shadow: 9px -3px 20px 23px rgba(255,255,255,1);
+ -moz-box-shadow: 9px -3px 20px 23px rgba(255,255,255,1);
+ box-shadow: 9px -3px 20px 23px rgba(255,255,255,1);  */
     background-color: white;
     height: 1px;
      z-index:99;
@@ -616,20 +646,23 @@ box-shadow: 9px -3px 20px 23px rgba(255,255,255,1);
 		background-size: 13px 14px;
         background-repeat: no-repeat;
 		/*background-color: blue;*/
-    padding:3px;
-    padding-top:5px;
+    padding:1px;
+    padding-top:10px;
+    padding-bottom: 10px;
           position: fixed;
     bottom:20px;
-    left:15px;
+    left:0px;
     font-size: 18px;
-    color:#444444;
+    color:white;
+    background-color:black;
+}
+.toggle_menu a{
+    color:white;
 }
 
-#search-button:hover, #files-button:hover, #copy-button:hover, #print-button:hover, #tools-button:hover, #share-button:hover, .toggle_menu:hover{
-background-color: #ff3300;
-    border-radius: 5px;
+.toggle_menu:hover{
     color:white;
-    cursor: pointer;
+    background-color:black;
 }
 
 #search-button:active, #files-button:active, #copy-button:active, #print-button:active, #tools-button:active, #share-button:active{
@@ -1088,24 +1121,8 @@ input:hover {
 
 
      .capitalism, .capital, .creativity, .art, .contemporary, .culture, .ideological, .social, .labor, .attention, .image, .production, .capitalism, .art, .state, .life, .public, .city, .economics, .production, .development, .art, .social, .avant-garde, .world, .big, .Other, .art, .urban, .cultural, .project, .creativity, .Belgrade, .Rog, .capital, .creative, .collective, .urban, .factory, .gentrification, .art, .political, .social, .culture, .autonomy, .public, .work {
-        color: #3B0000;
-        /*text-shadow: 1px 1px #292929;
-       /*-webkit-text-fill-color: #FF9980;  /*Will override color (regardless of order) */
-       /*-webkit-text-stroke-width: .3px;
-       -webkit-text-stroke-color: #1F1F1F;	/*font-weight: bold !important;
-    	font-family: "Baskerville";
-    	border-radius: 20%;
-        background-color: #DEDEDE;
-        box-shadow:
-            0px 0px 60px 0px #BEBEBE, 
-            0 0 0px 0px #DEDEDE;*/
-
-    	/*background: 
-    	-webkit-linear-gradient(#FF9980, #292929);
-    	-webkit-background-clip: text;
-    	-webkit-text-fill-color: transparent;
-        	color: #454545;
-*/
+        color: #1c4ee5;
+         
     }
 
 /********CITATIONS************************/
@@ -1124,19 +1141,19 @@ input:hover {
     }
 
     .full-citation {
-      text-align: left;
-      word-wrap: break-word;
-      background-color: #fcfcfc;
-      min-height: 5em;
-    max-height: 6em;
-        overflow-y: auto;
-      width: 95%;
-      max-width: 95%;
-
-        margin-right: 5px;
+    text-align: left;
+    word-wrap: break-word;
+    background-color: #ffffff;
+    overflow-y: auto;
         border:none;
-        border-radius: 5px;
-
+        font-family: "Verdana";
+        font-size: 10px;
+        min-height: 6em;
+        max-height: 9em;
+        width: 100%;
+        margin: 0px;
+        border-radius: 2px;
+        color: #5b5b5b;
     }
 
     #citation-box {
@@ -1172,6 +1189,8 @@ input:hover {
     margin-left: 2%;
     width: 13%;
     /*padding-right: 2%;*/
+/*     background-color:white;
+    height: 999999999999999999999999999px; */
 }
 
 #chapter8 {
@@ -1180,6 +1199,7 @@ input:hover {
 /* 	position: relative;
 	    height: auto; */
   /*  background-color: white; */
+    
 }
 
 #chapter8 ol {
@@ -1214,12 +1234,19 @@ input:hover {
     hyphens: auto;
     line-break: strict;
     word-break:break-word;
+    border-radius: 8px;
+    background-color:white;
     /*padding-top: 0;*/
 }
 
 .sidenote {
     opacity: 0;
     left: 40px;
+}
+
+.sidenote p{
+    margin-bottom: 0px;
+    padding-bottom: 0px;
 }
 
 #chapter8 ol li p {
@@ -1274,30 +1301,128 @@ ol {
 }
 
 /******** TUNNING BOOTSTRAP ********/
+.section .btn-default {
+    background-color: #dbdbdb;
+    border-radius:5px;
+    padding: 2px;
+    padding-left:5px;
+    padding-right: 5px;
+    margin-right:4px;
+    margin-bottom: 8px;
+    color: black;
+    border:none;
+    height: auto;
+}
+.section .btn.active{
+    box-shadow: inset 0 3px 5px rgba(0,0,0,.135);
+    background-color:#c7c7c7;
+}
+.section .btn-default:focus{
+
+}
+
+.extra{
+    background-color: rgba(255, 51, 0, 0.3);
+    border-radius:5px;
+    padding: 5px;
+    padding-top:2px;
+    padding-bottom: 2px;
+    margin-right:4px;
+    line-height: 2em;
+    color: black !important;
+}
+
+.extra:hover{
+    color: #ffffff;
+    background-color: #ff3300;
+    text-decoration: none;
+    color: black;
+}
+
+.extra:active{
+    border: 1px solid #ff3300;
+    color: black;
+}
+
+.extra a, .extra a:visited, .extra a:focus, .extra a:hover{
+    color:black !important;
+}
 
 #menu-right{
     position: fixed;
     right:0px;
+    padding:10px;
+    padding-top:15px;
     height: 100%;
-    background-color:  #f4f4f4;
+/*     background-color:  #f4f4f4;
+    background-color:rgba(255, 78, 0, 0.25); */
+    border:none;
+    background-color: #ffd5c9;
+    border-left:1px solid #ff3300;
+
+}
+
+#menu-right .panel-group, #menu-right .panel-group:hover, #menu-right .panel-group:focus, #menu-right .panel-group:active{
+    margin-bottom: 0px;
+    background-color: transparent;
+    border:none;
+    color: black;
 }
 
 
 .panel-group .panel {
     margin-bottom: 0;
     border-radius: 8px;
+    background-color: transparent;
+    border:none;
+
+}
+
+.panel-group .panel-heading+.panel-collapse>.panel-body {
+    border-top: 0px solid #ddd;
 }
 
 .panel-body{
     font-size: 13px;
+    background-color: #fff7f5;
+    border-radius: 8px;
+    padding: 8px;
+    border:none;
+
 }
 
+.panel-body p{
+    margin: 0px;
+    padding-top:5px;
+    background-color: transparent;
+    border:none;
+}
 
-.panel-default>.panel-heading {
+.panel-default>.panel-heading{
     color: #333;
-    background-color: #f5f5f5;
-    border-color: #ddd;
+/*     background-color: #f5f5f5;
+     */    border-color: black;
     border-radius: 8px;
+    padding: 7px;
+    background-color: #ffb9a5;
+    border:none;
+}
+.panel-default>.panel-heading a:hover, .panel-default>.panel-heading a:focus{
+    color: black;
+    text-decoration: none;
+}
+
+.panel-body p{
+    font-size:11px;
+    background-color: transparent;
+
+}
+
+.panel-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 14px;
+    color: inherit;
 }
 
 
@@ -1348,6 +1473,10 @@ blockquote {
     font-size: inherit;
     border-left: 0px;
 }
+
+
+
+
 
 
 /********* XS DEVICES MENU **********/
