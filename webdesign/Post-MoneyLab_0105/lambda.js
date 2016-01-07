@@ -5,7 +5,7 @@ $(document).ready(function(){
 //////////////////////////////////////////////////////////////////////////////////
 
 	
-	$('.section').characterJustify();
+	// $('.section').characterJustify();
 
 	$toggle_menu = $('.toggle_menu');
 
@@ -29,8 +29,8 @@ $(document).ready(function(){
 	
 
 	$('#content').animate({
-		opacity: 1,
-		}, 1800, function() {
+		opacity: 1
+		}, 1000, function() {
 			alignSidenotes();
 			alignVertically();
 			fadeInSidenotes();
