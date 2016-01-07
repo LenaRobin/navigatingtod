@@ -9,19 +9,12 @@ $(document).ready(function(){
 
 	$toggle_menu = $('.toggle_menu');
 
-	console.log($('#menu').offset().left);
 	$toggle_menu.click(function() {
-	// 	// $('#menu').animate({'margin-left': 'toggle'}, 2000);
 		if ($('#menu').offset().left < 0) {
-			// $('#menu').toggleClass('menu_open');
 			$('#menu').animate({left: 0});
-			// $('#menu').toggleClass('menu_closed');
-	} else {
-		$('#menu').animate({left: '-16.66666667%'});
-	}
-	// 	// $('#menu').toggleClass('menu_open', 'menu_closed');
-	// 	// $('#menu').animate({left: 0});
-	// 	$('#menu').toggleClass('menu_closed', 'menu_open');
+		} else {
+			$('#menu').animate({left: '-16.66666667%'});
+		}
 		$('#menu_bar_scroll').toggle();
 		$('#content').toggleClass('col-lg-offset-1', 'col-lg-offset-2');
 		$('#content').toggleClass('col-md-offset-1', 'col-md-offset-2');
@@ -37,8 +30,7 @@ $(document).ready(function(){
 	});
 
 ////ON LOAD OPEN THE TOC IF SMALLER
-	if ($(window).width() >= "992") {	//SUBSTITUTE '400' WITH THE DESIRED MINIMUM SIZE
-		// $('#menu').animate({width: 'toggle'});
+	if ($(window).width() >= "992") {
 		$('#menu').animate({left: 0}, 1000);
 	}
 
