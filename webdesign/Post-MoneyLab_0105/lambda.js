@@ -3,7 +3,6 @@ $(document).ready(function(){
 //////////////////////////////////////////////////////////////////////////////////
 ////PUSH MENU ON THE LEFT
 //////////////////////////////////////////////////////////////////////////////////
-
 	
 	// $('.section').characterJustify();
 
@@ -49,6 +48,7 @@ $(document).ready(function(){
 		x++;
 	});
 
+
 ////VERTICAL SCROLL BAR 
 	$(window).scroll(function() {
         var windowHeight = $(window).height();
@@ -56,7 +56,13 @@ $(document).ready(function(){
         var bottom = $(document).height() - windowHeight;			// heigth from top at the end of doc
         var verticalBar = (scrollTop / bottom)*windowHeight;
 		var windowWidth = $(window).width(); // WIDTH OF THE WINDOW SCREEN
-		var titleWidth = ((1/6)*windowWidth);	//TITLE WIDTH
+		var extraWidth1 = $('.horizScroll').outerWidth(true) - $('.horizScroll').width();
+		var extraWidth2 = $('.horizScroll').parent().outerWidth(true) - $('.horizScroll').parent().width();
+		var extraWidth3 = $('.horizScroll').parent().parent().outerWidth(true) - $('.horizScroll').parent().parent().width();
+		var extraWidth4 = $('.horizScroll').parent().parent().parent().outerWidth(true) - $('.horizScroll').parent().parent().parent().width();
+		var extraWidth5 = $('.horizScroll').parent().parent().parent().parent().outerWidth(true) - $('.horizScroll').parent().parent().parent().parent().width();
+		var extraWidth = extraWidth1+extraWidth2+extraWidth3+extraWidth4+extraWidth5;
+		var titleWidth = (((1/6)*windowWidth)-extraWidth);	//TITLE WIDTH
 		// var subtitleWidth = titleWidth*(90/100);				//SUBTITLE WIDTH
 		var n = 1;
 		var y = 1;
@@ -97,7 +103,6 @@ $(document).ready(function(){
 ////////HIDE REFERENCE POP-UP BOXES ON SCROLL
 		$('.tip').css('display','none');
      });
-
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 ////SEARCH FUNCTION
@@ -269,9 +274,12 @@ $(document).ready(function(){
 		someWords.push(word);
 	}
 
-	$("#filter").autocomplete({
-		source: someWords
-	});
+/****************
+==> FOR SOME REASON AUTOCOMPLETE STOPPED WORKING AND WAS MESSING UP EVERYTHING
+****************/
+	// $("#filter").autocomplete({
+	// 	source: someWords
+	// });
 
 //––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 //––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
@@ -300,45 +308,6 @@ $(document).ready(function(){
   	$('[data-toggle="popover"]').popover();
 
 ////////////////
-////HEADER TOOLS
-////////////////
-
-	// $('#search-button').click(function () {
-	//     $('#search-pannel').toggle();
-	//     $('#search-pannel').siblings().hide();
-	// });
-
-	// $('#files-button').click(function () {
-	//     $('#files-pannel').toggle();
-	//     $('#files-pannel').siblings().hide();
-	// });
-
-	// $('#print-button').click(function () {
-	//     $('#print-pannel').toggle();
-	//     $('#print-pannel').siblings().hide();
-	// });
-
-	// $('#copy-button').click(function () {
-	//     $('#copy-pannel').toggle();
-	//     $('#copy-pannel').siblings().hide();
-	// });
-
-	// $('#share-button').click(function () {
-	//     $('#share-pannel').toggle();
-	//     $('#share-pannel').siblings().hide();
-	// });
-
-	// $('#tools-button').click(function () {
-	//     $('#tools-pannel').toggle();
-	//     $('#tools-pannel').siblings().hide();
-	// });
-
-
-	// $('.close').click(function () {
-	//     $(this).parent().hide();
-	// });
-
-////////////////
 ////CITATION BOX
 ////////////////
 
@@ -349,45 +318,108 @@ $(document).ready(function(){
 	});
 
 ////TOGGLE TOOLS
-	$('#tools').click( function() {
-		$('#citation-box').fadeToggle();
-	});
+	// $('#tools').click( function() {
+	// 	$('#citation-box').fadeToggle();
+	// });
+
+
+
+
+
 
 ////GENERATE CITATION
-	function getSelectedText() {
-	  	t = (document.all) ? document.selection.createRange().text : document.getSelection();
-		  return t;
-	}
+	// function getSelectedText() {
+	//   	t = (document.all) ? document.selection.createRange().text : document.getSelection();
+	// 	  return t;
+	// }
 	
 ////CONVERT SELECTION TO STRING AND WRAP A SPAN AROUND IT
-	var span = document.createElement('SPAN');
-	$('.section').mouseup(function(){
-	    var selection = getSelectedText();
-	    var selection_text = selection.toString();
+	// var span = document.createElement('span');
+	var selection;
+	var selection_text;
+
+	// $('body').not('#asd').click(function(){
+	// $('#main').click(function(){
+	// 	$('#asd').css('display', 'none');
+	// });
+
+// console.log('anything');
+	$('.section').mouseup(function(e){
+		console.log(e);
+		// selection = getSelectedText();
+		selection = document.getSelection().getRangeAt(0); //MAKE THIS WORK ON EVERY BROWSER
+		selection_text = selection.toString();
 
 	    //SPAN AROUND SELECTED TEXT
-	    selection_text = span.textContent.substr(0, 1);
-	    if (selection) {
-		    var range = selection.getRangeAt(0);
-		    range.insertNode(span);
+	    // selection_text = span.textContent.substr(0,1);
+		var scrollTop = $(window).scrollTop();
+		var clickTop = e.pageY-scrollTop;
+
+	    // var top = clickTop;//) - $('#asd').outerHeight();
+	    // console.log('pageY: '+e.pageY);
+	    // console.log('scrollTop: '+scrollTop);
+	    // console.log('clickTop: '+clickTop);
+	    // console.log('top: '+top);
+	    // console.log('windowHeight: '+$(window).height());
+
+	    if (selection_text.length > 0 ) {
+		    // var range = selection.getRangeAt(0);
+		    // console.log(range);
+			// var top = $('.qwertz').offset().top - $('#asd').outerHeight();
+			if (($(window).height() - clickTop) < 100) {
+				clickTop -=100;
+			}
+			var left = e.pageX;
+			// console.log('left: '+left);
+			$("#asd").css('display','block').css({top: clickTop, left: left });
+
 		}
-	// });
+		// else{
+		// }
+
+
+// });
+
 
 ////ON CLICK GET ALL THE DATA FROM PARENT ELEMENT AND GENERATE THE
 ////CITING REFERENCE IN THREE DIFFERENT STYLES
-		span.className = "qwertz";		//ADD CLASS TO SPAN ON CLICK
-		var par = $('.qwertz').closest('p').attr('id');		//GET ID OF PARENT p
+		// var par = $('.qwertz').closest('p').attr('id');		//GET ID OF PARENT p
+		// if (par) {
+		// 	var blaaa = par.substr(1, 3);
+		// }
+	 //  	var ref_article = $('.qwertz').closest('.section').attr('data-article');
+
+	 //    var ref_authorName = $('.qwertz').closest('.section').attr('data-authorName');
+	 //    if (ref_authorName) {
+		//     var ref_apaAuthorName = ref_authorName.substr(0, 1);
+		// }
+	 //    var ref_intro = $('.qwertz').closest('.section').attr('data-authorName');
+	 //    var ref_authorLastName = $('.qwertz').closest('.section').attr('data-authorLastName');
+	 //    var ref_title = $('meta[name="title"]').attr('content');
+	 //    var ref_eds = $('meta[name="editors"]').attr('content');
+	 //    var ref_apaEds = $('meta[name="apa-editors"]').attr('content');
+	 //    var ref_year = $('meta[name="year"]').attr('content');
+	 //    var ref_place = $('meta[name="place"]').attr('content');
+	 //    var ref_pub = $('meta[name="publisher"]').attr('content');
+	 //    var MLA_date_of_access = moment().format('D MMMM YYYY');
+	 //    var chicago_date_of_access = moment().format('MMMM D, YYYY');
+		// var url = $(location).attr('pathname');
+
+
+
+
+		var par = e.target.id;
 		if (par) {
 			var blaaa = par.substr(1, 3);
 		}
-	  	var ref_article = $('.qwertz').closest('.section').attr('data-article');
+	  	var ref_article = $("#"+par).closest('.section').attr('data-article');
 
-	    var ref_authorName = $('.qwertz').closest('.section').attr('data-authorName');
+	    var ref_authorName = $("#"+par).closest('.section').attr('data-authorName');
 	    if (ref_authorName) {
 		    var ref_apaAuthorName = ref_authorName.substr(0, 1);
 		}
-	    var ref_intro = $('.qwertz').closest('.section').attr('data-authorName');
-	    var ref_authorLastName = $('.qwertz').closest('.section').attr('data-authorLastName');
+	    var ref_intro = $("#"+par).closest('.section').attr('data-authorName');
+	    var ref_authorLastName = $("#"+par).closest('.section').attr('data-authorLastName');
 	    var ref_title = $('meta[name="title"]').attr('content');
 	    var ref_eds = $('meta[name="editors"]').attr('content');
 	    var ref_apaEds = $('meta[name="apa-editors"]').attr('content');
@@ -397,7 +429,10 @@ $(document).ready(function(){
 	    var MLA_date_of_access = moment().format('D MMMM YYYY');
 	    var chicago_date_of_access = moment().format('MMMM D, YYYY');
 		var url = $(location).attr('pathname');
-				
+
+
+
+
 		if (blaaa < 15) {
 			$('#mla').html("Nikolić, Gordana and Tatlić Šefik"+", "+"<i>"+ref_title+"</i>" 
 		    +". Eds. "+ref_eds+". "+ref_place+": "+ref_pub+", "+ref_year+". &lt;"+url+"#"+par+"&gt;. "+MLA_date_of_access+".");
@@ -423,6 +458,69 @@ $(document).ready(function(){
 		    +". "+ref_place+": "+ref_pub+". Available from "+url+"#"+par+".");
 		}
 	});
+
+////DEFINE
+	$('#asd div button:nth-child(1)').click(function() {
+		// $( "#loaded").load( "http://www.oxforddictionaries.com/definition/english/capital .entryPageContent" );
+		window.open('http://www.oxforddictionaries.com/definition/english/' + selection_text); 
+	});
+
+////HIGHLIGHT
+	$('#asd div button:nth-child(2)').click(function() {
+	  //   if(selection.startContainer.parentElement === selection.endContainer.parentElement) {
+		 //    var selectedText = selection.extractContents();
+		 //   	var span = document.createElement("span");
+			// span.className = "qwertz";		//ADD CLASS TO SPAN ON CLICK
+			// span.appendChild(selectedText);
+		 //    selection.insertNode(span);
+
+
+	  //   	// var selectedText = range.extractContents();
+	  //   	console.log('same');
+	  //   	//span.removeChild(selectedText);
+	  //   	// span.appendChild(selectedText);
+	  //   	// range.insertNode(span);
+	  //   }else{
+	    	$('#content').wrapSelection({
+	    		fitToWord: true
+	    	}).addClass('underline');
+	    // }
+	});
+
+////CITE
+	$('#asd div button:nth-child(3)').click(function() {
+		$("#collapse3").slideDown();
+		$('.panel-collapse').not("#collapse3").slideUp();
+	});
+
+
+    if ($.cookie('scroll') !== null) {
+    	$(document).scrollTop($.cookie('scroll'));
+    	// alert('bookmark recovered');
+    }
+
+	$('#bookmark').click(function() {
+        // Set a cookie that holds the scroll position.
+        $.cookie('scroll', $(document).scrollTop());
+    
+    });
+
+    $('#remove_bookmark').click(function() {
+        // Set a cookie that holds the scroll position.
+        $.removeCookie('scroll');
+    
+    });
+
+
+
+	// $('#asd').on('click', function(e) {
+	// 	    e.stopPropagation();
+	// 	});
+
+
+	// $(document).not('#asd').click(function() {
+	// 	$('#asd').css('display', 'none');
+	// });
 
 
 ////////////////////////////////

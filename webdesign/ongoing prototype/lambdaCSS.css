@@ -27,6 +27,10 @@
 			font-size: 1em;
 		}
 
+		.underline {
+			background-color: yellow;
+		}
+
 /*******HORIZONTAL SCROLLBAR**********
 ********FOR THE CHAPTERS*************/
 		.horizScroll, .subScroll {

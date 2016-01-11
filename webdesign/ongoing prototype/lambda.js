@@ -1,5 +1,10 @@
 $(document).ready(function(){
 
+
+	$('.section').mouseup(function() {
+		$(this).wrapSelection().addClass('underline');
+	});
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////PUSH MENU ON THE LEFT
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -322,25 +327,25 @@ $(document).ready(function(){
 	});
 
 ////GENERATE CITATION
-	function getSelectedText() {
-	  	t = (document.all) ? document.selection.createRange().text : document.getSelection();
-		  return t;
-	}
+	// function getSelectedText() {
+	//   	t = (document.all) ? document.selection.createRange().text : document.getSelection();
+	// 	  return t;
+	// }
 	
 ////CONVERT SELECTION TO STRING AND WRAP A SPAN AROUND IT
-	var span = document.createElement('SPAN');
+	// var span = document.createElement('SPAN');
 	$('.section').mouseup(function(){
-	    var selection = getSelectedText();
-	    var selection_text = selection.toString();
+	//     var selection = getSelectedText();
+	//     var selection_text = selection.toString();
 
-	    //SPAN AROUND SELECTED TEXT
-	    selection_text = span.textContent.substr(0, 1);
-	    var range = selection.getRangeAt(0);
-	    range.insertNode(span);
+	//     //SPAN AROUND SELECTED TEXT
+	//     selection_text = span.textContent.substr(0, 1);
+	//     var range = selection.getRangeAt(0);
+	//     range.insertNode(span);
 
 ////ON CLICK GET ALL THE DATA FROM PARENT ELEMENT AND GENERATE THE
 ////CITING REFERENCE IN THREE DIFFERENT STYLES
-		span.className = "qwertz";							//ADD CLASS TO SPAN ON CLICK
+		// span.className = "qwertz";							//ADD CLASS TO SPAN ON CLICK
 		var par = $('.qwertz').closest('p').attr('id');		//GET ID OF PARENT p
 		if (par) {var blaaa = par.substr(1, 3);}
 	  	var ref_article = $('.qwertz').closest('.section').attr('data-article');
