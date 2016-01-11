@@ -669,7 +669,7 @@ $(document).ready(function(){
 		ev.stopPropagation();
 		ev.preventDefault();
 
-		$('#fn'+numbr).effect('highlight', {color:'#ffffaa'}, 2000);
+		$('#fn'+numbr).effect('highlight', {color:'rgb(255, 213, 203)'}, 2000);
 	});
 
 
