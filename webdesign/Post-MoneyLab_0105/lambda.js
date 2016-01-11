@@ -568,16 +568,71 @@ $(document).ready(function(){
 	});
 
 
+///////////////////////////////////////
+////ANIMATION SCROLL ON MENU ITEM CLICK
+///////////////////////////////////////
+    $('a.page-scroll').bind('click', function(e) {
+        var $anchor = $(this);
+        $('html, body').stop().animate({
+            scrollTop: $($anchor.attr('href')).offset().top
+        }, 2000, 'easeInOutQuart');
+        e.preventDefault();
+    });
+
 
 ////////////////////
 ////ARROW NAVIGATION
 ////////////////////
 
 	$('#down').click(function(e) {
-		console.log(e);
+		var scrollTop = $(document).scrollTop();
+////////SET DATA-TOP FOR EVERY SECTION
+		$('.section').each(function() {
+			var section_top = $(this).offset().top;
+			// if ($(this).next('.section')) {
+				var nextTop = $(this).next('.section').offset().top;
+			// }
+			
+			// console.log('scrollTop: '+scrollTop);
+			// console.log('section top: '+section_top);
+			// console.log('next top: '+nextTop);
+
+			if (section_top <= scrollTop && scrollTop < nextTop) {
+				// console.log('next section top: '+nextTop);
+				$('html, body').stop().animate({
+		            scrollTop: nextTop
+		        }, 2000, 'easeInOutQuart');
+			} else {
+				e.preventDefault();
+			}
+		});
 	});
 
 
+
+	$('#up').click(function(e) {
+		var scrollTop = $(document).scrollTop();
+		e.preventDefault();	
+////////SET DATA-TOP FOR EVERY SECTION
+		$('.section').each(function() {
+			var section_top = $(this).offset().top;
+			// if ($(this).next('.section')) {
+				var nextTop = $(this).next('.section').offset().top;
+			// }
+			console.log('scrollTop: '+scrollTop);
+			console.log('section top: '+section_top);
+			console.log('next top: '+nextTop);
+
+			if (scrollTop > section_top && scrollTop <= nextTop) {
+				console.log('next section top: '+section_top);
+				$('html, body').stop().animate({
+		            scrollTop: section_top
+		        }, 2000, 'easeInOutQuart');
+			} else {
+				e.preventDefault();
+			}
+		});
+	});
 
 
 
