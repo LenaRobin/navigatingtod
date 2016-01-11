@@ -436,16 +436,16 @@ a.page-scroll:hover, a.page-scroll:active, a.page-scroll:link, a.page-scroll:vis
 /*******MENU WITH THE TOC THAT******************
 ********COMES IN SLIDING FROM THE LEFT*********/
 #menu {				/*basically nav*/
-<<<<<<< Updated upstream
+/*<<<<<<< Updated upstream*/
     left: -16.66666667%;
     padding: 0;
-=======
+/*=======*/
     /*width:16.66666667%;*/
 /*=======*/
 /*    background-color:#f4f4f4;
     left: -16.66666667%;*/
     /*padding: calc(10);*/
->>>>>>> Stashed changes
+/*>>>>>>> Stashed changes*/
     height: 100%;
     position:fixed;
     overflow: hidden;
@@ -479,14 +479,14 @@ Table of content is contained in pushmenu, it shows the different parts of the b
 	-webkit-margin-start: 0;
 	-webkit-margin-end: 0;
 	margin:10px;
-<<<<<<< Updated upstream
+/*<<<<<<< Updated upstream*/
     text-transform:uppercase;
     text-align: center;
-=======
+/*=======
     text-transform: uppercase;
     text-align: right;
     border-top: 1px solid black;
->>>>>>> Stashed changes
+>>>>>>> Stashed changes*/
     padding-top:4px;
     border-radius: 8px;
     background-color:rgba(255, 255, 255, 1);
