@@ -1306,7 +1306,7 @@ input:hover {
     padding:0px 3px 5px 3px;
     position: absolute;
     font-family: "HKGroteskbold";
-    font-size: 1.25em;
+    font-size: 1.1em;
     line-height: 1.2em;
     word-wrap:break-word;
     hyphens: auto;
@@ -1391,6 +1391,7 @@ a sup{
     color: black;
     font-family: "HkgroteskBold";
     text-decoration: none;
+    font-size: 0.6em;
 }
 
 sup:hover{
