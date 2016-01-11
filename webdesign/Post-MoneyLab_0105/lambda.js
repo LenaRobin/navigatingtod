@@ -1,11 +1,7 @@
 $(document).ready(function(){
-
 //////////////////////////////////////////////////////////////////////////////////
 ////PUSH MENU ON THE LEFT
 //////////////////////////////////////////////////////////////////////////////////
-	
-	// $('.section').characterJustify();
-
 	$toggle_menu = $('.toggle_menu');
 
 	$toggle_menu.click(function() {
@@ -20,6 +16,7 @@ $(document).ready(function(){
 	});
 	
 
+////ANIMAATE OPENING LEFT MENU ON LOAD
 	$('#content').animate({
 		opacity: 1
 		}, 1000, function() {
@@ -101,7 +98,7 @@ $(document).ready(function(){
 			});
 		});
 ////////HIDE REFERENCE POP-UP BOXES ON SCROLL
-		$('.tip').css('display','none');
+		// $('.tip').css('display','none');
      });
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -305,7 +302,7 @@ $(document).ready(function(){
 		$(this).attr({"data-toggle": "popover", "data-trigger": "focus", "data-content": t, "data-placement": "top", "href": "#0"}).addClass("button");
 		// console.log(t);
 	});
-  	$('[data-toggle="popover"]').popover();
+  	// $('[data-toggle="popover"]').popover();
 
 ////////////////
 ////CITATION BOX
@@ -345,7 +342,7 @@ $(document).ready(function(){
 
 // console.log('anything');
 	$('.section').mouseup(function(e){
-		console.log(e);
+		// console.log(e);
 		// selection = getSelectedText();
 		selection = document.getSelection().getRangeAt(0); //MAKE THIS WORK ON EVERY BROWSER
 		selection_text = selection.toString();
@@ -487,11 +484,34 @@ $(document).ready(function(){
 	    // }
 	});
 
+	$('#menu-right h4 a').each(function() {
+		$(this).addClass('toggle_panel_button');
+	});
+
 ////CITE
 	$('#asd div button:nth-child(3)').click(function() {
-		$("#collapse3").slideDown();
-		$('.panel-collapse').not("#collapse3").slideUp();
+		// $("#collapse3").slideDown();
+		$("#collapse3").addClass('in').attr('aria-expanded', 'true').animate({height: '100%'}, 1000);
+		$('.panel-collapse').not("#collapse3").removeClass('in').attr('aria-expanded', 'false').animate({height: 0}, 1000);;
+		$('#cite').removeClass('collapsed').attr('aria-expanded', 'true');
+		$('.toggle_panel_button').not("#cite").removeClass('in').attr('aria-expanded', 'false');
 	});
+
+
+////HIDE SELECTION MENU WHEN CLICKED OUTSIDE (EXCEPT THE TW MENUS)
+    $('#main').mousedown(function (e) {
+	    if ($('#asd').is(':visible')
+	    	&& !$('#asd').is(e.target) // if the target of the click isn't the container...
+	        && !$('#menu').is(e.target)
+	        && !$('#menu-right').is(e.target)
+	        && $('#asd').has(e.target).length === 0 // ... nor a descendant of the container
+	        && $('#menu').has(e.target).length === 0
+    		&& $('#menu-right').has(e.target).length === 0)
+	    {
+	        $('#asd').css('display', 'none');
+	    }
+	});
+
 
 
     if ($.cookie('scroll') !== null) {
@@ -502,26 +522,12 @@ $(document).ready(function(){
 	$('#bookmark').click(function() {
         // Set a cookie that holds the scroll position.
         $.cookie('scroll', $(document).scrollTop());
-    
     });
 
     $('#remove_bookmark').click(function() {
         // Set a cookie that holds the scroll position.
         $.removeCookie('scroll');
-    
     });
-
-
-
-	// $('#asd').on('click', function(e) {
-	// 	    e.stopPropagation();
-	// 	});
-
-
-	// $(document).not('#asd').click(function() {
-	// 	$('#asd').css('display', 'none');
-	// });
-
 
 ////////////////////////////////
 ////CLICKING COPIES THE CITATION
@@ -547,7 +553,7 @@ $(document).ready(function(){
 	$('.btn-default').each(function(m){
 		$('#keyword_toggle'+m).each(function() {
 			$(this).click(function() {
-				console.log(keywords[m]);
+				// console.log(keywords[m]);
 
 				$(this).button('toggle');
 				if ($(this).hasClass('active')) {
@@ -566,6 +572,18 @@ $(document).ready(function(){
 ////////////////////
 ////ARROW NAVIGATION
 ////////////////////
+
+	$('#down').click(function(e) {
+		console.log(e);
+	});
+
+
+
+
+
+
+
+
 	// var toppyDiv = 0;
 	// var sValues = [];
 	// var counter = 0;
@@ -712,13 +730,13 @@ $(document).ready(function(){
 		if ($(window).width() < "768") {	//SUBSTITUTE '400' WITH THE DESIRED MINIMUM SIZE
 			$("a sup").each(function(){
 				var n = $(this).text();
-				console.log('n: '+n);
+				// console.log('n: '+n);
 				var t = $("#fn"+n).text();
 				$(this).parent().attr({"data-toggle": "popover", "data-trigger": "focus", "data-content": t, "data-placement": "top", "href": "#0"}).addClass("button");
-				console.log('t: '+t);
+				// console.log('t: '+t);
 			});
 
-		  	$('[data-toggle="popover"]').popover();
+		  	// $('[data-toggle="popover"]').popover();
 		} else {
 			$('.footnoteRef').popover('destroy');
 		}
@@ -797,6 +815,10 @@ ON RESIZE DO THESE THINGS
         });
 		fadeInSidenotes();
 	});
+
+////TOOLTIP AND POPOVER
+	$('[data-toggle="tooltip"]').tooltip(); 
+	$('[data-toggle="popover"]').popover(); 
 
 }); // <-- document ready
 

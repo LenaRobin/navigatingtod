@@ -36,7 +36,7 @@
    <!--  // <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script>
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
   <script src="final_js/jquery.easing.min.js"></script>
    <script src="final_js/scrolling-nav.js"></script>
@@ -50,8 +50,6 @@
     <script src="final_js/velocity.ui.min.js"></script>
     <script src="final_js/jquery.wrapSelection.js"></script>
     <script src="final_js/jquery-cookie-master/src/jquery.cookie.js"></script>
-    <!--<script src="final_js/jquery.sidenotes.js"></script>-->
-    <!--<script src="final_js/md-sidenotes.js"></script>-->
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
     
 </head>
@@ -135,7 +133,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                     <h4 class="panel-title">
-                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1" title="Download this text in various formats" alt="Download this text in various formats"><i class="fa fa-download"></i> Downloaiid</a><br>
+                        <a id="download" data-toggle="collapse" data-parent="#accordion" href="#collapse1" title="Download this text in various formats" alt="Download this text in various formats"><i class="fa fa-download"></i> Download</a><br>
                     </h4>
                 </div>
                     <div id="collapse1" class="panel-collapse collapse in">
@@ -149,7 +147,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse3" title="Quote an excerpt easily" alt="Quote an excerpt easily"><i class="fa fa-quote-left"></i> Quote</a>
+                            <a id="cite" data-toggle="collapse" data-parent="#accordion" href="#collapse3" title="Quote an excerpt easily" alt="Quote an excerpt easily"><i class="fa fa-quote-left"></i>Cite</a>
                         </h4>
                     </div>
                     <div id="collapse3" class="panel-collapse collapse">
@@ -168,7 +166,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse5" title="Get the book on paper" alt="Get the book on paper"><i class="fa fa-print"></i> Print</a>
+                            <a id="print" data-toggle="collapse" data-parent="#accordion" href="#collapse5" title="Get the book on paper" alt="Get the book on paper"><i class="fa fa-print"></i>Print</a>
                         </h4>
                     </div>
                     <div id="collapse5" class="panel-collapse collapse">
@@ -183,7 +181,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse6" title="Display options" alt="Display options"><i class="fa fa-cog"></i> Settings</a>
+                            <a id="settings" data-toggle="collapse" data-parent="#accordion" href="#collapse6" title="Display options" alt="Display options"><i class="fa fa-cog"></i>Settings</a>
                         </h4>
                     </div>
                     <div id="collapse6" class="panel-collapse collapse">
@@ -203,7 +201,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse7" title="Share and send this page" alt="Share and send this page"><i class="fa fa-external-link"></i> Share</a>
+                            <a id="share" data-toggle="collapse" data-parent="#accordion" href="#collapse7" title="Share and send this page" alt="Share and send this page"><i class="fa fa-external-link"></i>Share</a>
                         </h4>
                     </div>
                     <div id="collapse7" class="panel-collapse collapse">
@@ -410,8 +408,6 @@
             </div>             
         </div>    
     </div>
-
-</div> <!-- END OF MAIN -->            
 
 
 <!-- /-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/
@@ -1604,6 +1600,7 @@ TRANSFORMED INTO SIDENOTES
         
     </div> <!-- END CONTENT (row) -->
 </div> <!-- END CONTENT (fluid-container) -->
+</div> <!-- END OF MAIN -->            
 
 
 <!-- /-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/
