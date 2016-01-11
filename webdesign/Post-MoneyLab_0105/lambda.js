@@ -14,7 +14,7 @@ $(document).ready(function(){
 		} else {
 			$('#menu').animate({left: '-16.66666667%'});
 		}
-		$('#menu_bar_scroll').toggle();
+		$('#menu_bar').fadeToggle(1000);
 		$('#content').toggleClass('col-lg-offset-1', 'col-lg-offset-2');
 		$('#content').toggleClass('col-md-offset-1', 'col-md-offset-2');
 	});
