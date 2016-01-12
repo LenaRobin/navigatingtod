@@ -70,14 +70,11 @@ Easy changes :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-
 }
 
 a, a:visited{
-	color: inherit;
-    color:#ff3300;
-    text-decoration: none;
+    color: black;
 }
 
 a:hover, a:active,  a:focus  {
     color:#ff3300;
-    text-decoration: none;
 }
 
 
@@ -280,11 +277,10 @@ Defines the typography for texts in reader */
 
 
 .references {
-	font-size: 0.7em;
-	text-indent: 20px;
+	font-size: 1em;
+	text-indent: 0px;
     margin-bottom: 100px;
     margin-top:40px;
-<<<<<<< Updated upstream
     -webkit-column-gap: 20px;
     -moz-column-gap: 20px;
     column-gap: 20px;
@@ -303,10 +299,15 @@ Defines the typography for texts in reader */
 .references a{
     color:black;
     text-decoration: underline;
-=======
->>>>>>> Stashed changes
 }
 
+.references a:hover{
+    color:#f30;
+}
+
+.references h3{
+    font-size: 
+}
 /****************************
      4-3. IMAGES IN TEXT
 *****************************
@@ -319,15 +320,10 @@ img {
 	margin-top: 40px;
 	margin-left: 20px;
 	margin-bottom: 40px;
-    -moz-box-shadow: 5px 5px 40px 30px #dbdbdb
-        ;
-    -webkit-box-shadow: 5px 5px 40px 30px #dbdbdb
-        ;
-    -o-box-shadow: 5px 5px 40px 30px #dbdbdb
-        ;
-    box-shadow: 5px 5px 40px 30px #dbdbdb
-        ;
-	filter: progid:DXImageTransform.Microsoft.Shadow(color=#e6e6e6,Direction=134,Strength=50s);
+/*     -moz-box-shadow: 0px 0px 20px 10px #dbdbdb;
+    -webkit-box-shadow: 0px 0px 20px 10px #dbdbdb;
+    -o-box-shadow: 0px 0px 20px 10px #dbdbdb;
+    box-shadow: 0px 0px 20px 10px #dbdbdb; */
 }
 
 
@@ -355,9 +351,8 @@ body{
 /************************************
 ******* CONTENT *********************
 ************************************/
-    body {
+body {
         margin: 0;
-<<<<<<< Updated upstream
         color:black;
         /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,f7f7f7+77,dbdbdb+100 */
         background: rgb(255,255,255); /* Old browsers */
@@ -365,20 +360,9 @@ body{
         background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(247,247,247,1) 77%,rgba(219,219,219,1) 100%); /* Chrome10-25,Safari5.1-6 */
         background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(247,247,247,1) 77%,rgba(219,219,219,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#dbdbdb',GradientType=0 ); /* IE6-9 */
-
-
         background-attachment: fixed;
-
-
-
-=======
-/*         background-color:rgba(255, 51, 0, 0.10);
-         */   
         color: black;
-    background-color:#fafafa;
-    background-color:#f4f4f4;
-        background-color: white;
->>>>>>> Stashed changes
+    overflow-x: hidden;
     }	
 
 /*******THE CONTENT********************/
@@ -462,11 +446,11 @@ body{
 }
 
 a.page-scroll > h2 {
-    font-weight: 400;
+
 }
 
 a.page-scroll > h2 span {
-    font-weight: 600;
+
 }
 
 a.page-scroll:hover, a.page-scroll:active, a.page-scroll:link, a.page-scroll:visited {
@@ -1128,10 +1112,17 @@ input:hover {
 /*************************************
 ******* REFERENCE BOX ****************
 *************************************/
-    .in-text {
+.in-text a, .in-text, .in-text a:visited{
     border-bottom: dashed 1px black;
-    /*background-color: yellow !important;*/
-    }
+    color: black;
+    text-decoration: none;
+}
+
+.in-text a:hover, .in-text:hover{
+    color: #f30;
+    text-decoration: none !important;
+    border-bottom: dashed 1px #f30;
+}
 
 /********THE BOX**********************/
     .tip {
@@ -1150,7 +1141,6 @@ input:hover {
     	position: fixed;
     	margin:auto;
         word-wrap: break-word;
-        font-family:"Verdna";
     }
 
 /********THE TEXT*********************/
@@ -1279,27 +1269,29 @@ input:hover {
     list-style: decimal;
     text-indent: 0px;
    margin-left:25px;
-    font-family: "Verdana";
+    font-family: "Helvetica";
     font-size:9px;
     line-height: 12px;
+    counter-reset: item;
+    list-style-type: none;
+}
+
+#chapter8 ol li { 
+    display: inline-block;
+    float: left;
+}
+
+#chapter8 ol li:before { 
+    content: counter(item) ""; 
+    counter-increment: item; 
 }
 
 /*******INDIVIDUAL BOXES*******************/
 #chapter8 ol li {
-  /*   margin-left: 10%;
-    border-radius: 5px;
-    min-height:1em;
-    max-width: 300px;      
-        min-height: 3em;
-        overflow: scroll;
-    -webkit-box-shadow: 5px -2px 8px 1px rgba(0,0,0,0.21);
-    -moz-box-shadow: 5px -2px 8px 1px rgba(0,0,0,0.21);
-    box-shadow: 5px -2px 8px 1px rgba(0,0,0,0.21);
-        background-color: #e8e8e8;
-     */
     padding:0px 3px 5px 3px;
     position: absolute;
-    font-family: "HKGroteskbold";
+    font-family: "Helvetica";
+    font-weight: bold;
     font-size: 1.25em;
     line-height: 1.2em;
     word-wrap:break-word;
@@ -1312,10 +1304,20 @@ input:hover {
 
 #chapter8 ol li p{
     color: black;
-    font-family: "Georgia, serif";
+    font-family: "HKGrotesk";
     font-weight: normal;
-    font-size: 12px;
+    font-size: 11px;
     line-height: 1.1em;
+}
+
+#chapter8 ol li p a{
+    color:black;
+    text-decoration: underline;
+}
+
+#chapter8 ol li p a:hover{
+    color:#f30;
+    text-decoration: underline;
 }
 .sidenote {
     opacity: 0;
@@ -1352,15 +1354,20 @@ input:hover {
 
 
 a sup{
-    vertical-align: super;
-    font-weight: bold;
+    vertical-align: 75%;
     color: black;
-    font-family: "HkgroteskBold";
+    font-family: "Helvetica";
+    font-weight: bold;    
     text-decoration: none;
+    font-size: small;
 }
 
 a sup:hover{
     color:#f30;
+    text-decoration: none !important;
+}
+
+sup:hover, sup a:hover{
     text-decoration: none;
 }
 
