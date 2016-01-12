@@ -11,8 +11,9 @@ $(document).ready(function(){
 			$('#menu').animate({left: '-16.66666667%'});
 		}
 		$('#menu_bar').fadeToggle(1000);
-		$('#content, .footer').toggleClass('col-lg-offset-1', 'col-lg-offset-2');
-		$('#content, .footer').toggleClass('col-md-offset-1', 'col-md-offset-2');
+		$('#content, .footer').toggleClass('col-lg-offset-0', 'col-lg-offset-1');
+		$('#content, .footer').toggleClass('col-md-offset-0', 'col-md-offset-1');
+
 	});
 	
 
@@ -446,30 +447,12 @@ $(document).ready(function(){
 	});
 
 
-	// 	$(this).append(
-	// 	'<button class="container delete-underline" style="display: none; width: 100px; heigth: 100px; margin: 0; padding: 0; -webkit-filter: drop-shadow(2px 2px 10px rgba(0,0,0,0.3));
- //        filter: drop-shadow(2px 2px 10px rgba(0,0,0,0.3)); z-index:9999999999999999999;">
- //                <i class="fa fa-trash"></i> Delete highlight
- //        </button>'
- //        );
-	// });
+	$('.section p').each(function(i) {
+		var p_top = $(this).offset().top;
+		$('#')
 
-	// $('.tooltip').mouseenter(function() {
-	// 	$(this).show();
-	// });
+	});
 
-	// $('.tooltip').mouseleave(function() {
-	// 	$(this).hide();
-	// });
-
-
-////ADD 'REMOVE HIGHLIGHT'-BUTTON ON SELECTION OF ALREADY HIGHLIGHTED PASSAGE
-	//click on hover-over tooltip to delete the highlighted selection
-	// function removeHighlight() {
-		// $('.underline').each(function(){
-		// 	$(this)..attr({"data-toggle": "popover", "data-trigger": "focus", "data-content": t, "data-placement": "top", "href": "#0"}).addClass("button");
-		// });
-	// }
 
 ////CITE
 	$('#menu-right h4 a').each(function() {
@@ -664,7 +647,7 @@ $(document).ready(function(){
 			$('.sidenote').animate({
 				opacity: 1,
 				left: '-=40px'
-			}, 2000);
+			}, 3000);
 		// });
 	}
 
@@ -739,10 +722,10 @@ ON RESIZE DO THESE THINGS
 ////////////////////
 
 ////DECREASE FONT SIZE AND ALIGN SIDENOTES
-	$('#button2').click(function(){
+	$('#button_fontsizeminus').click(function(){
 		fadeOutSidenotes();
 		var fontSize = parseInt($(".section").css('font-size'));
-        $('.section').animate({'font-size': '-=1'}, function() {
+        $('.section').not('.references').animate({'font-size': '-=0.5'}, function() {
         	alignSidenotes();
         	alignVertically();
         });
@@ -750,10 +733,10 @@ ON RESIZE DO THESE THINGS
 	});
 
 ////INCREASE FONT SIZE AND ALIGN SIDENOTES
-	$('#button1').click(function(){
+	$('#button_fontsizeplus').click(function(){
 		fadeOutSidenotes();
 		var fontSize = parseInt($(".section").css('font-size'));
-        $('.section').animate({'font-size': '+=1'}, function() {
+        $('.section').animate({'font-size': '+=0.5'}, function() {
         	alignSidenotes();
         	alignVertically();
         });
