@@ -16,7 +16,7 @@ $(document).ready(function(){
 	});
 	
 
-////ANIMAATE OPENING LEFT MENU ON LOAD
+////ANIMATE OPENING LEFT MENU ON LOAD
 	$('#content').animate({
 		opacity: 1
 		}, 1000, function() {
@@ -374,8 +374,8 @@ $(document).ready(function(){
 	    //SPAN AROUND SELECTED TEXT
 	    // selection_text = span.textContent.substr(0,1);
 		var scrollTop = $(window).scrollTop();
-		var clickTop = e.pageY-scrollTop;
 
+		var clickTop = e.pageY-scrollTop;
 	    // var top = clickTop;//) - $('#asd').outerHeight();
 	    // console.log('pageY: '+e.pageY);
 	    // console.log('scrollTop: '+scrollTop);
@@ -495,9 +495,19 @@ $(document).ready(function(){
     	// $('.tooltip').tooltip({title: '<a><i class="fa fa-trash"></i> Delete highlight</a>', 'data-toggle': 'tooltip', 'data-trigger': 'hover', delay: {show: 100, hide: 1000}, html: true, viewport: '#content', 'data-placement': "top"});
 	});
 
-	// $('.underline').hover(function() {
+	$('.underline').hover(function() {
+		alert('hovered');
+		// var clickTop = e.pageY-scrollTop;
+		// if (($(window).height() - clickTop) < 100) {
+		// 	clickTop -=100;
+		// }
+		// var left = e.pageX;
+		// // console.log('left: '+left);
+		// $('.delete-underline').css('display','block').css({top: clickTop, left: left });
+	});
+
 	// 	$(this).append(
-	// 	'<button class="container" style="display: none; width: 100px; heigth: 100px; margin: 0; padding: 0; -webkit-filter: drop-shadow(2px 2px 10px rgba(0,0,0,0.3));
+	// 	'<button class="container delete-underline" style="display: none; width: 100px; heigth: 100px; margin: 0; padding: 0; -webkit-filter: drop-shadow(2px 2px 10px rgba(0,0,0,0.3));
  //        filter: drop-shadow(2px 2px 10px rgba(0,0,0,0.3)); z-index:9999999999999999999;">
  //                <i class="fa fa-trash"></i> Delete highlight
  //        </button>'
