@@ -86,18 +86,23 @@
     <nav id="menu" class="pushmenu pushmenu-left not col-lg-2 col-md-2 col-sm-2 col-xs-12 ">
         <div id="toc_wrapper">
             <div id="button_to_close_menu_on_small_devices"></div>
-        Index<br>
-                <a class="page-scroll" href="#chapter1"><h2>The Gray Zones of Creativity and Capital: Introduction<div class="horizScroll"></div><br>
+                <a class="page-scroll" href="#chapter1"><h2>
+                <span class="toc_number">1</span>
+                The Gray Zones of Creativity and Capital: Introduction
+                <div class="horizScroll"></div>
+                <br>
                 <span class="toc_author">Gordana Nikolić, Šefik Tatlić</span>
                 </h2></a>
-                <a class="page-scroll" href="#chapter2"><h2>Within the Image<div class="horizScroll"></div><br>
+                <a class="page-scroll" href="#chapter2"><h2>
+                    <span class="toc_number">1</span>
+                Within the Image<div class="horizScroll"></div><br>
                 <span class="toc_author">Jonathan Beller</span>              
                 </h2></a>
                 <!--    <h3><a href="#subchapter1">Within the Image / The System of Global Apartheid<div class="subScroll"></div></a></h3>-->
-                <a class="page-scroll" href="#chapter3"><h2>Neutralising Engaged Subjects in the Creative City<div class="horizScroll"></div><br>
+                <a class="page-scroll" href="#chapter3"><h2>2. Neutralising Engaged Subjects in the Creative City<div class="horizScroll"></div><br>
                 <span class="toc_author">Josephine Berry Slater</span>              
                 </h2></a>
-                <a class="page-scroll" href="#chapter4"><h2>The Agency of Art in the Unconscious<div class="horizScroll"></div><br>
+                <a class="page-scroll" href="#chapter4"><h2>3. The Agency of Art in the Unconscious<div class="horizScroll"></div><br>
                 <span class="toc_author">Marc James Léger</span>                              
                 </h2></a>
                  <!--   <h3><a href="#subchapter2">Art of Imbeciles<div class="subScroll"></div></a></h3>
@@ -128,7 +133,34 @@
 <div class="container-fluid">
     <div class="row">
         <div id="menu-right" class="col-lg-2 col-md-2 col-lg-offset-10 hidden-sm hidden-xs">
+
             <div class="panel-group" id="accordion">
+               
+               
+                <!--––––––––––––––––––––––– SEARCH BOX ––––––––––––––––––––––––––––––––––––––––––-->
+
+                <form id="live-search" class="not" action="" method="post">
+                    <span id="filter-count"></span>
+                    <input type="text" class="text-input" id="filter" value="" onClick="this.select();" />
+                </form>
+                <div id="buttons_wrapper" class="not">
+                    <button href="#" class="search_nav" id="prev">PREV</button>
+                    <button href="#" class="search_nav" id="next">NEXT</button>
+                </div>
+
+                <!--––––––––––––––––––––––– CANCEL BUTTON –––––––––––––––––––––––––––––––––––––––-->
+                <div id="search_ui">
+                    <button id="cancel">Cancel</button>
+                </div>
+
+                <!--––––––––––––––––––––––– FULL REFERENCE BOX –––––––––––––––––––––––––––––––––-->
+                <div class="tip not" style="display:none;">
+                    <p style="margin:0>"></p>
+                    <div id="x"><a href="#0">X</a></div>
+                </div>
+
+               
+               
                 <!-- panel 1: Download-->
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -147,7 +179,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">
-                            <a id="cite" data-toggle="collapse" data-parent="#accordion" href="#collapse3" title="Quote an excerpt easily" alt="Quote an excerpt easily"><i class="fa fa-quote-left"></i>Cite</a>
+                            <a id="cite" data-toggle="collapse" data-parent="#accordion" href="#collapse3" title="Quote an excerpt easily" alt="Quote an excerpt easily"><i class="fa fa-quote-left"></i> Quote</a>
                         </h4>
                     </div>
                     <div id="collapse3" class="panel-collapse collapse">
@@ -166,7 +198,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">
-                            <a id="print" data-toggle="collapse" data-parent="#accordion" href="#collapse5" title="Get the book on paper" alt="Get the book on paper"><i class="fa fa-print"></i>Print</a>
+                            <a id="print" data-toggle="collapse" data-parent="#accordion" href="#collapse5" title="Get the book on paper" alt="Get the book on paper"><i class="fa fa-print"></i> Print</a>
                         </h4>
                     </div>
                     <div id="collapse5" class="panel-collapse collapse">
@@ -181,7 +213,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">
-                            <a id="settings" data-toggle="collapse" data-parent="#accordion" href="#collapse6" title="Display options" alt="Display options"><i class="fa fa-cog"></i>Settings</a>
+                            <a id="settings" data-toggle="collapse" data-parent="#accordion" href="#collapse6" title="Display options" alt="Display options"><i class="fa fa-cog"></i> Settings</a>
                         </h4>
                     </div>
                     <div id="collapse6" class="panel-collapse collapse">
@@ -201,7 +233,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">
-                            <a id="share" data-toggle="collapse" data-parent="#accordion" href="#collapse7" title="Share and send this page" alt="Share and send this page"><i class="fa fa-external-link"></i>Share</a>
+                            <a id="share" data-toggle="collapse" data-parent="#accordion" href="#collapse7" title="Share and send this page" alt="Share and send this page"><i class="fa fa-external-link"></i> Share</a>
                         </h4>
                     </div>
                     <div id="collapse7" class="panel-collapse collapse">
@@ -270,41 +302,13 @@
 </div> 
 
 
-    <!--––––––––––––––––––––––– SEARCH BOX 
-
-<form id="live-search" class="not" action="" method="post">
-<span id="filter-count"></span>
-<input type="text" class="text-input" id="filter" value="" onClick="this.select();" />
-</form>
-
-
-<div id="buttons_wrapper" class="not">
-<button href="#" class="search_nav" id="prev">PREV</button>
-<button href="#" class="search_nav" id="next">NEXT</button>
-</div>
-––––––––––––––––––––––––––––––––––––––––––-->
-
-
-    <!--––––––––––––––––––––––– CANCEL BUTTON –––––––––––––––––––––––––––––––––––––––-->
-    <div id="search_ui" style="position: fixed; float: right; right: 0px; top: 0px; display: none;">
-        <button id="cancel" style="margin: 5px 0px 5px 0px;">Cancel</button>
-    </div>
-
-    <!--––––––––––––––––––––––– FULL REFERENCE BOX –––––––––––––––––––––––––––––––––-->
-    <div class="tip not" style="display:none;">
-        <p style="margin:0>"></p>
-        <div id="x"><a href="#0">X</a></div>
-    </div>
-
-
+    
 <!-- –––––––––––––––––––––––––– Vertical scrolling indicator –––––––––––––––––––––––––––––––––––––-->
 <div id="menu_bar">
     <div id="menu_bar_scroll"></div>
 </div>
 
-    
-<!-- <<<<<<< Updated upstream -->
-    <!-- –––––––––––––––––––––––––– Information box (top) –––––––––––––––––––––––––––––––––––––-->
+        <!-- –––––––––––––––––––––––––– Information box (top) –––––––––––––––––––––––––––––––––––––-->
     <div id="info-box" class="toppy" >
         <!-- LIBRARY TREE -->
         <div id="library-tree">
@@ -326,84 +330,44 @@
          -->
         <!-- BOOK TITLE -->
         <div class="row">
-<!-- <<<<<<< Updated upstream -->
             <div id="book-title" class="col-lg-12 col-lg-offset-1 col-md-12 col-sm-12 col-xs-12">
                 The Gray Zones of<br>Creativity and Capital
-<!-- =======
-            <div id="book-title" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                The Gray Zones<br>of Creativity<br>and Capital -->
-<!-- ======= -->
-<!-- –––––––––––––––––––––––––– Information box (top) –––––––––––––––––––––––––––––––––––––-->
-<!-- <div id="info-box" class="toppy" > -->
-<!-- LIBRARY TREE -->
-    <!-- <div id="library-tree">
-        <ol class="breadcrumb">
-            <li><a href="#">INC Library</a></li>
-            <li><a href="#">Theory on Demand</a></li>
-            <li class="active">The Gray Zones of Creativity and Capital</li>
-        </ol>
-    </div> -->
-<!-- LIBRARY NAV -->
-    <!-- <div id="library-nav">
-        <nav>
-            <ul class="pager">
-                <li class="previous"><a href="#"><span aria-hidden="true">&larr;</span> Older</a></li>
-                <li class="next"><a href="#">Newer <span aria-hidden="true">&rarr;</span></a></li>
-            </ul>
-        </nav>
-    </div> -->
-
-<!-- BOOK TITLE -->
-   <!--  <div class="row"> 
-        <div id="book-title" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-        The Gray Zones<br>of Creativity<br>and Capital
-        </div>
-    </div>
-        <div id="content" class="col-lg-5 col-lg-offset-2 col-md-5 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-12"> -->
-
-<!-- SUMMARY BOX -->
-<!--     <div class="row">    
-        <div class="row" style="margin-top:30px;">
-            <div class="col-lg-3 col-md-2 col-sm-2 col-xs-12" style="padding-left:70px; background-color:white;"><span style="font-size:20px;">Author(s)</span><br>
-            Jonathan Beller, Josephine Berry Slater, Marc James Léger, Ana Vilenica, Sandi Abram, Irmgard Emmelheinz
-            </div>
-            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12" style="background-color:white;">
-            <span style="font-size:20px;">Editor(s)</span><br>
-            Gordana Nikolić, Šefik Tatlić -->
-<!-- >>>>>>> Stashed changes -->
-<!-- >>>>>>> Stashed changes -->
             </div>
         </div>
 
         <!-- SUMMARY BOX -->
         <div class="row">    
             <div class="row" style="margin-top:30px;">
-                <div class="col-lg-3 col-lg-offset-1 col-md-2 col-sm-2 col-xs-12"><span style="font-size:20px;">Author(s)</span><br>
+                <div class="col-lg-2 col-lg-offset-1 col-md-2 col-sm-2 col-xs-12"><span style="font-size:20px;">Author(s)</span><br>
                     <a href="#">Johnatan Beller</a>, <a href="#">Josephine Berry Slater</a>, <a href="#">Marc James Léger</a>, <a href="#">Ana Vilenica</a>, <a href="#">Sandi Abram</a>, <a href="#">Irmgard Emmelheinz</a>
                 </div>
                 <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
                     <span style="font-size:20px;">Editor(s)</span><br>
                     <a href="#">Gordana Nikolić</a>, <a href="#">Šefik Tatlić</a>
                 </div>
+                <div class="col-lg-1 col-md-1 col-xs-hidden col-sm-hidden">
+                
+                </div>
                 <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
                     <span style="font-size:20px;">Series</span><br>
                     <a href="#">Theory on Demand</a>
                 </div> 
-                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12"><span style="font-size:20px;">Date of writing</span><br>
-                    03/12/2015
-                </div>                        
-                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12"><span style="font-size:20px;">Date of publishing</span><br>
-                    03/12/2015
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12"><span style="font-size:20px;">Date</span><br>
+                    Writing: 03/12/2014<br>
+                    Publishing: 03/12/2015
                 </div>    
             </div>
             <div class="row" style="margin-top:20px;">
                 <div class="col-lg-5 col-lg-offset-1 col-md-5 col-sm-5 col-xs-12" style="font-size:20px;">Summary<br>
-                    What is the correlation among the creative industries, creative industry policies, new media paradigms and capitalism as colonial relations of dominance? What is the role of these industries in the prioritization of the interests of capital at the expense of those of society and how can these paradigms be criticized in the context of the actual, neoliberal, flexible regime of reproduction of capital? To what measure is this regime ‘flexible’ and to what measure it is just an extension of rigid, feudal and racial logics that underline (post)modern representational discourses? To what measure do the concepts of creativity, transparency, openness and flexibility conceal the hegemonic nature of modern hierarchies of exploitation?<br>
-                    This publication brings together six essays that offer a critique of the relationship between the creative industries and capital. It treats ‘the networked world’ — its democracies, cognitivities, its attention and its paradigmatic cultural discourses — as one of the domains wherein and by which capitalism and its colonial relations of dominance are being reproduced, reorganized, perpetuated and ‘modernized’.
+                    <p class="show-read-more"> What is the correlation among the creative industries, creative industry policies, new media paradigms and capitalism as colonial relations of dominance? What is the role of these industries in the prioritization of the interests of capital at the expense of those of society and how can these paradigms be criticized in the context of the actual, neoliberal, flexible regime of reproduction of capital? To what measure is this regime ‘flexible’ and to what measure it is just an extension of rigid, feudal and racial logics that underline (post)modern representational discourses? To what measure do the concepts of creativity, transparency, openness and flexibility conceal the hegemonic nature of modern hierarchies of exploitation? <br>
+This publication brings together six essays that offer a critique of the relationship between the creative industries and capital. It treats ‘the networked world’ — its democracies, cognitivities, its attention and its paradigmatic cultural discourses — as one of the domains wherein and by which capitalism and its colonial relations of dominance are being reproduced, reorganized, perpetuated and ‘modernized’.</p>
                 </div>  
-                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
                     <span style="font-size:20px;">Keywords</span><br>
                     <span class="keyword"> #creativity</span> <span class="keyword">#capital</span> <span class="keyword">#industry</span> <span class="keyword">#capitalism</span> <span class="keyword">#globalisation</span> <span class="keyword">#new media</span> <span class="keyword">#neoliberal</span> <span class="keyword">#politics</span> <span class="keyword">#democracy</span> <span class="keyword">#culture</span> <span class="keyword">#modernity</span> <span class="keyword">#hierarchy</span> <span class="keyword">#exploitation</span> <span class="keyword">#society</span> <span class="keyword">#economy</span> <span class="keyword">#imperialism</span> <span class="keyword">#colonialism</span> <span class="keyword">#empire</span> <span class="keyword">#power</span> <span class="keyword">#system</span> <span class="keyword">#gentrification</span> <span class="keyword">#post-modernism</span>
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                    <img src="cover.jpg">
                 </div>
             </div>             
         </div>    
@@ -437,11 +401,11 @@
         filter: drop-shadow(2px 2px 10px rgba(0,0,0,0.3)); z-index:9999999999999999999;">
                 <div class="btn-group-vertical">
                     <button type="button" class="btn btn-primary"><i class="fa fa-book"></i>
-                         Look up word</button>
+                        Definition</button>
                     <button type="button" class="btn btn-primary"><i class="fa fa-pencil"></i>
                          Highlight</button>
                     <button type="button" class="btn btn-primary"><i class="fa fa-quote-left"></i>
-                         Cite</button>
+                         Quote</button>
                 </div>
             </div>
 
@@ -449,13 +413,7 @@
             <button class="container delete-underline" style="display: none; position: fixed; width: 100px; heigth: 100px; margin: 0; padding: 0; -webkit-filter: drop-shadow(2px 2px 10px rgba(0,0,0,0.3));
         filter: drop-shadow(2px 2px 10px rgba(0,0,0,0.3)); z-index:9999999999999999999;">
                 <i class="fa fa-trash"></i> Delete highlight
-         </button>'
-
-
-            <!-- <div class="container"id="loaded" style="display: block; top: 30%; left: 60%; width: 400px; heigth: 800px; position: fixed; background-color: gray; border: 1px solid black; margin: 0; padding: 0; -webkit-filter: drop-shadow(2px 2px 10px rgba(0,0,0,0.9));
-        filter: drop-shadow(2px 2px 10px rgba(0,0,0,0.9));">
-            </div> -->
-
+         </button>
 
 
 
@@ -757,7 +715,7 @@
                 <div class="subchapter" id="subchapter2">
                     <h3>Art for Imbeciles</h3>
                     <p>In an essay on what he calls ‘enclave theory’, John Roberts made the somewhat startling assertion that many of the most progressive art theories of recent years (those attributed to Nicolas Bourriaud, Gregory Sholette, Grant Kester, Stephen Wright, and even theorists like Jean-Luc Nancy, Alain Badiou, Slavoj Žižek, Bruno Bosteels, Felix Guattari, Toni Negri, and Michael Hardt) represent the ‘invariant core of a communist programme’ that is ‘largely divorced from the past’, in particular, from its Stalinist Communist party organizations, and is committed rather to ‘culturally aestheticized […] autonomous forms of productive, intellectual and creative community’.<a href="#fn46" class="footnoteRef" id="fnref46"><sup>46</sup></a> What is surprising in this claim is the idea that these are invariant forms, and not significantly different. Roberts asks us to consider what all of these theorists’ perspectives on radical culture have in common rather than what distinguishes them. This gesture might not be such a bad way to understand the so-called ‘crisis’ of art and art criticism in a world of cultural corporatization and neoliberal engineering of creative capital. Whatever contemporary art’s failings in terms of pursuing revolutionary class struggle, it represents, according to Roberts, a kind of leftist bloc against what Sholette terms enterprise culture. Perhaps one of the most acerbic depictions of the art world as a rigged system of economic and social  exploitation is Bruce Barber’s 2008 drawing titled <em>Artworld Ponzi Scheme</em>, which shows a pyramid comprized of payers, prayers, and players, all of them trapped within a hierarchically inegalitarian system. The intrigue in this drawing, especially as it comes after the biggest financial debacle since the 1970s, is that the currency of art is premised on false claims, or even ‘toxic assets’.<br><br/> <img src="css/image/Leger%20IMAGE.jpg" alt="" /></p>
-                    <p>Fig. Bruce Barber, <em>Artworld Ponzi Scheme</em>, drawing, 2008. Courtesy of the artist.</p>
+                    <p class="img-caption">Fig. Bruce Barber, <em>Artworld Ponzi Scheme</em>, drawing, 2008. Courtesy of the artist.</p>
                     <p>The idea that art has no socially agreed upon justifications has been addressed by anthropologist David Graeber, who wonders why contemporary theorists attending an art symposium at the Tate Museum should explain the 2008 fiasco by taking recourse to avant-garde art created between 1916 and 1922.<a href="#fn47" class="footnoteRef" id="fnref47"><sup>47</sup></a> His point is that we are potentially once again living a revolutionary moment, but that epistemological subversion through culture and post-structuralist theory seems to satisfy only liberal academics. The return to avant-gardism, he argues, effects</p>
                     <blockquote>
                         <p>a subtle form of conservatism—or, perhaps one should say conservative radicalism, if such were possible—a nostalgia for the days when it was possible to put on a tin-foil suit, shout nonsense verse, and watch staid bourgeois audiences turn into outraged lynch mobs.</p>
@@ -1697,7 +1655,25 @@ TRANSFORMED INTO SIDENOTES
         });
     });
 </script>
-
+<script type="text/javascript">
+    $(document).ready(function(){
+        var maxLength = 750;
+        $(".show-read-more").each(function(){
+            var myStr = $(this).text();
+            if($.trim(myStr).length > maxLength){
+                var newStr = myStr.substring(0, maxLength);
+                var removedStr = myStr.substring(maxLength, $.trim(myStr).length);
+                $(this).empty().html(newStr);
+                $(this).append(' <a href="javascript:void(0);" class="read-more">(Read more…)</a>');
+                $(this).append('<span class="more-text">' + removedStr + '</span>');
+            }
+        });
+        $(".read-more").click(function(){
+            $(this).siblings(".more-text").contents().unwrap();
+            $(this).remove();
+        });
+    });
+</script>
 
 
 </body>
