@@ -74,7 +74,12 @@ $(document).ready(function(){
 				var c = scrollTop - a; // POSITION AT WHICH TO START SCROLL
 				var f = (c / b) * titleWidth; // SUBSTITUTE OR CALCULATE E ABOVE FOR ANY DESIRED WIDTH OF THE SCROLL BAR
 				
-				$(this).css('width', f);
+                $(this).css('width', f);
+                
+                    if ($(this).width() > 0) { 
+                        $(this).parent().css('color', 'red');
+                    }    
+
 			});
 
 ////////////LAST TITLE SCROLLBAR (WAS MISSING THE LAST BIT, WHICH EQUALED TO THE HEIGHT OF THE WINDOW)
@@ -759,6 +764,17 @@ ON RESIZE DO THESE THINGS
 	$('[data-toggle="tooltip"]').tooltip(); 
 	$('[data-toggle="popover"]').popover(); 
 
+    $('.horizScroll').each(function(){
+        console.log($(this).css('width'));
+        if ($(this).width() == 0) { 
+            $(this).parent().css('color', 'red');
+        }    
+    });
+    
+    
+    
+    
+    
 }); // <-- document ready
 
 
