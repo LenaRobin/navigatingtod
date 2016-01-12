@@ -498,7 +498,7 @@ Table of content is contained in pushmenu, it shows the different parts of the b
     border-radius: 8px;
     background-color:rgba(255, 255, 255, 1);
     box-shadow: 5px 5px 3px rgba(136, 136, 136, 0.03);
-    color:black;
+    color: grey;
 }
 
 #menu .toc_author{

@@ -76,10 +76,13 @@ $(document).ready(function(){
 				var f = (c / b) * titleWidth; // SUBSTITUTE OR CALCULATE E ABOVE FOR ANY DESIRED WIDTH OF THE SCROLL BAR
 				
                 $(this).css('width', f);
-                
-                    if ($(this).width() > 0) { 
-                        $(this).parent().css('color', 'red');
-                    }    
+            
+////////////////TITLE COLOUR CHANGES TO BLACK    
+                if ($(this).width() > 0) { 
+                    $(this).parent().css('color', 'black');
+                } else {
+                	$(this).parent().css('color', 'grey');
+                }
 
 			});
 
