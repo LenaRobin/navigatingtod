@@ -747,12 +747,12 @@ ON RESIZE DO THESE THINGS
 	$('[data-toggle="tooltip"]').tooltip(); 
 	$('[data-toggle="popover"]').popover(); 
 
-    $('.horizScroll').each(function(){
-        console.log($(this).css('width'));
-        if ($(this).width() == 0) { 
-            $(this).parent().css('color', 'red');
-        }    
-    });
+    // $('.horizScroll').each(function(){
+    // //     console.log($(this).css('width'));
+    // //     if ($(this).width() == 0) { 
+    // //         $(this).parent().css('color', 'red');
+    // //     }    
+    // // });
     
     
     
