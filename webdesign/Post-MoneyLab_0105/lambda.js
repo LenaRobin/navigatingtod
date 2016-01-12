@@ -434,6 +434,7 @@ $(document).ready(function(){
     	// $('.tooltip').tooltip({title: '<a><i class="fa fa-trash"></i> Delete highlight</a>', 'data-toggle': 'tooltip', 'data-trigger': 'hover', delay: {show: 100, hide: 1000}, html: true, viewport: '#content', 'data-placement': "top"});
 	});
 
+////REMOVE HIGHLIGHT BOX ON HOVER
 	$('#content').on('hover', '.underline', function(e) {
 		var scrollTop = $(window).scrollTop();
 		var clickTop = e.pageY-scrollTop;
@@ -449,11 +450,32 @@ $(document).ready(function(){
 		});
 	});
 
+////append spans
+	$('.section p').each(function() {
+		$('#par_numbr').append('<span class="p_number"></span>');
+	});
 
-	$('.section p').each(function(i) {
-		var p_top = $(this).offset().top;
-		$('#')
 
+	var p_id_number = 1;
+	$('#p'+p_id_number).each(function() {
+		// var p_offset = $(this).offset().top;
+		$('.p_number').each(function() {
+			$(this).attr('id', 'pnr'+p_id_number);
+			$('#pnr'+p_id_number).each(function() {
+				var p_offset = $('#p'+(p_id_number-1)).offset().top;
+				$(this).offset({top: p_offset}).text(p_id_number);
+			});
+
+
+			p_id_number++;
+		});
+
+	// var p_top = $(this).offset().top;
+	// 	$('.p_number').each(function() {
+			
+	// 		$('#pnr'+i).offset({top: p_top}).text(i);	
+	// 	});
+		
 	});
 
 
