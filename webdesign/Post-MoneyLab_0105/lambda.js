@@ -123,6 +123,8 @@ $(document).ready(function(){
 			$('#down').css('color', 'red');
 			// $('#down').show();
 		}
+
+		$('#asd, .delete-underline').fadeOut('3000');
      });
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -334,100 +336,28 @@ $(document).ready(function(){
 
 ////GENERATE ID TO p
 	$('.section p').not('.references p').each(function(number){
-		//console.log(number);
 		$(this).attr("id", "p"+number);
 	});
-
-////TOGGLE TOOLS
-	// $('#tools').click( function() {
-	// 	$('#citation-box').fadeToggle();
-	// });
-
-
-
-
-
-
-////GENERATE CITATION
-	// function getSelectedText() {
-	//   	t = (document.all) ? document.selection.createRange().text : document.getSelection();
-	// 	  return t;
-	// }
 	
 ////CONVERT SELECTION TO STRING AND WRAP A SPAN AROUND IT
-	// var span = document.createElement('span');
 	var selection;
 	var selection_text;
 
-	// $('body').not('#asd').click(function(){
-	// $('#main').click(function(){
-	// 	$('#asd').css('display', 'none');
-	// });
-
-// console.log('anything');
 	$('.section').mouseup(function(e){
-		// console.log(e);
-		// selection = getSelectedText();
 		selection = document.getSelection().getRangeAt(0); //MAKE THIS WORK ON EVERY BROWSER
 		selection_text = selection.toString();
-
-	    //SPAN AROUND SELECTED TEXT
-	    // selection_text = span.textContent.substr(0,1);
 		var scrollTop = $(window).scrollTop();
-
 		var clickTop = e.pageY-scrollTop;
-	    // var top = clickTop;//) - $('#asd').outerHeight();
-	    // console.log('pageY: '+e.pageY);
-	    // console.log('scrollTop: '+scrollTop);
-	    // console.log('clickTop: '+clickTop);
-	    // console.log('top: '+top);
-	    // console.log('windowHeight: '+$(window).height());
-
+		var asd_height = $('#asd').outerHeight();
 	    if (selection_text.length > 0 ) {
-		    // var range = selection.getRangeAt(0);
-		    // console.log(range);
-			// var top = $('.qwertz').offset().top - $('#asd').outerHeight();
-			if (($(window).height() - clickTop) < 100) {
-				clickTop -=100;
+			if (($(window).height() - clickTop) < asd_height) {
+				clickTop -=asd_height;
 			}
 			var left = e.pageX;
-			// console.log('left: '+left);
+
 			$("#asd").css('display','block').css({top: clickTop, left: left });
 
 		}
-		// else{
-		// }
-
-
-// });
-
-
-////ON CLICK GET ALL THE DATA FROM PARENT ELEMENT AND GENERATE THE
-////CITING REFERENCE IN THREE DIFFERENT STYLES
-		// var par = $('.qwertz').closest('p').attr('id');		//GET ID OF PARENT p
-		// if (par) {
-		// 	var blaaa = par.substr(1, 3);
-		// }
-	 //  	var ref_article = $('.qwertz').closest('.section').attr('data-article');
-
-	 //    var ref_authorName = $('.qwertz').closest('.section').attr('data-authorName');
-	 //    if (ref_authorName) {
-		//     var ref_apaAuthorName = ref_authorName.substr(0, 1);
-		// }
-	 //    var ref_intro = $('.qwertz').closest('.section').attr('data-authorName');
-	 //    var ref_authorLastName = $('.qwertz').closest('.section').attr('data-authorLastName');
-	 //    var ref_title = $('meta[name="title"]').attr('content');
-	 //    var ref_eds = $('meta[name="editors"]').attr('content');
-	 //    var ref_apaEds = $('meta[name="apa-editors"]').attr('content');
-	 //    var ref_year = $('meta[name="year"]').attr('content');
-	 //    var ref_place = $('meta[name="place"]').attr('content');
-	 //    var ref_pub = $('meta[name="publisher"]').attr('content');
-	 //    var MLA_date_of_access = moment().format('D MMMM YYYY');
-	 //    var chicago_date_of_access = moment().format('MMMM D, YYYY');
-		// var url = $(location).attr('pathname');
-
-
-
 
 		var par = e.target.id;
 		if (par) {
@@ -495,16 +425,21 @@ $(document).ready(function(){
     	// $('.tooltip').tooltip({title: '<a><i class="fa fa-trash"></i> Delete highlight</a>', 'data-toggle': 'tooltip', 'data-trigger': 'hover', delay: {show: 100, hide: 1000}, html: true, viewport: '#content', 'data-placement': "top"});
 	});
 
-	$('.underline').hover(function() {
-		alert('hovered');
-		// var clickTop = e.pageY-scrollTop;
-		// if (($(window).height() - clickTop) < 100) {
-		// 	clickTop -=100;
-		// }
-		// var left = e.pageX;
-		// // console.log('left: '+left);
-		// $('.delete-underline').css('display','block').css({top: clickTop, left: left });
+	$('#content').on('hover', '.underline', function(e) {
+		var scrollTop = $(window).scrollTop();
+		var clickTop = e.pageY-scrollTop;
+		var left = e.pageX;
+		var delete_underline_height = $('.delete-underline').outerHeight();
+		var this_underline = e.target;
+		if (($(window).height() - clickTop) < delete_underline_height) {
+			clickTop -=delete_underline_height;
+		}
+		$('.delete-underline').css('display','block').css({top: clickTop, left: left });
+		$('.delete-underline').click(function() {
+			$(this_underline).contents().unwrap();
+		});
 	});
+
 
 	// 	$(this).append(
 	// 	'<button class="container delete-underline" style="display: none; width: 100px; heigth: 100px; margin: 0; padding: 0; -webkit-filter: drop-shadow(2px 2px 10px rgba(0,0,0,0.3));
@@ -545,7 +480,7 @@ $(document).ready(function(){
 	});
 
 
-////HIDE SELECTION MENU WHEN CLICKED OUTSIDE (EXCEPT THE TW MENUS)
+////HIDE DELETE-UNDERLINE WHEN CLICKED OUTSIDE (EXCEPT THE TWO MENUS)
     $('#main').mousedown(function (e) {
 	    if ($('#asd').is(':visible')
 	    	&& !$('#asd').is(e.target) // if the target of the click isn't the container...
@@ -555,9 +490,25 @@ $(document).ready(function(){
 	        && $('#menu').has(e.target).length === 0
     		&& $('#menu-right').has(e.target).length === 0)
 	    {
-	        $('#asd').css('display', 'none');
+	        $('#asd').fadeOut('3000');
 	    }
 	});
+
+
+////HIDE SELECTION MENU WHEN CLICKED OUTSIDE (EXCEPT THE TWO MENUS)
+    $('#main').mousedown(function (e) {
+	    if ($('.delete-underline').is(':visible')
+	    	&& !$('.delete-underline').is(e.target) // if the target of the click isn't the container...
+	        && !$('#menu').is(e.target)
+	        && !$('#menu-right').is(e.target)
+	        && $('.delete-underline').has(e.target).length === 0 // ... nor a descendant of the container
+	        && $('#menu').has(e.target).length === 0
+    		&& $('#menu-right').has(e.target).length === 0)
+	    {
+	        $('.delete-underline').fadeOut('3000');
+	    }
+	});
+
 
 
 
