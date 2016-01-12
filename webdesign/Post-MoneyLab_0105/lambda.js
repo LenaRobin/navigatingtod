@@ -488,31 +488,44 @@ $(document).ready(function(){
 
 ////HIGHLIGHT
 	$('#asd div button:nth-child(2)').click(function() {
-	  //   if(selection.startContainer.parentElement === selection.endContainer.parentElement) {
-		 //    var selectedText = selection.extractContents();
-		 //   	var span = document.createElement("span");
-			// span.className = "qwertz";		//ADD CLASS TO SPAN ON CLICK
-			// span.appendChild(selectedText);
-		 //    selection.insertNode(span);
-
-
-	  //   	// var selectedText = range.extractContents();
-	  //   	console.log('same');
-	  //   	//span.removeChild(selectedText);
-	  //   	// span.appendChild(selectedText);
-	  //   	// range.insertNode(span);
-	  //   }else{
-	    	$('#content').wrapSelection({
-	    		fitToWord: true
-	    	}).addClass('underline');
-	    // }
+    	$('#content').wrapSelection({
+    		fitToWord: true
+    	}).addClass('underline');
+    	// $('.underline').tooltip({title: '<a><i class="fa fa-trash"></i> Delete highlight</a>', 'data-toggle': 'tooltip', 'data-trigger': 'hover', delay: {show: 100, hide: 1000}, html: true, viewport: '#content', 'data-placement': "top"});
+    	// $('.tooltip').tooltip({title: '<a><i class="fa fa-trash"></i> Delete highlight</a>', 'data-toggle': 'tooltip', 'data-trigger': 'hover', delay: {show: 100, hide: 1000}, html: true, viewport: '#content', 'data-placement': "top"});
 	});
 
+	// $('.underline').hover(function() {
+	// 	$(this).append(
+	// 	'<button class="container" style="display: none; width: 100px; heigth: 100px; margin: 0; padding: 0; -webkit-filter: drop-shadow(2px 2px 10px rgba(0,0,0,0.3));
+ //        filter: drop-shadow(2px 2px 10px rgba(0,0,0,0.3)); z-index:9999999999999999999;">
+ //                <i class="fa fa-trash"></i> Delete highlight
+ //        </button>'
+ //        );
+	// });
+
+	// $('.tooltip').mouseenter(function() {
+	// 	$(this).show();
+	// });
+
+	// $('.tooltip').mouseleave(function() {
+	// 	$(this).hide();
+	// });
+
+
+////ADD 'REMOVE HIGHLIGHT'-BUTTON ON SELECTION OF ALREADY HIGHLIGHTED PASSAGE
+	//click on hover-over tooltip to delete the highlighted selection
+	// function removeHighlight() {
+		// $('.underline').each(function(){
+		// 	$(this)..attr({"data-toggle": "popover", "data-trigger": "focus", "data-content": t, "data-placement": "top", "href": "#0"}).addClass("button");
+		// });
+	// }
+
+////CITE
 	$('#menu-right h4 a').each(function() {
 		$(this).addClass('toggle_panel_button');
 	});
 
-////CITE
 	$('#asd div button:nth-child(3)').click(function() {
 		// $("#collapse3").slideDown();
 		$("#collapse3").addClass('in').attr('aria-expanded', 'true').animate({height: '100%'}, 1000);

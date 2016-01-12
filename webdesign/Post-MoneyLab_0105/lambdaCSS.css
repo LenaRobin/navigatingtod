@@ -95,7 +95,7 @@ a:hover, a:active,  a:focus  {
     overflow: hidden;
     padding-bottom: 40px;
 
-    background-color: rgb(255, 184, 166);
+    background-color: white;
 /*      -webkit-box-shadow: 2px 20px 15px 8px rgba(255, 255, 255, 0.61) !important;
          -moz-box-shadow: 2px 20px 15px 8px rgba(255, 255, 255, 0.61) !important;
          box-shadow: 2px 20px 15px 8px rgba(255, 255, 255, 0.61) !important; */
@@ -198,11 +198,8 @@ a:hover, a:active,  a:focus  {
 Defines the typography for texts in reader */
 
 .section{
-    font-size: 65.5%;
+    font-size: 62.5%;
     clear: left;
-/*     border-left:1px solid #f4f4f4;
-    border-right:1px solid #f4f4f4;
-     */
     /*text-align: justify;
     text-justify: inter-word;*/
     /*padding-left: 2%; */
@@ -269,23 +266,25 @@ Defines the typography for texts in reader */
 .section .author {
 	margin-left: 0;
 	margin-right: 0;
-    color:#8e8e8e;
+    color:lightgray;
     font-size: 1.7em;
 }
 
 /* words: the way the words contained in each chapter display */
 .section .words {
     font-size: 1.7em;
-    color:#8e8e8e;
-    text-decoration: none;
+    color:lightgray;
+	text-decoration: none;
     margin-bottom: 14px;
 }
 
 
 .references {
-    margin-bottom: 0px;
-    padding-bottom: 60px;
+	font-size: 0.7em;
+	text-indent: 20px;
+    margin-bottom: 100px;
     margin-top:40px;
+<<<<<<< Updated upstream
     -webkit-column-gap: 20px;
     -moz-column-gap: 20px;
     column-gap: 20px;
@@ -304,19 +303,10 @@ Defines the typography for texts in reader */
 .references a{
     color:black;
     text-decoration: underline;
+=======
+>>>>>>> Stashed changes
 }
 
-.references a:hover{
-    color:#f30;
-    text-decoration: none;
-}
-
-.references h3{
-    margin-top: 0px;
-    padding-top: 0px;
-    -webkit-margin-before: 0px;
-    font-size: 16px;
-}
 /****************************
      4-3. IMAGES IN TEXT
 *****************************
@@ -367,6 +357,7 @@ body{
 ************************************/
     body {
         margin: 0;
+<<<<<<< Updated upstream
         color:black;
         /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,f7f7f7+77,dbdbdb+100 */
         background: rgb(255,255,255); /* Old browsers */
@@ -380,6 +371,14 @@ body{
 
 
 
+=======
+/*         background-color:rgba(255, 51, 0, 0.10);
+         */   
+        color: black;
+    background-color:#fafafa;
+    background-color:#f4f4f4;
+        background-color: white;
+>>>>>>> Stashed changes
     }	
 
 /*******THE CONTENT********************/
@@ -614,10 +613,10 @@ box-shadow: 10px 0px 31px -10px rgba(61,61,61,0.67); */
             /*display: none;*/
     /*cursor: pointer;*/
     /*display: block-inline;*/
-            background-color:#f30;
-            /*
+    background-color:#00EACE;/*
     background-color:rgb(66, 66, 255);
     background-color: #ff3b22;*/
+    opacity: .7;
     height: 0%;
     /*max-height: 100%;*/
     width: 5px;
@@ -1131,19 +1130,9 @@ input:hover {
 *************************************/
     .in-text {
     border-bottom: dashed 1px black;
-        color:black !important;
-
+    /*background-color: yellow !important;*/
     }
 
-.in-text a{
-    color:black !important;
-}
-
-.in-text:hover, .in-text a:hover{
-    color:#f30 !important;
-    border-bottom: dashed 1px #f30;
-
-}
 /********THE BOX**********************/
     .tip {
     background-color: #e8e8e8;
@@ -1196,7 +1185,18 @@ input:hover {
 /********CITATIONS************************/
 
     .underline {
+<<<<<<< Updated upstream
         background-color:rgba(255, 255, 69, 0.48);
+=======
+        background-color:
+            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffaa+5,ffffaa+52,ffffaa+95,ffffff+100 */
+            background: rgb(255,255,255); /* Old browsers */
+        background: -moz-linear-gradient(left,  rgba(255,255,255,1) 0%, rgba(255,255,170,1) 5%, rgba(255,255,170,1) 52%, rgba(255,255,170,1) 95%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(255,255,170,1) 5%,rgba(255,255,170,1) 52%,rgba(255,255,170,1) 95%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,170,1) 5%,rgba(255,255,170,1) 52%,rgba(255,255,170,1) 95%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
+
+>>>>>>> Stashed changes
     }
 
 	button {
@@ -1300,7 +1300,7 @@ input:hover {
     padding:0px 3px 5px 3px;
     position: absolute;
     font-family: "HKGroteskbold";
-    font-size: 1.1em;
+    font-size: 1.25em;
     line-height: 1.2em;
     word-wrap:break-word;
     hyphens: auto;
@@ -1312,39 +1312,11 @@ input:hover {
 
 #chapter8 ol li p{
     color: black;
-/*     font-family: "Georgia, serif";
-     */    
-    font-family: "Verdana";
+    font-family: "Georgia, serif";
     font-weight: normal;
-    font-size: 10px;
+    font-size: 12px;
     line-height: 1.1em;
-    padding:3px;
-    border-radius: 8px;
-
-/*     background-color: #f4f4f4;
-     */}
-
-#chapter8 ol li p a{
-    color:black;
-    text-decoration: underline;
 }
-
-#chapter8 ol li p a:hover{
-    color:#f30;
-}
-
-#chapter8 ol li p:hover{
-    background-color:rgb(255, 213, 203);
-    padding:3px;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-#chapter8 ol li:hover{
-    color:#f30;
-}
-
-
 .sidenote {
     opacity: 0;
     left: 40px;
@@ -1385,15 +1357,11 @@ a sup{
     color: black;
     font-family: "HkgroteskBold";
     text-decoration: none;
-    font-size: 0.6em;
 }
 
-sup:hover{
-    text-decoration: none;
-}
 a sup:hover{
     color:#f30;
-    text-decoration: none !important;
+    text-decoration: none;
 }
 
 li{
