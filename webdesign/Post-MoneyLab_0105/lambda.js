@@ -78,7 +78,7 @@ $(document).ready(function(){
                 $(this).css('width', f);
             
 ////////////////TITLE COLOUR CHANGES TO BLACK    
-                if ($(this).width() > 0) { 
+                if ($('#title'+n).width() > 0) { 
                     $(this).parent().css('color', 'black');
                 } else {
                 	$(this).parent().css('color', 'grey');
@@ -305,7 +305,6 @@ $(document).ready(function(){
 		}
 		someWords.push(word);
 	}
-
 /****************
 ==> FOR SOME REASON AUTOCOMPLETE STOPPED WORKING AND WAS MESSING UP EVERYTHING
 ****************/
@@ -318,8 +317,6 @@ $(document).ready(function(){
 // END SCRIPT SEARCH
 //––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 //––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-
-
 
 ////////////////////////
 ////POP-UP REFERENCE BOX
@@ -419,6 +416,7 @@ $(document).ready(function(){
 		}
 	});
 
+
 ////DEFINE
 	$('#asd div button:nth-child(1)').click(function() {
 		// $( "#loaded").load( "http://www.oxforddictionaries.com/definition/english/capital .entryPageContent" );
@@ -452,23 +450,28 @@ $(document).ready(function(){
 
 ////append spans
 	$('.section p').each(function() {
-		$('#par_numbr').append('<span class="p_number"></span>');
+		$('#par_numbr').append('<div class="p_number"></div>');
+		$(this).addClass('paragraph');
 	});
 
 
 	var p_id_number = 1;
-	$('#p'+p_id_number).each(function() {
+	// $('#p'+(p_id_number-1)).each(function() {
 		// var p_offset = $(this).offset().top;
+		// setTimeout(function(){
+		//   $(".inputs").each(function(){$(this).val("new-value")});
+		
+		setTimeout(function(){
 		$('.p_number').each(function() {
 			$(this).attr('id', 'pnr'+p_id_number);
 			$('#pnr'+p_id_number).each(function() {
+				alert('hello');
 				var p_offset = $('#p'+(p_id_number-1)).offset().top;
 				$(this).offset({top: p_offset}).text(p_id_number);
 			});
-
-
 			p_id_number++;
 		});
+		}, 5000);
 
 	// var p_top = $(this).offset().top;
 	// 	$('.p_number').each(function() {
@@ -476,8 +479,7 @@ $(document).ready(function(){
 	// 		$('#pnr'+i).offset({top: p_top}).text(i);	
 	// 	});
 		
-	});
-
+	// });
 
 ////CITE
 	$('#menu-right h4 a').each(function() {
@@ -494,7 +496,7 @@ $(document).ready(function(){
 
 
 ////HIDE DELETE-UNDERLINE WHEN CLICKED OUTSIDE (EXCEPT THE TWO MENUS)
-    $('#main').mousedown(function (e) {
+    $('#main').mousedown(function(e) {
 	    if ($('#asd').is(':visible')
 	    	&& !$('#asd').is(e.target) // if the target of the click isn't the container...
 	        && !$('#menu').is(e.target)
@@ -509,7 +511,7 @@ $(document).ready(function(){
 
 
 ////HIDE SELECTION MENU WHEN CLICKED OUTSIDE (EXCEPT THE TWO MENUS)
-    $('#main').mousedown(function (e) {
+    $('#main').mousedown(function(e) {
 	    if ($('.delete-underline').is(':visible')
 	    	&& !$('.delete-underline').is(e.target) // if the target of the click isn't the container...
 	        && !$('#menu').is(e.target)
@@ -594,7 +596,7 @@ $(document).ready(function(){
 ////ARROW NAVIGATION
 ////////////////////
 
-	$('#down').click(function(e) {
+	$('#down').click(function (e) {
 		var scrollTop = $(document).scrollTop();
 ////////SET DATA-TOP FOR EVERY SECTION
 		$('.section').each(function() {
@@ -619,7 +621,7 @@ $(document).ready(function(){
 
 
 
-	$('#up').click(function(e) {
+	$('#up').click(function (e) {
 		var scrollTop = $(document).scrollTop();
 		e.preventDefault();	
 ////////SET DATA-TOP FOR EVERY SECTION
@@ -647,7 +649,6 @@ $(document).ready(function(){
 /////////////
 ////SIDENOTES
 /////////////
-
 ////FOCUS ON RESPECTIVE SIDENOTE WHEN ANCHOR CLICKED
 	$('a sup').click(function(ev){
 		// var numbr = $(this).attr('href').substr(3, 4);
