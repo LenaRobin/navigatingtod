@@ -342,7 +342,7 @@ $(document).ready(function(){
 
 ////GENERATE ID TO p
 	$('.section p').not('.references p').each(function(number){
-		$(this).attr("id", "p"+number);
+		$(this).attr("id", "p"+(number+1));
 	});
 	
 ////CONVERT SELECTION TO STRING AND WRAP A SPAN AROUND IT
@@ -433,7 +433,7 @@ $(document).ready(function(){
 	});
 
 ////REMOVE HIGHLIGHT BOX ON HOVER
-	$('#content').on('hover', '.underline', function(e) {
+	$('#content').on('mouseenter mouseleave', '.underline', function(e) {
 		var scrollTop = $(window).scrollTop();
 		var clickTop = e.pageY-scrollTop;
 		var left = e.pageX;
@@ -465,13 +465,13 @@ $(document).ready(function(){
 		$('.p_number').each(function() {
 			$(this).attr('id', 'pnr'+p_id_number);
 			$('#pnr'+p_id_number).each(function() {
-				alert('hello');
-				var p_offset = $('#p'+(p_id_number-1)).offset().top;
+				// alert('hello');
+				var p_offset = $('#p'+p_id_number).offset().top;
 				$(this).offset({top: p_offset}).text(p_id_number);
 			});
 			p_id_number++;
 		});
-		}, 5000);
+		}, 3000);
 
 	// var p_top = $(this).offset().top;
 	// 	$('.p_number').each(function() {
