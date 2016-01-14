@@ -34,7 +34,7 @@ $(document).ready(function(){
 //////////////////////////////////////////////////////////////////////////////////
 ////SCROLL PROGRESSION BARS
 //////////////////////////////////////////////////////////////////////////////////
-	var nr = 1;
+/*	var nr = 1;
 	$('.horizScroll').each(function() {
 		$(this).attr('id', 'title'+nr);
 		nr++;
@@ -45,10 +45,23 @@ $(document).ready(function(){
 		$(this).attr('id', 'subtitle'+x);
 		x++;
 	});
+*/
 
+    var nr = 1;
+    $('.horizScroll').each(function() {
+        $(this).attr('id', 'title'+nr);
+        nr++;
+    });
 
+    var x = 1;
+    $('.subScroll').each(function() {
+        $(this).attr('id', 'subtitle'+x);
+        x++;
+    });
+
+            
 ////VERTICAL SCROLL BAR 
-	$(window).scroll(function() {
+/*	$(window).scroll(function() {
         var windowHeight = $(window).height();
         var scrollTop = $(document).scrollTop();					// height of scroll on top (=0)
         var bottom = $(document).height() - windowHeight;			// heigth from top at the end of doc
@@ -65,10 +78,30 @@ $(document).ready(function(){
 		var n = 1;
 		var y = 1;
         $("#menu_bar_scroll").css('height', verticalBar);
-
+*/
+    $(window).scroll(function() {
+        var windowHeight = $(window).height();
+        var scrollTop = $(document).scrollTop();					// height of scroll on top (=0)
+        var bottom = $(document).height() - windowHeight;			// heigth from top at the end of doc
+        var verticalBar = (scrollTop / bottom)*windowHeight;
+        var windowHeight = $(window).height(); // WIDTH OF THE WINDOW SCREEN
+        var extraHeight1 = $('.horizScroll').outerHeight(true) - $('.horizScroll').height();
+        var extraHeight2 = $('.horizScroll').parent().outerHeight(true) - $('.horizScroll').parent().height();
+        var extraHeight3 = $('.horizScroll').parent().parent().outerHeight(true) - $('.horizScroll').parent().parent().height();
+        var extraHeight4 = $('.horizScroll').parent().parent().parent().outerHeight(true) - $('.horizScroll').parent().parent().parent().height();
+        var extraHeight5 = $('.horizScroll').parent().parent().parent().parent().outerHeight(true) - $('.horizScroll').parent().parent().parent().parent().height();
+        var extraHeight = extraHeight1+extraHeight2+extraHeight3+extraHeight4+extraHeight5;
+        var titleHeight = (((1/6)*windowHeight)-extraHeight);	//TITLE WIDTH
+        // var subtitleHeight = titleHeight*(90/100);				//SUBTITLE WIDTH
+        var n = 1;
+        var y = 1;
+        $("#menu_bar_scroll").css('height', verticalBar);
+        
+        
+    
 ////////CREATES THE HORIZONTAL PROGRESSION
 ////////SCROLL BARS IN THE MENU (CHAPTERS LEVEL 1)
-		$('.section').each(function(){
+	/*	$('.section').each(function(){
 			$('#title'+n).each(function(){
 				var a = $('#chapter'+n).offset().top;
 				var b = $('#chapter'+n).height();
@@ -76,27 +109,55 @@ $(document).ready(function(){
 				var f = (c / b) * titleWidth; // SUBSTITUTE OR CALCULATE E ABOVE FOR ANY DESIRED WIDTH OF THE SCROLL BAR
 				
                 $(this).css('width', f);
-            
+      */    
+
+        $('.section').each(function(){
+            $('#title'+n).each(function(){
+                var a = $('#chapter'+n).offset().top;
+                var b = $('#chapter'+n).height();
+                var c = scrollTop - a; // POSITION AT WHICH TO START SCROLL
+                var f = (c / b) * titleHeight; // SUBSTITUTE OR CALCULATE E ABOVE FOR ANY DESIRED WIDTH OF THE SCROLL BAR
+
+                $(this).css('height', f);
+
 ////////////////TITLE COLOUR CHANGES TO BLACK    
-                if ($(this).width() > 0) { 
+/*          if ($(this).width() > 0) { 
                     $(this).parent().css('color', 'black');
                 } else {
-                	$(this).parent().css('color', 'grey');
+                	$(this).parent().css('color', '#dbdbdb');
                 }
 
 			});
-
+*/
+    
+        if ($(this).height() > 0) { 
+                $(this).parent().css('color', 'black');
+            } else {
+                $(this).parent().css('color', '#dbdbdb');            
+            }
+        });
+            
 ////////////LAST TITLE SCROLLBAR (WAS MISSING THE LAST BIT, WHICH EQUALED TO THE HEIGHT OF THE WINDOW)
-			var lastHeight = $('#chapter7').height()-windowHeight;
+/*			var lastHeight = $('#chapter7').height()-windowHeight;
 			var lastTop = $('#chapter7').offset().top;
 			var lastStartScroll = scrollTop - lastTop;
 			var lastWidth = (lastStartScroll/lastHeight)*titleWidth;
 			$('#title7').css('width', lastWidth);
 			n++;
 		});
+*/
 
+            var lastHeight = $('#chapter7').height()-windowHeight;
+            var lastTop = $('#chapter7').offset().top;
+            var lastStartScroll = scrollTop - lastTop;
+            var lastHeight = (lastStartScroll/lastHeight)*titleHeight;
+            $('#title7').css('height', lastHeight);
+            n++;
+        });
+
+            
 ////////SAME FOR SUBCHAPTERS
-		$('.subchapter').each(function(){
+/*		$('.subchapter').each(function(){
 			$('#subtitle'+y).each(function(){
 				var subchapterTop = $('#subchapter'+y).offset().top;
 				var subchapterBottom = $('#subchapter'+y).height();
@@ -106,6 +167,20 @@ $(document).ready(function(){
 				y++;
 			});
 		});
+*/        
+    
+    $('.subchapter').each(function(){
+        $('#subtitle'+y).each(function(){
+            var subchapterTop = $('#subchapter'+y).offset().top;
+            var subchapterBottom = $('#subchapter'+y).height();
+            var subScrollTop = scrollTop - subchapterTop;
+            var subScrollBar = (subScrollTop / subchapterBottom) * subtitleHeight;
+            $(this).css('height', subScrollBar);
+            y++;
+        });
+    });       
+    
+        
 ////////HIDE REFERENCE POP-UP BOXES ON SCROLL
 		// $('.tip').css('display','none');
 
@@ -450,11 +525,12 @@ $(document).ready(function(){
 		});
 	});
 
+////////////////// /!\ DANGER ZONE /!\ NIARK NIARK NIARK ! WHERE THE BUG IS //////////////////    
+    
 ////append spans
-	$('.section p').each(function() {
+/*	$('.section p').each(function() {
 		$('#par_numbr').append('<span class="p_number"></span>');
 	});
-
 
 	var p_id_number = 1;
 	$('#p'+p_id_number).each(function() {
@@ -478,7 +554,9 @@ $(document).ready(function(){
 		
 	});
 
-
+*/
+    
+    
 ////CITE
 	$('#menu-right h4 a').each(function() {
 		$(this).addClass('toggle_panel_button');
