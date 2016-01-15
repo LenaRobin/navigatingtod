@@ -1,3 +1,8 @@
 - content: change offset from 2 to 1 when menu left is closed
 - pushmenu: remove the book icon and add "index" or arrows
+- READ MORE
+- INFO BOX
+- AUTHOR
+- KEYWORD SELECTED
+- CSS
 
