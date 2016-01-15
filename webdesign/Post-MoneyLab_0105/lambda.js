@@ -308,9 +308,9 @@ $(document).ready(function(){
 /****************
 ==> FOR SOME REASON AUTOCOMPLETE STOPPED WORKING AND WAS MESSING UP EVERYTHING
 ****************/
-	// $("#filter").autocomplete({
-	// 	source: someWords
-	// });
+	$("#filter").autocomplete({
+		source: someWords
+	});
 
 //––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 //––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
@@ -529,15 +529,15 @@ $(document).ready(function(){
 
     if ($.cookie('scroll') !== null) {
     	$(document).scrollTop($.cookie('scroll'));
-    	// alert('bookmark recovered');
+    	alert('bookmark recovered');
     }
 
-	$('#bookmark').click(function() {
+	$('#bookmark').on('click', function() {
         // Set a cookie that holds the scroll position.
         $.cookie('scroll', $(document).scrollTop());
     });
 
-    $('#remove_bookmark').click(function() {
+    $('#remove_bookmark').on('click', function() {
         // Set a cookie that holds the scroll position.
         $.removeCookie('scroll');
     });
