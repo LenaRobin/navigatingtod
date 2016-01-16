@@ -13,7 +13,6 @@ $(document).ready(function(){
 		$('#menu_bar').fadeToggle(1000);
 		$('#content, .footer').toggleClass('col-lg-offset-0', 'col-lg-offset-1');
 		$('#content, .footer').toggleClass('col-md-offset-0', 'col-md-offset-1');
-
 	});
 	
 

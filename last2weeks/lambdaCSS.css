@@ -1172,8 +1172,11 @@ input:hover {
 /********CITATIONS************************/
 
     .underline {
-
         background-color:rgba(255, 255, 69, 0.48);
+    }
+
+    .remove_highlight {
+        background-color: white;
     }
 
 	button {

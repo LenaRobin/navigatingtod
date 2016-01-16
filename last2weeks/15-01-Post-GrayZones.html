@@ -224,11 +224,15 @@
                             Want to cite a paragraph with properly formatted reference?<br>
                                 Select your text and its references will appear below:
                             <p title="Modern Language Association" alt="Modern Language Association">MLA</p>
-                            <button data-clipboard-target="#mla" class="full-citation" id="mla"></button>
+                            <!-- <button data-clipboard-target="#mla" class="full-citation" id="mla"></button> -->
+                            <textarea class="full-citation" id="mla" onclick="this.focus();this.select()" readonly="readonly"></textarea>
                             <p>Chicago Manual of Style</p>
-                            <button data-clipboard-target="#chicago" class="full-citation" id="chicago"></button>
+                            <!-- <button data-clipboard-target="#chicago" class="full-citation" id="chicago"></button>
+                             -->
+                             <textarea class="full-citation" id="chicago" onclick="this.focus();this.select()" readonly="readonly"></textarea>
                             <p title="American Psychological Association" alt="American Psychological Association">APA</p>
-                            <button data-clipboard-target="#apa" class="full-citation" id="apa"></button>
+                            <!-- <button data-clipboard-target="#apa" class="full-citation" id="apa"></button> -->
+                            <textarea class="full-citation" id="apa" onclick="this.focus();this.select()" readonly="readonly"></textarea>
                         </div>
                     </div>
                 </div>
@@ -442,17 +446,20 @@
                 <div class="btn-group-vertical">
                     <button type="button" class="btn btn-primary"><i class="fa fa-book"></i>
                         Definition</button>
-                    <button type="button" class="btn btn-primary"><i class="fa fa-pencil"></i>
+                    <div class="btn-group-horizontal">
+                        <button type="button" id="poiu" class="btn btn-primary"><i class="fa fa-pencil"></i>
                          Highlight</button>
+                        <button type="button" id="erase" style="display: none" class="btn btn-primary"><i class="fa fa-eraser"></i> Erase highlight</button>
+                    </div>
                     <button type="button" class="btn btn-primary"><i class="fa fa-quote-left"></i>
                          Quote</button>
                 </div>
             </div>
 
 
-            <button class="container delete-underline">
+<!--             <button class="container delete-underline">
                 <i class="fa fa-eraser"></i> Remove highlight</button>
-
+ -->
 
 
 <!-- –––––––––––––––––––––––––– TOC for print –––––––––––––––––––––––––––––––––––––-->

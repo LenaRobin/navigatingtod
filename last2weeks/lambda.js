@@ -97,7 +97,7 @@ $("#menu_bar_scroll").css('height', verticalBar);
         // var subtitleHeight = titleHeight*(90/100);				//SUBTITLE WIDTH
         var n = 1;
         var y = 1;
-        $("#menu_bar_scroll").css('height', verticalBar);
+        $("#menu_bar_scroll").css('width', verticalBar);
 
 
 
@@ -365,7 +365,7 @@ y++;
     });
 
 
-    ////ARRAY OF ALL THE UNIQUE WORDS FOR AUTOCOMPLETE
+////ARRAY OF ALL THE UNIQUE WORDS FOR AUTOCOMPLETE
     var someWords = allWords
     var allWords = ["20th", "21st", "a", "ability", "about", "above", "Abram", "abstraction", "actions", "actors", "add", "addresses", "administrative", "aesthetic", "against", "Agency", "all", "alliance", "also", "although", "America", "an", "Ana", "analyses", "analysis", "analyzing", "AND", "another", "antagonize", "Antonio", "apartheids", "apparatus", "are", "areas", "art", "as", "aspiration", "assumes", "at", "attack", "attention", "author", "Autonomy", "be", "beginning", "Beller", "Berry", "between", "beyond", "biopolitical", "bloc", "Britain", "broader", "but", "by", "called", "CAPITAL", "capitalism", "capitalist", "carried", "Castro", "category", "centrality", "centre", "century", "certain", "change", "Chapter", "character", "characterized", "city", "class", "co", "cognitive", "cognitivities", "Collective", "colonial", "coloniality", "commodification", "commodified", "concept", "concepts", "concludes", "connection", "constitute", "contained", "contemporary", "context", "contribute", "control", "cooperation", "corpus", "creative", "CREATIVITY", "critical", "critically", "criticism", "criticizes", "critique", "culture", "current", "currently", "cusing", "dealing", "deals", "decolonialist", "defining", "degree", "democracies", "democracy", "democratic", "depoliticization", "derogation", "detects", "detriment", "devastating", "devastation", "dichotomy", "dictated", "different", "discourse", "discourses", "distinctive", "distribution", "division", "divisions", "does", "domain", "domains", "dominant", "domination", "economy", "editors", "effects", "elites", "Emmelheinz", "emphasizing", "Empire", "encompassed", "end", "Engaged", "engagement", "engineering", "entire", "entitled", "environments", "epistemological", "equal", "era", "establish", "establishes", "establishment", "ethnic", "ethnicity", "ethnocentric", "European", "Even", "exist", "expand", "exploitation", "extent", "Factory", "faire", "feature", "fiction", "figure", "financial", "First", "fo", "focus", "focused", "for", "Fordist", "form", "former", "forms", "Foucault", "framework", "free", "from", "function", "functional", "general", "generally", "gentrification", "Geography", "ghettoized", "global", "goes", "Gomez", "Gordana", "GRAY", "great", "guided", "Gómez", "Hardt", "has", "he", "hegemonic", "hegemony", "help", "heterogeneous", "hierarchies", "historical", "historicization", "huge", "idea", "ideological", "ideologies", "Image", "implies", "imposition", "impotence", "impotent", "in", "include", "industries", "initial", "instances", "institutions", "interpretation", "interpretations", "into", "Introduction", "introductory", "invested", "involved", "Irmgard", "is", "it", "its", "itself", "James", "Jonathan", "Josephine", "Lacan", "laissez", "large", "Latin", "led", "Leger", "legitimization", "level", "links", "Ljubljana", "locates", "logic", "logics", "longer", "Machine", "mainstream", "maintaining", "majority", "manner", "Marc", "market", "mass", "meaning", "mentioned", "merely", "Mexico", "Michael", "Missing", "model", "modern", "modernity", "modernization", "modernized", "monopoly", "most", "name", "nation", "necessary", "necessity", "needs", "Negri", "neoliberal", "Neoliberalism", "networked", "neutralization", "Neutralizing", "New", "niche", "Nikolić", "no", "normative", "not", "nullity", "obscene", "occupies", "occurs", "OF", "on", "only", "opposite", "optation", "or", "organization", "organizing", "Other", "out", "pan", "paradigm", "paradigmatic", "part", "partnership", "parts", "perception", "period", "periods", "periphery", "perpetuation", "perspective", "place", "plays", "point", "points", "political", "politically", "politicized", "politics", "popular", "position", "positioning", "positions", "post", "postfordist", "Postmodern", "power", "practices", "preceding", "precisely", "preparation", "presented", "primarily", "principles", "private", "privileges", "process", "processes", "produce", "producing", "production", "professional", "profit", "progress", "proponents", "psychoanalytic", "public", "publication", "publications", "racial", "radical", "radically", "rationalization", "reconfiguring", "reduced", "refer", "reflection", "Regardless", "regards", "regeneration", "region", "register", "regulation", "reinvented", "relation", "relations", "relationship", "relying", "remain", "reorganization", "reorganized", "reportedly", "representation", "repressive", "reproducing", "reproduction", "retain", "retains", "rhetorics", "Rog", "role", "roots", "ruling", "s", "same", "Sandi", "Santiago", "scene", "see", "sees", "sense", "separated", "separating", "Serbia", "serving", "she", "should", "significance", "similar", "Since", "Slater", "Slovenia", "so", "social", "societies", "society", "socio", "sorts", "space", "speak", "specific", "stance", "state", "still", "strategies", "strategy", "strives", "structural", "structuralist", "structurally", "structure", "subjected", "subjecting", "subjects", "subversive", "such", "supernarrative", "surpass", "surplus", "system", "takes", "taking", "Tatlić", "temporal", "text", "texts", "than", "that", "Thatcher", "THE", "their", "then", "theoretical", "theory", "therefore", "these", "this", "those", "though", "through", "title", "to", "today", "topics", "total", "towards", "transcend", "transcends", "transformation", "transforming", "transition", "treated", "treats", "try", "turning", "ultimately", "unbalanced", "Unconscious", "undergoing", "urban", "use", "utilization", "vagueness", "vast", "view", "viewed", "views", "Vilenica", "was", "way", "we", "wealth", "well", "West", "wherein", "whether", "which", "who", "whose", "will", "wish", "with", "within", "work", "world", "would", "yet", "Yugoslavia", "ZONES", "Šefik", "Žižek"
                    ];
@@ -384,12 +384,10 @@ y++;
         }
         someWords.push(word);
     }
-    /****************
-==> FOR SOME REASON AUTOCOMPLETE STOPPED WORKING AND WAS MESSING UP EVERYTHING
-****************/
-    // $("#filter").autocomplete({
-    // 	source: someWords
-    // });
+////AUTOCOMPLETE
+    $("#filter").autocomplete({
+    	source: someWords
+    });
 
     //––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
     //––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
@@ -415,16 +413,16 @@ y++;
     });
     // $('[data-toggle="popover"]').popover();
 
-    ////////////////
-    ////CITATION BOX
-    ////////////////
+////////////////
+////CITATION BOX
+////////////////
 
-    ////GENERATE ID TO p
+////GENERATE ID TO p
     $('.section p').not('.references p').each(function(number){
         $(this).attr("id", "p"+number);
     });
 
-    ////CONVERT SELECTION TO STRING AND WRAP A SPAN AROUND IT
+////ON MOUSEUP GET SELECTION AND DO THINGS TO IT
     var selection;
     var selection_text;
 
@@ -434,16 +432,38 @@ y++;
         var scrollTop = $(window).scrollTop();
         var clickTop = e.pageY-scrollTop;
         var asd_height = $('#asd').outerHeight();
+        console.log(selection);
         if (selection_text.length > 0 ) {
-            if (($(window).height() - clickTop) < asd_height) {
+            if (clickTop >= asd_height) {
                 clickTop -=asd_height;
             }
             var left = e.pageX;
-
-            $("#asd").css('display','block').css({top: clickTop, left: left });
-
+            $("#asd").css('display','block').css({top: clickTop, left: left});
+////////////HIDE/SHOW UNHIGHLIGHT IF SELECTED AREA HAS HIGHLIGHT
+            if (selection.commonAncestorContainer.children) {
+                for (var i = 0; i < selection.commonAncestorContainer.children.length; i++ ) {
+                  if (selection.commonAncestorContainer.children[i].classList[1] == 'underline') {
+                    $('#erase').show();//css('display', 'block');
+                    console.log('children-show');
+                    break;
+                  }      
+                }
+            } else if (selection.commonAncestorContainer.parentElement.classList[1] == 'underline') {
+                $('#erase').show();//.css('display', 'block');
+                console.log('commonAncestorContainer parent');
+            } else if (selection.startContainer.parentElement.classList[1] == 'underline') {
+                $('#erase').show();
+                console.log('startContainer');
+            } else if (selection.endContainer.parentElement.classList[1] == 'underline') {
+                $('#erase').show();
+                console.log('endContainer');
+            } else {
+                $('#erase').hide();
+                console.log('parent-hide');
+            }
         }
 
+////////GENERATES THE REFERENCE FOR CITATION
         var par = e.target.id;
         if (par) {
             var blaaa = par.substr(1, 3);
@@ -468,66 +488,88 @@ y++;
 
 
 
-
+////////IF IT IS THE FORST CHAPTER (INTRODUCTION) CITE IN THIS WAY
         if (blaaa < 15) {
+////////////MLA STYLE 
             $('#mla').html("Nikolić, Gordana and Tatlić Šefik"+", "+"<i>"+ref_title+"</i>" 
                            +". Eds. "+ref_eds+". "+ref_place+": "+ref_pub+", "+ref_year+". &lt;"+url+"#"+par+"&gt;. "+MLA_date_of_access+".");
-
-            ////////////CHICAGO STYLE
+////////////CHICAGO STYLE
             $('#chicago').html("Nikolić, Gordana &amp; Tatlić Šefik"+". '"+ref_article+".' In "+"<i>"+ref_title+"</i>"
                                +", edited by "+ref_eds+". "+ref_place+": "+ref_pub+", "+ref_year+". "+url+"#"+par+". Accessed "+chicago_date_of_access+".");
 
-            ////////////APA STYLE
+////////////APA STYLE
             $('#apa').html("Nikolić, G., Tatlić Š."+". ("+ref_year+"). "+ref_article+". In "+ref_apaEds+" (Eds.), "+"<i>"+ref_title+"</i>"
                            +". "+ref_place+": "+ref_pub+". Available from "+url+"#"+par+".");
+////////OTHERWISE (NORMAL CHAPTERS) CITE IN THIS WAY
         } else {
-            ////////////MLA STYLE 
+////////////MLA STYLE 
             $('#mla').html(ref_authorLastName +", "+ref_authorName+". '"+ref_article+", "+"<i>"+ref_title+"</i>" 
                            +". Eds. "+ref_eds+". "+ref_place+": "+ref_pub+", "+ref_year+". &lt;"+url+"#"+par+"&gt;. "+MLA_date_of_access+".");
 
-            ////////////CHICAGO STYLE
+////////////CHICAGO STYLE
             $('#chicago').html(ref_authorLastName+", "+ref_authorName+". '"+ref_article+".' In "+"<i>"+ref_title+"</i>"
                                +", edited by "+ref_eds+". "+ref_place+": "+ref_pub+", "+ref_year+". "+url+"#"+par+". Accessed "+chicago_date_of_access+".");
 
-            ////////////APA STYLE
+////////////APA STYLE
             $('#apa').html(ref_authorLastName +", "+ ref_apaAuthorName+". ("+ref_year+"). "+ref_article+". In "+ref_apaEds+" (Eds.), "+"<i>"+ref_title+"</i>"
                            +". "+ref_place+": "+ref_pub+". Available from "+url+"#"+par+".");
         }
     });
 
 
-    ////DEFINE
-    $('#asd div button:nth-child(1)').click(function() {
+////DEFINE
+    $('#asd.btn-group-vertical:nth-child(1)').click(function() {
         // $( "#loaded").load( "http://www.oxforddictionaries.com/definition/english/capital .entryPageContent" );
         window.open('http://www.oxforddictionaries.com/definition/english/' + selection_text); 
+        $('#asd').fadeOut('3000');
     });
 
-    ////HIGHLIGHT
-    $('#asd div button:nth-child(2)').click(function() {
+////HIGHLIGHT
+    // $('#asd.btn-group-horizontal:nth-child(1)').click(function() {
+    $('#poiu').click(function() {
         $('#content').wrapSelection({
             fitToWord: true
         }).addClass('underline');
-        // $('.underline').tooltip({title: '<a><i class="fa fa-trash"></i> Delete highlight</a>', 'data-toggle': 'tooltip', 'data-trigger': 'hover', delay: {show: 100, hide: 1000}, html: true, viewport: '#content', 'data-placement': "top"});
-        // $('.tooltip').tooltip({title: '<a><i class="fa fa-trash"></i> Delete highlight</a>', 'data-toggle': 'tooltip', 'data-trigger': 'hover', delay: {show: 100, hide: 1000}, html: true, viewport: '#content', 'data-placement': "top"});
+        $('#asd').fadeOut('3000');
     });
 
-    ////REMOVE HIGHLIGHT BOX ON HOVER
-    $('#content').on('mouseenter mouseleave', '.underline', function(e) {
-        var scrollTop = $(window).scrollTop();
-        var clickTop = e.pageY-scrollTop;
-        var left = e.pageX;
-        var delete_underline_height = $('.delete-underline').outerHeight();
-        var this_underline = e.target;
-        if (($(window).height() - clickTop) < delete_underline_height) {
-            clickTop -=delete_underline_height;
-        }
-        $('.delete-underline').css('display','block').css({top: clickTop, left: left });
-        $('.delete-underline').click(function() {
-            $(this_underline).contents().unwrap();
-        });
+////ERASE HIGHLIGHT
+    $('#erase').click(function() {
+        $('#content').wrapSelection({
+            fitToWord: true
+        }).addClass('remove_highlight');
     });
 
-    ////append spans
+
+////REMOVE HIGHLIGHT BOX ON HOVER
+    // $('#content').on('mouseenter mouseleave', '.underline', function(e) {
+    //     var scrollTop = $(window).scrollTop();
+    //     var clickTop = e.pageY-scrollTop;
+    //     var left = e.pageX;
+    //     var delete_underline_height = $('.delete-underline').outerHeight();
+    //     var this_underline = e.target;
+    //     if (clickTop >= delete_underline_height) {
+    //         clickTop -=delete_underline_height;
+    //     }
+    //     $('.delete-underline').fadeIn().css({top: clickTop, left: left });
+    //     $('.delete-underline').click(function() {
+    //         var nephew1 = $(this_underline).next().eq(0);
+    //         var nephew2 = $(this_underline).prev().eq(0);
+    //         console.log('nephew1 :'+nephew1);
+    //         console.log('nephew2 :'+nephew2);
+    //         $(this_underline).contents().unwrap();
+    //         $(this_underline).next('.underline').contents().unwrap();
+    //         $(this_underline).prev('.underline').contents().unwrap();
+    //         if (nephew1.hasClass('.underline')) {
+    //             nephew1.contents().unwrap();
+    //         } else if (nephew2.hasClass('.underline')) {
+    //             nephew2.contents().unwrap();
+    //         }
+    //         $('.delete-underline').fadeOut('1000');
+    //     });
+    // });
+
+////APPEND SPANS TO THE COLUMN
     $('.section p').each(function() {
         $('#par_numbr').append('<div class="p_number"></div>');
         $(this).addClass('paragraph');
@@ -535,11 +577,6 @@ y++;
 
 
     var p_id_number = 1;
-    // $('#p'+(p_id_number-1)).each(function() {
-    // var p_offset = $(this).offset().top;
-    // setTimeout(function(){
-    //   $(".inputs").each(function(){$(this).val("new-value")});
-
     setTimeout(function(){
         $('.p_number').each(function() {
             $(this).attr('id', 'pnr'+p_id_number);
@@ -552,29 +589,22 @@ y++;
         });
     }, 3000);
 
-    // var p_top = $(this).offset().top;
-    // 	$('.p_number').each(function() {
-
-    // 		$('#pnr'+i).offset({top: p_top}).text(i);	
-    // 	});
-
-    // });
-
-    ////CITE
+////CITE BUTTON
     $('#menu-right h4 a').each(function() {
         $(this).addClass('toggle_panel_button');
     });
 
-    $('#asd div button:nth-child(3)').click(function() {
+    $('#asd.btn-group-horizontal:nth-child(3)').click(function() {
         // $("#collapse3").slideDown();
         $("#collapse3").addClass('in').attr('aria-expanded', 'true').animate({height: '100%'}, 1000);
         $('.panel-collapse').not("#collapse3").removeClass('in').attr('aria-expanded', 'false').animate({height: 0}, 1000);;
         $('#cite').removeClass('collapsed').attr('aria-expanded', 'true');
         $('.toggle_panel_button').not("#cite").removeClass('in').attr('aria-expanded', 'false');
+        $('#asd').fadeOut('3000');
     });
 
 
-    ////HIDE DELETE-UNDERLINE WHEN CLICKED OUTSIDE (EXCEPT THE TWO MENUS)
+////HIDE DELETE-UNDERLINE WHEN CLICKED OUTSIDE (EXCEPT THE TWO MENUS)
     $('#main').mousedown(function(e) {
         if ($('#asd').is(':visible')
             && !$('#asd').is(e.target) // if the target of the click isn't the container...
@@ -589,7 +619,7 @@ y++;
     });
 
 
-    ////HIDE SELECTION MENU WHEN CLICKED OUTSIDE (EXCEPT THE TWO MENUS)
+////HIDE SELECTION MENU WHEN CLICKED OUTSIDE (EXCEPT THE TWO MENUS)
     $('#main').mousedown(function(e) {
         if ($('.delete-underline').is(':visible')
             && !$('.delete-underline').is(e.target) // if the target of the click isn't the container...
@@ -605,7 +635,7 @@ y++;
 
 
 
-
+////COOKIES?
     if ($.cookie('scroll') !== null) {
         $(document).scrollTop($.cookie('scroll'));
         // alert('bookmark recovered');
@@ -625,17 +655,17 @@ y++;
     ////CLICKING COPIES THE CITATION
     ////TO THE CLIPBOARD////////////
     ////////////////////////////////
-    var clipboard = new Clipboard('.full-citation');
+    // var clipboard = new Clipboard('.full-citation');
 
-    ////DISPLAY CONFIRMATION AT COPY
-    $('.full-citation').click(function() {
-        $(this).prev().append('<span class="confirmation">Copied!</span>');
-        $('.confirmation').fadeOut(3000);
-    });
+    // ////DISPLAY CONFIRMATION AT COPY
+    // $('.full-citation').click(function() {
+    //     $(this).prev().append('<span class="confirmation">Copied!</span>');
+    //     $('.confirmation').fadeOut(3000);
+    // });
 
-    clipboard.on('error', function(e) {
-        $('.full-citation').prev().append('<div class="confirmation"><br/>Error!</div>');
-    });
+    // clipboard.on('error', function(e) {
+    //     $('.full-citation').prev().append('<div class="confirmation"><br/>Error!</div>');
+    // });
 
     //////////////////////
     ////SHOW/HIDE KEYWORDS
