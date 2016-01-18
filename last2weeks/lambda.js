@@ -419,7 +419,11 @@ y++;
 
 ////GENERATE ID TO p
     $('.section p').not('.references p').each(function(number){
-        $(this).attr("id", "p"+number);
+        $(this).attr("id", "p"+(number+1));
+    });
+
+    $('.section').mousedown(function() {
+        $('.qwertz').remove();
     });
 
 ////ON MOUSEUP GET SELECTION AND DO THINGS TO IT
@@ -443,39 +447,77 @@ y++;
             if (selection.commonAncestorContainer.children) {
                 for (var i = 0; i < selection.commonAncestorContainer.children.length; i++ ) {
                   if (selection.commonAncestorContainer.children[i].classList[1] == 'underline') {
-                    $('#erase').show();//css('display', 'block');
-                    console.log('children-show');
-                    break;
-                  }      
+                    $('#erase').show();
+                    // var selClass = selection.commonAncestorContainer.children[i].classList[0];
+                    // var selNr = selClass.substr(4, 20);
+                    // console.log(selNr);
+                    // $('#erase').click(function() {
+                    //     console.log('inside'),
+                    //     $('.sel_'+selNr).contents().unwrap();
+                    //     console.log('at end');
+                    // });
+                  }
                 }
             } else if (selection.commonAncestorContainer.parentElement.classList[1] == 'underline') {
-                $('#erase').show();//.css('display', 'block');
-                console.log('commonAncestorContainer parent');
+                $('#erase').show();
+                // var selClass = selection.commonAncestorContainer.parentElement[i].classList[0];
+                // var selNr = selClass.substr(4, 20);
+                // console.log(selNr);
+                // $('#erase').click(function() {
+                //     console.log('inside'),
+                //     $('.sel_'+selNr).contents().unwrap();
+                //     console.log('at end');
+                // });
+
+                // console.log('commonAncestorContainer parent');
+                // selection.commonAncestorContainer.children[i].contents().unwrap();
             } else if (selection.startContainer.parentElement.classList[1] == 'underline') {
                 $('#erase').show();
-                console.log('startContainer');
+                // var selClass = selection.startContainer.parentElement[i].classList[0];
+                // var selNr = selClass.substr(4, 20);
+                // console.log(selNr);
+                // $('#erase').click(function() {
+                //     console.log('inside'),
+                //     $('.sel_'+selNr).contents().unwrap();
+                //     console.log('at end');
+                // });
+
+
+                // console.log('startContainer');
+                // selection.commonAncestorContainer.children[i].contents().unwrap();
             } else if (selection.endContainer.parentElement.classList[1] == 'underline') {
                 $('#erase').show();
-                console.log('endContainer');
+                // var selClass = selection.commonAncestorContainer.parentElement[i].classList[0];
+                // var selNr = selClass.substr(4, 20);
+                // console.log(selNr);
+                // $('#erase').click(function() {
+                //     console.log('inside'),
+                //     $('.sel_'+selNr).contents().unwrap();
+                //     console.log('at end');
+                // });
             } else {
                 $('#erase').hide();
                 console.log('parent-hide');
             }
         }
 
-////////GENERATES THE REFERENCE FOR CITATION
-        var par = e.target.id;
+        $('.underline').each(function() {
+                if ($(this).css('background-color') == 'white') {
+                    $(this).contents().unwrap();
+                }
+        });
+
+        var par = $(e.target).closest('p').attr('id');
         if (par) {
             var blaaa = par.substr(1, 3);
         }
-        var ref_article = $("#"+par).closest('.section').attr('data-article');
-
-        var ref_authorName = $("#"+par).closest('.section').attr('data-authorName');
+        var ref_article = $('#'+par).closest('.section').attr('data-article');
+        var ref_authorName = $('#'+par).closest('.section').attr('data-authorName');
         if (ref_authorName) {
             var ref_apaAuthorName = ref_authorName.substr(0, 1);
         }
-        var ref_intro = $("#"+par).closest('.section').attr('data-authorName');
-        var ref_authorLastName = $("#"+par).closest('.section').attr('data-authorLastName');
+        var ref_intro = $('#'+par).closest('.section').attr('data-authorName');
+        var ref_authorLastName = $('#'+par).closest('.section').attr('data-authorLastName');
         var ref_title = $('meta[name="title"]').attr('content');
         var ref_eds = $('meta[name="editors"]').attr('content');
         var ref_apaEds = $('meta[name="apa-editors"]').attr('content');
@@ -518,7 +560,7 @@ y++;
 
 
 ////DEFINE
-    $('#asd.btn-group-vertical:nth-child(1)').click(function() {
+    $('#lookup').click(function() {
         // $( "#loaded").load( "http://www.oxforddictionaries.com/definition/english/capital .entryPageContent" );
         window.open('http://www.oxforddictionaries.com/definition/english/' + selection_text); 
         $('#asd').fadeOut('3000');
@@ -526,7 +568,7 @@ y++;
 
 ////HIGHLIGHT
     // $('#asd.btn-group-horizontal:nth-child(1)').click(function() {
-    $('#poiu').click(function() {
+    $('#highlight').click(function() {
         $('#content').wrapSelection({
             fitToWord: true
         }).addClass('underline');
@@ -535,6 +577,8 @@ y++;
 
 ////ERASE HIGHLIGHT
     $('#erase').click(function() {
+    //         selection.commonAncestorContainer.children[i].contents().unwrap();
+    // });
         $('#content').wrapSelection({
             fitToWord: true
         }).addClass('remove_highlight');
@@ -582,7 +626,7 @@ y++;
             $(this).attr('id', 'pnr'+p_id_number);
             $('#pnr'+p_id_number).each(function() {
             //    alert('hello');
-                var p_offset = $('#p'+(p_id_number-1)).offset().top;
+                var p_offset = $('#p'+p_id_number).offset().top;
                 $(this).offset({top: p_offset}).text(p_id_number);
             });
             p_id_number++;
@@ -594,7 +638,7 @@ y++;
         $(this).addClass('toggle_panel_button');
     });
 
-    $('#asd.btn-group-horizontal:nth-child(3)').click(function() {
+    $('#get-reference').click(function() {
         // $("#collapse3").slideDown();
         $("#collapse3").addClass('in').attr('aria-expanded', 'true').animate({height: '100%'}, 1000);
         $('.panel-collapse').not("#collapse3").removeClass('in').attr('aria-expanded', 'false').animate({height: 0}, 1000);;
@@ -636,20 +680,37 @@ y++;
 
 
 ////COOKIES?
-    if ($.cookie('scroll') !== null) {
-        $(document).scrollTop($.cookie('scroll'));
-        // alert('bookmark recovered');
+    $('#pin').draggable({
+        // containment: '#content',
+        cursor: 'move',
+        snap: '#content',
+        // helper: 'clone',
+        stop: getPinPosition
+
+    });
+
+    function getPinPosition(e, ui) {
+        var pinXPos = ui.offset.left;
+        var pinYPos = ui.offset.top;
+        $('#pin').css({top: pinYPos});
+        $('#pin').css({left: pinXPos});
+        console.log("Drag stopped!\n\nOffset: (" + pinXPos + ", " + pinYPos + ")\n");
     }
 
-    $('#bookmark').click(function() {
-        // Set a cookie that holds the scroll position.
-        $.cookie('scroll', $(document).scrollTop());
-    });
+    // if ($.cookie('scroll') !== null) {
+    //     $(document).scrollTop($.cookie('scroll'));
+    //     // alert('bookmark recovered');
+    // }
 
-    $('#remove_bookmark').click(function() {
-        // Set a cookie that holds the scroll position.
-        $.removeCookie('scroll');
-    });
+    // $('#bookmark').click(function() {
+    //     // Set a cookie that holds the scroll position.
+    //     $.cookie('scroll', $(document).scrollTop());
+    // });
+
+    // $('#remove_bookmark').click(function() {
+    //     // Set a cookie that holds the scroll position.
+    //     $.removeCookie('scroll');
+    // });
 
     ////////////////////////////////
     ////CLICKING COPIES THE CITATION

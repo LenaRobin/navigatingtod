@@ -1179,9 +1179,16 @@ input:hover {
         background-color: white;
     }
 
-	button {
-		/*display: block;*/
-	}
+    #pin {
+        color: red;
+        position: absolute;
+    }
+
+    #pin.ui-draggable-dragging {
+        color: green;
+        z-index: 999999999999;
+    }
+
 
     #tools {
 	top: 2%;
