@@ -107,6 +107,14 @@ hr{
 
 }
 
+#info-box img{
+    width: 80%;
+    text-align: center;
+    margin-top: 40px;
+    margin-left: 0px;
+    margin-bottom: 40px;
+}
+
 .breadcrumb {
     padding: 8px 15px;
     margin-bottom: 20px;
@@ -212,6 +220,7 @@ Defines the typography for texts in reader */
     /* 
     width: 78%;
      */
+    color:darkslateblue;
 }
 /* Title of big part */
 .section h2 {
@@ -388,8 +397,8 @@ body {
 	#content {
         opacity: 0;
         margin-bottom: 100px !important;
-        background-color:white;
-        margin-top: 80px;
+/*         background-color:white;
+         */        margin-top: 80px;
 }
 	
 
