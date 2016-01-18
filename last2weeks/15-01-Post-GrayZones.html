@@ -69,13 +69,6 @@
 /-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/      STRUCTURATION      /-/-/-/-/-/-/-/-/-/-/-/-/-/-/-
 /-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-
 /-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-->
-
-<!-- –––––––––––––––––––––––––– Toggle button –––––––––––––––––––––––––––––––––––––-->
-<div id="tool-bar-container">
-    <div class="toggle_menu">
-        <a href="#0"><i class="fa fa-chevron-right"></i>
-        </a>    </div>
-</div>
  
    
 <div id="main"> <!-- MAIN: DO NOT REMOVE --> 
@@ -83,7 +76,7 @@
 <!-- –––––––––––––––––––––––––– Pushmenu/Toc (left) –––––––––––––––––––––––––––––––––––––-->
 <div class="container-fluid">
     <div class="row">
-        <nav id="menu" class="pushmenu pushmenu-left not col-lg-2 col-md-2 col-sm-2 col-xs-12 ">
+        <nav id="menu" class="not col-lg-2 col-md-2 col-sm-2 col-xs-0 ">
             <div id="toc_wrapper">
                 <p class="menu-publication-title" style="font-size:18px; margin-left:10px;">The Gray Zones of Creativity and Capital</p>
                 <a class="page-scroll" href="#chapter1">
@@ -150,9 +143,15 @@
                 </a>
                 
             </div>
-        </nav>
-        <div id="button_to_close_menu_on_small_devices"></div>
+            
+            <!-- –––––––––––––––––––––––––– Toggle menu button –––––––––––––––––––––––––––––––––––––-->
+                <div class="toggle_menu">
+                    <a href="#0"><i class="fa fa-chevron-right"></i>
+                    </a>
+                </div>
 
+        </nav>
+        <!-- <div id="button_to_close_menu_on_small_devices"></div> -->
     </div>
 </div>
 

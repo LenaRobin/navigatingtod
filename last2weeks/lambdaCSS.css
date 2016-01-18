@@ -476,11 +476,12 @@ a.page-scroll:hover, a.page-scroll:active, a.page-scroll:link, a.page-scroll:vis
 /*******MENU WITH THE TOC THAT******************
 ********COMES IN SLIDING FROM THE LEFT*********/
 #menu {			
-    left: -16.66666667%;
+    /*left: -16.66666667%;*/
     padding: 0;
     height: 100%;
     position:fixed;
     overflow: hidden;
+
    z-index: 999999999999999999999999;
     background: rgb(255,255,255); /* Old browsers */
     background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(247,247,247,1) 64%, rgba(201,201,201,1) 100%); /* FF3.6-15 */
@@ -489,12 +490,34 @@ a.page-scroll:hover, a.page-scroll:active, a.page-scroll:link, a.page-scroll:vis
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#c9c9c9',GradientType=0 ); /* IE6-9 */
 
     background-attachment: fixed;   
+    max-width: 100%;
+
+    
+    /* 
+    
+    background: rgb(255,255,255); Old browsers
+    background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(247,247,247,1) 71%, rgba(244,244,244,1) 100%); FF3.6-15
+    background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(247,247,247,1) 71%,rgba(244,244,244,1) 100%); Chrome10-25,Safari5.1-6
+    background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(247,247,247,1) 71%,rgba(244,244,244,1) 100%); W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f4f4f4',GradientType=0 ); IE6-9 */
+    
     border-right: 1px solid #f4f4f4;
     overflow-y: auto;
     padding-top:10px;
   
 }
+/*.left-0 {
+    left: 0;
+}*/
 
+
+/*.push-menu-left {
+    left: -16.66666667%;
+}
+
+.push-menu-xs-left {
+    left: -100%;
+}*/
 
 
 /********************************************************
@@ -531,43 +554,6 @@ Table of content is contained in pushmenu, it shows the different parts of the b
     color: black;
 }
 
-
-/*******CLASS ADDED TO MAKE**************
-********IT GO OFF SCREEN****************/
-		.pushmenu-left {
-/*            left: -16.66666667%;
-*/
-		}
-
-/*******CLASS TO MAKE IT***********
-********SLIDE IN FROM LEFT********/
-		.pushmenu-left.pushmenu-open {
-		  /*left: 0;*/
-		}
-
-/*******PUSHES THE REST OF THE**********
-********#CONTENT TO THE RIGHT**********/
-
-		.pushmenu-push {
-		  /*overflow-x: hidden;
-		  position: relative;
-		  left: 0;*/
-		}
-
-/*******CLASS THAT MAKES**********
-********THE #CONTENT MOVE*********
-********TO THE RIGHT*************/
-		.pushmenu-push-toright {/*
-       left: 16.66666667%;
-            margin-right:-16.66666667%;*/
-		}
-
-/*******TRANSITIONS****************/
-		.pushmenu, .pushmenu-push, .pushmenu-push-toright {
-		/*  -webkit-transition: all 0.3s ease;
-		  -moz-transition: all 0.3s ease;
-		  transition: all 0.3s ease;*/  
-		}
 
 /*******VERTICAL BAR THAT*********
 ********OPENS UP THE MENU********/
@@ -644,15 +630,21 @@ left:0px;
 }
 
 .toggle_menu {
-    padding:1px;
-    padding-top:10px;
+    padding: 1px;
+    padding-top: 10px;
     padding-bottom: 10px;
-    position: fixed;
-    bottom:20px;
-    left:0px;
+        bottom: 20px;
     font-size: 18px;
-    color:white;
-    background-color:black;
+    color: white;
+    background-color: black;
+    top: 50%;
+    z-index: 99999999999999999999999999999999;
+
+    height: 20px;
+    /*float: right;*/
+    right: -10px;
+    position: absolute;
+    /*vertical-align: middle;*/
 }
 .toggle_menu a{
     color:white;
@@ -1917,25 +1909,6 @@ smartphones, iPhone, portrait 480x320 phones */
     margin-right:5px;*/
 }
     
-.pushmenu {				
-/*    width: 97%;
-overflow-y: scroll;*/
-}
-
-/*******CLASS ADDED TO MAKE**************
-********IT GO OFF SCREEN****************/
-.pushmenu-left {
-/*    left: 100%;*/
-
-}
-
-/*******CLASS THAT MAKES**********
-********THE #CONTENT MOVE*********
-********TO THE RIGHT*************/
-.pushmenu-push-toright {
-/*    margin-right:100%;*/
-}
-
 #toc_wrapper{
 /*    margin-top:40px;    */
 }
@@ -2000,25 +1973,10 @@ overflow-y: scroll;*/
     /*width: 95%;
     margin-right:5px;*/
 }
-    
-.pushmenu {				
-    /*width: 97%;
-    overflow-y: scroll;*/
-}
-
-/*******CLASS ADDED TO MAKE**************
-********IT GO OFF SCREEN****************/
-.pushmenu-left {
-    /*left: 100%;*/
-
-}
 
 /*******CLASS THAT MAKES**********
 ********THE #CONTENT MOVE*********
 ********TO THE RIGHT*************/
-.pushmenu-push-toright {
-    /*margin-right:100%;*/
-}
 
 #toc_wrapper{
     /*margin-top:40px;    */

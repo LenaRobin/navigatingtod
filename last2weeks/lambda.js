@@ -4,18 +4,54 @@ $(document).ready(function(){
     //////////////////////////////////////////////////////////////////////////////////
     $toggle_menu = $('.toggle_menu');
 
-    $toggle_menu.click(function() {
-        if ($('#menu').offset().left < 0) {
-            $('#menu').animate({left: 0});
-        } else {
-            $('#menu').animate({left: '-16.66666667%'});
-        }
-        $('#menu_bar').fadeToggle(1000);
-        $('#content, .footer').toggleClass('col-lg-offset-0', 'col-lg-offset-1');
-        $('#content, .footer').toggleClass('col-md-offset-0', 'col-md-offset-1');
-        $('#content, .footer').toggleClass('col-sm-offset-0', 'col-sm-offset-1');
+    // $toggle_menu.click(function() {
+    //     if ($(window).width() <= "480") {
+    //         var menu_width = $('#menu').width();
+    //         $('#menu').animate({left: 0}, 1000);
+    //         // $('#menu').toggleClass('col-xs-0', 'col-xs-12');
+    //         // if ()
+    //         // if ($('#menu').offset().left < 0) {
+    //         //     $('#menu').animate({left: 0});
+    //         // } else {
+    //         //     $('#menu').animate({left: '-16.66666667%'});
+    //         // }
+    //     } else {
+    //         var menu_width = $('#menu').width();
+    //         // $('#menu').animate({left: -menu_width}, 1000);
+    //         $('#menu').toggle({left: -menu_width}, 1000);
 
-    });
+
+
+    //         $('#user_button').toggle(function () {
+    //             $("#user_button").css({borderBottomLeftRadius: "0px"});
+    //         }, function () {
+    //             $("#user_button").css({borderBottomLeftRadius: "5px"});
+    //         });
+    //     }
+    //     $('#menu_bar').fadeToggle(1000);
+    //     $('#content, .footer').toggleClass('col-lg-offset-0', 'col-lg-offset-1');
+    //     $('#content, .footer').toggleClass('col-md-offset-0', 'col-md-offset-1');
+    //     $('#content, .footer').toggleClass('col-sm-offset-0', 'col-sm-offset-1');
+        
+    // });
+$toggle_menu.click(function() {
+    // $(this).toggle(function() {
+        if ($(window).width() <= "480") {
+            var menu_width = $('#menu').width();
+            $('#menu').animate({left: 0}, 1000);
+        }
+    // });
+});
+
+
+    //     $("#user_button").css({borderBottomLeftRadius: "0px"});
+    // }, function () {
+    //     $("#user_button").css({borderBottomLeftRadius: "5px"});
+    // });
+
+
+
+
 
 
     ////ANIMATE OPENING LEFT MENU ON LOAD
@@ -29,7 +65,10 @@ $(document).ready(function(){
 
     ////ON LOAD OPEN THE TOC IF SMALLER
     if ($(window).width() >= "768") {
-        $('#menu').animate({left: 0}, 1000);
+        $('#menu').animate({left: 0}, 1500);
+    } else if ($(window).width() <= "480") {
+        var menu_width = $('#menu').width();
+        $('#menu').animate({left: -menu_width}, 1500);
     }
 
 
