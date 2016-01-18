@@ -234,6 +234,7 @@ Defines the typography for texts in reader */
     margin-top: 16%;
 }
 
+
 .shadow{
  /*    height: 400px;
     width: 400px;
@@ -416,7 +417,12 @@ body {
 }
 
 .horizScroll {
-    background-color:rgba(255, 51, 0, 0.1);
+    width: 5px;
+    background: #f30; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#f30, rgb(255, 213, 203)); For Safari 5.1 to 6.0
+    background: -o-linear-gradient(#f30, rgb(255, 213, 203)); For Opera 11.1 to 12.0
+    background: -moz-linear-gradient(#f30, rgb(255, 213, 203)); For Firefox 3.6 to 15
+    background: linear-gradient(#f30, rgb(255, 213, 203)); Standard syntax 
 }
 
 .horizScroll, .subScroll{
@@ -480,9 +486,7 @@ a.page-scroll:hover, a.page-scroll:active, a.page-scroll:link, a.page-scroll:vis
     padding: 0;
     height: 100%;
     position:fixed;
-    overflow: hidden;
-
-   z-index: 999999999999999999999999;
+    z-index: 999999999999999999999999;
     background: rgb(255,255,255); /* Old browsers */
     background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(247,247,247,1) 64%, rgba(201,201,201,1) 100%); /* FF3.6-15 */
     background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(247,247,247,1) 64%,rgba(201,201,201,1) 100%); /* Chrome10-25,Safari5.1-6 */
@@ -490,34 +494,45 @@ a.page-scroll:hover, a.page-scroll:active, a.page-scroll:link, a.page-scroll:vis
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#c9c9c9',GradientType=0 ); /* IE6-9 */
 
     background-attachment: fixed;   
-    max-width: 100%;
 
-    
-    /* 
-    
-    background: rgb(255,255,255); Old browsers
-    background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(247,247,247,1) 71%, rgba(244,244,244,1) 100%); FF3.6-15
-    background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(247,247,247,1) 71%,rgba(244,244,244,1) 100%); Chrome10-25,Safari5.1-6
-    background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(247,247,247,1) 71%,rgba(244,244,244,1) 100%); W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f4f4f4',GradientType=0 ); IE6-9 */
-    
+}
+
+
+#toc_wrapper{
     border-right: 1px solid #f4f4f4;
-    overflow-y: auto;
-    padding-top:10px;
-  
-}
-/*.left-0 {
-    left: 0;
-}*/
+    margin: 0px;
+    padding: 0px;
+    margin-right: 20px;
+    overflow-y:auto;
+    background:white;
 
-
-/*.push-menu-left {
-    left: -16.66666667%;
 }
 
-.push-menu-xs-left {
-    left: -100%;
-}*/
+
+.toggle_menu {
+    padding: 1px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 18px;
+    color: white;
+    background-color: #868686;
+    background-color:#dbdbdb;
+    vertical-align: middle;
+    top:45%;
+    z-index: 99999999999999999999999999999999;
+    height: auto;
+    right: 5px;
+    position: absolute;
+}
+
+.toggle_menu a{
+    color:white;
+}
+
+.toggle_menu:hover{
+    color:white;
+    background-color:black;
+}
 
 
 /********************************************************
@@ -542,6 +557,7 @@ Table of content is contained in pushmenu, it shows the different parts of the b
     -moz-box-shadow: 0px 0px 18px 1px rgba(142,142,142,0.08);
     box-shadow: 0px 0px 18px 1px rgba(142,142,142,0.08);
 }
+
 
 /* Table of contents: when the user goes over a part of the book */
 #menu h2:hover{
@@ -570,16 +586,17 @@ Table of content is contained in pushmenu, it shows the different parts of the b
     height: 0%;
     width: 5px;
     position: fixed;	
-    background: #f30; /* For browsers that do not support gradients */
-background: -webkit-linear-gradient(#f30, rgb(255, 213, 203), rgba(255, 255, 69, 1), #1C33E5); For Safari 5.1 to 6.0
+/* background: -webkit-linear-gradient(#f30, rgb(255, 213, 203), rgba(255, 255, 69, 1), #1C33E5); For Safari 5.1 to 6.0
     background: -o-linear-gradient(#f30, rgb(255, 213, 203), rgba(255, 255, 69, 1), #1C33E5); For Opera 11.1 to 12.0
     background: -moz-linear-gradient(#f30, rgb(255, 213, 203), rgba(255, 255, 69, 1), #1C33E5); For Firefox 3.6 to 15
-    background: linear-gradient(#f30, rgb(255, 213, 203), rgba(255, 255, 69, 1), #1C33E5); Standard syntax  
+    background: linear-gradient(#f30, rgb(255, 213, 203), rgba(255, 255, 69, 1), #1C33E5); Standard syntax   */
     
-/*     background: -webkit-linear-gradient(#f30, rgb(255, 213, 203)); For Safari 5.1 to 6.0
+    background: #f30; /* For browsers that do not support gradients */
+
+    background: -webkit-linear-gradient(#f30, rgb(255, 213, 203)); For Safari 5.1 to 6.0
     background: -o-linear-gradient(#f30, rgb(255, 213, 203)); For Opera 11.1 to 12.0
     background: -moz-linear-gradient(#f30, rgb(255, 213, 203)); For Firefox 3.6 to 15
-    background: linear-gradient(#f30, rgb(255, 213, 203)); Standard syntax */
+    background: linear-gradient(#f30, rgb(255, 213, 203)); Standard syntax 
 }
 
 
@@ -627,32 +644,6 @@ left:0px;
     text-align: center;
     align-content: center;
     vertical-align: middle;
-}
-
-.toggle_menu {
-    padding: 1px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-        bottom: 20px;
-    font-size: 18px;
-    color: white;
-    background-color: black;
-    top: 50%;
-    z-index: 99999999999999999999999999999999;
-
-    height: 20px;
-    /*float: right;*/
-    right: -10px;
-    position: absolute;
-    /*vertical-align: middle;*/
-}
-.toggle_menu a{
-    color:white;
-}
-
-.toggle_menu:hover{
-    color:white;
-    background-color:black;
 }
 
 #search-button:active, #files-button:active, #copy-button:active, #print-button:active, #tools-button:active, #share-button:active{
