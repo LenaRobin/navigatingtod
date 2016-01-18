@@ -1186,7 +1186,7 @@ input:hover {
 
     #pin.ui-draggable-dragging {
         color: green;
-        z-index: 999999999999;
+        z-index: 999999999999999999999999;
     }
 
 

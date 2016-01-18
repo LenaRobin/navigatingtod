@@ -13,6 +13,7 @@ $(document).ready(function(){
         $('#menu_bar').fadeToggle(1000);
         $('#content, .footer').toggleClass('col-lg-offset-0', 'col-lg-offset-1');
         $('#content, .footer').toggleClass('col-md-offset-0', 'col-md-offset-1');
+        $('#content, .footer').toggleClass('col-sm-offset-0', 'col-sm-offset-1');
 
     });
 
@@ -27,7 +28,7 @@ $(document).ready(function(){
     });
 
     ////ON LOAD OPEN THE TOC IF SMALLER
-    if ($(window).width() >= "992") {
+    if ($(window).width() >= "768") {
         $('#menu').animate({left: 0}, 1000);
     }
 
