@@ -17,7 +17,7 @@ $(document).ready(function(){
     //         // }
     //     } else {
     //         var menu_width = $('#menu').width();
-    //         // $('#menu').animate({left: -menu_width}, 1000);
+    //         $('#menu').animate({left: -menu_width}, 1000);
     //         $('#menu').toggle({left: -menu_width}, 1000);
 
 
@@ -38,7 +38,19 @@ $toggle_menu.click(function() {
     // $(this).toggle(function() {
         if ($(window).width() <= "480") {
             var menu_width = $('#menu').width();
-            $('#menu').animate({left: 0}, 1000);
+            console.log($('#menu').css('left'));
+            if ($('#menu').css('left') < 0) {
+                $('#menu').animate({left: 0}, 1000);
+            } else {
+                $('#menu').animate({left: -menu_width}, 1000);
+            }
+        } else {
+            var menu_width = $('#menu').width();
+            $('#menu').animate({left: -menu_width}, 1000);
+            $('#menu_bar').fadeToggle(1000);
+            $('#content, .footer').toggleClass('col-lg-offset-0', 'col-lg-offset-1');
+            $('#content, .footer').toggleClass('col-md-offset-0', 'col-md-offset-1');
+            $('#content, .footer').toggleClass('col-sm-offset-0', 'col-sm-offset-1');
         }
     // });
 });
@@ -51,24 +63,21 @@ $toggle_menu.click(function() {
 
 
 
-
-
-
-    ////ANIMATE OPENING LEFT MENU ON LOAD
+////ANIMATE OPENING LEFT MENU ON LOAD
     $('#content').animate({
         opacity: 1
-    }, 1000, function() {
+    }, 1500, function() {
         alignSidenotes();
         alignVertically();
         fadeInSidenotes();
     });
 
     ////ON LOAD OPEN THE TOC IF SMALLER
-    if ($(window).width() >= "768") {
-        $('#menu').animate({left: 0}, 1500);
-    } else if ($(window).width() <= "480") {
+    // if ($(window).width() >= "768") {
+    //     $('#menu').animate({left: 0}, 1000);
+    if ($(window).width() <= "480") {
         var menu_width = $('#menu').width();
-        $('#menu').animate({left: -menu_width}, 1500);
+        $('#menu').css({left: -menu_width});
     }
 
 
@@ -870,6 +879,11 @@ y++;
         $('#fn'+numbr).effect('highlight', {color:'rgb(255, 213, 203)'}, 2000);
     });
 
+    $('.sidenote').click(function(e) {
+        var sideNr = parseInt(e.currentTarget, 10);
+        console.log(sideNr);
+        $('#fnref'+sideNr).effect('highlight', {color:'rgb(255, 213, 203)'}, 2000);
+    });
 
     function fadeOutSidenotes() {
         $('.sidenote').animate({
