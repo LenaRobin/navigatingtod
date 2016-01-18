@@ -36,17 +36,24 @@ $(document).ready(function(){
     // });
 $toggle_menu.click(function() {
     // $(this).toggle(function() {
+        // $('.fa-chevron-right').rotate({angle: '+=180'});
+
         if ($(window).width() <= "480") {
-            var menu_width = $('#menu').width();
-            console.log($('#menu').css('left'));
-            if ($('#menu').css('left') < 0) {
-                $('#menu').animate({left: 0}, 1000);
+            var menu_width = $('#toc_wrapper').width();
+            console.log($('#menu').offset().left);
+            if ($('#menu').offset().left == 0) {
+                $('#menu').animate({left: -menu_width});
             } else {
-                $('#menu').animate({left: -menu_width}, 1000);
+                $('#menu').animate({left: 0});
             }
         } else {
-            var menu_width = $('#menu').width();
-            $('#menu').animate({left: -menu_width}, 1000);
+            var menu_width = $('#toc_wrapper').width();
+            console.log($('#menu').offset().left);
+            if ($('#menu').offset().left == 0) {
+                $('#menu').animate({left: -menu_width});    
+            } else {
+                $('#menu').animate({left: 0});
+            }
             $('#menu_bar').fadeToggle(1000);
             $('#content, .footer').toggleClass('col-lg-offset-0', 'col-lg-offset-1');
             $('#content, .footer').toggleClass('col-md-offset-0', 'col-md-offset-1');
@@ -54,6 +61,12 @@ $toggle_menu.click(function() {
         }
     // });
 });
+
+    $toggle_menu.toggle(function() {
+      $('.fa-chevron-right').rotate({ endDeg:180, persist:true });
+    }, function() {
+      $('.fa-chevron-right').rotate({ endDeg:360 });
+    });
 
 
     //     $("#user_button").css({borderBottomLeftRadius: "0px"});
@@ -63,7 +76,7 @@ $toggle_menu.click(function() {
 
 
 
-////ANIMATE OPENING LEFT MENU ON LOAD
+////ANIMATE SIDENOTES AND STUFF
     $('#content').animate({
         opacity: 1
     }, 1500, function() {
@@ -76,7 +89,7 @@ $toggle_menu.click(function() {
     // if ($(window).width() >= "768") {
     //     $('#menu').animate({left: 0}, 1000);
     if ($(window).width() <= "480") {
-        var menu_width = $('#menu').width();
+        var menu_width = $('#toc_wrapper').width();
         $('#menu').css({left: -menu_width});
     }
 

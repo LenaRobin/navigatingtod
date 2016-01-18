@@ -492,8 +492,9 @@ a.page-scroll:hover, a.page-scroll:active, a.page-scroll:link, a.page-scroll:vis
     background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(247,247,247,1) 64%,rgba(201,201,201,1) 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(247,247,247,1) 64%,rgba(201,201,201,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#c9c9c9',GradientType=0 ); /* IE6-9 */
-
+    max-width: 100%;
     background-attachment: fixed;   
+    left: 0;
 
 }
 
@@ -505,6 +506,7 @@ a.page-scroll:hover, a.page-scroll:active, a.page-scroll:link, a.page-scroll:vis
     margin-right: 20px;
     overflow-y:auto;
     background:white;
+    left: 0;
 }
 
 
