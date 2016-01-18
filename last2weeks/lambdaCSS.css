@@ -480,7 +480,7 @@ a.page-scroll:hover, a.page-scroll:active, a.page-scroll:link, a.page-scroll:vis
     height: 100%;
     position:fixed;
     overflow: hidden;
-   
+   z-index: 999999999999999999999999;
     
     /* 
     
@@ -1687,8 +1687,11 @@ blockquote {
     bottom:0px;
     width: 100%;
     background-color: white;
+    z-index: 99999999999999999999999999999;
+    padding: 0px;
+
 }
-#panel, #flip, #panel2, #flip2, #panel3, #flip3, #panel4, #flip4, #panel5, #flip5 {
+#panel, #flip, #panel2, #flip2, #panel3, #flip3, #panel4, #flip4, #panel5, #flip5, #panel6, #flip6 {
     padding: 5px;
     text-align: center;
     background-color: #f4f4f4;
@@ -1696,15 +1699,82 @@ blockquote {
     border-radius: 5px;
 }
 
-#flip, #flip2, #flip3, #flip4, #flip5{
-    width: 40px;
-    display: inline-block;
+
+#flip i, #flip2 i, #flip3 i, #flip4 i, #flip5 i, #flip6 i{
+    margin-right: 10px;
 }
 
-#panel, #panel2, #panel3, #panel4, #panel5 {
+#flip, #flip2, #flip3, #flip4, #flip5, #flip6{
+    width: 16.666667%;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow:clip;
+    height: 25px;
+}
+
+#panel, #panel2, #panel3, #panel4, #panel5, #panel6 {
     padding: 20px;
-    width: 100%;
     display: none;
+}
+
+#panel6 #live-search {
+    margin-bottom: 0px;
+}
+
+#panel6 .form-control {
+    display: block;
+    width: 40%;
+    height: 30px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: black;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #f4f4f4;
+    border-radius: 4px;
+}
+
+#panel6 fieldset {
+    margin: 0;
+    padding: 0;
+    border-style: none;
+}
+
+#panel6 #filter {
+}
+
+#panel6 #filter > * {
+}
+
+/* how is the text the user writes when searching */
+#panel6 #filter-count {
+    font-size: 13px;
+    font-family: "Hkgrotesk";
+    text-align: right;
+    position: fixed;
+    color: #afafaf;
+    z-index: 99;
+}
+
+#panel6 #filter.text-input {
+}
+
+#panel6 input#filter {
+}
+
+#panel6 input {
+    width: 200px;
+    font-size: 15px;
+    font-family: "Hkgrotesk";
+    border-style: none;
+    color: #000;
+    padding: 0;
+    border-bottom: 1px solid #868686;
+}
+
+#panel6 input:hover {
+    border-radius: 5px;
 }
 
 /* Large desktops and laptops */

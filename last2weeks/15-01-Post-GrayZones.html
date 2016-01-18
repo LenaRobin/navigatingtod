@@ -216,7 +216,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">
-                            <a id="cite" data-toggle="collapse" data-parent="#accordion" href="#collapse3" title="Quote an excerpt easily" alt="Quote an excerpt easily"><i class="fa fa-quote-left"></i> Quote</a>
+                            <a id="cite" data-toggle="collapse" data-parent="#accordion" href="#collapse3" title="Quote an excerpt easily" alt="Quote an excerpt easily"><i class="fa fa-quote-left"></i> Reference this</a>
                         </h4>
                     </div>
                     <div id="collapse3" class="panel-collapse collapse">
@@ -309,15 +309,15 @@
 </div>
 
 <!-- –––––––––––––––––––––––––– Menu for XS devices (bottom) –––––––––––––––––––––––––––––––––––––-->
-<div id="menu-bar-xs" class="hidden-lg hidden-md col-sm-12 col-xs-12">
+    <div id="menu-bar-xs" class="hidden-lg hidden-md col-sm-6 col-xs-12">
 <!-- panel 1: Download-->
-    <div id="panel">Download this book as:<br>
+    <div id="panel" class="hidden-lg hidden-md col-sm-6 col-xs-12">Download this book as:<br>
         <a href="files/TOD17-GrayZones.pdf" class="extra">.PDF</a> <a href="files/TOD17-GrayZones.epub" class="extra">.Epub</a> <a href="files/TOD17-GrayZones.md" class="extra">.Md</a>                
     </div>
 <!-- panel 2: Quote-->
-    <div id="panel2">Quote<br>
-        Cite your selection with the following conventions:
-        <p title="Modern Language Association" alt="Modern Language Association">MLA</p>
+    <div id="panel2" class="hidden-lg hidden-md col-sm-6 col-xs-12">Reference this<br>
+        Want to cite a paragraph with properly formatted reference?<br>
+        Select your text and its references will appear below:        <p title="Modern Language Association" alt="Modern Language Association">MLA</p>
         <button data-clipboard-target="#mla" class="full-citation" id="mla"></button>
         <p>Chicago Manual of Style</p>
         <button data-clipboard-target="#chicago" class="full-citation" id="chicago"></button>
@@ -325,22 +325,30 @@
         <button data-clipboard-target="#apa" class="full-citation" id="apa"></button>
     </div>
 <!-- panel 3: Print-->
-    <div id="panel3">
+    <div id="panel3" class="hidden-lg hidden-md col-sm-6 col-xs-12">
         Print this book:
         <br>
         <a href="javascript:window.print()" class="extra">Print on your own printer</a>
         <br><a href="http://www.lulu.com/shop/%C5%A1efik-tatli%C4%87-and-gordana-nikoli%C4%87/the-gray-zones-of-creativity-and-capital/paperback/product-22467485.html" class="extra" target="_blank">Print and order on Lulu</a>
     </div>            
 <!-- panel 4: Settings-->
-    <div id="panel4">
-        <button id="button_fontsizeminus" value="smaller" onclick="changeFontSize(this)"><i class="fa fa-font"></i>-</button>
-        <button id="button_fontsizeplus" value="larger" onclick="changeFontSize(this)"><i class="fa fa-font"></i>+</button>
+    <div id="panel4" class="hidden-lg hidden-md col-sm-6 col-xs-12">
+        Font-size
+        <span id="button_fontsizeminus" class="extra-btn" value="smaller" onclick="changeFontSize(this)"><i class="fa fa-font"></i>-</span>
+        <span id="button_fontsizeplus" class="extra-btn" value="larger" onclick="changeFontSize(this)"><i class="fa fa-font"></i>+</span>
+
         <hr>
-        <span class="keyword-show-all">Show all keywords <i class="fa fa-tags"></i></span>
-        <button id="button_changefont"></button>
+        <span id="keyword-show-all" class="extra-btn">Display keywords <i class="fa fa-tags"></i></span>
+
+        <hr>
+        <span id="highlight-show-all" class="extra-btn">Display highlight <i class="fa fa-pencil"></i></span>
+        <span id="highlight-remove" class="extra-btn">Remove highlight <i class="fa fa-eraser"></i></span>
+
+        <hr>
+        <span id="bookmark" class="extra-btn"><i class="fa fa-thumb-tack"></i> Save reading position</span>
     </div>            
 <!-- panel 5: Share-->
-    <div id="panel5">
+    <div id="panel5" class="hidden-lg hidden-md col-sm-6 col-xs-12">
         Share on:
         <br>
         <a href="https://twitter.com/home?status=Take%20a%20look%20at%20this%20publication%20on%20the%20Institute%20of%20Network%20Cultures%20library%20http%3A//www.networkcultures.org/publications/%23tods%20%23INC" class="extra" target="_blank">Twitter</a>
@@ -348,13 +356,46 @@
         <a href="https://plus.google.com/share?url=http%3A//www.networkcultures.org/publications/%23tods" class="extra" target="_blank">Google+</a><br>
                 Send an email
     </div>
+<!-- panel 6: Search-->
+    <div id="panel6" class="hidden-lg hidden-md col-sm-6 col-xs-12">
+        <form id="live-search" class="not" action="" method="post">
+            <span id="filter-count"></span>
+            <input type="search"
+                   class="form-control" 
+                   placeholder="Search" id="filter" value="" onClick="this.select();" />
+        </form>
+
+        <div id="buttons_wrapper" class="not">
+            <button href="#" class="search_nav" id="prev"><i class="fa fa-angle-up"></i>
+            </button>
+            <button href="#" class="search_nav" id="next"><i class="fa fa-angle-down"></i>
+            </button>
+            <div id="search_ui">
+                <button id="cancel"><i class="fa fa-times"></i></button>
+            </div>
+        </div>
+    </div>
+
 
 <!-- buttons -->
-    <div id="flip"  class="hidden-lg hidden-md hidden-ms col-xs-12"><i class="fa fa-download"></i></div>
-    <div id="flip2"  class="hidden-lg hidden-md hidden-ms col-xs-12"><i class="fa fa-quote-left"></i></div>
-    <div id="flip3"  class="hidden-lg hidden-md hidden-ms col-xs-12"><i class="fa fa-print"></i></div>
-    <div id="flip4"  class="hidden-lg hidden-md hidden-ms col-xs-12"><i class="fa fa-wrench"></i></div>
-    <div id="flip5"  class="hidden-lg hidden-md hidden-ms col-xs-12"><i class="fa fa-external-link"></i></div>
+    <div id="flip"  class="hidden-lg hidden-md hidden-ms col-xs-12">
+        <i class="fa fa-download"></i> Download
+    </div>
+    <div id="flip2"  class="hidden-lg hidden-md hidden-ms col-xs-12">
+        <i class="fa fa-quote-left"></i> Reference this
+    </div>
+    <div id="flip3"  class="hidden-lg hidden-md hidden-ms col-xs-12">
+        <i class="fa fa-print"></i> Print
+    </div>
+    <div id="flip4"  class="hidden-lg hidden-md hidden-ms col-xs-12">
+        <i class="fa fa-wrench"></i> Settings
+    </div>
+    <div id="flip5"  class="hidden-lg hidden-md hidden-ms col-xs-12">
+        <i class="fa fa-external-link"></i> Share
+    </div>
+    <div id="flip6" class="hidden-lg hidden-md hidden-ms col-xs-12">
+        <i class="fa fa-external-link"></i> Search
+    </div>
 </div> 
 
 
@@ -1686,6 +1727,7 @@ TRANSFORMED INTO SIDENOTES
             $("#panel3").hide();
             $("#panel4").hide();
             $("#panel5").hide();
+            $("#panel6").hide();
         });
         $("#flip2").click(function(){
             $("#panel2").slideToggle("fast");
@@ -1693,6 +1735,7 @@ TRANSFORMED INTO SIDENOTES
             $("#panel3").hide();
             $("#panel4").hide();
             $("#panel5").hide();
+            $("#panel6").hide();
         });        
         $("#flip3").click(function(){
             $("#panel3").slideToggle("fast");
@@ -1700,13 +1743,15 @@ TRANSFORMED INTO SIDENOTES
             $("#panel2").hide();
             $("#panel4").hide();
             $("#panel5").hide();
+            $("#panel6").hide();
         });        
         $("#flip4").click(function(){
             $("#panel4").slideToggle("fast");
             $("#panel").hide();
             $("#panel2").hide();
             $("#panel3").hide();
-            $("#panel5").hide();
+            $("#panel5").hide();            
+            $("#panel6").hide();
         });        
         $("#flip5").click(function(){
             $("#panel5").slideToggle("fast");
@@ -1714,6 +1759,15 @@ TRANSFORMED INTO SIDENOTES
             $("#panel2").hide();
             $("#panel3").hide();
             $("#panel4").hide();
+            $("#panel6").hide();
+        });        
+        $("#flip6").click(function(){
+            $("#panel6").slideToggle("fast");
+            $("#panel").hide();
+            $("#panel2").hide();
+            $("#panel3").hide();
+            $("#panel4").hide();
+            $("#panel5").hide();
         });
     });
 </script>
