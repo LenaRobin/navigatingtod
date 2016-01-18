@@ -2,7 +2,6 @@ $(document).ready(function(){
     //////////////////////////////////////////////////////////////////////////////////
     ////PUSH MENU ON THE LEFT
     //////////////////////////////////////////////////////////////////////////////////
-    $toggle_menu = $('.toggle_menu');
 
     // $toggle_menu.click(function() {
     //     if ($(window).width() <= "480") {
@@ -34,10 +33,10 @@ $(document).ready(function(){
     //     $('#content, .footer').toggleClass('col-sm-offset-0', 'col-sm-offset-1');
         
     // });
-$toggle_menu.click(function() {
-    // $(this).toggle(function() {
-        // $('.fa-chevron-right').rotate({angle: '+=180'});
 
+////ON CLICKING THE TOGGLE THAT OPENS THE MENU
+    $toggle_menu = $('.toggle_menu');
+    $toggle_menu.click(function() {
         if ($(window).width() <= "480") {
             var menu_width = $('#toc_wrapper').width();
             console.log($('#menu').offset().left);
@@ -59,22 +58,14 @@ $toggle_menu.click(function() {
             $('#content, .footer').toggleClass('col-md-offset-0', 'col-md-offset-1');
             $('#content, .footer').toggleClass('col-sm-offset-0', 'col-sm-offset-1');
         }
-    // });
-});
-
-    $toggle_menu.toggle(function() {
-      $('.fa-chevron-right').rotate({ endDeg:180, persist:true });
-    }, function() {
-      $('.fa-chevron-right').rotate({ endDeg:360 });
     });
 
-
-    //     $("#user_button").css({borderBottomLeftRadius: "0px"});
-    // }, function () {
-    //     $("#user_button").css({borderBottomLeftRadius: "5px"});
-    // });
-
-
+////ROTATE THE MENU-LEFT ARROW
+    $toggle_menu.toggle(function() {
+      $('.fa-chevron-right').rotate({ endDeg:180, persist:true, duration:0.3 });
+    }, function() {
+      $('.fa-chevron-right').rotate({ endDeg:360, duration:0.3 });
+    });
 
 ////ANIMATE SIDENOTES AND STUFF
     $('#content').animate({
@@ -85,9 +76,7 @@ $toggle_menu.click(function() {
         fadeInSidenotes();
     });
 
-    ////ON LOAD OPEN THE TOC IF SMALLER
-    // if ($(window).width() >= "768") {
-    //     $('#menu').animate({left: 0}, 1000);
+////ON LOAD OPEN THE TOC IF SMALLER
     if ($(window).width() <= "480") {
         var menu_width = $('#toc_wrapper').width();
         $('#menu').css({left: -menu_width});
@@ -95,9 +84,9 @@ $toggle_menu.click(function() {
 
 
 
-    //////////////////////////////////////////////////////////////////////////////////
-    ////SCROLL PROGRESSION BARS
-    //////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////
+////SCROLL PROGRESSION BARS
+//////////////////////////////////////////////////////////////////////////////////
     /*	var nr = 1;
 $('.horizScroll').each(function() {
 $(this).attr('id', 'title'+nr);
@@ -148,18 +137,18 @@ $("#menu_bar_scroll").css('height', verticalBar);
         var scrollTop = $(document).scrollTop();					// height of scroll on top (=0)
         var bottom = $(document).height() - windowHeight;			// heigth from top at the end of doc
         var verticalBar = (scrollTop / bottom)*windowHeight;
-        var windowHeight = $(window).height(); // WIDTH OF THE WINDOW SCREEN
+        // var windowHeight = $(window).height(); // WIDTH OF THE WINDOW SCREEN
         var extraHeight1 = $('.horizScroll').outerHeight(true) - $('.horizScroll').height();
         var extraHeight2 = $('.horizScroll').parent().outerHeight(true) - $('.horizScroll').parent().height();
         var extraHeight3 = $('.horizScroll').parent().parent().outerHeight(true) - $('.horizScroll').parent().parent().height();
         var extraHeight4 = $('.horizScroll').parent().parent().parent().outerHeight(true) - $('.horizScroll').parent().parent().parent().height();
         var extraHeight5 = $('.horizScroll').parent().parent().parent().parent().outerHeight(true) - $('.horizScroll').parent().parent().parent().parent().height();
         var extraHeight = extraHeight1+extraHeight2+extraHeight3+extraHeight4+extraHeight5;
-        var titleHeight = (((1/6)*windowHeight)-extraHeight);	//TITLE WIDTH
+        // var titleHeight = (((1/6)*windowHeight)-extraHeight);	//TITLE WIDTH
         // var subtitleHeight = titleHeight*(90/100);				//SUBTITLE WIDTH
         var n = 1;
         var y = 1;
-        $("#menu_bar_scroll").css('width', verticalBar);
+        $("#menu_bar_scroll").css('height', verticalBar);
 
 
 
@@ -177,6 +166,7 @@ $(this).css('width', f);
 
         $('.section').each(function(){
             $('#title'+n).each(function(){
+                var titleHeight = $(this).parent().height();
                 var a = $('#chapter'+n).offset().top;
                 var b = $('#chapter'+n).height();
                 var c = scrollTop - a; // POSITION AT WHICH TO START SCROLL
@@ -184,15 +174,15 @@ $(this).css('width', f);
 
                 $(this).css('height', f);
 
-                ////////////////TITLE COLOUR CHANGES TO BLACK    
-                /*          if ($(this).width() > 0) { 
-$(this).parent().css('color', 'black');
-} else {
-$(this).parent().css('color', '#dbdbdb');
-}
+ ////////////////TITLE COLOUR CHANGES TO BLACK    
+                // if ($(this).width() > 0) { 
+                // $(this).parent().css('color', 'black');
+                // } else {
+                // $(this).parent().css('color', '#dbdbdb');
+                // }
 
-});
-*/
+                // });
+
 
                 if ($(this).height() > 0) { 
                     $(this).parent().css('color', 'black');
@@ -210,11 +200,11 @@ $('#title7').css('width', lastWidth);
 n++;
 });
 */
-
+            var lastTitleHeight = $('#title7').parent().height();
             var lastHeight = $('#chapter7').height()-windowHeight;
             var lastTop = $('#chapter7').offset().top;
             var lastStartScroll = scrollTop - lastTop;
-            var lastHeight = (lastStartScroll/lastHeight)*titleHeight;
+            var lastHeight = (lastStartScroll/lastHeight)*lastTitleHeight;
             $('#title7').css('height', lastHeight);
             n++;
         });
