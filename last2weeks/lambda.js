@@ -535,8 +535,42 @@ $(document).ready(function(){
     });
 
 
+/////////////////////////////////
+////DRAGGING AND DROPPING THE PIN
+/////////////////////////////////
+    var pins = [];
+    var t;
+    var ptop;
+    var pleft;
+    var pObj;
 
-////DRAG AND DROP PIN
+    function checkPin(pinID) {
+        var found = pins.some(function (el) {
+            // update value of field
+            el.value = t;
+            // update position as well
+            el.top = ptop;
+            el.left = pleft;
+          return el.id === pinID;
+        });
+        if (!found) {
+            pins.push(pObj);
+        }
+        console.log(pins);
+    }
+
+    function pinMoved(){
+        pinID = $(this).attr("id");
+        var found = pins.some(function (el) {
+            ptop = $('#'+pinID).offset().top;
+            pleft = $('#'+pinID).offset().left;
+            el.top = ptop;
+            el.left = pleft;
+          return el.id === pinID;
+        });
+        console.log(pins);
+    }
+
     $('#pin').draggable({
         containment: '#main',
         snapTolerance: 60,
@@ -547,24 +581,60 @@ $(document).ready(function(){
         stop: getPinPosition
     });
 
+
+    $('#content').on('mouseenter', '.pin-clone', function() {
+        console.log('gvjhbk');
+        $(this).find('.pin-form').fadeIn();
+    });
+
+    $('#content').on('mouseleave', '.pin-clone', function() {
+        console.log('gvjhbk');
+        $(this).find('.pin-form').fadeOut();
+    });
+
     var pin_count = 1;
     function getPinPosition(e, ui) {
-        // var counter = 1;
         var pinXPos = ui.offset.left;
         var pinYPos = ui.offset.top;
-        var new_pinXPos = ui.helper.offset.left;
-        var new_pinYPos = ui.helper.offset.top;
+        var newPin =  $(ui.helper).clone(true);
         // GET DATA-LABEÖ FROM THE USER, ASSIGN DEFAULT ID TO IT
-        $(ui.helper).clone(true).appendTo('#content').offset({top: pinYPos, left: pinXPos}).attr('id', 'dragged-pin'+pin_count).draggable({
+        newPin.appendTo('#content').offset({top: pinYPos, left: pinXPos}).attr('id', 'dragged-pin'+pin_count).addClass('pin-clone').draggable({
             containment: '#main',
             cursor: 'move',
             snapTolerance: 60,
             snap: '#content',
-            snapMode: "outer"
+            snapMode: "outer",
+            stop: pinMoved
         });
+
+        newPin.find('.pin-form').css('display', 'inline-block');
+        newPin.find('.pin-input').focus();
+
+        newPin.submit(function(e){
+            t = newPin.find('.pin-input').val();
+            var pid = newPin.attr("id");
+            var pidnr = pid.substr(11);
+            console.log(pidnr);
+            ptop = newPin.offset().top;
+            pleft = newPin.offset().left;
+            pObj = {value : t, top: ptop, left: pleft , id: pid};
+
+            checkPin(pid);
+            
+             // $(this).find('.pin-input').blur();
+             $(this).find('.pin-form').hide();
+            e.preventDefault();
+        });
+        
+
+
+        //console.log("obj " +pins[0]);
+
         pin_count++;
         console.log("Drag stopped!\n\nOffset: (" + pinXPos + ", " + pinYPos + ")\n");
     }
+
+// console.log(pins);
 
     // if ($.cookie('scroll') !== null) {
     //     $(document).scrollTop($.cookie('scroll'));

@@ -962,16 +962,6 @@ fieldset {
 input#filter {
 }
 
-input {
-	width: 200px;
-	font-size: 15px;
-	font-family: "Hkgrotesk";
-	border-style: none;
-	color: #000;
-	padding: 0;
-    border-bottom: 1px solid #868686;
-}
-
 input:hover {
 	border-radius: 5px;
 }
@@ -1183,12 +1173,35 @@ input:hover {
         cursor: move;
     }
 
-    .ui-draggable-dragging {
-        color: green;
+    /*.pin-clone {
+        color: blue;
+    }*/
+
+    .ui-draggable-handle {
+        color: red;
         cursor: move;
         /*z-index: 999999999999999999999999;*/
     }
 
+    .pin-form {
+        display: none;
+
+    }
+
+    .pin-input {
+        display: inline;
+        width: auto;
+        font-size: 15px;
+        font-family: "Hkgrotesk";
+        border-style: none;
+        color: #000;
+        padding: 0;
+        border-bottom: 1px solid #868686;
+    }
+
+    .save-pin {
+        display: inline;
+    }
 
     #tools {
 	top: 2%;
