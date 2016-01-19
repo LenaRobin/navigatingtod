@@ -32,9 +32,9 @@ $(document).ready(function(){
 
 ////ROTATE THE MENU-LEFT ARROW
     $toggle_menu.toggle(function() {
-      $('.fa-chevron-right').rotate({ endDeg:180, persist:true, duration:0.3 });
+      $('.fa-chevron-left').rotate({ endDeg:180, persist:true, duration:0.3 });
     }, function() {
-      $('.fa-chevron-right').rotate({ endDeg:360, duration:0.3 });
+      $('.fa-chevron-left').rotate({ endDeg:360, duration:0.3 });
     });
 
 ////ANIMATE SIDENOTES AND STUFF
@@ -544,9 +544,6 @@ $(document).ready(function(){
         snap: '#content',
         snapMode: "outer",
         helper: 'clone',
-        // start: function(event, ui) {
-        //     $(this).clone().appendTo('#main');
-        // },
         stop: getPinPosition
     });
 
@@ -564,10 +561,8 @@ $(document).ready(function(){
             snapTolerance: 60,
             snap: '#content',
             snapMode: "outer"
-            // stop: $(this).offset({top: new_pinYPos, left: new_pinXPos})
         });
         pin_count++;
-        // $('.pin.ui-draggable-dragging').css({left: pinXPos});
         console.log("Drag stopped!\n\nOffset: (" + pinXPos + ", " + pinYPos + ")\n");
     }
 
