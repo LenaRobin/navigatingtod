@@ -3,36 +3,6 @@ $(document).ready(function(){
     ////PUSH MENU ON THE LEFT
     //////////////////////////////////////////////////////////////////////////////////
 
-    // $toggle_menu.click(function() {
-    //     if ($(window).width() <= "480") {
-    //         var menu_width = $('#menu').width();
-    //         $('#menu').animate({left: 0}, 1000);
-    //         // $('#menu').toggleClass('col-xs-0', 'col-xs-12');
-    //         // if ()
-    //         // if ($('#menu').offset().left < 0) {
-    //         //     $('#menu').animate({left: 0});
-    //         // } else {
-    //         //     $('#menu').animate({left: '-16.66666667%'});
-    //         // }
-    //     } else {
-    //         var menu_width = $('#menu').width();
-    //         $('#menu').animate({left: -menu_width}, 1000);
-    //         $('#menu').toggle({left: -menu_width}, 1000);
-
-
-
-    //         $('#user_button').toggle(function () {
-    //             $("#user_button").css({borderBottomLeftRadius: "0px"});
-    //         }, function () {
-    //             $("#user_button").css({borderBottomLeftRadius: "5px"});
-    //         });
-    //     }
-    //     $('#menu_bar').fadeToggle(1000);
-    //     $('#content, .footer').toggleClass('col-lg-offset-0', 'col-lg-offset-1');
-    //     $('#content, .footer').toggleClass('col-md-offset-0', 'col-md-offset-1');
-    //     $('#content, .footer').toggleClass('col-sm-offset-0', 'col-sm-offset-1');
-        
-    // });
 
 ////ON CLICKING THE TOGGLE THAT OPENS THE MENU
     $toggle_menu = $('.toggle_menu');
@@ -87,19 +57,6 @@ $(document).ready(function(){
 //////////////////////////////////////////////////////////////////////////////////
 ////SCROLL PROGRESSION BARS
 //////////////////////////////////////////////////////////////////////////////////
-    /*	var nr = 1;
-$('.horizScroll').each(function() {
-$(this).attr('id', 'title'+nr);
-nr++;
-});
-
-var x = 1;
-$('.subScroll').each(function() {
-$(this).attr('id', 'subtitle'+x);
-x++;
-});
-*/
-
     var nr = 1;
     $('.horizScroll').each(function() {
         $(this).attr('id', 'title'+nr);
@@ -112,26 +69,6 @@ x++;
         x++;
     });
 
-
-    ////VERTICAL SCROLL BAR 
-    /*	$(window).scroll(function() {
-var windowHeight = $(window).height();
-var scrollTop = $(document).scrollTop();					// height of scroll on top (=0)
-var bottom = $(document).height() - windowHeight;			// heigth from top at the end of doc
-var verticalBar = (scrollTop / bottom)*windowHeight;
-var windowWidth = $(window).width(); // WIDTH OF THE WINDOW SCREEN
-var extraWidth1 = $('.horizScroll').outerWidth(true) - $('.horizScroll').width();
-var extraWidth2 = $('.horizScroll').parent().outerWidth(true) - $('.horizScroll').parent().width();
-var extraWidth3 = $('.horizScroll').parent().parent().outerWidth(true) - $('.horizScroll').parent().parent().width();
-var extraWidth4 = $('.horizScroll').parent().parent().parent().outerWidth(true) - $('.horizScroll').parent().parent().parent().width();
-var extraWidth5 = $('.horizScroll').parent().parent().parent().parent().outerWidth(true) - $('.horizScroll').parent().parent().parent().parent().width();
-var extraWidth = extraWidth1+extraWidth2+extraWidth3+extraWidth4+extraWidth5;
-var titleWidth = (((1/6)*windowWidth)-extraWidth);	//TITLE WIDTH
-// var subtitleWidth = titleWidth*(90/100);				//SUBTITLE WIDTH
-var n = 1;
-var y = 1;
-$("#menu_bar_scroll").css('height', verticalBar);
-*/
     $(window).scroll(function() {
         var windowHeight = $(window).height();
         var scrollTop = $(document).scrollTop();					// height of scroll on top (=0)
@@ -149,20 +86,7 @@ $("#menu_bar_scroll").css('height', verticalBar);
         var n = 1;
         var y = 1;
         $("#menu_bar_scroll").css('height', verticalBar);
-
-
-
-        ////////CREATES THE HORIZONTAL PROGRESSION
-        ////////SCROLL BARS IN THE MENU (CHAPTERS LEVEL 1)
-        /*	$('.section').each(function(){
-$('#title'+n).each(function(){
-var a = $('#chapter'+n).offset().top;
-var b = $('#chapter'+n).height();
-var c = scrollTop - a; // POSITION AT WHICH TO START SCROLL
-var f = (c / b) * titleWidth; // SUBSTITUTE OR CALCULATE E ABOVE FOR ANY DESIRED WIDTH OF THE SCROLL BAR
-
-$(this).css('width', f);
-*/    
+ 
 
         $('.section').each(function(){
             $('#title'+n).each(function(){
@@ -174,16 +98,6 @@ $(this).css('width', f);
 
                 $(this).css('height', f);
 
- ////////////////TITLE COLOUR CHANGES TO BLACK    
-                // if ($(this).width() > 0) { 
-                // $(this).parent().css('color', 'black');
-                // } else {
-                // $(this).parent().css('color', '#dbdbdb');
-                // }
-
-                // });
-
-
                 if ($(this).height() > 0) { 
                     $(this).parent().css('color', 'black');
                 } else {
@@ -191,15 +105,6 @@ $(this).css('width', f);
                 }
             });
 
-            ////////////LAST TITLE SCROLLBAR (WAS MISSING THE LAST BIT, WHICH EQUALED TO THE HEIGHT OF THE WINDOW)
-            /*			var lastHeight = $('#chapter7').height()-windowHeight;
-var lastTop = $('#chapter7').offset().top;
-var lastStartScroll = scrollTop - lastTop;
-var lastWidth = (lastStartScroll/lastHeight)*titleWidth;
-$('#title7').css('width', lastWidth);
-n++;
-});
-*/
             var lastTitleHeight = $('#title7').parent().height();
             var lastHeight = $('#chapter7').height()-windowHeight;
             var lastTop = $('#chapter7').offset().top;
@@ -209,44 +114,17 @@ n++;
             n++;
         });
 
-
-        ////////SAME FOR SUBCHAPTERS
-        /*		$('.subchapter').each(function(){
-$('#subtitle'+y).each(function(){
-var subchapterTop = $('#subchapter'+y).offset().top;
-var subchapterBottom = $('#subchapter'+y).height();
-var subScrollTop = scrollTop - subchapterTop;
-var subScrollBar = (subScrollTop / subchapterBottom) * subtitleWidth;
-$(this).css('width', subScrollBar);
-y++;
-});
-});
-*/        
-
-        $('.subchapter').each(function(){
-            $('#subtitle'+y).each(function(){
-                var subchapterTop = $('#subchapter'+y).offset().top;
-                var subchapterBottom = $('#subchapter'+y).height();
-                var subScrollTop = scrollTop - subchapterTop;
-                var subScrollBar = (subScrollTop / subchapterBottom) * subtitleHeight;
-                $(this).css('height', subScrollBar);
-                y++;
-            });
-        });           
-    
-    
-    
-    
-        ////////HIDE REFERENCE POP-UP BOXES ON SCROLL
-        // $('.tip').css('display','none');
-
-        ////////HIDE ARROWS AT TOP AND BOTTOM
-        // var last_section = $('.section:last').offset().top;
-        // if (scrollTop >= last_section) {
-        // 	$('#down').hide();
-        // } else {
-        // 	$('#down').show();
-        // }
+////////KEEP THIS IN CASE WE HAVE OR WANT SUBTITLES
+        // $('.subchapter').each(function(){
+        //     $('#subtitle'+y).each(function(){
+        //         var subchapterTop = $('#subchapter'+y).offset().top;
+        //         var subchapterBottom = $('#subchapter'+y).height();
+        //         var subScrollTop = scrollTop - subchapterTop;
+        //         var subScrollBar = (subScrollTop / subchapterBottom) * subtitleHeight;
+        //         $(this).css('height', subScrollBar);
+        //         y++;
+        //     });
+        // });           
 
         var first_section = $('.section:first').offset().top;
         if (scrollTop <= first_section) {
@@ -364,7 +242,6 @@ y++;
         ////////GENERATE IDs FOR ALL HIGHLIGHTED HITS
         $('.highlight').each(function(number) {
             maxCount = number;
-            // $("#filter-count").show().text(maxCount + " results");
             $(this).attr('id', 'hit'+number);
         });
     }	
@@ -459,11 +336,8 @@ y++;
     $(".in-text").each(function(){
         var n = $(this).data("dref");
         var t = $("#ref"+n).text();
-        // $(this).data("ref": t, 
         $(this).attr({"data-toggle": "popover", "data-trigger": "focus", "data-content": t, "data-placement": "top", "href": "#0"}).addClass("button");
-        // console.log(t);
     });
-    // $('[data-toggle="popover"]').popover();
 
 ////////////////
 ////CITATION BOX
@@ -500,53 +374,14 @@ y++;
                 for (var i = 0; i < selection.commonAncestorContainer.children.length; i++ ) {
                   if (selection.commonAncestorContainer.children[i].classList[1] == 'underline') {
                     $('#erase').show();
-                    // var selClass = selection.commonAncestorContainer.children[i].classList[0];
-                    // var selNr = selClass.substr(4, 20);
-                    // console.log(selNr);
-                    // $('#erase').click(function() {
-                    //     console.log('inside'),
-                    //     $('.sel_'+selNr).contents().unwrap();
-                    //     console.log('at end');
-                    // });
                   }
                 }
             } else if (selection.commonAncestorContainer.parentElement.classList[1] == 'underline') {
                 $('#erase').show();
-                // var selClass = selection.commonAncestorContainer.parentElement[i].classList[0];
-                // var selNr = selClass.substr(4, 20);
-                // console.log(selNr);
-                // $('#erase').click(function() {
-                //     console.log('inside'),
-                //     $('.sel_'+selNr).contents().unwrap();
-                //     console.log('at end');
-                // });
-
-                // console.log('commonAncestorContainer parent');
-                // selection.commonAncestorContainer.children[i].contents().unwrap();
             } else if (selection.startContainer.parentElement.classList[1] == 'underline') {
                 $('#erase').show();
-                // var selClass = selection.startContainer.parentElement[i].classList[0];
-                // var selNr = selClass.substr(4, 20);
-                // console.log(selNr);
-                // $('#erase').click(function() {
-                //     console.log('inside'),
-                //     $('.sel_'+selNr).contents().unwrap();
-                //     console.log('at end');
-                // });
-
-
-                // console.log('startContainer');
-                // selection.commonAncestorContainer.children[i].contents().unwrap();
             } else if (selection.endContainer.parentElement.classList[1] == 'underline') {
                 $('#erase').show();
-                // var selClass = selection.commonAncestorContainer.parentElement[i].classList[0];
-                // var selNr = selClass.substr(4, 20);
-                // console.log(selNr);
-                // $('#erase').click(function() {
-                //     console.log('inside'),
-                //     $('.sel_'+selNr).contents().unwrap();
-                //     console.log('at end');
-                // });
             } else {
                 $('#erase').hide();
                 console.log('parent-hide');
@@ -636,35 +471,6 @@ y++;
         }).addClass('remove_highlight');
     });
 
-
-////REMOVE HIGHLIGHT BOX ON HOVER
-    // $('#content').on('mouseenter mouseleave', '.underline', function(e) {
-    //     var scrollTop = $(window).scrollTop();
-    //     var clickTop = e.pageY-scrollTop;
-    //     var left = e.pageX;
-    //     var delete_underline_height = $('.delete-underline').outerHeight();
-    //     var this_underline = e.target;
-    //     if (clickTop >= delete_underline_height) {
-    //         clickTop -=delete_underline_height;
-    //     }
-    //     $('.delete-underline').fadeIn().css({top: clickTop, left: left });
-    //     $('.delete-underline').click(function() {
-    //         var nephew1 = $(this_underline).next().eq(0);
-    //         var nephew2 = $(this_underline).prev().eq(0);
-    //         console.log('nephew1 :'+nephew1);
-    //         console.log('nephew2 :'+nephew2);
-    //         $(this_underline).contents().unwrap();
-    //         $(this_underline).next('.underline').contents().unwrap();
-    //         $(this_underline).prev('.underline').contents().unwrap();
-    //         if (nephew1.hasClass('.underline')) {
-    //             nephew1.contents().unwrap();
-    //         } else if (nephew2.hasClass('.underline')) {
-    //             nephew2.contents().unwrap();
-    //         }
-    //         $('.delete-underline').fadeOut('1000');
-    //     });
-    // });
-
 ////APPEND SPANS TO THE COLUMN
     $('.section p').each(function() {
         $('#par_numbr').append('<div class="p_number"></div>');
@@ -691,7 +497,6 @@ y++;
     });
 
     $('#get-reference').click(function() {
-        // $("#collapse3").slideDown();
         $("#collapse3").addClass('in').attr('aria-expanded', 'true').animate({height: '100%'}, 1000);
         $('.panel-collapse').not("#collapse3").removeClass('in').attr('aria-expanded', 'false').animate({height: 0}, 1000);;
         $('#cite').removeClass('collapsed').attr('aria-expanded', 'true');
@@ -731,21 +536,38 @@ y++;
 
 
 
-////COOKIES?
+////DRAG AND DROP PIN
     $('#pin').draggable({
-        // containment: '#content',
+        containment: '#main',
+        snapTolerance: 60,
         cursor: 'move',
         snap: '#content',
-        // helper: 'clone',
+        snapMode: "outer",
+        helper: 'clone',
+        // start: function(event, ui) {
+        //     $(this).clone().appendTo('#main');
+        // },
         stop: getPinPosition
-
     });
 
+    var pin_count = 1;
     function getPinPosition(e, ui) {
+        // var counter = 1;
         var pinXPos = ui.offset.left;
         var pinYPos = ui.offset.top;
-        $('#pin').css({top: pinYPos});
-        $('#pin').css({left: pinXPos});
+        var new_pinXPos = ui.helper.offset.left;
+        var new_pinYPos = ui.helper.offset.top;
+        // GET DATA-LABEÖ FROM THE USER, ASSIGN DEFAULT ID TO IT
+        $(ui.helper).clone(true).appendTo('#content').offset({top: pinYPos, left: pinXPos}).attr('id', 'dragged-pin'+pin_count).draggable({
+            containment: '#main',
+            cursor: 'move',
+            snapTolerance: 60,
+            snap: '#content',
+            snapMode: "outer"
+            // stop: $(this).offset({top: new_pinYPos, left: new_pinXPos})
+        });
+        pin_count++;
+        // $('.pin.ui-draggable-dragging').css({left: pinXPos});
         console.log("Drag stopped!\n\nOffset: (" + pinXPos + ", " + pinYPos + ")\n");
     }
 
@@ -764,25 +586,9 @@ y++;
     //     $.removeCookie('scroll');
     // });
 
-    ////////////////////////////////
-    ////CLICKING COPIES THE CITATION
-    ////TO THE CLIPBOARD////////////
-    ////////////////////////////////
-    // var clipboard = new Clipboard('.full-citation');
-
-    // ////DISPLAY CONFIRMATION AT COPY
-    // $('.full-citation').click(function() {
-    //     $(this).prev().append('<span class="confirmation">Copied!</span>');
-    //     $('.confirmation').fadeOut(3000);
-    // });
-
-    // clipboard.on('error', function(e) {
-    //     $('.full-citation').prev().append('<div class="confirmation"><br/>Error!</div>');
-    // });
-
-    //////////////////////
-    ////SHOW/HIDE KEYWORDS
-    //////////////////////
+//////////////////////
+////SHOW/HIDE KEYWORDS
+//////////////////////
     var keywords = ['capitalism', 'capital', 'creativity', 'art', 'contemporary', 'culture', 'ideological', 'social', 'labor', 'attention', 'image', 'production', 'capitalism', 'art', 'state', 'life', 'public', 'city', 'economics', 'production', 'development', 'art', 'social', 'avant-garde', 'world', 'big', 'Other', 'art', 'urban', 'cultural', 'project', 'creativity', 'Belgrade', 'Rog', 'capital', 'creative', 'collective', 'urban', 'factory', 'gentrification', 'art', 'political', 'social', 'culture', 'autonomy', 'public', 'work'];
 
     $('.btn-default').each(function(m){
@@ -913,10 +719,7 @@ y++;
                 // console.log('n: '+n);
                 var t = $("#fn"+n).text();
                 $(this).parent().attr({"data-toggle": "popover", "data-trigger": "focus", "data-content": t, "data-placement": "top", "href": "#0"}).addClass("button");
-                // console.log('t: '+t);
             });
-
-            // $('[data-toggle="popover"]').popover();
         } else {
             $('.footnoteRef').popover('destroy');
         }
@@ -940,7 +743,6 @@ y++;
             $('#fn'+count).each(function() {
 
                 var sideTop = $(this).offset().top;
-                // var sideTop = tops[count-1];
                 var sideBottom = sideTop+$(this).height();
                 var newHeight = (sideBottom+5);
                 var sideNext = $('#fn'+(count+1));
@@ -957,7 +759,7 @@ y++;
     sideToBox();
 
 
-    /*///////////////////////
+/*///////////////////////
 ON RESIZE DO THESE THINGS
 ///////////////////////*/
     $(window).resize(function() {
@@ -999,16 +801,6 @@ ON RESIZE DO THESE THINGS
     ////TOOLTIP AND POPOVER
     $('[data-toggle="tooltip"]').tooltip(); 
     $('[data-toggle="popover"]').popover(); 
-
-    // $('.horizScroll').each(function(){
-    // //     console.log($(this).css('width'));
-    // //     if ($(this).width() == 0) { 
-    // //         $(this).parent().css('color', 'red');
-    // //     }    
-    // // });
-
-
-
 
 
 }); // <-- document ready

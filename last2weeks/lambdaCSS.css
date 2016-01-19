@@ -1182,11 +1182,13 @@ input:hover {
     #pin {
         color: red;
         position: absolute;
+        cursor: move;
     }
 
-    #pin.ui-draggable-dragging {
+    .ui-draggable-dragging {
         color: green;
-        z-index: 999999999999999999999999;
+        cursor: move;
+        /*z-index: 999999999999999999999999;*/
     }
 
 
