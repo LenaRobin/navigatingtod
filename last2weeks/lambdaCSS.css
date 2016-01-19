@@ -507,11 +507,9 @@ a.page-scroll:hover, a.page-scroll:active, a.page-scroll:link, a.page-scroll:vis
     background: -o-linear-gradient(#f30, rgb(255, 213, 203)); For Opera 11.1 to 12.0
     background: -moz-linear-gradient(#f30, rgb(255, 213, 203)); For Firefox 3.6 to 15
     background: linear-gradient(#f30, rgb(255, 213, 203)); Standard syntax  */
-    background-color:rgb(255, 51, 0);
 }
 
 #menu:hover{
-    background-color:#f30;
 }
 
 
@@ -520,12 +518,8 @@ a.page-scroll:hover, a.page-scroll:active, a.page-scroll:link, a.page-scroll:vis
     padding: 0px;
     margin-right: 20px;
     overflow-y:auto;
-
-    background: -webkit-linear-gradient(#f30, rgb(255, 213, 203)); For Safari 5.1 to 6.0
-    background: -o-linear-gradient(#f30, rgb(255, 213, 203)); For Opera 11.1 to 12.0
-    background: -moz-linear-gradient(#f30, rgb(255, 213, 203)); For Firefox 3.6 to 15
-    background: linear-gradient(#f30, rgb(255, 213, 203)); Standard syntax 
     left: 0;
+    background-color:white;
 }
 
 
@@ -534,7 +528,7 @@ a.page-scroll:hover, a.page-scroll:active, a.page-scroll:link, a.page-scroll:vis
     padding-top: 10px;
     padding-bottom: 10px;
     font-size: 18px;
-    color: white;
+    color:#8e8e8e;
     vertical-align: middle;
     top:45%;
     z-index: 99999999999999999999999999999999;
@@ -544,7 +538,11 @@ a.page-scroll:hover, a.page-scroll:active, a.page-scroll:link, a.page-scroll:vis
 }
 
 .toggle_menu a{
-    color:white;
+    color:#8e8e8e;
+}
+
+.toggle_menu a:hover{
+    color:#000;
 }
 
 
