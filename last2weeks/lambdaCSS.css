@@ -59,24 +59,27 @@ Easy changes :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-
 /* Background-color of text on selection */
 ::-moz-selection {
       color: #000;
-    background-color:rgba(255, 51, 0, 0.19);
-    background-color:rgba(255, 255, 69, 0.28);
+    background-color:#ffdbd2;
+
 }
 
 ::selection {
       color: #000;
-    background-color:rgba(255, 51, 0, 0.19);
-    background-color:rgba(255, 255, 69, 0.28);
+    background-color:#ffdbd2;
+
+    
 }
 
 a, a:visited{
-    color:#ff3300;
+    color:black;
+    font-family: "HKGroteskbold";
+    text-decoration: none;
 }
 
 a:hover, a:active,  a:focus  {
     color:#ff3300;
+    font-family: "HKGroteskbold";
     text-decoration: none;
-    border-color: inherit;
 }
 
 
@@ -96,19 +99,29 @@ hr{
     /*height: auto; */
     overflow: hidden;
     padding-bottom: 40px;
-    border-bottom: 1px #f4f4f4 solid;
+    border-bottom: 1px #d8d8d8 solid;
+    
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f4f4f4+0,f4f4f4+30,ffffff+100 */
+    background: rgb(244,244,244); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(244,244,244,1) 0%, rgba(244,244,244,1) 30%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(244,244,244,1) 0%,rgba(244,244,244,1) 30%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(244,244,244,1) 0%,rgba(244,244,244,1) 30%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f4f4', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+
+    
     z-index: 44444444444;
     position: relative;
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f4f4f4+0,f7f7f7+29,ffffff+100 */
-    background: rgb(244,244,244); /* Old browsers */
-    background: -moz-linear-gradient(top,  rgba(244,244,244,1) 0%, rgba(247,247,247,1) 29%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top,  rgba(244,244,244,1) 0%,rgba(247,247,247,1) 29%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom,  rgba(244,244,244,1) 0%,rgba(247,247,247,1) 29%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f4f4', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+    background-color:white;
     text-rendering: optimizeSpeed;
+    color: black;
+    
+
+    padding-left: 15px;
 
 }
 
+
+    
 #info-box img{
     width: 80%;
     text-align: center;
@@ -122,6 +135,7 @@ hr{
     margin-bottom: 20px;
     list-style: none;
     background-color: white;
+    margin-left: -15px;
 }
 
 .info {
@@ -130,11 +144,19 @@ hr{
 
 /* How is written the book's title */
 #book-title {
-    font-size: 45px;
-    margin-top: 40px;
+    font-size: 4em;
+    margin-top: 10px;
     line-height: 1em;
     padding: 0px;
-    /* color: #f30; */
+}
+
+@media (max-width: 480px){
+    #book-title {
+        font-size: 3em;
+        margin-top: 10px;
+        line-height: 1em;
+        padding: 0px;
+    }
 }
 
 #info-box .keyword{
@@ -159,52 +181,47 @@ hr{
 }
 
 #info-box a{
-    color:black;
+    font-family: "HKGrotesk";
+    background-color: #dbdbdb;
+    border-radius:5px;
+    padding: 5px;
+    padding-top:2px;
+    padding-bottom: 2px;
+    margin-right:4px;
+    cursor: pointer;
+    white-space: nowrap;
+    word-break: keep-all;
+    line-height: 2em;
 }
 
 #info-box a:hover{
-    color: #f30;
+    font-family: "HKGrotesk";
+    background-color: #dbdbdb;
+    color: black;
+    border-radius:5px;
+    padding: 5px;
+    padding-top:2px;
+    padding-bottom: 2px;
+    margin-right:4px;
+    cursor: pointer;
+    white-space: nowrap;
+    word-break: keep-all;
+    line-height: 2em;
 }
 
-/***********************************
-     3-2. TABLE OF INFORMATIONS
-************************************
-"Table of informations" is the table in which all of the very practical informations about the book are written */
-
-/* Table: left column of the table */
-#summary .summary,#summary .author,#summary .editor,#summary .date,#summary .series,#summary .subjects {
-	color: #000;
-	font-size: 14px;
-	text-decoration: none;
-	vertical-align: top;
-	text-transform: none;
-	width: 80px;
+#info-box .info-box-column-header{
+    font-family: "HKGroteskbold";
+    width:auto;
+    font-size: 20px;
+    text-align: left;
+    margin-bottom: -15px;
+    margin-top: 10px;
 }
 
-/* Table: right column of the table: how the author's name is written */
-.author_tofill {
-	font-size: 24px;
-	line-height: 1.2em;
-}
 
-/* Table: right column of the table: how the editor's name is written */
-.editor_tofill {
-	font-size: 14px;
-	line-height: 1.2em;
-
-}
-
-/* Table: right column of the table: how the date is written */
-.date_tofill {
-	font-size: 14px;
-	line-height: 1.2em;
-
-}
-
-.series_tofill{
-    font-size: 14px;
-	line-height: 1.2em;
-
+#info-box .summary{
+    font-size: 20px;
+    
 }
 
 /***************************************
@@ -215,14 +232,8 @@ Defines the typography for texts in reader */
 .section{
     font-size: 62.5%;
     clear: left;
-    /*text-align: justify;
-    text-justify: inter-word;*/
-    /*padding-left: 2%; */
-    /*padding-right:6%;*/
-    /* 
-    width: 78%;
-     */
     color: black;
+    
 }
 /* Title of big part */
 .section h2 {
@@ -231,7 +242,7 @@ Defines the typography for texts in reader */
     padding-bottom: 20px;
 	padding-right: 0;
 	padding-top: 7%;
-	font-size: 4.5em;
+	font-size: 5em;
 	line-height: 1.1em;
     -webkit-margin-before: 0em;
     -webkit-margin-after: 5px;
@@ -259,6 +270,7 @@ Defines the typography for texts in reader */
 /* Title of sub-part (subtitle) */
 .section h3 {
 	font-size: 2.7em;
+    line-height: 1.4em;
     -webkit-margin-before: 30px;
     -webkit-margin-after: 15px;
     -webkit-margin-start: 0px;
@@ -273,12 +285,62 @@ Defines the typography for texts in reader */
 
 /* Font-size for the reading text: !! do not change the units (em) to pixels !! */
 .section p {
-    font-size: 2em;
-    line-height: 1.75em;
+    font-size: 2.1em;
+    line-height: 1.55em;
     text-rendering: optimizeLegibility;
-
+    max-width: 580px;
+    margin-bottom: 0px;
 }
 
+p + p{ 
+    text-indent: 2.5em;
+}
+
+
+@media (max-width: 480px){
+    .section p{
+        font-size: 1.9em;
+        line-height: 1.55em;
+        text-rendering: optimizeLegibility;
+    }
+    
+    .section h2{
+        margin-left: 0;
+        margin-bottom: 0px;
+        padding-bottom: 20px;
+        padding-right: 0;
+        padding-top: 7%;
+        font-size: 3.5em;
+        line-height: 1.1em;
+        -webkit-margin-before: 0em;
+        -webkit-margin-after: 5px;
+        -webkit-margin-start: 0px;
+        -webkit-margin-end: 0px;
+        overflow-y: hidden;
+        vertical-align: middle;
+        letter-spacing: 1%;
+        border-top: 1px solid #dbdbdb;
+        color: black;
+        margin-top: 16%;
+    }
+    
+    li{
+        text-indent: 0px;
+        margin: 0px;
+        padding: 0px;
+        margin-left: 10px;
+        text-indent: 1.5em;
+
+    }
+    ol {
+        list-style-type: disc;
+        margin: 0px;
+        padding: 20px 0px 20px 0px;
+    }
+}
+    
+    
+    
 /* author: the way the name of the author for each chapter displays */
 .section .author {
 	margin-left: 0;
@@ -317,11 +379,32 @@ Defines the typography for texts in reader */
     -webkit-column-break-inside: avoid; /* Chrome, Safari */
     page-break-inside: avoid;           /* Theoretically FF 20+ */
     break-inside: avoid-column;         /* IE 11 */
+    text-indent: 0px;
+    margin-bottom: 1em;
+    text-indent:-1em;
+    padding-left: 1em;
+    
+}
+
+@media (max-width: 480px){
+    .references {
+        font-size: 1em;
+        text-indent: 0px;
+        margin-bottom: 40px;
+        margin-top:40px;
+        -webkit-column-gap: 20px;
+        -moz-column-gap: 20px;
+        column-gap: 20px;
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+    }
 }
 
 .references a{
     color:black;
-    text-decoration: underline;
+    word-break: break-all;
+    font-family: "HKGroteskbold";
 }
 
 .references a:hover{
@@ -335,6 +418,7 @@ Defines the typography for texts in reader */
     padding: 0px;
     -webkit-margin-before:0px;
     padding-bottom: 10px;
+    font-family: "HKGroteskbold";
 }
 /****************************
      4-3. IMAGES IN TEXT
@@ -343,15 +427,30 @@ Style of each images appearing in the reader, in .text */
 
 /* img: style for each image that appears in the text */
 img {
-	width: 90%;
+	width: 100%;
 	text-align: center;
-	margin-top: 40px;
-	margin-left: 20px;
-	margin-bottom: 40px;
-/*     -moz-box-shadow: 0px 0px 20px 10px #dbdbdb;
-    -webkit-box-shadow: 0px 0px 20px 10px #dbdbdb;
-    -o-box-shadow: 0px 0px 20px 10px #dbdbdb;
-    box-shadow: 0px 0px 20px 10px #dbdbdb; */
+	margin-top: 30px;
+	margin-left: 0px;
+	margin-bottom: 20px;
+}
+/* 
+img.grayscale {
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); Firefox 3.5+, IE10
+    filter: gray; IE6-9
+    -webkit-filter: grayscale(100%); Chrome 19+ & Safari 6+
+    -webkit-transition: all .1s ease; Fade to color for Chrome and Safari
+    -webkit-backface-visibility: hidden; Fix for transition flickering
+}
+
+img.grayscale:hover {
+    filter: none;
+    -webkit-filter: grayscale(0%);
+} */
+
+.section .img-caption{
+    font-size: 14px;
+    margin-bottom: 30px;
+    text-indent: 0px;
 }
 
 
@@ -360,18 +459,27 @@ img {
 /* Font-faces used in styles */
 @font-face {
 	font-family: Hkgrotesk;
-	src: url(css/fonts/HKGrotesk-Regular.otf);
+    src: url('css/fonts/hkgrotesk-regular-webfont.eot'); /* IE9 Compat Modes */
+    src: url('css/fonts/hkgrotesk-regular-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('css/fonts/hkgrotesk-regular-webfont.woff2') format('woff2'), /* Super Modern Browsers */
+        url('css/fonts/hkgrotesk-regular-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+        url('css/fonts/hkgrotesk-regular-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+        url('css/fonts/hkgrotesk-regular-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
 @font-face {
 	font-family: HkgroteskBold;
-	src: url(css/fonts/HKGrotesk-Bold.otf);
+    src: url('css/fonts/hkgrotesk-bold-webfont.eot'); /* IE9 Compat Modes */
+    src: url('css/fonts/hkgrotesk-bold-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('css/fonts/hkgrotesk-bold-webfont.woff2') format('woff2'), /* Super Modern Browsers */
+        url('css/fonts/hkgrotesk-bold-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+        url('css/fonts/hkgrotesk-bold-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+        url('css/fonts/hkgrotesk-bold-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
-@font-face {
-    font-family: KreonLight;
-    src: url(css/fonts/Kreon-Light.ttf);
-}
+
 body{
     font-family: "Hkgrotesk";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 
@@ -382,13 +490,22 @@ body{
 body {
         margin: 0;
         color:black;
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+47,f7f7f7+75,c9c9c9+100 */
+/*     Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+80,f2f2f2+92,dddddd+100
+    background: rgb(255,255,255); Old browsers
+    background: -moz-linear-gradient(top,  rgba(255,255,255,1) 80%, rgba(242,242,242,1) 92%, rgba(221,221,221,1) 100%); FF3.6-15
+    background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 80%,rgba(242,242,242,1) 92%,rgba(221,221,221,1) 100%); Chrome10-25,Safari5.1-6
+    background: linear-gradient(to bottom,  rgba(255,255,255,1) 80%,rgba(242,242,242,1) 92%,rgba(221,221,221,1) 100%); W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#dddddd',GradientType=0 ); IE6-9
+     */
+ 
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+53,ffffff+53,ffffff+66,f4f4f4+83,f4f4f4+100 */
     background: rgb(255,255,255); /* Old browsers */
-    background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(255,255,255,1) 47%, rgba(247,247,247,1) 75%, rgba(201,201,201,1) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 47%,rgba(247,247,247,1) 75%,rgba(201,201,201,1) 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 47%,rgba(247,247,247,1) 75%,rgba(201,201,201,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#c9c9c9',GradientType=0 ); /* IE6-9 */
+    background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(255,255,255,1) 53%, rgba(255,255,255,1) 53%, rgba(255,255,255,1) 66%, rgba(244,244,244,1) 83%, rgba(244,244,244,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 53%,rgba(255,255,255,1) 53%,rgba(255,255,255,1) 66%,rgba(244,244,244,1) 83%,rgba(244,244,244,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 53%,rgba(255,255,255,1) 53%,rgba(255,255,255,1) 66%,rgba(244,244,244,1) 83%,rgba(244,244,244,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f4f4f4',GradientType=0 ); /* IE6-9 */
 
+    
         background-attachment: fixed;
         color: black;
         overflow-x: hidden;
@@ -396,17 +513,16 @@ body {
     }	
 
 /*******THE CONTENT********************/
-	#content {
-        opacity: 0;
-        margin-bottom: 100px !important;
-/*         background-color:white;
-         */        margin-top: 80px;
+#content {
+    opacity: 0;
+    margin-bottom: 100px !important;
+    margin-top: 80px;
+    background-color:white;
 }
 	
-
-	a {
-		text-decoration: none;
-	}
+a {
+    text-decoration: none;
+}
 
 
 /********* JOSIP'S PART **********/
@@ -498,7 +614,6 @@ a.page-scroll:hover, a.page-scroll:active, a.page-scroll:link, a.page-scroll:vis
     height: 100%;
     position:fixed;
     z-index: 999999999999999999999999;
-   
     max-width: 100%;
     background-attachment: fixed;   
     left: 0;
@@ -517,9 +632,12 @@ a.page-scroll:hover, a.page-scroll:active, a.page-scroll:link, a.page-scroll:vis
     margin: 0px;
     padding: 0px;
     margin-right: 20px;
-    overflow-y:auto;
+    height: 100%;
+    overflow-y: scroll;
     left: 0;
     background-color:white;
+    border-right: 1px solid #d8d8d8;
+    padding-bottom: 40px;
 }
 
 
@@ -533,8 +651,12 @@ a.page-scroll:hover, a.page-scroll:active, a.page-scroll:link, a.page-scroll:vis
     top:45%;
     z-index: 99999999999999999999999999999999;
     height: auto;
-    right: 5px;
+    right: 0px;
     position: absolute;
+    
+    border-radius: 4px;
+    background-color: #f4f4f4;
+    border:none;
 }
 
 .toggle_menu a{
@@ -542,10 +664,17 @@ a.page-scroll:hover, a.page-scroll:active, a.page-scroll:link, a.page-scroll:vis
 }
 
 .toggle_menu a:hover{
-    color:#000;
+    color:#8e8e8e;
 }
 
 
+.menu-publication-title{
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 15px;
+    line-height: 18px;
+    font-family: "HKGroteskbold";
+}
 
 /********************************************************
      2-3. TABLE OF CONTENT (left, inside the pushmenu)
@@ -568,6 +697,7 @@ Table of content is contained in pushmenu, it shows the different parts of the b
     -webkit-box-shadow: 0px 0px 18px 1px rgba(142,142,142,0.08);
     -moz-box-shadow: 0px 0px 18px 1px rgba(142,142,142,0.08);
     box-shadow: 0px 0px 18px 1px rgba(142,142,142,0.08);
+    font-family: "HKGrotesk";
 }
 
 
@@ -575,7 +705,6 @@ Table of content is contained in pushmenu, it shows the different parts of the b
 #menu h2:hover{
     cursor: pointer;
     color: black;
-
 }
 
 #toc_wrapper h2 a {
@@ -599,10 +728,10 @@ Table of content is contained in pushmenu, it shows the different parts of the b
     height: 0%;
     width: 5px;
     position: fixed;	
-/* background: -webkit-linear-gradient(#f30, rgb(255, 213, 203), rgba(255, 255, 69, 1), #1C33E5); For Safari 5.1 to 6.0
-    background: -o-linear-gradient(#f30, rgb(255, 213, 203), rgba(255, 255, 69, 1), #1C33E5); For Opera 11.1 to 12.0
-    background: -moz-linear-gradient(#f30, rgb(255, 213, 203), rgba(255, 255, 69, 1), #1C33E5); For Firefox 3.6 to 15
-    background: linear-gradient(#f30, rgb(255, 213, 203), rgba(255, 255, 69, 1), #1C33E5); Standard syntax   */
+/* background: -webkit-linear-gradient(#f30, rgb(255, 213, 203), rgba(255, 255, 69, 1), mediumblue); For Safari 5.1 to 6.0
+    background: -o-linear-gradient(#f30, rgb(255, 213, 203), rgba(255, 255, 69, 1), mediumblue); For Opera 11.1 to 12.0
+    background: -moz-linear-gradient(#f30, rgb(255, 213, 203), rgba(255, 255, 69, 1), mediumblue); For Firefox 3.6 to 15
+    background: linear-gradient(#f30, rgb(255, 213, 203), rgba(255, 255, 69, 1), mediumblue); Standard syntax   */
     
     background: #f30; /* For browsers that do not support gradients */
 
@@ -878,16 +1007,20 @@ z-index:99;
 ******** ARROWS *************
 ****************************/
 
-#arrows{
-    color: black;
+#arrows:hover{
+    box-shadow: 0 3px 5px rgba(0,0,0,.135);
+
 }
 
 #arrows #up {
     position: fixed;
-    top: 45%;
+    top: 44%;
     z-index: 99;
     font-size: 20px;
-    color: black;
+    border-radius: 4px;
+    background-color: #f4f4f4;
+    border:none;
+    padding: 4px;
 }
 
 #arrows #down {
@@ -895,7 +1028,10 @@ z-index:99;
     top: 50%;
     z-index: 99;
     font-size: 20px;
-    color: black;
+    border-radius: 4px;
+    background-color: #f4f4f4;
+    border:none;
+    padding: 4px;
 }
 
 #arrows #down a, #arrows #up a{
@@ -907,7 +1043,8 @@ z-index:99;
 }
 
 .fa-long-arrow-down:hover, .fa-long-arrow-up:hover, .fa-arrow-down:hover, .fa-arrow-up:hover, .fa-chevron-down:hover, .fa-chevron-up:hover{
-    color:#f30;
+    color:#8e8e8e;
+    
 }
 
 /********************************
@@ -1090,7 +1227,7 @@ input:hover {
 
 
 /*************************************
-******* REFERENCE BOX ****************
+******* IN TEXT REFERENCE BOX ****************
 *************************************/
 .in-text a, .in-text, .in-text a:visited{
     border-bottom: dashed 1px black;
@@ -1105,28 +1242,65 @@ input:hover {
 }
 
 /********THE BOX**********************/
-    .tip {
-    background-color: #e8e8e8;
-    	/*opacity: 0.9;*/
-    	-webkit-filter: drop-shadow(2px 2px 10px rgba(0,0,0,0.9));
-     	filter: drop-shadow(2px 2px 10px rgba(0,0,0,0.9));
-      	/*-webkit-filter: blur(5px);
-      	filter: blur(5px);*/
-    	font-size: 1em;
-    	width: 300px;
-    	/*overflow: scroll;*/
-    	padding: 2px 7px;
-    	border: 1px solid black;
-    	border-radius: 5px;
-    	position: fixed;
-    	margin:auto;
-        word-wrap: break-word;
-    }
+.tip {
+    padding:0px 3px 5px 3px;
+    position: absolute;
+    font-size: 14px;
+    word-wrap:break-word;
+    hyphens: auto;
+    line-break: strict;
+    word-break:break-word;
+    /* border-radius: 8px; */
+    font-family: "HKGrotesk";
+    border-radius: 5px;
+    border:1px solid #d8d8d8;
+	width: 300px;
+    text-indent: 0;
+}
 
 /********THE TEXT*********************/
-    .tip p {
-      margin: 0;
-    }
+.tip p {
+    margin: 0;
+    font-family: "HKGrotesk";
+    text-indent: 0;
+}
+
+.tip p a{
+    color:red;
+}
+
+
+
+/***************** POPOVER ***************************/
+
+.popover{
+    padding:0px 3px 5px 3px;
+    position: absolute;
+    font-size: 14px;
+    word-wrap:break-word;
+    hyphens: auto;
+    line-break: strict;
+    word-break:break-word;
+    /* border-radius: 8px; */
+    font-family: "HKGrotesk";
+    border-radius: 5px;
+    border:1px solid #d8d8d8;
+    background-color:rgb(255, 255, 255);
+}
+
+.popover p{
+    margin: 0px;
+    color: black;
+    text-indent: 0;
+}
+.popover p a{
+    text-decoration: underline;
+    color:red;
+    font-family: "HKGrotesk";
+}
+
+
+
 
 /********THE X BUTTON******************/
     #x {
@@ -1146,11 +1320,10 @@ input:hover {
     	text-decoration: none;
     	color: black;
     }
-
+f
 
      .capitalism, .capital, .creativity, .art, .contemporary, .culture, .ideological, .social, .labor, .attention, .image, .production, .capitalism, .art, .state, .life, .public, .city, .economics, .production, .development, .art, .social, .avant-garde, .world, .big, .Other, .art, .urban, .cultural, .project, .creativity, .Belgrade, .Rog, .capital, .creative, .collective, .urban, .factory, .gentrification, .art, .political, .social, .culture, .autonomy, .public, .work {
-         color: #1C33E5;
-
+         color:mediumblue;
          /* 
          color:#f30;
           */
@@ -1160,7 +1333,7 @@ input:hover {
 
     .underline {
 
-        background-color:rgba(255, 51, 0, 0.19);
+        background-color:#ffffa5;
     }
 
     .remove_highlight {
@@ -1226,7 +1399,8 @@ input:hover {
         margin: 0px;
         border-radius: 2px;
         color: #5b5b5b;
-    border:1px dashed #dbdbdb;
+    border:1px dashed #d8d8d8;
+    background-color:#f4f4f4;
 }
 
     #citation-box {
@@ -1268,10 +1442,8 @@ input:hover {
 }
 
 #chapter8 {
-	/*height: auto; */
-	/*width: 23%;*/
-/* 	position: relative;
-	    height: auto; */
+
+    
 
 }
 
@@ -1301,10 +1473,6 @@ input:hover {
     position: absolute;
     font-size: 1.25em;
     line-height: 1.2em;
-    word-wrap:break-word;
-    hyphens: auto;
-    line-break: strict;
-    word-break:break-word;
     /* border-radius: 8px; */
     font-family: "HKGroteskBold";
 }
@@ -1313,13 +1481,18 @@ input:hover {
     color: black;
     font-family: "HKGrotesk";
     font-weight: normal;
-    font-size: 11px;
+    font-size: 12px;
     line-height: 1.1em;
 }
 
 #chapter8 ol li p a{
     color:black;
-    text-decoration: underline;
+/*     text-decoration: underline;
+     */    
+    font-family: "HKGroteskbold";
+    word-wrap:break-word;
+    hyphens: auto;
+    word-break: break-all;
 }
 
 #chapter8 ol li p a:hover{
@@ -1332,6 +1505,7 @@ input:hover {
     -webkit-margin-after: 3px;
     padding: 2px;
     padding-top: 4px;
+    border-radius: 5px;
 }
 
 .sidenote p{
@@ -1351,6 +1525,8 @@ input:hover {
     opacity: .7;
 }
 
+
+
 /********************************************/
 
 a sup{
@@ -1359,16 +1535,10 @@ a sup{
     color:black;
     text-decoration: none;
     /*font-size: small;*/
-    border-bottom: 3px solid #f30;
-    padding-bottom: 0.1em;
 }
 
-a sup:hover{
+a sup:hover, a sup:active, a sup:focus{
     color:#f30;
-    text-decoration: none !important;
-}
-
-sup:hover, sup a:hover{
     text-decoration: none !important;
 }
 
@@ -1385,6 +1555,11 @@ ol {
     text-indent: 10px;
 }
 
+
+
+
+
+
 /******** TUNNING BOOTSTRAP ********/
 
 .section .keyword-toggle .btn-default {
@@ -1397,7 +1572,7 @@ ol {
     background-color: rgba(28, 51, 229, 0.1);
 /*     background-color:rgba(255, 51, 0, 0.1);
      */    
-    color: #1C33E5;
+    color: mediumblue;
 /*     color:#f30;
      */    
     border:none;
@@ -1447,20 +1622,24 @@ ol {
     margin-right:4px;
     line-height: 2em;
     color: black !important;
+    font-family: "HKGrotesk";
 }
 
 .extra:hover{
     text-decoration: none;
     color: black;
+    font-family: "HKGrotesk";
 }
 
 .extra:active{
     border: 1px solid #ff3300;
     color: black;
+    font-family: "HKGrotesk";
 }
 
 .extra a, .extra a:visited, .extra a:focus, .extra a:hover{
     color:black !important;
+    font-family: "HKGrotesk";
 }
 
 .extra-btn{
@@ -1484,7 +1663,7 @@ ol {
 
 #keyword-show-all{
     background-color: rgba(28, 51, 229, 0.1);
-    color: #1C33E5 !important;
+    color: mediumblue !important;
     box-shadow: 0 3px 5px rgba(0,0,0,.135);
 }
 
@@ -1513,7 +1692,9 @@ ol {
     background-color:rgba(255, 78, 0, 0.25); */
     border:none;
     background-color:white;
-    border-left: 1px solid #f4f4f4;
+    border-left: 1px solid #d8d8d8;
+    font-family: "HKGrotesk";
+
 }
 
 #menu-right .panel-group, #menu-right .panel-group:hover, #menu-right .panel-group:focus, #menu-right .panel-group:active{
@@ -1534,6 +1715,8 @@ ol {
 
 .panel-group .panel-heading+.panel-collapse>.panel-body {
     border-top: 0px solid #ddd;
+    border-bottom: 0px solid #ddd;
+
 }
 
 .panel-body{
@@ -1544,17 +1727,23 @@ ol {
     border:none;
     color: black;
     margin-top: 4px;
+    border-bottom: 0px solid #ddd;
 }
 
 
 .panel-default>.panel-heading{
 /*     background-color: #f5f5f5;
-     */    border-color: black;
+     */   
     border-radius: 4px;
     padding: 7px;
     background-color: #f4f4f4;
     border:none;
     box-shadow: 0 3px 5px rgba(0,0,0,.135);
+    font-family: "HKGrotesk";
+}
+
+.panel-heading a{
+    font-family: "HKGrotesk";
 }
 .panel-default>.panel-heading a:hover, .panel-default>.panel-heading a:focus{
     color: black;
@@ -1688,11 +1877,27 @@ ol {
 }
 
 blockquote {
-    padding: 10px 40px;
-    margin: 0 0 20px;
+    margin: 2em 0 2em 2.5em;
+    font-size: inherit;
+    /* 
     font-size: 1.22em;
+         */
     border-left: 0px;
-    font-family: "Georgia";
+/*  font-family: "Georgia";*/    
+}
+
+blockquote p{
+    line-height: 1.55em !important;
+}
+
+@media (max-width: 480px) {
+    blockquote{
+        margin: 0 0 10px;
+        font-size: 1.12em;
+        line-height: 0.7em;
+
+        /* font-family: "Georgia";*/
+    }
 }
 
 .footer{
@@ -1710,7 +1915,7 @@ blockquote {
 
 .p_number{
     position:absolute;
-    right:20px;
+    right:2%;
     margin:0px;
     line-height: 30px;
     vertical-align: top;
@@ -1762,9 +1967,12 @@ blockquote {
 }
 
 #panel, #panel2, #panel3, #panel4, #panel5, #panel6 {
-    padding: 20px;
+    padding: 5px;
     display: none;
     width: 100%;
+    background-color: white;
+    border:1px solid #d8d8d8;
+    border-radius: 5px;
 }
 
 #panel6 #live-search {

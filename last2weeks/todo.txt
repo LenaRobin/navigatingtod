@@ -1,0 +1,19 @@
++ tooltip/sidenotes on xs
+- buttons of responsive : pb with text
++ padding on xs
++ references => change column width for sm
++ blockquote p: line-height:1.55em
++ .section p {     font-size: 2.2em;
++ fonts with all files!!!
++ font-smoothing
++ text antialysed
+- Par_numbr don't align when font size change!
+- max font size for changing font size
++ bold on links/stylizing links
++ img size and caption
+- we are using cookies
++ references and a     word-break: break-all;
++ #1C33E5
+- reference this
+- bugs on xs menu
+
