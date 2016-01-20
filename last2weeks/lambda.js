@@ -2,16 +2,20 @@ $(document).ready(function(){
     //////////////////////////////////////////////////////////////////////////////////
     ////PUSH MENU ON THE LEFT
     //////////////////////////////////////////////////////////////////////////////////
-
-$('.toggle_menu_right').click(function() {
+$('.toggle_menu_right').on('click', function() {
         if ($(window).width() >= "768") {
             var window_width = $(window).width();
-            var menu_right_width = $('#menu-right').width();
-            console.log($('#menu-right').offset().left);
-            if ($('#menu-right').offset().left == window_width) {
-                $('#menu-right').animate({left: -menu_right_width});
+            var menu_wrapper_width = $('#menu-right-wrapper').outerWidth();
+            var menu_right_width = $('#menu-right').outerWidth();
+            var padding_left = parseInt($('#menu-right').css('padding-left').replace('px', ''));
+            var correct_distance = menu_right_width - padding_left;
+            var initial_offset = Math.floor($('#menu-right-wrapper').offset().left);
+            if (Math.floor($('#menu-right-wrapper').offset().left) < window_width) {
+                $('#menu-right').animate({left: +correct_distance});
+                // $('#menu-right').animate({left: -menu_wrapper_width});
             } else {
-                $('#menu-right').animate({left: window_width});
+                $('#menu-right').animate({left: 0});
+                // $('#menu-right').animate({left: + menu_wrapper_width});
             }
         }
 
@@ -41,7 +45,7 @@ $('.toggle_menu_right').click(function() {
     $toggle_menu.click(function() {
         if ($(window).width() <= "480") {
             var menu_width = $('#toc_wrapper').width();
-            console.log($('#menu').offset().left);
+            // console.log($('#menu').offset().left);
             if ($('#menu').offset().left == 0) {
                 $('#menu').animate({left: -menu_width});
             } else {

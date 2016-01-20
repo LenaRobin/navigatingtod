@@ -640,6 +640,10 @@ a.page-scroll:hover, a.page-scroll:active, a.page-scroll:link, a.page-scroll:vis
     padding-bottom: 40px;
 }
 
+#menu-right-wrapper {
+    /*margin-left: 20px;    */
+}
+
 .toggle_menu {
     padding: 1px;
     padding-top: 10px;
@@ -1704,7 +1708,8 @@ ol {
 #menu-right{
     position: fixed;
     right:0px;
-    padding:10px;
+    left: auto;
+    /*padding:10px;*/
     height: 100%;
 /*     background-color:  #f4f4f4;
     background-color:rgba(255, 78, 0, 0.25); */
