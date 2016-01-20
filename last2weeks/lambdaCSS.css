@@ -640,7 +640,6 @@ a.page-scroll:hover, a.page-scroll:active, a.page-scroll:link, a.page-scroll:vis
     padding-bottom: 40px;
 }
 
-
 .toggle_menu {
     padding: 1px;
     padding-top: 10px;
@@ -659,11 +658,30 @@ a.page-scroll:hover, a.page-scroll:active, a.page-scroll:link, a.page-scroll:vis
     border:none;
 }
 
-.toggle_menu a{
+
+.toggle_menu_right {
+    padding: 1px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 18px;
+    color:#8e8e8e;
+    vertical-align: middle;
+    top:45%;
+    z-index: 99999999999999999999999999999999;
+    height: auto;
+    left: 0px;
+    position: absolute;
+    
+    border-radius: 4px;
+    background-color: #f4f4f4;
+    border:none;
+}
+
+.toggle_menu, .toggle_menu_right a{
     color:#8e8e8e;
 }
 
-.toggle_menu a:hover{
+.toggle_menu a:hover, .toggle_menu_right a:hover {
     color:#8e8e8e;
 }
 

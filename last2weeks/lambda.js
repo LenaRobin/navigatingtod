@@ -3,6 +3,38 @@ $(document).ready(function(){
     ////PUSH MENU ON THE LEFT
     //////////////////////////////////////////////////////////////////////////////////
 
+$('.toggle_menu_right').click(function() {
+        if ($(window).width() >= "768") {
+            var window_width = $(window).width();
+            var menu_right_width = $('#menu-right').width();
+            console.log($('#menu-right').offset().left);
+            if ($('#menu-right').offset().left == window_width) {
+                $('#menu-right').animate({left: -menu_right_width});
+            } else {
+                $('#menu-right').animate({left: window_width});
+            }
+        }
+
+        // if $('#content').hasClass('col')
+        //     ($('#content, .footer').toggleClass('col-lg-offset-0', 'col-lg-offset-1');
+        // $('#content, .footer').toggleClass('col-md-offset-0', 'col-md-offset-1');
+        // $('#content, .footer').toggleClass('col-sm-offset-0', 'col-sm-offset-1');
+        //  else {
+        //     var menu_width = $('#toc_wrapper').width();
+        //     console.log($('#menu').offset().left);
+        //     if ($('#menu').offset().left == 0) {
+        //         $('#menu').animate({left: -menu_width});    
+        //     } else {
+        //         $('#menu').animate({left: 0});
+        //     }
+        //     $('#menu_bar').fadeToggle(1000);
+        //     $('#content, .footer').toggleClass('col-lg-offset-0', 'col-lg-offset-1');
+        //     $('#content, .footer').toggleClass('col-md-offset-0', 'col-md-offset-1');
+        //     $('#content, .footer').toggleClass('col-sm-offset-0', 'col-sm-offset-1');
+        // }
+    });
+
+
 
 ////ON CLICKING THE TOGGLE THAT OPENS THE MENU
     $toggle_menu = $('.toggle_menu');
@@ -676,6 +708,21 @@ $(document).ready(function(){
              $(this).find('.pin-form').hide();
             e.preventDefault();
         });
+
+        newPin.find('.pin-input').focusout(function() {
+            t = $(this).val();
+            // var newPin = $(this).closest('.pin-clone');
+            var pid = newPin.attr("id");
+            var pidnr = pid.substr(11);
+            // console.log('pidnr: '+pidnr);
+            // console.log('t: '+t);
+            ptop = newPin.offset().top;
+            pleft = newPin.offset().left;
+            pObj = {value : t, top: ptop, left: pleft , id: pid};
+
+            checkPin(pid);
+        });
+
 
         pin_count++;
         console.log("Drag stopped!\n\nOffset: (" + pinXPos + ", " + pinYPos + ")\n");
