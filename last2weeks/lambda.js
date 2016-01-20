@@ -12,9 +12,11 @@ $('.toggle_menu_right').on('click', function() {
             var initial_offset = Math.floor($('#menu-right-wrapper').offset().left);
             if (Math.floor($('#menu-right-wrapper').offset().left) < window_width) {
                 $('#menu-right').animate({left: +correct_distance});
+                // $('#toggle_menu_right').animate({offset: '50px'});
                 // $('#menu-right').animate({left: -menu_wrapper_width});
             } else {
                 $('#menu-right').animate({left: 0});
+                // $('#toggle_menu_right').animate({width: '50px'});
                 // $('#menu-right').animate({left: + menu_wrapper_width});
             }
         }
@@ -578,19 +580,36 @@ $('.toggle_menu_right').on('click', function() {
     var pObj;
 
     function checkPin(pinID) {
-        var found = pins.some(function (el) {
-            // update value of field
-            el.value = t;
-            // update position as well
-            el.top = ptop;
-            el.left = pleft;
-          return el.id === pinID;
-        });
-        // console.log(found);
-        if (!found) {
-            pins.push(pObj);
+        // var found = pins.some(function (el) {
+        //     // update value of field
+        //     el.value = t;
+        //     // update position as well
+        //     el.top = ptop;
+        //     el.left = pleft;
+        //   return el.id === pinID;
+        // });
+        // // console.log(found);
+        // if (!found) {
+        //     pins.push(pObj);
+        // }
+        if(pins.length > 0){
+            for(var i=0; i<pins.length;i++){
+                if(pins[i]["id"] == pinID){
+                    console.log("found at "+ i);
+                    pins[i]["value"] = t;
+                    pins[i]["top"] = ptop;
+                    pins[i]["left"] = pleft;
+                    break;
+                }else{
+                     pins.push(pObj);
+                }
+                console.log("here "+pins[i]["value"]);
+            }
+            console.log(pins);
+        }else{
+          pins.push(pObj);   
         }
-        console.log(pins);
+        
     }
 
     function pinMoved(){
@@ -718,8 +737,8 @@ $('.toggle_menu_right').on('click', function() {
             // var newPin = $(this).closest('.pin-clone');
             var pid = newPin.attr("id");
             var pidnr = pid.substr(11);
-            // console.log('pidnr: '+pidnr);
-            // console.log('t: '+t);
+            console.log('pidnr: '+pidnr);
+            console.log('t: '+t);
             ptop = newPin.offset().top;
             pleft = newPin.offset().left;
             pObj = {value : t, top: ptop, left: pleft , id: pid};
