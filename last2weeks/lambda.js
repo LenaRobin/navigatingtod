@@ -420,27 +420,24 @@ $(document).ready(function(){
 ////////IF IT IS THE FORST CHAPTER (INTRODUCTION) CITE IN THIS WAY
         if (blaaa < 15) {
 ////////////MLA STYLE 
-            $('#mla').html("Nikolić, Gordana and Tatlić Šefik"+", "+"<i>"+ref_title+"</i>" 
+            $('#mla').html("Nikolić, Gordana and Tatlić Šefik"+", "+ref_title
                            +". Eds. "+ref_eds+". "+ref_place+": "+ref_pub+", "+ref_year+". &lt;"+url+"#"+par+"&gt;. "+MLA_date_of_access+".");
 ////////////CHICAGO STYLE
-            $('#chicago').html("Nikolić, Gordana &amp; Tatlić Šefik"+". '"+ref_article+".' In "+"<i>"+ref_title+"</i>"
+            $('#chicago').html("Nikolić, Gordana &amp; Tatlić Šefik"+". '"+ref_article+".' In "+ref_title
                                +", edited by "+ref_eds+". "+ref_place+": "+ref_pub+", "+ref_year+". "+url+"#"+par+". Accessed "+chicago_date_of_access+".");
-
 ////////////APA STYLE
-            $('#apa').html("Nikolić, G., Tatlić Š."+". ("+ref_year+"). "+ref_article+". In "+ref_apaEds+" (Eds.), "+"<i>"+ref_title+"</i>"
+            $('#apa').html("Nikolić, G., Tatlić Š."+". ("+ref_year+"). "+ref_article+". In "+ref_apaEds+" (Eds.), "+ref_title
                            +". "+ref_place+": "+ref_pub+". Available from "+url+"#"+par+".");
 ////////OTHERWISE (NORMAL CHAPTERS) CITE IN THIS WAY
         } else {
 ////////////MLA STYLE 
-            $('#mla').html(ref_authorLastName +", "+ref_authorName+". '"+ref_article+", "+"<i>"+ref_title+"</i>" 
+            $('#mla').html(ref_authorLastName +", "+ref_authorName+". '"+ref_article+", "+ref_title 
                            +". Eds. "+ref_eds+". "+ref_place+": "+ref_pub+", "+ref_year+". &lt;"+url+"#"+par+"&gt;. "+MLA_date_of_access+".");
-
 ////////////CHICAGO STYLE
-            $('#chicago').html(ref_authorLastName+", "+ref_authorName+". '"+ref_article+".' In "+"<i>"+ref_title+"</i>"
+            $('#chicago').html(ref_authorLastName+", "+ref_authorName+". '"+ref_article+".' In "+ref_title
                                +", edited by "+ref_eds+". "+ref_place+": "+ref_pub+", "+ref_year+". "+url+"#"+par+". Accessed "+chicago_date_of_access+".");
-
 ////////////APA STYLE
-            $('#apa').html(ref_authorLastName +", "+ ref_apaAuthorName+". ("+ref_year+"). "+ref_article+". In "+ref_apaEds+" (Eds.), "+"<i>"+ref_title+"</i>"
+            $('#apa').html(ref_authorLastName +", "+ ref_apaAuthorName+". ("+ref_year+"). "+ref_article+". In "+ref_apaEds+" (Eds.), "+ref_title
                            +". "+ref_place+": "+ref_pub+". Available from "+url+"#"+par+".");
         }
     });
@@ -553,6 +550,7 @@ $(document).ready(function(){
             el.left = pleft;
           return el.id === pinID;
         });
+        // console.log(found);
         if (!found) {
             pins.push(pObj);
         }
@@ -566,14 +564,15 @@ $(document).ready(function(){
             pleft = $('#'+pinID).offset().left;
             el.top = ptop;
             el.left = pleft;
-          return el.id === pinID;
+            return el.id === pinID;
         });
         console.log(pins);
     }
 
     $('#pin').draggable({
+        // axis: 'y',
         containment: '#main',
-        snapTolerance: 60,
+        snapTolerance: 100,
         cursor: 'move',
         snap: '#content',
         snapMode: "outer",
@@ -581,14 +580,66 @@ $(document).ready(function(){
         stop: getPinPosition
     });
 
+    // function updatePin(id) {
+    //     // alert('oiuuio');
+    // //     var found = pins.some(function(el) {
+    // //         el.value = t;
+    // //         el.top = ptop;
+    // //         el.left = pleft;
+    // //         return el.id ===pinID;
+    // //         console.log(pins);
+    // //     });
+    // //     if (!found) {
+    // //         pins.push(pObj);
+    // //     }
+    // //     console.log(pins);
+    // // }
+
+    //     for (var i in pins) {
+    //         alert('sfhbk');
+    //         if (pins[i].id == id) {
+    //             pins[i].value = t;
+    //             pins[i].top = ptop;
+    //             pins[i].left = pleft;
+    //             console.log(pins);
+    //             break; //Stop this loop, we found it!
+    //         } else {
+    //             // pins.push(pObj);
+    //             console.log(pins);
+    //         }
+    //     }
+    // }
+
+
+    // $('#main').on('click', function(e) {
+    //     if (!$('#content').find('.pin-input').is(e.target)) {
+    //         $('#content').find('.pin-input').each(function() {
+    //             // console.log($(this).val());
+    //             t = $(this).val();
+    //             var newPin = $(this).closest('.pin-clone');
+    //             var pid = newPin.attr("id");
+    //             var pidnr = pid.substr(11);
+    //             // console.log('pidnr: '+pidnr);
+    //             // console.log('t: '+t);
+    //             ptop = newPin.offset().top;
+    //             pleft = newPin.offset().left;
+    //             pObj = {value : t, top: ptop, left: pleft , id: pid};
+
+    //             checkPin(pid);
+    //         });
+    //             e.stopPropagation;
+    // });
+
+
+    // && !$('#asd').is(e.target)
+
+
 
     $('#content').on('mouseenter', '.pin-clone', function() {
-        console.log('gvjhbk');
         $(this).find('.pin-form').fadeIn();
     });
 
     $('#content').on('mouseleave', '.pin-clone', function() {
-        console.log('gvjhbk');
         $(this).find('.pin-form').fadeOut();
     });
 
@@ -601,7 +652,7 @@ $(document).ready(function(){
         newPin.appendTo('#content').offset({top: pinYPos, left: pinXPos}).attr('id', 'dragged-pin'+pin_count).addClass('pin-clone').draggable({
             containment: '#main',
             cursor: 'move',
-            snapTolerance: 60,
+            snapTolerance: 100,
             snap: '#content',
             snapMode: "outer",
             stop: pinMoved
@@ -625,10 +676,6 @@ $(document).ready(function(){
              $(this).find('.pin-form').hide();
             e.preventDefault();
         });
-        
-
-
-        //console.log("obj " +pins[0]);
 
         pin_count++;
         console.log("Drag stopped!\n\nOffset: (" + pinXPos + ", " + pinYPos + ")\n");
@@ -689,20 +736,23 @@ $(document).ready(function(){
     ////ARROW NAVIGATION
     ////////////////////
 
-    $('#down').click(function (e) {
-        var scrollTop = $(document).scrollTop();
+    $('#down').on('click', function (e) {
+        // var scrollTop = $(document).scrollTop();
+        e.preventDefault(); 
         ////////SET DATA-TOP FOR EVERY SECTION
         $('.section').each(function() {
-            var section_top = $(this).offset().top;
-            var first_section = $('.section:first').offset().top;
-            // if ($(this).next('.section')) {
-            var nextTop = $(this).next('.section').offset().top;
-            // }
+            var scrollTop = $(document).scrollTop();
+            var section_top = Math.floor($(this).offset().top);
+            var first_section = Math.floor($('.section:first').offset().top);
+            var last_section = Math.floor($('.section:last').offset().top);
+            if ($(this).next('.section')) {
+                var nextTop = Math.floor($(this).next('.section').offset().top);
+            }
             if (scrollTop >= section_top && scrollTop < nextTop) {
                 $('html, body').stop().animate({
                     scrollTop: nextTop
                 }, 2000, 'easeInOutQuart');
-            } else if (scrollTop < first_section) {
+            } else if (scrollTop < first_section || scrollTop >= last_section) {
                 $('html, body').stop().animate({
                     scrollTop: first_section
                 }, 2000, 'easeInOutQuart');
@@ -714,21 +764,22 @@ $(document).ready(function(){
 
 
 
-    $('#up').click(function (e) {
-        var scrollTop = $(document).scrollTop();
+    $('#up').on('click', function (e) {
         e.preventDefault();	
         ////////SET DATA-TOP FOR EVERY SECTION
         $('.section').each(function() {
-            var section_top = $(this).offset().top;
-            var last_section = $('.section:last').offset().top;
-            // if ($(this).next('.section')) {
-            var nextTop = $(this).next('.section').offset().top;
-            // }
+            var scrollTop = $(document).scrollTop();
+            var section_top = Math.floor($(this).offset().top);
+            var first_section = Math.floor($('.section:first').offset().top);
+            var last_section = Math.floor($('.section:last').offset().top);
+            if ($(this).next('.section')) {
+                var nextTop = Math.floor($(this).next('.section').offset().top);
+            }
             if (scrollTop > section_top && scrollTop <= nextTop) {
                 $('html, body').stop().animate({
                     scrollTop: section_top
                 }, 2000, 'easeInOutQuart');
-            } else if (scrollTop > last_section) {
+            } else if (scrollTop > last_section || scrollTop <= first_section) {
                 $('html, body').stop().animate({
                     scrollTop: last_section
                 }, 2000, 'easeInOutQuart');
@@ -739,10 +790,10 @@ $(document).ready(function(){
     });
 
 
-    /////////////
-    ////SIDENOTES
-    /////////////
-    ////FOCUS ON RESPECTIVE SIDENOTE WHEN ANCHOR CLICKED
+/////////////
+////SIDENOTES
+/////////////
+////FOCUS ON RESPECTIVE SIDENOTE WHEN ANCHOR CLICKED
     $('a sup').click(function(ev){
         // var numbr = $(this).attr('href').substr(3, 4);
         var numbr = $(this).text();
