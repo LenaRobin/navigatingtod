@@ -37,13 +37,15 @@
     <!-- // <script src="http://code.jquery.com/jquery-1.7.2.js"></script> -->
    <!--  // <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- EARLY LIBRARY NEEDED FOR HIGHLIGHT TO WORK PROPERLY -->
     <script src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
 <!--–––––––––––––––––––––––––– Plugins –––––––––––––––––––––––––––––––––––––-->
-    <script src="final_js/respond.min.js"></script>
-    <script src="final_js/modernizr-custom.js"></script>
+     <!-- <script src="final_js/respond.min.js"></script>
+     <script src="final_js/modernizr-custom.js"></script> -->
     <script src="final_js/jquery.easing.min.js"></script>
     <script src="final_js/scrolling-nav.js"></script>
     <script src="final_js/highlight.js"></script>
@@ -333,32 +335,32 @@
 
 <!-- –––––––––––––––––––––––––– Menu for XS devices (bottom) –––––––––––––––––––––––––––––––––––––-->
     <div id="menu-bar-xs" class="hidden-lg hidden-md col-sm-6 col-xs-12">
-<!-- panel 1: Download-->
+<!--––––––––––––––––––––––––––––––– panel 1: Download –––––––––––––––––––––––––––––––-->
     <div id="panel" class="hidden-lg hidden-md col-sm-6 col-xs-12">Download this book as:<br>
         <a href="files/TOD17-GrayZones.pdf" class="extra">.PDF</a> <a href="files/TOD17-GrayZones.epub" class="extra">.Epub</a> <a href="files/TOD17-GrayZones.md" class="extra">.Md</a>                
     </div>
-<!-- panel 2: Quote-->
+<!--––––––––––––––––––––––––––––––– panel 2: Quote –––––––––––––––––––––––––––––––-->
     <div id="panel2" class="hidden-lg hidden-md col-sm-6 col-xs-12">Referencing tool<br>
         Want to cite a paragraph with properly formatted reference?<br>
         Select your text and its references will appear below:        <p title="Modern Language Association" alt="Modern Language Association">MLA</p>
-        <button data-clipboard-target="#mla" class="full-citation" id="mla"></button>
+        <textarea data-clipboard-target="#mla" class="full-citation" id="mla"></textarea>
         <p>Chicago Manual of Style</p>
-        <button data-clipboard-target="#chicago" class="full-citation" id="chicago"></button>
+        <textarea data-clipboard-target="#chicago" class="full-citation" id="chicago"></textarea>
         <p title="American Psychological Association" alt="American Psychological Association">APA</p>
-        <button data-clipboard-target="#apa" class="full-citation" id="apa"></button>
+        <textarea data-clipboard-target="#apa" class="full-citation" id="apa"></textarea>
     </div>
-<!-- panel 3: Print-->
+<!--––––––––––––––––––––––––––––––– panel 3: Print –––––––––––––––––––––––––––––––-->
     <div id="panel3" class="hidden-lg hidden-md col-sm-6 col-xs-12">
         Print this book:
         <br>
         <a href="javascript:window.print()" class="extra">Print on your own printer</a>
         <br><a href="http://www.lulu.com/shop/%C5%A1efik-tatli%C4%87-and-gordana-nikoli%C4%87/the-gray-zones-of-creativity-and-capital/paperback/product-22467485.html" class="extra" target="_blank">Print and order on Lulu</a>
     </div>            
-<!-- panel 4: Settings-->
+<!--––––––––––––––––––––––––––––––– panel 4: Settings –––––––––––––––––––––––––––––––-->
     <div id="panel4" class="hidden-lg hidden-md col-sm-6 col-xs-12">
         Font-size
-        <span id="button_fontsizeminus" class="extra-btn" value="smaller" onclick="changeFontSize(this)"><i class="fa fa-font"></i>-</span>
-        <span id="button_fontsizeplus" class="extra-btn" value="larger" onclick="changeFontSize(this)"><i class="fa fa-font"></i>+</span>
+        <span id="button_fontsizeminus" class="extra-btn" value="smaller"><i class="fa fa-font"></i>-</span>
+        <span id="button_fontsizeplus" class="extra-btn" value="larger"><i class="fa fa-font"></i>+</span>
 
         <hr>
         <span id="keyword-show-all" class="extra-btn">Display keywords <i class="fa fa-tags"></i></span>
@@ -370,7 +372,7 @@
         <hr>
         <span id="bookmark" class="extra-btn"><i class="fa fa-thumb-tack"></i> Save reading position</span>
     </div>            
-<!-- panel 5: Share-->
+<!--––––––––––––––––––––––––––––––– panel 5: Share –––––––––––––––––––––––––––––––-->
     <div id="panel5" class="hidden-lg hidden-md col-sm-6 col-xs-12">
         Share on:
         <br>
@@ -379,7 +381,7 @@
         <a href="https://plus.google.com/share?url=http%3A//www.networkcultures.org/publications/%23tods" class="extra" target="_blank">Google+</a><br>
                 Send an email
     </div>
-<!-- panel 6: Search-->
+<!--––––––––––––––––––––––––––––––– panel 6: Search –––––––––––––––––––––––––––––––-->
     <div id="panel6" class="hidden-lg hidden-md col-sm-6 col-xs-12">
         <form id="live-search" class="not" action="" method="post">
             <span id="filter-count"></span>
@@ -400,7 +402,7 @@
     </div>
 
 
-<!-- buttons -->
+<!--––––––––––––––––––––––––––––––– buttons –––––––––––––––––––––––––––––––-->
     <div id="flip"  class="hidden-lg hidden-md hidden-ms col-xs-12">
         <i class="fa fa-download"></i> Download
     </div>
@@ -552,14 +554,14 @@ before
             <div class="container on-selection" id="asd">
                 <div class="btn-group-vertical">
                     <button id="lookup" type="button" class="btn btn-primary"><i class="fa fa-book"></i>
-                        Definition</button>
+                        Define</button>
                     <div class="btn-group-horizontal">
                         <button type="button" id="highlight" class="btn btn-primary"><i class="fa fa-pencil"></i>
                          Highlight</button>
                         <button type="button" id="erase" class="btn btn-primary"><i class="fa fa-eraser"></i> Unhighlight</button>
                     </div>
                     <button type="button" id="get-reference" class="btn btn-primary"><i class="fa fa-quote-left"></i>
-                         Quote</button>
+                         Reference this</button>
                 </div>
             </div>
 
@@ -1775,15 +1777,15 @@ TRANSFORMED INTO SIDENOTES
 <script data-no-instant>InstantClick.init();</script>
 <!-- –––––––––––––––––––––––––– Bootstrap tooltip –––––––––––––––––––––––––– -->
 <script>
-    $(document).ready(function(){
-        $('[data-toggle="tooltip"]').tooltip(); 
-    });
+    // $(document).ready(function(){
+    //     $('[data-toggle="tooltip"]').tooltip(); 
+    // });
 </script>
 <!-- –––––––––––––––––––––––––– Bootstrap popover –––––––––––––––––––––––––– -->
 <script>
-    $(document).ready(function(){
-        $('[data-toggle="popover"]').popover(); 
-    });
+    // $(document).ready(function(){
+    //     $('[data-toggle="popover"]').popover(); 
+    // });
 </script>
 <!-- –––––––––––––––––––––––––– Menu on XS devices that toggle –––––––––––––––––––––––––– -->
 <script> 
@@ -1841,25 +1843,6 @@ TRANSFORMED INTO SIDENOTES
             $("#panel3").hide();
             $("#panel4").hide();
             $("#panel5").hide();
-        });
-    });
-</script>
-<script type="text/javascript">
-    $(document).ready(function(){
-        var maxLength = 750;
-        $(".show-read-more").each(function(){
-            var myStr = $(this).text();
-            if($.trim(myStr).length > maxLength){
-                var newStr = myStr.substring(0, maxLength);
-                var removedStr = myStr.substring(maxLength, $.trim(myStr).length);
-                $(this).empty().html(newStr);
-                $(this).append(' <a href="javascript:void(0);" class="read-more">(Read more…)</a>');
-                $(this).append('<span class="more-text">' + removedStr + '</span>');
-            }
-        });
-        $(".read-more").click(function(){
-            $(this).siblings(".more-text").contents().unwrap();
-            $(this).remove();
         });
     });
 </script>
