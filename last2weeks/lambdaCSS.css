@@ -1636,10 +1636,7 @@ f
     height: auto;
 }
 
-#chapter8 {
-
-    
-
+#chapter8 {    
 }
 
 #chapter8 ol {
@@ -1672,6 +1669,8 @@ f
     font-family: "HKGroteskBold";
 }
 
+
+/* THIS IS THE SAME AS .sidenote BELOW */
 #chapter8 ol li p{
     color: black;
     font-family: "HKGrotesk";
@@ -1696,6 +1695,8 @@ f
 
 }
 .sidenote {
+    /*z-index: 9999999999999999999999999999;*/
+    width: 100%;
     left: 40px;
     -webkit-margin-after: 3px;
     padding: 2px;
@@ -1755,9 +1756,9 @@ ol {
 
 
 
-/******** TUNNING BOOTSTRAP ********/
+/******** TUNING BOOTSTRAP ********/
 
-.section .keyword-toggle .btn-default {
+.section .keyword-button {
     border-radius:5px;
     padding: 2px;
     padding-left:5px;
@@ -1774,18 +1775,18 @@ ol {
     height: auto;
     box-shadow: 0 3px 5px rgba(0,0,0,.135);
 }
-.section .keyword-toggle .btn.active{
+.section .keyword-button .btn.active{
     box-shadow: inset 0 3px 5px rgba(0,0,0,.135);
     background-color: rgba(28, 51, 229, 0.3);
 /*     background-color:rgba(255, 51, 0, 0.4);
     color: #f30; */
 
 }
-.section .keyword-toggle .btn-default:focus{
+.section .keyword-button:focus{
     
 }
 
-.section .btn-default {
+.section .keyword-button {
     background-color: #dbdbdb;
     border-radius:5px;
     padding: 2px;
@@ -1800,9 +1801,6 @@ ol {
 .section .btn.active{
     box-shadow: inset 0 3px 5px rgba(0,0,0,.135);
     background-color:#c7c7c7;
-}
-.section .btn-default:focus{
-
 }
 
 /******* MENU RIGHT *******/

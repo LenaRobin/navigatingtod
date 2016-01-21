@@ -20,24 +20,6 @@ $(document).ready(function(){
                 // $('#menu-right').animate({left: + menu_wrapper_width});
             }
         }
-
-        // if $('#content').hasClass('col')
-        //     ($('#content, .footer').toggleClass('col-lg-offset-0', 'col-lg-offset-1');
-        // $('#content, .footer').toggleClass('col-md-offset-0', 'col-md-offset-1');
-        // $('#content, .footer').toggleClass('col-sm-offset-0', 'col-sm-offset-1');
-        //  else {
-        //     var menu_width = $('#toc_wrapper').width();
-        //     console.log($('#menu').offset().left);
-        //     if ($('#menu').offset().left == 0) {
-        //         $('#menu').animate({left: -menu_width});    
-        //     } else {
-        //         $('#menu').animate({left: 0});
-        //     }
-        //     $('#menu_bar').fadeToggle(1000);
-        //     $('#content, .footer').toggleClass('col-lg-offset-0', 'col-lg-offset-1');
-        //     $('#content, .footer').toggleClass('col-md-offset-0', 'col-md-offset-1');
-        //     $('#content, .footer').toggleClass('col-sm-offset-0', 'col-sm-offset-1');
-        // }
     });
 
 
@@ -181,6 +163,10 @@ $(document).ready(function(){
         }
 
         $('#asd, .delete-underline').fadeOut('3000');
+
+////////UPDATE SCROLLTOP
+        S = $(window).scrollTop();
+        P = S/H;
     });
 
     /////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -506,25 +492,58 @@ $(document).ready(function(){
         }).addClass('remove_highlight');
     });
 
-////APPEND SPANS TO THE COLUMN
+////APPEND P-SPANS TO THE COLUMN
     $('.section p').each(function() {
         $('#par_numbr').append('<div class="p_number"></div>');
         $(this).addClass('paragraph');
     });
 
-
-    var p_id_number = 1;
-    setTimeout(function(){
-        $('.p_number').each(function() {
-            $(this).attr('id', 'pnr'+p_id_number);
-            $('#pnr'+p_id_number).each(function() {
-            //    alert('hello');
-                var p_offset = $('#p'+p_id_number).offset().top;
-                $(this).offset({top: p_offset}).text(p_id_number);
+    function alignParagraphNumbers() {
+        var p_id_number = 1;
+        setTimeout(function(){
+            $('.p_number').each(function() {
+                $(this).attr('id', 'pnr'+p_id_number);
+                $('#pnr'+p_id_number).each(function() {
+                    var p_id = $('#p'+p_id_number);
+                    if (p_id) {
+                        var p_offset = $(p_id).offset().top;
+                        $(this).offset({top: p_offset}).text(p_id_number);
+                    }
+                });
+                p_id_number++;
             });
-            p_id_number++;
-        });
-    }, 3000);
+        }, 3000);
+    }
+
+    alignParagraphNumbers();
+
+
+
+//     function keepReadingPosition() {
+//         var windowHeight = $(window).height();
+//         var scrollTop = $(document).scrollTop();                    // height of scroll on top (=0)
+//         var bottom = $(document).height() - windowHeight;           // heigth from top at the end of doc
+//         var verticalBar = (scrollTop / bottom)*windowHeight;
+
+// ///
+//         var newWindowHeight = $(window).height();
+//         var newBottom = $(document).height() - newWindowHeight;
+//         var newScrollTop = verticalBar * newBottom / newWindowHeight;
+
+
+
+//         $('html, body').stop().animate({
+//             scrollTop: newScrollTop
+//         }, 2000, 'easeInOutQuart');
+//     }
+
+
+
+
+
+
+
+
 
 ////CITE BUTTON
     $('#menu-right h4 a').each(function() {
@@ -762,7 +781,7 @@ $(document).ready(function(){
 //////////////////////
     var keywords = ['capitalism', 'capital', 'creativity', 'art', 'contemporary', 'culture', 'ideological', 'social', 'labor', 'attention', 'image', 'production', 'capitalism', 'art', 'state', 'life', 'public', 'city', 'economics', 'production', 'development', 'art', 'social', 'avant-garde', 'world', 'big', 'Other', 'art', 'urban', 'cultural', 'project', 'creativity', 'Belgrade', 'Rog', 'capital', 'creative', 'collective', 'urban', 'factory', 'gentrification', 'art', 'political', 'social', 'culture', 'autonomy', 'public', 'work'];
 
-    $('.btn-default').each(function(m){
+    $('.keyword-button').each(function(m){
         $('#keyword_toggle'+m).each(function() {
             $(this).click(function() {
                 // console.log(keywords[m]);
@@ -780,9 +799,9 @@ $(document).ready(function(){
     });
 
 
-    ///////////////////////////////////////
-    ////ANIMATION SCROLL ON MENU ITEM CLICK
-    ///////////////////////////////////////
+///////////////////////////////////////
+////ANIMATION SCROLL ON MENU ITEM CLICK
+///////////////////////////////////////
     $('a.page-scroll').bind('click', function(e) {
         var $anchor = $(this);
         $('html, body').stop().animate({
@@ -791,10 +810,11 @@ $(document).ready(function(){
         e.preventDefault();
     });
 
-    ////////////////////
-    ////ARROW NAVIGATION
-    ////////////////////
+////////////////////
+////ARROW NAVIGATION
+////////////////////
 
+////ON ARROW-DOWN CLICK SCROLL TO NEXT SECTION
     $('#down').on('click', function (e) {
         // var scrollTop = $(document).scrollTop();
         e.preventDefault(); 
@@ -822,7 +842,7 @@ $(document).ready(function(){
     });
 
 
-
+////ON ARROW-UP CLICK SCROLL TO PREVIOUS SECTION
     $('#up').on('click', function (e) {
         e.preventDefault();	
         ////////SET DATA-TOP FOR EVERY SECTION
@@ -852,6 +872,7 @@ $(document).ready(function(){
 /////////////
 ////SIDENOTES
 /////////////
+
 ////FOCUS ON RESPECTIVE SIDENOTE WHEN ANCHOR CLICKED
     $('a sup').click(function(ev){
         // var numbr = $(this).attr('href').substr(3, 4);
@@ -869,24 +890,30 @@ $(document).ready(function(){
         $('#fnref'+sideNr).effect('highlight', {color:'rgb(255, 213, 203)'}, 2000);
     });
 
+////FADES OUT SIDENOTES AND SLIDES THEM RIGHT
     function fadeOutSidenotes() {
         $('.sidenote').animate({
             opacity: 0,
+            // position: 'absolute',
             left: '+=40px'
+            // 'margin-right': '+=40px'
         }, 100);
     }
 
+////FADES IN SIDENOTES AND SLIDES THEM LEFT
     function fadeInSidenotes() {
         // $('#menu_bar').fadeToggle(function(){
         $('.sidenote').animate({
             opacity: 1,
+            // position: 'absolute',
             left: '-=40px'
+            // 'margin-right': '-=40px'
         }, 3000);
         // });
     }
 
 
-    ////SIDENOTES BECOME TIP BOXES IF SCREEN IS SMALL, AND THEY ARE CENTERED
+////SIDENOTES BECOME TIP BOXES IF SCREEN IS SMALL, AND THEY ARE CENTERED
     function sideToBox() {
         if ($(window).width() < "768") {	//SUBSTITUTE '400' WITH THE DESIRED MINIMUM SIZE
             $("a sup").each(function(){
@@ -900,7 +927,7 @@ $(document).ready(function(){
         }
     }
 
-    ////MAKES FOOTNOTES SIDENOTES
+////MAKES FOOTNOTES SIDENOTES
     function alignSidenotes() {
         $('.sidenote').each(function(tic){
             $('#fn'+tic).each(function(){
@@ -912,14 +939,14 @@ $(document).ready(function(){
 
 
 
-    ////ALIGN SIDENOTES VERTICALL SO THEY DON'T OVERLAP
+////ALIGN SIDENOTES VERTICALL SO THEY DON'T OVERLAP
     function alignVertically() {
         $('.sidenote').each(function(count){
             $('#fn'+count).each(function() {
 
                 var sideTop = $(this).offset().top;
                 var sideBottom = sideTop+$(this).height();
-                var newHeight = (sideBottom+5);
+                var newHeight = (sideBottom+10);
                 var sideNext = $('#fn'+(count+1));
                 if (sideNext) {
                     var sideNextTop = sideNext.offset().top;
@@ -933,47 +960,83 @@ $(document).ready(function(){
 
     sideToBox();
 
-
+// console.log($(document).scrollTop());
 /*///////////////////////
 ON RESIZE DO THESE THINGS
 ///////////////////////*/
+    var html = $('html'),
+        H = html.outerHeight(true);
+        S = $(window).scrollTop(),
+        P = S/H;
+
     $(window).resize(function() {
-        ////////ALIGNS SIDENOTES ON WINDOW RESIZE
+////////ALIGNS SIDENOTES ON WINDOW RESIZE
+        // var keepScrollTop = $(document).scrollTop();
+        // console.log(keepScrollTop);
         fadeOutSidenotes();
         sideToBox();
         alignSidenotes();
         alignVertically();
+        alignParagraphNumbers();
         fadeInSidenotes();
+        H = html.outerHeight(true);
+        $(window).scrollTop(P*H);
+        // $('html, body').animate({
+        //     scrollTop: keepScrollTop
+        // }, 2000, 'easeInOutQuart');
     });
 
 
-    ////////////////////
-    ////CHANGE FONT SIZE
-    ////////////////////
 
-    ////DECREASE FONT SIZE AND ALIGN SIDENOTES
+        
+
+
+
+
+////////////////////
+////CHANGE FONT SIZE
+////////////////////
+
+////DECREASE FONT SIZE AND ALIGN SIDENOTES
     $('#button_fontsizeminus').click(function(){
         fadeOutSidenotes();
+        // var keepScrollTop = $(window).scrollTop();
+        // console.log(keepScrollTop);
         var fontSize = parseInt($(".section").css('font-size'));
         $('.section').not('.references').animate({'font-size': '-=0.5'}, function() {
             alignSidenotes();
             alignVertically();
+            alignParagraphNumbers();
         });
         fadeInSidenotes();
+        H = html.outerHeight(true);
+        S = $(window).scrollTop();
+        P = S/H;
+        // $('html, body').stop().animate({
+        //     scrollTop: keepScrollTop
+        // }, 2000, 'easeInOutQuart');
     });
 
-    ////INCREASE FONT SIZE AND ALIGN SIDENOTES
+////INCREASE FONT SIZE AND ALIGN SIDENOTES
     $('#button_fontsizeplus').click(function(){
         fadeOutSidenotes();
+        // var keepScrollTop = $(window).scrollTop();
         var fontSize = parseInt($(".section").css('font-size'));
         $('.section').animate({'font-size': '+=0.5'}, function() {
             alignSidenotes();
             alignVertically();
+            alignParagraphNumbers();
         });
         fadeInSidenotes();
+        H = html.outerHeight(true);
+        S = $(window).scrollTop();
+        P = S/H;
+        // $('html, body').stop().animate({
+        //     scrollTop: keepScrollTop
+        // }, 2000, 'easeInOutQuart');
     });
 
-    ////TOOLTIP AND POPOVER
+////TOOLTIP AND POPOVER
     $('[data-toggle="tooltip"]').tooltip(); 
     $('[data-toggle="popover"]').popover(); 
 
