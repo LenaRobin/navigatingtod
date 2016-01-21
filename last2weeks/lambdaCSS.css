@@ -358,13 +358,19 @@ Defines the typography for texts in reader */
     color: black;
     
 }
+
+.section p, .section h2, .section h3, .section h1, .section img{
+    margin:0 auto;
+    max-width: 580px;
+
+}
 /* Title of big part */
 .section h2 {
 	margin-left: 0;
 	margin-bottom: 0px;
     padding-bottom: 20px;
 	padding-right: 0;
-	padding-top: 7%;
+	padding-top: 5%;
 	font-size: 5em;
 	line-height: 1.1em;
     -webkit-margin-before: 0em;
@@ -376,13 +382,13 @@ Defines the typography for texts in reader */
     letter-spacing: 2%;
     border-top: 1px solid #dbdbdb;
     color: black;
-    margin-top: 20%;
+    margin-top: 14%;
 }
-
+/* 
 .section > h2:first-child{
     margin-top: 7%;
 
-}
+} */
 
 .shadow{
  /*    height: 400px;
@@ -418,6 +424,9 @@ Defines the typography for texts in reader */
     max-width: 580px;
     margin-bottom: 0px;
 }
+
+
+
 
 p + p{ 
     text-indent: 2.5em;
@@ -508,8 +517,8 @@ p + p{
     break-inside: avoid-column;         /* IE 11 */
     text-indent: 0px;
     margin-bottom: 1em;
-    text-indent:-1em;
-    padding-left: 1em;
+/*     text-indent:-1em;
+    padding-left: 1em; */
     
 }
 
@@ -561,20 +570,23 @@ img {
 	margin-bottom: 20px;
 }
 
-img.grayscale {
+.section img{
+    margin-top:30px;
+}
+/* img.grayscale {
     filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
-    /*  Firefox 3.5+, IE10 */
-    filter: gray; /*  IE6-9 */
-    -webkit-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
-    -webkit-transition: all .1s ease; /* Fade to color for Chrome and Safari */
-    -webkit-backface-visibility: hidden; /* Fix for transition flickering */
+    Firefox 3.5+, IE10
+    filter: gray; IE6-9
+    -webkit-filter: grayscale(100%); Chrome 19+ & Safari 6+
+    -webkit-transition: all .1s ease; Fade to color for Chrome and Safari
+    -webkit-backface-visibility: hidden; Fix for transition flickering
 }
 
 img.grayscale:hover {
     filter: none;
     -webkit-filter: grayscale(0%);
 }
-
+ */
 .section .img-caption{
     font-size: 14px;
     margin-bottom: 30px;
@@ -653,10 +665,50 @@ body {
     background: linear-gradient(to bottom,  rgba(255,255,255,1) 50%,rgba(244,244,244,1) 67%,rgba(214,214,214,1) 100%); W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d6d6d6',GradientType=0 ); IE6-9
  */
+
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f4f4f4+30,f4f4f4+56,ff3300+100&1+0,0.05+42,0.05+83,0.29+93,0.29+99 */
+    background: -moz-linear-gradient(top,  rgba(244,244,244,1) 0%, rgba(244,244,244,0.32) 30%, rgba(244,244,244,0.05) 42%, rgba(244,244,244,0.05) 56%, rgba(251,126,94,0.05) 83%, rgba(253,82,39,0.29) 93%, rgba(255,55,6,0.29) 99%, rgba(255,51,0,0.29) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(244,244,244,1) 0%,rgba(244,244,244,0.32) 30%,rgba(244,244,244,0.05) 42%,rgba(244,244,244,0.05) 56%,rgba(251,126,94,0.05) 83%,rgba(253,82,39,0.29) 93%,rgba(255,55,6,0.29) 99%,rgba(255,51,0,0.29) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(244,244,244,1) 0%,rgba(244,244,244,0.32) 30%,rgba(244,244,244,0.05) 42%,rgba(244,244,244,0.05) 56%,rgba(251,126,94,0.05) 83%,rgba(253,82,39,0.29) 93%,rgba(255,55,6,0.29) 99%,rgba(255,51,0,0.29) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f4f4', endColorstr='#4aff3300',GradientType=0 ); /* IE6-9 */
+
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+24,f4f4f4+45,f4f4f4+56,d8d8d8+100 */
+    background: rgb(255,255,255); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(255,255,255,1) 24%, rgba(244,244,244,1) 45%, rgba(244,244,244,1) 56%, rgba(216,216,216,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 24%,rgba(244,244,244,1) 45%,rgba(244,244,244,1) 56%,rgba(216,216,216,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 24%,rgba(244,244,244,1) 45%,rgba(244,244,244,1) 56%,rgba(216,216,216,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d8d8d8',GradientType=0 ); /* IE6-9 */
+
+    
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f4f4f4+0,ffffff+12,ffffff+34,f4f4f4+56,d8d8d8+100 */
+    background: rgb(244,244,244); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(244,244,244,1) 0%, rgba(255,255,255,1) 12%, rgba(255,255,255,1) 34%, rgba(244,244,244,1) 56%, rgba(216,216,216,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(244,244,244,1) 0%,rgba(255,255,255,1) 12%,rgba(255,255,255,1) 34%,rgba(244,244,244,1) 56%,rgba(216,216,216,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(244,244,244,1) 0%,rgba(255,255,255,1) 12%,rgba(255,255,255,1) 34%,rgba(244,244,244,1) 56%,rgba(216,216,216,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f4f4', endColorstr='#d8d8d8',GradientType=0 ); /* IE6-9 */
+
+    
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f4f4f4+0,f4f4f4+25,ffffff+43,ffffff+58,f4f4f4+73,d8d8d8+100 */
+    background: #f4f4f4; /* Old browsers */
+    background: -moz-linear-gradient(top,  #f4f4f4 0%, #f4f4f4 25%, #ffffff 43%, #ffffff 58%, #f4f4f4 73%, #d8d8d8 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #f4f4f4 0%,#f4f4f4 25%,#ffffff 43%,#ffffff 58%,#f4f4f4 73%,#d8d8d8 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #f4f4f4 0%,#f4f4f4 25%,#ffffff 43%,#ffffff 58%,#f4f4f4 73%,#d8d8d8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f4f4', endColorstr='#d8d8d8',GradientType=0 ); /* IE6-9 */
+
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f4f4f4+0,fcfcfc+48,f4f4f4+100,f4f4f4+100 */
+    background: #f4f4f4; /* Old browsers */
+    background: -moz-linear-gradient(top,  #f4f4f4 0%, #fcfcfc 48%, #f4f4f4 100%, #f4f4f4 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #f4f4f4 0%,#fcfcfc 48%,#f4f4f4 100%,#f4f4f4 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #f4f4f4 0%,#fcfcfc 48%,#f4f4f4 100%,#f4f4f4 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f4f4', endColorstr='#f4f4f4',GradientType=0 ); /* IE6-9 */
+
+
         background-attachment: fixed;
         color: black;
         overflow-x: hidden;
     text-rendering: optimizeSpeed;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+
     }	
 
 /*******THE CONTENT********************/
@@ -778,15 +830,16 @@ a.page-scroll:hover, a.page-scroll:active, a.page-scroll:link, a.page-scroll:vis
 #toc_wrapper{
     margin: 0px;
     padding: 0px;
-    margin-right: 20px;
+    /* margin-right: 20px; */
     height: 100%;
     overflow-x: hidden;
     overflow-y: scroll;
     left: 0;
-    background-color:white;
-    border-right: 1px solid #d8d8d8;
-    padding-bottom: 40px;
+    background-color: white;
+  /*  border-right: 1px solid #d8d8d8; */
+    padding-bottom: 4%;
     position: absolute;
+    -ms-overflow-style: none;
 }
 
 #toc_wrapper::-webkit-scrollbar {
@@ -794,57 +847,109 @@ a.page-scroll:hover, a.page-scroll:active, a.page-scroll:link, a.page-scroll:vis
 }
 
 #menu-right-wrapper {
-    /*margin-left: 20px;    */
+    padding-top: 13%;
+    padding-left:5%;
+    padding-right: 5%;
 }
 
 .toggle_menu {
-    padding: 1px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    font-size: 18px;
-    color:#8e8e8e;
-    vertical-align: middle;
-    top:45%;
-    z-index: 99999999999999999999999999999999;
-    height: auto;
-    right: 0px;
-    position: absolute;
-    
-    border-radius: 4px;
-    background-color: #f4f4f4;
-    border:none;
-}
-
-
-.toggle_menu_right {
-
-    padding: 1px;
     padding-top: 10px;
     padding-bottom: 10px;
     font-size: 18px;
     color: white;
     vertical-align: middle;
     z-index: 99999999999999999999999999999999;
+    right: -4%;
+    position: absolute;
+    border-left: 0px solid black;
+    width: 4%;
     height: 100%;
-    left: -50px;
+    /* background-color: red; */
+}
+
+.toggle_menu_left_button{
+    width: 999PX;
+    height: 0px;
+    bottom: 4%;
+    left: 60%;
+    -ms-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    -ms-transform-origin: 20% 40%;
+    -webkit-transform-origin: 0% 40%;
+    transform-origin: 0% 40%; 
+    color: black;
+    text-overflow: clip;
+    position: absolute;
+    font-size: 15px;
+    text-overflow: ellipsis;
+    z-index: 99999999999999999999999999999999;
+    font-style: italic;
+        
+    font-family: "HKGroteskbold";
+/*        text-transform: uppercase;
+        */    
+    font-size: 14px;
+    vertical-align: middle;
+    align-content: center;    
+    align-items: center;
+}
+
+.toggle_menu_left_button:hover, .toggle_menu_left_button div:hover{
+    cursor: pointer;
+}
+
+.toggle_menu_left_button div{
+    width: 50%;
+    margin-top:0.5%;
+    z-index: 99999999999999999999999999999999;
+    
+
+}
+
+.toggle_menu_right {
+    padding: 1px;
+    padding-top: 55%;
+    /* margin-right: 60%; */
+    padding-bottom: 10px;
+    font-size: 18px;
+    color: white;
+    vertical-align: middle;
+    z-index: 99999999999999999999999999999999;
+    height: 100%;
+    left: -24%;
     position: absolute;
     background-color: white;
-    border-left:0px solid black;
-    width: 50px;
+    border-left: 0px solid black;
+    width: 24%;
+    /* -webkit-box-shadow: -16px 0px 39px 1px rgba(255,51,0,0.51); */
+    /* -moz-box-shadow: -16px 0px 39px 1px rgba(255,51,0,0.51); */
+    /* box-shadow: -16px 0px 39px 1px rgba(255,51,0,0.51); */
 }
 
 .toggle_menu_right .toggle_menu_right_button{
-    width:130px;
-    height:50px;
-    -ms-transform:rotate(270deg); /* IE 9 */
-    -moz-transform:rotate(270deg); /* Firefox */
-    -webkit-transform:rotate(270deg); /* Safari and Chrome */
-    -o-transform:rotate(270deg); /* Opera */
-    color:black;
+
+    width: 130px;
+    /* height: 50px; */
+    /* margin-top: 50%; */
+    height: auto;
+    padding-right: 50%;
+    -ms-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform-origin: 20% 40%;
+    -webkit-transform-origin: 20% 40%;
+    transform-origin: 20% 40%;
+    color: black;
+    font-family: "HKGroteskbold";
+    text-transform: uppercase;
+    font-size: 15px;
 }
 
-.toggle_menu a:hover, .toggle_menu_right a:hover {
-    color:#8e8e8e;
+.toggle_menu_right:hover{
+
 }
 
 
@@ -899,41 +1004,47 @@ Table of content is contained in pushmenu, it shows the different parts of the b
 ********OPENS UP THE MENU********/
 #menu_bar {
     display: none;
+    /* 
     z-index: 999999999999999999;
-    background-color: white;
-	height: 100%;
-    width: 1%;
+     */
+    /*     background-color: white;
+     */	
+    height: 100%;
     position: fixed;
     color: black;
+    width: 4%;
+    background: rgba(255, 51, 0, 0.2); 
+    background:white;
+
+    
 }
 
 /*******VERTICAL SCROLL BAR*******/
 #menu_bar_scroll {	
     height: 0%;
-    width: 1%;
+    width: 1.8%;
     position: fixed;	
-    background: rgba(255, 51, 0, 0.8); 
-    /* For browsers that do not support gradients */
-/* 
-    background: -webkit-linear-gradient(#f30, rgb(255, 213, 203)); For Safari 5.1 to 6.0
-    background: -o-linear-gradient(#f30, rgb(255, 213, 203)); For Opera 11.1 to 12.0
-    background: -moz-linear-gradient(#f30, rgb(255, 213, 203)); For Firefox 3.6 to 15
-    background: linear-gradient(#f30, rgb(255, 213, 203)); Standard syntax  */
+    background:#d8d8d8;
+    background:white;
+    background: black;
 }
 
-#menu_bar_title{
-    width: 1%;
-    height: 100%;
-    /* Safari */
-    -webkit-transform: rotate(-90deg);
-    /* Firefox */
-    -moz-transform: rotate(-90deg);
-    /* IE */
-    -ms-transform: rotate(-90deg);
-    /* Opera */
-    -o-transform: rotate(-90deg);
-    /* Internet Explorer */
-    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+#menu_bar_title_button{
+        width:400px;
+        height:50px;
+        margin-top:50px;
+        -ms-transform:rotate(270deg); /* IE 9 */
+    -moz-transform:rotate(270deg); /* Firefox */
+    -webkit-transform:rotate(270deg); /* Safari and Chrome */
+    -o-transform:rotate(270deg); /* Opera */
+    text-align: right;
+/*         -ms-transform-origin: 10% 100%; IE 9
+        -webkit-transform-origin: 10% 100%; Chrome, Safari, Opera
+        transform-origin: 10% 100%;
+         */
+    font-size: 18px;
+
+        color:black;
 }
 
 
@@ -1623,22 +1734,22 @@ f
     }
 
 
-
 /********************************************
 ********FOOT-/SIDENOTES**********************
 ********************************************/
 #sidenote-wrapper {
     margin-left: 2%;
-    width: 13%;
-    /*padding-right: 2%;*/
-/*     background-color:white;
+    width: 15%;
+/*     width: 13%;
+     */    /*padding-right: 2%;*/
+    /*     background-color:white;
     height: 999999999999999999999999999px; */
     height: auto;
 }
 
 #chapter8 {
 
-    
+
 
 }
 
@@ -1652,10 +1763,7 @@ f
     list-style-type: none;
 }
 
-#chapter8 ol li { 
-    display: inline-block;
-    float: left;
-}
+
 
 #chapter8 ol li:before { 
     content: counter(item) ""; 
@@ -1670,6 +1778,8 @@ f
     line-height: 1.2em;
     /* border-radius: 8px; */
     font-family: "HKGroteskBold";
+    display: inline-block;
+    float: left;
 }
 
 #chapter8 ol li p{
@@ -1678,16 +1788,25 @@ f
     font-weight: normal;
     font-size: 12px;
     line-height: 1.1em;
+    table-layout: fixed;
+    overflow: hidden;
+    -ms-hyphens:auto;
+    hyphens: auto;
+    -ms-hyphenate-limit-lines:no-limit;
+    hyphenate-limit-lines:no-limit;
+    word-break: normal;
+    word-wrap: break-word;
 }
 
 #chapter8 ol li p a{
     color:black;
-/*     text-decoration: underline;
-     */    
     font-family: "HKGroteskbold";
     word-wrap:break-word;
     hyphens: auto;
+    -ms-hyphens:auto;
     word-break: break-all;
+    -ms-word-break:break-all;
+    white-space: pre-wrap;
 }
 
 #chapter8 ol li p a:hover{
@@ -1700,6 +1819,7 @@ f
     -webkit-margin-after: 3px;
     padding: 2px;
     padding-top: 4px;
+    max-width: 100%;
     border-radius: 5px;
 }
 
@@ -1719,6 +1839,7 @@ f
 .focusSidenote{
     opacity: .7;
 }
+
 
 
 
@@ -1880,20 +2001,16 @@ ol {
 
 #menu-right{
     position: fixed;
-    right:0px;
+    right: 0px;
     left: auto;
-    /*padding:10px;*/
+    /* padding: 10px; */
+    /* margin: 0px; */
+    padding: 0px;
     height: 100%;
-/*     background-color:  #f4f4f4;
-    background-color:rgba(255, 78, 0, 0.25); */
-    border:none;
-    background-color:white;
-
-    /* 
-    border-left: 1px solid #d8d8d8;
-     */
+    border: none;
+    background-color: white;
+    /* border-left: 1px solid #d8d8d8; */
     font-family: "HKGrotesk";
-
 }
 
 #menu-right .panel-group, #menu-right .panel-group:hover, #menu-right .panel-group:focus, #menu-right .panel-group:active{
@@ -1901,6 +2018,8 @@ ol {
     background-color: transparent;
     border:none;
     color: black;
+    padding: 0px;
+    margin: 0px;
 }
 
 
