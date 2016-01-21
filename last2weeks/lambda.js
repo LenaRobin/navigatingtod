@@ -2,7 +2,7 @@ $(document).ready(function(){
     //////////////////////////////////////////////////////////////////////////////////
     ////PUSH MENU ON THE LEFT
     //////////////////////////////////////////////////////////////////////////////////
-$('.toggle_menu_right').on('click', function() {
+    $('.toggle_menu_right').on("mouseover", function() {
         if ($(window).width() >= "768") {
             var window_width = $(window).width();
             var menu_wrapper_width = $('#menu-right-wrapper').outerWidth();

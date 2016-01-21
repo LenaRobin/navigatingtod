@@ -17,4 +17,9 @@
 - reference this
 - /!\  bugs on xs menu functions
 - close menu when loading
+- columns for menu on xs
+- columns for menu on xs
+- columns for menu on xs
+- columns for menu on xs
+- columns for menu on xs
 
