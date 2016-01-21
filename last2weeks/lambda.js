@@ -579,19 +579,8 @@ $('.toggle_menu_right').on('click', function() {
     var pleft;
     var pObj;
 
+////UPDATES THE INFO IN THE PINS ARRAY
     function checkPin(pinID) {
-        // var found = pins.some(function (el) {
-        //     // update value of field
-        //     el.value = t;
-        //     // update position as well
-        //     el.top = ptop;
-        //     el.left = pleft;
-        //   return el.id === pinID;
-        // });
-        // // console.log(found);
-        // if (!found) {
-        //     pins.push(pObj);
-        // }
         if(pins.length > 0){
             for(var i=0; i<pins.length;i++){
                 if(pins[i]["id"] == pinID){
@@ -608,10 +597,10 @@ $('.toggle_menu_right').on('click', function() {
             console.log(pins);
         }else{
           pins.push(pObj);   
-        }
-        
+        } 
     }
 
+////UPDATES INFO ABOUT PINS WHEN MOVED
     function pinMoved(){
         pinID = $(this).attr("id");
         var found = pins.some(function (el) {
