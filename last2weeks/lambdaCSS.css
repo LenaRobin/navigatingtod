@@ -59,13 +59,13 @@ Easy changes :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-
 /* Background-color of text on selection */
 ::-moz-selection {
       color: #000;
-    background-color:#ffdbd2;
+    background-color:rgba(255, 255, 0, 0.24);
 
 }
 
 ::selection {
       color: #000;
-    background-color:#ffdbd2;
+    background-color:rgba(255, 255, 0, 0.24);
 
     
 }
@@ -109,23 +109,74 @@ hr{
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f4f4', endColorstr='#ffffff',GradientType=0 ); IE6-9
      */
     
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+15,f4f4f4+48,d6d6d6+100 */
-    background: rgb(255,255,255); /* Old browsers */
-    background: -moz-linear-gradient(top,  rgba(255,255,255,1) 15%, rgba(244,244,244,1) 48%, rgba(214,214,214,1) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 15%,rgba(244,244,244,1) 48%,rgba(214,214,214,1) 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom,  rgba(255,255,255,1) 15%,rgba(244,244,244,1) 48%,rgba(214,214,214,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d6d6d6',GradientType=0 ); /* IE6-9 */
-
+/*     Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+15,f4f4f4+48,d6d6d6+100
+    background: rgb(255,255,255); Old browsers
+    background: -moz-linear-gradient(top,  rgba(255,255,255,1) 15%, rgba(244,244,244,1) 48%, rgba(214,214,214,1) 100%); FF3.6-15
+    background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 15%,rgba(244,244,244,1) 48%,rgba(214,214,214,1) 100%); Chrome10-25,Safari5.1-6
+    background: linear-gradient(to bottom,  rgba(255,255,255,1) 15%,rgba(244,244,244,1) 48%,rgba(214,214,214,1) 100%); W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d6d6d6',GradientType=0 ); IE6-9
     
-    
-    background-attachment: fixed;
+     */
     z-index: 44444444444;
     position: relative;
     text-rendering: optimizeSpeed;
-    color: black;
     padding-left:15px;
-    background: white;
-    border-bottom: 1px solid #d8d8d8;
+    color:white;
+    background: #f30;
+/*     background-image: -moz-linear-gradient(45deg, #f30 25%, transparent 25%), 
+        -moz-linear-gradient(-45deg, #f30 25%, transparent 25%), 
+        -moz-linear-gradient(45deg, transparent 75%, #f30 75%), 
+        -moz-linear-gradient(-45deg, transparent 75%, #f30 75%);
+    background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(.25, #f30), color-stop(.25, transparent)), 
+        -webkit-gradient(linear, 0 0, 100% 100%, color-stop(.25, #f30), color-stop(.25, transparent)), 
+        -webkit-gradient(linear, 0 100%, 100% 0, color-stop(.75, transparent), color-stop(.75, #f30)), 
+        -webkit-gradient(linear, 0 0, 100% 100%, color-stop(.75, transparent), color-stop(.75, #f30));
+    background-image: -webkit-linear-gradient(45deg, #f30 25%, transparent 25%), 
+        -webkit-linear-gradient(-45deg, #f30 25%, transparent 25%), 
+        -webkit-linear-gradient(45deg, transparent 75%, #f30 75%), 
+        -webkit-linear-gradient(-45deg, transparent 75%, #f30 75%);
+    background-image: -o-linear-gradient(45deg, #f30 25%, transparent 25%), 
+        -o-linear-gradient(-45deg, #f30 25%, transparent 25%), 
+        -o-linear-gradient(45deg, transparent 75%, #f30 75%), 
+        -o-linear-gradient(-45deg, transparent 75%, #f30 75%);
+    background-image: linear-gradient(45deg, #f30 25%, transparent 25%), 
+        linear-gradient(-45deg, #f30 25%, transparent 25%), 
+        linear-gradient(45deg, transparent 75%, #f30 75%), 
+        linear-gradient(-45deg, transparent 75%, #f30 75%);
+    -moz-background-size: 2px 2px;
+    background-size: 2px 2px;
+    -webkit-background-size: 2px 2.1px; override value for webkit
+    background-position: 0 0, 1px 0, 1px -1px, 0px 1px;
+    border: 1px solid #f30; */
+    padding-bottom: 2%;
+    -webkit-box-shadow: 0px 10px 59px 38px rgba(255, 51, 0, 0.31);
+    -moz-box-shadow: 0px 10px 59px 38px rgba(255, 51, 0, 0.31);
+    box-shadow: 0px 10px 59px 38px rgba(255, 51, 0, 0.31);
+    border-bottom: 1px solid #f30;
+/*     background-image: -moz-linear-gradient(45deg, #f30 25%, transparent 25%), 
+        -moz-linear-gradient(-45deg, #f30 25%, transparent 25%), 
+        -moz-linear-gradient(45deg, transparent 75%, #f30 75%), 
+        -moz-linear-gradient(-45deg, transparent 75%, #f30 75%);
+    background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(.25, #f30), color-stop(.25, transparent)), 
+        -webkit-gradient(linear, 0 0, 100% 100%, color-stop(.25, #f30), color-stop(.25, transparent)), 
+        -webkit-gradient(linear, 0 100%, 100% 0, color-stop(.75, transparent), color-stop(.75, #f30)), 
+        -webkit-gradient(linear, 0 0, 100% 100%, color-stop(.75, transparent), color-stop(.75, #f30));
+    background-image: -webkit-linear-gradient(45deg, #f30 25%, transparent 25%), 
+        -webkit-linear-gradient(-45deg, #f30 25%, transparent 25%), 
+        -webkit-linear-gradient(45deg, transparent 75%, #f30 75%), 
+        -webkit-linear-gradient(-45deg, transparent 75%, #f30 75%);
+    background-image: -o-linear-gradient(45deg, #f30 25%, transparent 25%), 
+        -o-linear-gradient(-45deg, #f30 25%, transparent 25%), 
+        -o-linear-gradient(45deg, transparent 75%, #f30 75%), 
+        -o-linear-gradient(-45deg, transparent 75%, #f30 75%);
+    background-image: linear-gradient(45deg, #f30 25%, transparent 25%), 
+        linear-gradient(-45deg, #f30 25%, transparent 25%), 
+        linear-gradient(45deg, transparent 75%, #f30 75%), 
+        linear-gradient(-45deg, transparent 75%, #f30 75%);
+    -moz-background-size: 2px 2px;
+    background-size: 2px 2px;
+    -webkit-background-size: 2px 2.1px; override value for webkit
+    background-position: 0 0, 1px 0, 1px -1px, 0px 1px; */
 }
 
 #info-box-inside-container{
@@ -140,6 +191,8 @@ hr{
     color: #f30;
     height: auto;
     border: 1px solid #f30;
+    
+    
 }
 
 #info-box-inside-container:hover{
@@ -305,21 +358,17 @@ hr{
 
 #info-box a{
     font-family: "HKGrotesk";
-    background-color: rgba(0, 0, 0, 0.19);
-    border-radius:5px;
-    padding: 5px;
-    padding-top:2px;
-    padding-bottom: 2px;
-    margin-right:4px;
+    color: #8e8e8e;
     cursor: pointer;
-    white-space: nowrap;
-    word-break: keep-all;
-    line-height: 2em;
+    text-decoration: underline;
 }
 
 #info-box a:hover{
     font-family: "HKGrotesk";
-    background-color: #dbdbdb;
+    color: #8e8e8e;
+    cursor: pointer;
+    text-decoration: underline;
+/*     background-color: #dbdbdb;
     color: black;
     border-radius:5px;
     padding: 5px;
@@ -329,7 +378,8 @@ hr{
     cursor: pointer;
     white-space: nowrap;
     word-break: keep-all;
-    line-height: 2em;
+    line-height: 2em; */
+    
 }
 
 #info-box .info-box-column-header{
@@ -370,7 +420,7 @@ Defines the typography for texts in reader */
 	margin-bottom: 0px;
     padding-bottom: 20px;
 	padding-right: 0;
-	padding-top: 5%;
+	padding-top: 4.8%;
 	font-size: 5em;
 	line-height: 1.1em;
     -webkit-margin-before: 0em;
@@ -384,11 +434,11 @@ Defines the typography for texts in reader */
     color: black;
     margin-top: 14%;
 }
-/* 
-.section > h2:first-child{
-    margin-top: 7%;
 
-} */
+#chapter1 h2{
+    margin-top: 2%;
+    border-top: 0px solid #dbdbdb;
+}
 
 .shadow{
  /*    height: 400px;
@@ -418,11 +468,11 @@ Defines the typography for texts in reader */
 
 /* Font-size for the reading text: !! do not change the units (em) to pixels !! */
 .section p {
-    font-size: 2.2em;
+    font-size: 1.9em;
     line-height: 1.55em;
     text-rendering: optimizeLegibility;
     max-width: 580px;
-    margin-bottom: 0px;
+    margin-bottom: 0.15em;
 }
 
 
@@ -743,12 +793,12 @@ a {
 }
 
 .horizScroll {
-    width: 5px;
-    background: #f30; /* For browsers that do not support gradients */
-    /*background: -webkit-linear-gradient(#f30, rgb(255, 213, 203)); For Safari 5.1 to 6.0
-    background: -o-linear-gradient(#f30, rgb(255, 213, 203)); For Opera 11.1 to 12.0
-    background: -moz-linear-gradient(#f30, rgb(255, 213, 203)); For Firefox 3.6 to 15
-    background: linear-gradient(#f30, rgb(255, 213, 203)); Standard syntax */
+    width: 100%;
+    background-color: rgba(255, 51, 0, 0.13);
+    border-radius: 5px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-left:2px solid #f30;
 }
 
 .horizScroll, .subScroll{
@@ -756,7 +806,6 @@ a {
 }
 
 #toc_wrapper {
-    cursor: pointer;
     margin-top:10px;    
 }
 
@@ -772,23 +821,27 @@ a {
 
 .toc_number{
     text-align: left;
-    font-size: 14px;
-    line-height: 18px;
+    font-size: 12px;
+    line-height: 14px;
     float: left;
     padding-left:4px;
 }
 
 .toc_title{
     margin-left: 20px;
-    font-size: 14px;
-    line-height: 18px;
+    font-size: 12px;
+    font-family: "HKGroteskbold";
+    line-height: 14px;
+    padding-right: 2px;
     margin-bottom: 0px;
+    hyphens: auto;
 }
 
 .toc_author{
     font-size: 11px;
-    line-height: 18px;
+    line-height: 13px;
     margin-left: 20px;
+    padding-bottom: 4px;
 }
 
 
@@ -830,7 +883,7 @@ a.page-scroll:hover, a.page-scroll:active, a.page-scroll:link, a.page-scroll:vis
 #toc_wrapper{
     margin: 0px;
     padding: 0px;
-    /* margin-right: 20px; */
+    margin-right: 20px;
     height: 100%;
     overflow-x: hidden;
     overflow-y: scroll;
@@ -847,7 +900,7 @@ a.page-scroll:hover, a.page-scroll:active, a.page-scroll:link, a.page-scroll:vis
 }
 
 #menu-right-wrapper {
-    padding-top: 13%;
+    padding-top: 8%;
     padding-left:5%;
     padding-right: 5%;
 }
@@ -865,6 +918,14 @@ a.page-scroll:hover, a.page-scroll:active, a.page-scroll:link, a.page-scroll:vis
     width: 4%;
     height: 100%;
     /* background-color: red; */
+}
+
+.toggle_menu:hover #menu_bar{
+    background: rgb(255, 213, 203);
+}
+
+#menu_bar:hover{
+    background: rgb(255, 213, 203);
 }
 
 .toggle_menu_left_button{
@@ -898,11 +959,18 @@ a.page-scroll:hover, a.page-scroll:active, a.page-scroll:link, a.page-scroll:vis
 
 .toggle_menu_left_button:hover, .toggle_menu_left_button div:hover{
     cursor: pointer;
+    
 }
+
+.toggle_menu_left_button div:hover > #menu_bar{
+    background: rgb(255, 213, 203);
+
+}
+
+
 
 .toggle_menu_left_button div{
     width: 50%;
-    margin-top:0.5%;
     z-index: 99999999999999999999999999999999;
     
 
@@ -921,7 +989,6 @@ a.page-scroll:hover, a.page-scroll:active, a.page-scroll:link, a.page-scroll:vis
     left: -24%;
     position: absolute;
     background-color: white;
-    border-left: 0px solid black;
     width: 24%;
     /* -webkit-box-shadow: -16px 0px 39px 1px rgba(255,51,0,0.51); */
     /* -moz-box-shadow: -16px 0px 39px 1px rgba(255,51,0,0.51); */
@@ -955,8 +1022,8 @@ a.page-scroll:hover, a.page-scroll:active, a.page-scroll:link, a.page-scroll:vis
 
 
 .menu-publication-title{
-    margin-top: 10px;
-    margin-left: 20px;
+    padding-top: 8%;
+    padding-left: 5%;
     font-size: 15px;
     line-height: 18px;
     font-family: "HKGroteskbold";
@@ -979,12 +1046,6 @@ Table of content is contained in pushmenu, it shows the different parts of the b
     background-color:white;
     font-size: 14px;
     line-height: 18px;
-    border-bottom: 1px solid #d8d8d8;
-/*  
-    border-radius: 8px;
-    -webkit-box-shadow: 0px 0px 18px 1px rgba(142,142,142,0.08);
-    -moz-box-shadow: 0px 0px 18px 1px rgba(142,142,142,0.08);
-    box-shadow: 0px 0px 18px 1px rgba(142,142,142,0.08); */
     font-family: "HKGrotesk";
 }
 
@@ -1013,21 +1074,19 @@ Table of content is contained in pushmenu, it shows the different parts of the b
     position: fixed;
     color: black;
     width: 4%;
-    background: rgba(255, 51, 0, 0.2); 
-    background:white;
-
-    
+    background: white;
 }
+
+
 
 /*******VERTICAL SCROLL BAR*******/
 #menu_bar_scroll {	
     height: 0%;
     width: 1.8%;
     position: fixed;	
-    background:#d8d8d8;
-    background:white;
-    background: black;
+    background-color:#f30;
 }
+
 
 #menu_bar_title_button{
         width:400px;
@@ -1344,13 +1403,12 @@ z-index:99;
     color:black !important;
 }
 
-.fa-long-arrow-down, .fa-long-arrow-up, .fa-arrow-down, .fa-arrow-up, .fa-chevron-down, .fa-chevron-up{
-    color:#8e8e8e;
+#arrows #up a:focus, #arrows #down a:focus{
+    color:black;
 }
 
-.fa-long-arrow-down:hover, .fa-long-arrow-up:hover, .fa-arrow-down:hover, .fa-arrow-up:hover, .fa-chevron-down:hover, .fa-chevron-up:hover{
-    color:#8e8e8e;
-    
+#arrows #up a:hover, #arrows #down a:hover{
+    color: #f30;
 }
 
 /********************************
@@ -1629,7 +1687,7 @@ input:hover {
 f
 
      .capitalism, .capital, .creativity, .art, .contemporary, .culture, .ideological, .social, .labor, .attention, .image, .production, .capitalism, .art, .state, .life, .public, .city, .economics, .production, .development, .art, .social, .avant-garde, .world, .big, .Other, .art, .urban, .cultural, .project, .creativity, .Belgrade, .Rog, .capital, .creative, .collective, .urban, .factory, .gentrification, .art, .political, .social, .culture, .autonomy, .public, .work {
-         color:mediumblue;
+         color:blue;
          /* 
          color:#f30;
           */
@@ -1639,32 +1697,41 @@ f
 
     .underline {
 
-        background-color:#ffffa5;
+        background-color:rgba(255, 255, 0, 0.49);
     }
 
     .remove_highlight {
         background-color: white;
     }
 
+#pin_wrapper{
+    margin-top: 10px;    
+}
+
     #pin {
-        color: red;
+        color:#5b5b5b;
         position: absolute;
         cursor: move;
+        font-size: 14px;
     }
 
+    #pin:hover{
+        color:rgb(31,173,74);
+}
     /*.pin-clone {
         color: blue;
     }*/
 
     .ui-draggable-handle {
-        color: red;
+        font-size: 10px;
+        color:rgb(31,173,74);
         cursor: move;
         /*z-index: 999999999999999999999999;*/
     }
 
     .pin-form {
         display: none;
-
+        color:rgb(31,173,74);
     }
 
     .pin-input {
@@ -1673,9 +1740,12 @@ f
         font-size: 15px;
         font-family: "Hkgrotesk";
         border-style: none;
-        color: #000;
+        color:rgb(31,173,74) !important;
+        background-color: rgb(223, 255, 232);
         padding: 0;
-        border-bottom: 1px solid #868686;
+        margin-left:2px;
+        border-radius: 0px;
+        border-bottom: 0px solid #868686;
     }
 
     .save-pin {
@@ -1747,14 +1817,8 @@ f
     height: auto;
 }
 
-<<<<<<< HEAD
-#chapter8 {
 
-
-
-=======
 #chapter8 {    
->>>>>>> origin/master
 }
 
 #chapter8 ol {
@@ -1896,7 +1960,7 @@ ol {
     background-color: rgba(28, 51, 229, 0.1);
 /*     background-color:rgba(255, 51, 0, 0.1);
      */    
-    color: mediumblue;
+    color: blue;
 /*     color:#f30;
      */    
     border:none;
@@ -1984,7 +2048,7 @@ ol {
 
 #keyword-show-all{
     background-color: rgba(28, 51, 229, 0.1);
-    color: mediumblue !important;
+    color: blue !important;
     box-shadow: 0 3px 5px rgba(0,0,0,.135);
 }
 
