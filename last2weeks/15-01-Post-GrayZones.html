@@ -417,30 +417,42 @@
     </div>
 
 <!-- –––––––––––––––––––––––––– Menu for XS devices (bottom) –––––––––––––––––––––––––––––––––––––-->
-    <div id="menu-bar-xs" class="hidden-lg hidden-md col-sm-6 col-xs-12">
+    <div id="menu-bar-xs" class="hidden-lg hidden-md col-sm-12 col-xs-12">
 <!--––––––––––––––––––––––––––––––– panel 1: Download –––––––––––––––––––––––––––––––-->
-        <div id="panel" class="hidden-lg hidden-md col-sm-6 col-xs-12">Download this book as:<br>
-            <a href="files/TOD17-GrayZones.pdf" class="extra">.PDF</a> <a href="files/TOD17-GrayZones.epub" class="extra">.Epub</a> <a href="files/TOD17-GrayZones.md" class="extra">.Md</a>                
+        <div id="panel" class="hidden-lg hidden-md col-sm-12 col-xs-12">
+            <div class="panel_container hidden-lg hidden-md col-sm-12 col-xs-12">Download this book as:<br>
+                <a href="files/TOD17-GrayZones.pdf" class="extra">.PDF</a> <a href="files/TOD17-GrayZones.epub" class="extra">.Epub</a> <a href="files/TOD17-GrayZones.md" class="extra">.Md</a>      
+            </div>          
         </div>
 <!--––––––––––––––––––––––––––––––– panel 2: Quote –––––––––––––––––––––––––––––––-->
-        <div id="panel2" class="hidden-lg hidden-md col-sm-6 col-xs-12">Referencing tool<br>
-            Want to cite a paragraph with properly formatted reference?<br>
-            Select your text and its references will appear below:        <p title="Modern Language Association" alt="Modern Language Association">MLA</p>
-            <textarea data-clipboard-target="#mla" class="full-citation" id="mla"></textarea>
+        <div id="panel2" class="hidden-lg hidden-md col-sm-12 col-xs-12">
+            
+            <div class="panel_container hidden-lg hidden-md col-sm-offset-2 col-sm-4 col-xs-6">
+                Referencing tool<br>
+                Select and cite your paragraph with properly formatted reference.
+                <p title="Modern Language Association" alt="Modern Language Association">MLA</p>
+                <textarea data-clipboard-target="#mla" class="full-citation" id="mla"></textarea>
+            </div>
+            
+            <div class="panel_container hidden-lg hidden-md col-sm-4 col-xs-6">
             <p>Chicago Manual of Style</p>
             <textarea data-clipboard-target="#chicago" class="full-citation" id="chicago"></textarea>
             <p title="American Psychological Association" alt="American Psychological Association">APA</p>
             <textarea data-clipboard-target="#apa" class="full-citation" id="apa"></textarea>
+            </div>
+            
         </div>
 <!--––––––––––––––––––––––––––––––– panel 3: Print –––––––––––––––––––––––––––––––-->
-        <div id="panel3" class="hidden-lg hidden-md col-sm-6 col-xs-12">
-            Print this book:
+        <div id="panel3" class="hidden-lg hidden-md col-sm-12 col-xs-12">
+            <div class="panel_container hidden-lg hidden-md col-sm-12 col-xs-12">  Print this book:
             <br>
             <a href="javascript:window.print()" class="extra">Print on your own printer</a>
             <br><a href="http://www.lulu.com/shop/%C5%A1efik-tatli%C4%87-and-gordana-nikoli%C4%87/the-gray-zones-of-creativity-and-capital/paperback/product-22467485.html" class="extra" target="_blank">Print and order on Lulu</a>
+            </div>
         </div>            
 <!--––––––––––––––––––––––––––––––– panel 4: Settings –––––––––––––––––––––––––––––––-->
-        <div id="panel4" class="hidden-lg hidden-md col-sm-6 col-xs-12">
+        <div id="panel4" class="hidden-lg hidden-md col-sm-12 col-xs-12">
+            <div class="panel_container hidden-lg hidden-md col-sm-offset-2 col-sm-4 col-xs-6">
             Font-size
             <span id="button_fontsizeminus" class="extra-btn" value="smaller"><i class="fa fa-font"></i>-</span>
             <span id="button_fontsizeplus" class="extra-btn" value="larger"><i class="fa fa-font"></i>+</span>
@@ -448,24 +460,31 @@
             <hr>
             <span id="keyword-show-all" class="extra-btn">Display keywords <i class="fa fa-tags"></i></span>
 
-            <hr>
+            </div>
+            <div class="panel_container hidden-lg hidden-md col-sm-4 col-xs-6">
             <span id="highlight-show-all" class="extra-btn">Display highlight <i class="fa fa-pencil"></i></span>
             <span id="highlight-remove" class="extra-btn">Remove highlight <i class="fa fa-eraser"></i></span>
 
             <hr>
             <span id="bookmark" class="extra-btn"><i class="fa fa-thumb-tack"></i> Save reading position</span>
+            </div>
         </div>            
 <!--––––––––––––––––––––––––––––––– panel 5: Share –––––––––––––––––––––––––––––––-->
-        <div id="panel5" class="hidden-lg hidden-md col-sm-6 col-xs-12">
+        <div id="panel5" class="hidden-lg hidden-md col-sm-12 col-xs-12">
+            <div class="panel_container hidden-lg hidden-md col-sm-12 col-xs-12">
+
             Share on:
             <br>
             <a href="https://twitter.com/home?status=Take%20a%20look%20at%20this%20publication%20on%20the%20Institute%20of%20Network%20Cultures%20library%20http%3A//www.networkcultures.org/publications/%23tods%20%23INC" class="extra" target="_blank">Twitter</a>
             <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//www.networkcultures.org/publications/%23tods" class="extra" target="_blank">Facebook</a>
             <a href="https://plus.google.com/share?url=http%3A//www.networkcultures.org/publications/%23tods" class="extra" target="_blank">Google+</a><br>
                     Send an email
+            </div>
         </div>
 <!--––––––––––––––––––––––––––––––– panel 6: Search –––––––––––––––––––––––––––––––-->
-        <div id="panel6" class="hidden-lg hidden-md col-sm-6 col-xs-12">
+        <div id="panel6" class="hidden-lg hidden-md col-sm-12 col-xs-12">
+            <div class="panel_container hidden-lg hidden-md col-sm-12 col-xs-12">
+
             <form id="live-search" class="not" action="" method="post">
                 <span id="filter-count"></span>
                 <input type="search"
@@ -481,6 +500,7 @@
                 <div id="search_ui">
                     <button id="cancel"><i class="fa fa-times"></i></button>
                 </div>
+            </div>
             </div>
         </div>
 
