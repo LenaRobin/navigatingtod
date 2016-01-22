@@ -1,5 +1,5 @@
 + tooltip/sidenotes on xs
-- buttons of responsive : pb with text
++ buttons of responsive : pb with text
 + padding on xs
 + references => change column width for sm
 + blockquote p: line-height:1.55em
@@ -21,6 +21,6 @@
 + columns for menu on xs
 + columns for menu on xs
 + columns for menu on xs
-- columns for menu on xs
++ columns for menu on xs
 - right button!!!!
 

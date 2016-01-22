@@ -142,7 +142,7 @@ $(document).ready(function(){
                 if ($(this).height() > 0) { 
                     $(this).parent().css('color', 'black');
                 } else {
-                    $(this).parent().css('color', '#dbdbdb');            
+                    $(this).parent().css('color', '#8e8e8e');            
                 }
             });
 
