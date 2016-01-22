@@ -582,22 +582,52 @@ $(document).ready(function(){
 
 ////UPDATES THE INFO IN THE PINS ARRAY
     function checkPin(pinID) {
-        if(pins.length > 0){
-            for(var i=0; i<pins.length;i++){
-                if(pins[i]["id"] == pinID){
-                    console.log("found at "+ i);
+        // var a = pinID.substr(11);
+        // console.log('pidnr: '+pidnr);
+        console.log('pinID: '+pinID);
+        //ako nije prazno
+        if (pins.length > 0) {
+            //loop through
+            for (var i = 0; i < pins.length; i++) {
+                console.log("pins[i]['id']: "+ pins[i]['id']);
+                //ako je id vec postoji u arrayu
+                if (pinID > pins.length) {
+                    console.log("id not found1: ");
+                    console.log(pins);
+
+                    pins.push(pObj);
+
+                    console.log("id not found2: ");
+                    console.log(pins);
+                } else if(pins[i]["id"] == 'dragged-pin'+pinID){
+                    console.log("id found at "+ i);
                     pins[i]["value"] = t;
                     pins[i]["top"] = ptop;
                     pins[i]["left"] = pleft;
+                    // break;
+                    //ako ne postoji nutri
+                } else {
                     break;
-                }else{
-                     pins.push(pObj);
                 }
-                console.log("here "+pins[i]["value"]);
+                // else{
+                    // console.log("id not found1: ");
+                    // console.log(pins);
+
+                    // pins.push(pObj);
+
+                    // console.log("id not found2: ");
+                    // console.log(pins);
+                    // break;
+                // }
+                console.log("here "+pins[i]['value']);
             }
+            console.log('random log: ');
             console.log(pins);
         }else{
-          pins.push(pObj);   
+          pins.push(pObj);
+          console.log('nothing was inside: ');
+          console.log(pins);
+          console.log('                                        ');
         } 
     }
 
@@ -714,7 +744,7 @@ $(document).ready(function(){
             console.log(pidnr);
             ptop = newPin.offset().top;
             pleft = newPin.offset().left;
-            pObj = {value : t, top: ptop, left: pleft , id: pid};
+            pObj = {value : t, top: ptop, left: pleft, id: pid};
 
             checkPin(pid);
             
@@ -732,9 +762,9 @@ $(document).ready(function(){
             console.log('t: '+t);
             ptop = newPin.offset().top;
             pleft = newPin.offset().left;
-            pObj = {value : t, top: ptop, left: pleft , id: pid};
+            pObj = {value : t, top: ptop, left: pleft, id: pid};
 
-            checkPin(pid);
+            checkPin(pidnr);
         });
         pin_count++;
     }
@@ -858,13 +888,16 @@ $(document).ready(function(){
         var aidee = $('#fn'+numbr);
         ev.stopPropagation();
         ev.preventDefault();
-        $('#fn'+numbr).effect('highlight', {color:'rgb(255, 213, 203)'}, 2000);
+        $(this).effect('transfer', {to: aidee}, 1000);
+        // aidee.effect('bounce', 1000);
     });
 
     $('.sidenote').click(function(e) {
-        var sideNr = parseInt(e.currentTarget, 10);
-        console.log(sideNr);
-        $('#fnref'+sideNr).effect('highlight', {color:'rgb(255, 213, 203)'}, 2000);
+        var sideNr = e.currentTarget.id.substr(2);//parseInt(e.currentTarget, 10);
+        // console.log(sideNr);
+        var anchor = $('#fnref'+sideNr);
+        $(this).effect('transfer', {to: anchor}, 1000);
+        // $(anchor).effect('bounce', 1000);
     });
 
 ////FADES OUT SIDENOTES AND SLIDES THEM RIGHT
