@@ -1443,7 +1443,7 @@ z-index:99;
 
     #arrows #down {
         position: fixed;
-        top: 80%;
+        top: 50%;
         z-index: 99;
         font-size: 20px;
         border-radius: 4px;
