@@ -121,8 +121,8 @@ hr{
     position: relative;
     text-rendering: optimizeSpeed;
     padding-left:15px;
-    color:white;
-    background: #f30;
+    color:black;
+    background: white;
 /*     background-image: -moz-linear-gradient(45deg, #f30 25%, transparent 25%), 
         -moz-linear-gradient(-45deg, #f30 25%, transparent 25%), 
         -moz-linear-gradient(45deg, transparent 75%, #f30 75%), 
@@ -149,11 +149,10 @@ hr{
     background-position: 0 0, 1px 0, 1px -1px, 0px 1px;
     border: 1px solid #f30; */
     padding-bottom: 2%;
-    -webkit-box-shadow: 0px 10px 59px 38px rgba(255, 51, 0, 0.31);
+  /*   -webkit-box-shadow: 0px 10px 59px 38px rgba(255, 51, 0, 0.31);
     -moz-box-shadow: 0px 10px 59px 38px rgba(255, 51, 0, 0.31);
-    box-shadow: 0px 10px 59px 38px rgba(255, 51, 0, 0.31);
-    border-bottom: 1px solid #f30;
-/*     background-image: -moz-linear-gradient(45deg, #f30 25%, transparent 25%), 
+    box-shadow: 0px 10px 59px 38px rgba(255, 51, 0, 0.31); */
+/*    background-image: -moz-linear-gradient(45deg, #f30 25%, transparent 25%), 
         -moz-linear-gradient(-45deg, #f30 25%, transparent 25%), 
         -moz-linear-gradient(45deg, transparent 75%, #f30 75%), 
         -moz-linear-gradient(-45deg, transparent 75%, #f30 75%);
@@ -175,8 +174,11 @@ hr{
         linear-gradient(-45deg, transparent 75%, #f30 75%);
     -moz-background-size: 2px 2px;
     background-size: 2px 2px;
-    -webkit-background-size: 2px 2.1px; override value for webkit
+    -webkit-background-size: 2px 2.1px;
     background-position: 0 0, 1px 0, 1px -1px, 0px 1px; */
+    
+    background:#f4f4f4;
+    color: black;
 }
 
 #info-box-inside-container{
@@ -394,7 +396,8 @@ hr{
 
 #info-box .summary{
     font-size: 20px;
-    
+    background-color:white;
+    border:1px solid #f30;
 }
 
 /***************************************
@@ -844,6 +847,51 @@ a {
     padding-bottom: 4px;
 }
 
+@media (max-width: 768px){
+    .toc_number{
+        text-align: left;
+        font-size: 17px;
+        line-height: 20px;
+        float: left;
+        padding-left:8px;
+    }
+    .toc_title{
+        margin-left: 30px;
+        font-size: 17px;
+        font-family: "HKGroteskbold";
+        line-height: 20px;
+        padding-right: 2px;
+        margin-bottom: 0px;
+        hyphens: auto;
+    }
+
+    .toc_author{
+        font-size: 17px;
+        line-height: 20px;
+        margin-left: 30px;
+        padding-bottom: 4px;
+    }
+    
+    #menu{
+        -webkit-box-shadow: 10px 0px 16px 1px rgba(255,255,255,1);
+        -moz-box-shadow: 10px 0px 16px 1px rgba(255,255,255,1);
+        box-shadow: 10px 0px 16px 1px rgba(255,255,255,1);
+        margin-right: 0px;
+    }
+    
+    #toc_wrapper{
+        margin-right: 0px !important;
+    }
+    .toggle_menu{
+        color:transparent;
+    }
+    .toggle_menu_left_button div{
+        color:transparent;
+
+    }
+    
+    
+}
 
 
 a.page-scroll > h2 {
@@ -1357,11 +1405,11 @@ z-index:99;
 	}
 
 	.search-notfound {
-		color: #BFBFBF !important;
-	}
+/* 		color: #BFBFBF !important;
+		 */	}
 
 	.highlight {
-		background-color: #BFBFBF;
+		background-color: #f30;
 	}
 
 
@@ -1404,7 +1452,7 @@ z-index:99;
 }
 
 #arrows #up a:focus, #arrows #down a:focus{
-    color:black;
+    color:black !important;
 }
 
 #arrows #up a:hover, #arrows #down a:hover{
@@ -1491,23 +1539,23 @@ input:hover {
 
 /* how the text of the book displays when no result is found */
 .search-notfound {
-	color: rgba(203,203,203,0.22);
-}
+/* 	color: rgba(203,203,203,0.22);
+	 */}
 
 /* how "importantword" of the book displays when a result is found */
 .search-notfound .importantword {
-	font-style: normal;
+/* 	font-style: normal;
 	cursor: text;
 	color: rgba(203,203,203,0.22);
-	border-bottom: 0 dotted #000;
+	border-bottom: 0 dotted #000; */
 }
 
 /* how "keyword-searched" displays when no result is found */
 .search-notfound .keyword-searched {
-	margin-bottom: 0;
+/* 	margin-bottom: 0;
 	background-color: rgba(255,255,255,0);
 	cursor: text;
-	color: rgba(203,203,203,0.22);
+	color: rgba(203,203,203,0.22); */
 }
 
 .allWords {
@@ -1726,7 +1774,8 @@ f
         font-size: 10px;
         color:rgb(31,173,74);
         cursor: move;
-        /*z-index: 999999999999999999999999;*/
+        z-index: 999999999999999999999999;
+        padding-left:4px;
     }
 
     .pin-form {
@@ -1767,8 +1816,8 @@ f
     background-color: #ffffff;
     overflow-y: auto;
         border:none;
-        font-family: "Verdana";
         font-size: 10px;
+    line-height: 12px;
         min-height: 6em;
         max-height: 9em;
         width: 100%;
@@ -1949,50 +1998,42 @@ ol {
 
 
 /******** TUNING BOOTSTRAP ********/
-
-.section .keyword-button {
+.section .keyword-button{
     border-radius:5px;
     padding: 2px;
     padding-left:5px;
     padding-right: 5px;
     margin-right:4px;
     margin-bottom: 8px;
-    background-color: rgba(28, 51, 229, 0.1);
-/*     background-color:rgba(255, 51, 0, 0.1);
-     */    
-    color: blue;
-/*     color:#f30;
-     */    
+    background-color: #f4f4f4;  
+    color: black;  
     border:none;
     height: auto;
     box-shadow: 0 3px 5px rgba(0,0,0,.135);
 }
-.section .keyword-button .btn.active{
-    box-shadow: inset 0 3px 5px rgba(0,0,0,.135);
-    background-color: rgba(28, 51, 229, 0.3);
-/*     background-color:rgba(255, 51, 0, 0.4);
-    color: #f30; */
 
-}
-.section .keyword-button:focus{
-    
-}
-
-.section .keyword-button {
-    background-color: #dbdbdb;
+.section .keyword-button:hover {
     border-radius:5px;
     padding: 2px;
     padding-left:5px;
     padding-right: 5px;
     margin-right:4px;
     margin-bottom: 8px;
-    color: black;
+    background-color: rgba(28, 51, 229, 0.1);  
+    color: blue;  
     border:none;
     height: auto;
+    box-shadow: 0 3px 5px rgba(0,0,0,.135);
 }
 .section .btn.active{
     box-shadow: inset 0 3px 5px rgba(0,0,0,.135);
-    background-color:#c7c7c7;
+    background-color: rgba(28, 51, 229, 0.3);
+    color: blue;  
+}
+.section .keyword-button:focus{
+    box-shadow: 0 3px 5px rgba(0,0,0,.135);
+    background-color: rgba(28, 51, 229, 0.1);  
+    color: blue;  
 }
 
 /******* MENU RIGHT *******/
@@ -2293,6 +2334,13 @@ blockquote p{
 }
 
 
+
+
+.ui-effects-transfer {
+    border: 1px solid black;
+}
+
+
 /********* Lines counter **********/
 
 #par_numbr{
@@ -2320,8 +2368,6 @@ blockquote p{
     position: fixed;
     z-index: 99;
     bottom:0px;
-    width: 100%;
-    background-color: white;
     z-index: 99999999999999999999999999999;
     padding: 0px;
 
@@ -2356,12 +2402,17 @@ blockquote p{
 #panel, #panel2, #panel3, #panel4, #panel5, #panel6 {
     padding: 5px;
     display: none;
-    width: 100%;
     background-color: white;
-    border:1px solid #d8d8d8;
-    border-radius: 5px;
+    -webkit-box-shadow: 0px -22px 30px 5px rgba(255,255,255,1);
+    -moz-box-shadow: 0px -22px 30px 5px rgba(255,255,255,1);
+    box-shadow: 0px -22px 30px 5px rgba(255,255,255,1);
 }
 
+.panel_container{
+    background-color:white;  
+/*     border:1px solid #d8d8d8;
+     */    border-radius: 5px;
+}
 #panel6 #live-search {
     margin-bottom: 0px;
 }

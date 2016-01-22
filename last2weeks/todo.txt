@@ -7,7 +7,7 @@
 + fonts with all files!!!
 + font-smoothing
 + text antialysed
-- /!\ Par_numbr don't align when font size change!
++ /!\ Par_numbr don't align when font size change!
 - max font size for changing font size
 + bold on links/stylizing links
 + img size and caption
@@ -16,10 +16,11 @@
 + #1C33E5
 - reference this
 - /!\  bugs on xs menu functions
-- close menu when loading
++ close menu when loading
++ columns for menu on xs
++ columns for menu on xs
++ columns for menu on xs
++ columns for menu on xs
 - columns for menu on xs
-- columns for menu on xs
-- columns for menu on xs
-- columns for menu on xs
-- columns for menu on xs
+- right button!!!!
 
