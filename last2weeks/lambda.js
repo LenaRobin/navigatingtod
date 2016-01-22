@@ -888,7 +888,8 @@ $(document).ready(function(){
         var aidee = $('#fn'+numbr);
         ev.stopPropagation();
         ev.preventDefault();
-        $(this).effect('transfer', {to: aidee}, 1000);
+        $(this).effect('transfer', {to: aidee}, 700);
+        aidee.css('color', '#f30', 1000);
         // aidee.effect('bounce', 1000);
     });
 
@@ -896,7 +897,8 @@ $(document).ready(function(){
         var sideNr = e.currentTarget.id.substr(2);//parseInt(e.currentTarget, 10);
         // console.log(sideNr);
         var anchor = $('#fnref'+sideNr);
-        $(this).effect('transfer', {to: anchor}, 1000);
+        $(this).effect('transfer', {to: anchor}, 700);
+        sideNr.css('color', '#f30', 1000);
         // $(anchor).effect('bounce', 1000);
     });
 

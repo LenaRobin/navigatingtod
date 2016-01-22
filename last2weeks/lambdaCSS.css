@@ -797,60 +797,6 @@ a {
     padding-bottom: 4px;
 }
 
-@media (max-width: 768px){
-
-    .menu-publication-title{
-        font-size: 17px;
-        line-height: 20px;
-    }
-    
-    .toc_number{
-        text-align: left;
-        font-size: 17px;
-        line-height: 20px;
-        float: left;
-        padding-left:8px;
-    }
-    .toc_title{
-        margin-left: 30px;
-        font-size: 17px;
-        font-family: "HKGroteskbold";
-        line-height: 20px;
-        padding-right: 2px;
-        margin-bottom: 0px;
-        hyphens: auto;
-    }
-
-    .toc_author{
-        font-size: 17px;
-        line-height: 20px;
-        margin-left: 30px;
-        padding-bottom: 4px;
-    }
-    
-    #menu{
-        -webkit-box-shadow: 10px 0px 16px 1px rgba(255,255,255,1);
-        -moz-box-shadow: 10px 0px 16px 1px rgba(255,255,255,1);
-        box-shadow: 10px 0px 16px 1px rgba(255,255,255,1);
-        margin-right: 0px;
-        padding-bottom: 100px;
-    }
-    
-    #toc_wrapper{
-        margin-right: 0px !important;
-        padding-bottom: 100px;
-
-    }
-    .toggle_menu{
-        color:transparent;
-    }
-    .toggle_menu_left_button div{
-        color:transparent;
-
-    }
-    
-    
-}
 
 
 a.page-scroll > h2 {
@@ -1108,6 +1054,61 @@ Table of content is contained in pushmenu, it shows the different parts of the b
         color:black;
 }
 
+
+@media (max-width: 768px){
+
+    .menu-publication-title{
+        font-size: 17px;
+        line-height: 20px;
+    }
+
+    .toc_number{
+        text-align: left;
+        font-size: 17px;
+        line-height: 20px;
+        float: left;
+        padding-left:8px;
+    }
+    .toc_title{
+        margin-left: 30px;
+        font-size: 17px;
+        font-family: "HKGroteskbold";
+        line-height: 20px;
+        padding-right: 2px;
+        margin-bottom: 0px;
+        hyphens: auto;
+    }
+
+    .toc_author{
+        font-size: 17px;
+        line-height: 20px;
+        margin-left: 30px;
+        padding-bottom: 4px;
+    }
+
+    #menu{
+        -webkit-box-shadow: 10px 0px 16px 1px rgba(255,255,255,1);
+        -moz-box-shadow: 10px 0px 16px 1px rgba(255,255,255,1);
+        box-shadow: 10px 0px 16px 1px rgba(255,255,255,1);
+        margin-right: 0px;
+        padding-bottom: 100px;
+    }
+
+    #toc_wrapper{
+        margin-right: 0px !important;
+        padding-bottom: 100px;
+
+    }
+    .toggle_menu{
+        color:transparent;
+    }
+    .toggle_menu_left_button div{
+        color:transparent;
+
+    }
+
+
+}
 
 /*******MENU TOGGLE BUTTON**********/
 
@@ -1383,8 +1384,9 @@ z-index:99;
 
 #arrows:hover{
     box-shadow: 0 3px 5px rgba(0,0,0,.135);
-
 }
+
+
 
 #arrows #up {
     position: fixed;
@@ -1418,6 +1420,37 @@ z-index:99;
 
 #arrows #up a:hover, #arrows #down a:hover{
     color: #f30;
+}
+
+@media (max-width: 768px){
+    #arrows{
+        position: fixed;
+        right:2%;
+        z-index: 99999999999999999999999;
+        margin-left:96%;
+    }
+
+    #arrows #up {
+        position: fixed;
+        top: 20%;
+        z-index: 99;
+        font-size: 20px;
+        border-radius: 4px;
+        background-color: #f4f4f4;
+        border:none;
+        padding: 4px;
+    }
+
+    #arrows #down {
+        position: fixed;
+        top: 80%;
+        z-index: 99;
+        font-size: 20px;
+        border-radius: 4px;
+        background-color: #f4f4f4;
+        border:none;
+        padding: 4px;
+    }
 }
 
 /********************************
@@ -2310,7 +2343,9 @@ blockquote p{
 
 
 .ui-effects-transfer {
-    border: 1px solid black;
+    color: red;
+    background-color: rgba(255, 51, 0, 0.13);
+    border-radius: 5px;
 }
 
 
@@ -2355,7 +2390,7 @@ blockquote p{
 
 
 #flip i, #flip2 i, #flip3 i, #flip4 i, #flip5 i, #flip6 i{
-    margin-right: 10px;
+    margin-right: 0px;
 }
 
 #flip, #flip2, #flip3, #flip4, #flip5, #flip6{
@@ -2364,7 +2399,6 @@ blockquote p{
     overflow: hidden;
     text-overflow:clip;
     height: 50px;
-    box-shadow: 0 3px 5px rgba(0,0,0,.135);
 }
 
 .panel-open{
@@ -2392,7 +2426,7 @@ blockquote p{
 
 #panel6 .form-control {
     display: block;
-    width: 40%;
+    width: 90%;
     height: 30px;
     padding: 6px 12px;
     font-size: 14px;
@@ -2446,223 +2480,12 @@ blockquote p{
     border-radius: 5px;
 }
 
-/* Large desktops and laptops */
-/*@media (min-width: 1200px) {
-    #menu-bar-xs{
-        display: none;
+
+@media (max-width: 768px){
+    #flip i, #flip2 i, #flip3 i, #flip4 i, #flip5 i, #flip6 i{
+        margin: 0 auto;
+        align-content: center;
+        font-size: 19px;
+        margin-top: 10px;
     }
-}*/
-
-/* Landscape tablets and medium desktops */
-/*@media (min-width: 992px) and (max-width: 1199px) {
-    #menu-bar-xs{
-        display: none;
-    }
-}*/
-
-/* Portrait tablets and small desktops */
-/*@media (min-width: 768px) and (max-width: 991px) {
-    #menu-bar-xs{
-        display: none;
-    }
-}*/
-
-/* Landscape phones and portrait tablets */
-@media (max-width: 767px) {
-
-}
-
-/* Portrait phones and smaller */
-@media (max-width: 480px) {
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/************* DEVICES ***************/
-
-/*
-smartphones, iPhone, portrait 480x320 phones */
-@media (max-width:650px) {
-/*#book-title {
-	font-size: 20px;*/
-}
-
-    #summary {
-	/*font-size: 14px;
-    width: 90%;
-	border-radius: 10px;
-	padding-right: 10px;*/
-}
-    
-.author_tofill, .editor_tofill {
-	/*font-size: 14px;
-    line-height: 1.2em;*/
-}
-.toggle_menu{
-   /* position: fixed;
-    margin-left:0px;*/
-}    
-.section p{
-   /* margin-left:0px;
-    font-size: 1.4em;
-    line-height: 1.5em;
-    width: 90%;*/
-}
-    
-#tool-bar-container {
-   /* background-color: white;
-    box-shadow: 9px -3px 20px 23px rgba(255, 255, 255, 1);
-    height: 20px;
-    position: fixed;
-    right: 0;
-    top: 0;
-    width: 100%;
-    z-index: 99999999999999999999999;*/
-}
-#content{
-    /*width: 95%;
-    margin-right:5px;*/
-}
-    
-#toc_wrapper{
-/*    margin-top:40px;    */
-}
-
-.close_menu {
-    /*margin-left:0px;
-    z-index: 99999999999999999999999999999999;
-    position: fixed;
-    left:0px;*/
-}
-    
-.section h2 {
-/*    font-family: "Georgia";
-    font-size: 3em;
-    line-height: 1.1em;
-    margin-bottom: 20px;
-    margin-left: 0;
-    padding-top: 40px;
-    max-width: 90%;
-    overflow-y: hidden;*/
-}
-#info-box, .info, tbody{
-    /*margin-left:-15px;
-    width: 100%;
-    margin-top:40px;*/
-}
-
-@media (min-width: @screen-sm-min) {
-    #menu-right{
-        
-    }
-}
-
-
-@media (min-width:650px, max-width:950px) {
-     /*#book-title {
-	font-size: 20px;*/
-}
-
-.toggle_menu{
-        /*position: fixed;
-    margin-left:0px;*/
-}    
-.section p{
-    /*margin-left:0px;
-    font-size: 1.4em;
-    line-height: 1.5em;
-    width: 50%;*/
-}
-    
-#tool-bar-container {
-/*    background-color: white;
-    box-shadow: 9px -3px 20px 23px rgba(255, 255, 255, 1);
-    height: 20px;
-    position: fixed;
-    right: 0;
-    top: 0;
-    width: 100%;
-    z-index: 99999999999999999999999;*/
-}
-#content{
-    /*width: 95%;
-    margin-right:5px;*/
-}
-
-/*******CLASS THAT MAKES**********
-********THE #CONTENT MOVE*********
-********TO THE RIGHT*************/
-
-#toc_wrapper{
-    /*margin-top:40px;    */
-    }
-
-    .close_menu {
-       /* margin-left:0px;
-        z-index: 99999999999999999999999999999999;
-        position: fixed;
-        left:0px;*/
-    }
-    
-.section h2 {
-    /*font-family: "Georgia";
-    font-size: 3em;
-    line-height: 1.1em;
-    margin-bottom: 20px;
-    margin-left: 0;
-    padding-top: 40px;
-    max-width: 700px;
-    overflow-y: hidden;*/
-}
-#info-box, .info, tbody{
-    /* margin-left:-15px;
-    width: 100%;
-    margin-top:40px;
-    }*/
-}
-
-
-
-
-/* big landscape tablets, laptops, and desktops  */
-@media (max-width:1020px) {
-
-
 }
