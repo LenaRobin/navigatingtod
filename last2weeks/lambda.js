@@ -795,36 +795,20 @@ $(document).ready(function(){
     });
 
 
-
+////SHOW -ALL- KEYWORDS TOGGLE
     $('#keyword-show-all, #keyword-show-all_xs').on('click', function() {
-        // $(this).button('toggle');
-        for (var i = 1; i < keywords.length; i++) {
-            $('#keyword_toggle'+i).trigger('click');
-
-            // $('#keyword_toggle'+i).each(function() {
-            //     if ($(this).hasClass('active')) {
-            //         // $(this).button('toggle');
-            //         $(this).closest('.section').unhighlight({element: 'span', className: keywords[i], wordsOnly: true});    
-            //     } else {
-            //         $(this).closest('.section').unhighlight({element: 'span', className: keywords[i], wordsOnly: true});    
-            //     }
-
-            // $('#keyword_toggle'+i).each(function() {
-            // $(this).click(function() {
-
-
-                //add class that gives it the style
-                // $(this).button('toggle');
-                // // if ($(this).hasClass('active')) {
-                //     $(this).closest('.section').highlight(keywords[i], {element: 'span', className: keywords[i], wordsOnly: true});
-                // } else {
-                //     $(this).closest('.section').unhighlight({element: 'span', className: keywords[i], wordsOnly: true});    
-                // }
-            // });
-
-        // });
-
-
+        $(this).button('toggle');
+        for (var i = 0; i < keywords.length; i++) {
+            if ($(this).hasClass('active')) {
+                if ($('#keyword_toggle'+i).hasClass('active')) {
+                    console.log('active');
+                } else {
+                    $('#keyword_toggle'+i).button('toggle');
+                    $('#keyword_toggle'+i).closest('.section').highlight(keywords[i], {element: 'span', className: keywords[i], wordsOnly: true});
+                }
+            } else {
+                $('.keyword-button.active').trigger('click');
+            }
         }
     });
 
@@ -910,10 +894,11 @@ $(document).ready(function(){
         ev.stopPropagation();
         ev.preventDefault();
         $(this).effect('transfer', {to: aidee}, 700);
-        aidee.css('color', '#f30', 1000);
+        aidee.animate({color: '#f30'}, 1000).animate({color: 'black'}, 1000);
         // aidee.effect('bounce', 1000);
     });
 
+////WHEN SIDENOTE IS CLOCKED
     $('.sidenote').click(function(e) {
         var sideNr = e.currentTarget.id.substr(2);//parseInt(e.currentTarget, 10);
         // console.log(sideNr);
