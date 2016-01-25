@@ -76,8 +76,8 @@ a, a:visited{
 a:hover{
     color:#ff3300;
     font-family: "HKGroteskbold";
-
 }
+
 
 
 hr{
@@ -106,6 +106,40 @@ hr{
     border: 0px;
 }
 
+
+/**********************
+3-1. CAROUSEL
+***********************/
+#carousel-box{
+    background-color: #FFE5DE;
+}
+.well {
+    min-height: 20px;
+    padding: 0px;
+    padding-right: 15px;
+    margin-bottom: 20px;
+    background-color: #FFE5DE;
+    border: 0px solid #e3e3e3;
+    border-radius: 4px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.carousel-content{
+    padding: 20px;
+    background-color: white;
+}
+
+#info-box .carousel-content .img-responsive{
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    border: 0px solid #dbdbdb;
+    align-self:auto;
+    background-color: #f4f4f4;
+}
 
 /**********************
 3-1. INFO BOX
@@ -1082,7 +1116,7 @@ Table of content is contained in pushmenu, it shows the different parts of the b
         -moz-box-shadow: 10px 0px 16px 1px rgba(255,255,255,1);
         box-shadow: 10px 0px 16px 1px rgba(255,255,255,1);
         margin-right: 0px;
-        padding-bottom: 100px;
+        padding-bottom: 150px;
     }
 
     #toc_wrapper{
@@ -1636,6 +1670,10 @@ background: radial-gradient(10px, white, white, #BFBFBF); /* Standard syntax (mu
     font-family: "HKGrotesk";
 }
 
+.in-text a:focus, .in-text:focus, .in-text a:active, .in-text:active{
+    text-decoration: none !important;
+}
+
 /********THE BOX**********************/
 .tip {
     padding:0px 3px 5px 3px;
@@ -1669,7 +1707,7 @@ background: radial-gradient(10px, white, white, #BFBFBF); /* Standard syntax (mu
 /***************** POPOVER ***************************/
 
 .popover{
-    padding:0px 3px 5px 3px;
+    padding:3px;
     position: absolute;
     font-size: 14px;
     word-wrap:break-word;
@@ -1679,14 +1717,18 @@ background: radial-gradient(10px, white, white, #BFBFBF); /* Standard syntax (mu
     /* border-radius: 8px; */
     font-family: "HKGrotesk";
     border-radius: 5px;
-    border:1px solid #d8d8d8;
+    border:1px solid white;
     background-color:rgb(255, 255, 255);
+    -webkit-box-shadow: 0px 0px 26px 10px white;
+    -moz-box-shadow: 0px 0px 26px 10px white;
+    box-shadow: 0px 0px 26px 10px white;
 }
 
 .popover p{
     margin: 0px;
     color: black;
     text-indent: 0;
+    padding: 0px;
 }
 .popover p a{
     text-decoration: underline;
@@ -1694,8 +1736,13 @@ background: radial-gradient(10px, white, white, #BFBFBF); /* Standard syntax (mu
     font-family: "HKGrotesk";
 }
 
-
-
+.popover .arrow{
+    border:1px white;
+    -webkit-box-shadow: 0px 0px 26px 10px white;
+    -moz-box-shadow: 0px 0px 26px 10px white;
+    box-shadow: 0px 0px 26px 10px white;
+    background-color: white;
+}
 
 /********THE X BUTTON******************/
 #x {
