@@ -41,10 +41,10 @@
 <!-- EARLY LIBRARY NEEDED FOR HIGHLIGHT TO WORK PROPERLY -->
     <script src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script>
 
+    <!-- <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
     <!-- <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-    <!-- <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
 
 <!--–––––––––––––––––––––––––– Plugins –––––––––––––––––––––––––––––––––––––-->
      <!-- <script src="final_js/respond.min.js"></script>
@@ -449,7 +449,7 @@
             </div>
             <div class="panel_container hidden-lg hidden-md col-sm-4 col-xs-6">
             <span id="highlight-show-all_xs" class="extra-btn">Display highlight <i class="fa fa-pencil"></i></span>
-            <span id="highlight-remove" class="extra-btn">Remove highlight <i class="fa fa-eraser"></i></span>
+            <span id="highlight-remove_xs" class="extra-btn">Remove highlight <i class="fa fa-eraser"></i></span>
 
             <hr>
             <span id="bookmark" class="extra-btn"><i class="fa fa-thumb-tack"></i> Save reading position</span>
@@ -471,20 +471,18 @@
         <div id="panel6" class="hidden-lg hidden-md col-sm-12 col-xs-12">
             <div class="panel_container hidden-lg hidden-md col-sm-12 col-xs-12">
 
-            <form id="live-search" class="not" action="" method="post">
-                <span id="filter-count"></span>
-                <input type="search"
-                       class="form-control" 
-                       placeholder="Search" id="filter" value="" onClick="this.select();" />
+            <form id="live-search_xs" class="not" action="" method="post">
+                <span id="filter-count_xs"></span>
+                <input type="search" name="search" class="form-control" placeholder="Search" id="filter_xs" value="" onClick="this.select();" data-clear-btn="true"/>
             </form>
 
-            <div id="buttons_wrapper" class="not">
-                <button href="#" class="search_nav" id="prev"><i class="fa fa-angle-up"></i>
+            <div id="buttons_wrapper_xs" class="not">
+                <button href="#" class="search_nav" id="prev_xs"><i class="fa fa-angle-up"></i>
                 </button>
-                <button href="#" class="search_nav" id="next"><i class="fa fa-angle-down"></i>
+                <button href="#" class="search_nav" id="next_xs"><i class="fa fa-angle-down"></i>
                 </button>
                 <div id="search_ui">
-                    <button id="cancel"><i class="fa fa-times"></i></button>
+                    <button id="cancel_xs"><i class="fa fa-times"></i></button>
                 </div>
             </div>
             </div>

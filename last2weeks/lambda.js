@@ -207,9 +207,9 @@ $(document).ready(function(){
             par[0].normalize();
         });
         $('.search-notfound').removeClass('search-notfound');
-        $("#filter-count").hide();
-        $('#buttons_wrapper').hide();
-        $('#search_ui').hide();
+        $("#filter-count, #filter-count_xs").hide();
+        $('#buttons_wrapper, #buttons_wrapper_xs').hide();
+        $('#search_ui, #search_ui_xs').hide();
     };
 
 ////////ON ENTER CLEAR RESULTS, THEN GO TO THE FIRST NEW INSTENCE
@@ -226,11 +226,24 @@ $(document).ready(function(){
         }
     });		
 
+     $('#filter_xs').keypress(function(e){
+        if(e.keyCode == 13){
+            counter = 0;
+            e.preventDefault();
+            cancelSearch();
+            searchAndHighlight();
+            location.href="#hit0";
+            $("#filter-count_xs").show().text(''+(counter+1)+'/'+(maxCount+1));
+            $('#next_xs').focus();
+            $('#hit0').css('background-color', 'yellow');
+        }
+    });
+
 ////ON <ESC> CANCEL SEARCH AND BRING TEXT BACK TO NORMAL
     $(document).keyup(function(e){
         if (e.keyCode == 27){
             cancelSearch();
-            $('#filter, #next, #prev').blur();
+            $('#filter, #next, #prev, #filter_xs, #next_xs, #prev_xs').blur();
         }
     });
 
@@ -243,8 +256,8 @@ $(document).ready(function(){
         }
 
         location.href="#hit"+counter;
-        $('#next').focus();
-        $("#filter-count").show().text(''+(counter+1)+'/'+(maxCount+1));
+        $('#next, #next_xs').focus();
+        $("#filter-count, #filter-count_xs").show().text(''+(counter+1)+'/'+(maxCount+1));
         $('#hit'+counter).css('background-color', 'yellow');
         $('#hit'+(counter+1)).css('background-color', '#BFBFBF');
         return false;
@@ -254,7 +267,7 @@ $(document).ready(function(){
     function searchAndHighlight() {
 ////////IF THE ELEMENT DOES NOT CONTAIN THE TEXT PHRASE FADE IT OUT
         $('.section > h2, .section > p, .section > ol > li, .section > span, .subchapter > h3, .subchapter > p, .subchapter > ol > li, .subchapter > span, blockquote > *, .references > h3, .references > p, #toc_wrapper  h2  a, #toc_wrapper > h3 > a, .btn-default, .author, .toc_author').each(function(){
-            var filter = $('#filter').val().toLowerCase();
+            var filter = $('#filter, #filter_xs').val().toLowerCase();
             if ($(this).text().toLowerCase().indexOf(filter) >= 0) {
                 $(this).removeClass('search-notfound');
                 $(this).addClass('search-found');
@@ -268,18 +281,18 @@ $(document).ready(function(){
 
 ////////////HIDE CANCEL BUTTON WHEN NO INPUT
             if (0 < filter.length) {
-                $('#search_ui').css('display', 'block');
-                $('#buttons_wrapper').css('display', 'block');
+                $('#search_ui, #search_ui_xs').css('display', 'block');
+                $('#buttons_wrapper_xs').css('display', 'block');
             } else {
-                $('#search_ui').css('display', 'none');
-                $('#buttons_wrapper').css('display', 'none');
+                $('#search_ui, #search_ui_xs').css('display', 'none');
+                $('#buttons_wrapper, #buttons_wrapper_xs').css('display', 'none');
             }
 
 ////////////HIDE CANCEL BUTTON WHEN CLICKED
-            $('#search_ui').click(function() {
+            $('#search_ui, #search_ui_xs').click(function() {
                 $(this).css("display", "none");
-                $('#buttons_wrapper').css('display', 'none');
-                $("#filter").val('');
+                $('#buttons_wrapper, #buttons_wrapper_xs').css('display', 'none');
+                $("#filter, #filter_xs").val('');
                 cancelSearch();
             });
         });
@@ -308,13 +321,13 @@ $(document).ready(function(){
             counter = 0;
         }
         location.href="#hit"+counter;
-        $("#filter-count").show().text(''+(counter+1)+'/'+(maxCount+1));
-        $('#next').focus();
+        $("#filter-count, #filter-count_xs").show().text(''+(counter+1)+'/'+(maxCount+1));
+        $('#next, #next_xs').focus();
         $('#hit'+counter).css('background-color', 'yellow');
         $('#hit'+(counter-1)).css('background-color', '#BFBFBF');
     }
 
-    $('#next').click(function() {
+    $('#next, #next_xs').click(function() {
         toNext(counter);
     });
 
@@ -327,13 +340,13 @@ $(document).ready(function(){
             counter = maxCount;
         }
         location.href="#hit"+counter;
-        $("#filter-count").show().text(''+(counter+1)+'/'+(maxCount+1));
-        $('#prev').focus();
+        $("#filter-count, #filter-count_xs").show().text(''+(counter+1)+'/'+(maxCount+1));
+        $('#prev, #prev_xs').focus();
         $('#hit'+counter).css('background-color', 'yellow');
         $('#hit'+(counter+1)).css('background-color', '#BFBFBF');
     }
 
-    $('#prev').click(function() {
+    $('#prev, #prev_xs').click(function() {
         toPrev(counter);
     });
 
@@ -357,7 +370,7 @@ $(document).ready(function(){
         someWords.push(word);
     }
 ////AUTOCOMPLETE
-    $("#filter").autocomplete({
+    $("#filter, #filter_xs").autocomplete({
     	source: someWords
     });
 
@@ -374,8 +387,8 @@ $(document).ready(function(){
 
     $(".in-text").each(function(){
         var n = $(this).data("dref");
-        var t = $("#ref"+n).text();
-        $(this).attr({"data-toggle": "popover", "data-trigger": "focus", "data-content": t, "data-placement": "top", "href": "#0"}).addClass("button");
+        var tx = $("#ref"+n).text();
+        $(this).attr({"data-toggle": "popover", "data-trigger": "focus", "data-content": tx, "data-placement": "top", "href": "#0"}).addClass("button");
     });
 
 ////////////////
@@ -387,16 +400,24 @@ $(document).ready(function(){
         $(this).attr("id", "p"+(number+1));
     });
 
-    $('.section').mousedown(function() {
-        $('.qwertz').remove();
-    });
+    // $('.section').mousedown(function() {
+    //     $('.qwertz').remove();
+    // });
 
 ////ON MOUSEUP GET SELECTION AND DO THINGS TO IT
     var selection;
     var selection_text;
 
-    $('.section').bind('mouseup touchend', function(e){
-        selection = document.getSelection().getRangeAt(0); //MAKE THIS WORK ON EVERY BROWSER
+    $('.section').bind('mouseup', function(e){
+        // try {
+            // if (window.getSelection) {
+                // selection = window.getSelection().getRangeAt(0); //MAKE THIS WORK ON EVERY BROWSER
+            // } else {
+                selection = document.getSelection().getRangeAt(0);
+            // }
+        // } catch (err) {
+
+        // }
         selection_text = selection.toString();
         var scrollTop = $(window).scrollTop();
         var clickTop = e.pageY-scrollTop;
@@ -404,7 +425,11 @@ $(document).ready(function(){
         console.log(selection);
         if (selection_text.length > 0 ) {
             if (clickTop >= asd_height) {
+                if ($(window).width >= 768) {
                 clickTop -=asd_height;
+                } else {
+                clickTop = e.pageY - scrollTop;
+                }
             }
             var left = e.pageX;
             $("#asd").css('display','block').css({top: clickTop, left: left});
@@ -454,24 +479,24 @@ $(document).ready(function(){
 ////////IF IT IS THE FIRST CHAPTER (INTRODUCTION) CITE IN THIS WAY
         if (blaaa < 15) {
 ////////////MLA STYLE 
-            $('#mla').html("Nikolić, Gordana and Tatlić Šefik"+", "+ref_title
+            $('#mla, #mla_xs').html("Nikolić, Gordana and Tatlić Šefik"+", "+ref_title
                            +". Eds. "+ref_eds+". "+ref_place+": "+ref_pub+", "+ref_year+". &lt;"+url+"#"+par+"&gt;. "+MLA_date_of_access+".");
 ////////////CHICAGO STYLE
-            $('#chicago').html("Nikolić, Gordana &amp; Tatlić Šefik"+". '"+ref_article+".' In "+ref_title
+            $('#chicago, #chicago_xs').html("Nikolić, Gordana &amp; Tatlić Šefik"+". '"+ref_article+".' In "+ref_title
                                +", edited by "+ref_eds+". "+ref_place+": "+ref_pub+", "+ref_year+". "+url+"#"+par+". Accessed "+chicago_date_of_access+".");
 ////////////APA STYLE
-            $('#apa').html("Nikolić, G., Tatlić Š."+". ("+ref_year+"). "+ref_article+". In "+ref_apaEds+" (Eds.), "+ref_title
+            $('#apa, #apa_xs').html("Nikolić, G., Tatlić Š."+". ("+ref_year+"). "+ref_article+". In "+ref_apaEds+" (Eds.), "+ref_title
                            +". "+ref_place+": "+ref_pub+". Available from "+url+"#"+par+".");
 ////////OTHERWISE (NORMAL CHAPTERS) CITE IN THIS WAY
         } else {
 ////////////MLA STYLE 
-            $('#mla').html(ref_authorLastName +", "+ref_authorName+". '"+ref_article+", "+ref_title 
+            $('#mla, #mla_xs').html(ref_authorLastName +", "+ref_authorName+". '"+ref_article+", "+ref_title 
                            +". Eds. "+ref_eds+". "+ref_place+": "+ref_pub+", "+ref_year+". &lt;"+url+"#"+par+"&gt;. "+MLA_date_of_access+".");
 ////////////CHICAGO STYLE
-            $('#chicago').html(ref_authorLastName+", "+ref_authorName+". '"+ref_article+".' In "+ref_title
+            $('#chicago, #chicago_xs').html(ref_authorLastName+", "+ref_authorName+". '"+ref_article+".' In "+ref_title
                                +", edited by "+ref_eds+". "+ref_place+": "+ref_pub+", "+ref_year+". "+url+"#"+par+". Accessed "+chicago_date_of_access+".");
 ////////////APA STYLE
-            $('#apa').html(ref_authorLastName +", "+ ref_apaAuthorName+". ("+ref_year+"). "+ref_article+". In "+ref_apaEds+" (Eds.), "+ref_title
+            $('#apa, #apa_xs').html(ref_authorLastName +", "+ ref_apaAuthorName+". ("+ref_year+"). "+ref_article+". In "+ref_apaEds+" (Eds.), "+ref_title
                            +". "+ref_place+": "+ref_pub+". Available from "+url+"#"+par+".");
         }
     });
@@ -479,13 +504,11 @@ $(document).ready(function(){
 
 ////DEFINE
     $('#lookup').click(function() {
-        // $( "#loaded").load( "http://www.oxforddictionaries.com/definition/english/capital .entryPageContent" );
         window.open('http://www.oxforddictionaries.com/definition/english/' + selection_text); 
         $('#asd').fadeOut('3000');
     });
 
 ////HIGHLIGHT
-    // $('#asd.btn-group-horizontal:nth-child(1)').click(function() {
     $('#highlight').click(function() {
         $('#content').wrapSelection({
             fitToWord: true
@@ -587,7 +610,7 @@ $(document).ready(function(){
             for (var i = 0; i < pins.length; i++) {
                 if (pinID > pins.length) {
                     pins.push(pObj);
-                    localStorage.setItem("savedData", JSON.stringify(pins));
+                    localStorage.setItem('pObject', JSON.stringify(pins));
                     break;
                 } else {
                     pins[pinID-1]["value"] = t;
@@ -598,7 +621,7 @@ $(document).ready(function(){
             }
         }else{
           pins.push(pObj);
-          localStorage.setItem("savedData", JSON.stringify(pins));
+          localStorage.setItem("pObject", JSON.stringify(pins));
         } 
     }
 
@@ -613,7 +636,7 @@ $(document).ready(function(){
         var pinID = $(this).parent().attr('id').substr(11);
         pins.splice(pinID-1, 1);
         console.log(pins);
-        localStorage.setItem("savedData", JSON.stringify(pins));
+        localStorage.setItem("pObject", JSON.stringify(pins));
     });
 
 
@@ -626,10 +649,12 @@ $(document).ready(function(){
             el.top = ptop;
             el.left = pleft;
             return el.id === pinID;
-            localStorage.setItem("savedData", JSON.stringify(pins));
+            localStorage.setItem("pObject", JSON.stringify(pins));
         });
         console.log(pins);
     }
+
+
 
 ////ORIGINAL PIN, THE BEGINNING OF ALL
     $('#pin').draggable({
@@ -641,59 +666,6 @@ $(document).ready(function(){
         helper: 'clone',
         stop: getPinPosition
     });
-
-    // function updatePin(id) {
-    //     // alert('oiuuio');
-    // //     var found = pins.some(function(el) {
-    // //         el.value = t;
-    // //         el.top = ptop;
-    // //         el.left = pleft;
-    // //         return el.id ===pinID;
-    // //         console.log(pins);
-    // //     });
-    // //     if (!found) {
-    // //         pins.push(pObj);
-    // //     }
-    // //     console.log(pins);
-    // // }
-
-    //     for (var i in pins) {
-    //         alert('sfhbk');
-    //         if (pins[i].id == id) {
-    //             pins[i].value = t;
-    //             pins[i].top = ptop;
-    //             pins[i].left = pleft;
-    //             console.log(pins);
-    //             break; //Stop this loop, we found it!
-    //         } else {
-    //             // pins.push(pObj);
-    //             console.log(pins);
-    //         }
-    //     }
-    // }
-
-
-    // $('#main').on('click', function(e) {
-    //     if (!$('#content').find('.pin-input').is(e.target)) {
-    //         $('#content').find('.pin-input').each(function() {
-    //             // console.log($(this).val());
-    //             t = $(this).val();
-    //             var newPin = $(this).closest('.pin-clone');
-    //             var pid = newPin.attr("id");
-    //             var pidnr = pid.substr(11);
-    //             // console.log('pidnr: '+pidnr);
-    //             // console.log('t: '+t);
-    //             ptop = newPin.offset().top;
-    //             pleft = newPin.offset().left;
-    //             pObj = {value : t, top: ptop, left: pleft , id: pid};
-
-    //             checkPin(pid);
-    //         });
-    //             e.stopPropagation;
-    // });
-
-
-    // && !$('#asd').is(e.target)
 
 
 ////ON HOVER SHOW INPUT AREA
@@ -733,7 +705,7 @@ $(document).ready(function(){
             pleft = newPin.offset().left;
             pObj = {value : t, top: ptop, left: pleft, id: pid};
 
-            checkPin(pid);
+            checkPin(pidnr);
             console.log('qaywsxedcrfvtb');
              // $(this).find('.pin-input').blur();
             $(this).find('.pin-form').hide();
@@ -779,7 +751,7 @@ $(document).ready(function(){
 
 
 ////SHOW -ALL- KEYWORDS TOGGLE
-    $('#keyword-show-all, #keyword-show-all_xs').on('click tap', function() {
+    $('#keyword-show-all_xs, #keyword-show-all').on('click', function() {
         $(this).button('toggle');
         for (var i = 0; i < keywords.length; i++) {
             if ($(this).hasClass('active')) {
@@ -871,25 +843,27 @@ $(document).ready(function(){
 /////////////
 
 ////FOCUS ON RESPECTIVE SIDENOTE WHEN ANCHOR CLICKED
-    $('a sup').click(function(ev){
-        var numbr = $(this).text();
-        var aidee = $('#fn'+numbr);
-        ev.stopPropagation();
-        ev.preventDefault();
-        $(this).effect('transfer', {to: aidee}, 700);
-        aidee.animate({color: '#f30'}, 1000).animate({color: 'black'}, 1000);
-        // aidee.effect('bounce', 1000);
-    });
+// if ($(window).width() > "480") {
+    // $('a sup').click(function(ev){
+    //     var numbr = $(this).text();
+    //     var aidee = $('#fn'+numbr);
+    //     ev.stopPropagation();
+    //     ev.preventDefault();
+    //     $(this).effect('transfer', {to: aidee}, 700);
+    //     aidee.animate({color: '#f30'}, 1000).animate({color: 'black'}, 1000);
+    //     // aidee.effect('bounce', 1000);
+    // });
+// }
 
 ////WHEN SIDENOTE IS CLOCKED
-    $('.sidenote').click(function(e) {
-        var sideNr = e.currentTarget.id.substr(2);//parseInt(e.currentTarget, 10);
-        // console.log(sideNr);
-        var anchor = $('#fnref'+sideNr);
-        $(this).effect('transfer', {to: anchor}, 700);
-        sideNr.css('color', '#f30', 1000);
-        // $(anchor).effect('bounce', 1000);
-    });
+    // $('.sidenote').click(function(e) {
+    //     var sideNr = e.currentTarget.id.substr(2);//parseInt(e.currentTarget, 10);
+    //     // console.log(sideNr);
+    //     var anchor = $('#fnref'+sideNr);
+    //     $(this).effect('transfer', {to: anchor}, 700);
+    //     sideNr.css('color', '#f30', 1000);
+    //     // $(anchor).effect('bounce', 1000);
+    // });
 
 ////FADES OUT SIDENOTES AND SLIDES THEM RIGHT
     function fadeOutSidenotes() {
@@ -912,9 +886,10 @@ $(document).ready(function(){
         if ($(window).width() < "768") {	//SUBSTITUTE '400' WITH THE DESIRED MINIMUM SIZE
             $("a sup").each(function(){
                 var n = $(this).text();
-                var t = $("#fn"+n).text();
-                $(this).parent().attr({"data-toggle": "popover", "data-trigger": "focus", "data-content": t, "data-placement": "top", "href": "#0"}).addClass("button");
+                var tt = $("#fn"+n).text();
+                $(this).parent().attr({"data-toggle": "popover", "data-trigger": "focus", "data-content": tt, "data-placement": "top", "href": "#0"}).addClass("button");
             });
+        $('.footnoteRef').popover();
         } else {
             $('.footnoteRef').popover('destroy');
         }
@@ -994,7 +969,7 @@ ON RESIZE DO THESE THINGS
 ////////////////////
 
 ////DECREASE FONT SIZE AND ALIGN SIDENOTES
-    $('#button_fontsizeminus_xs').on('click', function(){
+    $('#button_fontsizeminus, #button_fontsizeminus_xs').on('click', function(){
         fadeOutSidenotes();
         var fontSize = parseInt($(".section").css('font-size'));
         $('.section').not('.references').animate({'font-size': '-=0.5'}, function() {
