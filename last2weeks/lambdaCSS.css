@@ -1,56 +1,56 @@
 /* *********************************************************************************
- *************************** STYLE FOR LAMBDA PAGES ********************************
+*************************** STYLE FOR LAMBDA PAGES ********************************
 ************************************************************************************
 
 Easy changes :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)    
-            1. Colors
+1. Colors
 
 00.--- SUMMARY
 
 1.--- GENERAL STRUCTURE !! do not change !! ------------------------------------
-            1. General
+1. General
 
 2.--- MENU (left) ------------------------------------------------------------
-            1. Menu
-            2. Nav list (button to active push menu)
-            3. Table of content
+1. Menu
+2. Nav list (button to active push menu)
+3. Table of content
 
 3.--- INFO BOX (top) ------------------------------------------------------------
-            1. Info box
-            2. Table of informations
-            3. Bookcover
+1. Info box
+2. Table of informations
+3. Bookcover
 
 4.--- READER --------------------------------------------------------------------
-            1. Section
-            2. Text titles & font styles
-            3. Images
-            4. Reference-list
-            5. Sidenotes
+1. Section
+2. Text titles & font styles
+3. Images
+4. Reference-list
+5. Sidenotes
 
 5.--- TYPOGRAPHY -----------------------------------------------------------------
-            1. Keyword
-            2. Important word
-            3. Keyword-searched
-            4. Buttons
+1. Keyword
+2. Important word
+3. Keyword-searched
+4. Buttons
 
 6.--- NAVIGATION ----------------------------------------------------------------
-            1. Arrows
+1. Arrows
 
 7.--- TOOLS ---------------------------------------------------------------------
-            1. Toolbox (right)
-            2. Search box
-            3. Font size
-            4. Citation box
-            5. Scrolling indicator
+1. Toolbox (right)
+2. Search box
+3. Font size
+4. Citation box
+5. Scrolling indicator
 
 8.--- FOOTER (bottom) ------------------------------------------------------------
 
 9.--- DEVICES ---------------------------------------------------------------------
-            1. Smartphones, iPhones, portrait (480x320)
-            2. Portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide
-            3. Portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones
-            4. Tablet, landscape iPad, lo-res laptops ands desktops
-            5. Big landscape tablets, laptops, and desktops
+1. Smartphones, iPhones, portrait (480x320)
+2. Portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide
+3. Portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones
+4. Tablet, landscape iPad, lo-res laptops ands desktops
+5. Big landscape tablets, laptops, and desktops
 */
 
 
@@ -58,16 +58,13 @@ Easy changes :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-
 
 /* Background-color of text on selection */
 ::-moz-selection {
-      color: #000;
     background-color:rgba(255, 255, 0, 0.24);
-
+    background-color: #FFE5DE;
 }
 
 ::selection {
-      color: #000;
     background-color:rgba(255, 255, 0, 0.24);
-
-    
+    background-color: #FFE5DE;
 }
 
 a, a:visited{
@@ -76,10 +73,10 @@ a, a:visited{
     text-decoration: none;
 }
 
-a:hover, a:active,  a:focus  {
+a:hover{
     color:#ff3300;
     font-family: "HKGroteskbold";
-    text-decoration: none;
+
 }
 
 
@@ -92,135 +89,107 @@ hr{
 /* ******************************************************* 3. INFO BOX (TOP) ******************** */
 
 /**********************
+3-1. INC NAVBAR
+***********************/
+
+#inc-navbar{
+    background-color: white;
+    height: 50px;
+    padding: 0px;
+}
+
+#info-box #inc-navbar img{
+    height: 40px;
+    width: auto;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+
+
+/**********************
 3-1. INFO BOX
 ***********************
 /* Box containing informations related to book ID */
 #info-box {
     /*height: auto; */
     overflow: hidden;
-
-    /* 
-    
-    Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f4f4f4+0,f4f4f4+30,ffffff+100
-    background: rgb(244,244,244); Old browsers
-    background: -moz-linear-gradient(top,  rgba(244,244,244,1) 0%, rgba(244,244,244,1) 30%, rgba(255,255,255,1) 100%); FF3.6-15
-    background: -webkit-linear-gradient(top,  rgba(244,244,244,1) 0%,rgba(244,244,244,1) 30%,rgba(255,255,255,1) 100%); Chrome10-25,Safari5.1-6
-    background: linear-gradient(to bottom,  rgba(244,244,244,1) 0%,rgba(244,244,244,1) 30%,rgba(255,255,255,1) 100%); W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f4f4', endColorstr='#ffffff',GradientType=0 ); IE6-9
-     */
-    
-/*     Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+15,f4f4f4+48,d6d6d6+100
-    background: rgb(255,255,255); Old browsers
-    background: -moz-linear-gradient(top,  rgba(255,255,255,1) 15%, rgba(244,244,244,1) 48%, rgba(214,214,214,1) 100%); FF3.6-15
-    background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 15%,rgba(244,244,244,1) 48%,rgba(214,214,214,1) 100%); Chrome10-25,Safari5.1-6
-    background: linear-gradient(to bottom,  rgba(255,255,255,1) 15%,rgba(244,244,244,1) 48%,rgba(214,214,214,1) 100%); W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d6d6d6',GradientType=0 ); IE6-9
-    
-     */
     z-index: 44444444444;
     position: relative;
     text-rendering: optimizeSpeed;
     padding-left:15px;
     color:black;
-    background: white;
-/*     background-image: -moz-linear-gradient(45deg, #f30 25%, transparent 25%), 
-        -moz-linear-gradient(-45deg, #f30 25%, transparent 25%), 
-        -moz-linear-gradient(45deg, transparent 75%, #f30 75%), 
-        -moz-linear-gradient(-45deg, transparent 75%, #f30 75%);
-    background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(.25, #f30), color-stop(.25, transparent)), 
-        -webkit-gradient(linear, 0 0, 100% 100%, color-stop(.25, #f30), color-stop(.25, transparent)), 
-        -webkit-gradient(linear, 0 100%, 100% 0, color-stop(.75, transparent), color-stop(.75, #f30)), 
-        -webkit-gradient(linear, 0 0, 100% 100%, color-stop(.75, transparent), color-stop(.75, #f30));
-    background-image: -webkit-linear-gradient(45deg, #f30 25%, transparent 25%), 
-        -webkit-linear-gradient(-45deg, #f30 25%, transparent 25%), 
-        -webkit-linear-gradient(45deg, transparent 75%, #f30 75%), 
-        -webkit-linear-gradient(-45deg, transparent 75%, #f30 75%);
-    background-image: -o-linear-gradient(45deg, #f30 25%, transparent 25%), 
-        -o-linear-gradient(-45deg, #f30 25%, transparent 25%), 
-        -o-linear-gradient(45deg, transparent 75%, #f30 75%), 
-        -o-linear-gradient(-45deg, transparent 75%, #f30 75%);
-    background-image: linear-gradient(45deg, #f30 25%, transparent 25%), 
-        linear-gradient(-45deg, #f30 25%, transparent 25%), 
-        linear-gradient(45deg, transparent 75%, #f30 75%), 
-        linear-gradient(-45deg, transparent 75%, #f30 75%);
-    -moz-background-size: 2px 2px;
-    background-size: 2px 2px;
-    -webkit-background-size: 2px 2.1px; override value for webkit
-    background-position: 0 0, 1px 0, 1px -1px, 0px 1px;
-    border: 1px solid #f30; */
-    padding-bottom: 2%;
-  /*   -webkit-box-shadow: 0px 10px 59px 38px rgba(255, 51, 0, 0.31);
-    -moz-box-shadow: 0px 10px 59px 38px rgba(255, 51, 0, 0.31);
-    box-shadow: 0px 10px 59px 38px rgba(255, 51, 0, 0.31); */
-/*    background-image: -moz-linear-gradient(45deg, #f30 25%, transparent 25%), 
-        -moz-linear-gradient(-45deg, #f30 25%, transparent 25%), 
-        -moz-linear-gradient(45deg, transparent 75%, #f30 75%), 
-        -moz-linear-gradient(-45deg, transparent 75%, #f30 75%);
-    background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(.25, #f30), color-stop(.25, transparent)), 
-        -webkit-gradient(linear, 0 0, 100% 100%, color-stop(.25, #f30), color-stop(.25, transparent)), 
-        -webkit-gradient(linear, 0 100%, 100% 0, color-stop(.75, transparent), color-stop(.75, #f30)), 
-        -webkit-gradient(linear, 0 0, 100% 100%, color-stop(.75, transparent), color-stop(.75, #f30));
-    background-image: -webkit-linear-gradient(45deg, #f30 25%, transparent 25%), 
-        -webkit-linear-gradient(-45deg, #f30 25%, transparent 25%), 
-        -webkit-linear-gradient(45deg, transparent 75%, #f30 75%), 
-        -webkit-linear-gradient(-45deg, transparent 75%, #f30 75%);
-    background-image: -o-linear-gradient(45deg, #f30 25%, transparent 25%), 
-        -o-linear-gradient(-45deg, #f30 25%, transparent 25%), 
-        -o-linear-gradient(45deg, transparent 75%, #f30 75%), 
-        -o-linear-gradient(-45deg, transparent 75%, #f30 75%);
-    background-image: linear-gradient(45deg, #f30 25%, transparent 25%), 
-        linear-gradient(-45deg, #f30 25%, transparent 25%), 
-        linear-gradient(45deg, transparent 75%, #f30 75%), 
-        linear-gradient(-45deg, transparent 75%, #f30 75%);
-    -moz-background-size: 2px 2px;
-    background-size: 2px 2px;
-    -webkit-background-size: 2px 2.1px;
-    background-position: 0 0, 1px 0, 1px -1px, 0px 1px; */
-    
-    background:#f4f4f4;
+    background-color:#f4f4f4;
     color: black;
+    -webkit-box-shadow: 0px 10px 32px -9px rgba(0,0,0,0.59);
+    -moz-box-shadow: 0px 10px 32px -9px rgba(0,0,0,0.59);
+    box-shadow: 0px 10px 32px -9px rgba(0,0,0,0.59);
 }
 
 #info-box-inside-container{
-    background-color:rgb(255, 202, 189);
-    background-color:#f4f4f4;
-/*     margin: 5%;
-    margin-top:1%; */
-    padding-bottom: 40px;
-    -webkit-box-shadow: 10px 10px 25px 0px rgba(0,0,0,0.44);
-    -moz-box-shadow: 10px 10px 25px 0px rgba(0,0,0,0.44);
-    box-shadow: 10px 10px 25px 0px rgba(0,0,0,0.44);
     color: #f30;
     height: auto;
     border: 1px solid #f30;
-    
-    
 }
 
-#info-box-inside-container:hover{
-    border: 1px solid #f30;
-}    
+.info-box-left{
+    padding-bottom: 50px;
+}
+
+.info-box-right{
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+#info-box-left-img-container{
+    background-color:white;
+    padding: 20px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
 
 #info-box img{
-    max-height: 300px;
+    max-width: 280px;
     width: auto;
     text-align: center;
-    margin-top: 40px;
-    margin-left: 0px;
+    margin-top: 30px;
     margin-bottom: 40px;
+    border: 1px solid #dbdbdb;
+    align-self: center;
+    /* padding: 0; */
+    margin: 0 auto;
 }
 
+
+/**********************
+3-1. INC INFO ON PLATFORM: what is it?
+***********************/
+
+#inc-info{
+    background-color: #FFE5DE;
+    color: #f30;
+    font-size: 2em;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    -webkit-box-shadow: 0px 18px 43px -9px rgba(255,51,0,0.7);
+    -moz-box-shadow: 0px 18px 43px -9px rgba(255,51,0,0.7);
+    box-shadow: 0px 18px 43px -9px rgba(255,51,0,0.7);
+    z-index: 99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999;
+}
 
 /**********************
 3-1. LIBRARY TREE
 ***********************/
 
 #library-tree{
-    background-color: white;
-    height: 60px;
+    background-color: #f30;
+    color: white;
     margin-right: -15px;
     margin-left: -15px;
-    border-bottom: 1px solid #f4f4f4;
+    height: 40px;
+    -webkit-box-shadow: 0px 10px 32px -9px rgba(0,0,0,0.59);
+    -moz-box-shadow: 0px 10px 32px -9px rgba(0,0,0,0.59);
+    box-shadow: 0px 10px 32px -9px rgba(0,0,0,0.59);
 }
 
 #library-tree #breadcrumb{
@@ -228,13 +197,13 @@ hr{
 }
 
 .breadcrumb {
-    margin-bottom: 20px;
     list-style: none;
     margin: 0px;
     padding: 0px;
     text-indent: 0;
     padding-top:10px;
-    background-color: transparent;
+    background-color: #f30;
+    border-radius: 0px;
 }
 
 .breadcrumb ol{
@@ -246,44 +215,49 @@ hr{
     -webkit-padding-start: 0px;
     margin: 0px;
     padding: 0px;
+    color: white;
 }
 
 .breadcrumb>li+li:before {
     padding: 0 0px;
     padding-right: 8px;
-    color: #ccc;
+    padding-left: 8px;
+    color: white;
     content: "/\00a0";
 }
 
 #library-tree  #breadcrumb .breadcrumb a{
-    color:#f30;
-    background-color: transparent;
-    padding-top: 2px;
-}
-
-#library-tree  #breadcrumb .breadcrumb>.active a{
-    color:#f30;
+    color: white;
     background-color: transparent;
     border: 1px solid #f30;
     padding-top: 2px;
+    font-family: "HKGroteskbold";
+    border-radius: 4px;
+    text-decoration: none;
+    padding: 4px;
+}
 
+#library-tree  #breadcrumb .breadcrumb>.active a{
+    color:white;
+    background-color: transparent;
+    padding-top: 2px;
+    font-family: "HKGroteskbold";
+    text-decoration: none;
+    border: 1px solid white;
 }
 
 #library-tree  #breadcrumb .breadcrumb a:hover{
-    color: white;
-    background-color: #f30;
+    color: #f30;
+    background-color:white;
+    /* background-color: white; */
     padding-top: 2px;
-
+    font-family: "HKGroteskbold";
 }
+
 
 .info {
     height: auto;
 }
-
-
-
-
-
 
 #info-box-book-before, #info-box-book-after{
     padding-left: 0px;
@@ -321,11 +295,35 @@ hr{
 
 /* How is written the book's title */
 #book-title {
-    font-size: 3em;
+    font-size: 2.6em;
     margin-top: 10px;
     line-height: 1em;
     padding: 0px;
     padding-left:15Px;
+    text-align: center;
+    padding-top: 40px;
+    font-family: "HKGroteskbold";
+}
+
+#book-title-box{
+
+}
+
+#book-author{
+    color: black;
+    padding: 15px;
+    font-size: 18px;
+    text-align: center;
+}
+
+#book-keywords{
+    font-size: 18px;
+    line-height: 1em;
+    padding: 20px;
+    padding-left:15Px;
+    text-align: center;
+    background-color:white;
+    color:#f30;
 }
 
 @media (max-width: 480px){
@@ -338,15 +336,7 @@ hr{
 }
 
 #info-box .keyword{
-/*     border:1px solid black;
-    padding: 1px 2px 1px 2px;
-    line-height: 2em;
-    cursor: pointer;
-    font-size:16px;
-    word-break: keep-all;
-    white-space:nowrap;
-    background-color: rgba(255, 255, 255, 0.7); */
-    background-color: rgba(0, 0, 0, 0.19);
+    background-color: rgba(0, 0, 0, 0.12);
     border-radius:5px;
     padding: 5px;
     padding-top:2px;
@@ -356,52 +346,44 @@ hr{
     white-space: nowrap;
     word-break: keep-all;
     line-height: 2em;
+}
+
+#info-box .keyword:hover{
+    background-color: rgba(0, 0, 0, 0.19);
+    box-shadow:inset 0 3px 5px rgba(0,0,0,.135);
 }
 
 #info-box a{
     font-family: "HKGrotesk";
     color: #8e8e8e;
     cursor: pointer;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 #info-box a:hover{
     font-family: "HKGrotesk";
-    color: #8e8e8e;
+    color: #f30;
     cursor: pointer;
-    text-decoration: underline;
-/*     background-color: #dbdbdb;
-    color: black;
-    border-radius:5px;
-    padding: 5px;
-    padding-top:2px;
-    padding-bottom: 2px;
-    margin-right:4px;
-    cursor: pointer;
-    white-space: nowrap;
-    word-break: keep-all;
-    line-height: 2em; */
-    
 }
 
 #info-box .info-box-column-header{
     font-family: "HKGroteskbold";
     width:auto;
-    font-size: 20px;
     text-align: left;
-    margin-bottom: -15px;
-    margin-top: 10px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    text-transform: uppercase;
+    text-indent: 0px;
 }
 
 
 #info-box .summary{
-    font-size: 20px;
-    background-color:white;
-    border:1px solid #f30;
+    margin-top: 20px;
+    font-size: 15px;
 }
 
 /***************************************
-     4-2. TEXT TITLES & FONT STYLES
+4-2. TEXT TITLES & FONT STYLES
 *****************************************
 Defines the typography for texts in reader */
 
@@ -409,23 +391,24 @@ Defines the typography for texts in reader */
     font-size: 62.5%;
     clear: left;
     color: black;
-    
+    background-color:white;
+    padding-left: 2%;
+
 }
 
-.section p, .section h2, .section h3, .section h1, .section img{
-    margin:0 auto;
+.section p, .section h2, .section h3, .section h1, .section img, .references{
     max-width: 580px;
-
 }
+
 /* Title of big part */
 .section h2 {
-	margin-left: 0;
-	margin-bottom: 0px;
+    margin-left: 0;
+    margin-bottom: 0px;
     padding-bottom: 20px;
-	padding-right: 0;
-	padding-top: 4.8%;
-	font-size: 5em;
-	line-height: 1.1em;
+    padding-right: 0;
+    padding-top: 4.8%;
+    font-size: 5em;
+    line-height: 1.1em;
     -webkit-margin-before: 0em;
     -webkit-margin-after: 5px;
     -webkit-margin-start: 0px;
@@ -433,8 +416,8 @@ Defines the typography for texts in reader */
     overflow-y: hidden;
     vertical-align: middle;
     letter-spacing: 2%;
-    border-top: 1px solid #dbdbdb;
-    color: black;
+    /*     border-top: 1px solid #dbdbdb;
+    */    color: black;
     margin-top: 14%;
 }
 
@@ -444,9 +427,9 @@ Defines the typography for texts in reader */
 }
 
 .shadow{
- /*    height: 400px;
+    /*    height: 400px;
     width: 400px;
-     background-color:transparent;
+    background-color:transparent;
     border-radius: 10px;
     -webkit-box-shadow: 10px 10px 162px 43px rgba(145,145,145,1);
     -moz-box-shadow: 10px 10px 162px 43px rgba(145,145,145,1);
@@ -455,7 +438,7 @@ Defines the typography for texts in reader */
 
 /* Title of sub-part (subtitle) */
 .section h3 {
-	font-size: 2.7em;
+    font-size: 2.7em;
     line-height: 1.4em;
     -webkit-margin-before: 30px;
     -webkit-margin-after: 15px;
@@ -466,33 +449,35 @@ Defines the typography for texts in reader */
 
 /* Font weight */
 .section p,h2,h3,h1,img,.author {
-	font-weight: 400;
+    font-weight: 400;
 }
 
 /* Font-size for the reading text: !! do not change the units (em) to pixels !! */
 .section p {
-    font-size: 1.9em;
+    font-size: 2.1em;
     line-height: 1.55em;
     text-rendering: optimizeLegibility;
     max-width: 580px;
-    margin-bottom: 0.15em;
+    margin-bottom: 1em;
 }
 
 
 
 
 p + p{ 
-    text-indent: 2.5em;
-}
+    /*     text-indent: 2.5em;
+    */}
 
 
 @media (max-width: 480px){
     .section p{
+        text-indent: 0;
+        margin-bottom: 2em;
         font-size: 1.9em;
         line-height: 1.55em;
         text-rendering: optimizeLegibility;
     }
-    
+
     .section h2{
         margin-left: 0;
         margin-bottom: 0px;
@@ -512,7 +497,7 @@ p + p{
         color: black;
         margin-top: 16%;
     }
-    
+
     li{
         text-indent: 0px;
         margin: 0px;
@@ -527,13 +512,13 @@ p + p{
         padding: 20px 0px 20px 0px;
     }
 }
-    
-    
-    
+
+
+
 /* author: the way the name of the author for each chapter displays */
 .section .author {
-	margin-left: 0;
-	margin-right: 0;
+    margin-left: 0;
+    margin-right: 0;
     color:#8e8e8e;
     font-size: 1.7em;
 }
@@ -542,14 +527,14 @@ p + p{
 .section .words {
     font-size: 1.7em;
     color:#8e8e8e;
-	text-decoration: none;
+    text-decoration: none;
     margin-bottom: 14px;
 }
 
 
 .references {
-	font-size: 1em;
-	text-indent: 0px;
+    font-size: 1em;
+    text-indent: 0px;
     margin-bottom: 40px;
     margin-top:40px;
     -webkit-column-gap: 20px;
@@ -570,9 +555,9 @@ p + p{
     break-inside: avoid-column;         /* IE 11 */
     text-indent: 0px;
     margin-bottom: 1em;
-/*     text-indent:-1em;
+    /*     text-indent:-1em;
     padding-left: 1em; */
-    
+
 }
 
 @media (max-width: 480px){
@@ -610,40 +595,41 @@ p + p{
     font-family: "HKGroteskbold";
 }
 /****************************
-     4-3. IMAGES IN TEXT
+4-3. IMAGES IN TEXT
 *****************************
 Style of each images appearing in the reader, in .text */
 
 /* img: style for each image that appears in the text */
 img {
-	width: 100%;
-	text-align: center;
-	margin-top: 30px;
-	margin-left: 0px;
-	margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    margin-left: 0px;
+    margin-bottom: 20px;
 }
 
-.section img{
-    margin-top:30px;
+.section img, img.grayscale{
+    margin-top:1em;
+    margin-bottom: 1.5em;
 }
-/* img.grayscale {
-    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
-    Firefox 3.5+, IE10
-    filter: gray; IE6-9
-    -webkit-filter: grayscale(100%); Chrome 19+ & Safari 6+
-    -webkit-transition: all .1s ease; Fade to color for Chrome and Safari
-    -webkit-backface-visibility: hidden; Fix for transition flickering
+/*  img.grayscale {
+filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+filter: gray;
+-webkit-filter: grayscale(100%); 
+-webkit-transition: all .1s ease; 
+-webkit-backface-visibility: hidden;
 }
 
 img.grayscale:hover {
-    filter: none;
-    -webkit-filter: grayscale(0%);
-}
- */
+filter: none;
+-webkit-filter: grayscale(0%);
+} */
+
 .section .img-caption{
     font-size: 14px;
-    margin-bottom: 30px;
+    margin-bottom: 1.5em;
     text-indent: 0px;
+    font-family: "HKGroteskbold";
 }
 
 
@@ -651,7 +637,7 @@ img.grayscale:hover {
 
 /* Font-faces used in styles */
 @font-face {
-	font-family: Hkgrotesk;
+    font-family: Hkgrotesk;
     src: url('css/fonts/hkgrotesk-regular-webfont.eot'); /* IE9 Compat Modes */
     src: url('css/fonts/hkgrotesk-regular-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
         url('css/fonts/hkgrotesk-regular-webfont.woff2') format('woff2'), /* Super Modern Browsers */
@@ -660,7 +646,7 @@ img.grayscale:hover {
         url('css/fonts/hkgrotesk-regular-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
 @font-face {
-	font-family: HkgroteskBold;
+    font-family: HkgroteskBold;
     src: url('css/fonts/hkgrotesk-bold-webfont.eot'); /* IE9 Compat Modes */
     src: url('css/fonts/hkgrotesk-bold-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
         url('css/fonts/hkgrotesk-bold-webfont.woff2') format('woff2'), /* Super Modern Browsers */
@@ -681,72 +667,8 @@ body{
 ******* CONTENT *********************
 ************************************/
 body {
-        margin: 0;
-        color:black;
-/*     Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+80,f2f2f2+92,dddddd+100
-    background: rgb(255,255,255); Old browsers
-    background: -moz-linear-gradient(top,  rgba(255,255,255,1) 80%, rgba(242,242,242,1) 92%, rgba(221,221,221,1) 100%); FF3.6-15
-    background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 80%,rgba(242,242,242,1) 92%,rgba(221,221,221,1) 100%); Chrome10-25,Safari5.1-6
-    background: linear-gradient(to bottom,  rgba(255,255,255,1) 80%,rgba(242,242,242,1) 92%,rgba(221,221,221,1) 100%); W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#dddddd',GradientType=0 ); IE6-9
-     */
- 
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+53,ffffff+53,ffffff+66,f4f4f4+83,f4f4f4+100 */
-    background: rgb(255,255,255); /* Old browsers */
-    background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(255,255,255,1) 53%, rgba(255,255,255,1) 53%, rgba(255,255,255,1) 66%, rgba(244,244,244,1) 83%, rgba(244,244,244,1) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 53%,rgba(255,255,255,1) 53%,rgba(255,255,255,1) 66%,rgba(244,244,244,1) 83%,rgba(244,244,244,1) 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 53%,rgba(255,255,255,1) 53%,rgba(255,255,255,1) 66%,rgba(244,244,244,1) 83%,rgba(244,244,244,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f4f4f4',GradientType=0 ); /* IE6-9 */
-
-    
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f4f4f4+70,ff3300+100&1+0,0.26+100 */
-    background: -moz-linear-gradient(top,  rgba(244,244,244,1) 0%, rgba(244,244,244,0.48) 70%, rgba(255,51,0,0.26) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top,  rgba(244,244,244,1) 0%,rgba(244,244,244,0.48) 70%,rgba(255,51,0,0.26) 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom,  rgba(244,244,244,1) 0%,rgba(244,244,244,0.48) 70%,rgba(255,51,0,0.26) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f4f4', endColorstr='#42ff3300',GradientType=0 ); /* IE6-9 */
-
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f4f4f4+48,ff3300+100&1+0,0.20+100 */
-    background: -moz-linear-gradient(top,  rgba(244,244,244,1) 0%, rgba(244,244,244,0.58) 48%, rgba(255,51,0,0.30) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top,  rgba(244,244,244,1) 0%,rgba(244,244,244,0.58) 48%,rgba(255,51,0,0.30) 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom,  rgba(244,244,244,1) 0%,rgba(244,244,244,0.58) 48%,rgba(255,51,0,0.30) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f4f4', endColorstr='#1fff3300',GradientType=0 ); /* IE6-9 */
-/* 
-    Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+50,f4f4f4+67,d6d6d6+100
-    background: rgb(255,255,255); Old browsers
-    background: -moz-linear-gradient(top,  rgba(255,255,255,1) 50%, rgba(244,244,244,1) 67%, rgba(214,214,214,1) 100%); FF3.6-15
-    background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 50%,rgba(244,244,244,1) 67%,rgba(214,214,214,1) 100%); Chrome10-25,Safari5.1-6
-    background: linear-gradient(to bottom,  rgba(255,255,255,1) 50%,rgba(244,244,244,1) 67%,rgba(214,214,214,1) 100%); W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d6d6d6',GradientType=0 ); IE6-9
- */
-
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f4f4f4+30,f4f4f4+56,ff3300+100&1+0,0.05+42,0.05+83,0.29+93,0.29+99 */
-    background: -moz-linear-gradient(top,  rgba(244,244,244,1) 0%, rgba(244,244,244,0.32) 30%, rgba(244,244,244,0.05) 42%, rgba(244,244,244,0.05) 56%, rgba(251,126,94,0.05) 83%, rgba(253,82,39,0.29) 93%, rgba(255,55,6,0.29) 99%, rgba(255,51,0,0.29) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top,  rgba(244,244,244,1) 0%,rgba(244,244,244,0.32) 30%,rgba(244,244,244,0.05) 42%,rgba(244,244,244,0.05) 56%,rgba(251,126,94,0.05) 83%,rgba(253,82,39,0.29) 93%,rgba(255,55,6,0.29) 99%,rgba(255,51,0,0.29) 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom,  rgba(244,244,244,1) 0%,rgba(244,244,244,0.32) 30%,rgba(244,244,244,0.05) 42%,rgba(244,244,244,0.05) 56%,rgba(251,126,94,0.05) 83%,rgba(253,82,39,0.29) 93%,rgba(255,55,6,0.29) 99%,rgba(255,51,0,0.29) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f4f4', endColorstr='#4aff3300',GradientType=0 ); /* IE6-9 */
-
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+24,f4f4f4+45,f4f4f4+56,d8d8d8+100 */
-    background: rgb(255,255,255); /* Old browsers */
-    background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(255,255,255,1) 24%, rgba(244,244,244,1) 45%, rgba(244,244,244,1) 56%, rgba(216,216,216,1) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 24%,rgba(244,244,244,1) 45%,rgba(244,244,244,1) 56%,rgba(216,216,216,1) 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 24%,rgba(244,244,244,1) 45%,rgba(244,244,244,1) 56%,rgba(216,216,216,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d8d8d8',GradientType=0 ); /* IE6-9 */
-
-    
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f4f4f4+0,ffffff+12,ffffff+34,f4f4f4+56,d8d8d8+100 */
-    background: rgb(244,244,244); /* Old browsers */
-    background: -moz-linear-gradient(top,  rgba(244,244,244,1) 0%, rgba(255,255,255,1) 12%, rgba(255,255,255,1) 34%, rgba(244,244,244,1) 56%, rgba(216,216,216,1) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top,  rgba(244,244,244,1) 0%,rgba(255,255,255,1) 12%,rgba(255,255,255,1) 34%,rgba(244,244,244,1) 56%,rgba(216,216,216,1) 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom,  rgba(244,244,244,1) 0%,rgba(255,255,255,1) 12%,rgba(255,255,255,1) 34%,rgba(244,244,244,1) 56%,rgba(216,216,216,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f4f4', endColorstr='#d8d8d8',GradientType=0 ); /* IE6-9 */
-
-    
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f4f4f4+0,f4f4f4+25,ffffff+43,ffffff+58,f4f4f4+73,d8d8d8+100 */
-    background: #f4f4f4; /* Old browsers */
-    background: -moz-linear-gradient(top,  #f4f4f4 0%, #f4f4f4 25%, #ffffff 43%, #ffffff 58%, #f4f4f4 73%, #d8d8d8 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top,  #f4f4f4 0%,#f4f4f4 25%,#ffffff 43%,#ffffff 58%,#f4f4f4 73%,#d8d8d8 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom,  #f4f4f4 0%,#f4f4f4 25%,#ffffff 43%,#ffffff 58%,#f4f4f4 73%,#d8d8d8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f4f4', endColorstr='#d8d8d8',GradientType=0 ); /* IE6-9 */
+    margin: 0;
+    color:black;
 
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f4f4f4+0,fcfcfc+48,f4f4f4+100,f4f4f4+100 */
     background: #f4f4f4; /* Old browsers */
@@ -755,23 +677,45 @@ body {
     background: linear-gradient(to bottom,  #f4f4f4 0%,#fcfcfc 48%,#f4f4f4 100%,#f4f4f4 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f4f4', endColorstr='#f4f4f4',GradientType=0 ); /* IE6-9 */
 
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+19,ebebeb+68,ebebeb+100 */
+    background: rgb(255,255,255); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(255,255,255,1) 19%, rgba(235,235,235,1) 68%, rgba(235,235,235,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 19%,rgba(235,235,235,1) 68%,rgba(235,235,235,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(255,255,255,1) 19%,rgba(235,235,235,1) 68%,rgba(235,235,235,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ebebeb',GradientType=0 ); /* IE6-9 */
 
-        background-attachment: fixed;
-        color: black;
-        overflow-x: hidden;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+63,f4f4f4+100 */
+    background: rgb(255,255,255); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(255,255,255,1) 63%, rgba(244,244,244,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 63%,rgba(244,244,244,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(255,255,255,1) 63%,rgba(244,244,244,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f4f4f4',GradientType=0 ); /* IE6-9 */
+
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+35,ffffff+48,e0e0e0+100 */
+    background: rgb(255,255,255); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(255,255,255,1) 35%, rgba(255,255,255,1) 48%, rgba(224,224,224,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 35%,rgba(255,255,255,1) 48%,rgba(224,224,224,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(255,255,255,1) 35%,rgba(255,255,255,1) 48%,rgba(224,224,224,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e0e0e0',GradientType=0 ); /* IE6-9 */
+
+
+    background-attachment: fixed;
+    color: black;
+    overflow-x: hidden;
     text-rendering: optimizeSpeed;
     -ms-overflow-style: -ms-autohiding-scrollbar;
-
-    }	
+}	
 
 /*******THE CONTENT********************/
 #content {
     opacity: 0;
     margin-bottom: 100px !important;
     margin-top: 80px;
-    background-color:white;
+    /*     -webkit-box-shadow: 0px 10px 20px 8px rgba(255,255,255,1);
+    -moz-box-shadow: 0px 10px 20px 8px rgba(255,255,255,1);
+    box-shadow: 0px 10px 20px 8px rgba(255,255,255,1); */
 }
-	
+
 a {
     text-decoration: none;
 }
@@ -781,7 +725,7 @@ a {
 
 /* Interactions: horizontal Scrollbar for the chapters */
 .horizScroll, .subScroll {
-/*  width: 0%;
+    /*  width: 0%;
     height: 2px;
     max-width: 100%;
     position: absolute;
@@ -847,51 +791,6 @@ a {
     padding-bottom: 4px;
 }
 
-@media (max-width: 768px){
-    .toc_number{
-        text-align: left;
-        font-size: 17px;
-        line-height: 20px;
-        float: left;
-        padding-left:8px;
-    }
-    .toc_title{
-        margin-left: 30px;
-        font-size: 17px;
-        font-family: "HKGroteskbold";
-        line-height: 20px;
-        padding-right: 2px;
-        margin-bottom: 0px;
-        hyphens: auto;
-    }
-
-    .toc_author{
-        font-size: 17px;
-        line-height: 20px;
-        margin-left: 30px;
-        padding-bottom: 4px;
-    }
-    
-    #menu{
-        -webkit-box-shadow: 10px 0px 16px 1px rgba(255,255,255,1);
-        -moz-box-shadow: 10px 0px 16px 1px rgba(255,255,255,1);
-        box-shadow: 10px 0px 16px 1px rgba(255,255,255,1);
-        margin-right: 0px;
-    }
-    
-    #toc_wrapper{
-        margin-right: 0px !important;
-    }
-    .toggle_menu{
-        color:transparent;
-    }
-    .toggle_menu_left_button div{
-        color:transparent;
-
-    }
-    
-    
-}
 
 
 a.page-scroll > h2 {
@@ -917,14 +816,11 @@ a.page-scroll:hover, a.page-scroll:active, a.page-scroll:link, a.page-scroll:vis
     max-width: 100%;
     background-attachment: fixed;   
     left: 0;
-/* 
+    /* 
     background: -webkit-linear-gradient(#f30, rgb(255, 213, 203)); For Safari 5.1 to 6.0
     background: -o-linear-gradient(#f30, rgb(255, 213, 203)); For Opera 11.1 to 12.0
     background: -moz-linear-gradient(#f30, rgb(255, 213, 203)); For Firefox 3.6 to 15
     background: linear-gradient(#f30, rgb(255, 213, 203)); Standard syntax  */
-}
-
-#menu:hover{
 }
 
 
@@ -937,14 +833,14 @@ a.page-scroll:hover, a.page-scroll:active, a.page-scroll:link, a.page-scroll:vis
     overflow-y: scroll;
     left: 0;
     background-color: white;
-  /*  border-right: 1px solid #d8d8d8; */
+    /*  border-right: 1px solid #d8d8d8; */
     padding-bottom: 4%;
     position: absolute;
     -ms-overflow-style: none;
 }
 
 #toc_wrapper::-webkit-scrollbar {
-    display: none;
+    display: block;
 }
 
 #menu-right-wrapper {
@@ -965,49 +861,46 @@ a.page-scroll:hover, a.page-scroll:active, a.page-scroll:link, a.page-scroll:vis
     border-left: 0px solid black;
     width: 4%;
     height: 100%;
+
     /* background-color: red; */
 }
 
 .toggle_menu:hover #menu_bar{
-    background: rgb(255, 213, 203);
 }
 
 #menu_bar:hover{
-    background: rgb(255, 213, 203);
 }
 
 .toggle_menu_left_button{
     width: 999PX;
     height: 0px;
     bottom: 4%;
-    left: 60%;
+    /* left: 60%; */
     -ms-transform: rotate(270deg);
     -moz-transform: rotate(270deg);
     -webkit-transform: rotate(270deg);
     -o-transform: rotate(270deg);
     -ms-transform-origin: 20% 40%;
     -webkit-transform-origin: 0% 40%;
-    transform-origin: 0% 40%; 
+    transform-origin: 0% 40%;
     color: black;
     text-overflow: clip;
     position: absolute;
     font-size: 15px;
     text-overflow: ellipsis;
     z-index: 99999999999999999999999999999999;
-    font-style: italic;
-        
+    /* font-style: italic; */
     font-family: "HKGroteskbold";
-/*        text-transform: uppercase;
-        */    
+    /* text-transform: uppercase; */
     font-size: 14px;
     vertical-align: middle;
-    align-content: center;    
+    align-content: center;
     align-items: center;
 }
 
 .toggle_menu_left_button:hover, .toggle_menu_left_button div:hover{
     cursor: pointer;
-    
+
 }
 
 .toggle_menu_left_button div:hover > #menu_bar{
@@ -1020,7 +913,7 @@ a.page-scroll:hover, a.page-scroll:active, a.page-scroll:link, a.page-scroll:vis
 .toggle_menu_left_button div{
     width: 50%;
     z-index: 99999999999999999999999999999999;
-    
+
 
 }
 
@@ -1038,9 +931,10 @@ a.page-scroll:hover, a.page-scroll:active, a.page-scroll:link, a.page-scroll:vis
     position: absolute;
     background-color: white;
     width: 24%;
-    /* -webkit-box-shadow: -16px 0px 39px 1px rgba(255,51,0,0.51); */
-    /* -moz-box-shadow: -16px 0px 39px 1px rgba(255,51,0,0.51); */
-    /* box-shadow: -16px 0px 39px 1px rgba(255,51,0,0.51); */
+    /*     border-right: 1px solid #d8d8d8;
+    */
+
+
 }
 
 .toggle_menu_right .toggle_menu_right_button{
@@ -1078,17 +972,17 @@ a.page-scroll:hover, a.page-scroll:active, a.page-scroll:link, a.page-scroll:vis
 }
 
 /********************************************************
-     2-3. TABLE OF CONTENT (left, inside the pushmenu)
+2-3. TABLE OF CONTENT (left, inside the pushmenu)
 *********************************************************
 Table of content is contained in pushmenu, it shows the different parts of the book and can be clicked to navigate through them */
 
 /* Table of contents: title for big part */
 #menu h2 {
-	-webkit-margin-before: 0;
-	-webkit-margin-after: 0;
-	-webkit-margin-start: 0;
-	-webkit-margin-end: 0;
-	margin:10px;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    margin:10px;
     text-align: left;
     padding-top:4px;
     background-color:white;
@@ -1112,17 +1006,13 @@ Table of content is contained in pushmenu, it shows the different parts of the b
 /*******VERTICAL BAR THAT*********
 ********OPENS UP THE MENU********/
 #menu_bar {
-    display: none;
-    /* 
-    z-index: 999999999999999999;
-     */
-    /*     background-color: white;
-     */	
     height: 100%;
     position: fixed;
     color: black;
     width: 4%;
-    background: white;
+    background-color: #FFE5DE;
+    background-color: #e0e0e0;
+    background-color: white;
 }
 
 
@@ -1131,35 +1021,91 @@ Table of content is contained in pushmenu, it shows the different parts of the b
 #menu_bar_scroll {	
     height: 0%;
     width: 1.8%;
-    position: fixed;	
-    background-color:#f30;
+    position: fixed;
+    /* background-color: #f30; */
+    display: block;
 }
 
 
 #menu_bar_title_button{
-        width:400px;
-        height:50px;
-        margin-top:50px;
-        -ms-transform:rotate(270deg); /* IE 9 */
+    width:400px;
+    height:50px;
+    margin-top:50px;
+    -ms-transform:rotate(270deg); /* IE 9 */
     -moz-transform:rotate(270deg); /* Firefox */
     -webkit-transform:rotate(270deg); /* Safari and Chrome */
     -o-transform:rotate(270deg); /* Opera */
     text-align: right;
-/*         -ms-transform-origin: 10% 100%; IE 9
-        -webkit-transform-origin: 10% 100%; Chrome, Safari, Opera
-        transform-origin: 10% 100%;
-         */
+    /*         -ms-transform-origin: 10% 100%; IE 9
+    -webkit-transform-origin: 10% 100%; Chrome, Safari, Opera
+    transform-origin: 10% 100%;
+    */
     font-size: 18px;
 
-        color:black;
+    color:black;
 }
 
 
+@media (max-width: 768px){
+
+    .menu-publication-title{
+        font-size: 17px;
+        line-height: 20px;
+    }
+
+    .toc_number{
+        text-align: left;
+        font-size: 17px;
+        line-height: 20px;
+        float: left;
+        padding-left:8px;
+    }
+    .toc_title{
+        margin-left: 30px;
+        font-size: 17px;
+        font-family: "HKGroteskbold";
+        line-height: 20px;
+        padding-right: 2px;
+        margin-bottom: 0px;
+        hyphens: auto;
+    }
+
+    .toc_author{
+        font-size: 17px;
+        line-height: 20px;
+        margin-left: 30px;
+        padding-bottom: 4px;
+    }
+
+    #menu{
+        -webkit-box-shadow: 10px 0px 16px 1px rgba(255,255,255,1);
+        -moz-box-shadow: 10px 0px 16px 1px rgba(255,255,255,1);
+        box-shadow: 10px 0px 16px 1px rgba(255,255,255,1);
+        margin-right: 0px;
+        padding-bottom: 100px;
+    }
+
+    #toc_wrapper{
+        margin-right: 0px !important;
+        padding-bottom: 100px;
+
+    }
+    .toggle_menu{
+        color:transparent;
+    }
+    .toggle_menu_left_button div{
+        color:transparent;
+
+    }
+
+
+}
+
 /*******MENU TOGGLE BUTTON**********/
 
-	.close_menu {
-        margin-left:0%;
-    }
+.close_menu {
+    margin-left:0%;
+}
 
 /****************************************
 ******* HEADER  **********************
@@ -1174,21 +1120,21 @@ Table of content is contained in pushmenu, it shows the different parts of the b
 #tool-bar-container{
     position: fixed;
     top:0px;
-left:0px;
+    left:0px;
     width: 80%;
-/*  -webkit-box-shadow: 9px -3px 20px 23px rgba(255,255,255,1);
- -moz-box-shadow: 9px -3px 20px 23px rgba(255,255,255,1);
- box-shadow: 9px -3px 20px 23px rgba(255,255,255,1);  */
+    /*  -webkit-box-shadow: 9px -3px 20px 23px rgba(255,255,255,1);
+    -moz-box-shadow: 9px -3px 20px 23px rgba(255,255,255,1);
+    box-shadow: 9px -3px 20px 23px rgba(255,255,255,1);  */
     background-color: white;
     height: 1px;
-     z-index:99;
+    z-index:99;
 }
 
 #search-button, #files-button, #copy-button, #print-button, #tools-button, #share-button{
     padding:0px;
     padding-top:5px;
     height:23px;
-   /* background-image: url(css/image/search.png); */
+    /* background-image: url(css/image/search.png); */
     background-size: contain;
     width: 30px;
     cursor: pointer;
@@ -1202,14 +1148,14 @@ left:0px;
 }
 
 #search-button:active, #files-button:active, #copy-button:active, #print-button:active, #tools-button:active, #share-button:active{
-border: 1px solid #ff3300;
+    border: 1px solid #ff3300;
 }
 
 
 
 
 #print-pannel input{
-        background-color:#d8d8d8;
+    background-color:#d8d8d8;
     display: inline-block;
     border-radius: 5px;
     padding:1px;
@@ -1257,7 +1203,7 @@ border: 1px solid #ff3300;
 }
 
 #search-pannel{
-     width: 200px;
+    width: 200px;
     position:fixed;
     top:20px; 
     z-index:99;
@@ -1282,47 +1228,47 @@ border: 1px solid #ff3300;
 
 
 .toggle-box {
-display: none;
+    display: none;
 }
 
 .toggle-box + label {
-cursor: pointer;
-display: block;
-font-weight: bold;
-line-height: 21px;
-margin-bottom: 5px;
-border-top: 1px solid #898989;
+    cursor: pointer;
+    display: block;
+    font-weight: bold;
+    line-height: 21px;
+    margin-bottom: 5px;
+    border-top: 1px solid #898989;
 }
 
 .toggle-box + label + div {
-display: none;
-margin-bottom: 10px;
+    display: none;
+    margin-bottom: 10px;
 }
 
 .toggle-box:checked + label + div {
-display: block;
+    display: block;
 }
 
 .toggle-box + label:before {
-background-color: rgba(177, 177, 177, 0.51);
--webkit-border-radius: 10px;
--moz-border-radius: 10px;
-border-radius: 10px;
-color: #FFFFFF;
-content: "+";
-display: block;
-float: right;
-font-weight: bold;
-height: 15px;
-line-height: 15px;
-margin-right: 2px;
-text-align: center;
-width: 15px;
-z-index:99;}
+    background-color: rgba(177, 177, 177, 0.51);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    color: #FFFFFF;
+    content: "+";
+    display: block;
+    float: right;
+    font-weight: bold;
+    height: 15px;
+    line-height: 15px;
+    margin-right: 2px;
+    text-align: center;
+    width: 15px;
+    z-index:99;}
 
 .toggle-box:checked + label:before {
-content: "\2212";
-z-index:99;
+    content: "\2212";
+    z-index:99;
 }
 
 
@@ -1341,21 +1287,21 @@ z-index:99;
 
 
 #button1{
-	position: relative;
-	background-color: transparent;
-	border: 0;
-	cursor: pointer;
-	font-size: 18px;
-	display: inline-block;
+    position: relative;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    font-size: 18px;
+    display: inline-block;
 
 }
- #button2{
-	position: relative;
-	background-color: transparent;
-	border: 0;
-	cursor: pointer;
-	font-size: 12px;
-	display: inline-block;
+#button2{
+    position: relative;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    font-size: 12px;
+    display: inline-block;
 }
 
 
@@ -1376,20 +1322,20 @@ z-index:99;
 
 .search_nav {
     /*position: absolute;*/
-	position: fixed;
-		margin-top: -35px;
-        background-color:transparent;
-        box-shadow: none;
-        border:none;
+    position: fixed;
+    margin-top: -35px;
+    background-color:transparent;
+    box-shadow: none;
+    border:none;
 }
 
-	#prev {
-        right:35px;
-    }
+#prev {
+    right:35px;
+}
 
-	#next {
-        right:15px;
-	}
+#next {
+    right:15px;
+}
 
 #cancel{
     position: fixed;
@@ -1400,30 +1346,32 @@ z-index:99;
     right:55px;
 }
 
-	.search-found {
-		color: black;
-	}
+.search-found {
+    color: black;
+}
 
-	.search-notfound {
-/* 		color: #BFBFBF !important;
-		 */	}
+.search-notfound {
+    /* 		color: #BFBFBF !important;
+    */	}
 
-	.highlight {
-		background-color: #f30;
-	}
+.highlight {
+    background-color: #f30;
+}
 
 
+.form-control:focus{
+    border-color: none;
+    outline: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border:none;
+}
 
 
 
 /****************************
 ******** ARROWS *************
 ****************************/
-
-#arrows:hover{
-    box-shadow: 0 3px 5px rgba(0,0,0,.135);
-
-}
 
 #arrows #up {
     position: fixed;
@@ -1455,12 +1403,46 @@ z-index:99;
     color:black !important;
 }
 
-#arrows #up a:hover, #arrows #down a:hover{
+
+#arrows #up:hover, #arrows #down:hover{
     color: #f30;
+    background-color:white;
+    border:1px solid #f30;
+}
+
+@media (max-width: 768px){
+    #arrows{
+        position: fixed;
+        right:2%;
+        z-index: 99999999999999999999999;
+        margin-left:96%;
+    }
+
+    #arrows #up {
+        position: fixed;
+        top: 20%;
+        z-index: 99;
+        font-size: 20px;
+        border-radius: 4px;
+        background-color: #f4f4f4;
+        border:none;
+        padding: 4px;
+    }
+
+    #arrows #down {
+        position: fixed;
+        top: 50%;
+        z-index: 99;
+        font-size: 20px;
+        border-radius: 4px;
+        background-color: #f4f4f4;
+        border:none;
+        padding: 4px;
+    }
 }
 
 /********************************
-     7-2. SEARCH BOX (right)
+7-2. SEARCH BOX (right)
 *********************************
 Search box is where the user can enter keyword (in input) and look for words in text */
 
@@ -1484,9 +1466,9 @@ Search box is where the user can enter keyword (in input) and look for words in 
 
 /* where the user writes */
 fieldset {
-	margin: 0;
-	padding: 0;
-	border-style: none;
+    margin: 0;
+    padding: 0;
+    border-style: none;
 }
 
 #filter {
@@ -1497,8 +1479,8 @@ fieldset {
 
 /* how is the text the user writes when searching */
 #filter-count {
-	font-size: 13px;
-	font-family: "Hkgrotesk";
+    font-size: 13px;
+    font-family: "Hkgrotesk";
     text-align: right;
     position: fixed;
     color: #afafaf;
@@ -1512,62 +1494,62 @@ input#filter {
 }
 
 input:hover {
-	border-radius: 5px;
+    border-radius: 5px;
 }
 
 /* how text of the book displays when a result is found */
 .search-found {
-	color: #000;
+    color: #000;
 }
 
 /* how "importantword" of the book displays when a result is found */
 .search-found .importantword {
-	font-style: normal;
-	cursor: text;
-	color: #000;
-	border-bottom: 0 dotted #000;
+    font-style: normal;
+    cursor: text;
+    color: #000;
+    border-bottom: 0 dotted #000;
 }
 
 /* how "keyword-searched" displays when a result is found */
 .search-found .keyword-searched {
-	margin-bottom: 0;
-	background-color: #ff0;
-	cursor: text;
-	border-radius: 5px;
-	color: #000;
+    margin-bottom: 0;
+    background-color: #ff0;
+    cursor: text;
+    border-radius: 5px;
+    color: #000;
 }
 
 /* how the text of the book displays when no result is found */
 .search-notfound {
-/* 	color: rgba(203,203,203,0.22);
-	 */}
+    /* 	color: rgba(203,203,203,0.22);
+    */}
 
 /* how "importantword" of the book displays when a result is found */
 .search-notfound .importantword {
-/* 	font-style: normal;
-	cursor: text;
-	color: rgba(203,203,203,0.22);
-	border-bottom: 0 dotted #000; */
+    /* 	font-style: normal;
+    cursor: text;
+    color: rgba(203,203,203,0.22);
+    border-bottom: 0 dotted #000; */
 }
 
 /* how "keyword-searched" displays when no result is found */
 .search-notfound .keyword-searched {
-/* 	margin-bottom: 0;
-	background-color: rgba(255,255,255,0);
-	cursor: text;
-	color: rgba(203,203,203,0.22); */
+    /* 	margin-bottom: 0;
+    background-color: rgba(255,255,255,0);
+    cursor: text;
+    color: rgba(203,203,203,0.22); */
 }
 
 .allWords {
-	font-size: 13px;
-	background-color: #fff;
-	width: auto;
-	position: fixed;
-	padding-left: 2px;
-	list-style-type: none;
-	cursor: pointer;
-	padding: 2px;
-	margin-top: 2px;
+    font-size: 13px;
+    background-color: #fff;
+    width: auto;
+    position: fixed;
+    padding-left: 2px;
+    list-style-type: none;
+    cursor: pointer;
+    padding: 2px;
+    margin-top: 2px;
 }
 
 /* Next and prev buttons that appears to go to next word searched */
@@ -1594,11 +1576,11 @@ input:hover {
 }
 
 /*.search-found {
-    background: -webkit-radial-gradient(10px, white, white, #BFBFBF); /* Safari 5.1 to 6.0 
-    background: -o-radial-gradient(10px, white, white, #BFBFBF); /* For Opera 11.6 to 12.0 
-    background: -moz-radial-gradient(10px, white, white, #BFBFBF); /* For Firefox 3.6 to 15 
-		    background: radial-gradient(10px, white, white, #BFBFBF); /* Standard syntax (must be last) *
-		}*/
+background: -webkit-radial-gradient(10px, white, white, #BFBFBF); /* Safari 5.1 to 6.0 
+background: -o-radial-gradient(10px, white, white, #BFBFBF); /* For Opera 11.6 to 12.0 
+background: -moz-radial-gradient(10px, white, white, #BFBFBF); /* For Firefox 3.6 to 15 
+background: radial-gradient(10px, white, white, #BFBFBF); /* Standard syntax (must be last) *
+}*/
 
 
 #buttons_wrapper{
@@ -1618,21 +1600,20 @@ input:hover {
 .ui-menu-item {
     background-color: white;
     cursor: pointer;
-	-webkit-box-shadow: 0 10px 15px rgba(0,0,0,0.2);
-	-moz-box-shadow: 0 10px 15px rgba(0,0,0,0.2);
-	box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.2);
     padding-left:3px;
     z-index: 99;
 
 }
 
 .ui-menu-item:hover{
-	background-color: #FFA;
-	color: #000;
+    background-color: #d8d8d8;
 }
 
 .ui-menu-item:focus {
-    background-color: yellow;
+    background-color: #f30;
 }
 
 
@@ -1645,12 +1626,14 @@ input:hover {
     border-bottom: dashed 1px black;
     color: black;
     text-decoration: none;
+    font-family: "HKGrotesk";
 }
 
 .in-text a:hover, .in-text:hover{
     color: #f30;
     text-decoration: none !important;
     border-bottom: dashed 1px #f30;
+    font-family: "HKGrotesk";
 }
 
 /********THE BOX**********************/
@@ -1666,7 +1649,7 @@ input:hover {
     font-family: "HKGrotesk";
     border-radius: 5px;
     border:1px solid #d8d8d8;
-	width: 300px;
+    width: 300px;
     text-indent: 0;
 }
 
@@ -1715,146 +1698,142 @@ input:hover {
 
 
 /********THE X BUTTON******************/
-    #x {
-    	position: inherit;
-    	right: -6px;
-    	top: -6px;
-    	border-radius: 9px;
-    	border: 1px solid red;
-    	background-color: orange;
-    	padding: 0 4px;
-    	text-align: center;
-    }
+#x {
+    position: inherit;
+    right: -6px;
+    top: -6px;
+    border-radius: 9px;
+    border: 1px solid red;
+    background-color: orange;
+    padding: 0 4px;
+    text-align: center;
+}
 
 
 
-    #x a {
-    	text-decoration: none;
-    	color: black;
-    }
+#x a {
+    text-decoration: none;
+    color: black;
+}
 f
 
-     .capitalism, .capital, .creativity, .art, .contemporary, .culture, .ideological, .social, .labor, .attention, .image, .production, .capitalism, .art, .state, .life, .public, .city, .economics, .production, .development, .art, .social, .avant-garde, .world, .big, .Other, .art, .urban, .cultural, .project, .creativity, .Belgrade, .Rog, .capital, .creative, .collective, .urban, .factory, .gentrification, .art, .political, .social, .culture, .autonomy, .public, .work {
-         color:blue;
-         /* 
-         color:#f30;
-          */
-     }
+.capitalism, .capital, .creativity, .art, .contemporary, .culture, .ideological, .social, .labor, .attention, .image, .production, .capitalism, .art, .state, .life, .public, .city, .economics, .production, .development, .art, .social, .avant-garde, .world, .big, .Other, .art, .urban, .cultural, .project, .creativity, .Belgrade, .Rog, .capital, .creative, .collective, .urban, .factory, .gentrification, .art, .political, .social, .culture, .autonomy, .public, .work {
+    color:blue;
+    /* 
+    color:#f30;
+    */
+}
 
 /********CITATIONS************************/
 
-    .underline {
+.underline {
+    background-color: rgba(255, 95, 52, 0.71);
 
-        background-color:rgba(255, 255, 0, 0.49);
-    }
+}
 
-    .remove_highlight {
-        background-color: white;
-    }
+.remove_highlight {
+    background-color: white;
+}
 
 #pin_wrapper{
     margin-top: 10px;    
 }
 
-    #pin {
-        color:#5b5b5b;
-        position: absolute;
-        cursor: move;
-        font-size: 14px;
-    }
-
-    #pin:hover{
-        color:rgb(31,173,74);
+#pin {
+    color:#5b5b5b;
+    position: absolute;
+    cursor: move;
+    font-size: 14px;
 }
-    /*.pin-clone {
-        color: blue;
-    }*/
 
-    .pin-close {
-        background-color: yellow;
-    }
+#pin:hover{
+    color: rgb(63, 222, 63);
+}
+/*.pin-clone {
+color: blue;
+}*/
 
-    .ui-draggable-handle {
-        font-size: 10px;
-        color:rgb(31,173,74);
-        cursor: move;
-        z-index: 999999999999999999999999;
-        padding-left:4px;
-    }
+.ui-draggable-handle {
+    font-size: 10px;
+    color: rgb(63, 222, 63);
+    cursor: move;
+    z-index: 999999999999999999999999;
+    padding-left:4px;
+}
 
-    .pin-form {
-        display: none;
-        color:rgb(31,173,74);
-    }
+.pin-form {
+    display: none;
+    color: rgba(0,255,0,1);
+}
 
-    .pin-input {
-        display: inline;
-        width: auto;
-        font-size: 15px;
-        font-family: "Hkgrotesk";
-        border-style: none;
-        color:rgb(31,173,74) !important;
-        background-color: rgb(223, 255, 232);
-        padding: 0;
-        margin-left:2px;
-        border-radius: 0px;
-        border-bottom: 0px solid #868686;
-    }
+.pin-input {
+    display: inline;
+    width: auto;
+    font-size: 15px;
+    font-family: "Hkgrotesk";
+    border-style: none;
+    background-color: rgb(240, 255, 240);
+    color: rgb(63, 222, 63);
+    padding: 0;
+    margin-left:2px;
+    border-radius: 0px;
+    border-bottom: 0px solid #868686;
+}
 
-    .save-pin {
-        display: inline;
-    }
+.save-pin {
+    display: inline;
+}
 
-    #tools {
-	top: 2%;
-	right: 1%;
-		/*position: static;
-		bottom: 5px;
-		display: inline-block;*/
+#tools {
+    top: 2%;
+    right: 1%;
+    /*position: static;
+    bottom: 5px;
+    display: inline-block;*/
     position: fixed;
-    }
+}
 
 .full-citation {
     text-align: left;
     word-wrap: break-word;
     background-color: #ffffff;
     overflow-y: auto;
-        border:none;
-        font-size: 10px;
+    border:none;
+    font-size: 10px;
     line-height: 12px;
-        min-height: 6em;
-        max-height: 9em;
-        width: 100%;
-        margin: 0px;
-        border-radius: 2px;
-        color: #5b5b5b;
+    min-height: 6em;
+    max-height: 9em;
+    width: 100%;
+    margin: 0px;
+    border-radius: 2px;
+    color: #5b5b5b;
     border:1px dashed #d8d8d8;
     background-color:#f4f4f4;
 }
 
-    #citation-box {
-      top: 10%;
-      right: 1%;
-      position: fixed;
+#citation-box {
+    top: 10%;
+    right: 1%;
+    position: fixed;
     /*
-      position: absolute;
-      right: 2%;
+    position: absolute;
+    right: 2%;
     */
-      border: 1px solid black;
-      border-radius: 5px;
-      background-color: #C7C7BB;
-      width: 30%;
-      min-height: 15%;
-    }
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: #C7C7BB;
+    width: 30%;
+    min-height: 15%;
+}
 
 /********ON SUCCESFUL COPY****************/
-    .confirmation {
+.confirmation {
     background-color: #82ff82;
     display: inline;
     margin-left: 5%;
-        font-size:13px;
+    font-size:13px;
     /*margin: auto;*/
-    }
+}
 
 
 /********************************************
@@ -1863,8 +1842,8 @@ f
 #sidenote-wrapper {
     margin-left: 2%;
     width: 15%;
-/*     width: 13%;
-     */    /*padding-right: 2%;*/
+    /*     width: 13%;
+    */    /*padding-right: 2%;*/
     /*     background-color:white;
     height: 999999999999999999999999999px; */
     height: auto;
@@ -2013,7 +1992,9 @@ ol {
     color: black;  
     border:none;
     height: auto;
+    /* 
     box-shadow: 0 3px 5px rgba(0,0,0,.135);
+    */
 }
 
 .section .keyword-button:hover {
@@ -2027,7 +2008,7 @@ ol {
     color: blue;  
     border:none;
     height: auto;
-    box-shadow: 0 3px 5px rgba(0,0,0,.135);
+    box-shadow: inset 0 3px 5px rgba(0,0,0,.135);
 }
 .section .btn.active{
     box-shadow: inset 0 3px 5px rgba(0,0,0,.135);
@@ -2044,7 +2025,7 @@ ol {
 
 
 .extra{
-    background-color: #dbdbdb;
+    background-color: rgba(0, 0, 0, 0.12);
     border-radius:5px;
     padding: 5px;
     padding-top:2px;
@@ -2053,12 +2034,17 @@ ol {
     line-height: 2em;
     color: black !important;
     font-family: "HKGrotesk";
+    cursor: pointer;
+    white-space: nowrap;
+    word-break: keep-all;
 }
 
 .extra:hover{
     text-decoration: none;
     color: black;
     font-family: "HKGrotesk";
+    background-color: rgba(0, 0, 0, 0.19);
+    box-shadow:inset 0 3px 5px rgba(0,0,0,.135);
 }
 
 .extra:active{
@@ -2123,7 +2109,6 @@ ol {
     height: 100%;
     border: none;
     background-color: white;
-    /* border-left: 1px solid #d8d8d8; */
     font-family: "HKGrotesk";
 }
 
@@ -2164,14 +2149,14 @@ ol {
 
 
 .panel-default>.panel-heading{
-/*     background-color: #f5f5f5;
-     */   
+    /*     background-color: #f5f5f5;
+    */   
     border-radius: 4px;
     padding: 7px;
     background-color: #f4f4f4;
     border:none;
-    box-shadow: 0 3px 5px rgba(0,0,0,.135);
-    font-family: "HKGrotesk";
+    /*     box-shadow: 0 3px 5px rgba(0,0,0,.135);
+    */    font-family: "HKGrotesk";
 }
 
 .panel-heading a{
@@ -2180,6 +2165,24 @@ ol {
 .panel-default>.panel-heading a:hover, .panel-default>.panel-heading a:focus{
     color: black;
     text-decoration: none;
+}
+
+.panel-default>.panel-heading:hover{
+    color: black;
+    text-decoration: none;
+    background-color: white;
+}
+
+.panel-default>.panel-heading:focus{
+    color: black;
+    text-decoration: none;
+    background-color: white;
+}
+
+.panel-default>.panel-heading:active{
+    color: black;
+    text-decoration: none;
+    background-color: white;
 }
 
 .panel-body p{
@@ -2235,6 +2238,19 @@ ol {
     color: black;
     background-color:#f4f4f4; !important;
 }
+
+.btn-group-horizontal{
+    width: 100%;
+    max-width: 100%;
+}
+
+.btn-group-horizontal .btn-primary{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
 
 .btn-primary:focus{
     color: black;
@@ -2313,9 +2329,9 @@ blockquote {
     font-size: inherit;
     /* 
     font-size: 1.22em;
-         */
+    */
     border-left: 0px;
-/*  font-family: "Georgia";*/    
+    /*  font-family: "Georgia";*/    
 }
 
 blockquote p{
@@ -2341,10 +2357,9 @@ blockquote p{
 
 
 .ui-effects-transfer {
-    border: 1px dashed black;
-    /*background-color: magenta;*/
-    /*opacity: .5;*/
-    /*text-decoration: underline;*/
+    color: red;
+    background-color: rgba(255, 51, 0, 0.13);
+    border-radius: 5px;
 }
 
 
@@ -2359,11 +2374,11 @@ blockquote p{
     position:absolute;
     right:2%;
     margin:0px;
-    line-height: 30px;
+    line-height: 2.2em;
     vertical-align: top;
     text-align: right;
     color: #c9c9c9;
-    font-size:12px;
+    font-size: 1.05em;
 }
 
 
@@ -2389,7 +2404,7 @@ blockquote p{
 
 
 #flip i, #flip2 i, #flip3 i, #flip4 i, #flip5 i, #flip6 i{
-    margin-right: 10px;
+    margin-right: 0px;
 }
 
 #flip, #flip2, #flip3, #flip4, #flip5, #flip6{
@@ -2397,8 +2412,7 @@ blockquote p{
     display: inline-block;
     overflow: hidden;
     text-overflow:clip;
-    height: 25px;
-    box-shadow: 0 3px 5px rgba(0,0,0,.135);
+    height: 50px;
 }
 
 .panel-open{
@@ -2417,8 +2431,8 @@ blockquote p{
 
 .panel_container{
     background-color:white;  
-/*     border:1px solid #d8d8d8;
-     */    border-radius: 5px;
+    /*     border:1px solid #d8d8d8;
+    */    border-radius: 5px;
 }
 #panel6 #live-search {
     margin-bottom: 0px;
@@ -2426,7 +2440,7 @@ blockquote p{
 
 #panel6 .form-control {
     display: block;
-    width: 40%;
+    width: 90%;
     height: 30px;
     padding: 6px 12px;
     font-size: 14px;
@@ -2480,223 +2494,12 @@ blockquote p{
     border-radius: 5px;
 }
 
-/* Large desktops and laptops */
-/*@media (min-width: 1200px) {
-    #menu-bar-xs{
-        display: none;
+
+@media (max-width: 768px){
+    #flip i, #flip2 i, #flip3 i, #flip4 i, #flip5 i, #flip6 i{
+        margin: 0 auto;
+        align-content: center;
+        font-size: 19px;
+        margin-top: 10px;
     }
-}*/
-
-/* Landscape tablets and medium desktops */
-/*@media (min-width: 992px) and (max-width: 1199px) {
-    #menu-bar-xs{
-        display: none;
-    }
-}*/
-
-/* Portrait tablets and small desktops */
-/*@media (min-width: 768px) and (max-width: 991px) {
-    #menu-bar-xs{
-        display: none;
-    }
-}*/
-
-/* Landscape phones and portrait tablets */
-@media (max-width: 767px) {
-
-}
-
-/* Portrait phones and smaller */
-@media (max-width: 480px) {
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/************* DEVICES ***************/
-
-/*
-smartphones, iPhone, portrait 480x320 phones */
-@media (max-width:650px) {
-/*#book-title {
-	font-size: 20px;*/
-}
-
-    #summary {
-	/*font-size: 14px;
-    width: 90%;
-	border-radius: 10px;
-	padding-right: 10px;*/
-}
-    
-.author_tofill, .editor_tofill {
-	/*font-size: 14px;
-    line-height: 1.2em;*/
-}
-.toggle_menu{
-   /* position: fixed;
-    margin-left:0px;*/
-}    
-.section p{
-   /* margin-left:0px;
-    font-size: 1.4em;
-    line-height: 1.5em;
-    width: 90%;*/
-}
-    
-#tool-bar-container {
-   /* background-color: white;
-    box-shadow: 9px -3px 20px 23px rgba(255, 255, 255, 1);
-    height: 20px;
-    position: fixed;
-    right: 0;
-    top: 0;
-    width: 100%;
-    z-index: 99999999999999999999999;*/
-}
-#content{
-    /*width: 95%;
-    margin-right:5px;*/
-}
-    
-#toc_wrapper{
-/*    margin-top:40px;    */
-}
-
-.close_menu {
-    /*margin-left:0px;
-    z-index: 99999999999999999999999999999999;
-    position: fixed;
-    left:0px;*/
-}
-    
-.section h2 {
-/*    font-family: "Georgia";
-    font-size: 3em;
-    line-height: 1.1em;
-    margin-bottom: 20px;
-    margin-left: 0;
-    padding-top: 40px;
-    max-width: 90%;
-    overflow-y: hidden;*/
-}
-#info-box, .info, tbody{
-    /*margin-left:-15px;
-    width: 100%;
-    margin-top:40px;*/
-}
-
-@media (min-width: @screen-sm-min) {
-    #menu-right{
-        
-    }
-}
-
-
-@media (min-width:650px, max-width:950px) {
-     /*#book-title {
-	font-size: 20px;*/
-}
-
-.toggle_menu{
-        /*position: fixed;
-    margin-left:0px;*/
-}    
-.section p{
-    /*margin-left:0px;
-    font-size: 1.4em;
-    line-height: 1.5em;
-    width: 50%;*/
-}
-    
-#tool-bar-container {
-/*    background-color: white;
-    box-shadow: 9px -3px 20px 23px rgba(255, 255, 255, 1);
-    height: 20px;
-    position: fixed;
-    right: 0;
-    top: 0;
-    width: 100%;
-    z-index: 99999999999999999999999;*/
-}
-#content{
-    /*width: 95%;
-    margin-right:5px;*/
-}
-
-/*******CLASS THAT MAKES**********
-********THE #CONTENT MOVE*********
-********TO THE RIGHT*************/
-
-#toc_wrapper{
-    /*margin-top:40px;    */
-    }
-
-    .close_menu {
-       /* margin-left:0px;
-        z-index: 99999999999999999999999999999999;
-        position: fixed;
-        left:0px;*/
-    }
-    
-.section h2 {
-    /*font-family: "Georgia";
-    font-size: 3em;
-    line-height: 1.1em;
-    margin-bottom: 20px;
-    margin-left: 0;
-    padding-top: 40px;
-    max-width: 700px;
-    overflow-y: hidden;*/
-}
-#info-box, .info, tbody{
-    /* margin-left:-15px;
-    width: 100%;
-    margin-top:40px;
-    }*/
-}
-
-
-
-
-/* big landscape tablets, laptops, and desktops  */
-@media (max-width:1020px) {
-
-
 }
