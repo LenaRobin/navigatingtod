@@ -756,23 +756,6 @@ $(document).ready(function(){
         pin_count++;
     }
 
-// console.log(pins);
-
-    // if ($.cookie('scroll') !== null) {
-    //     $(document).scrollTop($.cookie('scroll'));
-    //     // alert('bookmark recovered');
-    // }
-
-    // $('#bookmark').click(function() {
-    //     // Set a cookie that holds the scroll position.
-    //     $.cookie('scroll', $(document).scrollTop());
-    // });
-
-    // $('#remove_bookmark').click(function() {
-    //     // Set a cookie that holds the scroll position.
-    //     $.removeCookie('scroll');
-    // });
-
 //////////////////////
 ////SHOW/HIDE KEYWORDS
 //////////////////////
@@ -796,7 +779,7 @@ $(document).ready(function(){
 
 
 ////SHOW -ALL- KEYWORDS TOGGLE
-    $('#keyword-show-all, #keyword-show-all_xs').on('click', function() {
+    $('#keyword-show-all, #keyword-show-all_xs').on('click tap', function() {
         $(this).button('toggle');
         for (var i = 0; i < keywords.length; i++) {
             if ($(this).hasClass('active')) {
@@ -1011,7 +994,7 @@ ON RESIZE DO THESE THINGS
 ////////////////////
 
 ////DECREASE FONT SIZE AND ALIGN SIDENOTES
-    $('#button_fontsizeminus, #button_fontsizeminus_xs').on('click', function(){
+    $('#button_fontsizeminus_xs').on('click', function(){
         fadeOutSidenotes();
         var fontSize = parseInt($(".section").css('font-size'));
         $('.section').not('.references').animate({'font-size': '-=0.5'}, function() {
