@@ -395,7 +395,7 @@ $(document).ready(function(){
     var selection;
     var selection_text;
 
-    $('.section').mouseup(function(e){
+    $('.section').bind('mouseup touchend', function(e){
         selection = document.getSelection().getRangeAt(0); //MAKE THIS WORK ON EVERY BROWSER
         selection_text = selection.toString();
         var scrollTop = $(window).scrollTop();
@@ -583,54 +583,39 @@ $(document).ready(function(){
 
 ////UPDATES THE INFO IN THE PINS ARRAY
     function checkPin(pinID) {
-        // var a = pinID.substr(11);
-        // console.log('pidnr: '+pidnr);
-        console.log('pinID: '+pinID);
-        //ako nije prazno
         if (pins.length > 0) {
-            //loop through
             for (var i = 0; i < pins.length; i++) {
-                console.log("pins[i]['id']: "+ pins[i]['id']);
-                //ako je id vec postoji u arrayu
                 if (pinID > pins.length) {
-                    console.log("id not found1: ");
-                    console.log(pins);
-
                     pins.push(pObj);
-
-                    console.log("id not found2: ");
-                    console.log(pins);
-                } else if(pins[i]["id"] == 'dragged-pin'+pinID){
-                    console.log("id found at "+ i);
-                    pins[i]["value"] = t;
-                    pins[i]["top"] = ptop;
-                    pins[i]["left"] = pleft;
-                    // break;
-                    //ako ne postoji nutri
+                    localStorage.setItem("savedData", JSON.stringify(pins));
+                    break;
                 } else {
+                    pins[pinID-1]["value"] = t;
+                    pins[pinID-1]["top"] = ptop;
+                    pins[pinID-1]["left"] = pleft;
                     break;
                 }
-                // else{
-                    // console.log("id not found1: ");
-                    // console.log(pins);
-
-                    // pins.push(pObj);
-
-                    // console.log("id not found2: ");
-                    // console.log(pins);
-                    // break;
-                // }
-                console.log("here "+pins[i]['value']);
             }
-            console.log('random log: ');
-            console.log(pins);
         }else{
           pins.push(pObj);
-          console.log('nothing was inside: ');
-          console.log(pins);
-          console.log('                                        ');
+          localStorage.setItem("savedData", JSON.stringify(pins));
         } 
     }
+
+
+////DELETE PIN AND REMOVE FROM ARRAY
+
+//add this to the creation of the clone 
+    $('#content').on('click', '.pin-close', function() {
+        $(this).parent().remove();//.css('display', 'none');
+        var pid = $(this).parent().attr('id');
+        console.log(pid);
+        var pinID = $(this).parent().attr('id').substr(11);
+        pins.splice(pinID-1, 1);
+        console.log(pins);
+        localStorage.setItem("savedData", JSON.stringify(pins));
+    });
+
 
 ////UPDATES INFO ABOUT PINS WHEN MOVED
     function pinMoved() {
@@ -641,6 +626,7 @@ $(document).ready(function(){
             el.top = ptop;
             el.left = pleft;
             return el.id === pinID;
+            localStorage.setItem("savedData", JSON.stringify(pins));
         });
         console.log(pins);
     }
@@ -712,11 +698,11 @@ $(document).ready(function(){
 
 ////ON HOVER SHOW INPUT AREA
     $('#content').on('mouseenter', '.pin-clone', function() {
-        $(this).find('.pin-form').fadeIn();
+        $(this).find('.pin-form, .pin-close').fadeIn();
     });
 
     $('#content').on('mouseleave', '.pin-clone', function() {
-        $(this).find('.pin-form').fadeOut();
+        $(this).find('.pin-form, .pin-close').fadeOut();
     });
 
 ////DROP THE PIN AND GET THE POSITION AND OTHER INFO BOUT IT
@@ -726,7 +712,7 @@ $(document).ready(function(){
         var pinYPos = ui.offset.top;
         var newPin =  $(ui.helper).clone(true);
 ////////DRAG IT, GET TAG NAME FROM USER, ASSIGN DEFAULT ID TO IT, AND UPDATE VALUES WHEN EDITED OR MOVED
-        newPin.appendTo('#content').offset({top: pinYPos, left: pinXPos}).attr('id', 'dragged-pin'+pin_count).addClass('pin-clone').draggable({
+        newPin.appendTo('#content').append('<div class="pin-close">X</div>').offset({top: pinYPos, left: pinXPos}).attr('id', 'dragged-pin'+pin_count).addClass('pin-clone').draggable({
             containment: '#main',
             cursor: 'move',
             snapTolerance: 100,
@@ -748,9 +734,9 @@ $(document).ready(function(){
             pObj = {value : t, top: ptop, left: pleft, id: pid};
 
             checkPin(pid);
-            
+            console.log('qaywsxedcrfvtb');
              // $(this).find('.pin-input').blur();
-             $(this).find('.pin-form').hide();
+            $(this).find('.pin-form').hide();
             e.preventDefault();
         });
 
@@ -806,6 +792,40 @@ $(document).ready(function(){
 
         });
 
+    });
+
+
+
+    $('#keyword-show-all, #keyword-show-all_xs').on('click', function() {
+        // $(this).button('toggle');
+        for (var i = 1; i < keywords.length; i++) {
+            $('#keyword_toggle'+i).trigger('click');
+
+            // $('#keyword_toggle'+i).each(function() {
+            //     if ($(this).hasClass('active')) {
+            //         // $(this).button('toggle');
+            //         $(this).closest('.section').unhighlight({element: 'span', className: keywords[i], wordsOnly: true});    
+            //     } else {
+            //         $(this).closest('.section').unhighlight({element: 'span', className: keywords[i], wordsOnly: true});    
+            //     }
+
+            // $('#keyword_toggle'+i).each(function() {
+            // $(this).click(function() {
+
+
+                //add class that gives it the style
+                // $(this).button('toggle');
+                // // if ($(this).hasClass('active')) {
+                //     $(this).closest('.section').highlight(keywords[i], {element: 'span', className: keywords[i], wordsOnly: true});
+                // } else {
+                //     $(this).closest('.section').unhighlight({element: 'span', className: keywords[i], wordsOnly: true});    
+                // }
+            // });
+
+        // });
+
+
+        }
     });
 
 
@@ -984,12 +1004,29 @@ ON RESIZE DO THESE THINGS
         $(window).scrollTop(P*H);
     });
 
+
+////////////
+////SETTINGS
+////////////
+
+////SHOW ALL HIGHLIGHTED TEXT
+
+
+    $('#highlight-show-all, #highlight-show-all_xs').on('click', function() {
+        $('.underline').css('background-color', 'rgba(255, 255, 0, 0.49)');
+    });
+
+    $('#highlight-remove, #highlight-remove_xs').on('click', function() {
+        $('.underline').css('background-color', 'white');
+    });    
+
+
 ////////////////////
 ////CHANGE FONT SIZE
 ////////////////////
 
 ////DECREASE FONT SIZE AND ALIGN SIDENOTES
-    $('#button_fontsizeminus').click(function(){
+    $('#button_fontsizeminus, #button_fontsizeminus_xs').on('click', function(){
         fadeOutSidenotes();
         var fontSize = parseInt($(".section").css('font-size'));
         $('.section').not('.references').animate({'font-size': '-=0.5'}, function() {
@@ -1004,7 +1041,7 @@ ON RESIZE DO THESE THINGS
     });
 
 ////INCREASE FONT SIZE AND ALIGN SIDENOTES
-    $('#button_fontsizeplus').click(function(){
+    $('#button_fontsizeplus, #button_fontsizeplus_xs').on('click', function(){
         fadeOutSidenotes();
         var fontSize = parseInt($(".section").css('font-size'));
         $('.section').animate({'font-size': '+=0.5'}, function() {

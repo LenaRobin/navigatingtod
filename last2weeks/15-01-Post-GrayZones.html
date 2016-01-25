@@ -27,7 +27,8 @@
     <link rel="icon" href="http://networkcultures.org/wp-content/themes/inc-home/favicon.png">
 <!-- –––––––––––––––––––––––––– CSS –––––––––––––––––––––––––––––––––––––-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <link href="css/scrolling-nav.css">
+    <!-- <link href="css/scrolling-nav.css"> -->
+
     <link rel="stylesheet" type="text/css" href="lambdaCSS.css">
     <!-- <link rel="stylesheet" type="text/css" href="css/style-lambda3.css" media="screen" /> -->
     <link rel="stylesheet" href="css/styleprint-last.css" type="text/css" media="print" />
@@ -41,7 +42,9 @@
     <script src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <!-- <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <!-- <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
 
 <!--–––––––––––––––––––––––––– Plugins –––––––––––––––––––––––––––––––––––––-->
      <!-- <script src="final_js/respond.min.js"></script>
@@ -381,29 +384,19 @@
                         </div>
                     </div> <!-- #accordion -->
 
-    <!-- <<<<<<< Updated upstream -->
+
                     <div id="pin_wrapper">
-                        Drag a pin to the line you want to comment.<br><br>
+                        Drag and drop the pint to save reading position.
+                        <br>
+                        <br>
+
                         <div id="pin" class="pin">
                             <i class="fa fa-thumb-tack fa-2x"></i>
                             <form class="pin-form" action="">
-                                <!-- <i class="fa fa-tags"></i> -->
                                 <input class="pin-input" type="text" name="fname"  placeholder="Tag">
-                                <!-- <button href="#" class="save-pin">Save</button> -->
                             </form>
                         </div>
                     </div>
-
-
-    <!--                 <div id="pin" class="pin">
-                        <i class="fa fa-thumb-tack fa-2x"></i>
-                        <form class="pin-form" action="">
-                            <i class="fa fa-tags"></i> 
-                            <input class="pin-input" type="text" name="fname"  placeholder="Pin tag">
-                            <button href="#" class="save-pin">Save</button> 
-                        </form>
-                    </div>
-     -->
 
                 </div> <!-- #menu-right-wrapper -->
             </div> <!-- #menu-right -->
@@ -425,14 +418,14 @@
                 Referencing tool<br>
                 Select and cite your paragraph with properly formatted reference.
                 <p title="Modern Language Association" alt="Modern Language Association">MLA</p>
-                <textarea data-clipboard-target="#mla" class="full-citation" id="mla"></textarea>
+                <textarea data-clipboard-target="#mla" class="full-citation" id="mla_xs"></textarea>
             </div>
             
             <div class="panel_container hidden-lg hidden-md col-sm-4 col-xs-6">
             <p>Chicago Manual of Style</p>
-            <textarea data-clipboard-target="#chicago" class="full-citation" id="chicago"></textarea>
+            <textarea data-clipboard-target="#chicago" class="full-citation" id="chicago_xs"></textarea>
             <p title="American Psychological Association" alt="American Psychological Association">APA</p>
-            <textarea data-clipboard-target="#apa" class="full-citation" id="apa"></textarea>
+            <textarea data-clipboard-target="#apa" class="full-citation" id="apa_xs"></textarea>
             </div>
             
         </div>
@@ -448,15 +441,15 @@
         <div id="panel4" class="hidden-lg hidden-md col-sm-12 col-xs-12">
             <div class="panel_container hidden-lg hidden-md col-sm-offset-2 col-sm-4 col-xs-6">
             Font-size
-            <span id="button_fontsizeminus" class="extra-btn" value="smaller"><i class="fa fa-font"></i>-</span>
-            <span id="button_fontsizeplus" class="extra-btn" value="larger"><i class="fa fa-font"></i>+</span>
+            <span id="button_fontsizeminus_xs" class="extra-btn" value="smaller"><i class="fa fa-font"></i>-</span>
+            <span id="button_fontsizeplus_xs" class="extra-btn" value="larger"><i class="fa fa-font"></i>+</span>
 
             <hr>
-            <span id="keyword-show-all" class="extra-btn">Display keywords <i class="fa fa-tags"></i></span>
+            <span id="keyword-show-all_xs" class="extra-btn">Display keywords <i class="fa fa-tags"></i></span>
 
             </div>
             <div class="panel_container hidden-lg hidden-md col-sm-4 col-xs-6">
-            <span id="highlight-show-all" class="extra-btn">Display highlight <i class="fa fa-pencil"></i></span>
+            <span id="highlight-show-all_xs" class="extra-btn">Display highlight <i class="fa fa-pencil"></i></span>
             <span id="highlight-remove" class="extra-btn">Remove highlight <i class="fa fa-eraser"></i></span>
 
             <hr>
