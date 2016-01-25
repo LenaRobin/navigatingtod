@@ -712,7 +712,7 @@ $(document).ready(function(){
         var pinYPos = ui.offset.top;
         var newPin =  $(ui.helper).clone(true);
 ////////DRAG IT, GET TAG NAME FROM USER, ASSIGN DEFAULT ID TO IT, AND UPDATE VALUES WHEN EDITED OR MOVED
-        newPin.appendTo('#content').append('<div class="pin-close">X</div>').offset({top: pinYPos, left: pinXPos}).attr('id', 'dragged-pin'+pin_count).addClass('pin-clone').draggable({
+        newPin.appendTo('#content').append('<div class="pin-close"><i class="fa fa-trash"></i></div>').offset({top: pinYPos, left: pinXPos}).attr('id', 'dragged-pin'+pin_count).addClass('pin-clone').draggable({
             containment: '#main',
             cursor: 'move',
             snapTolerance: 100,
