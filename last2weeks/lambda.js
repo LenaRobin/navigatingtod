@@ -52,7 +52,7 @@ $(document).ready(function(){
 
 ////ON CLICKING THE TOGGLE THAT OPENS THE MENU
     $toggle_menu = $('.toggle_menu');
-    $toggle_menu.click(function() {
+    $toggle_menu.mouseenter(function() {
         if ($(window).width() <= "480") {
             var menu_width = $('#toc_wrapper').width();
             // console.log($('#menu').offset().left);
@@ -69,10 +69,11 @@ $(document).ready(function(){
             } else {
                 $('#menu').animate({left: 0});
             }
-            $('#menu_bar').fadeToggle(1000);
+         //   $('#menu_bar').fadeToggle(1000);
             $('#content, .footer').toggleClass('col-lg-offset-0', 'col-lg-offset-1');
             $('#content, .footer').toggleClass('col-md-offset-0', 'col-md-offset-1');
             $('#content, .footer').toggleClass('col-sm-offset-0', 'col-sm-offset-1');
+            $('.toggle_menu_left_button div').css('display', 'none');
         }
     });
 
@@ -1022,6 +1023,17 @@ ON RESIZE DO THESE THINGS
     $('[data-toggle="popover"]').popover(); 
 
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }); // <-- document ready
 
 

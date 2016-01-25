@@ -23,4 +23,5 @@
 + columns for menu on xs
 + columns for menu on xs
 - right button!!!!
+- tout centrer dans content
 
