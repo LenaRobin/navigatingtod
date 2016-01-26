@@ -111,15 +111,11 @@ body {
 
 /* Background-color of text on selection */
 ::-moz-selection {
-    background-color:rgba(255, 255, 0, 0.24);
-    background-color: #FFE5DE;
     background-color:#f30;
     color:white;
 }
 
 ::selection {
-    background-color:rgba(255, 255, 0, 0.24);
-    background-color: #FFE5DE;
     background-color:#f30;
     color:white;
 }
@@ -217,6 +213,7 @@ hr{
     -webkit-box-shadow: 0px 10px 32px -9px rgba(0,0,0,0.59);
     -moz-box-shadow: 0px 10px 32px -9px rgba(0,0,0,0.59);
     box-shadow: 0px 10px 32px -9px rgba(0,0,0,0.59);
+    
 }
 
 #info-box-inside-container{
@@ -539,7 +536,6 @@ Defines the typography for texts in reader */
     -webkit-margin-after: 15px;
     -webkit-margin-start: 0px;
     -webkit-margin-end: 0px;
-    color: #222222;
 }
 
 /* Font weight */
@@ -852,7 +848,7 @@ a.page-scroll:hover, a.page-scroll:active, a.page-scroll:link, a.page-scroll:vis
     overflow-y: scroll;
     left: 0;
     background-color: white;
-    /*  border-right: 1px solid #d8d8d8; */
+    /*  border-right: 1px solid #dbdbdb; */
     padding-bottom: 4%;
     position: absolute;
     -ms-overflow-style: none;
@@ -1189,7 +1185,7 @@ Table of content is contained in pushmenu, it shows the different parts of the b
 
 
 #print-pannel input{
-    background-color:#d8d8d8;
+    background-color:#dbdbdb;
     display: inline-block;
     border-radius: 5px;
     padding:1px;
@@ -1271,7 +1267,7 @@ Table of content is contained in pushmenu, it shows the different parts of the b
     font-weight: bold;
     line-height: 21px;
     margin-bottom: 5px;
-    border-top: 1px solid #898989;
+    border-top: 1px solid #8e8e8e;
 }
 
 .toggle-box + label + div {
@@ -1385,7 +1381,7 @@ Table of content is contained in pushmenu, it shows the different parts of the b
 }
 
 .search-notfound {
-    /* 		color: #BFBFBF !important;
+    /* 		color: #c7c7c7 !important;
     */	}
 
 .highlight {
@@ -1528,7 +1524,7 @@ fieldset {
     font-family: "Hkgrotesk";
     text-align: right;
     position: fixed;
-    color: #afafaf;
+    color: #8e8e8E;
     z-index: 99;
 }
 
@@ -1613,18 +1609,18 @@ input:hover {
     width: 50%;
     height: 50%;
     text-align: center;*/
-    background-color: #BFBFBF;
-    /*background: -webkit-radial-gradient(10px, white, white, #BFBFBF); /* Safari 5.1 to 6.0 */
-    /*background: -o-radial-gradient(10px, white, white, #BFBFBF); /* For Opera 11.6 to 12.0 */
-    /*background: -moz-radial-gradient(10px, white, white, #BFBFBF); /* For Firefox 3.6 to 15 */
-    /*background: radial-gradient(10px, white, white, #BFBFBF); /* Standard syntax (must be last)*/
+    background-color: #c7c7c7;
+    /*background: -webkit-radial-gradient(10px, white, white, #c7c7c7); /* Safari 5.1 to 6.0 */
+    /*background: -o-radial-gradient(10px, white, white, #c7c7c7); /* For Opera 11.6 to 12.0 */
+    /*background: -moz-radial-gradient(10px, white, white, #c7c7c7); /* For Firefox 3.6 to 15 */
+    /*background: radial-gradient(10px, white, white, #c7c7c7); /* Standard syntax (must be last)*/
 }
 
 /*.search-found {
-background: -webkit-radial-gradient(10px, white, white, #BFBFBF); /* Safari 5.1 to 6.0 
-background: -o-radial-gradient(10px, white, white, #BFBFBF); /* For Opera 11.6 to 12.0 
-background: -moz-radial-gradient(10px, white, white, #BFBFBF); /* For Firefox 3.6 to 15 
-background: radial-gradient(10px, white, white, #BFBFBF); /* Standard syntax (must be last) *
+background: -webkit-radial-gradient(10px, white, white, #c7c7c7); /* Safari 5.1 to 6.0 
+background: -o-radial-gradient(10px, white, white, #c7c7c7); /* For Opera 11.6 to 12.0 
+background: -moz-radial-gradient(10px, white, white, #c7c7c7); /* For Firefox 3.6 to 15 
+background: radial-gradient(10px, white, white, #c7c7c7); /* Standard syntax (must be last) *
 }*/
 
 
@@ -1654,7 +1650,7 @@ background: radial-gradient(10px, white, white, #BFBFBF); /* Standard syntax (mu
 }
 
 .ui-menu-item:hover{
-    background-color: #d8d8d8;
+    background-color: #dbdbdb;
 }
 
 .ui-menu-item:focus {
@@ -1697,7 +1693,7 @@ background: radial-gradient(10px, white, white, #BFBFBF); /* Standard syntax (mu
     /* border-radius: 8px; */
     font-family: "HKGrotesk";
     border-radius: 5px;
-    border:1px solid #d8d8d8;
+    border:1px solid #dbdbdb;
     width: 300px;
     text-indent: 0;
 }
@@ -1876,7 +1872,7 @@ color: blue;
     margin: 0px;
     border-radius: 5px;
     color: #5b5b5b;
-/*     border:1px dashed #d8d8d8;
+/*     border:1px dashed #dbdbdb;
      */    background-color:#f4f4f4;
 }
 
@@ -1890,7 +1886,7 @@ color: blue;
     */
     border: 1px solid black;
     border-radius: 5px;
-    background-color: #C7C7BB;
+    background-color: #c7c7c7;
     width: 30%;
     min-height: 15%;
 }
@@ -2003,7 +1999,7 @@ color: blue;
 
 .footnoteRef{
     text-decoration: none;
-    color: #FF5500;
+    color: #f30;
 }
 .footnoteRef:hover{
     text-decoration: underline;
@@ -2264,8 +2260,8 @@ ol {
 }
 
 .panel-group .panel-heading+.panel-collapse>.panel-body {
-    border-top: 0px solid #ddd;
-    border-bottom: 0px solid #ddd;
+    border-top: 0px solid #dbdbdb;
+    border-bottom: 0px solid #dbdbdb;
 
 }
 
@@ -2277,13 +2273,11 @@ ol {
     border:none;
     color: black;
     margin-top: 4px;
-    border-bottom: 0px solid #ddd;
+    border-bottom: 0px solid #dbdbdb;
 }
 
 
 .panel-default>.panel-heading{
-    /*     background-color: #f5f5f5;
-    */   
     border-radius: 8px;
     padding: 7px;
     background-color: #f4f4f4;
@@ -2350,19 +2344,19 @@ ol {
 .btn-group-vertical .btn-primary {
     color: black;
     background-color: #f4f4f4;
-    border: 0px solid #a0a0a0;
+    border: 0px solid #8e8e8e;
     text-align: left;
     text-transform: none;
 
 }
 
 .btn-group-vertical .btn-primary:hover{
-    background-color: #e6e6e6;
+    background-color: #e3e3e3;
     cursor: pointer;
-    border-color: #a0a0a0;
+    border-color: #8e8e8e;
     color: black;
     text-transform: none;
-    border: 0px solid #a0a0a0;
+    border: 0px solid #8e8e8e;
 }
 
 .btn-group-vertical .btn-primary:active{
@@ -2391,7 +2385,7 @@ ol {
 
 .delete-underline{
     background-color: #f4f4f4;
-    border: 0px solid #a0a0a0;
+    border: 0px solid #8e8e8e;
     display: none;
     position: fixed;
     width: auto; 
@@ -2405,12 +2399,12 @@ ol {
 }
 
 .delete-underline:hover{
-    background-color: #e6e6e6;
+    background-color: #e3e3e3;
     cursor: pointer;
-    border-color: #a0a0a0;
+    border-color: #8e8e8e;
     color: black;
     text-transform: none;
-    border: 0px solid #a0a0a0;
+    border: 0px solid #8e8e8e;
 }
 
 .tooltip-inner {
@@ -2511,7 +2505,7 @@ blockquote p{
     line-height: 2.2em;
     vertical-align: top;
     text-align: right;
-    color: #c9c9c9;
+    color: #c7c7c7;
     font-size: 1.05em;
 }
 
@@ -2536,6 +2530,8 @@ blockquote p{
     border-radius: 5px;
     box-shadow: none;
 }
+
+
 
 #flip{
     background-color: #f30;
@@ -2576,7 +2572,7 @@ blockquote p{
 
 .panel_container{
     background-color:white;  
-    /*     border:1px solid #d8d8d8;
+    /*     border:1px solid #dbdbdb;
     */    border-radius: 5px;
 }
 #panel6 #live-search {
@@ -2615,7 +2611,7 @@ blockquote p{
     font-family: "Hkgrotesk";
     text-align: right;
     position: fixed;
-    color: #afafaf;
+    color: #8e8e8E;
     z-index: 99;
 }
 
@@ -2632,7 +2628,7 @@ blockquote p{
     border-style: none;
     color: #000;
     padding: 0;
-    border-bottom: 1px solid #868686;
+    border-bottom: 1px solid #8e8e8e;
 }
 
 #panel6 input:hover {
