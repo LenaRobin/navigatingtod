@@ -17,10 +17,25 @@ body{
     display: block;
 }
 
-p .book-overview-cover{
+.book-overview-cover{
+    background-color:white;
+    height: 200px;
+    width: auto;
     display: none;
     position: absolute;
-    margin: 0;
+    left: 0px; /* change this value to one that suits you */
+    top: 0px; /* change this value to one that suits you */
+}
+
+.book-overview-cover img{
+    text-align: center;
+    background-color:white;
+    height: 200px;
+    width: auto;
+    display: none;
+    position: absolute;
+    left: 0px; /* change this value to one that suits you */
+    top: 0px; /* change this value to one that suits you */
 }
 
 .book-overview p{

@@ -54,17 +54,74 @@ Easy changes :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-)  :-
 */
 
 
+
+
+
+
+/* ******************************************************* 5. TYPOGRAPHY ******************** */
+
+/* Font-faces used in styles */
+@font-face {
+    font-family: Hkgrotesk;
+    src: url('css/fonts/hkgrotesk-regular-webfont.eot'); /* IE9 Compat Modes */
+    src: url('css/fonts/hkgrotesk-regular-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('css/fonts/hkgrotesk-regular-webfont.woff2') format('woff2'), /* Super Modern Browsers */
+        url('css/fonts/hkgrotesk-regular-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+        url('css/fonts/hkgrotesk-regular-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+        url('css/fonts/hkgrotesk-regular-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+@font-face {
+    font-family: HkgroteskBold;
+    src: url('css/fonts/hkgrotesk-bold-webfont.eot'); /* IE9 Compat Modes */
+    src: url('css/fonts/hkgrotesk-bold-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('css/fonts/hkgrotesk-bold-webfont.woff2') format('woff2'), /* Super Modern Browsers */
+        url('css/fonts/hkgrotesk-bold-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+        url('css/fonts/hkgrotesk-bold-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+        url('css/fonts/hkgrotesk-bold-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+body{
+    font-family: "Hkgrotesk";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+/************************************
+******* CONTENT *********************
+************************************/
+body {
+    margin: 0;
+    color:black;
+    background:#f4f4f4;
+    background-attachment: fixed;
+    color: black;
+    text-rendering: optimizeSpeed;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    overflow-x:hidden;
+}	
+
+
+
+
+
+
 /* Easy changes :-) */
 
 /* Background-color of text on selection */
 ::-moz-selection {
     background-color:rgba(255, 255, 0, 0.24);
     background-color: #FFE5DE;
+    background-color:#f30;
+    color:white;
 }
 
 ::selection {
     background-color:rgba(255, 255, 0, 0.24);
     background-color: #FFE5DE;
+    background-color:#f30;
+    color:white;
 }
 
 a, a:visited{
@@ -76,9 +133,8 @@ a, a:visited{
 a:hover{
     color:#ff3300;
     font-family: "HKGroteskbold";
+    text-decoration: none;
 }
-
-
 
 hr{
     margin-top: 5px;
@@ -428,9 +484,11 @@ Defines the typography for texts in reader */
     font-size: 62.5%;
     clear: left;
     color: black;
-    background-color:white;
     padding-left: 2%;
-
+    background-color: white;
+    -webkit-box-shadow: 0px 0px 30px 8px rgba(255,255,255,0.99);
+    -moz-box-shadow: 0px 0px 30px 8px rgba(255,255,255,0.99);
+    box-shadow: 0px 0px 30px 8px rgba(255,255,255,0.99);
 }
 
 .section p, .section h2, .section h3, .section h1, .section img, .references{
@@ -443,7 +501,7 @@ Defines the typography for texts in reader */
     margin-bottom: 0px;
     padding-bottom: 20px;
     padding-right: 0;
-    padding-top: 4.8%;
+    padding-top: 2.8%;
     font-size: 5em;
     line-height: 1.1em;
     -webkit-margin-before: 0em;
@@ -476,7 +534,7 @@ Defines the typography for texts in reader */
 /* Title of sub-part (subtitle) */
 .section h3 {
     font-size: 2.7em;
-    line-height: 1.4em;
+    line-height: 1.3em;
     -webkit-margin-before: 30px;
     -webkit-margin-after: 15px;
     -webkit-margin-start: 0px;
@@ -531,7 +589,7 @@ p + p{
         overflow-y: hidden;
         vertical-align: middle;
         letter-spacing: 1%;
-        border-top: 1px solid #dbdbdb;
+        border-top: 0px solid #dbdbdb;
         color: black;
         margin-top: 16%;
     }
@@ -671,87 +729,13 @@ filter: none;
 }
 
 
-/* ******************************************************* 5. TYPOGRAPHY ******************** */
 
-/* Font-faces used in styles */
-@font-face {
-    font-family: Hkgrotesk;
-    src: url('css/fonts/hkgrotesk-regular-webfont.eot'); /* IE9 Compat Modes */
-    src: url('css/fonts/hkgrotesk-regular-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-        url('css/fonts/hkgrotesk-regular-webfont.woff2') format('woff2'), /* Super Modern Browsers */
-        url('css/fonts/hkgrotesk-regular-webfont.woff') format('woff'), /* Pretty Modern Browsers */
-        url('css/fonts/hkgrotesk-regular-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
-        url('css/fonts/hkgrotesk-regular-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
-}
-@font-face {
-    font-family: HkgroteskBold;
-    src: url('css/fonts/hkgrotesk-bold-webfont.eot'); /* IE9 Compat Modes */
-    src: url('css/fonts/hkgrotesk-bold-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-        url('css/fonts/hkgrotesk-bold-webfont.woff2') format('woff2'), /* Super Modern Browsers */
-        url('css/fonts/hkgrotesk-bold-webfont.woff') format('woff'), /* Pretty Modern Browsers */
-        url('css/fonts/hkgrotesk-bold-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
-        url('css/fonts/hkgrotesk-bold-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
-}
-
-body{
-    font-family: "Hkgrotesk";
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-
-
-/************************************
-******* CONTENT *********************
-************************************/
-body {
-    margin: 0;
-    color:black;
-
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f4f4f4+0,fcfcfc+48,f4f4f4+100,f4f4f4+100 */
-    background: #f4f4f4; /* Old browsers */
-    background: -moz-linear-gradient(top,  #f4f4f4 0%, #fcfcfc 48%, #f4f4f4 100%, #f4f4f4 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top,  #f4f4f4 0%,#fcfcfc 48%,#f4f4f4 100%,#f4f4f4 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom,  #f4f4f4 0%,#fcfcfc 48%,#f4f4f4 100%,#f4f4f4 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f4f4', endColorstr='#f4f4f4',GradientType=0 ); /* IE6-9 */
-
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+19,ebebeb+68,ebebeb+100 */
-    background: rgb(255,255,255); /* Old browsers */
-    background: -moz-linear-gradient(top,  rgba(255,255,255,1) 19%, rgba(235,235,235,1) 68%, rgba(235,235,235,1) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 19%,rgba(235,235,235,1) 68%,rgba(235,235,235,1) 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom,  rgba(255,255,255,1) 19%,rgba(235,235,235,1) 68%,rgba(235,235,235,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ebebeb',GradientType=0 ); /* IE6-9 */
-
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+63,f4f4f4+100 */
-    background: rgb(255,255,255); /* Old browsers */
-    background: -moz-linear-gradient(top,  rgba(255,255,255,1) 63%, rgba(244,244,244,1) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 63%,rgba(244,244,244,1) 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom,  rgba(255,255,255,1) 63%,rgba(244,244,244,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f4f4f4',GradientType=0 ); /* IE6-9 */
-
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+35,ffffff+48,e0e0e0+100 */
-    background: rgb(255,255,255); /* Old browsers */
-    background: -moz-linear-gradient(top,  rgba(255,255,255,1) 35%, rgba(255,255,255,1) 48%, rgba(224,224,224,1) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 35%,rgba(255,255,255,1) 48%,rgba(224,224,224,1) 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom,  rgba(255,255,255,1) 35%,rgba(255,255,255,1) 48%,rgba(224,224,224,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e0e0e0',GradientType=0 ); /* IE6-9 */
-
-
-    background-attachment: fixed;
-    color: black;
-    overflow-x: hidden;
-    text-rendering: optimizeSpeed;
-    -ms-overflow-style: -ms-autohiding-scrollbar;
-}	
 
 /*******THE CONTENT********************/
 #content {
     opacity: 0;
     margin-bottom: 100px !important;
-    margin-top: 80px;
-    /*     -webkit-box-shadow: 0px 10px 20px 8px rgba(255,255,255,1);
-    -moz-box-shadow: 0px 10px 20px 8px rgba(255,255,255,1);
-    box-shadow: 0px 10px 20px 8px rgba(255,255,255,1); */
+    margin-top: 40px;
 }
 
 a {
@@ -903,8 +887,6 @@ a.page-scroll:hover, a.page-scroll:active, a.page-scroll:link, a.page-scroll:vis
 .toggle_menu:hover #menu_bar{
 }
 
-#menu_bar:hover{
-}
 
 .toggle_menu_left_button{
     width: 999PX;
@@ -931,6 +913,7 @@ a.page-scroll:hover, a.page-scroll:active, a.page-scroll:link, a.page-scroll:vis
     vertical-align: middle;
     align-content: center;
     align-items: center;
+    display: block;
 }
 
 .toggle_menu_left_button:hover, .toggle_menu_left_button div:hover{
@@ -964,12 +947,11 @@ a.page-scroll:hover, a.page-scroll:active, a.page-scroll:link, a.page-scroll:vis
     height: 100%;
     left: -24%;
     position: absolute;
-    background-color: white;
+    background-color:#f30;
     width: 24%;
-    /*     border-right: 1px solid #d8d8d8;
-    */
-
-
+    -webkit-box-shadow: -9px 0px 13px -8px rgba(0,0,0,0.09);
+    -moz-box-shadow: -9px 0px 13px -8px rgba(0,0,0,0.09);
+    box-shadow: -9px 0px 13px -8px rgba(0,0,0,0.09);
 }
 
 .toggle_menu_right .toggle_menu_right_button{
@@ -993,8 +975,13 @@ a.page-scroll:hover, a.page-scroll:active, a.page-scroll:link, a.page-scroll:vis
 }
 
 .toggle_menu_right:hover{
-
+    background-color:white;
+    cursor: pointer;
+    -webkit-box-shadow: -9px 0px 13px -8px rgba(0,0,0,0.29);
+    -moz-box-shadow: -9px 0px 13px -8px rgba(0,0,0,0.29);
+    box-shadow: -9px 0px 13px -8px rgba(0,0,0,0.29);
 }
+
 
 
 
@@ -1045,9 +1032,19 @@ Table of content is contained in pushmenu, it shows the different parts of the b
     position: fixed;
     color: black;
     width: 4%;
-    background-color: #FFE5DE;
-    background-color: #e0e0e0;
-    background-color: white;
+    background-color:#FFE5DE;
+
+    cursor: pointer;
+    -webkit-box-shadow: 9px 0px 13px -8px rgba(0,0,0,0.09);
+    -moz-box-shadow: 9px 0px 13px -8px rgba(0,0,0,0.09);
+    box-shadow: 9px 0px 13px -8px rgba(0,0,0,0.09);
+}
+
+#menu_bar:hover{
+    background-color:white;
+    -webkit-box-shadow: 9px 0px 13px -8px rgba(0,0,0,0.29);
+    -moz-box-shadow: 9px 0px 13px -8px rgba(0,0,0,0.29);
+    box-shadow: 9px 0px 13px -8px rgba(0,0,0,0.29);
 }
 
 
@@ -1059,6 +1056,8 @@ Table of content is contained in pushmenu, it shows the different parts of the b
     position: fixed;
     /* background-color: #f30; */
     display: block;
+    background-color:#f30;
+
 }
 
 
@@ -1466,7 +1465,7 @@ Table of content is contained in pushmenu, it shows the different parts of the b
 
     #arrows #up {
         position: fixed;
-        top: 20%;
+        top: 35%;
         z-index: 99;
         font-size: 20px;
         border-radius: 4px;
@@ -1786,8 +1785,7 @@ f
 /********CITATIONS************************/
 
 .underline {
-    background-color: rgba(255, 95, 52, 0.71);
-
+    background-color:rgba(255, 255, 0, 0.5);
 }
 
 .remove_highlight {
@@ -1835,8 +1833,10 @@ color: blue;
     color: rgb(63, 222, 63);
     padding: 0;
     margin-left:2px;
-    border-radius: 0px;
-    border-bottom: 0px solid #868686;
+    margin-top: 1px;
+    border-radius: 8px;
+    padding-left: 4px;
+    border:1px solid rgb(63, 222, 63);
 }
 
 .save-pin {
@@ -1874,10 +1874,10 @@ color: blue;
     max-height: 9em;
     width: 100%;
     margin: 0px;
-    border-radius: 2px;
+    border-radius: 5px;
     color: #5b5b5b;
-    border:1px dashed #d8d8d8;
-    background-color:#f4f4f4;
+/*     border:1px dashed #d8d8d8;
+     */    background-color:#f4f4f4;
 }
 
 #citation-box {
@@ -2077,11 +2077,14 @@ ol {
     color: blue;  
     border:none;
     height: auto;
+    box-shadow: none;
+    /* 
     box-shadow: inset 0 3px 5px rgba(0,0,0,.135);
+     */
 }
 .section .btn.active{
-    box-shadow: inset 0 3px 5px rgba(0,0,0,.135);
-    background-color: rgba(28, 51, 229, 0.3);
+/*     box-shadow: inset 0 3px 5px rgba(0,0,0,.135);
+     */    background-color: rgba(28, 51, 229, 0.3);
     color: blue;  
 }
 .section .keyword-button:focus{
@@ -2094,7 +2097,7 @@ ol {
 
 
 .extra{
-    background-color: rgba(0, 0, 0, 0.12);
+    background-color:#f4f4f4;
     border-radius:5px;
     padding: 5px;
     padding-top:2px;
@@ -2106,14 +2109,19 @@ ol {
     cursor: pointer;
     white-space: nowrap;
     word-break: keep-all;
+    margin-top:0px;
+
 }
 
 .extra:hover{
+    background-color:#dbdbdb;
+
     text-decoration: none;
     color: black;
     font-family: "HKGrotesk";
-    background-color: rgba(0, 0, 0, 0.19);
-    box-shadow:inset 0 3px 5px rgba(0,0,0,.135);
+    /* background-color: rgba(0, 0, 0, 0.19);
+     box-shadow:inset 0 3px 5px rgba(0,0,0,.135);
+    */
 }
 
 .extra:active{
@@ -2156,6 +2164,14 @@ ol {
     box-shadow: inset 0 3px 5px rgba(0,0,0,.135);
     background-color: rgba(28, 51, 229, 0.3);
 }
+
+#keyword-show-all:focus{
+    box-shadow: 0 3px 5px rgba(0,0,0,.135);
+    background-color: rgba(28, 51, 229, 0.1);  
+    color: blue;  
+}
+
+
 
 
 .section .keyword-button{
@@ -2226,6 +2242,7 @@ ol {
     border: none;
     background-color: white;
     font-family: "HKGrotesk";
+    z-index: 9999999999999999999999999999;
 }
 
 #menu-right .panel-group, #menu-right .panel-group:hover, #menu-right .panel-group:focus, #menu-right .panel-group:active{
@@ -2267,7 +2284,7 @@ ol {
 .panel-default>.panel-heading{
     /*     background-color: #f5f5f5;
     */   
-    border-radius: 4px;
+    border-radius: 8px;
     padding: 7px;
     background-color: #f4f4f4;
     border:none;
@@ -2281,6 +2298,7 @@ ol {
 .panel-default>.panel-heading a:hover, .panel-default>.panel-heading a:focus{
     color: black;
     text-decoration: none;
+    background-color: #f4f4f4;
 }
 
 .panel-default>.panel-heading:hover{
@@ -2296,7 +2314,6 @@ ol {
 .panel-default>.panel-heading:active{
     color: black;
     text-decoration: none;
-    background-color: white;
 }
 
 .panel-body p{
@@ -2511,12 +2528,23 @@ blockquote p{
     padding: 0px;
 
 }
-#panel, #flip, #panel2, #flip2, #panel3, #flip3, #panel4, #flip4, #panel5, #flip5, #panel6, #flip6 {
+#panel,  #panel2, #flip2, #panel3, #flip3, #panel4, #flip4, #panel5, #flip5, #panel6, #flip6 {
     padding: 5px;
     text-align: center;
     background-color: #f4f4f4;
     z-index: 99;
     border-radius: 5px;
+    box-shadow: none;
+}
+
+#flip{
+    background-color: #f30;
+    color:white;
+    z-index: 99;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+    box-shadow: none;
 }
 
 
@@ -2619,4 +2647,11 @@ blockquote p{
         font-size: 19px;
         margin-top: 10px;
     }
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
 }

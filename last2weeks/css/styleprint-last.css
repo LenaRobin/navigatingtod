@@ -1,296 +1,379 @@
-@media print {
-    @page {
-        size: landscape
-    }
-    
-    html, body {
-        width: 290mm;
-        height: 110mm;
-        margin-top: 5mm;
-        margin-bottom: 25mm;
-    }
-    
-    body {
-        margin-left: 0cm;
-        overflow: visible;
-        left: 0px;
-    }
-    div {
-        float: none !important;
-        position: static !important;
-        display: inline;
-        box-sizing: content-box !important;
-    }
-    #info-box {
-        display: none;
-    }
-    #par_numbr {
-        display: none;
-    }
-    #menu-bar-xs {
-        display: none;
-    }
-    #arrows {
-        display: none;
-    }
-    .keyword-toggle {
-        display: none;
-    }
-    #content {
-        margin: 0px;
-        padding: 0px;
-        left: 0px;
-        width: 12cm;
-        margin-bottom: 8cm;
-    }
-    .section {
-        width: 12cm;
-        margin: 0px;
-        left: 0px;
-    }
-    .section h2 {
-        margin: 0px;
-        padding: 0px;
-        margin-bottom: 0.4cm;
-        page-break-before: always !important;
-        font-size: 24pt;
-        line-height: 27pt;
-        font-family: "HKGroteskbold";
-        height: auto;
-        background-color: transparent;
-    }
-    .section h3 {
-        font-size: 12pt;
-        line-height: 15pt;
-        -webkit-margin-before: 0cm;
-        -webkit-margin-after: 0.2cm;
-        -webkit-margin-start: 0px;
-        -webkit-margin-end: 0px;
-        page-break-after: avoid;
-    }
-    .section p {
-        font-size: 9pt;
-        line-height: 13pt;
-        margin-bottom: 0.2cm;
-        float: none !important;
-        clear: none;
-    }
-    .section p,
-    .section h2,
-    .section h3,
-    .section h1,
-    .section img,
-    .references {
-        width: 10cm;
-    }
-    .section .author,
-    .section .words {
-        font-family: "HKGroteskbold";
-        font-size: 9pt;
-        line-height: 12pt;
-        background-color: transparent;
-        margin-bottom: 0.4cm;
-    }
-    .section img {
-        /*     margin-top:2cm;
-        right: 2cm;
-        position: absolute;
-        page-break-inside: avoid;
-        page-break-before: always; */
+@font-face {
+    font-family: Hkgrotesk;
+    src: url(fonts/HKGrotesk-Regular.otf);
+}
 
-        width: 10cm;
-        height: auto;
-    }
-    
-    .section .img-caption{
-        font-size: 7pt;
-        margin-bottom: 0.4cm;
-        text-indent: 0px;
-        font-family: "HKGroteskbold";
-    }
-    
-    blockquote {
-        page-break-before: avoid;
-        page-break-inside: avoid;
-        margin: 0em 0 2em 0em;
-        font-size: inherit;
-        border-left: 0px;
-        border: 0px;
-        margin-top: 0cm;
-        margin-bottom: 0.2cm;
-    }
-    blockquote p {
-        line-height: inherit;
-        border: 0px;
-        margin: 0;
-        padding: 0;
-    }
-    ol {
-        list-style-type: disc;
-        margin: 0px;
-        padding: 20px 0px 20px 0px;
-    }
-    li {
-        margin-left: 0px;
-    }
-    .references {
-        font-size: 9pt;
-        line-height: 13pt;
-        text-indent: 0px;
-        margin-bottom: 0px;
-        margin-top: 1cm;
-    }
-    .references p {
-        font-size: 9pt;
-        line-height: 13pt;
-        hyphens: auto;
-        word-wrap: break-word;
-        text-indent: 0px;
-        margin-bottom: 0.2cm;
-    }
-    .references h3 {
-        font-size: 9pt;
-        line-height: 13pt;
-        margin: 0px;
-        padding: 0px;
-        -webkit-margin-before: 0px;
-        margin-bottom: 0.2cm;
-        font-family: "HKGroteskbold";
-    }
-    #sidenote-wrapper {
-        width: 8cm;
-        height: auto;
-        margin-top: 0cm;
-        margin-left: 12cm;
-        position: absolute;
-        margin-top: -30000px;
-    }
-    #chapter8 {
-        margin: 0;
-        right: 0px;
-        position: absolute;
-    }
-    #chapter8 ol li p {
-        color: black;
-        font-family: "HKGrotesk";
-        font-weight: normal;
-        font-size: 7pt;
-        line-height: 10pt;
-        table-layout: fixed;
-        overflow: hidden;
-        -ms-hyphens: auto;
-        hyphens: auto;
-        -ms-hyphenate-limit-lines: no-limit;
-        hyphenate-limit-lines: no-limit;
-        word-break: normal;
-        word-wrap: break-word;
-    }
-    #chapter8 ol li p a {
-        color: black;
-        font-family: "HKGroteskbold";
-        word-wrap: break-word;
-        hyphens: auto;
-        -ms-hyphens: auto;
-        word-break: break-all;
-        -ms-word-break: break-all;
-        white-space: pre-wrap;
-    }
-    #chapter8 ol {
-        list-style: decimal;
-        text-indent: 0px;
-        margin-left: 25px;
-        font-size: 7pt;
-        line-height: 10pt;
-        counter-reset: item;
-        list-style-type: none;
-    }
-    .sidenote {
-        margin: 0;
-        width: 5cm;
-    }
-    /*******MENU WITH THE TOC THAT******************
-    ********COMES IN SLIDING FROM THE LEFT*********/
+@font-face {
+    font-family: HkgroteskBold;
+    src: url(fonts/HKGrotesk-Bold.otf);
+}
 
-    #menu {
-        padding: 0;
-        margin: 0;
-        top:0;
-        margin-top: -6cm;
-        margin: 0;
-        border: initial;
-        border-radius: initial;
-        width: initial;
-        min-height: initial;
-        box-shadow: initial;
-        background: initial;
-        page-break-after: always;
-        position: fixed;
-    }
-    #toc_wrapper {
-        margin: 0px;
-        padding: 0px;
-        width: 10cm;
-    }
-    .menu-publication-title {
-        padding: 0%;
-        margin: 0%;
-        margin-top: 0;
-        font-size: 24pt;
-        line-height: 27pt;
-        font-family: "HKGroteskbold";
-        width: 10cm;
-    }
-    
-    
-    #menu h2 {
-        -webkit-margin-before: 0;
-        -webkit-margin-after: 0;
-        -webkit-margin-start: 0;
-        -webkit-margin-end: 0;
-        margin: 0px;
-        padding: 0px;
-        background-color: white;
-        font-size: 12pt;
-        line-height: 15pt;
-        font-family: "HKGrotesk";
-        width: 15cm;
-        page-break-inside: avoid;
-    }
-    .horizScroll,
-    .subScroll {
-        display: none;
-    }
-    #toc_wrapper h2 {
-        margin: 0;
-    }
-    .toc_number {
-        text-align: left;
-        font-size: 18pt;
-        line-height: 22pt;
-        float: left;
-        padding-left: 0px;
-        font-family: "HKGroteskbold";
-    }
-    .toc_title {
-        margin: 0;
-        padding: 0;
-        margin-left: 1cm;
-        font-size: 18pt;
-        line-height: 22pt;
-        font-family: "HKGroteskbold";
-        hyphens: none;
-    }
-    .toc_author {
-        font-size: 9pt;
-        line-height: 13pt;
-        margin:0;
-        padding: 0;
-        margin-left: 1cm;
-        padding-bottom: 0.2cm;
-    }
-    
+body {
+    margin: 0;
+    margin-top: 10mm;
+    margin-bottom: 11.5mm;
+    margin-left: 0;
+    font-family: "Hkgrotesk";
+    background-color: #fff;
+}
 
-    .toggle_menu_left_button div{
-        display: none;
-    }
+@page {
+    size: 29.7cm 21cm;
+    /*     margin-right:5mm;
+    */
+    margin-top: 10mm;
+    margin-bottom: 11.5mm;
+    margin-left: 0;
+}
+
+/*  @page {
+size: landscape
+}
+
+html, body, #main {
+width: 297mm;
+height: 210mm;
+margin-top: 5cm;
+margin-bottom: 25mm;
+} */
+
+div {
+    float: none !important;
+    position: static !important;
+    box-sizing: content-box !important;
+}
+
+#info-box {
+    display: none;
+}
+
+#par_numbr {
+    display: none;
+}
+
+#menu-bar-xs {
+    display: none;
+}
+
+#arrows {
+    display: none;
+}
+
+.keyword-toggle {
+    display: none;
+}
+
+#menu-right {
+    display: none;
+}
+
+.footer {
+    display: none;
+}
+
+#content {
+    margin: 2cm;
+    margin-left: 3cm;
+}
+
+.section {
+    margin-left: -2cm;
+}
+
+.section h2 {
+    width: 10cm;
+    margin: 0;
+    padding: 0;
+    page-break-before: always !important;
+    font-size: 24pt;
+    line-height: 27pt;
+    font-family: "HKGroteskbold";
+    height: auto;
+    background-color: transparent;
+}
+
+.section h3 {
+    font-size: 12pt;
+    line-height: 15pt;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: .2cm;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    page-break-after: avoid;
+}
+
+.section p {
+    font-size: 9pt;
+    line-height: 13pt;
+    margin-bottom: .2cm;
+    float: none !important;
+    clear: none;
+}
+
+.section p,.section h3 {
+    width: 10cm;
+}
+
+.section h2 {
+    margin-bottom: .4cm;
+}
+
+.section .author,.section .words {
+    font-family: "HKGroteskbold";
+    font-size: 9pt;
+    line-height: 12pt;
+    background-color: transparent;
+    margin-bottom: .4cm;
+}
+
+.section .author {
+    /*         margin-left: 11.5cm;
+    position: absolute;
+    margin-top: 1.5cm; */
+}
+
+.section .words {
+    /*         margin-left: 11.5cm;
+    margin-top: 2cm;
+    position: absolute; */
+}
+
+.section img {
+    /*     margin-top:2cm;
+    right: 2cm;
+    position: absolute;
+    page-break-inside: avoid;
+    page-break-before: always; */
+    width: auto;
+    height: 8cm;
+    position: absolute;
+    clear: left;
+    margin-left: 11cm;
+    page-break-inside: avoid !important;
+}
+
+.section .img-caption {
+    font-size: 7pt;
+    margin-top: 8.5cm;
+    text-indent: 0;
+    width: 11.5cm;
+    height: auto;
+    position: absolute;
+    clear: left;
+    margin-left: 11cm;
+    font-family: "HKGroteskbold";
+    align-self: baseline;
+    vertical-align: bottom;
+}
+
+blockquote {
+    page-break-before: avoid;
+    page-break-inside: avoid;
+    margin: 0 0 2em;
+    font-size: inherit;
+    border-left: 0;
+    border: 0;
+    margin-top: 0;
+    margin-bottom: .2cm;
+}
+
+blockquote p {
+    line-height: inherit;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+ol {
+    list-style-type: disc;
+    margin: 0;
+    padding: 20px 0;
+}
+
+li {
+    margin-left: 0;
+}
+
+.references {
+    font-size: 9pt;
+    line-height: 13pt;
+    text-indent: 0;
+    margin-bottom: 0;
+    margin-top: 1cm;
+}
+
+.references p {
+    font-size: 9pt;
+    line-height: 13pt;
+    hyphens: auto;
+    word-wrap: break-word;
+    text-indent: 0;
+    margin-bottom: .2cm;
+}
+
+.references h3 {
+    font-size: 9pt;
+    line-height: 13pt;
+    margin: 0;
+    padding: 0;
+    -webkit-margin-before: 0;
+    margin-bottom: .2cm;
+    font-family: "HKGroteskbold";
+}
+
+#sidenote-wrapper {
+    /*         width: 4cm;
+    right:0cm; */
+    /*         margin-top: -30cm;
+    */
+    margin-left: 12cm;
+    position: fixed;
+    border: initial;
+    border-radius: initial;
+}
+
+#chapter8 {
+    margin: 0;
+    right: 0;
+    font-size: 7pt;
+    line-height: 9pt;
+    /*         position: absolute;
+    */
+}
+
+#chapter8 ol li:before {
+    font-size: 7pt;
+    line-height: 9pt;
+}
+
+#chapter8 ol li p {
+    color: #000;
+    font-family: "HKGrotesk";
+    font-weight: 400;
+    font-size: 7pt;
+    line-height: 9pt;
+    table-layout: fixed;
+    overflow: hidden;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    -ms-hyphenate-limit-lines: no-limit;
+    hyphenate-limit-lines: no-limit;
+    word-break: normal;
+    word-wrap: break-word;
+}
+
+#chapter8 ol li p a {
+    color: #000;
+    font-family: "HKGroteskbold";
+    word-wrap: break-word;
+    hyphens: auto;
+    -ms-hyphens: auto;
+    word-break: break-all;
+    -ms-word-break: break-all;
+    white-space: pre-wrap;
+    page-break-after: avoid;
+    font-size: 7pt;
+    line-height: 9pt;
+}
+
+#chapter8 ol {
+    list-style: decimal;
+    text-indent: 0;
+    margin-left: 25px;
+    font-size: 7pt;
+    line-height: 9pt;
+    counter-reset: item;
+    list-style-type: none;
+    page-break-inside: avoid;
+}
+
+.sidenote {
+    margin-left: 12cm;
+    width: 5cm;
+    font-size: 7pt;
+    line-height: 9pt;
+    page-break-inside: avoid;
+}
+
+#menu {
+    padding: 0;
+    margin: 0;
+    top: -6cm;
+    margin-top: -6cm;
+    margin: 0;
+    border: initial;
+    border-radius: initial;
+    margin-left: 13.1cm;
+}
+
+#toc_wrapper {
+    margin: 0;
+    padding: 0;
+    width: 13cm;
+}
+
+.menu-publication-title {
+    padding: 0;
+    margin: 0;
+    margin-top: 0;
+    font-size: 24pt;
+    line-height: 27pt;
+    font-family: "HKGroteskbold";
+    margin-bottom: .5cm;
+}
+
+#menu h2 {
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    font-size: 12pt;
+    line-height: 15pt;
+    font-family: "HKGrotesk";
+    page-break-inside: avoid;
+}
+
+.horizScroll,.subScroll {
+    display: none;
+}
+
+#toc_wrapper h2 {
+    margin: 0;
+}
+
+.toc_number {
+    text-align: left;
+    font-size: 18pt;
+    line-height: 22pt;
+    float: left;
+    padding-left: 0;
+    font-family: "HKGroteskbold";
+    page-break-inside: avoid;
+}
+
+.toc_title {
+    margin: 0;
+    padding: 0;
+    margin-left: 1cm;
+    font-size: 18pt;
+    line-height: 22pt;
+    font-family: "HKGroteskbold";
+    text-overflow: clip;
+    page-break-inside: avoid;
+    hyphens: auto;
+}
+
+.toc_author {
+    margin-left: 1cm;
+    font-size: 12pt;
+    margin-top: .2cm;
+    margin-bottom: .4cm;
+    page-break-inside: avoid;
+}
+
+.toggle_menu_left_button div {
+    display: none;
 }

@@ -404,30 +404,20 @@
 
 <!-- –––––––––––––––––––––––––– Menu for XS devices (bottom) –––––––––––––––––––––––––––––––––––––-->
     <div id="menu-bar-xs" class="hidden-lg hidden-md col-sm-12 col-xs-12">
+
+<!--––––––––––––––––––––––––––––––– OPEN #MENU –––––––––––––––––––––––––––––––-->
+    <div id="panel_toc" class="hidden-lg hidden-md col-sm-12 col-xs-12">
+            
+
+    </div>
+        
 <!--––––––––––––––––––––––––––––––– panel 1: Download –––––––––––––––––––––––––––––––-->
-        <div id="panel" class="hidden-lg hidden-md col-sm-12 col-xs-12">
+        <div id="panel2" class="hidden-lg hidden-md col-sm-12 col-xs-12">
             <div class="panel_container hidden-lg hidden-md col-sm-12 col-xs-12">Download this book as:<br>
                 <a href="files/TOD17-GrayZones.pdf" class="extra">.PDF</a> <a href="files/TOD17-GrayZones.epub" class="extra">.Epub</a> <a href="files/TOD17-GrayZones.md" class="extra">.Md</a>      
             </div>          
-        </div>
-<!--––––––––––––––––––––––––––––––– panel 2: Quote –––––––––––––––––––––––––––––––-->
-        <div id="panel2" class="hidden-lg hidden-md col-sm-12 col-xs-12">
-            
-            <div class="panel_container hidden-lg hidden-md col-sm-offset-2 col-sm-4 col-xs-6">
-                Referencing tool<br>
-                Select and cite your paragraph with properly formatted reference.
-                <p title="Modern Language Association" alt="Modern Language Association">MLA</p>
-                <textarea data-clipboard-target="#mla" class="full-citation" id="mla_xs"></textarea>
-            </div>
-            
-            <div class="panel_container hidden-lg hidden-md col-sm-4 col-xs-6">
-            <p>Chicago Manual of Style</p>
-            <textarea data-clipboard-target="#chicago" class="full-citation" id="chicago_xs"></textarea>
-            <p title="American Psychological Association" alt="American Psychological Association">APA</p>
-            <textarea data-clipboard-target="#apa" class="full-citation" id="apa_xs"></textarea>
-            </div>
-            
-        </div>
+        </div>        
+        
 <!--––––––––––––––––––––––––––––––– panel 3: Print –––––––––––––––––––––––––––––––-->
         <div id="panel3" class="hidden-lg hidden-md col-sm-12 col-xs-12">
             <div class="panel_container hidden-lg hidden-md col-sm-12 col-xs-12">  Print this book:
@@ -438,21 +428,28 @@
         </div>            
 <!--––––––––––––––––––––––––––––––– panel 4: Settings –––––––––––––––––––––––––––––––-->
         <div id="panel4" class="hidden-lg hidden-md col-sm-12 col-xs-12">
+           
             <div class="panel_container hidden-lg hidden-md col-sm-offset-2 col-sm-4 col-xs-6">
-            Font-size
-            <span id="button_fontsizeminus_xs" class="extra-btn" value="smaller"><i class="fa fa-font"></i>-</span>
-            <span id="button_fontsizeplus_xs" class="extra-btn" value="larger"><i class="fa fa-font"></i>+</span>
 
+            <!--––––––––––––––––––––––––––––––– panel 4: Fontsize –––––––––––––––––––––––––––––––-->
+                <span id="button_fontsizeminus_xs" class="extra-btn hidden-xs" value="smaller"><i class="fa fa-font"></i>-</span>
+                <span id="button_fontsizeplus_xs" class="extra-btn hidden-xs" value="larger"><i class="fa fa-font"></i>+</span>
+            
             <hr>
+            
+            <!--––––––––––––––––––––––––––––––– panel 4: Keywords –––––––––––––––––––––––––––––––-->
+
             <span type="button" id="keyword-show-all_xs" class="extra-btn">Display keywords <i class="fa fa-tags"></i></span>
 
             </div>
+            
+            <!--––––––––––––––––––––––––––––––– panel 4: Highlight –––––––––––––––––––––––––––––––-->
             <div class="panel_container hidden-lg hidden-md col-sm-4 col-xs-6">
             <span id="highlight-show-all_xs" class="extra-btn">Display highlight <i class="fa fa-pencil"></i></span>
             <span id="highlight-remove_xs" class="extra-btn">Remove highlight <i class="fa fa-eraser"></i></span>
-
+<!-- 
             <hr>
-            <span id="bookmark" class="extra-btn"><i class="fa fa-thumb-tack"></i> Save reading position</span>
+            <span id="bookmark" class="extra-btn"><i class="fa fa-thumb-tack"></i> Save reading position</span> -->
             </div>
         </div>            
 <!--––––––––––––––––––––––––––––––– panel 5: Share –––––––––––––––––––––––––––––––-->
@@ -491,10 +488,10 @@
 
 <!--––––––––––––––––––––––––––––––– buttons –––––––––––––––––––––––––––––––-->
         <div id="flip"  class="hidden-lg hidden-md hidden-ms col-xs-12">
-            <i class="fa fa-download"></i>
+            <i class="fa fa-book"></i>
         </div>
         <div id="flip2"  class="hidden-lg hidden-md hidden-ms col-xs-12">
-            <i class="fa fa-quote-left"></i>
+            <i class="fa fa-download"></i>
         </div>
         <div id="flip3"  class="hidden-lg hidden-md hidden-ms col-xs-12">
             <i class="fa fa-print"></i>
@@ -506,7 +503,7 @@
             <i class="fa fa-external-link"></i>
         </div>
         <div id="flip6" class="hidden-lg hidden-md hidden-ms col-xs-12">
-            <i class="fa fa-external-link"></i>
+            <i class="fa fa-search"></i>
         </div>
     </div> <!-- #menu-right-xs --> 
 
@@ -538,7 +535,7 @@
                     </div>
                 </div>
                 
-                <div class="row" id="carousel-box">
+                <div class="row hidden-xs" id="carousel-box">
 
                         <div class="well">
                             <div id="myCarousel" class="carousel slide">
@@ -547,22 +544,22 @@
                                 <div class="carousel-inner">
                                     <div class="item active">
                                         <div class="row">
-                                            <div class="carousel-content col-lg-2 col-sm-3">
+                                            <div class="carousel-content col-lg-2 col-md-2 col-sm-3">
                                             <a href="#x">
 <!--                                             <img src="http://image.issuu.com/140620081426-d28c76a78a8c783d177b44bb96b1c82b/jpg/page_1_thumb_large.jpg" alt="Image" class="img-responsive"> -->
                                            
                                             </a>The Gray Zones of Creativity and Capital<br>
                                                 Richard Barbrook and Andy Cameron’s The Californian Ideology, originally published in 1995 by Mute magazine and the nettime mailinglist, is the iconic text of the first wave of Net criticism. The internet might have fundamentally changed in the last two decades, but their demolition of the neoliberal orthodoxies of Silicon Valley remains shocking and provocative. They question the cult of the dot-com entrepreneur, challenging the theory of technological determinism and refuting the myths of American history.
                                             </div>
-                                            <div class="carousel-content col-lg-2 col-sm-3"><a href="#x"><img src="https://image.isu.pub/110607150248-001100acfe614bfdae29382cf59a82dd/jpg/page_1_thumb_large.jpg" alt="Image" class="img-responsive"></a>
+                                            <div class="carousel-content col-lg-2 col-md-2 col-sm-3"><a href="#x"><img src="https://image.isu.pub/110607150248-001100acfe614bfdae29382cf59a82dd/jpg/page_1_thumb_large.jpg" alt="Image" class="img-responsive"></a>
                                             </div>
-                                            <div class="carousel-content col-lg-2 col-sm-3"><a href="#x"><img src="https://s-media-cache-ak0.pinimg.com/236x/f4/0d/46/f40d46bb4c060ad33d35de7059f8add4.jpg" alt="Image" class="img-responsive"></a>
+                                            <div class="carousel-content col-lg-2 col-md-2 col-sm-3"><a href="#x"><img src="https://s-media-cache-ak0.pinimg.com/236x/f4/0d/46/f40d46bb4c060ad33d35de7059f8add4.jpg" alt="Image" class="img-responsive"></a>
                                             </div>
-                                            <div class="carousel-content col-lg-2 col-sm-3"><a href="#x"><img src="https://image.isu.pub/140204131523-eee90401b835c676e68b76b820bbdc3d/jpg/page_1_thumb_large.jpg" alt="Image" class="img-responsive"></a>
+                                            <div class="carousel-content col-lg-2 col-md-2 col-sm-3"><a href="#x"><img src="https://image.isu.pub/140204131523-eee90401b835c676e68b76b820bbdc3d/jpg/page_1_thumb_large.jpg" alt="Image" class="img-responsive"></a>
                                             </div>
-                                            <div class="carousel-content col-lg-2 col-sm-3"><a href="#x"><img src="http://image.isu.pub/130408094651-6700011639614afaa387177251bc63ab/jpg/page_1_thumb_large.jpg" alt="Image" class="img-responsive"></a>
+                                            <div class="carousel-content col-lg-2 col-md-2 col-sm-3"><a href="#x"><img src="http://image.isu.pub/130408094651-6700011639614afaa387177251bc63ab/jpg/page_1_thumb_large.jpg" alt="Image" class="img-responsive"></a>
                                             </div>
-                                            <div class="carousel-content col-lg-2 col-sm-3"><a href="#x"><img src="http://image.issuu.com/130219144226-da658d03206545eb992339ceb63209d3/jpg/page_1.jpg" alt="Image" class="img-responsive"></a>
+                                            <div class="carousel-content col-lg-2 col-md-2 col-sm-3"><a href="#x"><img src="http://image.issuu.com/130219144226-da658d03206545eb992339ceb63209d3/jpg/page_1.jpg" alt="Image" class="img-responsive"></a>
                                             </div>
 
                                         </div>
@@ -590,17 +587,17 @@
                 <!-- LIBRARY TREE -->
 
                 <div class="row" id="library-tree">
-                    <div class="col-lg-10 col-md-6 col-sm-6 col-xs-10 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1" id="breadcrumb">
+                    <div class="col-lg-10 col-md-10 col-sm-6 col-xs-12 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 hidden-xs" id="breadcrumb">
                         <ol class="breadcrumb">
                             <li>
-                                <a href="#">INC Library</a>
+                                <a href="#" class="col-xs-12">INC Library</a>
                             </li>
 
                             <li>
-                                <a href="#">Theory on Demand</a>
+                                <a href="#" class="col-xs-12">Theory on Demand</a>
                             </li>
 
-                            <li class="active">
+                            <li class="active col-xs-12">
                                 <a href="#">The Gray Zones of Creativity and Capital</a>
                             </li>
                         </ol>
@@ -610,12 +607,12 @@
                 <div class="row" id="book-title-box">
                     <!-- BOOK TITLE -->
 
-                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-10 col-lg-offset-3 col-md-offset-1 col-sm-offset-1 col-xs-offset-1" id="book-title">
-                        MoneyLab Reader: An Intervention in Digital Economy
+                    <div class="col-lg-6 col-md-8 col-sm-6 col-xs-12 col-lg-offset-3 col-md-offset-2 col-sm-offset-1 col-xs-offset-0" id="book-title">
+                        N°17: The Gray Zones of Creativity and Capital
                     </div>
 
-                    <div class="col-lg-12 col-md-6 col-sm-6 col-xs-10 col-lg-offset-0 col-md-offset-1 col-sm-offset-1 col-xs-offset-1" id="book-author">
-                        by Kiliano Foearun & Coolio Andthegang
+                    <div class="col-lg-12 col-md-8 col-sm-6 col-xs-12 col-lg-offset-0 col-md-offset-2 col-sm-offset-1 col-xs-offset-0" id="book-author">
+                        by Gordana Nikolić & Šefik Tatlić
                     </div>
                 </div>
                 <!-- SUMMARY BOX -->
@@ -624,36 +621,36 @@
                     <div class="info-box-left col-lg-6 col-md-6 col-sm-6 col-xs-10">
                         <div class="col-lg-offset-2 col-md-offset-1 col-sm-offset-1 col-xs-offset-1" id="info-box-left-img-container">
                             <!-- <img class="img-responsive" src="http://image.issuu.com/150402121056-510d1f3c2060fd382ba9f86be83c1ec6/jpg/page_1.jpg"> -->
-                            <img class="img-responsive" src='http://networkcultures.org/wp-content/uploads/2013/10/Screen-Shot-2013-10-04-at-4.16.13-PM.png'>                 
+                            <img class="img-responsive" src='cover.jpg'>                 
                         </div>
                                
-                        <div class="col-lg-offset-2 col-md-offset-1 col-sm-offset-1 col-xs-offset-1">
+                        <div class="col-lg-offset-2 col-md-offset-1 col-sm-offset-1 col-xs-offset-0">
                                 <span class="keyword">#creativity</span> <span class="keyword">#capital</span> <span class="keyword">#industry</span> <span class="keyword">#capitalism</span> <span class="keyword">#globalisation</span> <span class="keyword">#new media</span> <span class="keyword">#neoliberal</span> <span class="keyword">#politics</span> <span class="keyword">#democracy</span> <span class="keyword">#culture</span> <span class="keyword">#modernity</span> <span class="keyword">#hierarchy</span> <span class="keyword">#exploitation</span> <span class="keyword">#society</span> <span class="keyword">#economy</span> <span class="keyword">#imperialism</span> <span class="keyword">#colonialism</span> <span class="keyword">#empire</span> <span class="keyword">#power</span> <span class="keyword">#system</span> <span class="keyword">#gentrification</span> <span class="keyword">#post-modernism</span>
                         </div>
                         
                     </div>
 
-                    <div class="info-box-right col-lg-6 col-md-3 col-sm-3 col-xs-10 col-lg-offset-0 col-md-offset-1 col-sm-offset-1 col-xs-offset-1">
+                    <div class="info-box-right col-lg-6 col-md-5 col-sm-3 col-xs-12 col-lg-offset-0 col-md-offset-0 col-sm-offset-1 col-xs-offset-0">
                         <div class="summary col-lg-9">
-                            Richard Barbrook and Andy Cameron’s The Californian Ideology, originally published in 1995 by Mute magazine and the nettime mailinglist, is the iconic text of the first wave of Net criticism. The internet might have fundamentally changed in the last two decades, but their demolition of the neoliberal orthodoxies of Silicon Valley remains shocking and provocative. They question the cult of the dot-com entrepreneur, challenging the theory of technological determinism and refuting the myths of American history. Denounced as the work of ‘looney lefties’ by Silicon Valley’s boosters when it first appeared, The Californian Ideology has since been vindicated by the corporate take-over of the Net and the exposure of the NSA’s mass surveillance programmes.
+                            What is the correlation among the creative industries, creative industry policies, new media paradigms and capitalism as colonial relations of dominance? What is the role of these industries in the prioritization of the interests of capital at the expense of those of society and how can these paradigms be criticized in the context of the actual, neoliberal, flexible regime of reproduction of capital? To what measure is this regime ‘flexible’ and to what measure it is just an extension of rigid, feudal and racial logics that underline (post)modern representational discourses? To what measure do the concepts of creativity, transparency, openness and flexibility conceal the hegemonic nature of modern hierarchies of exploitation?
                         </div>
 
                         <div class="col-lg-9">
                             <p class="info-box-column-header">
                                 Author(s)
                             </p>
-                            <a href="#">Richard Barbrook</a> <a href="#">Andre Cameron</a> <!-- 
-<a href="#">Johnatan Beller</a>
-<a href="#">Josephine Berry Slater</a>
-<a href="#">Marc James Léger</a>
-<a href="#">Ana Vilenica</a>
-<a href="#">Sandi Abram</a>
-<a href="#">Irmgard Emmelheinz</a> -->
+
+<a href="#">Johnatan Beller</a>, 
+<a href="#">Josephine Berry Slater</a>, 
+<a href="#">Marc James Léger</a>, 
+<a href="#">Ana Vilenica</a>, 
+<a href="#">Sandi Abram</a>, 
+<a href="#">Irmgard Emmelheinz</a>
 
                             <p class="info-box-column-header">
                                 Editor(s)
                             </p>
-                            <a href="#">Gordana Nikolić</a> <a href="#">Šefik Tatlić</a>
+                            <a href="#">Gordana Nikolić</a>, <a href="#">Šefik Tatlić</a>
                             <p class="info-box-column-header">
                                 Date
                             </p>
@@ -724,7 +721,7 @@ by Kiliano Foearun & Coolio Andthegang
     <!-- –––––––––––––––––––––––––– Chapter 1 –––––––––––––––––––––––––– -->
             <div class="section columns3" id="chapter1" data-authorName="Gordana" data-authorLastName="Nikolić" data-article="Introduction">
                 
-                <h2>The Gray Zones of Creativity and Capital:<span class="shadow"></span>Introduction</h2>
+                <h2>The Gray Zones of Creativity and Capital: Introduction</h2>
 
                 <span class="author">Šefik Tatlić &amp; Gordana Nikolić</span>
                 <span class="words"> | 1.666 words</span>
@@ -745,14 +742,14 @@ by Kiliano Foearun & Coolio Andthegang
                 <p>The initial idea that led to the preparation of this publication was not a reflection of the editors’ wish to merely add another publication focusing on a critique of the relationship between creative industries and capital to the huge corpus of similar publications taking a critical stance towards the process of co-optation of creativity, creative industries, art or the domain of abstraction in general by capital. Even though, precisely through the logic of the mass production of critical texts dealing with the above-mentioned context, this publication as well will ultimately exist in such a register, the distinctive feature of this publication is its aspiration to place the relationship between creativity and capital in the context of an analysis wherein capitalism is treated as the framework of a broader relationship of domination, which to a great degree goes beyond the currently popular critical niche focused on analyzing the relationship between creativity, abstraction or representation in general and capital.</p>
                 <p>The vast majority of such publications are characterized by such a perception of the relationship between creativity and capital, which implies that the co-optation and exploitation of work, creativity and attention occurs in a post-class, post-ideological or post-colonial context of the so-called ‘networked world or networked democracy’, wherein all subjects and their actions are reportedly subjected to the logic of capital in the same way. Regardless of whether we speak of the ideological  use of the concept of creativity in the name of rationalization of the neoliberal strategies of transforming the city into ghettoized class and racial apartheids, whether we speak of the exploitation of attention (the economy of attention) by financial capital or generally about the epistemological positioning of creativity, abstraction or the domain of representation within the dominant form of rationalization and reproduction of capitalism, this publication strives to retain a critical view that sees these processes as forms of the perpetuation of the hegemony of capitalism in the so-called contemporary era.</p>
                 <p>As regards the temporal framework encompassed in this publication, although certain texts, through the logic of the necessity of historicization of specific strategies and practices refer to historical periods preceding the 21<sup>st</sup> century, the majority of the texts contained in this publication refer to social and political processes from the end of the 20<sup>th</sup> and the beginning of the 21<sup>st</sup> century, that is, the current period. In this sense, the dominant ideological  discourses, strategies and power relations of today constitute the focus of attention of the topics of this publication.</p>
-                <p>This publication, then, occupies a position that treats ‘the networked world’, its democracies, cognitivities, attention and culture  as domains wherein, or with help of which, forms of the reproduction of capitalism as a heterogeneous form of hegemony, primarily of the First World of capital or the West, are reorganized, ‘modernized’. The title ‘The Gray Zones of Creativity and Capital’ does not, therefore, point primarily to instances of vagueness and dichotomy in the analysis of the social meaning of the cooperation between creativity and capital, but assumes a critical stance towards ‘gray areas’ in those dominant interpretations of capitalism that try to view it as a post-ideological, post-class or post-bloc system.</p>  <img class="grayscale" src="https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2014/4/22/1398168098216/Milo-Moire-creates-Plop-E-016.jpg?w=620&q=85&auto=format&sharp=10&s=bbe078edabbb2ef97b6cc557ec894dc1">
+                <p>This publication, then, occupies a position that treats ‘the networked world’, its democracies, cognitivities, attention and culture  as domains wherein, or with help of which, forms of the reproduction of capitalism as a heterogeneous form of hegemony, primarily of the First World of capital or the West, are reorganized, ‘modernized’. The title ‘The Gray Zones of Creativity and Capital’ does not, therefore, point primarily to instances of vagueness and dichotomy in the analysis of the social meaning of the cooperation between creativity and capital, but assumes a critical stance towards ‘gray areas’ in those dominant interpretations of capitalism that try to view it as a post-ideological, post-class or post-bloc system.</p>  <img class="grayscale" src="https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2014/4/22/1398168098216/Milo-Moire-creates-Plop-E-016.jpg?w=620&q=85&auto=format&sharp=10&s=bbe078edabbb2ef97b6cc557ec894dc1"><br>
                 <img class="grayscale" src='http://static.wixstatic.com/media/0b94ab_397782e1c380425496b74e9203717e28.jpg/v1/fill/w_1077,h_698,al_c,q_85,usm_0.66_1.00_0.01/0b94ab_397782e1c380425496b74e9203717e28.jpg'>
                 <p>Before shortly introducing the texts it should be noted that this publication in its iteration in Serbian language contained one article that is not featured in this English iteration. The text had to be left out because of copyright contraints that don’t allow this text to be featured in an online publication. The text in question was written by Santiago Castro-Gómez and it is entitled ‘The Missing Chapter of Empire – Postmodern reorganization of coloniality and post-Fordist capitalism’ (<em>Cultural Studies Volume 21</em>, Issue 2-3, 2007).<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a> This text, by critically refering to the book <em>Empire</em> by Antonio Negri and Michael Hardt, criticized the view of capitalism as a system of equal exploitation of all. Castro-Gómez saw the capitalism of today as a modernized form of the colonial division of the world, in which the First World of capital, the West, still retains a monopoly on defining progress, and in which that same world retains a surplus of privileges within the framework of the unbalanced distribution of global wealth. This text’s role was to position this publication in decolonial register which is still the register in which this publication continues to reside.</p>
                 <p>The text by Jonathan Beller entitled ‘Within the Image’ analyses in a similar manner, but from a different perspective, the socio-political meaning and the ideological  effects of the capitalist exploitation of the image and attention. From a structuralist position, Beller analyses the role which the commodification of the image, attention and abstraction plays in the neoliberal free market and its ideologies, but in those same contemporary forms of capitalism the author also detects a specific colonial and racial relationship of domination.</p>
                 <p>Josephine Berry Slater’s text ‘Neutralizing Engaged Subjects in the Creative City’, relying on Foucault’s theoretical apparatus, criticizes the biopolitical and repressive character of the neoliberal strategies of transforming urban Great Britain in the post-Thatcher era. Even though Slater locates the roots of the neoliberal strategies of social engineering and the <em>laissez-faire</em> concept of organizing society and the economy in Thatcher’s attack on the role of society in the regulation of society, the author links the roots of the derogation of subversive social engagement with the contemporary forms of organization of capitalism, in an alliance with the modern art mainstream.</p>
                 <p>Marc James Léger’s text ‘The Agency of Art in the Unconscious’ critically addresses contemporary art as a form of reproducing the nullity of social significance contained in the domain of creativity in capitalism. Relying to a large extent on the psychoanalytic theories of Lacan and Žižek, Leger structurally links contemporary art and the domain of creativity in general to modern political economy a way that sees contemporary art as a form of neutralization of radical fiction that antagonizes the above-mentioned relationship with capitalist economy.</p>
                 <p>‘The Art of New Class Geography of the City – Culture-guided urban regeneration serving the modernization of the periphery’ is a text by Ana Vilenica wherein she critically addresses the practices and principles contained in the neoliberal establishment of a class geography of urban environments in Serbia. Vilenica’s text does not remain at the level of analyzing the neoliberal strategies of contemporary capitalism, but also deals with the broader meaning of class and racial principles invested in the processes of modernization in general. In this sense, Vilenica analyzes the effects of an alliance of sorts between capital and creative industries, emphasizing the role of art and culture  in contemporary capitalist ideological  rhetorics.</p>
-                <img class="grayscale" src='https://upload.wikimedia.org/wikipedia/commons/a/a7/Anti-capitalism_color.jpg'>
+                <img class="grayscale" src='https://i.guim.co.uk/img/static/sys-images/Guardian/About/General/2012/12/19/1355929449285/Electron-micrograph-of-th-010.jpg?w=620&q=85&auto=format&sharp=10&s=27ea871bea865fc843a82d3876a3d375'>
                 <p class="img-caption">Fig. Bruce Barber, <em>Artworld Ponzi Scheme</em>, drawing, 2008. Courtesy of the artist.</p>
                 <p>Sandi Abram’s text ‘The Creative Factory: Collective Creativity and Autonomy in the Neoliberal Machine of Creative Industries’ analyzes the effects of post-Fordist cognitive capitalism on the social scene in Ljubljana, Slovenia. Abram assumes a critical stance towards the public-private partnership model invested in the processes of producing a new class geography of urban environments, which is a model that Abram sees as a part of a broader pan-European paradigm of gentrification. Analyzing the transformation of the Rog factory in Ljubljana, Abram sees the processes of gentrification as parts of a broader capitalist strategy of turning the entire society into a factory and/or a specific commodified niche in the hierarchies of capitalist exploitation.</p>
                 <p>The text by Irmgard Emmelheinz, entitled ‘Neoliberalism and the Autonomy of Art: The Culture of Power, the Power of Culture’ analyses the effects of reconfiguring the social-political role of the figure of ‘the Other’ in the context of Mexico and/or the broader region of Latin America. Emmelheinz takes a critical position in relation to postmodern democratic culture  and the institutions of contemporary art than she sees to be a part of the broader process of the utilization of culture  by capitalism. The author concludes that within the space of division of political and aesthetic representation occurs a paradigmatic change in the role of culture  in neoliberal capitalism, whose autonomy no longer points to its ability to produce a radical criticism of the system, but precisely the opposite –to its total depoliticization.</p>
@@ -781,7 +778,6 @@ by Kiliano Foearun & Coolio Andthegang
                 <p><em>Portions of this essay were originally published as ‘Wagers Within the Image: Rise of Visuality, Transformation of Labour, Aesthetic Regimes’ in Culture Machine, vol. 12, 2012; <a href="http://www.culturemachine.net.">http://www.culturemachine.net</a>.</em></p>
                 <p>Let us examine a few consequences of the industrialization of the visual. As IPO<a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a> after IPO seem to demonstrate, to look is to labor: looking itself is posited as value-productive labor. We know this now. In the cinematic mode of production  this generalizes to what I called ‘the attention  theory of value’.<a href="#fn3" class="footnoteRef" id="fnref3"><sup>3</sup></a> Today, after the internet revolution (or, perhaps equally, counter-revolution), this relation between screen-time and social  production is increasingly pre-supposed. Of course the energy levels, control modules and digitized metrics of interactivity have been vertiginously intensified. Here we must remark that with the digitization of the screen as socio-biological interface, with the ramification of both its functionality and the intensive development of a metrics of attention , the stock prices of media companies such as Google are what they are because they are exploits: schemas for the expropriation of value produced by the users (and therefore the used). Early dot.com markets picked up on this shift before it was widely understood. Today, this arrangement of screen-cybernetics along with an increasingly precise metrics of attention  has its sights on nearly every aspect of lived and to-be-lived time, even those forms of time that are engaged in an organized struggle against capitalist forms of domination. As has been remarked, the perception of Facebook’s and Twitter’s future monetization potential increases with every ‘Twitter revolution’: unrests in Tunisia, Cairo, Madrid and New York become bankable events for new media corporations in a way at once departing from and analogous to what news has long been for print and television.</p>
                 <p>This interface between spectator and social  machinery, realized as ‘the image ’ (which received rigorous critical analysis by the Frankfurt School, the ‘situationists’ (Debord) and feminist film theory), has been generalized to the omnipresent screen and is also being extended to the other platforms and senses: ‘the computer,’ ‘the tablet,’ and ‘the cellphone’ —all of which appear to be increasingly similar. Now, of course, the program is being extended to sound, smell, touch and taste —music and game sounds, obviously, but also programmed shopping environments (which themselves extend into the urban fabric) organized by architecture, texture, scent, and arguably salt, sugar and fat. These innovations and their convergence (towards the omnipresent, omnivorous and indeed omniscient cyber-spatialized mall-military-prison-post-industrial cosmopoplex) bring about new levels of interactivity as well as new and ever more elaborate metrics for the organization and parsing of attention -production.</p>
-                <img class="grayscale" src="http://hypeline.org/wp-content/uploads/2015/09/enjoy-capitalism.jpg">
                 <p>Such a transformation of the role of visuality, sensuality and their media technologies in social  production and reproduction necessitated the formulation of the above mentioned attention  theory of value, which reduces to the labor  theory of value at sub-light (sub-cinematic) speeds but allows value formations to persist for a while in the electronic matrix in non-monetized forms. The theory posits that attention  produces value in at least three ways:</p>
                 <ol>
                     <li>
@@ -972,9 +968,8 @@ by Kiliano Foearun & Coolio Andthegang
                 <div class="subchapter" id="subchapter2">
                     <h3>Art for Imbeciles</h3>
                     <p>In an essay on what he calls ‘enclave theory’, John Roberts made the somewhat startling assertion that many of the most progressive art theories of recent years (those attributed to Nicolas Bourriaud, Gregory Sholette, Grant Kester, Stephen Wright, and even theorists like Jean-Luc Nancy, Alain Badiou, Slavoj Žižek, Bruno Bosteels, Felix Guattari, Toni Negri, and Michael Hardt) represent the ‘invariant core of a communist programme’ that is ‘largely divorced from the past’, in particular, from its Stalinist Communist party organizations, and is committed rather to ‘culturally aestheticized […] autonomous forms of productive, intellectual and creative community’.<a href="#fn46" class="footnoteRef" id="fnref46"><sup>46</sup></a> What is surprising in this claim is the idea that these are invariant forms, and not significantly different. Roberts asks us to consider what all of these theorists’ perspectives on radical culture have in common rather than what distinguishes them. This gesture might not be such a bad way to understand the so-called ‘crisis’ of art and art criticism in a world of cultural corporatization and neoliberal engineering of creative capital. Whatever contemporary art’s failings in terms of pursuing revolutionary class struggle, it represents, according to Roberts, a kind of leftist bloc against what Sholette terms enterprise culture. Perhaps one of the most acerbic depictions of the art world as a rigged system of economic and social  exploitation is Bruce Barber’s 2008 drawing titled <em>Artworld Ponzi Scheme</em>, which shows a pyramid comprized of payers, prayers, and players, all of them trapped within a hierarchically inegalitarian system. The intrigue in this drawing, especially as it comes after the biggest financial debacle since the 1970s, is that the currency of art is premised on false claims, or even ‘toxic assets’.
-                    <br>
-                    <br/> 
-                    <img class="grayscale" src="css/image/Leger%20IMAGE.jpg" alt="" /></p>
+                    </p>
+                    <img class="grayscale" src="css/image/Leger%20IMAGE.jpg" alt="" />
                     <p class="img-caption">Fig. Bruce Barber, <em>Artworld Ponzi Scheme</em>, drawing, 2008. Courtesy of the artist.</p>
                     <p>The idea that art has no socially agreed upon justifications has been addressed by anthropologist David Graeber, who wonders why contemporary theorists attending an art symposium at the Tate Museum should explain the 2008 fiasco by taking recourse to avant-garde art created between 1916 and 1922.<a href="#fn47" class="footnoteRef" id="fnref47"><sup>47</sup></a> His point is that we are potentially once again living a revolutionary moment, but that epistemological subversion through culture and post-structuralist theory seems to satisfy only liberal academics. The return to avant-gardism, he argues, effects</p>
                     <blockquote>
@@ -983,15 +978,16 @@ by Kiliano Foearun & Coolio Andthegang
                     <p>These days are gone, he argues, replaced by the immaterial labor and service economy analysis of people like Maurizio Lazzarato and Toni Negri. The art of the rich, he goes on, has more to do with the analysis of products than of social  processes, floating above the mire of ordinary existence. Art today appears to contemporary political philosophers to belong to the immaterial domain, a fact that exacerbates its condition of crisis. The art world, for Graeber, is the apparatus of people who manage this crisis. Unable to define the category of art in any way that is adequate beyond its quality as something that only rich people and museums can afford to buy, the art world cannot establish its own legitimacy. Graeber then argues that the essence of politics in social  life is to make people believe. Things become true if you can convince enough people to believe them. In order to play the game effectively, one must not oneself know the essence of things. He concludes from this that if the art world was to recognize itself as a form of politics, it would also need to ‘recognize itself as something both magical, and a confidence game—a kind of scam’.<a href="#fn48" class="footnoteRef" id="fnref48"><sup>48</sup></a> Insofar as the art world has become an appendage to financial capital, fictive capital explains fictive cultural value as well. All the players, he argues, cynics and idealists alike, draw on outmoded nineteenth-century notions of art, even those who create ‘enclaves’ where they can experiment with new forms of life.</p>
                     <p>Where Graeber gets at the issue is when he later argues that for all of the fictionalization that takes place across the social  field, the magically created value of art is no less real. This assertion confirms the Lacanian emphasis on the reality of illusion, which contrasts to transgressions that merely try to escape the Real. In this regard, Žižek agrees with Badiou, who argues that art is a medium of truth. This also relates to the Marxist understanding of commodity fetishism, which states that even if capitalists understand that workers produce the value of their merchandize, they nevertheless continue to believe in the miracle of exchange. The famous Žižekian example, of course, is the anecdote about Niels Bohr, who when asked if he believed in the good luck derived from a horse shoe, replied he did not, but that apparently it works even if one does not believe in it. Rather than payer, player, and prayer, then, categories that Barber leaves undefined, I would like to propose the set of three subject positions that Žižek outlines at the start of <em>Less Than Nothing</em>: the idiot, the moron, and the imbecile.<a href="#fn49" class="footnoteRef" id="fnref49"><sup>49</sup></a> All three positions are premized on the Lacanian theory of the <em>big Other</em>, which stands for the heterogeneous social  rules that together comprize what Lacan defines as the social  symbolic. As an impersonal social  agency, the <em>big Other</em> stands in for those rules that shape the unconscious of the social  subject.</p>
                     <p>The first of the three is the idiot, defined by Žižek as someone who is ‘too intelligent to process implicit social  rules’.<a href="#fn50" class="footnoteRef" id="fnref50"><sup>50</sup></a> The idiot imagines himself beyond the influence of the <em>big Other</em> and knows the rules (of art) all too well to be able to process them in a way beyond his hyper-intellectuality. As the first of two examples of idiots within contemporary art theory, both colleagues of mine, we have Sholette and his concept of ‘dark matter’. According to Sholette, dark matter describes the ‘shadowy social  productivity’ that haunts the high art world. The great many excluded practices and failed artists who keep the world of galleries, collections, and magazines going, Sholette argues, are today threatening this pyramidal system as their dark energy becomes increasingly visible. The book <em>Dark Matter</em> thus presents itself as a ‘lumpenography’ of this invisible mass of makeshift, amateur, informal, unofficial, autonomous, activist, non-institutional, and self-organized practices.<a href="#fn51" class="footnoteRef" id="fnref51"><sup>51</sup></a> Sholette argues that art critics, art historians, arts administrators, collectors and dealers typically have little interest in creative dark matter. There is no question that the art world is made up not only of what is known about art, but involves a complex division of labor and specialized tasks that work to keep a multi-billion-dollar industry operating for the benefit of a minority of high profile artists. This system keeps the vast majority of professionally trained artists in a state of subservience and underdevelopment. The first and most general question that is asked by Sholette is what would happen if this superfluous majority went on permanent strike and gave up on the art system’s means of legitimation. Contemporary high art is thoroughly connected, he says, to Art Inc. and does not hide its profit motivations. It is only those dark practices at the margins that still hold on to this former (avant-garde) task of art to challenge commercial goals. While Sholette does appreciate the labor theory of value, he suspends the understanding that most forms of culture are non-productive and rather dependent in complex ways on profits collected elsewhere in the proletarianized global marketplace. Bourdieu’s sociology of art, in contrast, benefited from its use of the concept of social  totality. The absence of the use of the concept of totality in Sholette’s book prevents him from offering a class analysis of culture that would go beyond redistributive justice. Also, dark matter seems to share very little common ground with the avant-garde tradition of revolutionary art, whose distinct purpose is to represent the social  function of art in class society. As Žižek has argued, an ideological identification exerts the greatest pressure on us when we fool ourselves into believing we are not fully identical to it. The epistemological crisis in the arts that is mentioned in Sholette’s introduction to <em>Dark Matter</em> should therefore not be thought to directly reflect the crisis in global capital, though the connections between these spheres do indeed need to be drawn.</p>
-                    <p>A second idiot in this set is Brian Holmes and his theory of ‘liar’s poker’. Holmes is one of the sharpest analysts of artistic resistance within societies of control and is also, like so many contemporary theorists, skeptical of avant-garde modes of contestation. Within the new flexible regimes of accumulation and casual freelance culture, the demands for autonomy, he argues, are diverted into new modes of control.<a href="#fn52" class="footnoteRef" id="fnref52"><sup>52</sup></a> The premise of liar’s poker, as he puts it, is that ‘when people talk about politics in an artistic frame, they’re lying’.<a href="#fn53" class="footnoteRef" id="fnref53"><sup>53</sup></a> Cultural institutions, he argues, constantly demand that artists ‘picture politics’, playing the art game and representing those who are excluded to those who are safely nestled inside, especially transnational corporations, who then support the realm of art as a sphere that is separate from abstract financial decisions. Anti-art artists who work directly in the public sphere or on the terrain of everyday life, or within new technological and scientific landscapes, only pretend to leave behind the artistic frame. <img class="grayscale" src="http://nyuad.nyu.edu/content/nyuad/en/home/news-events/exhibitions/Mindbodyexhibition/_jcr_content/event/image.3.jpg/1395726614951.jpg">
+                    <p>A second idiot in this set is Brian Holmes and his theory of ‘liar’s poker’. Holmes is one of the sharpest analysts of artistic resistance within societies of control and is also, like so many contemporary theorists, skeptical of avant-garde modes of contestation. Within the new flexible regimes of accumulation and casual freelance culture, the demands for autonomy, he argues, are diverted into new modes of control.<a href="#fn52" class="footnoteRef" id="fnref52"><sup>52</sup></a> The premise of liar’s poker, as he puts it, is that ‘when people talk about politics in an artistic frame, they’re lying’.<a href="#fn53" class="footnoteRef" id="fnref53"><sup>53</sup></a> Cultural institutions, he argues, constantly demand that artists ‘picture politics’, playing the art game and representing those who are excluded to those who are safely nestled inside, especially transnational corporations, who then support the realm of art as a sphere that is separate from abstract financial decisions. Anti-art artists who work directly in the public sphere or on the terrain of everyday life, or within new technological and scientific landscapes, only pretend to leave behind the artistic frame. 
                     In reality they collude with curators and directors to show images of political reality. Because the latter are averse to such realism, the artist has to bluff their way through. Holmes assumes, however, that an artist involved with a social  movement is an artist that has successfully challenged the guilt relations of the art system. Because of this he is deeply suspicious of the function of belief, which, he argues, is a powerful or interesting fetish, an illusion that gets players caught in the game rather than directly confronting power, as in the case of artworks that deepen the links between art activism and social  movements. What distinguishes Holmes from Žižek, however, is that he does not ask us to believe even more in art and to directly assume the lack in the <em>big Other</em>—a small distinction, but a crucial one if we are to see art institutions as anything more than duplicitous. Like Sholette, Holmes is concerned that institutions seek cultural capital among ‘the more radical fractions of the artistic field’.<a href="#fn54" class="footnoteRef" id="fnref54"><sup>54</sup></a> The artist has to produce the ace of politics, he argues, while proving all the while that the ace is merely a joker, thereby undermining the reality of the illusion. Like so many leftists, Holmes assumes that the big Other is or can be occupied.</p>
+                    <img class="grayscale" src="http://nyuad.nyu.edu/content/nyuad/en/home/news-events/exhibitions/Mindbodyexhibition/_jcr_content/event/image.3.jpg/1395726614951.jpg">
                     <p>The second subject position outlined by Žižek is the moron, defined by ‘the stupidity of those who fully identify with common sense, who fully stand for the big Other of appearances’.<a href="#fn55" class="footnoteRef" id="fnref55"><sup>55</sup></a> Two notable cultural theorists who might in some ways fill this description are Grant Kester and Claire Bishop. Kester is a seasoned art critic with a long track record of insightful writing on the shift from public art and identity politics in the 1980s and 90s to the new phenomenon of community art in the 90s and 2000s. The type of site-specific collaborative work that he champions unfolds, he says, through an extended interaction with local communities. Like many proponents of the new tendencies, he has worked to anchor his theory of ‘dialogical aesthetics’ in both social  and political history as well as the philosophy of aesthetics. While erudite and knowledgeable, Kester’s polemic, as presented in his book <em>The One and the Many</em>, is intensely prescriptive.<a href="#fn56" class="footnoteRef" id="fnref56"><sup>56</sup></a> For the sake of artist groups like Park Fiction, Ala Plastica, and Dialogue, all avant-garde tactics (reduced to formalist modernism) are proscribed, including the work of leading cultural theorists like Barthes, Derrida, de Certeau, Lyotard, Kristeva, Blanchot, Badiou, Deleuze and Guattari, Agamben, Nancy, Levinas, and Rancière—anyone associated with the post-May 68 generation of postmodern pessimism and who programmatically guard against premature totalizations.</p>
                     <blockquote>
                         <p>We are witnessing today a certain disenchantment with the existing parameters of avant-garde art and an attempt to rearticulate the specificity of the aesthetic in relationship to both the viewer and to other cultural and political practices.<a href="#fn57" class="footnoteRef" id="fnref57"><sup>57</sup></a></p>
                     </blockquote>
                     <p>The leitmotif of avant-garde and theoretical post-structuralism, he argues, is the impossibility of social  cohesion.<a href="#fn58" class="footnoteRef" id="fnref58"><sup>58</sup></a> In contrast, Kester is interested in the global phenomenon and success of collaborative modes of production, as found for instance in the work of Border Arts Workshop, Group Material, REPOhistory, Gran Fury, Platform, WochenKlausur, and Groupo Etcetera, where emphasis is placed on multiple authorship, participatory relation to audience, and process-based activist intervention.<a href="#fn59" class="footnoteRef" id="fnref59"><sup>59</sup></a> Despite his critique of what he calls the ‘intellectual baroque’, Kester’s dialogical aesthetics retains many of the typical leitmotifs of postmodernism, especially the distinctions that are made between pluralism and an older avant-garde notion of culture that retained some links to the class politics of socialism. With globalization, I would argue, social  forms have channeled culture in such a way as to give it a privileged role in economic development. According to George Yúdice, culture is today treated as an expedient, construed as a resource for sociopolitical ameliorism and job creation, a process that coincides with capitalist ideology and biopolitical regulation.<a href="#fn60" class="footnoteRef" id="fnref60"><sup>60</sup></a> The role of culture, Yúdice argues, ‘has expanded in an unprecedented way into the political and economic at the same time that conventional notions of culture have been emptied out’.<a href="#fn61" class="footnoteRef" id="fnref61"><sup>61</sup></a> Unlike Sholette and Holmes, Kester tends to underplay this problem of institutional mediation, leaving actually existing institutions all the more operative in the administration of socially engaged art.</p>
                     <p>Another critic we could add to the group of morons is Claire Bishop. Bishop is well-known for her 2004 <em>October</em> essay in which she criticized Bourriaud’s relational aesthetics for its rhetoric of democracy and emancipation.<a href="#fn62" class="footnoteRef" id="fnref62"><sup>62</sup></a> The open works advocated by contemporary critics like Bourriaud foreground interaction rather than contemplation and engagement rather than passivity and disengagement, assuming that these former modalities are inherently political and emancipatory. She argues that Bourriaud wants to equate aesthetic judgement with political judgement. ‘But how’, she asks, ‘do we measure or compare these relationships?’.<a href="#fn63" class="footnoteRef" id="fnref63"><sup>63</sup></a> Dialogue, she says, is assumed in advance to be democratic, excluding other modalities, like autonomy, antagonism, oppositionality, destabilization, and artworks that recognize the limits of ‘society’s ability to fully constitute itself’.<a href="#fn64" class="footnoteRef" id="fnref64"><sup>64</sup></a> She defines the autonomy of the artwork in terms of the social  antagonism that is mirrored in the tension between art and society. Bishop insists that we should be better able to judge art itself and not merely better politics, and therefore acknowledge the limits of what art can do. One of the problems here is the return to the function of criticism and the assumption that art, by itself, can be the object of objective assessment. In this gesture Bishop obviates the notion of antagonism that she otherwise recognizes. While she exposes what is repressed in the idea of social  harmony, she ignores how art itself acts as this agent of repression. In this regard, <em>Artificial Hells</em>, her latest treatment of participatory art, mostly expands the number of examples rather than improve the initial theory.<a href="#fn65" class="footnoteRef" id="fnref65"><sup>65</sup></a> She worries about the instrumentalization of participatory art, something Kester is less troubled by, but perhaps misses the point that this apprehension is misplaced insofar as it concerns itself with art <em>per se</em> and art criticism as a means of institutional legitimation (perhaps to satisfy critics like Graeber). She very correctly recognizes that the new European cultural policies enacted under <em>New Labour</em> in the U.K. are a form of social  engineering but fails to produce a theory that addresses how and why art eludes such institutionalization.</p>
-                    <img class="grayscale" src="https://nyoobserver.files.wordpress.com/2015/03/screen-shot-2015-03-04-at-7-22-08-pm.png">
+                    <img class="grayscale" src="https://pbs.twimg.com/media/CXou2kxWcAEGQH3.png">
                     <p>I would argue, in contrast, that it is quite possible for an artwork to be valid as an autonomous and critical work and at the same time to defy institutional capture, and this, without denying the incompleteness of the social. For me to say this, I should think that I belong to the third group in Žižek’s series: the imbeciles. An imbecile is someone whose mental retardation causes him to be aware of the need for a <em>big Other</em>, but who does not rely on it. The imbecile is somewhere between the idiot and the moron, who recognizes the function of language but who distrusts it.<a href="#fn66" class="footnoteRef" id="fnref66"><sup>66</sup></a> The <em>big Other</em> exists, but is inconsistent. The question for aesthetics, then, is to consider in theoretical and not only sociological terms the ways in which the art world guarantees the consistency of the rules of art, allowing for dark matter to be distinguished from consecrated artists. What unites the idiot, the moron and the imbecile is the inconsistency of their belief in the <em>big Other</em> of art and, as I argue further on, this inconsistency represents the ‘perverse core’ of aesthetics as such.</p>
                 </div> <!-- #subchapter 2 -->
                 <div class="subchapter" id="subchapter3">
