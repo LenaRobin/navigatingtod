@@ -616,7 +616,7 @@ p + p{
 }
 
 /* words: the way the words contained in each chapter display */
-.section .words {
+.section .words, .section .characterss, .section .timee {
     font-size: 1.7em;
     color:#8e8e8e;
     text-decoration: none;
@@ -935,6 +935,7 @@ a.page-scroll:hover, a.page-scroll:active, a.page-scroll:link, a.page-scroll:vis
     padding: 1px;
     padding-top: 55%;
     /* margin-right: 60%; */
+    display: none;
     padding-bottom: 10px;
     font-size: 18px;
     color: white;
@@ -943,7 +944,8 @@ a.page-scroll:hover, a.page-scroll:active, a.page-scroll:link, a.page-scroll:vis
     height: 100%;
     left: -24%;
     position: absolute;
-    background-color:#f30;
+    /*background-color:#f30;*/
+    background-color: white;
     width: 24%;
     -webkit-box-shadow: -9px 0px 13px -8px rgba(0,0,0,0.09);
     -moz-box-shadow: -9px 0px 13px -8px rgba(0,0,0,0.09);
