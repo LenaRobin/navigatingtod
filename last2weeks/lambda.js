@@ -2,7 +2,7 @@ $(document).ready(function(){
     //////////////////////////////////////////////////////////////////////////////////
     ////PUSH MENU ON THE LEFT
     //////////////////////////////////////////////////////////////////////////////////
-    $('.toggle_menu_right').on('mouseenter', function() {
+    $('.toggle_menu_right').on('click', function() {
         if ($(window).width() >= "768") {
             var window_width = $(window).width();
             var menu_wrapper_width = $('#menu-right-wrapper').outerWidth();
@@ -16,43 +16,79 @@ $(document).ready(function(){
                 // $('#menu-right').animate({left: -menu_wrapper_width});
                 $('#menu-right').animate({left: 1});
             } 
-            // else {
+            else {
                 // $('#menu-right').animate({left: 0});
                 // $('#toggle_menu_right').animate({width: '50px'});
-                // $('#menu-right').animate({left: + menu_wrapper_width});
-            // }
+                $('#menu-right').animate({left: + menu_wrapper_width});
+            }
         }
     });
 
-    $('.toggle_menu_right').on('click', function() {
-        if ($(window).width() >= "768") {
-            var window_width = $(window).width();
-            var menu_wrapper_width = $('#menu-right-wrapper').outerWidth();
-            var menu_right_width = $('#menu-right').outerWidth();
-            var padding_left = parseInt($('#menu-right').css('padding-left').replace('px', ''));
-            var correct_distance = menu_right_width - padding_left;
-            var initial_offset = Math.floor($('#menu-right-wrapper').offset().left);
-            if (Math.floor($('#menu-right-wrapper').offset().left) < window_width) {
-                $('#menu-right').animate({left: +correct_distance+1});
+    // $('.toggle_menu_right').on('click', function() {
+    //     if ($(window).width() >= "768") {
+    //         var window_width = $(window).width();
+    //         var menu_wrapper_width = $('#menu-right-wrapper').outerWidth();
+    //         var menu_right_width = $('#menu-right').outerWidth();
+    //         var padding_left = parseInt($('#menu-right').css('padding-left').replace('px', ''));
+    //         var correct_distance = menu_right_width - padding_left;
+    //         var initial_offset = Math.floor($('#menu-right-wrapper').offset().left);
+    //         if (Math.floor($('#menu-right-wrapper').offset().left) < window_width) {
+    //             $('#menu-right').animate({left: +correct_distance+1});
                 // $('#toggle_menu_right').animate({offset: '50px'});
                 // $('#menu-right').animate({left: -menu_wrapper_width});
-            } 
+            // } 
             // else {
             //     $('#menu-right').animate({left: 0});
             //     // $('#toggle_menu_right').animate({width: '50px'});
             //     // $('#menu-right').animate({left: + menu_wrapper_width});
             // }
-        }
-    });
+    //     }
+    // });
 
 
 
+
+    // function wordCount( val ){
+    //     var wom = val.match(/\S+/g);
+    //     return {
+    //         charactersNoSpaces : val.replace(/\s+/g, '').length,
+    //         characters         : val.length,
+    //         words              : wom ? wom.length : 0,
+    //         lines              : val.split(/\r*\n/).length
+    //     };
+    // }
+    var chapter1 = $("#chapter1");
+    var bbb = chapter1.text();
+    var aaa = bbb.match(/\S+/g);
+    var charactersNoSpaces = bbb.replace(/\s+/g, '').length;
+    var characterss = bbb.length;
+    var wordss = aaa ? aaa.length : 0;
+    // var liness = bbb.split(/\r*\n/).length;
+    var timee = (wordss / 250).toString();
+
+    var deci = timee.split('.');
+    var secss = deci[1] *60;
+    var secs = secss.toString().substr(0,2);
+
+    var paragraphss = $('#chapter1 p').size();
+
+    console.log(bbb);
+    console.log(charactersNoSpaces);
+    console.log(characterss);
+    console.log(wordss);
+    // console.log(liness);
+    console.log(timee);
+
+
+    // var character_count = $('#chapter1').text().length;
+
+    $('.words').tooltip({title: paragraphss+" paragraphs<br>"+characterss+" characters (with spaces)<br>"+charactersNoSpaces+" characters<br>"+wordss+" words<br>"+deci[0]+":"+secs+" min", html: true}); 
 
 
 
 ////ON CLICKING THE TOGGLE THAT OPENS THE MENU
     $toggle_menu = $('.toggle_menu');
-    $toggle_menu.mouseenter(function() {
+    $toggle_menu.on('mouseenter', function() {
         if ($(window).width() <= "480") {
             var menu_width = $('#toc_wrapper').width();
             // console.log($('#menu').offset().left);
@@ -388,7 +424,7 @@ $(document).ready(function(){
     $(".in-text").each(function(){
         var n = $(this).data("dref");
         var tx = $("#ref"+n).text();
-        $(this).attr({"data-toggle": "popover", "data-trigger": "focus", "data-content": tx, "data-placement": "top", "href": "#0"}).addClass("button");
+        $(this).attr({"data-toggle": "popover", "data-trigger": "click", "data-content": tx, "data-placement": "top", "href": "#0"}).addClass("button");
     });
 
 ////////////////
@@ -603,6 +639,8 @@ $(document).ready(function(){
         ptop,
         pleft,
         pObj;
+    var pin_count;
+    var last_pinID;
 
 ////UPDATES THE INFO IN THE PINS ARRAY
     function checkPin(pinID) {
@@ -612,23 +650,23 @@ $(document).ready(function(){
                 if (pinID > pins.length) {
                     alert('if entrance');
                     pins.push(pObj);
-                    localStorage.pin_count = JSON.stringify(pin_count);
+                    localStorage.last_pinID= JSON.stringify(pin_count);
                     var PinCount = JSON.parse(localStorage.pin_count);
                     alert('PinCount: '+PinCount);
                     localStorage.saved_pins = JSON.stringify(pins);
                     var PinObjects = JSON.parse(localStorage.saved_pins);
-                    alert(PinObjects[i]['value']);
+                    // alert(PinObjects[i]['value']);
                     break;
                 } else {
                     alert('else entrance');
-                    console.log('Accessed');
+                    console.log('Accessed same id');
                     pins[pinID-1]["value"] = t;
                     pins[pinID-1]["top"] = ptop;
                     pins[pinID-1]["left"] = pleft;
                     console.log(pins);
                     localStorage.saved_pins = JSON.stringify(pins);
                     var PinObjects = JSON.parse(localStorage.saved_pins);
-                    alert(PinObjects[i]['value']);
+                    // alert(PinObjects[i]['value']);
                     break;
                 }
             }
@@ -648,9 +686,14 @@ $(document).ready(function(){
     if(typeof(Storage) !== "undefined") {
         if(localStorage.getItem("saved_pins")) {
             pins = JSON.parse(localStorage.getItem("saved_pins"));
+            if(JSON.parse(localStorage.getItem("saved_pins")).length > 0){
+                    pin_count = JSON.parse(localStorage.getItem("saved_pins")).length;
+                }else{
+                    pin_count = 0;
+                }
 
             for (var i=0; i<JSON.parse(localStorage.saved_pins).length; i++) {
-                alert(i);
+                // alert(i);
                 var appended_pins = $('<div style="position: absolute" class="pin-clone"><i class="fa fa-thumb-tack fa-2x"></i><form class="pin-form" action=""><input class="pin-input" type="text" name="fname" placeholder="Tag"></form></div>');
                 appended_pins.appendTo('#content').append('<div class="pin-close"><i class="fa fa-trash"></i></div>').attr('id', 'dragged-pin'+(i+1)).draggable({
                     containment: '#main',
@@ -667,11 +710,12 @@ $(document).ready(function(){
  
            }
         } else {
-            alert('inner else');
+            alert('local inner else');
             pins = [];
+            last_pinID = 0;
         }
     } else {
-        alert('outer else');
+        alert('local outer else');
     }
 
     $('#bookmark').click(function() {
@@ -737,23 +781,26 @@ $(document).ready(function(){
     });
 
 ////DROP THE PIN AND GET THE POSITION AND OTHER INFO BOUT IT
-    var pin_count;
 
-    if (localStorage.saved_pins) {
-        console.log('got pins length');
-        pin_count = JSON.parse(localStorage.saved_pins).length +1;
-        console.log(pin_count);
-    } else {
-        console.log('new pisn count');
-        pin_count = 1;
-    }
+    // if (localStorage.saved_pins) {
+    //     console.log('got pins length');
+    //     pin_count = JSON.parse(localStorage.saved_pins).length +1;
+    //     console.log(pin_count);
+    // } else {
+    //     console.log('new pisn count');
+    //     pin_count = 1;
+    // }
 
     function getPinPosition(e, ui) {
+
+        // increase last_pinID
+        last_pinID++;
+
         var pinXPos = ui.offset.left;
         var pinYPos = ui.offset.top;
         var newPin =  $(ui.helper).clone(true);
 ////////DRAG IT, GET TAG NAME FROM USER, ASSIGN DEFAULT ID TO IT, AND UPDATE VALUES WHEN EDITED OR MOVED
-        newPin.appendTo('#content').append('<div class="pin-close"><i class="fa fa-trash"></i></div>').offset({top: pinYPos, left: pinXPos}).attr('id', 'dragged-pin'+pin_count).addClass('pin-clone').draggable({
+        newPin.appendTo('#content').append('<div class="pin-close"><i class="fa fa-trash"></i></div>').offset({top: pinYPos, left: pinXPos}).attr('id', 'dragged-pin'+last_pinID).addClass('pin-clone').draggable({
             containment: '#main',
             cursor: 'move',
             snapTolerance: 100,
@@ -765,17 +812,18 @@ $(document).ready(function(){
         newPin.find('.pin-form').css('display', 'inline-block');
         newPin.find('.pin-input').focus();
 
+
         newPin.submit(function(e){
             t = newPin.find('.pin-input').val();
             var pid = newPin.attr("id");
             var pidnr = pid.substr(11);
-            console.log(pidnr);
+            // console.log(pidnr);
             ptop = newPin.offset().top;
             pleft = newPin.offset().left;
             pObj = {value : t, top: ptop, left: pleft, id: pid};
 
             checkPin(pidnr);
-            console.log('qaywsxedcrfvtb');
+            // console.log('qaywsxedcrfvtb');
              // $(this).find('.pin-input').blur();
             $(this).find('.pin-form').hide();
             e.preventDefault();
@@ -787,8 +835,8 @@ $(document).ready(function(){
             // var newPin = $(this).closest('.pin-clone');
             var pid = $(this).closest('.pin-clone').attr("id");//.newPin.attr("id");
             var pidnr = pid.substr(11);
-            console.log('pidnr: '+pidnr);
-            console.log('t: '+t);
+            // console.log('pidnr: '+pidnr);
+            // console.log('t: '+t);
             ptop = $(this).closest('.pin-clone').offset().top;//newPin.offset().top;
             pleft = $(this).closest('.pin-clone').offset().left;//newPin.offset().left;
             pObj = {value : t, top: ptop, left: pleft, id: pid};
@@ -916,17 +964,18 @@ $(document).ready(function(){
 /////////////
 
 ////FOCUS ON RESPECTIVE SIDENOTE WHEN ANCHOR CLICKED
-// if ($(window).width() > "480") {
-    // $('a sup').click(function(ev){
-    //     var numbr = $(this).text();
-    //     var aidee = $('#fn'+numbr);
-    //     ev.stopPropagation();
-    //     ev.preventDefault();
-    //     $(this).effect('transfer', {to: aidee}, 700);
-    //     aidee.animate({color: '#f30'}, 1000).animate({color: 'black'}, 1000);
-    //     // aidee.effect('bounce', 1000);
-    // });
-// }
+if ($(window).width() > "480") {
+    $('a sup').click(function(ev){
+        var numbr = $(this).text();
+        var aidee = $('#fn'+numbr);
+        ev.stopPropagation();
+        ev.preventDefault();
+        // $(this).effect('transfer', {to: aidee}, 700);
+        aidee.animate({color: '#f30', 'font-size': '3em'}, 500).animate({color: 'black', 'font-size': '1em'}, 200);
+
+        // aidee.effect('bounce', 1000);
+    });
+}
 
 ////WHEN SIDENOTE IS CLOCKED
     // $('.sidenote').click(function(e) {
@@ -960,9 +1009,9 @@ $(document).ready(function(){
             $("a sup").each(function(){
                 var n = $(this).text();
                 var tt = $("#fn"+n).text();
-                $(this).parent().attr({"data-toggle": "popover", "data-trigger": "focus", "data-content": tt, "data-placement": "top", "href": "#0"}).addClass("button");
+                $(this).parent().attr({"data-toggle": "popover", "data-trigger": "click", "data-content": tt, "data-placement": "top", "href": "#0"}).addClass("button");
             });
-        $('.footnoteRef').popover();
+            $('.footnoteRef').popover();
         } else {
             $('.footnoteRef').popover('destroy');
         }

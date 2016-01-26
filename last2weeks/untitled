@@ -1,0 +1,235 @@
+/////////////////////////////////
+////DRAGGING AND DROPPING THE PIN
+/////////////////////////////////
+    var pins = [],
+        t,
+        ptop,
+        pleft,
+        pObj;
+    var pin_count;
+    var last_pinID;
+
+////UPDATES THE INFO IN THE PINS ARRAY
+    function checkPin(pinID) {
+        if (pins.length > 0) {
+            // alert('longer than 0');
+            for (var i = 0; i < pins.length; i++) {
+               // console.log(pins[i]["id"] );
+                console.log(pinID);
+                if (pinID == pins[i]["id"]) {
+                   console.log("pin exists " + t);
+                    // alert('else entrance');
+                    // console.log('Accessed');
+                    pins[i]["value"] = t;
+                    pins[i]["top"] = ptop;
+                    pins[i]["left"] = pleft;
+                    // console.log(pins);
+                    localStorage.last_pinID= JSON.stringify(last_pinID);
+                    localStorage.saved_pins = JSON.stringify(pins);
+                    //var PinObjects = JSON.parse(localStorage.saved_pins);
+                    // alert(PinObjects[i]['value']);
+                    break;
+
+                } else {
+                     // alert('if entrance');
+                    console.log("pin does not exist ");
+                    pins.push(pObj);
+                    localStorage.last_pinID= JSON.stringify(last_pinID);
+                    //var PinCount = JSON.parse(localStorage.pin_count);
+                    // alert('PinCount: '+PinCount);
+                    localStorage.saved_pins = JSON.stringify(pins);
+                    //var PinObjects = JSON.parse(localStorage.saved_pins);
+                    // alert(PinObjects[i]['value']);
+                    break;
+                    
+                }
+            }
+        }else{
+            pins.push(pObj);
+            localStorage.last_pinID = JSON.stringify(last_pinID);
+            //var PinCount = JSON.parse(localStorage.pin_count);
+            // alert('PinCount: '+PinCount);
+            localStorage.saved_pins = JSON.stringify(pins);
+            //var PinObjects = JSON.parse(localStorage.saved_pins);
+            // alert(PinObjects[0]['left']);
+            //console.log('logged');
+        } 
+    }
+
+////GET SAVED ITEMS
+    if(typeof(Storage) !== "undefined") {
+        if(localStorage.getItem("saved_pins")) {
+            pins = JSON.parse(localStorage.getItem("saved_pins"));
+            //console.log(pins[0]["id"]);
+            last_pinID = localStorage.getItem("last_pinID");
+            if(pins.length > 0){
+                    pin_count = pins.length;
+                }else{
+                    pin_count = 0;
+                }
+
+            for (var i=0; i<pin_count; i++) {
+                // alert(i);
+                var appended_pins = $('<div style="position: absolute" class="pin-clone"><i class="fa fa-thumb-tack fa-2x"></i><form class="pin-form" action=""><input class="pin-input" type="text" name="fname" placeholder="Tag"></form></div>');
+                appended_pins.appendTo('#content').append('<div class="pin-close"><i class="fa fa-trash"></i></div>').attr('id', pins[i]["id"]).draggable({
+                    containment: '#main',
+                    cursor: 'move',
+                    snapTolerance: 100,
+                    snap: '#content',
+                    snapMode: "outer",
+                    stop: pinMoved
+                });
+
+                appended_pins.offset({top: pins[i]["top"]});
+                appended_pins.offset({left: pins[i]["left"]});
+                appended_pins.find('input').val(pins[i]["value"]);
+ 
+           }
+        } else {
+            // alert('inner else');
+            pins = [];
+            last_pinID = 0;
+        }
+        console.log(last_pinID, pins);
+    } else {
+        // alert('outer else');
+    }
+
+    $('#bookmark').click(function() {
+        localStorage.clear();
+        pins = [];
+        $('.pin-clone').remove();
+        // console.log(pins);
+    });
+
+
+////DELETE PIN AND REMOVE FROM ARRAY
+
+//add this to the creation of the clone 
+    $('#content').on('click', '.pin-close', function() {
+        var pid = $(this).parent().attr('id');
+        var pinID = $(this).parent().attr('id').substr(11);
+        // console.log(pid);
+        for (var i = 0; i < pins.length; i++) {
+            if(pid == pins[i]["id"]){
+                console.log("deleting " + pid);
+                pins.splice(i, 1);
+                // console.log(pins);
+                localStorage.saved_pins = JSON.stringify(pins);
+                // pin_count--;
+                break;
+            }
+        }
+        $(this).parent().remove();//.css('display', 'none');
+        
+        
+    });
+
+
+////UPDATES INFO ABOUT PINS WHEN MOVED
+    function pinMoved() {
+        pinID = $(this).attr("id");
+        var found = pins.some(function (el) {
+            ptop = $('#'+pinID).offset().top;
+            pleft = $('#'+pinID).offset().left;
+            el.top = ptop;
+            el.left = pleft;
+            return el.id === pinID;
+            // localStorage.saved_pin = JSON.stringify(pObj);
+  // save data here as well          
+
+        });
+        // console.log(pins);
+    }
+
+
+
+////ORIGINAL PIN, THE BEGINNING OF ALL
+    $('#pin').draggable({
+        containment: '#main',
+        snapTolerance: 100,
+        cursor: 'move',
+        snap: '#content',
+        snapMode: 'outer',
+        helper: 'clone',
+        stop: getPinPosition
+    });
+
+
+////ON HOVER SHOW INPUT AREA
+    $('#content').on('mouseenter', '.pin-clone', function() {
+        $(this).find('.pin-form, .pin-close').fadeIn();
+    });
+
+    $('#content').on('mouseleave', '.pin-clone', function() {
+        $(this).find('.pin-form, .pin-close').fadeOut();
+    });
+
+////DROP THE PIN AND GET THE POSITION AND OTHER INFO BOUT IT
+
+    // if (localStorage.saved_pins) {
+    //     console.log('got pins length');
+    //     pin_count = JSON.parse(localStorage.saved_pins).length +1;
+    //     console.log(pin_count);
+    // } else {
+    //     console.log('new pisn count');
+    //     pin_count = 1;
+    // }
+
+    function getPinPosition(e, ui) {
+
+        // increase last_pinID
+        last_pinID++;
+
+        var pinXPos = ui.offset.left;
+        var pinYPos = ui.offset.top;
+        var newPin =  $(ui.helper).clone(true);
+////////DRAG IT, GET TAG NAME FROM USER, ASSIGN DEFAULT ID TO IT, AND UPDATE VALUES WHEN EDITED OR MOVED
+        newPin.appendTo('#content').append('<div class="pin-close"><i class="fa fa-trash"></i></div>').offset({top: pinYPos, left: pinXPos}).attr('id', 'dragged-pin'+last_pinID).addClass('pin-clone').draggable({
+            containment: '#main',
+            cursor: 'move',
+            snapTolerance: 100,
+            snap: '#content',
+            snapMode: "outer",
+            stop: pinMoved
+        });
+
+        newPin.find('.pin-form').css('display', 'inline-block');
+        newPin.find('.pin-input').focus();
+
+
+        newPin.submit(function(e){
+            t = newPin.find('.pin-input').val();
+            var pid = newPin.attr("id");
+            var pidnr = pid.substr(11);
+            console.log(pid);
+            ptop = newPin.offset().top;
+            pleft = newPin.offset().left;
+            pObj = {value : t, top: ptop, left: pleft, id: pid};
+
+            checkPin(pid);
+            // console.log('qaywsxedcrfvtb');
+             // $(this).find('.pin-input').blur();
+            $(this).find('.pin-form').hide();
+            e.preventDefault();
+        });
+
+         //newPin.find('.pin-input').focusout(function() {
+        $('#content').find('.pin-input').focusout(function() {
+            t = $(this).val();
+            // var newPin = $(this).closest('.pin-clone');
+            var pid = $(this).closest('.pin-clone').attr("id");//.newPin.attr("id");
+            var pidnr = pid.substr(11);
+            // console.log('pidnr: '+pidnr);
+            console.log('t: '+t);
+            ptop = $(this).closest('.pin-clone').offset().top;//newPin.offset().top;
+            pleft = $(this).closest('.pin-clone').offset().left;//newPin.offset().left;
+            pObj = {value : t, top: ptop, left: pleft, id: pid};
+            // localStorage.saved_pins = JSON.stringify(pins);
+            // var PinObjects = JSON.parse(localStorage.saved_pins);
+            // alert(PinObjects.value);
+
+            checkPin(pid);
+        });
+        //pin_count++;
+    }
