@@ -1,7 +1,32 @@
 $(document).ready(function(){
-    //////////////////////////////////////////////////////////////////////////////////
-    ////PUSH MENU ON THE LEFT
-    //////////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////////////
+////HIDE AND SHOW THE LIBRARY TREE ON SCROLL AFTER INFO-BOX
+//////////////////////////////////////////////////////////////////////////////////
+    var lastScrollTop = 0, delta = 10;
+    $(window).scroll(function(){
+        var nowScrollTop = $(this).scrollTop();
+        if(Math.abs(lastScrollTop - nowScrollTop) >= delta){
+            if (nowScrollTop > $('#info-box').outerHeight(true)) {
+                if (nowScrollTop > lastScrollTop){
+                    $('.affix').addClass('affix-up').removeClass('affix-down');
+                } else {
+                    $('.affix').addClass('affix-down').removeClass('affix-up');
+                }
+            }
+           lastScrollTop = nowScrollTop;
+        }
+    });
+
+
+////AFFIX THE LIBRARY-TREE TO THE TOP OF THE SCREEN
+    $('#library-tree').affix({
+            offset: {top: 40}
+    });
+
+//////////////////////////////////////////////////////////////////////////////////
+////PUSH MENU ON THE RIGHT
+//////////////////////////////////////////////////////////////////////////////////
     $('.toggle_menu_right').on('click', function() {
         if ($(window).width() >= "768") {
             var window_width = $(window).width();
@@ -46,14 +71,15 @@ $(document).ready(function(){
     
 
 
-
+//////////////////////////////////////////////////////////////////////////////////
+////PUSH MENU ON THE LEFT
+//////////////////////////////////////////////////////////////////////////////////
 ////ON CLICKING THE TOGGLE THAT OPENS THE MENU-LEFT
-    $toggle_menu = $('.toggle_menu');
+    $toggle_menu = $('#menu_bar');
 
     $toggle_menu.click(function() {
         if ($(window).width() <= "480") {
             var menu_width = $('#toc_wrapper').width();
-            // console.log($('#menu').offset().left);
             if ($('#menu').offset().left == 0) {
                 $('#menu').animate({left: -menu_width});
             } else {
@@ -107,14 +133,6 @@ $(document).ready(function(){
         // }
     });
 
-
-////ROTATE THE MENU-LEFT ARROW
-    // $toggle_menu.toggle(function() {
-    //   $('.fa-chevron-left').rotate({ endDeg:180, persist:true, duration:0.3 });
-    // }, function() {
-    //   $('.fa-chevron-left').rotate({ endDeg:360, duration:0.3 });
-    // });
-
 ////ANIMATE SIDENOTES AND STUFF
     $('#content').animate({
         opacity: 1
@@ -125,10 +143,8 @@ $(document).ready(function(){
     });
 
 ////ON LOAD OPEN THE TOC IF SMALLER
-    // if ($(window).width() <= "480") {
     var menu_width = $('#toc_wrapper').width();
     $('#menu').css({left: -menu_width});
-    // }
 
 
 
@@ -136,23 +152,16 @@ $(document).ready(function(){
     $('.section').each(function() {
         var section_text = $(this).children().not('.references, .words, .keyword-toggle').text();
         var aaa = section_text.match(/\S+/g);
-        // console.log(section_text);
         var charactersNoSpaces = section_text.replace(/\s+/g, '').length;
-
         var characterss = section_text.length;
-
         var wordss = aaa ? aaa.length : 0;
-
         var timee = (wordss / 250).toString();
         var deci = timee.split('.');
         var secss = deci[1] *60;
         var secs = secss.toString().substr(0,2);
         $(this).find('.words').html("| "+wordss+" words");
-        // $(this).find('.characters_no_spaces').html(charactersNoSpaces+" characters (no spaces)");
         $(this).find('.characterss').html("| "+charactersNoSpaces+" characters ("+characterss+" with spaces)");
         $(this).find('.timee').html("| "+deci[0]+":"+secs+" min");
-
-
     });
 
 
@@ -174,6 +183,15 @@ $(document).ready(function(){
 ////ON SCROLL HAPPENINGS
 ////////////////////////
     $(window).scroll(function() {
+        // console.log($(document).scrollTop());
+        // console.log($('#content').offset().top)
+
+        // if ($(document).scrollTop() > $('#content').offset().top) {
+        //     $('#library-tree').slideUp(500);
+        // } else {
+        //     $('#library-tree').slideDown(500);
+        // }
+
         var windowHeight = $(window).height();
         var scrollTop = $(document).scrollTop();					// height of scroll on top (=0)
         var bottom = $(document).height() - windowHeight;			// heigth from top at the end of doc
