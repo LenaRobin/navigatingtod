@@ -241,18 +241,19 @@
     <div class="container-fluid">
         <div class="row">
             <div id="menu-right" class="col-lg-2 col-md-2 col-lg-offset-10 col-md-offset-10 hidden-sm hidden-xs">
-                <div id="menu-right-close">X</div>
-
                 <div class="toggle_menu_right">
                     <div class="toggle_menu_right_button">
-                        <i class="fa fa-angle-down"></i>
+                        <i class="fa fa-chevron-left"></i>
                         <a href="#0"></a>
 
                     </div>
                 </div>
 
-                    <div id="menu-right-wrapper">
-                        <div class="panel-group" id="accordion">
+                <div id="menu-right-wrapper">
+                    <div id="menu-right-close">
+                        <i class="fa fa-chevron-right"></i>
+                    </div>
+                    <div class="panel-group" id="accordion">
                        
                         <!--––––––––––––––––––––––– SEARCH BOX ––––––––––––––––––––––––––––––––––––––––––-->
 
@@ -351,17 +352,19 @@
                             </div>
                             <div id="collapse6" class="panel-collapse collapse">
                                 <div class="panel-body">
-                                    Font-size
+                                    Font-size<br>
                                     <span id="button_fontsizeminus" class="extra-btn" value="smaller"><i class="fa fa-font"></i>-</span>
                                     <span id="button_fontsizeplus" class="extra-btn" value="larger"><i class="fa fa-font"></i>+</span>
                                     <hr>
-                                    <span type="button" id="keyword-show-all" class="extra-btn">Show all keywords <i class="fa fa-tags"></i></span>
-                                    <span type="button" id="keyword-hide-all" class="extra-btn">Hide all keywords <i class="fa fa-tags"></i></span>
+                                    Keywords<br>
+                                    <span type="button" id="keyword-show-all" class="extra-btn">Show <i class="fa fa-tags"></i></span>
+                                    <span type="button" id="keyword-hide-all" class="extra-btn">Hide</span>
                                     <hr>
-                                    <span id="highlight-hide-show-all" class="extra-btn">Hide/Show highlight <i class="fa fa-pencil"></i></span>
+                                    Highlight<br>
+                                    <span id="highlight-hide-show-all" class="extra-btn">Display highlight <i class="fa fa-pencil"></i></span>
                                     <!-- <span id="highlight-remove" class="extra-btn">Remove highlight <i class="fa fa-eraser"></i></span> -->
-                                    <hr>
-                                    <span id="delete-pins" class="extra-btn"><i class="fa fa-thumb-tack"></i> Save reading position</span>
+                                   <!--  <hr>
+                                    <span id="delete-pins" class="extra-btn"><i class="fa fa-thumb-tack"></i> Save reading position</span> -->
                                 </div>
                             </div>
                         </div>
@@ -570,11 +573,11 @@
                 <div class="row" id="book-title-box">
                     <!-- BOOK TITLE -->
 
-                    <div class="col-lg-6 col-md-8 col-sm-6 col-xs-12 col-lg-offset-3 col-md-offset-2 col-sm-offset-1 col-xs-offset-0" id="book-title">
+                    <div class="col-lg-6 col-md-8 col-sm-8 col-xs-12 col-lg-offset-3 col-md-offset-2 col-sm-offset-2 col-xs-offset-0" id="book-title">
                         N°17: The Gray Zones of Creativity and Capital
                     </div>
 
-                    <div class="col-lg-12 col-md-8 col-sm-6 col-xs-12 col-lg-offset-0 col-md-offset-2 col-sm-offset-1 col-xs-offset-0" id="book-author">
+                    <div class="col-lg-6 col-md-8 col-sm-8 col-xs-12 col-lg-offset-3 col-md-offset-2 col-sm-offset-2 col-xs-offset-0" id="book-author">
                         by Gordana Nikolić & Šefik Tatlić
                     </div>
                 </div>
@@ -593,7 +596,7 @@
                         
                     </div>
 
-                    <div class="info-box-right col-lg-6 col-md-5 col-sm-3 col-xs-12 col-lg-offset-0 col-md-offset-0 col-sm-offset-1 col-xs-offset-0">
+                    <div class="info-box-right col-lg-6 col-md-5 col-sm-5 col-xs-12 col-lg-offset-0 col-md-offset-0 col-sm-offset-0 col-xs-offset-0">
                         <div class="summary col-lg-9">
                             What is the correlation among the creative industries, creative industry policies, new media paradigms and capitalism as colonial relations of dominance? What is the role of these industries in the prioritization of the interests of capital at the expense of those of society and how can these paradigms be criticized in the context of the actual, neoliberal, flexible regime of reproduction of capital? To what measure is this regime ‘flexible’ and to what measure it is just an extension of rigid, feudal and racial logics that underline (post)modern representational discourses? To what measure do the concepts of creativity, transparency, openness and flexibility conceal the hegemonic nature of modern hierarchies of exploitation?
                         </div>
@@ -731,7 +734,7 @@ by Kiliano Foearun & Coolio Andthegang
                 
                 <h2>The Gray Zones of Creativity and Capital: Introduction</h2>
 
-                <span class="author">Šefik Tatlić &amp; Gordana Nikolić</span>
+                <p class="author">Šefik Tatlić &amp; Gordana Nikolić</p>
                 <span class="words"></span>
                 <span class="characterss"></span>
                 <span class="timee"></span>
@@ -772,7 +775,7 @@ by Kiliano Foearun & Coolio Andthegang
     <!-- –––––––––––––––––––––––––– Chapter 2 –––––––––––––––––––––––––– -->
             <div class="section" id="chapter2" data-authorName="Jonathan" data-authorLastName="Beller" data-article="Within the Image">
             	<h2>Within the Image</h2>
-            	<span class="author">Jonathan Beller</span>
+            	<p class="author">Jonathan Beller</p>
                 <span class="words"></span>
                 <span class="characterss"></span>
                 <span class="timee"></span>
@@ -865,7 +868,7 @@ by Kiliano Foearun & Coolio Andthegang
             <div class="section" id="chapter3" data-authorName="Josephine" data-authorLastName="Berry Slater" data-article="Neutralizing Engaged Subjects in the Creative City">
         		<h2>Neutralizing Engaged Subjects in the Creative City</h2>
         		
-                <span class="author">Josephine Berry Slater</span>
+                <p class="author">Josephine Berry Slater</p>
                 <span class="words"></span>
                 <span class="characterss"></span>
                 <span class="timee"></span>
@@ -966,7 +969,7 @@ by Kiliano Foearun & Coolio Andthegang
     <!-- –––––––––––––––––––––––––– Chapter 4 –––––––––––––––––––––––––– -->
             <div class="section" id="chapter4" data-authorName="Marc James" data-authorLastName="Léger" data-article="The Agency of Art in the Unconscious">
     			<h2>The agency of art in the unconscious</h2>
-    			<span class="author">Marc James Léger</span>
+    			<p class="author">Marc James Léger</p>
                 <span class="words"></span>
                 <span class="characterss"></span>
                 <span class="timee"></span>
@@ -1043,7 +1046,7 @@ by Kiliano Foearun & Coolio Andthegang
     <!-- –––––––––––––––––––––––––– Chapter 5 –––––––––––––––––––––––––– -->
             <div class="section" id="chapter5" data-authorName="Ana" data-authorLastName="Vilenica" data-article="The Art of new class geography of the city — Culture-guided urban regeneration serving the Modernization of the periphery">
     			<h2>The Art of New Class Geography of the City — Culture-guided Urban Regeneration Serving the <em>Modernization</em> of the Periphery</h2>
-    			<span class="author">Ana Vilenica</span>
+    			<p class="author">Ana Vilenica</p>
                 <span class="words"></span>
                 <span class="characterss"></span>
                 <span class="timee"></span>
@@ -1151,7 +1154,7 @@ by Kiliano Foearun & Coolio Andthegang
     <!-- –––––––––––––––––––––––––– Chapter 6 –––––––––––––––––––––––––– -->
             <div class="section" id="chapter6" data-authorName="Sandi" data-authorLastName="Abram" data-article="The creative factory: Collective creativity and autonomy in the neoliberal machine of creative industries">
 				<h2>The Creative Factory: Collective creativity and Autonomy in the Neoliberal Machine of Creative Industries</h2>
-				<span class="author">Sandi Abram</span>
+				<p class="author">Sandi Abram</p>
                 <span class="words"></span>
                 <span class="characterss"></span>
                 <span class="timee"></span>
@@ -1262,7 +1265,7 @@ by Kiliano Foearun & Coolio Andthegang
     <!-- –––––––––––––––––––––––––– Chapter 7 –––––––––––––––––––––––––– -->
             <div class="section" id="chapter7" data-authorName="Irmgard" data-authorLastName="Emmelheinz" data-article="Neoliberalism and the Autonomy of Art: the Culture of Power, the Power of Culture">
     			<h2>Neoliberalism and the Autonomy of Art: the Culture of Power, the Power of Culture<a class="footnoteRef" href="#fn152" id="fnref152"><sup>152</sup></a></h2>
-                <span class="author">Irmgard Emmelheinz</span>
+                <p class="author">Irmgard Emmelheinz</p>
                 <span class="words"></span>
                 <span class="characterss"></span>
                 <span class="timee"></span>

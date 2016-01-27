@@ -159,7 +159,9 @@ $(document).ready(function(){
         var deci = timee.split('.');
         var secss = deci[1] *60;
         var secs = secss.toString().substr(0,2);
-        $(this).find('.words').html("| "+wordss+" words");
+
+        $(this).find('.words').html(""+wordss+" words");
+        // $(this).find('.characters_no_spaces').html(charactersNoSpaces+" characters (no spaces)");
         $(this).find('.characterss').html("| "+charactersNoSpaces+" characters ("+characterss+" with spaces)");
         $(this).find('.timee').html("| "+deci[0]+":"+secs+" min");
     });
@@ -734,7 +736,7 @@ $(document).ready(function(){
             for (var i=0; i<JSON.parse(localStorage.saved_pins).length; i++) {
                 // alert(i);
                 var appended_pins = $('<div style="position: absolute" class="pin-clone"><i class="fa fa-thumb-tack fa-2x"></i><form class="pin-form" action=""><input class="pin-input" type="text" name="fname" placeholder="Tag"></form></div>');
-                appended_pins.appendTo('#content').append('<div class="pin-close"><i class="fa fa-trash"></i></div>').attr('id', 'dragged-pin'+(i+1)).draggable({
+                appended_pins.appendTo('#content').append('<div class="pin-close"><i class="fa fa-ban"></i></div>').attr('id', 'dragged-pin'+(i+1)).draggable({
                     containment: '#main',
                     cursor: 'move',
                     snapTolerance: 100,

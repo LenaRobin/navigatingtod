@@ -93,10 +93,10 @@ body{
 ************************************/
 body {
     margin: 0;
-    color:black;
+    color:#000000;
     background:#f4f4f4;
     background-attachment: fixed;
-    color: black;
+    color: #000000;
     text-rendering: optimizeSpeed;
     -ms-overflow-style: -ms-autohiding-scrollbar;
     overflow-x:hidden;
@@ -112,16 +112,16 @@ body {
 /* Background-color of text on selection */
 ::-moz-selection {
     background-color:#f30;
-    color:white;
+    color:#ffffff;
 }
 
 ::selection {
     background-color:#f30;
-    color:white;
+    color:#ffffff;
 }
 
 a, a:visited{
-    color:black;
+    color:#000000;
     font-family: "HKGroteskbold";
     text-decoration: none;
 }
@@ -145,7 +145,7 @@ hr{
 ***********************/
 
 #inc-navbar{
-    background-color: white;
+    background-color: #ffffff;
     height: 50px;
     padding: 0px;
 }
@@ -179,7 +179,7 @@ hr{
 
 .carousel-content{
 /*     padding: 20px;
-    bsackground-color: white; */
+    bsackground-color: #ffffff; */
     background-color: #ffefeb;
 
 }
@@ -206,10 +206,9 @@ hr{
     /*z-index: 2;*/
     position: relative;
     text-rendering: optimizeSpeed;
-    /*padding-left:15px;*/
-    color:black;
+    padding-left:15px;
     background-color:#f4f4f4;
-    color: black;
+    color: #000000;
 /*     -webkit-box-shadow: 0px 10px 32px -9px rgba(0,0,0,0.59);
     -moz-box-shadow: 0px 10px 32px -9px rgba(0,0,0,0.59);
     box-shadow: 0px 10px 32px -9px rgba(0,0,0,0.59); */
@@ -232,7 +231,7 @@ hr{
 }
 
 #info-box-left-img-container{
-    background-color:white;
+    background-color:#ffffff;
     padding: 20px;
     margin-top: 40px;
     margin-bottom: 30px;
@@ -288,10 +287,11 @@ hr{
     z-index: 10;
     width: 100%;
     background-color: #f30;
-    color: white;
     margin-right: 0;
     margin-left: 0;
-    /*margin-left: -15px;*/
+    color: #ffffff;
+    margin-right: -15px;
+    margin-left: -15px;
     height: 40px;
     -webkit-box-shadow: 0px 10px 32px -9px rgba(0,0,0,0.59);
     -moz-box-shadow: 0px 10px 32px -9px rgba(0,0,0,0.59);
@@ -322,19 +322,19 @@ hr{
     -webkit-padding-start: 0px;
     margin: 0px;
     padding: 0px;
-    color: white;
+    color: #ffffff;
 }
 
 .breadcrumb>li+li:before {
     padding: 0 0px;
     padding-right: 8px;
     padding-left: 8px;
-    color: white;
+    color: #ffffff;
     content: ">";
 }
 
 #library-tree  #breadcrumb .breadcrumb a{
-    color: white;
+    color: #ffffff;
     background-color: transparent;
     border: 1px solid #f30;
     padding-top: 2px;
@@ -345,18 +345,18 @@ hr{
 }
 
 #library-tree  #breadcrumb .breadcrumb>.active a{
-    color:white;
+    color:#ffffff;
     background-color: transparent;
     padding-top: 2px;
     font-family: "HKGroteskbold";
     text-decoration: none;
-/*     border: 1px solid white;
+/*     border: 1px solid #ffffff;
      */}
 
 #library-tree  #breadcrumb .breadcrumb a:hover{
     /*   color: #f30;
-   background-color:white;
-     */    /* background-color: white; */
+   background-color:#ffffff;
+     */    /* background-color: #ffffff; */
     padding-top: 2px;
     font-family: "HKGroteskbold";
 }
@@ -374,7 +374,7 @@ hr{
 }
 
 .info-box-book-before-button, .info-box-book-after-button{
-    background-color:white;
+    background-color:#ffffff;
     color:#f30;
     width:50%;
     height: 100%;
@@ -391,7 +391,7 @@ hr{
 
 
 .info-box-book-before-button:hover, .info-box-book-after-button:hover{
-    color:white;
+    color:#ffffff;
     background-color:#f30;
     border: 1px solid #f30;
     cursor: pointer;
@@ -417,7 +417,7 @@ hr{
 }
 
 #book-author{
-    color: black;
+    color: #000000;
     padding: 15px;
     font-size: 18px;
     text-align: center;
@@ -429,7 +429,7 @@ hr{
     padding: 20px;
     padding-left:15Px;
     text-align: center;
-    background-color:white;
+    background-color:#ffffff;
     color:#f30;
 }
 
@@ -457,7 +457,6 @@ hr{
 
 #info-box .keyword:hover{
     background-color: rgba(0, 0, 0, 0.19);
-    box-shadow:inset 0 3px 5px rgba(0,0,0,.135);
 }
 
 #info-box a{
@@ -497,9 +496,9 @@ Defines the typography for texts in reader */
 .section{
     font-size: 62.5%;
     clear: left;
-    color: black;
+    color: #000000;
     padding-left: 2%;
-    background-color: white;
+    background-color: #ffffff;
     -webkit-box-shadow: 0px 0px 30px 8px rgba(255,255,255,0.99);
     -moz-box-shadow: 0px 0px 30px 8px rgba(255,255,255,0.99);
     box-shadow: 0px 0px 30px 8px rgba(255,255,255,0.99);
@@ -512,7 +511,7 @@ Defines the typography for texts in reader */
 /* Title of big part */
 .section h2 {
     margin-left: 0;
-    margin-bottom: 0px;
+    /* margin-bottom: 20px; */
     padding-bottom: 20px;
     padding-right: 0;
     padding-top: 2.8%;
@@ -525,9 +524,10 @@ Defines the typography for texts in reader */
     overflow-y: hidden;
     vertical-align: middle;
     letter-spacing: 2%;
-    /*     border-top: 1px solid #dbdbdb;
-    */    color: black;
+    /* border-top: 1px solid #dbdbdb; */
+    color: #000000;
     margin-top: 14%;
+    margin-bottom: 20px;
 }
 
 #chapter1 h2{
@@ -603,7 +603,7 @@ p + p{
         vertical-align: middle;
         letter-spacing: 1%;
         border-top: 0px solid #dbdbdb;
-        color: black;
+        color: #000000;
         margin-top: 16%;
     }
 
@@ -628,8 +628,14 @@ p + p{
 .section .author {
     margin-left: 0;
     margin-right: 0;
-    color:#8e8e8e;
+    font-family: "HKGroteskbold";
     font-size: 1.7em;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.section .author:hover{
+    color:#f30;
 }
 
 /* words: the way the words contained in each chapter display */
@@ -685,7 +691,7 @@ p + p{
 }
 
 .references a{
-    color:black;
+    color:#000000;
     word-break: break-all;
     font-family: "HKGroteskbold";
 }
@@ -784,7 +790,7 @@ a {
 }
 
 .horizScroll, .subScroll{
-    color:white;
+    color:#ffffff;
 }
 
 #toc_wrapper {
@@ -864,7 +870,7 @@ a.page-scroll:hover, a.page-scroll:active, a.page-scroll:link, a.page-scroll:vis
     overflow-x: hidden;
     overflow-y: scroll;
     left: 0;
-    background-color: white;
+    background-color: #ffffff;
     /*  border-right: 1px solid #dbdbdb; */
     padding-bottom: 4%;
     position: absolute;
@@ -885,12 +891,12 @@ a.page-scroll:hover, a.page-scroll:active, a.page-scroll:link, a.page-scroll:vis
     padding-top: 10px;
     padding-bottom: 10px;
     font-size: 18px;
-    color: white;
+    color: #ffffff;
     vertical-align: middle;
     z-index: 0;
     right: -4%;
     position: absolute;
-    border-left: 0px solid black;
+    border-left: 0px solid #000000;
     width: 4%;
     height: 100%;
 
@@ -913,7 +919,7 @@ a.page-scroll:hover, a.page-scroll:active, a.page-scroll:link, a.page-scroll:vis
     -ms-transform-origin: 20% 40%;
     -webkit-transform-origin: 0% 40%;
     transform-origin: 0% 40%;
-    color: black;
+    color: #000000;
     text-overflow: clip;
     position: absolute;
     font-size: 15px;
@@ -949,55 +955,49 @@ a.page-scroll:hover, a.page-scroll:active, a.page-scroll:link, a.page-scroll:vis
 }
 
 .toggle_menu_right {
-    padding: 1px;
-    padding-top: 55%;
-    /* margin-right: 60%; */
     display: none;
     padding-bottom: 10px;
     font-size: 18px;
-    color: white;
+    color: #ffffff;
     vertical-align: middle;
     z-index: 0;
     height: 100%;
     left: -24%;
     position: absolute;
     /*background-color:#f30;*/
-    background-color: white;
+    background-color: #ffffff;
     width: 24%;
-    -webkit-box-shadow: -9px 0px 13px -8px rgba(0,0,0,0.09);
-    -moz-box-shadow: -9px 0px 13px -8px rgba(0,0,0,0.09);
-    box-shadow: -9px 0px 13px -8px rgba(0,0,0,0.09);
 }
 
 .toggle_menu_right .toggle_menu_right_button{
-
-    width: 130px;
-    /* height: 50px; */
-    /* margin-top: 50%; */
-    height: auto;
-    padding-right: 50%;
-    -ms-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    -webkit-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
-    -ms-transform-origin: 20% 40%;
-    -webkit-transform-origin: 20% 40%;
-    transform-origin: 20% 40%;
-    color: black;
+    color: #000000;
     font-family: "HKGroteskbold";
     text-transform: uppercase;
-    font-size: 15px;
+    text-align: center;
+    vertical-align: middle;
+    top: 50%;
+    left: 40%;
+    right: 40%;
+    position: absolute;
 }
 
 .toggle_menu_right:hover{
-    background-color:white;
     cursor: pointer;
-    -webkit-box-shadow: -9px 0px 13px -8px rgba(0,0,0,0.29);
-    -moz-box-shadow: -9px 0px 13px -8px rgba(0,0,0,0.29);
-    box-shadow: -9px 0px 13px -8px rgba(0,0,0,0.29);
 }
 
+.toggle_menu_right:hover .toggle_menu_right_button{
+    opacity: 0.5;
+}
 
+#menu-right-close{
+    margin-top: -10px;
+    margin-left: -30px;
+}
+
+#menu-right-close:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
 
 
 .menu-publication-title{
@@ -1022,7 +1022,7 @@ Table of content is contained in pushmenu, it shows the different parts of the b
     margin:10px;
     text-align: left;
     padding-top:4px;
-    background-color:white;
+    background-color:#ffffff;
     font-size: 14px;
     line-height: 18px;
     font-family: "HKGrotesk";
@@ -1032,11 +1032,11 @@ Table of content is contained in pushmenu, it shows the different parts of the b
 /* Table of contents: when the user goes over a part of the book */
 #menu h2:hover{
     cursor: pointer;
-    color: black;
+    color: #000000;
 }
 
 #toc_wrapper h2 a {
-    color: black;
+    color: #000000;
 }
 
 
@@ -1045,18 +1045,17 @@ Table of content is contained in pushmenu, it shows the different parts of the b
 #menu_bar {
     height: 100%;
     position: fixed;
-    color: black;
+    color: #000000;
     width: 4%;
     background-color:#FFE5DE;
-
     cursor: pointer;
-    -webkit-box-shadow: 9px 0px 13px -8px rgba(0,0,0,0.09);
+/*     -webkit-box-shadow: 9px 0px 13px -8px rgba(0,0,0,0.09);
     -moz-box-shadow: 9px 0px 13px -8px rgba(0,0,0,0.09);
-    box-shadow: 9px 0px 13px -8px rgba(0,0,0,0.09);
+    box-shadow: 9px 0px 13px -8px rgba(0,0,0,0.09); */
 }
 
 #menu_bar:hover{
-    background-color:white;
+    background-color:#ffffff;
     -webkit-box-shadow: 9px 0px 13px -8px rgba(0,0,0,0.29);
     -moz-box-shadow: 9px 0px 13px -8px rgba(0,0,0,0.29);
     box-shadow: 9px 0px 13px -8px rgba(0,0,0,0.29);
@@ -1091,7 +1090,7 @@ Table of content is contained in pushmenu, it shows the different parts of the b
     */
     font-size: 18px;
 
-    color:black;
+    color:#000000;
 }
 
 
@@ -1165,19 +1164,6 @@ Table of content is contained in pushmenu, it shows the different parts of the b
     height:300px;
 }
 
-/*WHAT IS THIS?*/
-/*#tool-bar-container{
-    position: fixed;
-    top:0px;
-    left:0px;
-    width: 80%;
-      -webkit-box-shadow: 9px -3px 20px 23px rgba(255,255,255,1);
-    -moz-box-shadow: 9px -3px 20px 23px rgba(255,255,255,1);
-    box-shadow: 9px -3px 20px 23px rgba(255,255,255,1);  
-    background-color: white;
-    height: 1px;
-    z-index:1;
-}*/
 
 #search-button, #files-button, #copy-button, #print-button, #tools-button, #share-button{
     padding:0px;
@@ -1190,7 +1176,7 @@ Table of content is contained in pushmenu, it shows the different parts of the b
     float:right;
     position: absolute;
     top:5px;
-    color:black;
+    color:#000000;
     text-align: center;
     align-content: center;
     vertical-align: middle;
@@ -1396,7 +1382,7 @@ Table of content is contained in pushmenu, it shows the different parts of the b
 }
 
 .search-found {
-    color: black;
+    color: #000000;
 }
 
 .search-notfound {
@@ -1445,29 +1431,29 @@ Table of content is contained in pushmenu, it shows the different parts of the b
 }
 
 #arrows #down a, #arrows #up a{
-    color:black !important;
+    color:#000000 !important;
 }
 
 #arrows #down:active, #arrows #up:active{
-    color:black !important;
+    color:#000000 !important;
 }
 
 #arrows #up a:focus, #arrows #down a:focus{
-    color:black !important;
+    color:#000000 !important;
 }
 
 #arrows #up:focus, #arrows #down:focus{
-    color:black !important;
+    color:#000000 !important;
 }
 
 #arrows #up a:active, #arrows #down a:active{
-    color:black !important;
+    color:#000000 !important;
 }
 
 #arrows #up:hover, #arrows #down:hover{
-    color: #f30;
-    background-color:white;
-    border:1px solid #f30;
+    background-color: #dbdbdb;
+    color:#000000 !important;
+
 }
 
 @media (max-width: 768px){
@@ -1517,7 +1503,7 @@ Search box is where the user can enter keyword (in input) and look for words in 
     padding: 6px 12px;
     font-size: 14px;
     line-height: 1.42857143;
-    color: black;
+    color: #000000;
     background-color: #fff;
     background-image: none;
     border: 1px solid #f4f4f4;
@@ -1616,11 +1602,11 @@ input:hover {
 
 
 .search-found {
-    color: black;
+    color: #000000;
 }
 
 .search-notfound {
-    color: black;
+    color: #000000;
 }
 
 .highlight {
@@ -1654,7 +1640,7 @@ background: radial-gradient(10px, white, white, #c7c7c7); /* Standard syntax (mu
 }
 
 .ui-menu-item {
-    background-color: white;
+    background-color: #ffffff;
     cursor: pointer;
     -webkit-box-shadow: 0 10px 15px rgba(0,0,0,0.2);
     -moz-box-shadow: 0 10px 15px rgba(0,0,0,0.2);
@@ -1679,8 +1665,8 @@ background: radial-gradient(10px, white, white, #c7c7c7); /* Standard syntax (mu
 ******* IN TEXT REFERENCE BOX ****************
 *************************************/
 .in-text a, .in-text, .in-text a:visited{
-    border-bottom: dashed 1px black;
-    color: black;
+    border-bottom: dashed 1px #000000;
+    color: #000000;
     text-decoration: none;
     font-family: "HKGrotesk";
 }
@@ -1739,16 +1725,16 @@ background: radial-gradient(10px, white, white, #c7c7c7); /* Standard syntax (mu
     /* border-radius: 8px; */
     font-family: "HKGrotesk";
     border-radius: 5px;
-    border:1px solid white;
+    border:1px solid #ffffff;
     background-color:rgb(255, 255, 255);
-    -webkit-box-shadow: 0px 0px 26px 10px white;
-    -moz-box-shadow: 0px 0px 26px 10px white;
-    box-shadow: 0px 0px 26px 10px white;
+    -webkit-box-shadow: 0px 0px 26px 10px #ffffff;
+    -moz-box-shadow: 0px 0px 26px 10px #ffffff;
+    box-shadow: 0px 0px 26px 10px #ffffff;
 }
 
 .popover p{
     margin: 0px;
-    color: black;
+    color: #000000;
     text-indent: 0;
     padding: 0px;
 }
@@ -1759,11 +1745,11 @@ background: radial-gradient(10px, white, white, #c7c7c7); /* Standard syntax (mu
 }
 
 .popover .arrow{
-    border:1px white;
-    -webkit-box-shadow: 0px 0px 26px 10px white;
-    -moz-box-shadow: 0px 0px 26px 10px white;
-    box-shadow: 0px 0px 26px 10px white;
-    background-color: white;
+    border:1px #ffffff;
+    -webkit-box-shadow: 0px 0px 26px 10px #ffffff;
+    -moz-box-shadow: 0px 0px 26px 10px #ffffff;
+    box-shadow: 0px 0px 26px 10px #ffffff;
+    background-color: #ffffff;
 }
 
 /********THE X BUTTON******************/
@@ -1780,7 +1766,7 @@ background: radial-gradient(10px, white, white, #c7c7c7); /* Standard syntax (mu
 
 #x a {
     text-decoration: none;
-    color: black;
+    color: #000000;
 }
 f
 
@@ -1796,7 +1782,7 @@ f
 }
 
 .remove_highlight {
-    background-color: white;
+    background-color: #ffffff;
 }
 
 #pin_wrapper{
@@ -1895,7 +1881,7 @@ color: #0000ff;
     position: absolute;
     right: 2%;
     */
-    border: 1px solid black;
+    border: 1px solid #000000;
     border-radius: 5px;
     background-color: #c7c7c7;
     width: 30%;
@@ -1920,7 +1906,7 @@ color: #0000ff;
     width: 15%;
     /*     width: 13%;
     */    /*padding-right: 2%;*/
-    /*     background-color:white;
+    /*     background-color:#ffffff;
     height: 999999999999999999999999999px; */
     height: auto;
 }
@@ -1961,7 +1947,7 @@ color: #0000ff;
 
 /* THIS IS THE SAME AS .sidenote BELOW */
 #chapter8 ol li p{
-    color: black;
+    color: #000000;
     font-family: "HKGrotesk";
     font-weight: normal;
     font-size: 12px;
@@ -1977,7 +1963,7 @@ color: #0000ff;
 }
 
 #chapter8 ol li p a{
-    color:black;
+    color:#000000;
     font-family: "HKGroteskbold";
     word-wrap:break-word;
     hyphens: auto;
@@ -2028,7 +2014,7 @@ color: #0000ff;
 a sup{
     font-family: "HKGroteskBold";
     vertical-align: 75%;
-    color:black;
+    color:#000000;
     text-decoration: none;
     /*font-size: small;*/
 }
@@ -2057,6 +2043,11 @@ ol {
 
 
 /******** TUNING BOOTSTRAP ********/
+
+.section .keyword-toggle{
+    margin-bottom: 20px;    
+}
+
 .section .keyword-button{
     border-radius:5px;
     padding: 2px;
@@ -2065,23 +2056,27 @@ ol {
     margin-right:4px;
     margin-bottom: 8px;
     background-color: #f4f4f4;  
-    color: black;  
+    color: #000000;  
     border:none;
     height: auto;
-    /* 
-    box-shadow: 0 3px 5px rgba(0,0,0,.135);
-    */
+    outline: none;
+    outline: none;
+
+
 }
 
 .section .keyword-button:hover {
     border-radius:5px;
     padding: 2px;
     padding-left:5px;
+    outline: none;
+
     padding-right: 5px;
     margin-right:4px;
     margin-bottom: 8px;
-    background-color: rgba(28, 51, 229, 0.1);  
-    color: #0000ff;  
+/*     background-color: rgba(28, 51, 229, 0.1);  
+    color: #0000ff;  */ 
+    background-color:#8e8e8e;
     border:none;
     height: auto;
     box-shadow: none;
@@ -2091,19 +2086,29 @@ ol {
 }
 .section .btn.active{
 /*     box-shadow: inset 0 3px 5px rgba(0,0,0,.135);
-     */    background-color: rgba(28, 51, 229, 0.3);
+    background-color: rgba(28, 51, 229, 0.3);
     color: #0000ff;  
+     */    
+    background-color:#8e8e8e;
+    outline: none;
+
+
 }
 .section .keyword-button:focus{
-    box-shadow: 0 3px 5px rgba(0,0,0,.135);
+/*     box-shadow: 0 3px 5px rgba(0,0,0,.135);
     background-color: rgba(28, 51, 229, 0.1);  
-    color: #0000ff;  
+    color: #0000ff;   */
+    
+    background-color:#8e8e8e;
+    outline: none;
+
+
 }
 
 /******* MENU RIGHT *******/
 
 
-.extra{
+.extra, .extra-btn{
     background-color:#f4f4f4;
     border-radius:5px;
     padding: 5px;
@@ -2111,75 +2116,34 @@ ol {
     padding-bottom: 2px;
     margin-right:4px;
     line-height: 2em;
-    color: black !important;
+    color: #000000 !important;
     font-family: "HKGrotesk";
     cursor: pointer;
     white-space: nowrap;
     word-break: keep-all;
     margin-top:0px;
-
 }
 
-.extra:hover{
+.extra:hover, .extra-btn:hover{
     background-color:#dbdbdb;
-
     text-decoration: none;
-    color: black;
-    font-family: "HKGrotesk";
-    /* background-color: rgba(0, 0, 0, 0.19);
-     box-shadow:inset 0 3px 5px rgba(0,0,0,.135);
-    */
-}
-
-.extra:active{
-    border: 1px solid #ff3300;
-    color: black;
+    color: #000000;
     font-family: "HKGrotesk";
 }
 
-.extra a, .extra a:visited, .extra a:focus, .extra a:hover{
-    color:black !important;
+.extra-btn.active{
+}
+
+.extra:active, .extra-btn:active{
+    color: #000000;
     font-family: "HKGrotesk";
 }
 
-.extra-btn{
-    background-color: #dbdbdb;
-    border-radius:5px;
-    padding: 5px;
-    padding-top:2px;
-    padding-bottom: 2px;
-    margin-right:4px;
-    line-height: 2em;
-    color: black;
-    white-space:nowrap;
+.extra a, .extra a:visited, .extra a:focus, .extra a:hover,
+.extra-btn a, .extra-btn a:visited, .extra-btn a:focus, .extra-btn a:hover{
+    color:#000000 !important;
+    font-family: "HKGrotesk";
 }
-
-.extra-btn:hover{
-    text-decoration: none;
-    color: black;
-    cursor: pointer;
-    white-space:nowrap;
-}
-
-#keyword-show-all{
-    background-color: rgba(28, 51, 229, 0.1);
-    color: #0000ff !important;
-    box-shadow: 0 3px 5px rgba(0,0,0,.135);
-}
-
-#keyword-show-all:active{
-    box-shadow: inset 0 3px 5px rgba(0,0,0,.135);
-    background-color: rgba(28, 51, 229, 0.3);
-}
-
-#keyword-show-all:focus{
-    box-shadow: 0 3px 5px rgba(0,0,0,.135);
-    background-color: rgba(28, 51, 229, 0.1);  
-    color: #0000ff;  
-}
-
-
-
 
 .section .keyword-button{
     border-radius:5px;
@@ -2189,7 +2153,7 @@ ol {
     margin-right:4px;
     margin-bottom: 8px;
     background-color: #f4f4f4;  
-    color: black;  
+    color: #000000;  
     border:none;
     height: auto;
 }
@@ -2201,21 +2165,27 @@ ol {
     padding-right: 5px;
     margin-right:4px;
     margin-bottom: 8px;
-    background-color: rgba(28, 51, 229, 0.1);  
+/*     background-color: rgba(28, 51, 229, 0.1);  
     color: #0000ff;  
     border:none;
     height: auto;
-    box-shadow: inset 0 3px 5px rgba(0,0,0,.135);
+    box-shadow: inset 0 3px 5px rgba(0,0,0,.135); */
+    background-color:#dbdbdb;
 }
 .section .btn.active{
-    box-shadow: inset 0 3px 5px rgba(0,0,0,.135);
+/*     
     background-color: rgba(28, 51, 229, 0.3);
-    color: #0000ff;  
+    color: #0000ff;   */
+    background-color:#dbdbdb;
+/*     box-shadow: inset 0 3px 5px rgba(0,0,0,.135);
+     */    color:#000 !important;
 }
 .section .keyword-button:focus{
-    box-shadow: 0 3px 5px rgba(0,0,0,.135);
+/*     box-shadow: 0 3px 5px rgba(0,0,0,.135);
     background-color: rgba(28, 51, 229, 0.1);  
-    color: #0000ff;  
+    color: #0000ff;   */
+    background-color:#dbdbdb;
+
 }
 
 
@@ -2225,18 +2195,6 @@ ol {
 
 
 
-
-
-#highlight-show-all{
-    background-color:rgba(255, 255, 69, 0.2);
-    color:rgb(222, 188, 0);
-    box-shadow: 0 3px 5px rgba(0,0,0,.135);
-}
-
-#highlight-show-all:active{
-    background-color:rgba(255, 255, 69, 0.5);
-    box-shadow: inset 0 3px 5px rgba(0,0,0,.135);
-}
 
 #menu-right{
     position: fixed;
@@ -2247,7 +2205,7 @@ ol {
     padding: 0px;
     height: 100%;
     border: none;
-    background-color: white;
+    background-color: #ffffff;
     font-family: "HKGrotesk";
     z-index: 0;
 }
@@ -2256,7 +2214,7 @@ ol {
     margin-bottom: 0px;
     background-color: transparent;
     border:none;
-    color: black;
+    color: #000000;
     padding: 0px;
     margin: 0px;
 }
@@ -2282,7 +2240,7 @@ ol {
     border-radius: 4px;
     padding: 8px;
     border:none;
-    color: black;
+    color: #000000;
     margin-top: 4px;
     border-bottom: 0px solid #dbdbdb;
 }
@@ -2301,23 +2259,23 @@ ol {
     font-family: "HKGrotesk";
 }
 .panel-default>.panel-heading a:hover, .panel-default>.panel-heading a:focus{
-    color: black;
+    color: #000000;
     text-decoration: none;
     background-color: #f4f4f4;
 }
 
 .panel-default>.panel-heading:hover{
-    color: black;
+    color: #000000;
     text-decoration: none;
 }
 
 .panel-default>.panel-heading:focus{
-    color: black;
+    color: #000000;
     text-decoration: none;
 }
 
 .panel-default>.panel-heading:active{
-    color: black;
+    color: #000000;
     text-decoration: none;
 }
 
@@ -2327,7 +2285,7 @@ ol {
     border:none;
     font-size:11px;
     background-color: transparent;
-    color: black;
+    color: #000000;
 }
 
 .panel-title {
@@ -2335,7 +2293,7 @@ ol {
     margin-bottom: 0;
     font-size: 14px;
     color: inherit;
-    color: black;
+    color: #000000;
 }
 
 /************** tools on selection ************/
@@ -2353,7 +2311,7 @@ ol {
 }
 
 .btn-group-vertical .btn-primary {
-    color: black;
+    color: #000000;
     background-color: #f4f4f4;
     border: 0px solid #8e8e8e;
     text-align: left;
@@ -2365,13 +2323,13 @@ ol {
     background-color: #dbdbdb;
     cursor: pointer;
     border-color: #8e8e8e;
-    color: black;
+    color: #000000;
     text-transform: none;
     border: 0px solid #8e8e8e;
 }
 
 .btn-group-vertical .btn-primary:active{
-    color: black;
+    color: #000000;
     background-color:#f4f4f4; !important;
 }
 
@@ -2389,7 +2347,7 @@ ol {
 
 
 .btn-primary:focus{
-    color: black;
+    color: #000000;
     background-color:#f4f4f4; !important;
 }
 
@@ -2413,7 +2371,7 @@ ol {
     background-color: #dbdbdb;
     cursor: pointer;
     border-color: #8e8e8e;
-    color: black;
+    color: #000000;
     text-transform: none;
     border: 0px solid #8e8e8e;
 }
@@ -2447,7 +2405,7 @@ ol {
 
 /* Tooltip on right */
 /*.tooltip.right > .tooltip-arrow {
-    border-right: 5px solid black;
+    border-right: 5px solid #000000;
 }*/
 
 .caret{
@@ -2545,7 +2503,7 @@ blockquote p{
 
 #flip{
     background-color: #f30;
-    color:white;
+    color:#ffffff;
     z-index: 99;
     border-radius: 5px;
     padding: 5px;
@@ -2574,14 +2532,14 @@ blockquote p{
 #panel, #panel2, #panel3, #panel4, #panel5, #panel6 {
     padding: 5px;
     display: none;
-    background-color: white;
+    background-color: #ffffff;
     -webkit-box-shadow: 0px -22px 30px 5px rgba(255,255,255,1);
     -moz-box-shadow: 0px -22px 30px 5px rgba(255,255,255,1);
     box-shadow: 0px -22px 30px 5px rgba(255,255,255,1);
 }
 
 .panel_container{
-    background-color:white;  
+    background-color:#ffffff;  
     /*     border:1px solid #dbdbdb;
     */    border-radius: 5px;
 }
@@ -2596,7 +2554,7 @@ blockquote p{
     padding: 6px 12px;
     font-size: 14px;
     line-height: 1.42857143;
-    color: black;
+    color: #000000;
     background-color: #fff;
     background-image: none;
     border: 1px solid #f4f4f4;
