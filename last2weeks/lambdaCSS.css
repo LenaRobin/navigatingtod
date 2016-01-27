@@ -287,11 +287,9 @@ hr{
     z-index: 10;
     width: 100%;
     background-color: #f30;
+    color: #ffffff;
     margin-right: 0;
     margin-left: 0;
-    color: #ffffff;
-    margin-right: -15px;
-    margin-left: -15px;
     height: 40px;
     -webkit-box-shadow: 0px 10px 32px -9px rgba(0,0,0,0.59);
     -moz-box-shadow: 0px 10px 32px -9px rgba(0,0,0,0.59);
@@ -850,7 +848,7 @@ a.page-scroll:hover, a.page-scroll:active, a.page-scroll:link, a.page-scroll:vis
     padding: 0;
     height: 100%;
     position:fixed;
-    z-index: 0;
+    z-index: 1;
     max-width: 100%;
     background-attachment: fixed;   
     left: 0;
