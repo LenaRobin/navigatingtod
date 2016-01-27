@@ -171,7 +171,7 @@ hr{
     padding-right: 15px;
     margin-bottom: 20px;
     background-color: #FFE5DE;
-    border: 0px solid #e3e3e3;
+    border: 0px solid #dbdbdb;
     border-radius: 4px;
     -webkit-box-shadow: none;
     box-shadow: none;
@@ -210,9 +210,9 @@ hr{
     color:black;
     background-color:#f4f4f4;
     color: black;
-    -webkit-box-shadow: 0px 10px 32px -9px rgba(0,0,0,0.59);
+/*     -webkit-box-shadow: 0px 10px 32px -9px rgba(0,0,0,0.59);
     -moz-box-shadow: 0px 10px 32px -9px rgba(0,0,0,0.59);
-    box-shadow: 0px 10px 32px -9px rgba(0,0,0,0.59);
+    box-shadow: 0px 10px 32px -9px rgba(0,0,0,0.59); */
     
 }
 
@@ -294,6 +294,7 @@ hr{
     padding-top:10px;
     background-color: #f30;
     border-radius: 0px;
+    text-align: center;
 }
 
 .breadcrumb ol{
@@ -313,7 +314,7 @@ hr{
     padding-right: 8px;
     padding-left: 8px;
     color: white;
-    content: "/\00a0";
+    content: ">";
 }
 
 #library-tree  #breadcrumb .breadcrumb a{
@@ -333,13 +334,13 @@ hr{
     padding-top: 2px;
     font-family: "HKGroteskbold";
     text-decoration: none;
-    border: 1px solid white;
-}
+/*     border: 1px solid white;
+     */}
 
 #library-tree  #breadcrumb .breadcrumb a:hover{
-    color: #f30;
-    background-color:white;
-    /* background-color: white; */
+    /*   color: #f30;
+   background-color:white;
+     */    /* background-color: white; */
     padding-top: 2px;
     font-family: "HKGroteskbold";
 }
@@ -877,7 +878,7 @@ a.page-scroll:hover, a.page-scroll:active, a.page-scroll:link, a.page-scroll:vis
     width: 4%;
     height: 100%;
 
-    /* background-color: red; */
+    /* background-color: #f30; */
 }
 
 .toggle_menu:hover #menu_bar{
@@ -1143,7 +1144,7 @@ Table of content is contained in pushmenu, it shows the different parts of the b
 ******* HEADER  **********************
 ***************************************/
 #nav_test{
-    background-color:red;
+    background-color:#f30;
     top:800px;
     height:300px;
 }
@@ -1542,24 +1543,24 @@ input:hover {
 
 /* how text of the book displays when a result is found */
 .search-found {
-    color: #000;
+    color: #000000;
 }
 
 /* how "importantword" of the book displays when a result is found */
 .search-found .importantword {
     font-style: normal;
     cursor: text;
-    color: #000;
-    border-bottom: 0 dotted #000;
+    color: #000000;
+    border-bottom: 0 dotted #000000;
 }
 
 /* how "keyword-searched" displays when a result is found */
 .search-found .keyword-searched {
     margin-bottom: 0;
-    background-color: #ff0;
+    background-color: #ffff00;
     cursor: text;
     border-radius: 5px;
-    color: #000;
+    color: #000000;
 }
 
 /* how the text of the book displays when no result is found */
@@ -1572,7 +1573,7 @@ input:hover {
     /* 	font-style: normal;
     cursor: text;
     color: rgba(203,203,203,0.22);
-    border-bottom: 0 dotted #000; */
+    border-bottom: 0 dotted #000000; */
 }
 
 /* how "keyword-searched" displays when no result is found */
@@ -1612,10 +1613,6 @@ input:hover {
     height: 50%;
     text-align: center;*/
     background-color: #c7c7c7;
-    /*background: -webkit-radial-gradient(10px, white, white, #c7c7c7); /* Safari 5.1 to 6.0 */
-    /*background: -o-radial-gradient(10px, white, white, #c7c7c7); /* For Opera 11.6 to 12.0 */
-    /*background: -moz-radial-gradient(10px, white, white, #c7c7c7); /* For Firefox 3.6 to 15 */
-    /*background: radial-gradient(10px, white, white, #c7c7c7); /* Standard syntax (must be last)*/
 }
 
 /*.search-found {
@@ -1708,7 +1705,7 @@ background: radial-gradient(10px, white, white, #c7c7c7); /* Standard syntax (mu
 }
 
 .tip p a{
-    color:red;
+    color:#f30;
 }
 
 
@@ -1741,7 +1738,7 @@ background: radial-gradient(10px, white, white, #c7c7c7); /* Standard syntax (mu
 }
 .popover p a{
     text-decoration: underline;
-    color:red;
+    color:#f30;
     font-family: "HKGrotesk";
 }
 
@@ -1759,8 +1756,6 @@ background: radial-gradient(10px, white, white, #c7c7c7); /* Standard syntax (mu
     right: -6px;
     top: -6px;
     border-radius: 9px;
-    border: 1px solid red;
-    background-color: orange;
     padding: 0 4px;
     text-align: center;
 }
@@ -1774,10 +1769,8 @@ background: radial-gradient(10px, white, white, #c7c7c7); /* Standard syntax (mu
 f
 
 .capitalism, .capital, .creativity, .art, .contemporary, .culture, .ideological, .social, .labor, .attention, .image, .production, .capitalism, .art, .state, .life, .public, .city, .economics, .production, .development, .art, .social, .avant-garde, .world, .big, .Other, .art, .urban, .cultural, .project, .creativity, .Belgrade, .Rog, .capital, .creative, .collective, .urban, .factory, .gentrification, .art, .political, .social, .culture, .autonomy, .public, .work {
-    color:blue;
-    /* 
-    color:#f30;
-    */
+    color:#0000ff;
+
 }
 
 /********CITATIONS************************/
@@ -1805,7 +1798,7 @@ f
     color: rgb(63, 222, 63);
 }
 /*.pin-clone {
-color: blue;
+color: #0000ff;
 }*/
 
 .ui-draggable-handle {
@@ -2072,7 +2065,7 @@ ol {
     margin-right:4px;
     margin-bottom: 8px;
     background-color: rgba(28, 51, 229, 0.1);  
-    color: blue;  
+    color: #0000ff;  
     border:none;
     height: auto;
     box-shadow: none;
@@ -2083,12 +2076,12 @@ ol {
 .section .btn.active{
 /*     box-shadow: inset 0 3px 5px rgba(0,0,0,.135);
      */    background-color: rgba(28, 51, 229, 0.3);
-    color: blue;  
+    color: #0000ff;  
 }
 .section .keyword-button:focus{
     box-shadow: 0 3px 5px rgba(0,0,0,.135);
     background-color: rgba(28, 51, 229, 0.1);  
-    color: blue;  
+    color: #0000ff;  
 }
 
 /******* MENU RIGHT *******/
@@ -2154,7 +2147,7 @@ ol {
 
 #keyword-show-all{
     background-color: rgba(28, 51, 229, 0.1);
-    color: blue !important;
+    color: #0000ff !important;
     box-shadow: 0 3px 5px rgba(0,0,0,.135);
 }
 
@@ -2166,7 +2159,7 @@ ol {
 #keyword-show-all:focus{
     box-shadow: 0 3px 5px rgba(0,0,0,.135);
     background-color: rgba(28, 51, 229, 0.1);  
-    color: blue;  
+    color: #0000ff;  
 }
 
 
@@ -2193,7 +2186,7 @@ ol {
     margin-right:4px;
     margin-bottom: 8px;
     background-color: rgba(28, 51, 229, 0.1);  
-    color: blue;  
+    color: #0000ff;  
     border:none;
     height: auto;
     box-shadow: inset 0 3px 5px rgba(0,0,0,.135);
@@ -2201,12 +2194,12 @@ ol {
 .section .btn.active{
     box-shadow: inset 0 3px 5px rgba(0,0,0,.135);
     background-color: rgba(28, 51, 229, 0.3);
-    color: blue;  
+    color: #0000ff;  
 }
 .section .keyword-button:focus{
     box-shadow: 0 3px 5px rgba(0,0,0,.135);
     background-color: rgba(28, 51, 229, 0.1);  
-    color: blue;  
+    color: #0000ff;  
 }
 
 
@@ -2353,7 +2346,7 @@ ol {
 }
 
 .btn-group-vertical .btn-primary:hover{
-    background-color: #e3e3e3;
+    background-color: #dbdbdb;
     cursor: pointer;
     border-color: #8e8e8e;
     color: black;
@@ -2401,7 +2394,7 @@ ol {
 }
 
 .delete-underline:hover{
-    background-color: #e3e3e3;
+    background-color: #dbdbdb;
     cursor: pointer;
     border-color: #8e8e8e;
     color: black;
@@ -2428,12 +2421,12 @@ ol {
 
 /* Tooltip on bottom */
 /*.tooltip.bottom > .tooltip-arrow {
-    border-bottom: 5px solid blue;
+    border-bottom: 5px solid #0000ff;
 }*/
 
 /* Tooltip on left */
 /*.tooltip.left > .tooltip-arrow {
-    border-left: 5px solid red;
+    border-left: 5px solid #f30;
 }*/
 
 /* Tooltip on right */
@@ -2447,7 +2440,7 @@ ol {
 
 .dropdown-menu{
     position: absolute;
-    background-color: red;
+    background-color: #f30;
 }
 
 .dropdown-menu > li > a {
@@ -2487,7 +2480,7 @@ blockquote p{
 
 
 .ui-effects-transfer {
-    color: red;
+    color: #f30;
     background-color: rgba(255, 51, 0, 0.13);
     border-radius: 5px;
 }
@@ -2560,7 +2553,7 @@ blockquote p{
 
 .panel-open{
     box-shadow: inset 0 3px 5px rgba(0,0,0,.135);
-    background-color:red;
+    background-color:#f30;
 }
 
 #panel, #panel2, #panel3, #panel4, #panel5, #panel6 {
@@ -2628,7 +2621,7 @@ blockquote p{
     font-size: 15px;
     font-family: "Hkgrotesk";
     border-style: none;
-    color: #000;
+    color: #000000;
     padding: 0;
     border-bottom: 1px solid #8e8e8e;
 }
